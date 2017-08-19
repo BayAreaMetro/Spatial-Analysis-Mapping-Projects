@@ -16,7 +16,7 @@ These datasets are private and only accessible by MTC staff.
 
 Prepare R Script to select and extract the datasets by county.
 
-- [etl.R](#etl.R)  
+- [etl.R](https://github.com/BayAreaMetro/Adhoc-Spatial-Analysis/blob/master/Data-Requests/Business_Query/etl.R)  
 
 ```
 # Documents and Help: http://rhodyrstats.org/geospatial_with_sf/geospatial_with_sf.html
