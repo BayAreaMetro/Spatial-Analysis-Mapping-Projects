@@ -3,3 +3,13 @@ This repo provides detailed documentation of work performed by the Data and Visu
 
 ## Project Table of Contents
 
+#### [Bay-Trail-Safe-Routes-To-Transit](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Bay-Trail-Safe-Routes-To-Transit)  
+
+#### [Data-Requests](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Data-Requests)  
+
+#### [PDA-Employment-Businesses](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/PDA-Employment-Businesses)  
+
+#### [Small-UZA-Rural-Area-Section-5310-Projects](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Small-UZA-Rural-Area-Section-5310-Projects)  
+
+
+> Be sure to update the Table of Contents in this readme.md when adding projects to the repository
