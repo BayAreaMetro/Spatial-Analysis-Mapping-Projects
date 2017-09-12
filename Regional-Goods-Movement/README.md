@@ -17,8 +17,17 @@ The purpose of this project is to analyze business, transportation, and demograp
 [Asana Project](https://app.asana.com/0/353588576094175/353588576094186)  
 
 ## Data Sources 
+- [Business Data: Esri;Infogroup 2016](https://mtcdrive.app.box.com/folder/11272654765)
+  - *Datasets are licensed and therefore not to be distributed publicly*
+- [FMMP Urban 2014](http://www.conservation.ca.gov/dlrp/fmmp)
 
 ## Methodology 
+
+### Northern California Megaregion Businesses FC
+
+### Employment Summary by Goods Movement Class 
+
+### Employment Summary by Supply Chain Class 
 
 ## Expected Outcomes 
 
