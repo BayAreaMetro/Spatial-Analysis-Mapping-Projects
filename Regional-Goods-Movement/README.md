@@ -152,7 +152,7 @@ Tool Assumptions:
 
 Output: 
 
-This process created 9 output rasters, each following a patterned namming convention followed by the goods movement or supply chain class to to disambiguate each feature. Examples of that convention are provided below. These are intermediate features, which will were reclassified and converted from raster to polygon in the following process. To see the name of each output, follow the respective links below.    
+This process created 9 output rasters, each following a patterned naming convention followed by the goods movement or supply chain class to to disambiguate each feature. Examples of that convention are provided below. These are intermediate features, which will were reclassified and converted from raster to polygon in the following process. To see the name of each output, follow the respective links below.    
 
   - [NC_Megaregion_Emp_Density_GoodsMvmtClass (Raster)](#feature-classes--csvs)
   - [NC_Megaregion_Emp_Density_SupplyChainClass (Raster)](#feature-classes--csvs)
@@ -165,14 +165,14 @@ Tool: [Reclassify_Convert_Raster_to_Polygon](#tools)
 
 Input: 
 
-This process was not integrated into the last process as each of the input rasters to the process needed to be classified seperately. Reclassification tables were created for each reclass feature and are referenced below. the 9 output rasters created from the previous process were input into this tool, each following a patterend namming convention followed by the goods movement or supply chain class. 
+This process was not integrated into the last process as each of the input rasters to the process needed to be classified seperately. Reclassification tables were created for each reclass feature and are referenced below. the 9 output rasters created from the previous process were input into this tool, each following a patterend naming convention followed by the goods movement or supply chain class. 
 
 - [NC_Megaregion_Emp_Density_GoodsMvmtClass (Raster)](#feature-classes--csvs)
 - [NC_Megaregion_Emp_Density_SupplyChainClass (Raster)](#feature-classes--csvs)
 
 Tool Input Values: 
 
-Each raster was reclassified, creating classes by standard deviation values. Those values were stored in tables for reference each following a pattered namming convention followed by the goods movement or supply chain class to disambiguate each feature.
+Each raster was reclassified, creating classes by standard deviation values. Those values were stored in tables for reference each following a pattered naming convention followed by the goods movement or supply chain class to disambiguate each feature.
 Examples of that convention are provided below.
 
 - [Reclass_Table_GoodsMvmtClass](#feature-classes--csvs)
@@ -180,7 +180,7 @@ Examples of that convention are provided below.
 
 Output: 
 
-This process created 9 output vector feature classes, each following a patterned namming convention followed by the goods movement or supply chain class and 'rc' or reclassifed to to disambiguate each feature. Examples of that convention are provided below. 
+This process created 9 output vector feature classes, each following a patterned naming convention followed by the goods movement or supply chain class and 'rc' or reclassifed to to disambiguate each feature. Examples of that convention are provided below. 
 
 - [NC_Mega_Region_Emp_Density_GoodsMvmtClass_RC (Raster)](#feature-classes--csvs)
 - [NC_Mega_Region_Emp_Density_SupplyChainClass_RC (Raster)](#feature-classes--csvs) 
