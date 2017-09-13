@@ -18,7 +18,7 @@ Map OBAG 2.0 projects and prepare maps for public dissemination. OBAG 2.0 Projec
     - Polygon View: RPD_OBAG_2_Project_Polygon
 
 ## Analysis Parameters
-
+Projects are classified as IN/OUT of PDAs
 ## Methodology applied to solve problem
 
 1. Projects mapped using web-based project mapper tool. See - [Project Mapper](http://project-mapper.us-west-2.elasticbeanstalk.com/)
