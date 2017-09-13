@@ -1,6 +1,6 @@
 ## Define the Problem Statement
 
-Map OBAG 2.0 projects and prepare maps for public dissemination. OBAG 2.0 Projects will eventually be assigned a TIP ID, so we will need to coordinate with the TIP Team (Mallory/Adam C.) to confirm the project list.
+Map OBAG 2.0 projects and prepare maps for public dissemination.
 
 ## Data Sources
 
@@ -29,6 +29,8 @@ Projects are classified as IN/OUT of PDAs
 1. Tabloid map series illustrating projects for the nine-county bay area region.  Projects are symbolized by Mode...  
 2. Project Database contains PNT, LN, and PY features for the Projects.  Projects can be viewed using the Project Mapper tool (link above)
 
+## Potential Future Actions that may be Necessary to Take, but Unrelated to the Needs/ Requirements of this Project.
+OBAG 2.0 Projects will eventually be assigned a TIP ID. We will need to coordinate with the TIP Team (Mallory/Adam C.) to confirm the project list.
 
 ## Results
 
