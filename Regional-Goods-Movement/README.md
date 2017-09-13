@@ -25,6 +25,11 @@ The purpose of this project is to analyze business, transportation, and demograp
   - *Datasets are licensed and therefore not to be distributed publicly*
 - [FMMP Urban 2014](http://www.conservation.ca.gov/dlrp/fmmp)
 
+**Potential Data Sources**
+
+U.S. Department of Transportation - Federal Railroad Administration 
+- [Highway-Rail Crossing Collisions 2007-2017](https://explore.dot.gov/t/FRA/views/HIghway-RailCrossingCollisions2007-2017/National?:embed=y&:showShareOptions=true&:display_count=no&:showVizHome=no)
+
 
 ## Analysis Parameters
 
