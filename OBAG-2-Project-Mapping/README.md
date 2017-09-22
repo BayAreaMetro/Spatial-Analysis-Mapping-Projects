@@ -31,10 +31,11 @@ Federal - Aid Elligible roads are highways that are part of the HPMS-defined Fed
 
 ***HPMS - California Shapefile Select Values***
 
-|Field Name | Values    |
-|-----------|-----------|
-|F_System   |1,2,3,4,5,6|
-|Urban_Code | != 99999  |
+|Field Name | Values                  |
+|-----------|-------------------------|
+|F_System   |1,2,3,4,5,6              |
+|Urban_Code | != 99999                |
+|County_Cod |75,81,41,55,95,1,85,13,97|
 
 ***F_System Value Description***
 
