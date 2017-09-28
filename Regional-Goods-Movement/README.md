@@ -24,6 +24,7 @@ The purpose of this project is to analyze business, transportation, and demograp
 - [California Business Data: Esri;Infogroup 2016](https://mtcdrive.app.box.com/folder/11272654765)
   - *Datasets are licensed and therefore not to be distributed publicly*
 - [FMMP Urban 2014](http://www.conservation.ca.gov/dlrp/fmmp)
+- [2015 American Community Survey 5 Year Estimates](https://www.census.gov/data/developers/data-sets/acs-5year.html)
 
 **Potential Data Sources**
 
@@ -35,7 +36,7 @@ U.S. Department of Transportation - Federal Railroad Administration
 
 As part of this analysis process, we mapped NAICS 2 digit, 3 digit, and 4 digit codes to what we've defined as Supply Chain Roles. Similarly, we mapped NAICS 2 digit, 3 digit, and 4 digit codes to what we've defined as Goods Movement - Related Industries and Occuplations. Following are tables which group NAICS codes into classes.
 
-**Goods Movement - Related Industries and Occupations**
+### Goods Movement - Related Industries and Occupations
 
 | Description                                                | NAICS 2- Digit | NAICS 3- Digit | NAICS 4- Digit |
 |------------------------------------------------------------|----------------|----------------|----------------|
@@ -64,7 +65,7 @@ As part of this analysis process, we mapped NAICS 2 digit, 3 digit, and 4 digit 
 | Waste Disposal                                             |                |                | 5622           |
 | Waste Remediation                                          |                |                | 5629           |
 
-**Supply Chain Roles and NAICs Classifications**
+### Supply Chain Roles and NAICs Classifications
 
 | Production |               | Transportation |                                       | Distribution |                             | Retail |        | Waste |                   |
 |------------|---------------|----------------|---------------------------------------|--------------|-----------------------------|--------|--------|-------|-------------------|
@@ -77,6 +78,45 @@ As part of this analysis process, we mapped NAICS 2 digit, 3 digit, and 4 digit 
 | 33         | Manufacturing | 488            | Support Activities for Transportation |              |                             |        |        |       |                   |
 |            |               | 491            | Postal Service                        |              |                             |        |        |       |                   |
 |            |               | 492            | Couriers and Messengers               |              |                             |        |        |       |                   |
+
+### Workers without a College Degree 
+
+American Community Survey 5 Year Estimates: [API Variables Reference](https://api.census.gov/data/2015/acs5/variables.html)
+
+Table: B23006
+
+|Variable     |Variable Description                                |
+|-------------|----------------------------------------------------|
+|B23006_001E  |Total Population 25 to 64 Years                     |
+|B23006_004E  |Less than high school graduate - in armed forces    |
+|B23006_006E  |Less than high school graduate - employed           |
+|B23006_011E  |High school graduate - in armed forces              |
+|B23006_013E  |High school graduate - employed                     |
+|B23006_018E  |Some college or assiciate's degree- in armed forces | 
+|B23006_020E  |Some college or associate's degree - employed       |
+
+### Low Income Workers
+Low income workers are workers 16 years and over with earnings below the median for California (for that group) which is $31,296 per year. 
+
+Table: S2001 
+
+[ACS 2015 5 Year Estimates - Earnings in the Past 12 Months (California)](https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_15_5YR_S2001&prodType=table)
+
+Table: B08119
+
+|Variable     |Variable Description                          |
+|-------------|----------------------------------------------|
+|B08119_001E  |Total workers 16 years and over with earnings |
+|B08119_002E  |$1 to $9,999 or loss                          |
+|B08119_003E  |$10,000 to $14,999                            |
+|B08119_004E  |$15,000 to $24,999                            |
+|B08119_005E  |$25,000 to $34,999                            |
+|B08119_006E  |$35,000 to $49,999                            | 
+|B08119_007E  |$50,000 to $64,999                            |
+|B08119_008E  |$65,000 to $74,999                            |
+|B08119_009E  |$75,000 or more                               |
+
+### Unemployed 
 
 
 ## Methodology 
@@ -92,6 +132,8 @@ As part of this analysis process, we mapped NAICS 2 digit, 3 digit, and 4 digit 
 3. Employment Summary by Goods Movement Class / Supply Chain Class 
 
     [Create Megaregion Employment Summaries](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Megaregion_Employment_Summaries.py)
+
+4. Workers without a College Degree
 
 ### Detailed 
 
@@ -204,6 +246,11 @@ Output:
 
 - [2016_Megaregion_Emp_Tot_By_GM_Class.csv](#feature-classes--csvs)
 - [2016_Megaregion_Emp_Tot_By_SC_Class.csv](#feature-classes--csvs)
+
+***Workers without a College Degree***
+To determine workers without a college degree, we pulled tract level data from the **American Community Survey 5-Year Estimates - Educational Attainment by Employment Status for the Population 25 to 64 years (Table B23006)** 
+
+
 
 ## Results 
 
