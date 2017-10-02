@@ -94,6 +94,8 @@ Table: B23006
 |B23006_013E  |High school graduate - employed                     |
 |B23006_018E  |Some college or assiciate's degree- in armed forces | 
 |B23006_020E  |Some college or associate's degree - employed       |
+|B23006_025E  |Bachelor's degree or higher - in armed forces       |
+|B23006_027E  |Bachelor's degree or higher - employed              | 
 
 ### Low Income Workers
 Low income workers are workers 16 years and over with earnings below the median for California (for that group) which is $31,296 per year. 
@@ -118,6 +120,17 @@ Table: B08119
 
 ### Unemployed 
 
+Table: B23025
+
+|Variable         | Variable Description                |
+|-----------------|-------------------------------------|
+| B23025_001E     | Total population 16 years and over  |
+| B23025_002E     | Total in labor force                |
+| B23025_003E     | Total in civilian labor force       |
+| B23025_004E     | Civilian labor force - employed     |
+| B23025_005E     | Civilian labor force - unemployed   |
+| B23025_006E     | Armed Forces                        |
+| B23025_007E     | Total not in labor force            |
 
 ## Methodology 
 
