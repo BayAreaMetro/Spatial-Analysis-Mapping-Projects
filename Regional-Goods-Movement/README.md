@@ -149,15 +149,21 @@ Table: B23025
 
 4. Unemployment Rate 
 
-  In 2015, 10% of California residents in the labor force were unemployed. Areas where more than 10% of residents in the labor force is considered a moderate to high proportion. 
+   In 2015, 10% of California residents in the labor force were unemployed. Areas where more than 10% of residents in the labor force is considered a moderate to high proportion. 
+
+   [2015 ACS Unemployment Data - California](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/ACS_15_5YR_B23025_with_ann.csv)
 
 5. Workers without a College Degree
 
-  In 2015, 64% of workers in California did not have a Bachelor's Degree or higher. Areas where more than 60% of workers do not have a college Degree is considered a moderate to high proportion. 
+   In 2015, 64% of workers in California did not have a Bachelor's Degree or higher. Areas where more than 60% of workers do not have a college Degree is considered a moderate to high proportion. 
+
+   [2015 ACS Educational Attainment and Employment Status Data - California](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/ACS_15_5YR_B23006_with_ann.csv)
 
 6. Low Income Workers 
 
    In 2015, 50% of workers in California made $35,000 or less. Areas where more than 50% of workers make less than $35,000 is considered a moderate to high proportion. The median income for a worker in California is $31,296 per year. Given the income is grouped into income brackets, the median income fell into the $25,000 to $34,999 range so anything below the top range was considered 'low income'.
+
+   [2015 Earnings and Employment Status Data - California](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/ACS_15_5YR_B08119_with_ann.csv)
 
 ### Detailed 
 
