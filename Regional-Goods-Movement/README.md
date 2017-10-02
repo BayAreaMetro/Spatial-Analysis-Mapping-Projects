@@ -98,6 +98,7 @@ Table: B23006
 |B23006_027E  |Bachelor's degree or higher - employed              | 
 
 ### Low Income Workers
+
 Low income workers are workers 16 years and over with earnings below the median for California (for that group) which is $31,296 per year. 
 
 Table: S2001 
@@ -146,7 +147,17 @@ Table: B23025
 
     [Create Megaregion Employment Summaries](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Megaregion_Employment_Summaries.py)
 
-4. Workers without a College Degree
+4. Unemployment Rate 
+
+  In 2015, 10% of California residents in the labor force were unemployed. Areas where more than 10% of residents in the labor force is considered a moderate to high proportion. 
+
+5. Workers without a College Degree
+
+  In 2015, 64% of workers in California did not have a Bachelor's Degree or higher. Areas where more than 60% of workers do not have a college Degree is considered a moderate to high proportion. 
+
+6. Low Income Workers 
+
+   In 2015, 50% of workers in California made $35,000 or less. Areas where more than 50% of workers make less than $35,000 is considered a moderate to high proportion. The median income for a worker in California is $31,296 per year. Given the income is grouped into income brackets, the median income fell into the $25,000 to $34,999 range so anything below the top range was considered 'low income'.
 
 ### Detailed 
 
