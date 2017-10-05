@@ -8,7 +8,11 @@ The Goods Movement program at MTC provides a regional, coordinating framework fr
 
 [Data Sources](#data-sources) 
 
-[Methodology](#methodology) 
+[Analysis Parameters](#analysis-parameters)
+
+[Methodology](#methodology)
+   - [Summary](#summary)
+   - [Detailed](#detailed) 
 
 [Expected Outcomes](#expected-outcomes)
 
@@ -25,6 +29,7 @@ The purpose of this project is to analyze business, transportation, and demograp
   - *Datasets are licensed and therefore not to be distributed publicly*
 - [FMMP Urban 2014](http://www.conservation.ca.gov/dlrp/fmmp)
 - [2015 American Community Survey 5 Year Estimates](https://www.census.gov/data/developers/data-sets/acs-5year.html)
+- [Freight Analysis Framework (FAF) 4 Network Database and Flow Assignment: 2012 and 2045](https://ops.fhwa.dot.gov/freight/freight_analysis/faf/faf4/netwkdbflow/index.htm)
 
 **Potential Data Sources**
 
@@ -137,37 +142,37 @@ Table: B23025
 
 ### Summary
 
-1. Create Northern California Megaregion Businesses FC
+1. [Create Northern California Megaregion Businesses FC](#create-northern-california-megaregion_business_FC)
 
    [Create Northern California Megaregion Business FC Script](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Northern_CA_Megaregion_Businesses_2016_FC.py)
 
-2. Create Nothern California Megaregion Employment Density Feature Classes
+2. [Create Nothern California Megaregion Employment Density Feature Classes](#create-northern-california-megaregion-employment-density-feature-classes)
   
-3. Employment Summary by Goods Movement Class / Supply Chain Class 
+3. [Employment Summary by Goods Movement Class / Supply Chain Class](#employment-summary-by-goods-movement--supply-chain-class) 
 
    [Create Megaregion Employment Summaries](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Megaregion_Employment_Summaries.py)
 
 4. Unemployment Rate 
 
-   In 2015, 10% of California residents in the labor force were unemployed. Areas where more than 10% of residents in the labor force is considered a moderate to high proportion. 
+   In 2015, 10% of California residents in the labor force were unemployed. Areas where more than 10% of residents in the labor force are unemployed is considered a moderate to high share. 
 
    [2015 ACS Unemployment Data - California](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/ACS_15_5YR_B23025_with_ann.csv)
 
 5. Workers without a College Degree
 
-   In 2015, 64% of workers in California did not have a Bachelor's Degree or higher. Areas where more than 60% of workers do not have a college Degree is considered a moderate to high proportion. 
+   In 2015, 64% of workers in California did not have a Bachelor's Degree or higher. Areas where more than 60% of workers do not have a college Degree is considered a moderate to high share. 
 
    [2015 ACS Educational Attainment and Employment Status Data - California](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/ACS_15_5YR_B23006_with_ann.csv)
 
 6. Low Income Workers 
 
-   In 2015, 50% of workers in California made $35,000 or less. Areas where more than 50% of workers make less than $35,000 is considered a moderate to high proportion. The median income for a worker in California is $31,296 per year. Given the income is grouped into income brackets, the median income fell into the $25,000 to $34,999 range so anything below the top range was considered 'low income'.
+   In 2015, 50% of workers in California made $35,000 or less. Areas where more than 50% of workers make less than $35,000 is considered a moderate to high share. The median income for a worker in California is $31,296 per year. Given the income is grouped into income brackets, the median income fell into the $25,000 to $34,999 range so anything below the top range was considered 'low income'.
 
    [2015 Earnings and Employment Status Data - California](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/ACS_15_5YR_B08119_with_ann.csv)
 
 ### Detailed 
 
-**Create Northern California Megaregion Business FC** 
+#### Create Northern California Megaregion Business FC 
 
 Script:
 
@@ -192,7 +197,7 @@ Four fields were added to the original [GMS_2016_CA_Businesses](#feature-classes
 |Goods_Mvmt_Class |1, 2, 3 See: [NAICS Mapping to Goods Movement Classes](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/NAICS_Mapping_to_Goods_Mvmt_Classes.csv)|
 |Supply_Chain_Class |1, 2, 3, 4, 5, 6 See: [NAICS Mapping to Supply Chain Classes](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/NAICS_Mapping_to_Supply_Chain_Classes.csv)|
 
-**Create Northern Claifornia Mega Region Employment Density Feature Classes**
+#### Create Northern Claifornia Mega Region Employment Density Feature Classes
 
 Two custom tools were created using ArcGIS Pro Model Builder to generate the final output feature class, as well as intermediary feature classes & rasters. The feature class generated highlights employment density within [FMMP Urban and Built Up](http://www.conservation.ca.gov/dlrp/fmmp/mccu/Pages/map_categories.aspx) areas. The toolbox containing the tools is linked below. Assumptions are maintained as defaults within the tools.
 
@@ -262,7 +267,7 @@ This process created 9 output vector feature classes, each following a patterned
 - [NC_Mega_Region_Emp_Density_GoodsMvmtClass_RC (Raster)](#feature-classes--csvs)
 - [NC_Mega_Region_Emp_Density_SupplyChainClass_RC (Raster)](#feature-classes--csvs) 
 
-**Employment Summary by Goods Movement Class / Supply Chain Class**
+#### Employment Summary by Goods Movement Class / Supply Chain Class
 
 Script: 
 
@@ -276,11 +281,6 @@ Output:
 
 - [2016_Megaregion_Emp_Tot_By_GM_Class.csv](#feature-classes--csvs)
 - [2016_Megaregion_Emp_Tot_By_SC_Class.csv](#feature-classes--csvs)
-
-***Workers without a College Degree***
-To determine workers without a college degree, we pulled tract level data from the **American Community Survey 5-Year Estimates - Educational Attainment by Employment Status for the Population 25 to 64 years (Table B23006)** 
-
-
 
 ## Results 
 
