@@ -142,13 +142,13 @@ Table: B23025
 
 ### Summary
 
-1. [Create Northern California Megaregion Businesses FC](#create-northern-california-megaregion_business_FC)
+1. [Create Northern California Megaregion Businesses FC](#create-northern-california-megaregion-business-fc)
 
-   [Create Northern California Megaregion Business FC Script](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Northern_CA_Megaregion_Businesses_2016_FC.py)
+   - [Create Northern California Megaregion Business FC Script](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Northern_CA_Megaregion_Businesses_2016_FC.py)
 
-2. [Create Nothern California Megaregion Employment Density Feature Classes](#create-northern-california-megaregion-employment-density-feature-classes)
+2. [Create Nothern California Megaregion Employment Density Feature Classes](#create-northern-claifornia-mega-region-employment-density-feature-classes)
   
-3. [Employment Summary by Goods Movement Class / Supply Chain Class](#employment-summary-by-goods-movement--supply-chain-class) 
+3. [Employment Summary by Goods Movement Class / Supply Chain Class](#employment-summary-by-goods-movement-class--supply-chain-class) 
 
    [Create Megaregion Employment Summaries](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/scripts/Python/Create_Megaregion_Employment_Summaries.py)
 
