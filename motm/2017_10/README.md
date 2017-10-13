@@ -29,10 +29,24 @@ This month's map is a remix of a map produced by the ABAG/MTC Resilience Team, w
 
 ### Methodology
 
+Probabilities provided by United States Geological Survey. No further analysis performed. 
+
 ### Outcome & Products 
 
 #### Maps, Charts, and Graphics 
 
+- [Image Files]()
+  - [motm_10_13_17.pdf (Website Version)]()
+  - [motm_10_13_17.png (Website Version)]()
+  - [motm_10_13_17_ED.pdf (Executive Director's Report Version)]()
+    - [motm_10_13_17_ED.png (Executive Director's Report Version)]()
+- [Illustrator Files]()
+- [Commission Presentation Files]() 
+
 #### Written Material 
 
+[October 2017 Map of the Month Write-Up]()
+
 #### Feature Classes & CSVs 
+
+[Earthquake Basics](http://resilience.abag.ca.gov/wp-content/documents/OpenData/Earthquake_Basics.zip)
