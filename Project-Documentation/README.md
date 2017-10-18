@@ -3,7 +3,7 @@ This repo provides detailed documentation of work performed by the Data and Visu
 
 ## Project Table of Contents
 
-#### [Bay-Trail-Safe-Routes-To-Transit](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Bay-Trail-Safe-Routes-To-Transit)  
+#### [Bay-Trail-Safe-Routes-To-Transit](Bay-Trail-Safe-Routes-To-Transit)  
 
 #### [Data-Requests](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Data-Requests) 
 
