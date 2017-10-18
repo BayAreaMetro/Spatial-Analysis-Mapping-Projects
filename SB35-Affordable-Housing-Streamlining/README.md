@@ -4,6 +4,10 @@ The purpose of this analysis is to develop a geographic feature overlay which re
 
 ## Data Sources
 
+### United States Census Urbanized Area / Urban Custer
+
+[2017 Urban Areas TIGER/Line Shapefile](https://www.census.gov/geo/maps-data/data/tiger-line.html)
+
 ## Analysis Parameters
 
 ### SB-35 Planning and zoning: affordable housing: streamlined approval process.(2017-2018)
@@ -42,6 +46,12 @@ The purpose of this analysis is to develop a geographic feature overlay which re
    K) Lands under conservation easement.
 
 ## Methodology applied to solve problem
+
+### United States Census Urbanized Area / Urban Custer Processing 
+
+1. 2017 Urbanized Area shapefile downloaded
+2. Urbanized Areas clipped to Bay Area Counties 
+3. Urbanized Areas interesected with TomTom waterbodies erased  
 
 ## Expected Outcomes (if any)?
 
