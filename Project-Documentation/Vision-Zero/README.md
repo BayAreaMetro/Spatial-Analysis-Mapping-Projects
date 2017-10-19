@@ -6,8 +6,12 @@
 
 ## Data Sources
 
+<<<<<<< HEAD
 - TomTom Street Network (Not TomTom Streets)
 - TomTom Other Areas 
+=======
+- TomTom Street Network (mn_nw_BayArea)
+>>>>>>> 363e5b92903ec6f73e66867f938bfb8bf306da0a
 - [SWITRS/TIMS (2006-2016)](Data/Bay-Area-Accidents-2006-2016.csv) 
 
 ## Analysis Parameters
