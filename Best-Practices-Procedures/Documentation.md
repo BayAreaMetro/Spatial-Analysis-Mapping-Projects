@@ -21,7 +21,7 @@ The purpose of this page is to define types of documentation and documentation r
   Tags: Related keywords to support content discovery See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
      - **If content is considered draft include "draft" as a tag** 
  
- ## Detailed Documentation
+## Detailed Documentation
  
  MTC has enabled metadata for all content published to portal or AGOL. When the metadata editor is opened online, metadata fields are organized within nested pages. Below are pages the fields that should be populated in order to meet detailed documentation requirements. 
  
