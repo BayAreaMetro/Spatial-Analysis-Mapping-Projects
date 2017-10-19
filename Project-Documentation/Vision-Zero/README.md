@@ -23,26 +23,33 @@
 |Latitude         |Latitude (Y coordinate)                                              |
 
 
+## Methodology
 
-## Methodology applied to solve problem
-
-### Create High Injury Network Polyline 
+### Create Accident / Incident Point Features 
 
 1. Make XY Accident Layer from [SWITRS/TIMS (2006-2016)](Data/Bay-Area-Accidents-2006-2016.csv) (Make XY Event Layer Tool)
 2. Copy XY Accident Layer to project GDB to create Feature Class 
-3. Definition Query on TomTom Street Network (FRC not in 8) 
-4. Add TomTom road attributes to Accidident Feature Class (Near Command)
-5. Summarize Accident Feature Class by killed & sevinj - case by TomTom Object ID
-6. Add join between TomTom Network FC and Accident Feature Class summary (using objectid) - uncheck keep all features (inner join)  
 
+### Create High Injury Network Polyline Features 
+ 
+1. Definition Query on TomTom Street Network (FRC not in 8) 
+2. Add TomTom road attributes to Accidident Feature Class (Near Command)
+3. Run [VZ_Road_Network_Incident_Summary](Scripts/VZ_Road_Network_Incident_Summary.sql) script to create high injury network cooridors
+   - Aggregate road geometries 
+   - Group by: 
+      - Road Name (where available from TomTom Street Network)
+      - Highway shield # (Where available from TomTom Street Network)
+      - KPH (Speed limits as provided by TomTom (Converted to MPH for final output))
+      - Postal Code (Smallest available geographic identify where available from TomTom Street Network)
+      - County Name (from TomTom Street Network)
+      - County FIPS (from TomTom Street Network) 
 
-### Create High Injury Polygons (Using Census Blocks)
+### Create High Injury Polygons Features (Using Census Blocks)
 
-1. Make XY Accident Layer from [SWITRS/TIMS (2006-2016)](Data/Bay-Area-Accidents-2006-2016.csv) (Make XY Event Layer Tool)
-2. Copy XY Accident Layer to project GDB to create Feature Class
-3. Add 
-
+TBD
 
 ## Expected Outcomes (if any)?
 
 ## Results
+
+[vz_hin_2006_2017_mn_nw_bayarea (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=7c3180199f8949e2861285dc2437b838)
