@@ -17,6 +17,6 @@ This repo provides detailed documentation of work performed by the Data and Visu
 
 #### [Small-UZA-Rural-Area-Section-5310-Projects](Small-UZA-Rural-Area-Section-5310-Projects) 
 
-#### [vision-zero](vision-zero)
+#### [Vision-Zero](Vision-Zero)
 
 > Be sure to update the Table of Contents in this readme.md when adding projects to the repository
