@@ -33,6 +33,10 @@ The purpose of this analysis is to develop a geographic feature overlay which re
    [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=ff8001e7d2aa4dcbb56e0594fb6d7c9d)
 
    B) Either prime farmland or farmland of statewide importance, as defined pursuant to United States Department of Agriculture land inventory and monitoring criteria, as modified for California, and designated on the maps prepared by the Farmland Mapping and Monitoring Program of the Department of Conservation, or land zoned or designated for agricultural protection or preservation by a local ballot measure that was approved by the voters of that jurisdiction.
+   
+   ### Protected Agricultural Lands (FMMP)
+   
+   [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=a1acb0ac981e4a70948ced1409d06120)
 
    C) Wetlands, as defined in the United States Fish and Wildlife Service Manual, Part 660 FW 2 (June 21, 1993).
    
@@ -44,31 +48,28 @@ The purpose of this analysis is to develop a geographic feature overlay which re
    
    ### Department of Forestry and Fire Protection Fire Hazard Areas
    
-   [View Map Data](Insert AGOL Link Here)
+   [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=924f1ea2170f47feb54ad3a88da35414)
 
    E) A hazardous waste site that is listed pursuant to Section 65962.5 or a hazardous waste site designated by the Department of Toxic Substances Control pursuant to Section 25356 of the Health and Safety Code, unless the Department of Toxic Substances Control has cleared the site for residential use or residential mixed uses.
    
-   ### Data Sources
+   ### Hazardous Waste Sites 
+   (50 meter Buffer around location centroid)
    
-   [View Map Data](Insert AGOL Link Here)
+   [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=e949a47152b64c0f823bb39a1502e07a)
 
    F) Within a delineated earthquake fault zone as determined by the State Geologist in any official maps published by the State Geologist, unless the development complies with applicable seismic protection building code standards adopted by the California Building Standards Commission under the California Building Standards Law (Part 2.5 (commencing with Section 18901) of Division 13 of the Health and Safety Code), and by any local building department under Chapter 12.2 (commencing with Section 8875) of Division 1 of Title 2.
    
-   ### Data Sources
+   ### Dilineated Earthquake Fault Zones (Alquist Priolo)
    
-   [View Map Data](Insert AGOL Link Here)
+   [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=d5b110c4582f45f697bbe0b90b92c801)
 
    G) Within a flood plain as determined by maps promulgated by the Federal Emergency Management Agency, unless the development has been issued a flood plain development permit pursuant to Part 59 (commencing with Section 59.1) and Part 60 (commencing with Section 60.1) of Subchapter B of Chapter I of Title 44 of the Code of Federal Regulations.
-   
-   ### Data Sources
-   
-   [View Map Data](Insert AGOL Link Here)
 
    H) Within a floodway as determined by maps promulgated by the Federal Emergency Management Agency, unless the development has received a no-rise certification in accordance with Section 60.3(d)(3) of Title 44 of the Code of Federal Regulations.
    
-   ### Data Sources
+   ### Flood Zones and Floodways (G/H)
    
-   [View Map Data](Insert AGOL Link Here)
+   [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=01c95836d68e4867a09217f0bcad9c9c)
 
    I) Lands identified for conservation in an adopted natural community conservation plan pursuant to the Natural Community Conservation Planning Act (Chapter 10 (commencing with Section 2800) of Division 3 of the Fish and Game Code), habitat conservation plan pursuant to the federal Endangered Species Act of 1973 (16 U.S.C. Sec. 1531 et seq.), or other adopted natural resource protection plan.
    
