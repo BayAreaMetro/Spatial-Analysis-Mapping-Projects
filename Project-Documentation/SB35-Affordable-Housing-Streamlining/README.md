@@ -73,14 +73,14 @@ The purpose of this analysis is to develop a geographic feature overlay which re
 
    I) Lands identified for conservation in an adopted natural community conservation plan pursuant to the Natural Community Conservation Planning Act (Chapter 10 (commencing with Section 2800) of Division 3 of the Fish and Game Code), habitat conservation plan pursuant to the federal Endangered Species Act of 1973 (16 U.S.C. Sec. 1531 et seq.), or other adopted natural resource protection plan.
    
-   ### Data Sources
+   ### Conservation Lands
    
    [View Map Data](Insert AGOL Link Here)
 
    J) Habitat for protected species identified as candidate, sensitive, or species of special status by state or federal agencies, fully protected species, or species protected by the federal Endangered Species Act of 1973 (16 U.S.C. Sec. 1531 et seq.), the California Endangered Species Act (Chapter 1.5 (commencing with Section 2050) of Division 3 of the Fish and Game Code), or the Native Plant Protection Act (Chapter 10 (commencing with Section 1900) of Division 2 of the Fish and Game Code).
 
 
-   ### Data Sources
+   ### Habitat Lands
    
    [View Map Data](Insert AGOL Link Here)
    
