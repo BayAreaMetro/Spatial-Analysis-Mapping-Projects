@@ -25,7 +25,7 @@ The purpose of this analysis is to develop a geographic feature overlay which re
 
    A) A coastal zone, as defined in Division 20 (commencing with Section 30000) of the Public Resources Code.
    
-   (View Map Data)[http://mtc.maps.arcgis.com/home/item.html?id=ff8001e7d2aa4dcbb56e0594fb6d7c9d]
+   [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=ff8001e7d2aa4dcbb56e0594fb6d7c9d)
 
    B) Either prime farmland or farmland of statewide importance, as defined pursuant to United States Department of Agriculture land inventory and monitoring criteria, as modified for California, and designated on the maps prepared by the Farmland Mapping and Monitoring Program of the Department of Conservation, or land zoned or designated for agricultural protection or preservation by a local ballot measure that was approved by the voters of that jurisdiction.
 
