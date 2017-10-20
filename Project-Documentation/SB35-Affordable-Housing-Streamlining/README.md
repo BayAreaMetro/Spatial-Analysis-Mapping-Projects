@@ -106,4 +106,4 @@ The purpose of this analysis is to develop a geographic feature overlay which re
 
 [Draft Map Illustrating Development Exclusion Areas (pdf)](https://mtcdrive.box.com/s/awhypc55gmhxvnp5z7i8ez8vx99b1t77)
 
-![](https://mtcdrive.box.com/s/dem8vwzzo655mfkq74146log5k1o5nhw)
+![](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/SB35-Affordable-Housing-Streamlining/SB_35_Overlay_Tabloid_V8.png)
