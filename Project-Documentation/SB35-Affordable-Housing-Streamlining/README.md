@@ -98,12 +98,12 @@ The purpose of this analysis is to develop a geographic feature overlay which re
 2. Urbanized Areas clipped to Bay Area Counties 
 3. Urbanized Areas interesected with TomTom waterbodies erased  
 
-## Expected Outcomes (if any)?
+## Data Summaries
 
-## Results
+## Map Results
 
 [SB 35 Development Exclusion Interactive Map Explorer](http://mtc.maps.arcgis.com/home/item.html?id=8198cf51d0c5459484b95cea6d04e86d)
 
-[Draft Map Illustrating Development Exclusion Areas (pdf)](https://mtcdrive.box.com/s/awhypc55gmhxvnp5z7i8ez8vx99b1t77)
+[Draft Map Illustrating Development Exclusion Areas (7.7 mb pdf)](https://mtcdrive.box.com/s/awhypc55gmhxvnp5z7i8ez8vx99b1t77)
 
 ![](https://mtcdrive.box.com/shared/static/dem8vwzzo655mfkq74146log5k1o5nhw.png)
