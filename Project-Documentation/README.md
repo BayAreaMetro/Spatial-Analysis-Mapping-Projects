@@ -15,7 +15,9 @@ This repo provides detailed documentation of work performed by the Data and Visu
 
 #### [Regional-Goods-Movement](Regional-Goods-Movement)
 
-#### [Small-UZA-Rural-Area-Section-5310-Projects](Small-UZA-Rural-Area-Section-5310-Projects) 
+#### [Small-UZA-Rural-Area-Section-5310-Projects](Small-UZA-Rural-Area-Section-5310-Projects)
+
+#### [SB35-Affordable-Housing-Streamlining](SB35-Affordable-Housing-Streamlining)
 
 #### [Vision-Zero](Vision-Zero)
 
