@@ -1,7 +1,14 @@
 # Spatial-Analysis-Mapping-Projects
 This repo provides detailed documentation of work performed by the Data and Visualization team at MTC.  Projects are organizaed into folder, each containing detailed documentation for the steps and procedures implemented in support of each project.
 
-To get started documenting your spatial analysis or mapping project, [start here](Dv-Project-Templates). 
+## Getting Started 
+To get started with a spatial analysis or mapping project follow the steps outlined below. 
+
+1. Create a project folder under this folder, providing an appropriate project name using [title case](http://titlecase.com/) formatting seperated by a hyphen '-' 
+2. Review our [how-to guide](https://github.com/BayAreaMetro/dv-project-templates) 
+3. Copy and paste markdown text from how-to guide into a new README.md file within your project folder or copy one of the following analysis markdown templates and rename it README.md
+   - [ANALYSIS-DETAILED](https://github.com/BayAreaMetro/dv-project-templates/blob/master/ANALYSIS-DETAILED.md) 
+   - [ANALYSIS-SIMPLE](https://github.com/BayAreaMetro/dv-project-templates/blob/master/ANALYSIS-SIMPLE.md)
 
 ## Project Table of Contents
 
