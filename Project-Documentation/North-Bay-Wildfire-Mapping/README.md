@@ -24,9 +24,10 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 ## Expected Outcomes
 
-### Map 
+### Maps  
 
-Map of North Bay Areas affected by wildfire overlain with PDAs, CoCs, SB35 Excluded Areas
+- Print Map of North Bay Areas affected by wildfire overlain with PDAs, CoCs, SB35 Excluded Areas
+- Interactive Map of North Bay Areas affected by wildfire overlain with PDAs, CoCs, SB35 Excluded Areas
 
 ### Data Summaries 
 
