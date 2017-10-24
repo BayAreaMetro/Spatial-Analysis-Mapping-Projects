@@ -4,9 +4,9 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 ### Project Management 
 
-[Asana Project](https://app.asana.com/0/461824428269313/461824428269323)
-[Box](https://mtcdrive.box.com/s/89urlw9t9q9mf9l2bkufk60q07twz4on)
-[AGOL](http://mtc.maps.arcgis.com/home/group.html?id=c51fa2042a1949f0b60a560eaddb7dfe&start=1#members)
+- [Asana Project](https://app.asana.com/0/461824428269313/461824428269323)
+- [Box](https://mtcdrive.box.com/s/89urlw9t9q9mf9l2bkufk60q07twz4on)
+- [AGOL](http://mtc.maps.arcgis.com/home/group.html?id=c51fa2042a1949f0b60a560eaddb7dfe&start=1#members)
 
 ### Contents 
 
