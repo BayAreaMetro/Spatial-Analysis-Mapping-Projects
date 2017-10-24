@@ -94,17 +94,17 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 2. Urbanized Areas clipped to Bay Area Counties 
 3. Urbanized Areas interesected with TomTom waterbodies erased  
 
-### Results 
+## Results 
 
-#### Intermediate Datasets 
+### Intermediate Datasets 
 
 [SB 35 Development Exclusion Areas (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
 
 This is a union of 6 (A-K), and contains County and Urban Area/Cluster attributes. This is a detailed dataset and has retained attributes which define the original dataset unioned to create this resulting dataset. 
 
-#### Data Summaries
+### Data Summaries
 
-#### Maps 
+### Maps 
 
 [SB 35 Development Exclusion Interactive Map Explorer](http://mtc.maps.arcgis.com/home/item.html?id=8198cf51d0c5459484b95cea6d04e86d)
 
