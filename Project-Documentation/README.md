@@ -12,22 +12,24 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 ## Project Table of Contents
 
-#### [Bay-Trail-Safe-Routes-To-Transit](Bay-Trail-Safe-Routes-To-Transit)  
+#### [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)  
 
-#### [Data-Requests](Data-Requests) 
+#### [Data Requests](Data-Requests) 
 
 #### [motm](motm)
 
+#### [North Bay Wildfire Mapping](North-Bay-Wildfire-Mapping)
+
 #### [OBAG 2.0 Project Mapping](OBAG-2-Project-Mapping) 
 
-#### [PDA-Employment-Businesses](PDA-Employment-Businesses) 
+#### [PDA Employment Businesses](PDA-Employment-Businesses) 
 
-#### [Regional-Goods-Movement](Regional-Goods-Movement)
+#### [Regional Goods Movement](Regional-Goods-Movement)
 
-#### [Small-UZA-Rural-Area-Section-5310-Projects](Small-UZA-Rural-Area-Section-5310-Projects)
+#### [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects)
 
-#### [SB35-Affordable-Housing-Streamlining](SB35-Affordable-Housing-Streamlining)
+#### [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining)
 
-#### [Vision-Zero](Vision-Zero)
+#### [Vision Zero](Vision-Zero)
 
 > Be sure to update the Table of Contents in this readme.md when adding projects to the repository
