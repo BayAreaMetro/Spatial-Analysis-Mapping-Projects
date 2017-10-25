@@ -104,6 +104,13 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 3. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting identity features and TomTom Counties
 4. Add SB35 Classification field using the following coded domain values:
 
+|Code    |Name                                                    |
+|--------|--------------------------------------------------------|
+|1       |Not Within Exclusion Areas                              |
+|2       |Urbanized Area - Within One or More Exclusion Areas     |
+|3       |Urbanized Area - Not Within Exclusion Areas             |
+|4       |Within One or More Exclusion Areas                      |
+
 
 ### SB35 Map Overlay 
 
