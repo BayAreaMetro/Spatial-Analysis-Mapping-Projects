@@ -8,7 +8,7 @@ import requests
 
 api_key = '13f1e5cda2e31e0a8c7657aac968aa5327b055d3'
 state = '06'
-MR_Counties = '001,013,041,055,075,081,085,095,097,113,099,077,047,067,061,017,101,115,053,069,087' 
+MR_Counties = '001,013,041,055,075,081,085,095,097,013,099,077,047,067,061,017,101,115,053,069,087' 
 ACS_2015_5_YR_Est_Base_URL = 'http://api.census.gov/data/2015/acs5?key={0}&NAME&for=tract:*&in=state:{1}+county:{2}&get={3}'
 
 #Get ACS 2015 5 Yr Est- Educational Attainment by Employment Status for the population 25 to 64 years
