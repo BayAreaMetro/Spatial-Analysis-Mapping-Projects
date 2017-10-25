@@ -90,11 +90,22 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ## Methodology applied to solve problem
 
-### United States Census Urbanized Area / Urban Custer Processing 
+### United States Census Urbanized Area / Urban Cluster Processing 
 
 1. 2017 Urbanized Area shapefile downloaded
 2. Urbanized Areas clipped to Bay Area Counties 
-3. Urbanized Areas interesected with TomTom waterbodies erased  
+3. Urbanized Areas interesected with TomTom waterbodies erased 
+
+### SB 35 Development Exclusion Areas
+
+1. Perform [Union](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/union.htm) of all SB 35 Exclusion Areas (Sec 3: 6: A-K)
+   - Union was chosen over [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) as union retains all features and attributes; Identity creates a geometric intersection therefore 'identity' features that fall outside of the boundaries of 'input' features will be clipped or discarded.
+2. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting union features and Census Urbanized Area / Urban Cluster dataset 
+3. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting identity features and TomTom Counties
+4. Add SB35 Classification field using the following coded domain values:
+
+
+### SB35 Map Overlay 
 
 ## Results 
 
@@ -105,6 +116,8 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 This is a union of 6 (A-K), and contains County and Urban Area/Cluster attributes. This is a detailed dataset and has retained attributes which define the original dataset unioned to create this resulting dataset. 
 
 ### Final Datasets 
+
+[SB35 Map Overlay](http://mtc.maps.arcgis.com/home/item.html?id=db31a2a5392f479e976e39fbee80e82e#overview)
 
 ### Data Summaries
 
