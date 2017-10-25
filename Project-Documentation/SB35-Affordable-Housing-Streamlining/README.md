@@ -123,8 +123,6 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 [SB 35 Development Exclusion Areas (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
 
-This is a union of 6 (A-K), and contains County and Urban Area/Cluster attributes. This is a detailed dataset and has retained attributes which define the original dataset unioned to create this resulting dataset. 
-
 ### Final Datasets 
 
 [SB35 Map Overlay](http://mtc.maps.arcgis.com/home/item.html?id=db31a2a5392f479e976e39fbee80e82e#overview)
