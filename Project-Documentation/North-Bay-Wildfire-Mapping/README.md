@@ -18,6 +18,9 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 ## Data Sources
 
+- [Calfire 2017 Statewide Fire Map](https://www.google.com/maps/d/viewer?mid=1TOEFA857tOVxtewW1DH6neG1Sm0&hl=en&ll=38.875582273874265%2C-122.70712978515627&z=9)
+  - Download as kml
+
 ## Analysis Parameters
 
 ## Methodology
