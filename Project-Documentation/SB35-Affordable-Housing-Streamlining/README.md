@@ -1,3 +1,5 @@
+**Draft**
+
 # Senate Bill 35 Affordable Housing Streamlining Analysis
 
 ## Define the Problem Statement
@@ -88,11 +90,32 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ## Methodology applied to solve problem
 
-### United States Census Urbanized Area / Urban Custer Processing 
+### United States Census Urbanized Area / Urban Cluster Processing 
 
 1. 2017 Urbanized Area shapefile downloaded
 2. Urbanized Areas clipped to Bay Area Counties 
-3. Urbanized Areas interesected with TomTom waterbodies erased  
+3. Urbanized Areas interesected with TomTom waterbodies erased 
+
+### SB 35 Development Exclusion Areas
+
+1. Perform [Union](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/union.htm) of all SB 35 Exclusion Areas (Sec 3: 6: A-K)
+   - Union was chosen over [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) as union retains all features and attributes; Identity creates a geometric intersection therefore 'identity' features that fall outside of the boundaries of 'input' features will be clipped or discarded.
+2. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting union features and Census Urbanized Area / Urban Cluster dataset 
+3. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting identity features and TomTom Counties
+4. Add SB35 Classification field using the following coded domain values:
+
+|Code    |Name                                                    |
+|--------|--------------------------------------------------------|
+|1       |Not Within Exclusion Areas                              |
+|2       |Urbanized Area - Within One or More Exclusion Areas     |
+|3       |Urbanized Area - Not Within Exclusion Areas             |
+|4       |Within One or More Exclusion Areas                      |
+
+
+### SB35 Map Overlay 
+
+1. Delete SB 35 Development Exclusion Area Features w/ the following SB35 Classification Attributes: (1, 4) 
+2. Dissolve by remaining SB35 Classification attributes: (2 ,3)  
 
 ## Results 
 
@@ -100,7 +123,9 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 [SB 35 Development Exclusion Areas (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
 
-This is a union of 6 (A-K), and contains County and Urban Area/Cluster attributes. This is a detailed dataset and has retained attributes which define the original dataset unioned to create this resulting dataset. 
+### Final Datasets 
+
+[SB35 Map Overlay](http://mtc.maps.arcgis.com/home/item.html?id=db31a2a5392f479e976e39fbee80e82e#overview)
 
 ### Data Summaries
 
