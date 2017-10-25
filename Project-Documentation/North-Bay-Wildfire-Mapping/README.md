@@ -1,3 +1,5 @@
+**Draft**
+
 ## North Bay Wildfire Mapping 
 
 Perform spatial analysis of areas affected by the recent North Bay Fires which provides context through the lense of MTC policy layers. The analysis should also provide useful summaries related to impact on the build environment as well as the socio-economic inpact.  
