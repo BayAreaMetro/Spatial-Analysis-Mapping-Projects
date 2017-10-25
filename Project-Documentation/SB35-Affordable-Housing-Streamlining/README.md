@@ -114,6 +114,9 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ### SB35 Map Overlay 
 
+1. Delete SB 35 Development Exclusion Area Features w/ the following SB35 Classification Attributes: (1, 4) 
+2. Dissolve by remaining SB35 Classification attributes: (2 ,3)  
+
 ## Results 
 
 ### Intermediate Datasets 
