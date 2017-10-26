@@ -22,10 +22,27 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 - [Calfire 2017 Statewide Fire Map](https://www.google.com/maps/d/viewer?mid=1TOEFA857tOVxtewW1DH6neG1Sm0&hl=en&ll=38.875582273874265%2C-122.70712978515627&z=9)
   - Download as kml
+- [SB35 Map Overlay (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=db31a2a5392f479e976e39fbee80e82e)
+- [Communities of Concern 2017](http://opendata.mtc.ca.gov/datasets/communities-of-concern-2017)
+- [Priority Development Areas Current](http://opendata.mtc.ca.gov/datasets/priority-development-areas-current)
 
 ## Analysis Parameters
 
 ## Methodology
+
+### Calfire Active Fire Perimeters
+
+1. Downloaded [Calfire Active Fires Data as kml](#data-sources)
+2. Ran KML to Layer 
+3. Exported perimeter features to project FGDB as [CalFire_Active_Fire_Perimeters_2017](#intermediate-data)
+4. Run identity operation on perimeter features and Bay Area Counties and output to FGDB as [Calfire_Active_Fire_Perimeters_2017_Ident](#intermediate-data)
+
+  4A. Delete water areas (FID_Bay_Area_Counties = -1) 
+
+5. Dissolve perimeter features by fire name and county and output new feature to FGDB as [Calfire_Active_Fire_Perimeters_2017_disso](#final-data)
+
+### Calfire Active Fire Perimeters Demographics 
+
 
 ## Expected Outcomes
 
@@ -48,3 +65,9 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
    - Rent vs. Own 
 
 ## Results
+
+### Intermediate Data 
+
+### Final Data 
+
+### Maps 
