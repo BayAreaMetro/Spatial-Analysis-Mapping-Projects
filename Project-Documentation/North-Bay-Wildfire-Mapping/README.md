@@ -25,6 +25,8 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 - [SB35 Map Overlay (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=db31a2a5392f479e976e39fbee80e82e)
 - [Communities of Concern 2017](http://opendata.mtc.ca.gov/datasets/communities-of-concern-2017)
 - [Priority Development Areas Current](http://opendata.mtc.ca.gov/datasets/priority-development-areas-current)
+- [RHNA Sites](#intermediate-data)
+- [ESRI Demographis](http://doc.arcgis.com/en/esri-demographics/)
 
 ## Analysis Parameters
 
@@ -35,21 +37,43 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 1. Downloaded [Calfire Active Fires Data as kml](#data-sources)
 2. Ran KML to Layer 
 3. Exported perimeter features to project FGDB as [CalFire_Active_Fire_Perimeters_2017](#intermediate-data)
-4. Run identity operation on perimeter features and Bay Area Counties and output to FGDB as [Calfire_Active_Fire_Perimeters_2017_Ident](#intermediate-data)
+4. Run identity operation on perimeter features and Bay Area Counties and output to FGDB as [Calfire_Active_Fire_Perimeters_2017_County](#intermediate-data)
 
   4A. Delete water areas (FID_Bay_Area_Counties = -1) 
-
-5. Dissolve perimeter features by fire name and county and output new feature to FGDB as [Calfire_Active_Fire_Perimeters_2017_disso](#final-data)
+5. Run identity operation on perimeter features / counties & Bay Area Jurisdictions and output to FGDB as 
+[Calfire_Active_Fire_perimeters_2017_County_Jurisdictions](#intermediate-data) 
+6. Dissolve perimeter features by fire name and county, and jurisdiction & output new feature to FGDB as [Calfire_Active_Fire_Perimeters_2017_disso](#final-data)
 
 ### Calfire Active Fire Perimeters Demographics 
 
+1. Run [North_Bay_Wildfire_Analysis.py script](\scripts\North_Bay_Wildfire_Analysis.py) to add demographic data. Script uses enrich layer function which leverages [Esri Demographics](#data-sources)
+
+### Calfire Active Fire Perimeters Policy 
+
+1. Run identity function on [Calfire_Active_Fire_Perimeters_2017_disso](#final-data) and each policy layer
+  - [RHNA](#intermediate-data)
+  - [Priority Development Areas](#intermediate-data)
+  - [SB35 Exclusion Areas](#intermediate-data)
+  - [Communities of Concern](#intermediate-data)
+2. Create new column called 'Policy_Intersect' 
+
+|Value    |Description                      |
+|---------|---------------------------------|
+|0        |Not within policy area           |
+|1        |Within policy area               |
+
+3. Dissolve on fire perimeter name, county name, jurisdiction, and policy output as [Calfire_Active_Fire_Perimeters_2017_Policy](#final-data)
+4. Add geometry attributes (acres) 
+
+### Calfire Active Fire Demographics Land Use 
+
+tbd
 
 ## Expected Outcomes
 
 ### Maps  
 
 - Print Map of North Bay Areas affected by wildfire overlain with PDAs, CoCs, SB35 Excluded Areas
-- Interactive Map of North Bay Areas affected by wildfire overlain with PDAs, CoCs, SB35 Excluded Areas
 
 ### Data Summaries 
 
@@ -66,8 +90,23 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 ## Results
 
+### Final Tabular Data Summaries
+
+- [NorthBay_Wildfire_Analysis](https://mtcdrive.box.com/s/cc8hyrye9324gov8xb5baqa33og71etj) 
+
 ### Intermediate Data 
+
+- [Intermediate Data (Data not in a feature dataset)](https://mtcdrive.box.com/s/hydrtfxra68t7odey4wm0qyoej70r822)
 
 ### Final Data 
 
+- [Final](https://mtcdrive.box.com/s/hydrtfxra68t7odey4wm0qyoej70r822)
+  - Calfire_Active_Fire_Perimeters_2017_disso
+  - Calfire_Active_Fire_Perimeters_2017_Demo
+  - Calfire_Active_Fire_Perimeters_2017_Policy
+  - Calfire_Active_Fire_Perimeters_2017_LandUse_disso
+
 ### Maps 
+
+- [NorthBayWildfireMap_LandUse_V1](https://mtcdrive.box.com/s/1yq7p3lpc7ib4j2ppo2mp7kvo4uwv3a9)
+- [NorthBayWildfireMap_Policy_V1](https://mtcdrive.box.com/s/ewewbabivx0b5s72j3rr2s3dgj3yka4f)
