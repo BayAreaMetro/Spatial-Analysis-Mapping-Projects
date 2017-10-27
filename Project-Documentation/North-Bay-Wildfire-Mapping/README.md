@@ -46,7 +46,7 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 ### Calfire Active Fire Perimeters Demographics 
 
-1. Run [North_Bay_Wildfire_Analysis.py script](/scripts/North_Bay_Wildfire_Analysis.py) to add demographic data. Script uses enrich layer function which leverages [Esri Demographics](#data-sources)
+1. Run [North_Bay_Wildfire_Analysis.py script](scripts/North_Bay_Wildfire_Analysis.py) to add demographic data. Script uses enrich layer function which leverages [Esri Demographics](#data-sources)
 
 ### Calfire Active Fire Perimeters Policy 
 
