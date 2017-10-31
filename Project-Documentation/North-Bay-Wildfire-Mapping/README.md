@@ -1,4 +1,4 @@
-**Draft**
+# Draft Documentation
 
 ## North Bay Wildfire Mapping 
 
