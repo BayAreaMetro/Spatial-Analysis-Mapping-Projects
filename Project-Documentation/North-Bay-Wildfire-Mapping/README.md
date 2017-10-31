@@ -26,7 +26,7 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 - [Communities of Concern 2017](http://opendata.mtc.ca.gov/datasets/communities-of-concern-2017)
 - [Priority Development Areas Current](http://opendata.mtc.ca.gov/datasets/priority-development-areas-current)
 - [RHNA Sites](#intermediate-data)
-- [ESRI Demographis](http://doc.arcgis.com/en/esri-demographics/)
+- [ESRI Demographics](http://doc.arcgis.com/en/esri-demographics/)
 
 ## Analysis Parameters
 
