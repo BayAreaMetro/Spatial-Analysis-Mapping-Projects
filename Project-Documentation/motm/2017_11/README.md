@@ -17,6 +17,10 @@ This month's map of the month piggybacks on work being performed by the resilenc
 
 #### Maps, Charts, and Graphics 
 
+- [Image Files](https://mtcdrive.box.com/s/k96lwy1bou8qkemk6akuxcx7dqnlw787)
+- [Illustrator Files](https://mtcdrive.box.com/s/iflzlh03twpoxynymot336xtbxs5offg)
+- [Presentation Files](https://mtcdrive.box.com/s/3wi5kcpddmky6uxovlk6dw4rd2rwru04)
+
 #### Written Material 
 
-#### Feature Classes & CSVs 
+- [November 2017 Write Up](https://mtcdrive.box.com/s/dowz4jzuxme6g9658vkwrrnbvcdfpbur)
