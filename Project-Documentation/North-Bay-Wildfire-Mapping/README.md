@@ -1,4 +1,4 @@
-**Draft**
+# Draft Documentation
 
 ## North Bay Wildfire Mapping 
 
@@ -26,7 +26,21 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 - [Communities of Concern 2017](http://opendata.mtc.ca.gov/datasets/communities-of-concern-2017)
 - [Priority Development Areas Current](http://opendata.mtc.ca.gov/datasets/priority-development-areas-current)
 - [RHNA Sites](#intermediate-data)
-- [ESRI Demographis](http://doc.arcgis.com/en/esri-demographics/)
+- [ESRI Demographics](http://doc.arcgis.com/en/esri-demographics/)
+
+### Sonoma Co. Service Layer from PRMD displaying fire damaged parcels from 10/17 wild fires.
+- [AGOL Feature Service](https://services1.arcgis.com/P5Mv5GY5S66M8Z1Q/ArcGIS/rest/services/PRMD_Fire_Asssessment_2017/FeatureServer/0)
+- [AGOL Map Layer](http://mtc.maps.arcgis.com/home/item.html?id=58915c0640e54dcb9723be4891bedb82)
+
+### Sonoma Co Structure Status
+Feature Service for Structures that were either damaged or destroyed by the wildfires in Sonoma Co: 
+- [AGOL Feature Service](https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/SonomaCounty_StructureStatus/FeatureServer/0)
+- [AGOL Map Layer](http://mtc.maps.arcgis.com/home/item.html?id=0e426949c4334fc7ba962086bfdaf7ac)
+
+### Napa County Bldg Dept. Structures (Inspections)
+Feature Service showing locations where structures were damaged in Napa County.  Includes All Buildings within Napa County
+- [AGOL Feature Service](https://services1.arcgis.com/Ko5rxt00spOfjMqj/arcgis/rest/services/Building_Inspections_Fire_2017/FeatureServer/0/)
+
 
 ## Analysis Parameters
 
@@ -46,7 +60,7 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 
 ### Calfire Active Fire Perimeters Demographics 
 
-1. Run [North_Bay_Wildfire_Analysis.py script](\scripts\North_Bay_Wildfire_Analysis.py) to add demographic data. Script uses enrich layer function which leverages [Esri Demographics](#data-sources)
+1. Run [North_Bay_Wildfire_Analysis.py script](scripts/North_Bay_Wildfire_Analysis.py) to add demographic data. Script uses enrich layer function which leverages [Esri Demographics](#data-sources)
 
 ### Calfire Active Fire Perimeters Policy 
 
@@ -68,6 +82,7 @@ Perform spatial analysis of areas affected by the recent North Bay Fires which p
 ### Calfire Active Fire Demographics Land Use 
 
 tbd
+
 
 ## Expected Outcomes
 
