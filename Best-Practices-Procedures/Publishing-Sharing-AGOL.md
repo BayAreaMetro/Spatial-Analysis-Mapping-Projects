@@ -22,7 +22,7 @@
 2. Ensure web map meets minimum basic documentation requirements for draft content. See [basic documentation requirements](Documentation.md#basic-documentation) 
     - Name, summary, and tag field are required to be completed before you can publishing to AGOL from ArcGIS Pro.
 3. Select sharing options:  
-    - To share with **only** a select group of stakeholders, share content to a **working group only**. Don't share with **organization** or **public**. If an appropriate working group does not exist, create one following guidelines for [creating working groups](#create-working-group) 
+    - To share with **only** a select group of stakeholders, share content to a [working group](Creating-Groups.md#create-working-groups) only. Don't share with **organization** or **public**. If an appropriate working group does not exist, create one following guidelines for [creating working groups](Creating-Groups.md#create-working-groups) 
     - To share with a wider audience, or a stakeholder not part of the MTC AGOL Organization, share content to **organization**, **public**, or both if necessary. 
 4. Confirm spatial extent for all web layers prior to publishing. If spatial extent is larger than your target extent (ex California extent when web layer is Bay Area centric), follow guide on [Recalculating Feature Class Extent](AGOL-Technical-Resources.md#recalculate-feature-class-extent) 
 
@@ -30,7 +30,7 @@
 
 1. Ensure web map meets minimum basic documentation requirements for draft content. See [basic documentation requirements](Documentation.md#basic-documentation)
 2. Select sharing options:  
-    - To share with **only** a select group of stakeholders, share content to a **working group only**. Don't share with **organization** or **public**. If an appropriate working group does not exist, create one following guidelines for [creating working groups](#create-working-group) 
+    - To share with **only** a select group of stakeholders, share content to a [working group](Creating-Groups.md#create-working-groups) only. Don't share with **organization** or **public**. If an appropriate working group does not exist, create one following guidelines for [creating working groups](Creating-Groups.md#create-working-groups) 
     - To share with a wider audience, or a stakeholder not part of the MTC AGOL Organization, share content to **organization**, **public**, or both if necessary. 
 
 ## Publishing Curated Content to an External Audience
@@ -46,7 +46,7 @@ In the sections following, processes for publishing content to external audience
 3. Update ownership of web layer from current owner to content_MTC (if not already owned by that user)
 4. Ensure that web layer meets minimum documentation requirements for curated content. See [detailed documentation requirements](Documentation.md#detailed-documentation)
 5. Ensure that content is tagged appropriately. See [tag strategy](https://mtcdrive.app.box.com/file/198480762097)
-6. Share with public group(s) that best suites the content topic area(s). 
+6. Share with [public group(s)](Creating-Groups.md#create-broadcast-groups) that best suites the content topic area(s). 
 
    | Content Topic Areas  |               |          |
    |----------------------|---------------|----------|
