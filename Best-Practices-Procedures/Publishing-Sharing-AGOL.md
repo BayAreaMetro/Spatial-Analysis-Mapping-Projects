@@ -65,7 +65,12 @@ In the sections following, processes for publishing content to external audience
 ### PDF Maps
 
 1. Ensure web map is documented, following the basic documentation requirements. See [basic documentation requirements](Documentation.md#basic-documentation)
+   - PDFs at minimum should have the following: 
+     - Title 
+     - Description (write up)
+     - Link to project documentation github (if available) 
 2. Ensure that content is tagged appropriately. See [tag strategy](https://mtcdrive.app.box.com/file/198480762097)
+   - Ensure that month and year are included as seperate tags (ex July, 2017)
 3. Share with [MTC Map Gallery Groups](http://mtc.maps.arcgis.com/home/group.html?id=4bb2944ff35348c3847859b48d28336d#overview)
 
 ## Publishing Content to MTC's Open Data Portal 
