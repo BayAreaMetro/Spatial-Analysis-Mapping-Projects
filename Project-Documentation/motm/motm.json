@@ -515,41 +515,48 @@
 	"description": "This month's map is based on a recently published New York Times article, which found that on average, only 33% of Americans discuss global warming at least occasionally with friends and family and up to 31% never do. As shown in the map, there are distinct regional patterns. Americans in the Western US, many of whom have been affected by drought and wildfire, are more likely to iscuss climate change.  Similarly, Americans residing in the New England states talk more about climate as well as those living in coastal South Carolina \u00e2\u0080\u0093 states battered by many hurricanes over the years. Aside from Southeast Florida however, the rest of the Atlantic Coast is less likely to engage in climate discussions despite recent increases in global warming related flooding. As the article highlights, global warming is precisely the kind of threat humans are awful at dealing with due to its slow- moving and abstract nature. ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_7_17.png",
 	"author": "Michael Ziyambi",
+	"title":"July 2017: U.S. Counties Where Adults Discuss Global Warming at Least Occasionally",
 	"year":2017
 }, {
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm_6_23_17.pdf",
 	"description": "On May 1, the California Department of Finance (DOF) released population estimates updated through the end of year 2016, which include detailed data on housing production for the San Francisco Bay Area. While a single year is just one data point and may not necessarily be indicative of long-term trends, this dataset is still useful to understand how the robust regional economy is affecting housing production trends in recent months. The June 2017 map of the month highlights how 2016 housing production compares to the annualized housing forecast from the Draft Plan Bay Area 2040 by identifying how many years it will take cities, at the current rate, to reach the year 2040 forecast.While some cities are on pace or even ahead of schedule to meet the forecast, numerous jurisdictions are way behind \u00e2\u0080\u0093 many by centuries ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_6_23_17.png",
 	"author": "Michael Ziyambi",
+	"title":"June 2017: When Bay Area Cities Will Reach Plan Bay Area 2040 Housing Targets",
 	"year":2017
 }, {
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm_5_20_17.pdf",
 	"description": "This month's Map of the Month highlights employment centers within the 21 - County Northern California Mega Region. Employment Centers were defined within built-up areas where there was an employment density of over 5,000 jobs per square mile. Jobs within the Mega Region were broken down by North American Industry Classification System (NAICS) sectors, and were grouped into 7 related classifications.  The Mega Region had over 5.7 million jobs in 2016. The largest shares of jobs are in the Information, Professional Services, Management & Administration sectors (over 1.2 million). The top five employment centers within the Mega Region are in Santa Clara (988,657), Alameda (762,089), San Francisco (642,093), Sacramento (617,947), and Contra Costa Counties (408,669). ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_5_20_17.png",
 	"author": "Michael Ziyambi",
+	"title":"May 2017: Northern California Mega Region Employment Density",
 	"year":2017
 }, {
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm_4_18_17.pdf",
 	"description": "A recent New York Times article examines one of the biggest drivers in a families' decision to leave cities: school. Using data from a number of sources, the New York Times developed charts that look at school performance and median home sale price per square foot for 5 metro areas including New York/New Jersey, San Francisco, Boston, Chicago, and Minneapolis. For mostof the cities studied, home prices rise with the quality of the school district but a number of districts break this pattern.  The map shown highlights 5 Bay Area schools that perform above average, and have below average housing costs.The New York Times used median price per square foot to measure housing costs and the median number of grades ahead (or behind) for school district quality. In the Bay Area, the price per square foot was around $500 while students were .28 grades ahead of their grade placement. The 5 Bay Area schools that were selected had the lowest home prices and the best performing schools in the region. Source: New York Times . ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_4_18_17.png",
 	"author": "Michael Ziyambi",
+	"title":"April 2017: Northern California Mega Region Employment Density",
 	"year":2017
 }, {
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm_3_16_17.pdf",
 	"description": "In December 2016, Waze and MTC entered into a data sharing agreement that provides the Freeway Service Patrol (FSP) program with real-time information that will help FSP tow drivers quickly detect incidents. Waze, in turn, will receive the FSP's highway incident information \u00e2\u0080\u0093 including crashes and stalls \u00e2\u0080\u0093 to share with its users. Together, both will have more data and be better able to provide timely assistance to Bay Area drivers. The map in Attachment 4 represents a snapshot of the incidents reported by FSP and Waze users during peak congestion hours in the nine-county Bay Area. Traffic incidents and assists from the FSP program are shown in blue, while reported incidents from Waze are shown in yellow. Incidents have been aggregated along major corridors throughout the region in an attempt to compare the number of incidents reported by Waze users with the total number of assists handled by the FSP program. Alameda County (32%) has the largest share of the total number of incidents during the peak congestion hours, followed by Santa Clara (26%), Contra Costa (15%) and San Mateo (12%). ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_3_16_17.png",
 	"author": "Michael Ziyambi",
+	"title":"March 2017: Traffic Incident Management Along Bay Area Freeways",
 	"year":2017
 }, {
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm_2_17.pdf",
 	"description": "This month's map highlights a recent study released by Inrix Inc. that examines traffic congestion in over 1,000 cities - 240 in the U.S. - across 38 countries. The study reveals that the U.S. is ranked as the most congested developed country in the world, with drivers spending an average of 42 hours a year in traffic during peak hours. According to this study, the direct and indirect costs of congestion to all U.S. drivers amounts to nearly $300 billion in 2016, an average of $1,400 per driver.  U.S. cities dominated the top 10 most congested cities globally, with Los Angeles (first), New York (third), San Francisco (fourth), Atlanta (eighth) and Miami (10th) each dealing with an economic drain on the city upwards of $2.5 billion caused by traffic congestion. Los Angeles commuters spent an average of 104 hours last year in traffic jams during peak congestion hours more than any other city in the world. This contributed to congestion costing drivers in Los Angeles $2,408 each and the city as a whole $9.6 billion from direct and indirect costs. Direct costs relate to the value of fuel and time wasted, and indirect costs refer to freight and business fees from company vehicles idling in traffic, which are passed on to households through higher prices. ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_2_17.png",
 	"author": "Michael Ziyambi",
+	"title":"February 2017: Most Congested Urban Areas in the U.S.",
 	"year":2017
 }, {
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm_1_17.pdf",
 	"description": "This map shows median home values plotted against median household income in an effort to illustrate where the least affordable housing in the U.S. is located. The Bay Area, not surprisingly, has some of the least affordable housing in the country \u00e2\u0080\u0093 both in absolute terms, and in terms relative to income. In San Francisco proper, the median home value is $800,000 with a median income of $81,000, giving a price-to-income ratio of nearly 10 to 1. In Marin County, the median home value is $815,000 with a median income of $93,000. This ratio is 8.8 times the median income of the county. In Silicon Valley, housing is still pricey, but many people are able to make up for it with higher incomes: San Mateo County has a ratio of 8.3, and Santa Clara County has a ratio of 7.3. ",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_1_17_Map.png",
 	"author": "Michael Ziyambi",
+	"title":"January 2017: How Large Are Incomes in Each U.S. County Compared to the Value of the Homes?",
 	"year":2017
 }]
