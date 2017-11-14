@@ -448,13 +448,6 @@
 	"year": 2016
 }, {
 	"author": "Kearey Smith",
-	"description": "This month's map is focused on the early-bird commute for workers living in the Northern California Megaregion. This region is home to approximately 12 million residents and 5 million commuters, of which approximately 582,000 travel during the early morning commute (defined as 6:00 am or earlier).  Residents who live in the eastern portions of Contra Costa County and within the Counties of San Joaquin and Stanislaus have the largest share of total commuters traveling to work before 6 a.m. According to a recent study by the Bay Area Council's Economic Institute, the number of total interregional commuters (not just early-birds) has increased by 83,950 between 1990 and 2013, reaching a total of 191,500 in 2013.  The growth of Northern San Joaquin Valley commuters to the Bay Area has been particularly dramatic, more than doubling from 31,670 in 1990 to 64,930 in 2013. The following map animation details the morning commute during the early morning, the AM Peak period (from 6 till 9 a.m.) and late morning (9 till 10 a.m.)View Map Animation",
-	"image": "http://gis.mtc.ca.gov/home/images/motm/motm1016.png",
-	"link": "https://www.youtube.com/watch?v=jUQzsj1PRZU",
-	"title": "October 2016: Megaregion Early Commute",
-	"year": 2016
-}, {
-	"author": "Kearey Smith",
 	"description": "This map shows Census designated urbanized areas that extend into the jurisdiction of an adjacent Metropolitan Planning Organization. There are two such urbanized areas within the jurisdiction of MTC; one in Davis, which extends from the Sacramento Area Council of Government's jurisdiction and the other in Santa Clara County, which extends into the jurisdiction of the Association of Monterey Bay Area Governments. Under a proposed federal planning rule, even though such areas comprise 0.01 percent of MTC's population, we would be required to merge with AMBAG and SACOG or develop a joint Regional Transportation Plan and joint performance measures.  We have created a simple animated map that highlights these areas in greater detail.View Map Animation",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm0916.png",
 	"link": "http://gis.mtc.ca.gov/home/images/motm/motm0916.pdf",
@@ -497,14 +490,14 @@
 	"title": "January 2016: Deaths from Motor Vehicles and Guns Converge",
 	"year": 2016
 }, {
-	"link": "https://mtcdrive.box.com/s/i9wj04eqh5sb3ziusl0fa4m74a8ua1gw",
+	"link": "https://s3-us-west-2.amazonaws.com/mtcmotm/motm_10_13_17_Website.pdf",
 	"description": "On Monday, October 9th, 2017 the Bay Area experienced a 4.1 earthquake about 12 miles east of San Jose near the Calaveras Fault. The small jolt-and-roll caused no damage but served as a not-so-gentle reminder that the Bay Area rests upon a number of restless faults. According to the United States Geological Survey (USGS), there is a 72% likelihood that the Bay Area will experience a magnitude 6.7 or greater earthquake over the next 30 years. For context, the 1989 Loma Prieta earthquake, with a magnitude of 6.9, was responsible for 63 deaths and severely damaged elevated transportation infrastructure in San Francisco and Oakland.  The fault with the greatest likelihood of earthquake is the Hayward-Rodgers Creek Fault, which runs roughly from East San Jose in Santa Clara County to Santa Rosa in Sonoma County. When considering earthquakes, it is important to remember that the magnitude scale is logarithmic, meaning a 7.0 earthquake would release 33 times more energy than that of the 6.0 South Napa Earthquake which occurred in 2014.",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_10_30_17.png",
 	"author": "Michael Ziyambi",
 	"title": "October 2017: Bay Area 30 Year Earthquake Risk Projection",
 	"year":2017
 }, {
-	"link": "https://mtcdrive.box.com/s/ej7rbba7uutjhyznpl1jrzopk2t2utgs",
+	"link": "https://s3-us-west-2.amazonaws.com/mtcmotm/motm_9_19_17.pdf",
 	"description": "Since the turn of the century, the U.S. has undergone a redistribution of population from rural and rust belt counties to urban counties; particularly those along the Northern and Southern Atlantic Seaboard, the Pacific Coast and parts of the Southwest region. 41 percent or 1,295 counties had population declines from 2000 –2016, with 15 counties experiencing declines of more than 25,000 people or 2.4 percent of the total population.Over the same period, total population for the nation grew by 42 million, 8 percent of which has migrated from declining rural and rust belt counties to growing urban counties along the East and West Coast, and in the Southwest, resulting in a 23 percent increase in population occurring in 60 percent of U.S. counties.The data indicates that the majority of this growth is occurring in just 12 percent of counties, including the Bay Area which has experienced a 2.4 percent increase in population.",
 	"image": "http://gis.mtc.ca.gov/home/images/motm/motm_9_19_17.png",
 	"author": "Michael Ziyambi",
