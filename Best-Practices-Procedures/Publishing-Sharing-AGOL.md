@@ -50,7 +50,7 @@ In the sections following, processes for publishing content to external audience
 
    | Content Topic Areas  |               |          |
    |----------------------|---------------|----------|
-   | Transportation       | Demographic   | Policy   |
+   | Administrative       | Demographic   | Policy   |
    | Transportation       | Environmental | Projects |
 7. Confirm spatial extent for all web layers prior to publishing. If spatial extent is larger than your target extent (ex California extent when web layer is Bay Area centric), follow guide on [Recalculating Feature Class Extent](AGOL-Technical-Resources.md#recalculate-feature-class-extent) 
 
