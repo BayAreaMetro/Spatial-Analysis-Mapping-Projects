@@ -21,5 +21,10 @@ def feature_class_to_pandas_df(feature_class,field_list):
 # Create report of points and lines and their PDA audit status
 
 OBAGpointsDF = feature_class_to_pandas_df(OBAGpoints, field_list) 
-
 OBAGLinesDF = feature_class_to_pandas_df(OBAGLines, field_list)
+
+
+OBAGLines = r"RPD_OBAG_2_Project_Lines_11_07_2017_multi"
+field_list = ('App_Proj_ID','MAP_Label','MAP_Mode','County','MAP_project_name','PDA_status','PDA_status_audit') 
+
+OBAGLinesNP = arcpy.da.FeatureClassToNumPyArray(OBAGLines,field_list,skip_nulls=False)
