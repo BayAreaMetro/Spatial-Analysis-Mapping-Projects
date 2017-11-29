@@ -1,0 +1,99 @@
+[{
+	"author": "Kearey Smith",
+	"description": "The map of the month depicts some recent research conducted by the Brookings Institution and London School of Economics about how the world's 150 largest metropolitan economies have fared during the Great Recession. The map shows that the metro regions in the U.S. and Europe took the brunt of the economic downtown, while those in Asia and other developing countries weathered the storm in much better shape.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm1210.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm1210.pdf",
+	"title": "December 2010: Metro Economic Performance During the Great Recession and Change in Ranking (Pre-Recession to Recovery)",
+	"year": 2010
+}, {
+	"author": "Kearey Smith",
+	"description": "This month's map shows the number of daily individual trips to major employment centers around the Bay area, as well as the distances commuters are traveling to reach those destinations. The overall pattern shows that employees in the Bay area tend to live closer to their places of employment. Some areas, like Brentwood and Antioch, have a large number of commuters traveling a pretty significant distance by car in order to reach their places of employment. The major employment centers constitute the 25 largest employment centers in the Bay area based on the number of employees. The commute analysis was conducted at the TAZ level.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm1110.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm1110.pdf",
+	"title": "November 2010: Daily Trips and Distance Traveled to Major Employment Centers",
+	"year": 2010
+}, {
+	"author": "Kearey Smith",
+	"description": "This map illustrates the racial diversity of neighborhoods in the San Francisco Bay Area in 2000. Each dot represents 100 people in four race categories: white (non-Hispanic), black (non-Hispanic), Hispanic/Latino, and Asian/Pacific Islander. Thus, the map also depicts population densities throughout the region. While the rural/ suburban areas in the region have largely white populations, many urban/ densely populated areas in the region are racially diverse, with two or more ethnicities living in relatively non-segregated neighborhoods.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm1010.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm1010.pdf",
+	"title": "October 2010: Racial Diversity",
+	"year": 2010
+}, {
+	"author": "Kearey Smith",
+	"description": "The map of the month illustrates the existing Level II public vehicle charging station infrastructure in the nine county Bay Area region. The data was created by geocoding the address of the 91 charging stations, which was obtained from the U.S. Department of Energy.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm910.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm911.pdf",
+	"title": "September 2010: Electric Vehicle Charging Stations",
+	"year": 2010
+}, {
+	"author": "Kearey Smith",
+	"description": "The map of the month shows the number of Essential Destinations (Schools, Food Stores, Health Services, Social Services, Banks, and Places of Worship) accessible from Bay Area locations within a 30-minute transit trip. These data are depicted at the TAZ level and are clipped to show urbanized areas. San Francisco shows the most significant access to essential destinations using transit, with some areas showing that over 1500 essential destinations are accessible within a 30 minute transit trip.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm710.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm711.pdf",
+	"title": "July 2010: Essential Destinations Accessible by Transit",
+	"year": 2010
+}, {
+	"author": "Kearey Smith",
+	"description": "This chart compares support for transportation measures among Bay Area voters with voters statewide. It confirms what many of us already suspect, namely that our region's voters are more willing to tax themselves to support transportation. The gap between the Bay Area and the state average is most noticeable with respect to rail improvements financed by general obligation bonds. The greatest gap occurred in November 2008, when 62 percent of Bay Area voters supported Proposition 1A, the high-speed rail bond, versus only 53 percent statewide. On the other hand, Bay Area voters are less supportive than the average Californian towards measures aimed at protecting local and state transportation funding from being diverted to other purposes.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm911.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm911.pdf",
+	"title": "September 2011: Voting Results on Transportation Ballot Measures",
+	"year": 2011
+}, {
+	"author": "Kearey Smith",
+	"description": "This map illustrates the Nation's top five most densely populated Urban Areas as tabulated by Census 2010. Four of these areas are in California. The San Francisco-Oakland and San Jose Urban Areas rank second and third, respectively. That the New York Metropolitan area ranks fifth on this list shows that this density ranking is greatly affected by the nature of the land area designated as urban. Census Urban Areas comprise an urban core and associated suburbs. California's urban and suburban areas are more uniform in density when compared to New York's urban core and suburban periphery which have vastly different densities. Delano ranks fourth because it has a very small land area and its population is augmented by two large California State Prisons housing 10,000 inmates.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm412.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm412.pdf",
+	"title": "April 2012: Most Densely Populated Urban Areas in 2010",
+	"year": 2012
+}, {
+	"author": "Kearey Smith",
+	"description": "T he map shows the Center for Neighborhood Technology's Housing and Transportation (H+T) Affordability Index using 2009 American Community Survey Data. Compared side-by-side is the cost of housing as a percent of income (on the right) with the cost of housing and transportation as a percent of income (on the left) for an average household at the county level. The average housing cost of five Bay Area counties does not exceed 30% of average household income. When taking into consideration the added cost of transportation, however, only three Bay Area counties \u00e2\u0080\u0093 Alameda, San Francisco, and Santa Clara \u00e2\u0080\u0093 do not exceed the 50% threshold for combined cost.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm312.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm412.pdf",
+	"title": "March 2012: Housing and Transportation Costs in 2009",
+	"year": 2012
+}, {
+	"author": "Kearey Smith",
+	"description": "This map illustrates the variation by metropolitan area of income levels required to be in the top 1% of earners. While a U.S. household must earn greater than $380,000 to rank in the top 1% of all American households, a much higher income is required in most of California's coastal communities.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm212.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm312.pdf",
+	"title": "February 2012: Income Thresholds for \"The 1%\" by Metropolitan Area",
+	"year": 2012
+}, {
+	"author": "Kearey Smith",
+	"description": "In the map, we have color-coded the number of years since each of the 50 states last raised taxes on gasoline. On the positive, side, quite a few states managed to raise rates within the past year, although California adjustment was actually part of a revenue neutral gas tax/sales tax scrap. On a negative rate, about one-half the states have not raised their gasoline taxes in more than a decade. Also, by special request of Commissioner Haggerty, I've included a bonus map which represents the proposed BART system that was presented to Alameda, Contra Costa, and San Francisco voters at the election approving construction of the system in November 1962.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm112.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm212.pdf",
+	"title": "January 2012: Years Since Last Gas Tax Increase",
+	"year": 2012
+}, {
+	"author": "Kearey Smith",
+	"description": "In 2008, the Department of Housing and Urban Development (HUD) created a Neighborhood Stabilization Program to provide emergency assistance to state and local governments to acquire and redevelop foreclosed properties that might otherwise become sources of abandonment and blight within their communities. This program provides grants to every state, certain local communities, and other organizations to purchase foreclosed or abandoned homes and to rehabilitate, resell, or redevelop these homes in order to stabilize neighborhoods and stem the decline of house values of neighboring homes. This map scores neighborhoods in the bay area on a scale of 1 to 20 where 20 indicates areas in the highest 20% of risk nationwide for home foreclosures and abandonment.  1 indicates areas with lowest risk. This ranking is based upon the following factors developed by HUD:    whether or not loans are high cost or highly leveraged in the neighborhood    change in home values for the metropolitan, or non-metropolitan portion of the state    unemployment rate for the county in 2008, and  the change in unemployment in the county between 2007 and 2008. HUD is providing its data on estimated foreclosures (based on risk) and vacancy data to assist state and local governments in their efforts to target the communities and neighborhoods with the greatest needs.  HUD recommends that if states and local governments have local data, such as county data on foreclosure filings, that those data also be given serious consideration in identifying areas of greatest needs.Map Source: http://www.huduser.org/portal/datasets/nsp.html",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm213.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm213.pdf",
+	"title": "February 2013: Neighborhood Foreclosure and Abandonment Risk in Bay Area Neighborhoods",
+	"year": 2013
+}, {
+	"author": "Kearey Smith",
+	"description": "This map and chart illustrates total vehicle miles traveled on all roads across the country.  The data is based upon traffic volume trends data collected by the U.S. D.O.T data from January 1971 to February 2013.  Since June 2005, vehicle miles driven have fallen 8.75 percent. This decline has remained steady for the past 92 months.  There are several reasons that may be causing this steady downward trend.  It has been suggested that due to rising gas prices, the Great Recession, an aging population led by the Baby Boom generation which is comprised of Americans over the age of 55 who tend to drive less, and quite possibly younger Americans choosing to drive less.  Between 2001 and 2009, the average yearly number of miles driven by 16- to 34-year-olds has dropped 23 percent.Researchers indicate that this trend may be linked to five principal factors:The cost of Driving has increasedThe recent recessionIt is harder to get a license in many statesMore younger people are choosing to live in transit-oriented areas andTechnology is making it easier to go car-freeData Source Information:Traffic Volume Trends is a monthly report based on hourly traffic count data reported by the States. These data are collected at approximately 4,000 continuous traffic counting locations nationwide and are used to estimate the percent change in traffic for the current month compared with the same month in the previous year. Estimates are re-adjusted annually to match the vehicle miles of travel from the Highway Performance Monitoring System and are continually updated with additional data.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm613.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm613.pdf",
+	"title": "June 2013: Estimated Vehicle Miles Traveled on All Roads",
+	"year": 2013
+}, {
+	"author": "Kearey Smith",
+	"description": "From the 1930s to 2003, there was a high correlation between miles driven and state GDP.  The greater the number of miles driven the higher the state GDP.  Starting in 2003, these two parameters began to diverge, due to a lack of growth in the amount of miles being driven.  This map shows the relationship between total vehicle miles driven and GDP per state in 2011.  According to the recent report \"Distance Driven and Economic Activity in the Individual U.S. States: 1997-2011,\" done by the University of Michigan Transportation Research Institute, the District of Columbia had the highest GDP per distance driven ($30.04/mile), followed by Alaska ($11.16/mile), and New York ($9.16/mile).  Among the lowest states were Mississippi ($2.51/mile), Alabama ($2.75/mile), and New Mexico ($3.12/mile).  The study also found that higher density populations correlated to a higher GDP/mile ratio, which is expected.  But it rather unexpectedly found that states with large land areas correlated to a high level of GDP/mile ratio.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm913.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm913.pdf",
+	"title": "September 2013: Distance Driven and Economic Activity in 2011",
+	"year": 2013
+}, {
+	"author": "Kearey Smith",
+	"description": "Metropolitan areas, the powerhouses of the nation's economy, are pursuing a diverse range of strategies to improve their transportation systems - by expanding public transit, widening roadways, and preserving existing infrastructure built by prior generations. By examining long-range funding allocations for America's most populous 20 metropolitan planning organizations (MPOs), the distribution of funding for operations and maintenance (O&M;) versus expansion, as well as roadways versus public transit, can be identified. Aging regions (New York, Boston, Chicago, Philadelphia and Pittsburgh) are spending large shares of their regional funding on preserving existing road and transit infrastructure; newer regions with rapid growth are pursuing different strategies, some heavily dependent on highway expansion (Denver, Dallas, Phoenix) and others with a more balanced approach incorporating substantial investment in fixed-guideway transit systems (Los Angeles, San Diego).",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm1113.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm1113.pdf",
+	"title": "November 2013: Regional Transportation Plan Breakdown of Funding Allocations by Type: America's Top 20 Most Populated MPOs",
+	"year": 2013
+}]
