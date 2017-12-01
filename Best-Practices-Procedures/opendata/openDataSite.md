@@ -14,6 +14,6 @@ Third-party resources that qualify for posting as a public service can only be m
 ## Sharing Requirements and Processes
 - [Metadata (Documentation) Requirements](requirements_openDataMetadata.md)
 - Processes
-  - ArcGIS Online to Open Data
-  - File (Shapefile, Table, PDF, etc.) to Open Data
-  - Enterprise Database to Open Data
+  - [ArcGIS Online to Open Data](process_agol2OpenData.md)
+  - [File (Shapefile, Table, PDF, etc.) to Open Data](process_file2OpenData.md)
+  - [Enterprise Database to Open Data](process_edb2OpenData.md)
