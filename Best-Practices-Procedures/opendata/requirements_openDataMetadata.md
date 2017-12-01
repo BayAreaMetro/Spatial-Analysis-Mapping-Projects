@@ -1,5 +1,10 @@
 # Metadata
-Metadata (data about data) is required for all content posted to the MTC Open Data site. Content will not be posted until its metadata has been reviewed and approved so be sure to include the time required to review the content and its metadata if it needs to be posted by a specific date.
+Metadata (data about data) is required for all content posted to the MTC Open Data site. Content will not be posted until its metadata has been reviewed and approved so be sure to include the time required to review the metadata if it needs to be posted by a specific date.
+
+Placeholders for next section
+Prefer metadata created in ArcGIS product
+For non-spatial resources, metadata can be submitted using Microsoft Word or other text document
+How GitHub relates
 
 ## Default metadata requirements for Open Data content:
   1. Title- Limited to the name of the content itself. For point-in-time and serial releases a date, as either year, month and year, or version number can be included. All other information is to be placed in the summary or/and description metadata sections. 
