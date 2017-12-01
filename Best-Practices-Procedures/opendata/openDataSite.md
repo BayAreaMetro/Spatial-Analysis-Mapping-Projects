@@ -1,5 +1,7 @@
 # Open Data
-For the purposes of this section, Open Data will be used to refer to both public resources on the MTC ArcGIS Online site and the Open Data site. The term resource encompasses spatial features, non-spatial tables, web maps, map applications, feature services, PDF maps, etcetera that can be accessed, viewed, and/or downloaded by the public.
+MTC makes data available to the public through its [ArcGIS Online](http://mtc.maps.arcgis.com/home/index.html) and [Open Data](http://opendata.mtc.ca.gov/) sites.
+
+This section covers data promoted to the Open Data site. Requirements and process related to public sharing of resources on through ArcGIS Online are found in XXPage TitleXX. The terms data and resource are interchangable and encompass spatial features, non-spatial tables, web maps, map applications, feature services, maps (PDF and images), etcetera that can be accessed, viewed, and/or downloaded by the public.
 
 ## Qualifications for Posting as Public Resource:
 For the most part, resources that are developed/created by Metropolitan Transportation Commission (MTC) staff and used to produce a final/adopted document, plan, or policy released/implemented by the Commission are acceptable for sharing to the public. The exception regards the inability of the MTC to distribute proprietary, licensed data to the public, regardless of whether is was used to produce a final/adopted document, plan, or policy.
