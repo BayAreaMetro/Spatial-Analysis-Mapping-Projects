@@ -1,5 +1,8 @@
-## The default metadata requirements for Open Data resources are:
-  1. Title,
+# Metadata
+Metadata (data about data) is required for all content posted to the MTC Open Data site. Content will not be posted until its metadata has been reviewed and approved so be sure to include the time required to review the content and its metadata if it needs to be posted by a specific date.
+
+## Default metadata requirements for Open Data content:
+  1. Title- Limited to the name of the content itself. For point-in-time and serial releases a date, as either year, month and year, or version number can be included. All other information is to be placed in the summary or/and description metadata sections. 
   2. Summary/Purpose - 1-2 lines describing the resource.
   3. Description/Abstract - Detailed information regarding the resource. Information can include, but is not limited to, the following: What it is, intended uses, limitations on use, and how it was developed (including identification of third-party data/resources used in its development).
   4. Contact information for resource developer - Name, title, phone number, e-mail address, agency name, and building address. Position or unit names can also be used, and in some cases are preferrable as the creator may leave or change roles and the time cost of updating resource metadata is not insignificant if the person was a prolific developer of public resources.
@@ -8,7 +11,7 @@
   7. Date of update - For a resource that has been updated, rather than released as a new version, the day, month, and year the update was completed.
   8. Field descriptions - A definition must be provided for every table column. This covers both shapefile/feature set attribute tables and stand-alone data (spreadsheet, DBF, CSV, etc.). If the values in a column use codes to represent a limited range of values (i.e. numeric codes used for counties, acronymns used for housing types, etc.) then definitions need to be provided for each code value as well. 
 
-## The metadata related to MTC public resources using one or more third-party resources must:
+## Metadata related to content using one or more third-party resources must:
   1. Prominantly state the third-party that created it,
   2. Identify the final/adopted document, plan, or policy the resource was used for,
   3. State that the data may not be the most current version available as it is not an MTC resource,
