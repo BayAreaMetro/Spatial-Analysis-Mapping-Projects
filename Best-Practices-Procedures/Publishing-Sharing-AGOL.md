@@ -12,7 +12,7 @@
   - [Web Layers](#web-layers)
   - [Web Maps](#web-maps)
   - [PDF Maps](#pdf-maps)
-- [Publishing Content to MTC's Open Data Portal](#publishing-content-to-mtcs-open-data-portal)
+- [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
 
 ## Publishing Draft or Intermediate Content to Internal or External Audiences
 
