@@ -73,6 +73,3 @@ In the sections following, processes for publishing content to external audience
    - Ensure that month and year are included as seperate tags (ex July, 2017)
 3. Share with [MTC Map Gallery Groups](http://mtc.maps.arcgis.com/home/group.html?id=4bb2944ff35348c3847859b48d28336d#overview)
 
-## Publishing Content to MTC's Open Data Site 
-
-General staff is not authorized to publish content to MTC's Open Data site. The policy and requirements to promote a resource from ArcGIS Online to the MTC Open Data Portal can be found on the MTC Open Data page.
