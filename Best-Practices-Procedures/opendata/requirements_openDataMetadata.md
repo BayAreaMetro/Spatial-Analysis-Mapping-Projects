@@ -3,7 +3,7 @@
   2. Metadata requirement two, and
   3. A definition must be provided for every table column. This covers both shapefile/feature set attribute tables and stand-alone data (spreadsheet, DBF, CSV, etc.). If the values in a column use labels to represent a limited range of values (i.e. numeric codes used for counties, acronymns used for housing types, etc.) then definitions need to be provided for each label. 
 
-## The metadata related to the MTC public service(s) using one or more third-party resource(s) must:
+## The metadata related to MTC public resources using one or more third-party resources must:
   1. Prominantly state the third-party that created it,
   2. Identify the final/adopted document, plan, or policy the resource was used for,
   3. State that the data may not be the most current version available as it is not an MTC resource,
