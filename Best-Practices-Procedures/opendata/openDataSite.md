@@ -11,7 +11,7 @@ Resources obtained from a third-party that are included in the Enterprise Databa
 
 Third-party resources that qualify for posting as a public service can only be made available as a feature layer, web map, or both, and it must be presented as it is in the published document, plan, or policy. In order to provide public access to the resource itself, download and/or contact information for the resource producer will be provided in the data service documentation.
 
-##Sharing Requirements and Processes
+## Sharing Requirements and Processes
 - Metadata (Documentation) Requirements
 - Processes
   - ArcGIS Online to Open Data
