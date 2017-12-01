@@ -1,2 +1,9 @@
-## Porttitor tempor massa
-Lacus nostra quam. Nullam turpis at. Maecenas et odio. Malesuada augue feugiat dapibus tristique ornare. Ac maecenas non. Platea non hac. Ornare nam diam lacus nam amet eu aliquam accumsan vivamus tellus lectus. Vulputate mi metus praesent vestibulum vel imperdiet proin ultricies urna nec leo neque donec amet duis a maecenas. Congue fusce dictumst. Gravida arcu ac. Sed et donec. Montes dui eget. Eget vehicula imperdiet at suspendisse rhoncus pellentesque ante dolor. Phasellus donec enim ligula pede eu. Bibendum senectus sed. Arcu elit fermentum lectus nascetur rhoncus aliquam turpis vitae. In ligula ut et ut augue sed venenatis dignissim. Nulla orci ac.
+## Promoting Content from ArcGIS Online to MTC's Open Data Site
+1. Ensure content meets minimum requirements for [publishing curated content to an external audience](../#README.md#publishing-curated-content-to-an-external-audience-with-arcgis-online)
+2. If publishing a web layer, ensure coordinate reference system is set to WGS84 (EPSG/SRID: 4326) 
+3. Tag with appropriate open data category tag - **Note: if content not tagged, content will not be organized by category on open data site**
+
+   |            Open Data Categories            |
+   |-----------------|---------------|----------|
+   | Administrative  | Demographic   | Policy   |
+   | Transportation  | Environmental | Projects |
