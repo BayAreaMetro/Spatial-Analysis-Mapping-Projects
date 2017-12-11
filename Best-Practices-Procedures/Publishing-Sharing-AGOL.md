@@ -12,7 +12,7 @@
   - [Web Layers](#web-layers)
   - [Web Maps](#web-maps)
   - [PDF Maps](#pdf-maps)
-- [Publishing Content to MTC's Open Data Portal](#publishing-content-to-mtcs-open-data-portal)
+- [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
 
 ## Publishing Draft or Intermediate Content to Internal or External Audiences
 
@@ -73,15 +73,3 @@ In the sections following, processes for publishing content to external audience
    - Ensure that month and year are included as seperate tags (ex July, 2017)
 3. Share with [MTC Map Gallery Groups](http://mtc.maps.arcgis.com/home/group.html?id=4bb2944ff35348c3847859b48d28336d#overview)
 
-## Publishing Content to MTC's Open Data Portal 
-
-1. Ensure content meets minimum requirements for [publishing curated content to an external audience](#publishing-curated-content-to-an-external-audience-with-arcgis-online)
-2. If publishing a web layer, ensure coordinate reference system is set to WGS84 (EPSG/SRID: 4326) 
-3. Tag with appropriate open data category tag - **Note: if content not tagged, content will not be organized by category on open data site**
-
-   | Open Data Categories |               |          |
-   |----------------------|---------------|----------|
-   | Transportation       | Demographic   | Policy   |
-   | Transportation       | Environmental | Projects |
-
-4. Share with Open Data Group (Any content shared with this group will be made available on MTC's Open Data Portal). See [MTC Open Data Layer Library](http://mtc.maps.arcgis.com/home/group.html?id=354e5d5c541c46a985891de9bfaa9703#overview) to see content already shared within the group.
