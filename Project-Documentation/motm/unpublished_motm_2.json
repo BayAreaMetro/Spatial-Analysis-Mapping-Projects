@@ -1,0 +1,15 @@
+[{
+	"author": "Kearey Smith",
+	"description": "The map of the month illustrates the existing Level II public vehicle charging station infrastructure in the nine county Bay Area region. The data was created by geocoding the address of the 91 charging stations, which was obtained from the U.S. Department of Energy.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm910.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm911.pdf",
+	"title": "September 2010: Electric Vehicle Charging Stations",
+	"year": 2010
+}, {
+	"author": "Kearey Smith",
+	"description": "The map shows the Center for Neighborhood Technology's Housing and Transportation (H+T) Affordability Index using 2009 American Community Survey Data. Compared side-by-side is the cost of housing as a percent of income (on the right) with the cost of housing and transportation as a percent of income (on the left) for an average household at the county level. The average housing cost of five Bay Area counties does not exceed 30% of average household income. When taking into consideration the added cost of transportation, however, only three Bay Area counties - Alameda, San Francisco, and Santa Clara - do not exceed the 50% threshold for combined cost.",
+	"image": "http://gis.mtc.ca.gov/home/images/motm/motm312.png",
+	"link": "http://gis.mtc.ca.gov/home/images/motm/motm412.pdf",
+	"title": "March 2012: Housing and Transportation Costs in 2009",
+	"year": 2012
+}]
