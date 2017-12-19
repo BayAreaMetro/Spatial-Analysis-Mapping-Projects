@@ -8,7 +8,7 @@ Map 2018 RTIP projects based on final 2018 RTIP project list.
 
 ## Data Sources
 
-- [RTP Project List](/data/2018_RTIP_Project_List.csv)
+- [RTP Project List](Data/2018_RTIP_Project_List.csv)
 - RTP Project Database 
 - Project Mapper Database 
 - TIP Project Database 
