@@ -4,7 +4,7 @@ from PIL import Image
 from resizeimage import resizeimage
 import glob, os
 
-directory_path = r"/Users/jcroff/Box/MOTM_Uploads/motm_images/*.png"
+#directory_path = r"/Users/jcroff/Box/MOTM_Uploads/motm_images/*.png"
 
 def resize_and_crop(img_path, size, crop_type='top'):
     """
@@ -78,7 +78,12 @@ def resize_imgs_directory(size, dir_path, crop_type):
     for img_path in glob.glob(dir_path):
         resize_and_crop(img_path, size, crop_type)
 
-resize_imgs_directory((600,400), directory_path, crop_type='top')
+#resize_imgs_directory((600,400), directory_path, crop_type='top')
+
+png_path = r"/Users/jcroff/Box/MOTM_Uploads/2017_12/Image Files/motm_12_18_17.png"
+thumb_size = (600,400)
+
+resize_and_crop(png_path, thumb_size, crop_type='top')
 
 
 
