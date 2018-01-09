@@ -44,7 +44,7 @@ In the sections following, processes for publishing content to external audience
 1. Coordinate with data owner to ensure layer(s) should be shared with a public audience
 2. If layer not already available in AGOL, follow guide on [sharing with ArcGIS Pro](AGOL-Technical-Resources.md#publishing-web-layers-to-agol-with-arcgis-pro)
 3. Update ownership of web layer from current owner to content_MTC (if not already owned by that user)
-4. Ensure that web layer meets minimum documentation requirements for curated content. See [detailed documentation requirements](Documentation.md#detailed-documentation)
+4. Ensure that web layer meets minimum documentation requirements for curated content. See [detailed documentation requirements](Documentation.md##basic-documentation)
 5. Ensure that content is tagged appropriately. See [tag strategy](https://mtcdrive.app.box.com/file/198480762097)
 6. Share with [public group(s)](Creating-Groups.md#create-broadcast-groups) that best suites the content topic area(s). 
 
