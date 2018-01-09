@@ -54,13 +54,14 @@ In the sections following, processes for publishing content to external audience
    | Transportation       | Environmental | Projects |
 5. Add content to a relevant folder. 
 6. Confirm spatial extent for all web layers prior to publishing. If spatial extent is larger than your target extent (ex California extent when web layer is Bay Area centric), follow guide on [Recalculating Feature Class Extent](AGOL-Technical-Resources.md#recalculate-feature-class-extent) 
+7. Check the spatial reference of the layer - if layer's spatial reference is not EPSG 4326 (WGS 84), project layer using the [Project Geoprocessing Tool](http://pro.arcgis.com/en/pro-app/tool-reference/data-management/project.htm). If reprojecting from NAD 83, choose the Geographic Transformation **NAD_1983_To_WGS_1984_5** for datasets within the contitential United States. For more information on geographic transformations, see the ESRI Technical Support page on [How To: Determine which NAD_1983_To_WGS_1984 transformation to use](https://support.esri.com/en/technical-article/000005929) 
 
 ***Steps to follow using ArcGIS Online once web layer is published***
 
-7. Update ownership of web layer from current owner to content_MTC (if not already owned by that user)
-8. Ensure that web layer meets minimum documentation requirements for curated content. See [detailed documentation requirements](Documentation.md##basic-documentation)
-9.  Under feature layer settings, ensure that delete protection is enabled and editing is disabled 
-10. Mark content status as **Authoratative**
+8. Update ownership of web layer from current owner to content_MTC (if not already owned by that user)
+9. Ensure that web layer meets minimum documentation requirements for curated content. See [detailed documentation requirements](Documentation.md##basic-documentation)
+10.  Under feature layer settings, ensure that delete protection is enabled and editing is disabled 
+11. Mark content status as **Authoratative**
 
 ### Web Maps
 
