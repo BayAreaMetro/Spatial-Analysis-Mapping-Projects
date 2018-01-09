@@ -42,6 +42,7 @@ In the sections following, processes for publishing content to external audience
 ### Web Layers
 
 ***Steps to follow while publishing from ArcGIS Pro***
+
 1. Coordinate with data owner to ensure layer(s) should be shared with a public audience
 2. If layer not already available in AGOL, follow guide on [sharing with ArcGIS Pro](AGOL-Technical-Resources.md#publishing-web-layers-to-agol-with-arcgis-pro)
 3. Ensure that content is tagged appropriately. See [tag strategy](https://mtcdrive.app.box.com/file/198480762097)
@@ -55,6 +56,7 @@ In the sections following, processes for publishing content to external audience
 6. Confirm spatial extent for all web layers prior to publishing. If spatial extent is larger than your target extent (ex California extent when web layer is Bay Area centric), follow guide on [Recalculating Feature Class Extent](AGOL-Technical-Resources.md#recalculate-feature-class-extent) 
 
 ***Steps to follow using ArcGIS Online once web layer is published***
+
 7. Update ownership of web layer from current owner to content_MTC (if not already owned by that user)
 8. Ensure that web layer meets minimum documentation requirements for curated content. See [detailed documentation requirements](Documentation.md##basic-documentation)
 9.  Under feature layer settings, ensure that delete protection is enabled and editing is disabled 
