@@ -10,14 +10,15 @@ The purpose of this page is to define types of documentation and documentation r
      - **Draft Content**
          - Include "draft" in the title: "My Web Map (draft)"
      - **Final Content**
-         - Remove "draft" from title: "My Web Map"
+         - Remove "draft" from title and include the year the content was created: "My Web Map (2018)"
  - Summary: A one-line description of the content
  - Description: Additional information that supports summary. 
      - Link to project documentation (if any). 
      - Project or program content was created to support.  
      - Content owner - the person responsible for the project or program the content supports. 
      - Source Files (if available): Link to source files used to generate content. This will generally apply only to static content such as images or pdfs. 
- - Credits (Attribution): Acknowledge the source of the content. (ex. 2015 American Community Survey (ACS); 2012 Federal Highway Administration - Freight Analysis Framework) 
+     - Content source (if available): Link to the webpage, portal, or download site if content is owned by an organization other than MTC/ABAG. 
+ - Credits (Attribution): Acknowledge the source of the content and include the year content was created (if known) preceeded by a semicolon. (ex. 2015 American Community Survey (ACS); 2012 Federal Highway Administration - Freight Analysis Framework) 
   Tags: Related keywords to support content discovery See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
      - **If content is considered draft include "draft" as a tag** 
  
