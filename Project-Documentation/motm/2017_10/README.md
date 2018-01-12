@@ -1,4 +1,4 @@
-# Bay Area 30 Year Eathquake Risk Projection  
+# Bay Area 30 Year Earthquake Risk Projection  
 
 [Asana Project](https://app.asana.com/0/229355710745434/452233978089474) 
 
