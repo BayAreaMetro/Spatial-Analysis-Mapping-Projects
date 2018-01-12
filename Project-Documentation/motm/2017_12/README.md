@@ -27,11 +27,11 @@ Create a map that highlights the median square footage of housing accross the U.
 ### Outcome & Products 
 
 #### Maps, Charts, and Graphics
-[Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/bam47du67geqt0cvqm3ksknwu3qu6dei)
-[Image Files](https://mtcdrive.box.com/s/hbjtccedonp64xlqcykzy25u8knvv7lg) 
+- [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/bam47du67geqt0cvqm3ksknwu3qu6dei)
+- [Image Files](https://mtcdrive.box.com/s/hbjtccedonp64xlqcykzy25u8knvv7lg) 
 
 #### Written Material
-[2017 12 MOTM Write Up](https://mtcdrive.box.com/s/jmhs5dy79r3iiytcslc1qihtpenl85a9) 
+- [2017 12 MOTM Write Up](https://mtcdrive.box.com/s/jmhs5dy79r3iiytcslc1qihtpenl85a9) 
 
 #### Feature Classes & CSVs 
-[Project File Geodatabase](https://mtcdrive.box.com/s/mlqpeeek1yzvxqjz9n1iub383qnb0oyx)
+- [Project File Geodatabase](https://mtcdrive.box.com/s/mlqpeeek1yzvxqjz9n1iub383qnb0oyx)
