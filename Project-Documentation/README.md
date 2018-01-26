@@ -12,7 +12,9 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 ## Project Table of Contents
 
-#### [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)  
+#### [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)
+
+#### [Communities of Concern](Communities-of-Concern)  
 
 #### [Data Requests](Data-Requests) 
 
