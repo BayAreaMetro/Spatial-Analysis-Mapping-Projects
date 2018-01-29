@@ -14,6 +14,8 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 	- [Summary of MTC COC Disadvantage Factors & Disadvantage Facto Definitions](#summary-of-mtc-coc-disadvantage-factors--disadvantage-factor-definitnions)
 	- [Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations](#calculate-mtc-coc-disadvantage-factor-population-from-acs-variable-populations)
 - [Methdology](#methodology)
+- [Expected Outcomes](#expected-outcomes)
+- [Results](#results)
 
 
 ## Data Sources
@@ -70,8 +72,6 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 	- [Feature Class Schema](Data/COC_Schema.csv) 
 - Web layer that contains Census Tracts meeting MTC Communities of Concern criteria 
 - Print map of MTC Communities of Concern
-
-### Feature Class Schema 
 
 ## Results
 
