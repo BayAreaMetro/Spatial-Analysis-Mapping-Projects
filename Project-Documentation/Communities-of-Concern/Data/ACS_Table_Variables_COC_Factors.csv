@@ -19,7 +19,7 @@ B11004_003E,Family Type by Presense and Age of Related Children Under 18 Years,M
 B11004_010E,Family Type by Presense and Age of Related Children Under 18 Years,"Male householder, no wife present with related children of the householder under 18 years",Single-Parent Families
 B11004_016E,Family Type by Presense and Age of Related Children Under 18 Years,"Female householder, no husband present with related children of the householder under 18 years",Single-Parent Families
 B16005_001E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Universe: Total population 5 years and over,Limited English Proficiency
-B16005_003E:,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Native: Speak only English,Limited English Proficiency
+B16005_003E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Native: Speak only English,Limited English Proficiency
 B16005_005E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak Spanish: Speak English ""very well""",Limited English Proficiency
 B16005_010E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak other Indo-European languages: Speak English ""very well""",Limited English Proficiency
 B16005_015E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak Asian and Pacific Island languages: Speak English ""very well""",Limited English Proficiency
