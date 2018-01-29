@@ -7,6 +7,11 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 - [Asana Project](https://app.asana.com/0/229355710745434/526057462891473)
 - [Box Directory](https://mtcdrive.box.com/s/nszb0i88eheraaa0303nithjl7ej496y)
 
+**Table of Contents**
+- [Data Sources](#data-sources)
+- [Analysis Parameters](#analysis-parameters)
+	- [MTC Communities of Concern Framework]()
+
 ## Data Sources
 
 - [U.S. Census - American Community Survey 2012-2016](https://www.census.gov/programs-surveys/acs/)
@@ -16,14 +21,14 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 
 The 2018 update of MTC's Communities of Concern follows the Adopted Communities of Concern (COC) Framework for Plan Bay Area 2040, and is based on on 2012-2016 American Community Survey (ACS) 5-year tract level data. The MTC COC Framework is provided below as well as a summary table which provides the 8 COC disadvantage factors, definitions of disadvantage factors, census-tract concentration thresholds, relevant ACS table variables, and ACS variable definitions. 
 
-**MTC Communities of Concern Framework**
+### MTC Communities of Concern Framework
 
 - [MTC Resolution No. 4217-Equity Framework for Plan Bay Area 2040](https://mtc.legistar.com/LegislationDetail.aspx?ID=2555452&GUID=575A6D3F-B8B8-44CF-9F2D-ABEF8B3C9F06&Options=ID|Text|&Search=%22communities+of+concern%22)
 - [Plan Bay Area 2040-Equity Report](http://2040.planbayarea.org/sites/default/files/2017-07/Equity_Report_PBA%202040%20_7-2017.pdf)
 
 ![COC Framework](README_Images/COC_Framework_PBA2040.png)
 
-**Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions**
+### Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions
 
 [ACS Table Variables and MTC COC Disadvantage Factors Lookup](Data/ACS_Table_Variables_COC_Factors.csv)
 
@@ -40,7 +45,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 ## Methodology
 
-**Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations**
+### Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations
 
 | Disadvantage Factor                            | Disadvantage Factor Population Based on ACS Variable Population                                                                                            |
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
