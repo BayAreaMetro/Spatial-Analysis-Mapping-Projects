@@ -7,7 +7,7 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 - [Asana Project](https://app.asana.com/0/229355710745434/526057462891473)
 - [Box Directory](https://mtcdrive.box.com/s/nszb0i88eheraaa0303nithjl7ej496y)
 
-**Table of Contents**
+### Table of Contents
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
 	- [MTC Communities of Concern Framework](#mtc-communities-of-concern-framework)
