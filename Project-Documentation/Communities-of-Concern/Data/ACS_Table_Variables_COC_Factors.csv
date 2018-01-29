@@ -1,36 +1,33 @@
-ACS_Table,ACS_Table_Variable,ACS_Table_Variable_Definitnion,Related_COC_Disadvantage_Factor
-Unweighted Sample Count of the Population,B00001_001E,Universe: Total population,Minority; Seniors 75 Years and Over;
-Hispanic or Latino Origin By Race,B03002_002E,Not Hispanic or Latino,Minority
-Sex by Age,B01001_023E,Male: 75 to 79 years,Seniors 75 Years and Over
-Sex by Age,B01001_024E,Male: 80 to 84 years,Seniors 75 Years and Over
-Sex by Age,B01001_025E,Male: 85 years and over,Seniors 75 Years and Over
-Sex by Age,B01001_047E,Female: 75 to 79 years,Seniors 75 Years and Over
-Sex by Age,B01001_048E,Female: 80 to 84 years,Seniors 75 Years and Over
-Sex by Age,B01001_049E,Female: 85 years and over,Seniors 75 Years and Over
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_001E,Universe: Total population for whom poverty status is determined,Low Income
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_002E,Under .50,Low Income
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_003E,.50 to .99,Low Income
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_004E,1.00 to 1.24,Low Income
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_005E,1.25 to 1.49,Low Income
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_006E,1.50 to 1.84,Low Income
-Ratio of Income to Poverty Level in the Past 12 Months,C17002_007E,1.85 to 1.99,Low Income
-Age by Number of Disabilities,C18108_001E,Universe: Total civilian noninstitutionalized population ,People with Disability
-Age by Number of Disabilities,C18108_005E,Under 18: no disability,People with Disability
-Age by Number of Disabilities,C18108_009E,18 to 64: no disability,People with Disability
-Age by Number of Disabilities,C18108_013E,65 and Over: no disability,People with Disability
-Household Size by Vehicles Available,B08201_001E,Universe: Total households,Zero-Vehicle Household
-Household Size by Vehicles Available,B08201_002E,No vehicle available,Zero-Vehicle Household
-Family Type by Presense and Age of Related Children Under 18 Years,B11004_003E,Married-couple family with related children of the householder under 18 years ,Single-Parent Families
-Family Type by Presense and Age of Related Children Under 18 Years,B11004_010E,"Male householder, no wife present with related children of the householder under 18 years",Single-Parent Families
-Family Type by Presense and Age of Related Children Under 18 Years,B11004_016E,"Female householder, no husband present with related children of the householder under 18 years",Single-Parent Families
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_001E,Universe: Total population 5 years and over,Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_005E,"Native: Speak Spanish: Speak English ""very well""",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_010E,"Native: Speak other Indo-European languages: Speak English ""very well""",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_015E,"Native: Speak Asian and Pacific Island languages: Speak English ""very well""",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_020E,"Native: Speak other languages: Speak English ""very well""",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_027E,"Foreign born: Speak Spanish: Speak English ""very well""",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_032E,"Foreign born: Speak other Indo-European languages: Speak English ""very well""",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_037E,"Foreign born: Speak Asian and Pacific Island languages: Speak English ""very well"" ",Limited English Proficiency
-Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,B16005_042E,"Foreign born: Speak other languages: Speak English ""very well"" ",Limited English Proficiency
-Gross Rent as a Percentage of Household Income In the Past 12 Months,B25070_001E,Universe: Total Renter-occupied housing units,Severely Rent-Burdened Household
-Gross Rent as a Percentage of Household Income In the Past 12 Months,B25070_010E,50.0 percent or more,Severely Rent-Burdened Household
+ACS_Table_Variable,ACS_Table_Definition,ACS_Table_Variable_Definitnion,Related_COC_Disadvantage_Factor
+B00001_001E,Unweighted Sample Count of the Population,Universe: Total population,Minority; Seniors 75 Years and Over;
+B03002_002E,Hispanic or Latino Origin By Race,Not Hispanic or Latino,Minority
+B01001_023E,Sex by Age,Male: 75 to 79 years,Seniors 75 Years and Over
+B01001_024E,Sex by Age,Male: 80 to 84 years,Seniors 75 Years and Over
+B01001_025E,Sex by Age,Male: 85 years and over,Seniors 75 Years and Over
+B01001_047E,Sex by Age,Female: 75 to 79 years,Seniors 75 Years and Over
+B01001_048E,Sex by Age,Female: 80 to 84 years,Seniors 75 Years and Over
+B01001_049E,Sex by Age,Female: 85 years and over,Seniors 75 Years and Over
+C17002_001E,Ratio of Income to Poverty Level in the Past 12 Months,Universe: Total population for whom poverty status is determined,Low Income
+C17002_008E,Ratio of Income to Poverty Level in the Past 12 Months,2.00 and over,Low Income
+C18108_001E,Age by Number of Disabilities,Universe: Total civilian noninstitutionalized population ,People with Disability
+C18108_005E,Age by Number of Disabilities,Under 18: no disability,People with Disability
+C18108_009E,Age by Number of Disabilities,18 to 64: no disability,People with Disability
+C18108_013E,Age by Number of Disabilities,65 and Over: no disability,People with Disability
+B08201_001E,Household Size by Vehicles Available,Universe: Total households,Zero-Vehicle Household
+B08201_002E,Household Size by Vehicles Available,No vehicle available,Zero-Vehicle Household
+B11004_003E,Family Type by Presense and Age of Related Children Under 18 Years,Married-couple family with related children of the householder under 18 years ,Single-Parent Families
+B11004_010E,Family Type by Presense and Age of Related Children Under 18 Years,"Male householder, no wife present with related children of the householder under 18 years",Single-Parent Families
+B11004_016E,Family Type by Presense and Age of Related Children Under 18 Years,"Female householder, no husband present with related children of the householder under 18 years",Single-Parent Families
+B16005_001E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Universe: Total population 5 years and over,Limited English Proficiency
+B16005_003E:,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Native: Speak only English,Limited English Proficiency
+B16005_005E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak Spanish: Speak English ""very well""",Limited English Proficiency
+B16005_010E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak other Indo-European languages: Speak English ""very well""",Limited English Proficiency
+B16005_015E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak Asian and Pacific Island languages: Speak English ""very well""",Limited English Proficiency
+B16005_020E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Native: Speak other languages: Speak English ""very well""",Limited English Proficiency
+B16005_025E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Foreign born: Speak only English,Limited English Proficiency
+B16005_027E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak Spanish: Speak English ""very well""",Limited English Proficiency
+B16005_032E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak other Indo-European languages: Speak English ""very well""",Limited English Proficiency
+B16005_037E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak Asian and Pacific Island languages: Speak English ""very well"" ",Limited English Proficiency
+B16005_042E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak other languages: Speak English ""very well"" ",Limited English Proficiency
+B25070_001E,Gross Rent as a Percentage of Household Income In the Past 12 Months,Universe: Total Renter-occupied housing units,Severely Rent-Burdened Household
+B25070_010E,Gross Rent as a Percentage of Household Income In the Past 12 Months,50.0 percent or more,Severely Rent-Burdened Household
