@@ -23,7 +23,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 ![COC Framework](README_Images/COC_Framework_PBA2040.png)
 
-**Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions with Links to MTC COC - ACS Variable Lookup Table**
+**Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions**
 
 [ACS Table Variables and MTC COC Disadvantage Factors Lookup](Data/ACS_Table_Variables_COC_Factors.csv)
 
