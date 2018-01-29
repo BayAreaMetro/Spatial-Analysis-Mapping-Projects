@@ -1,0 +1,36 @@
+Field Name,Data Type,ACS DefInition or COC Definition ,Domain
+GEOID,TEXT,Geographic Identifier,
+COUNTY_FIPS,DOUBLE,Federal Information Processing Standard,
+NAME,TEXT,Census Tract Name,
+TOT_POP,LONG,Universe: Total Population,
+TOT_POP_POV,LONG,Universe: Total population for whom poverty status is determined,
+TOT_POP_CIV_NI,LONG,Universe: Total civilian noninstitutionalized population,
+TOT_HH,LONG,Universe: Total households,
+TOT_FAM_CHILD,LONG,"Married-couple family with related children of the householder under 18 years; Male householder, no wife present with related children of the householder under 18 years; Female householder, no husband present with related children of the householder under 18 years",
+TOT_POP_OVER5,LONG,Universe: Total population 5 years and over,
+TOT_RENT_OCC_HOUS,LONG,Universe: Total renter-occupied housing units,
+POP_MINORITY,LONG,Minority population,
+POP_OVER75,LONG,Seniors 75 years and over,
+POP_SPFAM,LONG,Single-parent family,
+POP_LEP,LONG,Limited English proficiency ,
+POP_BELOW200,LONG,Low Income (< 200% Federal Poverty Level - FPL) ,
+POP_DISABILITY,LONG,People with disability,
+POP_HUS_RENT50,LONG,Severely rent-burdened household,
+POP_ZVHHS,LONG,Zero-vehicle household,
+PCT_OVER75,DOUBLE,Seniors 75 years and over as a share of total population,
+PCT_MINORITY,DOUBLE,Minority population as a share of total population,
+PCT_SPFAM,DOUBLE,Single-parent family as a share of families with related children of the householder under 18 years,
+PCT_LEP,DOUBLE,Limited English proficiency population as a share of total population 5 years and over,
+PCT_BELOW200,DOUBLE,Low Income population as a share of total population for whom poverty status is determined,
+PCT_DISAB,DOUBLE,Disabled population as a share of total civilian noninstitutionalized population,
+PCT_ZVHHS,DOUBLE,Zero-vehicle households as a share of total households,
+PCT_HUS_RENT50,DOUBLE,Severely rent-burdened household as a share of total renter-occupied housing units,
+OVER75_10,LONG,Seniors 75 and over make up over 10 percent of the total poulation in a given Census Tract,0 = False; 1 = True
+MINORITY_70,LONG,Minorities make up over 70 percent of the total population in a given Census Tract,0 = False; 1 = True
+SPFAM_20,LONG,Single-parent families make up over 20 percent of the families in a given Census Tract,0 = False; 1 = True
+DISAB_25,LONG,Disabled people make up over 25 percent of the total civilian noninstitutionalized population in a given Census Tract,0 = False; 1 = True
+LEP_20,LONG,People with limited English proficiency make up over 20 percent of the total population 5 years and over in a given Census Tract,0 = False; 1 = True
+LOWINC_30,LONG,Low-income people make up over 30 percent of the total population for whom poverty status is determined in a given Census Tract,0 = False; 1 = True
+ZVHH_10,LONG,Zero-vehicle households make up over 10 percent of the total households in a given Census Tract,0 = False; 1 = True
+RENT50OCCHUS_15,LONG,Severely rent-burdened households make up over 15 percent of total renter-occupied housing units in a given Census Tract,0 = False; 1 = True
+COC_FLAG,LONG,The Census Tract meets MTC's Communities of Concern criteria ,0 = False; 1 = True

@@ -12,8 +12,9 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 - [Analysis Parameters](#analysis-parameters)
 	- [MTC Communities of Concern Framework](#mtc-communities-of-concern-framework)
 	- [Summary of MTC COC Disadvantage Factors & Disadvantage Facto Definitions](#summary-of-mtc-coc-disadvantage-factors--disadvantage-factor-definitnions)
-- [Methdology](#methodology)
 	- [Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations](#calculate-mtc-coc-disadvantage-factor-population-from-acs-variable-populations)
+- [Methdology](#methodology)
+
 
 ## Data Sources
 
@@ -46,8 +47,6 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 | Single-Parent Family                           | Families with at least one child.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 20%                     |
 | Severely Rent-Burdened Household               | Renters paying > 50% of income in rent.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 15%                     |
 
-## Methodology
-
 ### Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations
 
 | Disadvantage Factor                            | Disadvantage Factor Population Based on ACS Variable Population                                                                                            |
@@ -60,6 +59,8 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 | People with Disability                         | C18108_001E - (C18108_005E + C18108_009E + C18108_013E)                                                                                                    |
 | Single-Parent Family                           | (B11004_003E + B11004_010E + B11004_016E) - (B11004_010E - B11004_016E)                                                                                    |
 | Severely Rent-Burdened Household               | B25070_001E - B25070_010E                                                                                                                                  |
+
+## Methodology
 
 
 ## Expected Outcomes
