@@ -51,6 +51,8 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 ### Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations
 
+[COC Schema With Field Descriptions, Population & Share Calculations](Data/COC_Schema.csv)
+
 | Disadvantage Factor                            | Disadvantage Factor Population Based on ACS Variable Population                                                                                            |
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Minority                                       | B03002_001E - B03002_002E                                                                                                                                  |
