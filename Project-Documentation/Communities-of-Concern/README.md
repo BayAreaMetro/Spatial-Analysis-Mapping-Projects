@@ -68,7 +68,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 ## Expected Outcomes
 
 - Feature class that contains Census Tracts meeting MTC Communities of Concern criteria
-	- Feature class name: ACS_2016_ALL_COC_DATA_Tracts
+	- Feature class name: ***ACS_2016_ALL_COC_DATA_Tracts***
 	- [Feature Class Schema](Data/COC_Schema.csv) 
 - Web layer that contains Census Tracts meeting MTC Communities of Concern criteria 
 - Print map of MTC Communities of Concern
