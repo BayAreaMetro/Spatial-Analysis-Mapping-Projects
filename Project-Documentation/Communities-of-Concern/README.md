@@ -53,7 +53,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 | Disadvantage Factor                            | Disadvantage Factor Population Based on ACS Variable Population                                                                                            |
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Minority                                       | B00001_001E - B03002_002E                                                                                                                                  |
+| Minority                                       | B03002_001E - B03002_002E                                                                                                                                  |
 | Low Income (< 200% Federal Poverty Level -FPL) | C17002_001E - C17002_008E                                                                                                                                  |
 | Limited English Proficienty                    | B16005_001E - (B16005_003E + B16005_005E + B16005_010E + B16005_015E + B16005_020E + B16005_025E + B16005_027E +  B16005_032E + B16005_037E + B16005_042E) |
 | Zero-Vehicle Household                         | B08201_002E                                                                                                                                                |
