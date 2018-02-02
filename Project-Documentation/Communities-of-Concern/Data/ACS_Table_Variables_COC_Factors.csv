@@ -14,9 +14,9 @@ C18108_001E,Age by Number of Disabilities,Universe: Total civilian noninstitutio
 C18108_005E,Age by Number of Disabilities,Under 18: no disability,People with Disability
 C18108_009E,Age by Number of Disabilities,18 to 64: no disability,People with Disability
 C18108_013E,Age by Number of Disabilities,65 and Over: no disability,People with Disability
-B08201_001E,Household Size by Vehicles Available,Universe: Total households,Zero-Vehicle Household
+B08201_001E,Household Size by Vehicles Available,Universe: Total households,Zero-Vehicle Household; Severely Rent-Burdened Household
 B08201_002E,Household Size by Vehicles Available,No vehicle available,Zero-Vehicle Household
-B11004_003E,Family Type by Presense and Age of Related Children Under 18 Years,Married-couple family with related children of the householder under 18 years ,Single-Parent Families
+B11004_001E,Family Type by Presense and Age of Related Children Under 18 Years,Universe: Total Families,Single-Parent Families
 B11004_010E,Family Type by Presense and Age of Related Children Under 18 Years,"Male householder, no wife present with related children of the householder under 18 years",Single-Parent Families
 B11004_016E,Family Type by Presense and Age of Related Children Under 18 Years,"Female householder, no husband present with related children of the householder under 18 years",Single-Parent Families
 B16005_001E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,Universe: Total population 5 years and over,Limited English Proficiency
@@ -36,5 +36,4 @@ B16005_039E,Nativity By Language Spoken at Home by Ability to Speak English for 
 B16005_040E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak Asian and Pacific Island languages: Speak English ""not at all""",Limited English Proficiency
 B16005_044E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak other languages: Speak English ""not well""",Limited English Proficiency
 B16005_045E,Nativity By Language Spoken at Home by Ability to Speak English for the Population 5 years and Over,"Foreign born: Speak other languages: Speak English ""not at all""",Limited English Proficiency
-B25070_001E,Gross Rent as a Percentage of Household Income In the Past 12 Months,Universe: Total Renter-occupied housing units,Severely Rent-Burdened Household
 B25070_010E,Gross Rent as a Percentage of Household Income In the Past 12 Months,50.0 percent or more,Severely Rent-Burdened Household
