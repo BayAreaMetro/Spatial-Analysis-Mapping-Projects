@@ -125,7 +125,7 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ### Final Datasets 
 
-[SB35 Map Overlay](http://mtc.maps.arcgis.com/home/item.html?id=db31a2a5392f479e976e39fbee80e82e#overview)
+[SB35 Map Overlay](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
 
 ### Data Summaries
 
