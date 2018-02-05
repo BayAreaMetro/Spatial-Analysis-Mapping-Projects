@@ -76,7 +76,7 @@ Within a delineated earthquake fault zone as determined by the State Geologist i
 
 Lands identified for conservation in an adopted natural community conservation plan pursuant to the Natural Community Conservation Planning Act (Chapter 10 (commencing with Section 2800) of Division 3 of the Fish and Game Code), habitat conservation plan pursuant to the federal Endangered Species Act of 1973 (16 U.S.C. Sec. 1531 et seq.), or other adopted natural resource protection plan.
   
-[View Map Data](Insert AGOL Link Here)
+[View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=125208c46aae476eb11a857dd222868d)
 
 ##### J) Habitat Lands
 
