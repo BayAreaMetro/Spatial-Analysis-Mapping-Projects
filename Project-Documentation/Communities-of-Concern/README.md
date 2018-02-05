@@ -54,7 +54,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 The table below provides the calculations that need to be performed to get Disadvantage Factor populations and Disadvantage Shares. To translate from variable to written description, please review the [ACS Table Variables and MTC COC Disadvantage Factors Lookup](Data/ACS_Table_Variables_COC_Factors.csv). ACS Variables are also defined on the American Community Survey (ACS) website. To get variable definitions as well as the layout of tables without the estimates or margins of error filled in, download [2016 ACS Detailed Table Shells](https://www2.census.gov/programs-surveys/acs/summary_file/2016/documentation/user_tools/ACS2016_Table_Shells.xlsx) as an Excel spreadsheet. 
 
 The link below provides the COC schema and domains, along with calculations and written descriptions of the calculations which may be helpful for analysis purposes. Below the link is a table for informational purposes. 
- 
+
 [COC Schema With Field Descriptions, Population & Share Calculations](Data/COC_Schema.csv)
 
 | Disadvantage Factor                            | Disadvantage Factor Population Based on ACS Variable Population                                                                                                                                                               | Disadvantage Factor Population as a Share of Universe (Population, Households, Families)                                                                                                                                                   |
@@ -69,6 +69,10 @@ The link below provides the COC schema and domains, along with calculations and 
 | Severely Rent-Burdened Household               | B25070_010E                                                                                                                                                                                                                   | B25070_010E/B08201_001E                                                                                                                                                                                                                    |
 ## Methodology
 
+The analysis was performed in R and leverages the censusapi library which is documented here: [CensusAPI](https://hrecht.github.io/censusapi/index.html)
+
+To explore the methdology, take a look at the [COC Methodology](COC_Methodology.md) 
+
 
 ## Expected Outcomes
 
@@ -79,4 +83,10 @@ The link below provides the COC schema and domains, along with calculations and 
 - Print map of MTC Communities of Concern
 
 ## Results
+
+- [2018 Communities of Concern - ACS 2016](Data/COCs_ACS2016_tbl.csv)
+- [2018 Communities of Concern - ACS 2016 Geography (Urban Tracts) GeoJSON](COC_Urban_Tracts.geojson)
+- [2018 Communities of Concern - ACS 2016 Geography (Urban Tracts) Web Layer]()
+
+![2018 Communities of Concern Print Map](https://mtcdrive.box.com/shared/static/t6eyif267lxaz5zegdremx1x3xc2d1gx.png)
 
