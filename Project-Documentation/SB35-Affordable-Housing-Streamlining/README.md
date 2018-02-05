@@ -135,4 +135,4 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 [Draft Map Illustrating Development Exclusion Areas (7.7 mb pdf)](https://mtcdrive.box.com/s/awhypc55gmhxvnp5z7i8ez8vx99b1t77)
 
-![](https://mtcdrive.box.com/shared/static/dem8vwzzo655mfkq74146log5k1o5nhw.png)
+![SB 35 Map](https://mtcdrive.box.com/shared/static/jkgmpace3hrqig8ycv6iuw47bbxb6rw8.png)
