@@ -131,7 +131,7 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ### Maps 
 
-[SB 35 Development Exclusion Interactive Map Explorer](http://mtc.maps.arcgis.com/home/item.html?id=8198cf51d0c5459484b95cea6d04e86d)
+[SB 35 Development Exclusion Interactive Map Explorer](https://mtc.maps.arcgis.com/apps/webappviewer/index.html?id=8198cf51d0c5459484b95cea6d04e86d)
 
 [Draft Map Illustrating Development Exclusion Areas (7.7 mb pdf)](https://mtcdrive.box.com/s/awhypc55gmhxvnp5z7i8ez8vx99b1t77)
 
