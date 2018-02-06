@@ -119,6 +119,10 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ## Results 
 
+### Data Sources and Concerns
+
+This [document](https://mtcdrive.box.com/v/SB35DataSourcing) describes and sources the data used for this analysis.  It also includes data concerns that were raised by the Data Analyst's who performed this work.
+
 ### Intermediate Datasets 
 
 [SB 35 Development Exclusion Areas (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
@@ -137,6 +141,3 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ![SB 35 Map](https://mtcdrive.box.com/shared/static/jkgmpace3hrqig8ycv6iuw47bbxb6rw8.png)
 
-#### Data Sources and Concerns
-
-This [document](https://mtcdrive.box.com/v/SB35DataSourcing) describes and sources the data used for this analysis.  It also includes data concerns that were raised by the Data Analyst's who performed this work.
