@@ -1,7 +1,8 @@
 Field Name,Data Type,ACS Calculations,ACS DefInition or COC Definition ,Domain
 GEOID,TEXT,,Geographic Identifier,
+STATE,LONG,,State ID,
 COUNTY_FIPS,DOUBLE,,Federal Information Processing Standard,
-NAME,TEXT,,Census Tract Name,
+TRACT,TEXT,,Census Tract ID,
 TOT_POP_MIN,LONG,B03002_001E,Universe: Total Population,
 TOT_POP_SEN,LONG,B01001_001E,Universe: Total Population,
 TOT_POP_POV,LONG,C17002_001E,Universe: Total population for whom poverty status is determined,
@@ -30,7 +31,8 @@ MINORITY_70,LONG,,Minorities make up over 70 percent of the total population in 
 SPFAM_20,LONG,,Single-parent families make up over 20 percent of the families in a given Census Tract,0 = False; 1 = True
 DISAB_25,LONG,,Disabled people make up over 25 percent of the total civilian noninstitutionalized population in a given Census Tract,0 = False; 1 = True
 LEP_20,LONG,,People with limited English proficiency make up over 20 percent of the total population 5 years and over in a given Census Tract,0 = False; 1 = True
-LOWINC_30,LONG,,Low-income people make up over 30 percent of the total population for whom poverty status is determined in a given Census Tract,0 = False; 1 = True
+BELOW200_30,LONG,,Low-income people make up over 30 percent of the total population for whom poverty status is determined in a given Census Tract,0 = False; 1 = True
 ZVHH_10,LONG,,Zero-vehicle households make up over 10 percent of the total households in a given Census Tract,0 = False; 1 = True
-RENT50OCCHUS_15,LONG,,Severely rent-burdened households make up over 15 percent of total renter-occupied housing units in a given Census Tract,0 = False; 1 = True
-COC_FLAG,LONG,,The Census Tract meets MTC's Communities of Concern criteria ,0 = False; 1 = True
+HUS_RENT50_15,LONG,,Severely rent-burdened households make up over 15 percent of total renter-occupied housing units in a given Census Tract,0 = False; 1 = True
+Count_DisadFact,LONG,,Count of the disadvantage factors,
+COC_FLAG_2018,LONG,,The Census Tract meets MTC's Communities of Concern criteria ,0 = False; 1 = True
