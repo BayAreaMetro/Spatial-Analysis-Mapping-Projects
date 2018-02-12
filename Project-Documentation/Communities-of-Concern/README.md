@@ -71,7 +71,7 @@ The link below provides the COC schema and domains, along with calculations and 
 
 The analysis was performed in R and leverages the censusapi library which is documented here: [CensusAPI](https://hrecht.github.io/censusapi/index.html)
 
-To explore the methdology, take a look at the [COC Methodology](COC_Methodology.md) 
+To explore the methodology, take a look at the [COC Methodology](COC_Methodology.md) 
 
 
 ## Expected Outcomes
