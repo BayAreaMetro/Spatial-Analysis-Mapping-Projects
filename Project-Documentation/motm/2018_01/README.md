@@ -25,12 +25,13 @@ State data was joined to state shapefile by state name.
 
 ### Outcome & Products 
 
-#### Maps, Charts, and Graphics 
-- [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/3xyxq8k0c2bakbd06dmtnbo2nhjrbvdq)
-- [Image Files (PDF/PNG)](https://mtcdrive.box.com/s/8fdpbv2tdfjhzz3rugyoc2mjyfis4for)
-
 #### Written Material 
+- [January 2018 Map of the Month Write-Up](https://mtcdrive.box.com/s/t6217e581ckwpe437py86b7h40ddrcuz)
 
 #### Feature Classes & CSVs
 - [State Gas Tax Data](Data/State_Gas_Tax_Dates.csv)
 - [Shapefiles](https://mtcdrive.box.com/s/txrdgfrphvp8tdscj1bh1a6tjq3snz1p) 
+
+#### Maps, Charts, and Graphics 
+- [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/3xyxq8k0c2bakbd06dmtnbo2nhjrbvdq)
+- [Image Files (PDF/PNG)](https://mtcdrive.box.com/s/8fdpbv2tdfjhzz3rugyoc2mjyfis4for)
