@@ -1,4 +1,4 @@
-# SB 35 Bay Area Regional Determination
+# SB 35 Bay Area Regional Applicability
 
 - [Asana Project](https://app.asana.com/0/229355710745434/554824683638524)
 - [Project Box Directory](https://mtcdrive.box.com/s/asuftnb60ks6mrr5u7oway5lb2fws8ci) 
