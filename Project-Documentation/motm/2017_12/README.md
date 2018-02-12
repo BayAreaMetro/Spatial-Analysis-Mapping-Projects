@@ -35,5 +35,3 @@ Create a map that highlights the median square footage of housing accross the U.
 #### Maps, Charts, and Graphics
 - [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/bam47du67geqt0cvqm3ksknwu3qu6dei)
 - [Image Files](https://mtcdrive.box.com/s/hbjtccedonp64xlqcykzy25u8knvv7lg) 
-
-![February 2018 MOTM](https://mtcdrive.box.com/shared/static/xf4lobzenwpxtzdr7lrdwiahtlioq3cn.png)
