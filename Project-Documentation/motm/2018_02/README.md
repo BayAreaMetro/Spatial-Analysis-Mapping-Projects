@@ -1,7 +1,7 @@
 # SB 35 Bay Area Regional Determination
 
-[Asana Project](https://app.asana.com/0/229355710745434/554824683638524)
-[Project Box Directory](https://mtcdrive.box.com/s/asuftnb60ks6mrr5u7oway5lb2fws8ci) 
+- [Asana Project](https://app.asana.com/0/229355710745434/554824683638524)
+- [Project Box Directory](https://mtcdrive.box.com/s/asuftnb60ks6mrr5u7oway5lb2fws8ci) 
 
 ### Goal
 
@@ -27,15 +27,16 @@ SB 35 Bay Area Determination CSV was joined with TomTom jurisdiction feature cla
 
 ### Outcome & Products 
 
-#### Maps, Charts, and Graphics
-- [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/eunlnfvtqfpvbwruduefk2aqeqky0t8w)
-- [Image Files (PDF/PNG)](https://mtcdrive.box.com/s/lrjxhwf61dtujz2gw490pisrh81nvd22) 
-
 #### Written Material 
 
 [February 2018 Map of the Month Write-Up](https://mtcdrive.box.com/s/233pqsscfmpopcqouk37he2qqqeaz1gu)
 
 #### Feature Classes & CSVs 
 
--
 - [SB 35 Bay Area Determination Summary as CSV](Data/BayArea_SB35_Status.csv)
+
+#### Maps, Charts, and Graphics
+- [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/eunlnfvtqfpvbwruduefk2aqeqky0t8w)
+- [Image Files (PDF/PNG)](https://mtcdrive.box.com/s/lrjxhwf61dtujz2gw490pisrh81nvd22) 
+
+![February 2018 MOTM](https://mtcdrive.box.com/shared/static/xf4lobzenwpxtzdr7lrdwiahtlioq3cn.png)
