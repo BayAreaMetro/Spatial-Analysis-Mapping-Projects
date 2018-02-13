@@ -39,4 +39,5 @@ SB 35 Bay Area Determination CSV was joined with TomTom jurisdiction feature cla
 - [Source Files (Illustrator/InDesign)](https://mtcdrive.box.com/s/eunlnfvtqfpvbwruduefk2aqeqky0t8w)
 - [Image Files (PDF/PNG)](https://mtcdrive.box.com/s/lrjxhwf61dtujz2gw490pisrh81nvd22) 
 
-![February 2018 MOTM](https://mtcdrive.box.com/shared/static/iv42a95gvld5vgmaiwb877vnbyz6my9b.png)
+![February 2018 MOTM](https://mtcdrive.box.com/shared/static/bsxxdaw240t41g1zcjn1mk8257chjf83.png)
+![February 2018 MOTM](https://mtcdrive.box.com/shared/static/7nrhx7dtzh0bbo8x97ulyfm27nj6rovj.png)
