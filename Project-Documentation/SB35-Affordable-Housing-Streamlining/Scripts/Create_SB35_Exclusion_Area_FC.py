@@ -39,7 +39,7 @@ arcpy.Identity_analysis("tl_2017_us_uac10_BayArea","SB_35_Exclusion_Areas_v3",id
 arcpy.AddField_management("SB_35_Exclusion_Areas_Urbanized_v3", "Exclusion_Area","LONG",field_alias="Exclusion Area",field_length = 10)
 
 #Calculate value of exclusion area field (1 - Urbanized Area: Within One or More Exclusion Areas; 2 - Urbanized Area - Not Within Exclusion Areas)
-arcpy.management.CalculateField("SB_35_Exclusion_Areas_Urbanized_v3", "Exclusion_Area", "exclusionarea(!FID_SB_35_Exclusion_Areas_v2!)", "PYTHON_9.3", r"def exclusionarea(fid_exclusion):\n    if fid_exclusion == -1:\n        return 2\n    else:\n        return 1\n    ")
+arcpy.management.CalculateField("SB_35_Exclusion_Areas_Urbanized_v3", "Exclusion_Area", "exclusionarea(!FID_SB_35_Exclusion_Areas_v3!)", "PYTHON_9.3", r"def exclusionarea(fid_exclusion):\n    if fid_exclusion == -1:\n        return 2\n    else:\n        return 1\n    ")
 
 #Dissolve exclusion area by exclusion area status
 
