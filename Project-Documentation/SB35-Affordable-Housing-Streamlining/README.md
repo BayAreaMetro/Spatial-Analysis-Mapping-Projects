@@ -13,6 +13,8 @@ The purpose of this analysis is to develop a geographic feature overlay which re
 
 ## Data Sources
 
+[SB35 Datasets File Geodatabase](https://mtcdrive.box.com/s/jzb2yr770oisekql24x0brf9f0svrsq3)
+
 ### SB-35 Sec 3
 
 #### 2. The development is located on a site that satisfies all of the following:
@@ -118,13 +120,12 @@ This [document](https://mtcdrive.box.com/v/SB35DataSourcing) describes and sourc
 
 [SB35 Map Overlay](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
 
-### Data Summaries
+### File Geodatabases
+
+-[SB35 Datasets](https://mtcdrive.box.com/s/1y23w9hnexhztcuebovqa3jdga3ckhkm)
 
 ### Maps 
 
 [SB 35 Development Exclusion Interactive Map Explorer](https://mtc.maps.arcgis.com/apps/webappviewer/index.html?id=8198cf51d0c5459484b95cea6d04e86d)
 
-[Draft Map Illustrating Development Exclusion Areas (7.7 mb pdf)](https://mtcdrive.box.com/s/awhypc55gmhxvnp5z7i8ez8vx99b1t77)
-
-![SB 35 Map](https://mtcdrive.box.com/shared/static/jkgmpace3hrqig8ycv6iuw47bbxb6rw8.png)
 
