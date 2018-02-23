@@ -98,34 +98,21 @@ Habitat for protected species identified as candidate, sensitive, or species of 
 
 ### SB 35 Development Exclusion Areas
 
-1. Perform [Union](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/union.htm) of all SB 35 Exclusion Areas (Sec 3: 6: A-K)
-   - Union was chosen over [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) as union retains all features and attributes; Identity creates a geometric intersection therefore 'identity' features that fall outside of the boundaries of 'input' features will be clipped or discarded.
-2. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting union features and Census Urbanized Area / Urban Cluster dataset 
-3. Perform [Identity](http://pro.arcgis.com/en/pro-app/tool-reference/analysis/identity.htm) operation w/ resulting identity features and TomTom Counties
-4. Add SB35 Classification field using the following coded domain values:
+The following script was run within the ArcGIS Pro Arcpy window to create SB 35 Development Exclusion Areas: [Create SB35 Exclusion Area FC](Scripts/Create_SB35_Exclusion_Area_FC.py)
+
+An Exclusion Area flag field was added to the resulting feature class using the following coded domain values: 
 
 |Code    |Name                                                    |
 |--------|--------------------------------------------------------|
-|1       |Not Within Exclusion Areas                              |
-|2       |Urbanized Area - Within One or More Exclusion Areas     |
-|3       |Urbanized Area - Not Within Exclusion Areas             |
-|4       |Within One or More Exclusion Areas                      |
+|1       |Urbanized Area - Within One or More Exclusion Areas     |
+|2       |Urbanized Area - Not Within Exclusion Areas             |
 
-
-### SB35 Map Overlay 
-
-1. Delete SB 35 Development Exclusion Area Features w/ the following SB35 Classification Attributes: (1, 4) 
-2. Dissolve by remaining SB35 Classification attributes: (2 ,3)  
 
 ## Results 
 
 ### Data Sources and Concerns
 
 This [document](https://mtcdrive.box.com/v/SB35DataSourcing) describes and sources the data used for this analysis.  It also includes data concerns that were raised by the Data Analyst's who performed this work.
-
-### Intermediate Datasets 
-
-[SB 35 Development Exclusion Areas (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=bfb749aaa6354c02a451930b5429e058)
 
 ### Final Datasets 
 
