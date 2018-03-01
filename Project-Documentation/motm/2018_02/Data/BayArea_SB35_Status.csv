@@ -13,7 +13,7 @@ Piedmont,Alameda,Greater than or equal to 50% Affordability
 Pleasanton,Alameda,Greater than or equal to 50% Affordability
 San Leandro,Alameda,Greater than or equal to 10% Affordability
 Union City,Alameda,Greater than or equal to 10% Affordability
-Alameda County Unincorporated,Alameda,Greater than or equal to 10% Affordability
+Unincorporated Alameda County,Alameda,Greater than or equal to 10% Affordability
 Antioch,Contra Costa,Greater than or equal to 50% Affordability
 Brentwood,Contra Costa,Greater than or equal to 50% Affordability
 Clayton,Contra Costa,Greater than or equal to 10% Affordability
@@ -33,7 +33,7 @@ Richmond,Contra Costa,Greater than or equal to 10% Affordability
 San Pablo,Contra Costa,Greater than or equal to 50% Affordability
 San Ramon,Contra Costa,Greater than or equal to 50% Affordability
 Walnut Creek,Contra Costa,Greater than or equal to 50% Affordability
-Contra Costa County Unincorporated,Contra Costa,Greater than or equal to 50% Affordability
+Unincorporated Contra Costa County,Contra Costa,Greater than or equal to 50% Affordability
 Belvedere,Marin,Greater than or equal to 10% Affordability
 Corte Madera,Marin,Not Subject
 Fairfax,Marin,Greater than or equal to 10% Affordability
@@ -45,13 +45,13 @@ San Anselmo,Marin,Not Subject
 San Rafael,Marin,Greater than or equal to 50% Affordability
 Sausalito,Marin,Greater than or equal to 10% Affordability
 Tiburon,Marin,Greater than or equal to 10% Affordability
-Marin County Unincorporated,Marin,Greater than or equal to 50% Affordability
+Unincorporated Marin County,Marin,Greater than or equal to 50% Affordability
 American Canyon,Napa,Greater than or equal to 50% Affordability
 Calistoga,Napa,Greater than or equal to 50% Affordability
 Napa,Napa,Greater than or equal to 50% Affordability
-St. Helena,Napa,Greater than or equal to 50% Affordability
+St Helena,Napa,Greater than or equal to 50% Affordability
 Yountville,Napa,Greater than or equal to 50% Affordability
-Napa County Unincorporated,Napa,Greater than or equal to 10% Affordability
+Unincorporated Napa County,Napa,Greater than or equal to 10% Affordability
 San Francisco,San Francisco,Greater than or equal to 50% Affordability
 Atherton,San Mateo,Greater than or equal to 50% Affordability
 Belmont,San Mateo,Greater than or equal to 10% Affordability
@@ -73,7 +73,7 @@ San Carlos,San Mateo,Greater than or equal to 50% Affordability
 San Mateo,San Mateo,Greater than or equal to 50% Affordability
 South San Francisco,San Mateo,Greater than or equal to 10% Affordability
 Woodside,San Mateo,Greater than or equal to 50% Affordability
-San Mateo County Unincorporated,San Mateo,Greater than or equal to 10% Affordability
+Unincorporated San Mateo County,San Mateo,Greater than or equal to 10% Affordability
 Campbell,Santa Clara,Greater than or equal to 50% Affordability
 Cupertino,Santa Clara,Greater than or equal to 50% Affordability
 Gilroy,Santa Clara,Greater than or equal to 50% Affordability
@@ -89,7 +89,7 @@ San Jose,Santa Clara,Greater than or equal to 50% Affordability
 Santa Clara,Santa Clara,Greater than or equal to 50% Affordability
 Saratoga,Santa Clara,Greater than or equal to 10% Affordability
 Sunnyvale,Santa Clara,Greater than or equal to 50% Affordability
-Santa Clara County Unincorporated,Santa Clara,Greater than or equal to 50% Affordability
+Unincorporated Santa Clara County,Santa Clara,Greater than or equal to 50% Affordability
 Benicia,Solano,Greater than or equal to 10% Affordability
 Dixon,Solano,Greater than or equal to 10% Affordability
 Fairfield,Solano,Greater than or equal to 50% Affordability
@@ -97,7 +97,7 @@ Rio Vista,Solano,Greater than or equal to 10% Affordability
 Suisun City,Solano,Greater than or equal to 50% Affordability
 Vacaville,Solano,Greater than or equal to 50% Affordability
 Vallejo,Solano,Greater than or equal to 10% Affordability
-Solano County Unincorporated,Solano,Greater than or equal to 50% Affordability
+Unincorporated Solano County,Solano,Greater than or equal to 50% Affordability
 Cloverdale,Sonoma,Greater than or equal to 10% Affordability
 Cotati,Sonoma,Greater than or equal to 10% Affordability
 Healdsburg,Sonoma,Greater than or equal to 50% Affordability
@@ -107,4 +107,4 @@ Santa Rosa,Sonoma,Greater than or equal to 10% Affordability
 Sebastopol,Sonoma,Greater than or equal to 10% Affordability
 Sonoma,Sonoma,Greater than or equal to 10% Affordability
 Windsor,Sonoma,Greater than or equal to 50% Affordability
-Sonoma County Unincorporated,Sonoma,Not Subject
+Unincorporated Sonoma County,Sonoma,Not Subject
