@@ -74,6 +74,8 @@ Within a delineated earthquake fault zone as determined by the State Geologist i
 
 [View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=01c95836d68e4867a09217f0bcad9c9c)
 
+** Amended on 2/20/18 to incllude only lnads within the 100yr. FEMA Floodplain. **
+
 ##### I) Conservation Lands
 
 Lands identified for conservation in an adopted natural community conservation plan pursuant to the Natural Community Conservation Planning Act (Chapter 10 (commencing with Section 2800) of Division 3 of the Fish and Game Code), habitat conservation plan pursuant to the federal Endangered Species Act of 1973 (16 U.S.C. Sec. 1531 et seq.), or other adopted natural resource protection plan.
