@@ -80,7 +80,7 @@ def resize_imgs_directory(size, dir_path, crop_type):
 
 #resize_imgs_directory((600,400), directory_path, crop_type='top')
 
-png_path = r"/Users/jcroff/Box/MOTM_Uploads/2018_01/Image Files/State_Gas_Tax_Increases_1992_2017.png"
+png_path = r"/Users/jcroff/Box/DataViz Projects/Data Analysis and Visualization/SB 35 Preliminary Analysis/maps/image files/SB_35_Overlay_Tabloid_V9.png"
 thumb_size = (600,400)
 
 resize_and_crop(png_path, thumb_size, crop_type='top')
