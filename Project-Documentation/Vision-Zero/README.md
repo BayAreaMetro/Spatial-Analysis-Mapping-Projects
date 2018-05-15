@@ -33,7 +33,7 @@
 ### Create High Injury Network Polyline Features 
  
 1. Definition Query on TomTom Street Network (FRC not in 8) 
-2. Add TomTom road attributes to Accidident Feature Class (Near Command)
+2. Add TomTom road attributes to Accident Feature Class (Near Command)
 3. Run [VZ_Road_Network_Incident_Summary](Scripts/VZ_Road_Network_Incident_Summary.sql) script to create high injury network cooridors
    - Aggregate road geometries 
    - Group by: 
