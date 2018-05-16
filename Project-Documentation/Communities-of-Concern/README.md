@@ -45,7 +45,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 | Seniors 75 Years and Over                     | 6%                     | 4%                 | 8%                                 | 11%                               | 13%                                  |
 | People with Disability                        | 10%                    | 4%                 | 12%                                | 14%                               | 16%                                  |
 | Single-Parent Family                          | 13%                    | 9%                 | 18%                                | 23%                               | 27%                                  |
-| Severely-RentBurdened Household               | 11%                    | 8%                 | 15%                                | 19%                               | 23%                                  |
+| Severely-Rent Burdened Household               | 11%                    | 8%                 | 15%                                | 19%                               | 23%                                  |
 
 Definition-census tracts that have a cocentration of BOTH minority AND low-income households, OR that have a concentration of 3 or more of the remaining 6 factors (#3 to #8) but only IF they also have a concentration of low-income households.
 
