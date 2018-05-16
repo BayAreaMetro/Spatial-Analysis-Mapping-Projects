@@ -1,0 +1,312 @@
+---
+title: "Communities of Concern 2018"
+output: html_notebook
+---
+
+This script builds the 2016 Community of Concern Dataset using the presribed methodology located here:   [GitHub Documentation](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Communities-of-Concern). 
+
+It uses the censusapi library which is documented here: [CensusAPI](https://hrecht.github.io/censusapi/index.html)
+
+```{r message=FALSE, warning=FALSE}
+library(censusapi)
+library(readr)
+library(dplyr)
+#Community of Concern Spatial Processing
+library(censusapi)
+library(readr)
+library(dplyr)
+### Install Mapping Libraries
+# install.packages("leaflet")
+# install.packages("rgdal")
+# install.packages("geojsonio")
+# install.packages("spdplyr")
+# install.packages("rmapshaper")
+# install.packages("jsonlite")
+#install.packages("knitr")
+#library(leaflet)
+library(jsonlite)
+library(rgdal)
+#library(geojsonio)
+library(spdplyr)
+library(rmapshaper)
+library(knitr)
+library(tidyr)
+
+setwd("~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data")
+#This key is private and should not be shared via GitHub.  It is here for internal use only.  This portion of the code should be removed when sharing to Github.
+Sys.getenv("CENSUS_TOKEN")
+# Add key to .Renviron
+Sys.setenv(CENSUS_KEY='4d921adb2db836584aa4e67744520787eba00049')
+# Reload .Renviron
+readRenviron("~/.Renviron")
+# Check to see that the expected key is output in your R console
+Sys.getenv("CENSUS_KEY")
+#Provides list of APIs 
+apis <- listCensusApis()
+```
+
+```{r message=FALSE, warning=FALSE}
+ACS_COC_SelectedVars <- read_csv("~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data/ACS_Table_Variables_COC_Factors.csv")
+acs_vars <- ACS_COC_SelectedVars$ACS_Table_Variable
+#rm(selectedData)
+selectedData <- getCensus(name="acs/acs5", vintage=2016,
+                          vars=acs_vars, 
+                          region="tract:*", 
+                          regionin="state:06+county:001,013,041,055,075,081,085,095,097")
+head(selectedData)
+```
+
+#### Calculate COC variables from selectedData
+
+```{r message=FALSE, warning=FALSE}
+selectedData$GEOID <- paste(selectedData$state,selectedData$county,selectedData$tract,sep="")
+selectedData$STATE <- selectedData$state
+selectedData$COUNTY_FIPS <- selectedData$county
+selectedData$TRACT <- selectedData$tract
+selectedData$TOT_POP_MIN <- selectedData$B03002_001E 
+selectedData$TOT_POP_SEN <- selectedData$B01001_001E
+selectedData$TOT_POP_POV <- selectedData$C17002_001E
+selectedData$TOT_POP_CIV_NI <- selectedData$C18108_001E
+selectedData$TOT_HH <- selectedData$B08201_001E
+selectedData$TOT_FAM <- selectedData$B11004_001E
+selectedData$TOT_POP_OVER5 <- selectedData$B16005_001E
+selectedData$POP_MINORITY <- selectedData$B03002_001E - selectedData$B03002_003E
+selectedData$POP_OVER75 <- selectedData$B01001_023E + selectedData$B01001_024E + selectedData$B01001_025E + selectedData$B01001_047E + selectedData$B01001_048E + selectedData$B01001_049E
+selectedData$POP_SPFAM <- selectedData$B11004_010E + selectedData$B11004_016E
+selectedData$POP_LEP<- selectedData$B16005_007E + selectedData$B16005_008E + selectedData$B16005_012E + selectedData$B16005_013E + selectedData$B16005_017E + selectedData$B16005_018E + selectedData$B16005_022E + selectedData$B16005_023E + selectedData$B16005_029E + selectedData$B16005_030E + selectedData$B16005_034E + selectedData$B16005_035E + selectedData$B16005_039E + selectedData$B16005_040E + selectedData$B16005_044E + selectedData$B16005_045E
+selectedData$POP_BELOW200 <- selectedData$C17002_001E - selectedData$C17002_008E
+selectedData$POP_DISABILITY <- selectedData$C18108_001E - (selectedData$C18108_005E + selectedData$C18108_009E + selectedData$C18108_013E)
+selectedData$POP_HUS_RENT50 <- selectedData$B25070_010E
+selectedData$POP_ZVHHS <- selectedData$B08201_002E
+selectedData$PCT_OVER75 <- (selectedData$B01001_023E + selectedData$B01001_024E + selectedData$B01001_025E + selectedData$B01001_047E + selectedData$B01001_048E + selectedData$B01001_049E)/selectedData$B01001_001E
+selectedData$PCT_MINORITY <- (selectedData$B03002_001E - selectedData$B03002_003E)/selectedData$B03002_001E
+selectedData$PCT_SPFAM <- (selectedData$B11004_010E + selectedData$B11004_016E)/selectedData$B11004_001E
+selectedData$PCT_LEP <- (selectedData$B16005_007E + selectedData$B16005_008E + selectedData$B16005_012E + selectedData$B16005_013E + selectedData$B16005_017E + selectedData$B16005_018E + selectedData$B16005_022E + selectedData$B16005_023E + selectedData$B16005_029E + selectedData$B16005_030E + selectedData$B16005_034E + selectedData$B16005_035E + selectedData$B16005_039E + selectedData$B16005_040E + selectedData$B16005_044E + selectedData$B16005_045E)/selectedData$B16005_001E
+selectedData$PCT_BELOW200 <- (selectedData$C17002_001E - selectedData$C17002_008E)/selectedData$C17002_001E
+selectedData$PCT_DISAB <- (selectedData$C18108_001E - (selectedData$C18108_005E + selectedData$C18108_009E + selectedData$C18108_013E))/selectedData$C18108_001E
+selectedData$PCT_ZVHHS <- selectedData$B08201_002E/selectedData$B08201_001E
+selectedData$PCT_HUS_RENT50 <- selectedData$B25070_010E/selectedData$B08201_001E
+
+head(selectedData)
+```
+
+#### Find Mean and St. Dev of Shares
+```{r}
+regionAvgStDev <- selectedData %>%
+  summarise(Factor = 'Seniors', MEAN_OVER75 = mean(PCT_OVER75,na.rm = T),SD_OVER75 = sd(PCT_OVER75,na.rm = T), PLUS_HALFSD_OVER75 = mean(PCT_OVER75,na.rm = T) + (sd(PCT_OVER75,na.rm = TRUE)/2), PLUS_ONESD_OVER75 = mean(PCT_OVER75,na.rm = T) + sd(PCT_OVER75,na.rm = T), PLUS_ONEHALFSD_OVER75 = mean(PCT_OVER75,na.rm = T) + (1.5 * sd(PCT_OVER75,na.rm = TRUE) ))
+  # summarise(Factor = 'Minorities', MEAN_MINORITY = mean(PCT_MINORITY,na.rm = T),SD_MINORITY = sd(PCT_MINORITY,na.rm = T), PLUS_HALFSD_MINORITY = mean(PCT_MINORITY,na.rm = T) + (sd(PCT_MINORITY,na.rm = TRUE)/2), PLUS_ONESD_MINORITY = mean(PCT_MINORITY,na.rm = T) + sd(PCT_MINORITY,na.rm = T), PLUS_ONEHALFSD_MINORITY = mean(PCT_MINORITY,na.rm = T) + (1.5 * sd(PCT_MINORITY,na.rm = TRUE) ))
+  
+
+head(regionAvgStDev)
+
+```
+
+
+#### Calculate Regional Totals
+
+```{r}
+regionTotalsbyTract <- selectedData %>%
+  select(TOT_POP_MIN,TOT_POP_SEN,TOT_POP_POV,TOT_POP_CIV_NI,TOT_HH,TOT_FAM,TOT_POP_OVER5,POP_MINORITY,POP_OVER75,POP_SPFAM,POP_LEP)
+
+#sum.date <- data.ready.sum %>%
+  #summarise(freq = n(), weight = sum(weight), trip_weight = sum(trip_weight))
+
+regionSum <- regionTotalsbyTract %>%
+  summarise(Factor = 'Seniors', PCT_OVER75 = sum(POP_OVER75)/sum(TOT_POP_SEN),MEAN_OVER75 = mean(POP_OVER75) )
+
+head(regionSum)
+```
+
+
+
+
+#### Logic flagging Disadvantage Factors
+```{r}
+selectedData$OVER75_10 <- ifelse(selectedData$PCT_OVER75 > .10,1,0)
+selectedData$MINORITY_70 <- ifelse(selectedData$PCT_MINORITY > .70,1,0)
+selectedData$SPFAM_20 <- ifelse(selectedData$PCT_SPFAM > .20,1,0)
+selectedData$DISAB_25 <- ifelse(selectedData$PCT_DISAB > .25,1,0)
+selectedData$LEP_20 <- ifelse(selectedData$PCT_LEP > .20,1,0)
+selectedData$BELOW200_30 <- ifelse(selectedData$PCT_BELOW200 > .30,1,0)
+selectedData$ZVHH_10 <- ifelse(selectedData$PCT_ZVHHS > .10,1,0)
+selectedData$HUS_RENT50_15 <- ifelse(selectedData$PCT_HUS_RENT50 > .15,1,0)
+```
+
+#### Logic flagging Factors other than Minority or Low Income
+```{r}
+selectedData$Count_DisadFact <- selectedData$OVER75_10 + selectedData$SPFAM_20 + selectedData$DISAB_25 + selectedData$LEP_20 + selectedData$ZVHH_10 + selectedData$HUS_RENT50_15 
+```
+#### Logic flagging COCs
+```{r}
+selectedData$COC_FLAG_2018 <- ifelse((selectedData$MINORITY_70 == 1 & selectedData$BELOW200_30 == 1) | (selectedData$BELOW200_30 == 1 & selectedData$Count_DisadFact >= 3),1,0)
+```
+#### Export Final Table to CSV 
+```{r}
+ FinalTable <- selectedData[,42:78]
+write.csv(FinalTable, "~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data/COCs_ACS2016_tbl.csv")
+```
+#### Read ACS 2014 COCs into DF and select subset containing GEOID and COC Flag. Perform same subset selection from Final Table
+```{r}
+COC_2014_ALL_DATA <- read.csv(file="~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data/COCS_ACS2014_tbl.csv", header=TRUE, sep=",")
+
+COC_2014_SUBSET <- COC_2014_ALL_DATA[,c("GEOID","COCFLAG_2017")]
+
+COC_2014_SUBSET$GEOID <- paste("0",COC_2014_SUBSET$GEOID,sep = "")
+
+COC_2016_SUBSET <- FinalTable[,c("GEOID","COC_FLAG_2018")]
+```
+#### Compare 2017 COCs and 2018 COCs and output comparison CSV
+```{r}
+COC_COMPARE <- merge(COC_2014_SUBSET, COC_2016_SUBSET, by= "GEOID")
+
+COC_COMPARE$Gain_Loss_2014_2016 <- COC_COMPARE$COC_FLAG_2018 - COC_COMPARE$COCFLAG_2017
+
+write.csv(COC_COMPARE,"~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data/COC_Diff_ACS2014_ACS2016.csv")
+```
+    
+## COC Tracts GeoJSON    
+
+```{r}
+rm(urban_tracts,COC_Data)
+urban_tracts <- readOGR(dsn=path.expand("/Users/jcroff/Box/DataViz Projects/Spatial Analysis and Mapping/Communities of Concern/Data/COC_Tracts_Shapefile"), 
+                  layer = "COC_Tracts_WGS84", verbose = FALSE)
+#ca_tracts <- readOGR(dsn=path.expand("~/Documents/Data/"), 
+                     #layer = "CA_Tracts", verbose = FALSE)
+# Rename a column name GEOID to county_id.
+# ca_tracts <- ca_tracts %>% rename(GEOID = CODE)
+# ca_tracts %>%
+#   select(GEOID) -> ca_tracts
+# ca_tracts$GEOID <- sub('840','',ca_tracts$GEOID)
+# ca_tracts <- ca_tracts[,5]
+
+#Add CountyFip using GEOID to ca_tracts
+# ca_tracts$COUNTYFIP <- as.numeric(substr(ca_tracts$GEOID, 2, 5))
+# ca_tracts$GEOID <- as.character(ca_tracts$GEOID)
+
+#Fitler to Bay Area Tracts
+# ca_tracts %>%
+#   filter(COUNTYFIP %in% c(6001, 6013, 6041, 6055, 6075, 6081, 6085, 6095, 6097)) -> bay_tracts
+
+#Add CountyFIp using GEOID
+urban_tracts <- urban_tracts[,1:2]
+urban_tracts$CountyFIP <- as.numeric(substr(urban_tracts$GEOID, 2, 5))
+#Add Tracts using GEOID
+urban_tracts$TRACT <- as.numeric(substr(urban_tracts$GEOID, 6, 11))
+urban_tracts$TRACT <- as.character(urban_tracts$TRACT)
+urban_tracts$GEOID <- as.character(urban_tracts$GEOID)
+
+#Filter to include only COCs
+# FinalTable %>%
+#   filter(COC_FLAG_2018 == 1) -> COC_Data
+
+# Merge Final Table with Geography
+urban_tracts@data <- left_join(urban_tracts@data,FinalTable, by="GEOID")
+
+# bay_tracts@data <- right_join(bay_tracts@data,FinalTable, by="GEOID")
+
+#Fix NaN values.  For some reason these values show up in the tables from the merged FinalTable.
+#urban_tracts@data
+
+urban_tracts@data <- replace(urban_tracts@data, is.na(urban_tracts@data), 0)
+cocs_json <- subset(urban_tracts, urban_tracts$COC_FLAG_2018 == 1)
+#bay_tracts@data <- replace(bay_tracts@data, is.na(bay_tracts@data), 0)
+
+# Convert SP Data Frame to GeoJSON.
+tracts_json <- geojson_json(cocs_json)
+
+#bay_tracts_json <- geojson_json(bay_tracts)
+
+# Save it to a local file system.
+#geojson format
+#geojson_write(bay_tracts_json, file = "~/Documents/Data/Bay_Tracts.geojson")
+geojson_write(tracts_json, file = "~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data/COC_Urban_Tracts.geojson")
+
+# Shapefile format.  Change the folder location on local system (if needed)
+#writeOGR(urban_tracts, "finaldata", "~/Documents/Data/Urban_Tracts", driver = "ESRI Shapefile")
+#writeOGR(bay_tracts, "finaldata", "~/Documents/Data/Bay_Tracts", driver = "ESRI Shapefile")
+```
+
+
+### Mapping Libraries
+There are a few examples out there.  Here are a few that I think are useful when working with Census Data.  
+    1. https://randomjohn.github.io/r-maps-with-census-data/  
+    2. https://juliasilge.com/blog/using-tidycensus/
+    3. https://walkerke.github.io/2017/06/comparing-metros/
+    
+```{r}
+geojson <- geojsonio::geojson_read("~/Documents/Github_Documentation/Spatial-Analysis-Mapping-Projects/Project-Documentation/Communities-of-Concern/Data/COC_Urban_Tracts.geojson",
+                                      what = "sp")
+
+
+#Write to FGDB final table
+
+#Add tracts to leaflet map
+#Style Tracts using attribute from table
+
+# Default styles for all features
+# geojson$style = list(
+#   weight = 1,
+#   color = "#555555",
+#   opacity = 0.7,
+#   fillOpacity = 0.8
+# )
+
+POP_MIN <- sapply(geojson$features, function(feat) {
+  as.numeric(feat$properties$POP_MINORITY)
+})
+# Gather population estimate from all countries
+# TOT_POP_MIN <- sapply(geojson$features, function(feat) {
+#   max(1, feat$properties$TOT_POP_MIN)
+# })
+# Color by per-capita GDP using quantiles
+# pal <- colorQuantile("Greens", unlist(POP_MIN)/unlist(TOT_POP_MIN))
+pal <- colorNumeric("Greens", unlist(POP_MIN))
+# Add a properties$style list to each feature
+# geojson$features <- lapply(geojson$features, function(feat) {
+#   feat$properties$style <- list(
+#     fillColor = pal(
+#       feat$properties$POP_MIN
+#     )
+#   )
+#   feat
+# })
+mtc_map <- "https://api.mapbox.com/styles/v1/joshcroff/cjbeayb7i8qmt2smxtb17nqjq/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9zaGNyb2ZmIiwiYSI6IktobmJNQUEifQ.9JuIAa1Y4yvllmERw7-08g"
+map_attr <- "© <a href='https://www.mapbox.com/map-feedback/'>Mapbox</a>"
+
+leaflet(geojson) %>% 
+  setView(lng = -122.25987, lat = 37.81537, zoom = 8) %>%
+  addTiles(urlTemplate = mtc_map, attribution = map_attr) %>%
+  addPolygons(stroke = FALSE, smoothFactor = 0.3, fillOpacity = 1,
+              fillColor = ~pal(POP_MINORITY),
+              label = ~paste0(TRACT.x, ": ", formatC(POP_MINORITY, big.mark = ","))) %>%
+  addLegend(pal = pal, values = ~POP_MINORITY, opacity = 1.0)
+```
+
+### Aggregate Summary Section
+
+```{r}
+#Example Calculations to summarize
+
+FinalTable %>%
+  filter(COC_FLAG_2014 == 1) -> cocs
+
+
+#Example Summary
+BridgeTransactionsFY10_13_Summary <- aggregate(BridgeTransactionsFY10_13$Transactions, 
+                                               by = list(BridgeTransactionsFY10_13$County, 
+                                                         BridgeTransactionsFY10_13$Bridge, 
+                                                         BridgeTransactionsFY10_13$FiscalYear, 
+                                                         BridgeTransactionsFY10_13$xYear, 
+                                                         BridgeTransactionsFY10_13$xMonth, 
+                                                         BridgeTransactionsFY10_13$xDay, 
+                                                         BridgeTransactionsFY10_13$xWeekday), 
+                                               FUN = sum )
+```
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

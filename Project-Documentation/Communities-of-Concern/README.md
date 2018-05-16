@@ -34,6 +34,21 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 ![COC Framework](README_Images/COC_Framework_PBA2040.png)
 
+**Communities of Concern Framework 2018 COC Update**
+
+| Disadvantage Factor                           | % Regional Popoulation | Standard Deviation | Concentration Threshold (High COC) | 1 Standard Deviation (Higher COC) | 1.5 Standard Deviation (Highest COC) |
+|-----------------------------------------------|------------------------|--------------------|------------------------------------|-----------------------------------|--------------------------------------|
+| Minority                                      | 58%                    | 24%                | 70%                                | 81%                               | 93%                                  |
+| Low Income (<200% Federal Poverty Level -FPL) | 6%                     | 4%                 | 8%                                 | 11%                               | 13%                                  |
+| Limited English Proficienty                   | 8%                     | 8%                 | 12%                                | 16%                               | 20%                                  |
+| Zero-Vehicle Household                        | 9%                     | 12%                | 16%                                | 22%                               | 28%                                  |
+| Seniors 75 Years and Over                     | 6%                     | 4%                 | 8%                                 | 11%                               | 13%                                  |
+| People with Disability                        | 10%                    | 4%                 | 12%                                | 14%                               | 16%                                  |
+| Single-Parent Family                          | 13%                    | 9%                 | 18%                                | 23%                               | 27%                                  |
+| Severely-RentBurdened Household               | 11%                    | 8%                 | 15%                                | 19%                               | 23%                                  |
+
+Definition-census tracts that have a cocentration of BOTH minority AND low-income households, OR that have a concentration of 3 or more of the remaining 6 factors (#3 to #8) but only IF they also have a concentration of low-income households.
+
 ### Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions
 
 [ACS Table Variables and MTC COC Disadvantage Factors Lookup](Data/ACS_Table_Variables_COC_Factors.csv)
