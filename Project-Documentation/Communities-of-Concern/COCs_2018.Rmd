@@ -3,7 +3,7 @@ title: "Communities of Concern 2018"
 output: html_notebook
 ---
 
-This script builds the 2016 Community of Concern Dataset using the presribed methodology located here:   [GitHub Documentation](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Communities-of-Concern). 
+This script builds the 2016 Community of Concern Dataset using the prescribed methodology located here:   [GitHub Documentation](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Communities-of-Concern). 
 
 It uses the censusapi library which is documented here: [CensusAPI](https://hrecht.github.io/censusapi/index.html)
 
