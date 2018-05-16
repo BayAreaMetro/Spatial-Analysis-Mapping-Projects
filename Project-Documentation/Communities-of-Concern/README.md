@@ -86,8 +86,7 @@ The link below provides the COC schema and domains, along with calculations and 
 
 The analysis was performed in R and leverages the censusapi library which is documented here: [CensusAPI](https://hrecht.github.io/censusapi/index.html)
 
-To explore the methodology, take a look at the [COC Methodology](COC_Methodology.md) 
-
+To explore the methodology, take a look at the [COC Methodology](COCs_2018.Rmd)
 
 ## Expected Outcomes
 
@@ -100,7 +99,6 @@ To explore the methodology, take a look at the [COC Methodology](COC_Methodology
 ## Results
 
 - [2018 Communities of Concern - ACS 2016](Data/COCs_ACS2016_tbl.csv)
-- [2018 Communities of Concern - ACS 2016 Geography (Urban Tracts) GeoJSON](COC_Urban_Tracts.geojson)
 - [2018 Communities of Concern - ACS 2016 Geography (Urban Tracts) Web Layer](http://mtc.maps.arcgis.com/home/item.html?id=162559b3cb3c4d7da9fffda8f5a529d3)
 
 ![2018 Communities of Concern Print Map](https://mtcdrive.box.com/shared/static/t6eyif267lxaz5zegdremx1x3xc2d1gx.png)
