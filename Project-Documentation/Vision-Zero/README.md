@@ -57,4 +57,13 @@ TBD
 MEMORANDUM: 
 
 ## Limitations
+- Access to high fidelity, timely pedestrian injury fatality data for all roadways, including non-State-owned public roads.  
+- Access to detailed roadway characteristics such as speed and volume data, street lighting, and signalized intersections for     
+  roadways.  
+- Access to detailed roadway characteristics
+
+
+### Relevant Background Information
+
+[FHWA Roadway Safety Data Program](https://safety.fhwa.dot.gov/rsdp/data_activities_state.aspx)
 
