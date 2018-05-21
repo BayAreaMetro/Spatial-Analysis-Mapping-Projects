@@ -54,7 +54,8 @@ TBD
 
 [vz_hin_2006_2017_mn_nw_bayarea (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=7c3180199f8949e2861285dc2437b838)
 
-MEMORANDUM: 
+[MTC Vision Zero Memorandum](https://mtcdrive.box.com/v/visionzero-memo) **(Internal Agency Staff Only)**
+
 
 ## Limitations
 - Access to high fidelity, timely pedestrian injury fatality data for all roadways, including non-State-owned public roads.  
