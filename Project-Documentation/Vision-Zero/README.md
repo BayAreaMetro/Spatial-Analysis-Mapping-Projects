@@ -54,7 +54,7 @@ TBD
 
 [AGOL Interactive Map (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=7c3180199f8949e2861285dc2437b838)
 
-[MTC Vision Zero Memorandum](https://mtcdrive.box.com/v/visionzero-memo) **(Internal Agency Staff Only)**
+[MTC Vision Zero Memorandum](https://mtcdrive.box.com/v/visionzero-memo) | **(Internal Agency Staff Only)**
 
 
 ## Limitations
