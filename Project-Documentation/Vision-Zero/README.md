@@ -52,7 +52,7 @@ TBD
 
 ## Results
 
-[vz_hin_2006_2017_mn_nw_bayarea (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=7c3180199f8949e2861285dc2437b838)
+[AGOL Interactive Map (Draft)](http://mtc.maps.arcgis.com/home/item.html?id=7c3180199f8949e2861285dc2437b838)
 
 [MTC Vision Zero Memorandum](https://mtcdrive.box.com/v/visionzero-memo) **(Internal Agency Staff Only)**
 
