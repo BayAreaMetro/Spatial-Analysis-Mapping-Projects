@@ -76,7 +76,7 @@ Walk Score/ Bike Score Areas
 
 ### Relevant Background Information
 
-[FHWA Roadway Safety Data Program](https://safety.fhwa.dot.gov/rsdp/data_activities_state.aspx)
-[Vision Zero Los Angeles](http://visionzero.lacity.org)
-[Vision Zero Portland](https://pdx.maps.arcgis.com/apps/MapSeries/index.html?appid=47c2153a3fa84636bb63e25b451372d0)
-[Vision Zero SF](http://visionzerosf.org)
+[FHWA Roadway Safety Data Program](https://safety.fhwa.dot.gov/rsdp/data_activities_state.aspx)  
+[Vision Zero Los Angeles](http://visionzero.lacity.org)  
+[Vision Zero Portland](https://pdx.maps.arcgis.com/apps/MapSeries/index.html?appid=47c2153a3fa84636bb63e25b451372d0)  
+[Vision Zero SF](http://visionzerosf.org)  
