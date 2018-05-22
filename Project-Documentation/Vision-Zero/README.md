@@ -59,9 +59,20 @@ TBD
 
 ## Limitations
 - Access to high fidelity, timely pedestrian injury fatality data for all roadways, including non-State-owned public roads.  
-- Access to detailed roadway characteristics such as speed and volume data, street lighting, and signalized intersections for     
-  roadways.  
+- Access to detailed roadway characteristics such as speed and volume data, street lighting, and signalized intersections for   roadways.  
 
+Need to Acquire Better Data Sources on:
+Street Characteristics (Lanes, Lighting, Bike Lanes, Street etc),
+Signalized Intersections,
+Sidewalks,
+Injuries,
+Deaths,
+Traffic Volume,
+Traffic Speeds,
+Time Period (24 hours),
+Facility Types, (Local Streets to Arterials),
+Bike Ped Counts,
+Walk Score/ Bike Score Areas
 
 ### Relevant Background Information
 
