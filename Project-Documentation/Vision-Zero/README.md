@@ -19,7 +19,7 @@
 |killed           |Number of people killed (includes pedestrians and motorists)         |
 |Sevinj           |Number of people severly injured (includes pedestrians and motorists)|
 |Accident Year    |Year accident was reported                                           |
-|LongitudeFixed   |Longitude (X coordinate)                                             |
+|Longitude        |Longitude (X coordinate)                                             |
 |Latitude         |Latitude (Y coordinate)                                              |
 
 
