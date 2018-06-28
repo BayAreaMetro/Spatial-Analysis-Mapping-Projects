@@ -30,9 +30,11 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [RTIP 2018](RTIP-2018)
 
-#### [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects)
-
 #### [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining)
+
+#### [Single Family Neighborhood Analysis](Single-Family-Neighborhoods_PDA_TPA_Walkable)
+
+#### [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects)
 
 #### [Vision Zero](Vision-Zero)
 
