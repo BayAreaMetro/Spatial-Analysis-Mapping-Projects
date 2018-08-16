@@ -296,5 +296,5 @@ Output:
 ### Feature Classes & CSVs
 
 - [NC_Megaregion_Goods_Movement_Study FGDB](https://mtcdrive.box.com/s/42gm26ycxtjw5cv9vb9gbqkox047nxyc)
-- [2016_Megaregion_Emp_Tot_By_GM_Class.csv](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/2016_Megaregion_Emp_Tot_By_GM_Class.csv)
-- [2016_Megaregion_Emp_Tot_By_SC_Class.csv](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Regional-Goods-Movement/data/2016_Megaregion_Emp_Tot_By_SC_Class.csv)
+- [2016_Megaregion_Emp_Tot_By_GM_Class.csv](data/2016_Megaregion_Emp_Tot_By_GM_Class.csv)
+- [2016_Megaregion_Emp_Tot_By_SC_Class.csv](data/2016_Megaregion_Emp_Tot_By_SC_Class.csv)
