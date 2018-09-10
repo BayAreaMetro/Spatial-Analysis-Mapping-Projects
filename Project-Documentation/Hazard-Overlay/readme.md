@@ -67,7 +67,7 @@ TABULATE INTERSECTION
 Sum Fields:	[leave blank]  
 Output Units:	SQ METERS  
 
-Summary Statistics  
+SUMMARY STATISTICS 
     Input:	Tabulate Intersections Output  
     Statistics Field:	Area SUM  
     Case field:	Parcel 2010  
