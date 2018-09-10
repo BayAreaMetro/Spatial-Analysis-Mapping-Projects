@@ -48,7 +48,7 @@ Field calculate new field to denote 1 = inside liquefaction study area while -1 
 alquist_priolo_zones
 
 Definition query out unnecessary classifications or display only relevant classifications
-Ie1. Ap_zone Not Null
+	Ie1. Ap_zone Not Null
 Field calculate new field to denote 1 = inside ap_zone while -1 = outside ap_zone.
 
 Once all four hazard layers have been formatted (all unnecessary classifications have been removed) then combine the four layers into a single hazard layer.
@@ -64,21 +64,63 @@ usgs_liquefaction_susceptibility
 alquist_priolo_zones
 
 Tabulate Intersection
-	Zones: Parcels2010
-	Zone Fields: Parcel ID
-	Class Features: Output of Union for all four hazard layers
+	Zones:	Parcels2010
+	Zone Fields:	Parcel ID
+	Class Features:	Output of Union for all four hazard layers
 	Class Fields:
-	Binary new field denoting inclusion/exclusion of cgs_liquefaction_study_areas
-	Binary new field denoting inclusion/exclusion of cgs_landslide_study_areas
-	Binary new field denoting inclusion/exclusion of usgs_liquefaction_susceptibility
-	Binary new field denoting inclusion/exclusion of alquist_priolo_zones
-Sum Fields: [leave blank]
-Output Units: SQ METERS
+		Binary new field denoting inclusion/exclusion of cgs_liquefaction_study_areas (liqcode)
+		Binary new field denoting inclusion/exclusion of cgs_landslide_study_areas (landcode)
+		Binary new field denoting inclusion/exclusion of usgs_liquefaction_susceptibility (liqsuscode)
+		Binary new field denoting inclusion/exclusion of alquist_priolo_zones (alqpricode)
+Sum Fields:	[leave blank]
+Output Units:	SQ METERS
 
 Summary Statistics
-    Input: Tabulate Intersections Output
-    Statistics Field: Area SUM
-    Case field: Parcel 2010
+    Input:	Tabulate Intersections Output
+    Statistics Field:	Area SUM
+    Case field:	Parcel 2010
+
+Pivot Table 1
+	Input:	Summary Statistics Output
+	Input fields:	
+		Parcel ID
+		Acres
+		County ID
+		liqcode
+	Pivot field:	liqcode
+	Value field:	Area
+
+Pivot Table 2
+	Input:	Summary Statistics Output
+	Input fields:	
+		Parcel ID
+		Acres
+		County ID
+		landcode
+	Pivot field:	landcode
+	Value field:	Area
+
+Pivot Table 3
+	Input:	Summary Statistics Output
+	Input fields:	
+		Parcel ID
+		Acres
+		County ID
+		liqsuscode
+	Pivot field:	liqsuscode
+	Value field:	Area
+
+Pivot Table 4
+	Input:	Summary Statistics Output
+	Input fields:	
+		Parcel ID
+		Acres
+		County ID
+		alqpricode
+	Pivot field:	alqupricode
+	Value field:	Area
+
+
 
 
 
