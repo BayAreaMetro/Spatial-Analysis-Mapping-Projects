@@ -3,16 +3,15 @@
 ## Define the Problem Statement
 The purpose of this project is to build an application that allows users to search for an address, and receive feedback on whether that address is impacted by certain geological hazards.
 
-The goal is to be able to say that an address is positively impacted by a geological hazard if all or part of the parcel intersects that hazard.
-
-In order to accomplish this, a dataset needs to be developed based on parcel features, with attributes indicating whether each parcel is in/out of a specific hazard. 
+The goal is to determine if an address is positively impacted by a geological hazard if all or part of the parcel intersects that hazard.  
 
 ### Project Management 
-- [Task on Asana](https://app.asana.com/0/412103232252676/795829633431058/f)
+- [Task on Asana](https://app.asana.com/0/412103232252676/795829633431058/f)  
+- [Data on Box (see Hazard_Overlay _lookup in FinalAnalysisOutput.gdb)] (https://mtcdrive.app.box.com/folder/53006798123)
 
 ## Data Sources
 Zonal Geography:
-1. [Parcels 2010](https://mtc.maps.arcgis.com/home/group.html?id=66c3ed0ebab0480788a9d2cf49afb57d#overview)
+1. [Parcels 2010](https://mtcdrive.app.box.com/s/ny0olvpw64x6ftxwhbi34m2phm6hqzce)
 
 Hazards include: 
 1. [Alquist-Priolo Fault Zone](https://mtc.maps.arcgis.com/home/item.html?id=1935ec41c8b04a21bff1ebb1e5c050ca)
@@ -21,6 +20,7 @@ Hazards include:
 4. [Earthquake Induced Landslide Study Zones](https://mtc.maps.arcgis.com/home/item.html?id=2b40285fe87a402db105de31dd124dc0#overview)
 
 ## Analysis Parameters
+Dataset needs to be developed based on parcel features, with attributes indicating whether each parcel is in/out of a specific hazard. 
 
 
 ## Methodology applied to solve problem
@@ -67,7 +67,7 @@ TABULATE INTERSECTION
 Sum Fields:	[leave blank]  
 Output Units:	SQ METERS  
 
-SUMMARY STATISTICS 
+SUMMARY STATISTICS  
     Input:	Tabulate Intersections Output  
     Statistics Field:	Area SUM  
     Case field:	Parcel 2010  
