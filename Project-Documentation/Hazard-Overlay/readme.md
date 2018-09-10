@@ -49,13 +49,13 @@ Field calculate new field to denote 1 = inside ap_zone while -1 = outside ap_zon
 
 Once all four hazard layers have been formatted (all unnecessary classifications have been removed) then combine the four layers into a single hazard layer.
 
-Union  
+UNION  
 cgs_liquefaction_study_areas  
 cgs_landslide_study_areas  
 usgs_liquefaction_susceptibility  
 alquist_priolo_zones  
 
-Tabulate Intersection
+TABULATE INTERSECTION
 	Zones:	Parcels2010  
 	Zone Fields:	Parcel ID  
 	Class Features:	Output of Union for all four hazard layers  
@@ -72,50 +72,33 @@ Summary Statistics
     Statistics Field:	Area SUM  
     Case field:	Parcel 2010  
 
-Pivot Table 1  
+PIVOT TABLE 1  
 	Input:	Summary Statistics Output  
 	Input fields:  
-		Parcel ID  
-		Acres  
-		County ID  
-		liqcode  
+		Parcel ID, liqcode  
 	Pivot field:	liqcode  
 	Value field:	Area  
 
-Pivot Table 2  
+PIVOT TABLE 2  
 	Input:	Summary Statistics Output  
 	Input fields:  
-		Parcel ID  
-		Acres  
-		County ID  
-		landcode  
+		Parcel ID, landcode  
 	Pivot field:	landcode  
 	Value field:	Area  
 
-Pivot Table 3  
+PIVOT TABLE 3  
 	Input:	Summary Statistics Output  
 	Input fields:  
-		Parcel ID  
-		Acres  
-		County ID  
-		liqsuscode  
+		Parcel ID, liqsuscode   
 	Pivot field:	liqsuscode  
 	Value field:	Area  
 
-Pivot Table 4  
+PIVOT TABLE 4  
 	Input:	Summary Statistics Output  
 	Input fields:  
-		Parcel ID  
-		Acres  
-		County ID  
-		alqpricode  
+		Parcel ID, alqpricode  
 	Pivot field:	alqupricode  
 	Value field:	Area  
-
-
-
-
-
 
 ## Expected Outcomes (if any)?
 
