@@ -24,7 +24,7 @@ Hazards include:
 
 
 ## Methodology applied to solve problem
-usgs_liquefaction_susceptibility
+usgs_liquefaction_susceptibility/
 
 Definition query out unnecessary classifications or display only relevant classifications
 	Ie1. Liq Not in (‘NM’,’L’,’VL’,’W’)
@@ -85,7 +85,7 @@ Pivot Table 1
 	Input fields:	
 		Parcel ID
 		Acres
-		County ID/n
+		County ID
 		liqcode
 	Pivot field:	liqcode
 	Value field:	Area
