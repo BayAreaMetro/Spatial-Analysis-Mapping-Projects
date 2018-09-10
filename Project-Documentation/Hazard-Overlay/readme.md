@@ -85,7 +85,7 @@ Pivot Table 1
 	Input fields:	
 		Parcel ID
 		Acres
-		County ID
+		County ID/n
 		liqcode
 	Pivot field:	liqcode
 	Value field:	Area
