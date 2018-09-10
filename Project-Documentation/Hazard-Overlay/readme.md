@@ -12,7 +12,7 @@ In order to accomplish this, a dataset needs to be developed based on parcel fea
 
 ## Data Sources
 Zonal Geography:
-1. Parcels 2010 [a url](https://app.asana.com/0/412103232252676/795829633431058/f)
+1. [Parcels 2010](https://mtc.maps.arcgis.com/home/group.html?id=66c3ed0ebab0480788a9d2cf49afb57d#overview)
 
 Hazards include: 
 1. [Alquist-Priolo Fault Zone](https://mtc.maps.arcgis.com/home/item.html?id=1935ec41c8b04a21bff1ebb1e5c050ca)
