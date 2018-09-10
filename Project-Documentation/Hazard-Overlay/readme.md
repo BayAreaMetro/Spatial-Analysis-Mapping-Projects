@@ -25,27 +25,27 @@ Hazards include:
 
 ## Methodology applied to solve problem
 usgs_liquefaction_susceptibility
-•	Definition query out unnecessary classifications or display only relevant classifications
-		Ie1. Liq Not in (‘NM’,’L’,’VL’,’W’)
-		Ie2. Liq in (‘VH’,’H’,’M’)
-•	Field calculate new field to denote 1 = susceptibility while -1 = no liquefaction susceptibility.
+Definition query out unnecessary classifications or display only relevant classifications
+	Ie1. Liq Not in (‘NM’,’L’,’VL’,’W’)
+	Ie2. Liq in (‘VH’,’H’,’M’)
+Field calculate new field to denote 1 = susceptibility while -1 = no liquefaction susceptibility.
 
 cgs_landslide_study_areas
-•	Definition query out unnecessary classifications or display only relevant classifications
-        Ie1. Mapping Not In (‘Area not…’,’Mapping Planned…’,’Mapping in Progress…’) 
-		Ie2. Mapping = ‘Earthquake induced…’
-•	Field calculate new field to denote 1 = inside a landslide study area while -1 = outside landslide study areas.
+Definition query out unnecessary classifications or display only relevant classifications
+	Ie1. Mapping Not In (‘Area not…’,’Mapping Planned…’,’Mapping in Progress…’) 
+	Ie2. Mapping = ‘Earthquake induced…
+Field calculate new field to denote 1 = inside a landslide study area while -1 = outside landslide study areas.
 
 cgs_liquefaction_study_areas
-•	Definition query out unnecessary classifications or display only relevant classifications
-		Ie1. Mapping Not In (‘Area not…’,’Mapping Planned…’,’Mapping in Progress…’) 
-		Ie2. Mapping = ‘Liquefaction Hazard…’
-•	Field calculate new field to denote 1 = inside liquefaction study area while -1 = outside liquefaction study areas.
+Definition query out unnecessary classifications or display only relevant classifications
+	Ie1. Mapping Not In (‘Area not…’,’Mapping Planned…’,’Mapping in Progress…’)
+	Ie2. Mapping = ‘Liquefaction Hazard…’
+Field calculate new field to denote 1 = inside liquefaction study area while -1 = outside liquefaction study areas.
 
 alquist_priolo_zones
-•	Definition query out unnecessary classifications or display only relevant classifications
-		Ie1. Ap_zone Not Null
-•	Field calculate new field to denote 1 = inside ap_zone while -1 = outside ap_zone.
+Definition query out unnecessary classifications or display only relevant classifications
+Ie1. Ap_zone Not Null
+Field calculate new field to denote 1 = inside ap_zone while -1 = outside ap_zone.
 
 Once all four hazard layers have been formatted (all unnecessary classifications have been removed) then combine the four layers into a single hazard layer.
 
