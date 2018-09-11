@@ -73,33 +73,6 @@ SUMMARY STATISTICS
     Statistics Field:	Area SUM  
     Case field:	Parcel 2010  
 
-PIVOT TABLE 1  
-	Input:	Summary Statistics Output  
-	Input fields:  
-		Parcel ID, liqcode  
-	Pivot field:	liqcode  
-	Value field:	Area  
-
-PIVOT TABLE 2  
-	Input:	Summary Statistics Output  
-	Input fields:  
-		Parcel ID, landcode  
-	Pivot field:	landcode  
-	Value field:	Area  
-
-PIVOT TABLE 3  
-	Input:	Summary Statistics Output  
-	Input fields:  
-		Parcel ID, liqsuscode   
-	Pivot field:	liqsuscode  
-	Value field:	Area  
-
-PIVOT TABLE 4  
-	Input:	Summary Statistics Output  
-	Input fields:  
-		Parcel ID, alqpricode  
-	Pivot field:	alqupricode  
-	Value field:	Area  
 
 ## Expected Outcomes (if any)?
 
