@@ -7,7 +7,7 @@ The goal is to determine if an address is positively impacted by a geological ha
 
 ### Project Management 
 - [Task on Asana](https://app.asana.com/0/412103232252676/795829633431058/f)  
-- [Data on Box](https://mtcdrive.app.box.com/folder/53006798123)
+- [Data on Box](https://mtcdrive.app.box.com/folder/53006798123)  
 	(see Hazard_Overlay_lookup in FinalAnalysisOutput.gdb)
 
 ## Data Sources
