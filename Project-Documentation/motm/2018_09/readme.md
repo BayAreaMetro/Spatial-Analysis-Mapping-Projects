@@ -4,7 +4,7 @@
 
 ### Overview
 
-This month's map of the month focuses on the California Proposition 6 which proposes to repeal Senate Bill 1. ... 
+This month's map of the month focuses on California Proposition 6 which proposes to repeal Senate Bill 1. ... 
 
 ### Contents 
  
