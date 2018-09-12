@@ -27,7 +27,7 @@ The second map should show Revised Network PCI 2027 without SB1 - Prop 6 Passage
 1. Final Proposition 6 Impact on Pavement Condition Index (PCI) workbook stripped and reformatted then converted to csv.  
 2. Join PCI csv to Jurisdiction/ Unincorporated TomTom Dataset on PlaceName.  
 3. Output new feature class containing join.
-4. Sybomlize based on PCI_2017, PCI_2027 without SB1 (Prop 6 fails), PCI_2027 with SB1 (Prop 6 passes). 
+4. Symbolize based on PCI_2017, PCI_2027 without SB1 (Prop 6 fails), PCI_2027 with SB1 (Prop 6 passes). 
 5. Create two maps depicting existing pavement conditions and projected pavement conditions without SB1.
 
 ### Outcome & Products  
