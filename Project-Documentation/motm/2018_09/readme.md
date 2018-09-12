@@ -1,10 +1,10 @@
-# 2018 Pavement Condition Index SB1/Prop6 Projection Analysis 
+# SB1/Prop6 Pavement Condition Index Projection Analysis 
 
 [Asana Project](https://app.asana.com/0/797943099119526/814801064709349) 
 
 ### Overview
 
-This month's map of the month focuses on California Proposition 6 which proposes to repeal Senate Bill 1. ... 
+This month's map of the month focuses on California Proposition 6 which proposes to repeal Senate Bill 1.
 
 ### Contents 
  
