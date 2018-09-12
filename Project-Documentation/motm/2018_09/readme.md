@@ -4,7 +4,7 @@
 
 ### Goal
 
-This month's map of the month focuses on California Proposition 6 which proposes to repeal Senate Bill 1.
+This month's map of the month focuses on California Proposition 6 which proposes to repeal Senate Bill 1 (SB1).
 
 Two heat maps that show Pavement Condition Index (PCI) score by jurisdiction grouped into the following categories: 
 Poor/Failed (0-49)
@@ -24,6 +24,11 @@ The second map should show Revised Network PCI 2027 without SB1 - Prop 6 Passage
 [Jurisdiction/ Unincorporated TomTom Dataset](https://mtc.maps.arcgis.com/home/item.html?id=6af997969b1b4987bdb3c65c8104fb86#overview)
 
 #### Methodology  
+1. Final Proposition 6 Impact on Pavement Condition Index (PCI) workbook stripped and reformatted then converted to csv.  
+2. Join PCI csv to Jurisdiction/ Unincorporated TomTom Dataset on PlaceName.  
+3. Output new feature class containing join.
+4. Sybomlize based on PCI_2017, PCI_2027 without SB1 (Prop 6 fails), PCI_2027 with SB1 (Prop 6 passes). 
+5. Create two maps depicting existing pavement conditions and projected pavment conditions without SB1.
 
 ### Outcome & Products  
 [Outcome & Products](#outcome--products)
