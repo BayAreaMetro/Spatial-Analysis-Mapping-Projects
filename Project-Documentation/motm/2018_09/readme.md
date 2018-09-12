@@ -19,6 +19,10 @@ The second map should show Revised Network PCI 2027 without SB1 - Prop 6 Passage
 ### Contents  
 
 #### Data Sources  
+[Final Proposition 6 Impact on Pavement Condition](https://mtcdrive.box.com/s/c4ck5l6966kio5bwm6ap41nw1n3p6r6f)  
+
+[Jurisdiction/ Unincorporated TomTom Dataset](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/places_california/FeatureServer)
+
 #### Methodology  
 
 ### Outcome & Products  
