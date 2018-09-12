@@ -38,10 +38,10 @@ The second map should show Revised Network PCI 2027 without SB1 - Prop 6 Passage
 
 #### Maps, Charts, and Graphics 
 
-- [Image Files](https://mtcdrive.box.com/s/k96lwy1bou8qkemk6akuxcx7dqnlw787)
-- [Illustrator Files](https://mtcdrive.box.com/s/iflzlh03twpoxynymot336xtbxs5offg)
-- [Presentation Files](https://mtcdrive.box.com/s/3wi5kcpddmky6uxovlk6dw4rd2rwru04)
+- [Image Files]
+- [Illustrator Files]
+- [Presentation Files]
 
 #### Written Material 
 
-- [November 2017 Write Up](https://mtcdrive.box.com/s/dowz4jzuxme6g9658vkwrrnbvcdfpbur)
+- [September 2018 Write Up]
