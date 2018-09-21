@@ -28,7 +28,7 @@ The second map should show Revised Network PCI 2027 without SB1 - Prop 6 Passage
 2. Join PCI csv to Jurisdiction/ Unincorporated TomTom Dataset on PlaceName.  
 3. Output new feature class containing join.
 4. Symbolize based on PCI_2017, PCI_2027 without SB1 (Prop 6 passes), PCI_2027 with SB1 (Prop 6 fails). 
-5. Create two maps depicting existing pavement conditions and projected pavement conditions without SB1.
+5. Create three maps depicting existing pavement conditions, projected pavement conditions with SB1, and projected pavement conditions without SB1.
 
 ### Outcome & Products  
 [Outcome & Products](#outcome--products)
@@ -38,10 +38,14 @@ The second map should show Revised Network PCI 2027 without SB1 - Prop 6 Passage
 
 #### Maps, Charts, and Graphics 
 
-- [Image Files]
-- [Illustrator Files]
-- [Presentation Files]
+- [Image Files](https://mtcdrive.box.com/s/kgjdwmdpe7bw2k4lq923gwm510rhqjgo)
+- [Illustrator Files](https://mtcdrive.box.com/s/ssij14y1nb6kkd1yr77twh6zudfn39wt)
+- [Presentation Files](https://mtcdrive.box.com/s/bq82eefoo1tqu9ktfh8kw2z5j8kp5hkl)
 
 #### Written Material 
 
-- [September 2018 Write Up]
+- [September 2018 Write Up](https://mtcdrive.box.com/s/ygrbjx714e4pike2oapg92c130wg4s61)
+
+#### Feature Classes & CSVs 
+
+- [Feature Classes & CSVs](https://mtcdrive.box.com/s/eyzsate1lcxz1ffwfdiyljej6z02vxu2)
