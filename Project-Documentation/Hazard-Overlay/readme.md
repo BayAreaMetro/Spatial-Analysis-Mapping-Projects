@@ -38,7 +38,7 @@ GIS Analysis:
 3. Query all five hazard layers for only relevant geographies
     Ie. Landslide Susceptibility GRIDCODE>=7 (all areas with high landslide susceptibility or greater)
 4. Export queried hazard layers features to project geodatabase
-5. Union new hazard layers to create single data layer feature class
+5. Union new hazard layers to create single data layer feature class  
     a. cgs_liquefaction_study_areas  
     b. cgs_landslide_study_areas  
     c. usgs_liquefaction_susceptibility  
