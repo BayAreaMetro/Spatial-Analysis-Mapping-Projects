@@ -25,8 +25,8 @@ Dataset needs to be developed based on parcel features, with attributes indicati
 
 
 ## Methodology applied to solve problem
-###GIS & Tabular Analysis
-####GIS Analysis:
+GIS & Tabular Analysis  
+GIS Analysis:
 1. Download Parcels 2010 & Hazard Layers  
     [Parcels 2010](https://mtcdrive.app.box.com/s/ny0olvpw64x6ftxwhbi34m2phm6hqzce)  
     [Alquist-Priolo Fault Zone](https://mtc.maps.arcgis.com/home/item.html?id=1935ec41c8b04a21bff1ebb1e5c050ca)  
