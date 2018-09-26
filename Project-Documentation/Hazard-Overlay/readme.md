@@ -28,12 +28,12 @@ Dataset needs to be developed based on parcel features, with attributes indicati
 ###GIS & Tabular Analysis
 ####GIS Analysis:
 1. Download Parcels 2010 & Hazard Layers  
-    [Parcels 2010](https://mtcdrive.app.box.com/s/ny0olvpw64x6ftxwhbi34m2phm6hqzce)
-    [Alquist-Priolo Fault Zone](https://mtc.maps.arcgis.com/home/item.html?id=1935ec41c8b04a21bff1ebb1e5c050ca)
-    [USGS Liquefaction Study Zone](https://mtc.maps.arcgis.com/home/item.html?id=044546a891414c90a17a54bb2aa594bb)
-    [Liquefaction Susceptibility Zones](https://mtc.maps.arcgis.com/home/item.html?id=b88a7506b3054189b2cbd475371b1199)
+    [Parcels 2010](https://mtcdrive.app.box.com/s/ny0olvpw64x6ftxwhbi34m2phm6hqzce)  
+    [Alquist-Priolo Fault Zone](https://mtc.maps.arcgis.com/home/item.html?id=1935ec41c8b04a21bff1ebb1e5c050ca)  
+    [USGS Liquefaction Study Zone](https://mtc.maps.arcgis.com/home/item.html?id=044546a891414c90a17a54bb2aa594bb)  
+    [Liquefaction Susceptibility Zones](https://mtc.maps.arcgis.com/home/item.html?id=b88a7506b3054189b2cbd475371b1199)  
     [Earthquake Induced Landslide Study Zones](https://mtc.maps.arcgis.com/home/item.html?id=2b40285fe87a402db105de31dd124dc0#overview)  
-    [Landslide Susceptibility Zones](https://mtcdrive.app.box.com/s/6qa52hq69ifk15hk3bi1xjyey22bombl)
+    [Landslide Susceptibility Zones](https://mtcdrive.app.box.com/s/6qa52hq69ifk15hk3bi1xjyey22bombl)  
 2. Project all layers to consistent coordinate system
 3. Query all five hazard layers for only relevent geographies
     Ie. Landslide Susceptibility GRIDCODE>=7 (all areas with high landslide susceptibility or greater)
