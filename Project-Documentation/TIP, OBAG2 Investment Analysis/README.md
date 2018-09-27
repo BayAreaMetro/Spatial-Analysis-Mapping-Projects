@@ -17,10 +17,10 @@ test
 - [Results](#results)
 
 ## Data Sources
-2019 Transportation Improvement Program (TIP) project point data
-2019 Transportation Improvement Program (TIP) project line data
-2019 Transportation Improvement Program (TIP) project polygon data
-Priority Development Areas (PDA)
+2019 Transportation Improvement Program (TIP) project point data  
+2019 Transportation Improvement Program (TIP) project line data  
+2019 Transportation Improvement Program (TIP) project polygon data  
+Priority Development Areas (PDA)  
 Regional Counties of the Bay Area  
 
 
