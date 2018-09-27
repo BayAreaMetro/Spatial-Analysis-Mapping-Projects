@@ -42,10 +42,10 @@ Regional Counties of the Bay Area
 ## Analysis Parameters
 
 ## Methodology
-Identity TIP project points, lines, polgons in PDAs
-Calculate proportion of TIP projects within each PDA
-Identity resulting TIP/PDA identity in Bay Area counties
-Calculate proportion of TIP projects within each county
+Identity TIP project points, lines, polgons in PDAs  
+Calculate proportion of TIP projects within each PDA  
+Identity resulting TIP/PDA identity in Bay Area counties  
+Calculate proportion of TIP projects within each county  
 
 
 ## Expected Outcomes
