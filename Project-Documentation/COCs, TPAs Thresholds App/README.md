@@ -44,9 +44,9 @@ Build mapping application for CASA – The Committee to House the Bay Area. Appl
 
 
 ## Analysis Parameters
-pct_minori >= 0.7 And pct_below2 >= 0.3
+
 ## Methodology
-Filter COCs to reflect geographies with (1) 30% or greater than 'Low Income (< 200% Federal Poverty Level - FPL)', and (2) 70% or greater than 'Minority population[s]'
+Filter COCs to reflect geographies with (1) 30% or greater than 'Low Income (< 200% Federal Poverty Level - FPL)', and (2) 70% or greater than 'Minority population[s]' ie. SQL: pct_minori >= 0.7 And pct_below2 >= 0.3
 
 ## Expected Outcomes
 
