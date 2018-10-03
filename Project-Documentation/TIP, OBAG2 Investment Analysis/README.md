@@ -5,7 +5,7 @@ Geospatial procedure and tabular analysis of OBAG and TIP investments in PDAs/TP
 % TIP funds in PDAS (includes OBAG) / outside of PDAs
 $ invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
 
-For example: 
+For example:  
 | PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
 |-----------------------|------------------------------------------------------------|-----------------------|--------|
 | Alameda               |	 	 	                                                 |                       |        |
