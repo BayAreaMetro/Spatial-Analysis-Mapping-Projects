@@ -4,25 +4,25 @@ Geospatial procedure and tabular analysis of OBAG and TIP investments in PDAs/TP
 % OBAG 2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)
 % TIP funds in PDAS (includes OBAG) / outside of PDAs
 $ invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
- 
+
+For example: 
 | PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
 |-----------------------|------------------------------------------------------------|-----------------------|--------|
 | Alameda               |	 	 	                                                 |                       |        |
 | Contra Costa	 	 	|	 	 	                                                 |                       |        | 
 | Etc.	 	 	        |	 	 	                                                 |                       |        |
  
- 
-½ Mile analysis	OBAG $ 100% within, partially within, or adjacent to a ½ mile buffer around PDAs	OBAG $ outside of PDA buffer	Total 
-Alameda	 	 	 
-Contra Costa	 	 	 
-Etc.	 	 	 
- 
- 
-1 mile analysis	OBAG $ 100% within, partially within, or adjacent to a 1 mile buffer around PDAs	OBAG $ outside of PDA buffer	Total 
-Alameda	 	 	 
-Contra Costa	 	 	 
-Etc. 	 	 	 
- 
+| ½ Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+|-----------------------|------------------------------------------------------------|-----------------------|--------|
+| Alameda               |	 	 	                                                 |                       |        |
+| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
+| Etc.	 	 	        |	 	 	                                                 |                       |        |
+
+| 1 mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+|-----------------------|------------------------------------------------------------|-----------------------|--------|
+| Alameda               |	 	 	                                                 |                       |        |
+| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
+| Etc.	 	 	        |	 	 	                                                 |                       |        |
 
 ## TIP, OBAG2 Investment Analysis 
 
