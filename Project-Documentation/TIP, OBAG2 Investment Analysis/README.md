@@ -19,11 +19,11 @@ For example:
 | Contra Costa	 	 	|	 	 	                                                 |                       |        | 
 | Etc.	 	 	        |	 	 	                                                 |                       |        |
 
-| 1 mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+| 1 Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
 |-----------------------|------------------------------------------------------------|-----------------------|--------|
 | Alameda               |	 	 	                                                 |                       |        |
 | Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |
+| Etc.	 	 	        |	 	 	                                                 |                       |        |  
 
 ## TIP, OBAG2 Investment Analysis 
 
