@@ -1,4 +1,4 @@
-#draft
+# Draft
 
 ### Define the Problem Statement
 Build mapping application for CASA – The Committee to House the Bay Area. Application will attempt to explore communities with high poverty and high minority rates. Baseline thresholds are (1) 30% or greater than 'Low Income (< 200% Federal Poverty Level - FPL)', and (2) 70% or greater than 'Minority population[s]'. Threshold "levers" to be incorporated which will have the capability to manipulate the 'poverty' and 'people of color' threshold percentages to gauge inclusion/exclusion of certain communities for potential regulatory exemptions.  
