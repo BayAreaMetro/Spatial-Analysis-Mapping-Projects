@@ -11,7 +11,13 @@ For example:
 | Alameda               |	 	 	                                                 |                       |        |
 | Contra Costa	 	 	|	 	 	                                                 |                       |        | 
 | Etc.	 	 	        |	 	 	                                                 |                       |        |  
- 
+
+| PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+|-----------------------|------------------------------------------------------------|-----------------------|--------|
+| Alameda               |	 	 	                                                 |                       |        |
+| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
+| Etc.	 	 	        |	 	 	                                                 |                       |        |
+
 | ½ Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
 |-----------------------|------------------------------------------------------------|-----------------------|--------|
 | Alameda               |	 	 	                                                 |                       |        |
