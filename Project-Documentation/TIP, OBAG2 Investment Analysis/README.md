@@ -25,8 +25,6 @@ For example:
 | Contra Costa	 	 	|	 	 	                                                 |                       |        | 
 | Etc.	 	 	        |	 	 	                                                 |                       |        |  
 
-## TIP, OBAG2 Investment Analysis 
-
 ### Project Management 
 
 - [Asana Project](https://app.asana.com/0/inbox/797943099119524/835368168562377/835368168562378) 
@@ -41,10 +39,12 @@ For example:
 - [Results](#results)
 
 ## Data Sources
-Transportation Improvement Program (TIP) project point and line data  
-One Bay Area Grant 2 project point and line data     
-Priority Development Areas (PDA)  
-Regional Counties of the Bay Area  
+(Transportation Improvement Program (TIP) project point data)  
+(Transportation Improvement Program (TIP) project line data)  
+(One Bay Area Grant 2 (OBAG2) project point data)   
+(One Bay Area Grant 2 (OBAG2) project line data)     
+(Priority Development Areas (PDA))  
+Regional Counties of the Bay Area)
 
 
 
