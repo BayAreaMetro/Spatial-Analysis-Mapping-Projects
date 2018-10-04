@@ -103,3 +103,5 @@ To explore the methodology, take a look at the [COC Methodology](COCs_2018.Rmd)
 
 ![2018 Communities of Concern Print Map](https://mtcdrive.box.com/shared/static/t6eyif267lxaz5zegdremx1x3xc2d1gx.png)
 
+## Related Works
+[BARC Disadvantaged and Vulnerable Communities](https://mtcdrive.box.com/s/kgljawtrqdwvpv01n47kenmdnq9gvpt6)
