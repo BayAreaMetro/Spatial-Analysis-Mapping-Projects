@@ -69,11 +69,5 @@ Inform the CASA Geography Working Group on Bay Area census tracts that meet crit
 
 ## Results
 
-### Final Tabular Data Summaries
 
-### Intermediate Data 
-
-### Final Data 
-
-### Maps 
 
