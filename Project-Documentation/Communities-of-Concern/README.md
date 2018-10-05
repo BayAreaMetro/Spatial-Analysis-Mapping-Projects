@@ -49,7 +49,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 Definition-census tracts that have a cocentration of BOTH minority AND low-income households, OR that have a concentration of 3 or more of the remaining 6 factors (#3 to #8) but only IF they also have a concentration of low-income households.
 
-### Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions
+### Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitions
 
 [ACS Table Variables and MTC COC Disadvantage Factors Lookup](Data/ACS_Table_Variables_COC_Factors.csv)
 
