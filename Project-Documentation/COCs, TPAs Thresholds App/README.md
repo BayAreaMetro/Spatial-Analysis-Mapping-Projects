@@ -49,9 +49,11 @@ Identify the overlap of census tracts that are within a ¼ mile and a ½ mile ra
     • Severely rent-burdened households percentage ask for values  
     • Disability percentage ask for values  
 *See [MTC Communities of Concern](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Communities-of-Concern) for more info. [MTC Resolution No. 4217-Equity Framework for Plan Bay Area 2040](https://mtc.legistar.com/LegislationDetail.aspx?ID=2555452&GUID=575A6D3F-B8B8-44CF-9F2D-ABEF8B3C9F06&Options=ID%7CText%7C&Search=%22communities+of+concern%22)  
+
 • Configure Analysis capbilities to include:  
     • Buffer  
     • Summarize within  
+
 • Configure Info summary capbilities to include:  
     • Display Panel Settings:  
     • Census tracts, Percent minorities, Percent low-income  
