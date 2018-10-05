@@ -87,9 +87,9 @@ Select by location the OBAG point projects which intersect the PDAs
 Flag the resulting projects  
 Select by location the OBAG line projects which intersect the PDAs  
 Flag the resulting projects  
-Select by location the TIP point projects which intersect the PDAs
+Select by location the TIP point projects which intersect the PDAs  
 Flag the resulting projects  
-Select by location the TIP line projects which intersect the PDAs
+Select by location the TIP line projects which intersect the PDAs  
 Flag the resulting projects  
 
 
