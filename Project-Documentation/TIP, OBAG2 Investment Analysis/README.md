@@ -51,7 +51,7 @@ The final deliverable will be a table including summaries of TIP & OBAG projects
 
 ## Methodology
 Gather all data layers [see data sources](#data-sources) into GIS  
-Project all layers to NAD 83 Zone 10N
+Project all layers to NAD 83 Zone 10N  
 Delete all columns from all data layers expect the following:  
 
     Transportation Improvement Program (TIP) project point and line data  
