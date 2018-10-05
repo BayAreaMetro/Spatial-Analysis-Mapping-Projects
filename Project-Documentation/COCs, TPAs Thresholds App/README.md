@@ -36,8 +36,9 @@ Identify the overlap of census tracts that are within a ¼ mile and a ½ mile ra
 ## Methodology
 • Create new AGOL Web map containing the Feature layers [Communities of Concern* (2018) with American Community Survey Data (2012-2016)](https://mtc.maps.arcgis.com/home/item.html?id=1501fe1552414d569ca747e0e23628ff) and [Transit Priority Areas (2017)](https://mtc.maps.arcgis.com/home/item.html?id=d97b4f72543a40b2b85d59ac085e01a0) and save as a web map to be used in a ArcGIS Web AppBuilder.  
 • Create new mapping application with Dashboard theme and oragnaization shared style.  
-• Choose the web map containing the COCs and TPAs.
-• Add widgets. Main capabilities include: Filter (include create custom filter option), Analysis, and Info summary. Secondary funcationality include: Attribute table, Full screen, Header, Home, My location, Scalebar, Address search, Zoom slider, Legend, and Layer list. 
+• Choose the web map containing the COCs and TPAs.  
+• Add widgets. Main capabilities include: Filter (include create custom filter option), Analysis, and Info summary. Secondary funcationality include: Attribute table, Full screen, Header, Home, My location, Scalebar, Address search, Zoom slider, Legend, and Layer list.  
+
 • Configure Filter capbilities to include 8 expressions:  
     • Minorities percentage ask for values  
     • Low-income percentage ask for values  
