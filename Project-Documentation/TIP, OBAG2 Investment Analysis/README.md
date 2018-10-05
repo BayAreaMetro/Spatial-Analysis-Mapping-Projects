@@ -61,7 +61,7 @@ Delete all columns from all data layers expect the following:
         Project Name
         Total Cost
         TIP cost 2019
-        Calculate geometry as Length in miles (not point; only lines)
+        Calculate geometry as Length in miles (not point; only lines) and round to 3 significant digits  
 
     One Bay Area Grant 2 (OBAG2) project point and line data  
         Object ID
@@ -70,14 +70,27 @@ Delete all columns from all data layers expect the following:
         Project Name
         Total Cost
         TIP cost 2019
-        Calculate geometry as Length in miles  (not point; only lines)
+        Calculate geometry as Length in miles (not point; only lines) and round to 3 significant digits  
 
     Priority Development Areas (PDA)  
-        
+        Object ID
+        Shape
+        joinkey
+        Name
+        Calculate geometry as area in sqmi and round to 3 significant digits  
 
-    Regional Counties of the Bay Area
+    Regional Counties of the Bay Area  
+        Name
+        Calculate geometry as area in sqmi and round to 3 significant digits
 
-
+Select by location the OBAG point projects which intersect the PDAs  
+Flag the resulting projects  
+Select by location the OBAG line projects which intersect the PDAs  
+Flag the resulting projects  
+Select by location the TIP point projects which intersect the PDAs
+Flag the resulting projects  
+Select by location the TIP line projects which intersect the PDAs
+Flag the resulting projects  
 
 
 Identity TIP project points, lines, polgons in PDAs  
