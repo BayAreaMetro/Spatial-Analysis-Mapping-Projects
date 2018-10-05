@@ -63,11 +63,14 @@ Identify the overlap of census tracts that are within a ¼ mile and a ½ mile ra
 Inform the CASA Geography Working Group on Bay Area census tracts that meet criteria identified by the working group for “sensitive communities" to inform the group’s decision on a finalized map.  
 
 ### Maps  
-[Sensitive Communities Threshold Analysis](https://mtc.maps.arcgis.com/apps/webappviewer/index.html?id=ade9682451cd49b0ba988abc38dbecb9)
+[Basemap for Sensitive Communities Threshold Analysis mapping application](https://mtc.maps.arcgis.com/home/item.html?id=db39e4058a8543a88ca5170b91481222)  
+
 
 ### Data Summaries   
 
-## Results
+## Results  
+[Sensitive Communities Threshold Analysis](https://mtc.maps.arcgis.com/apps/webappviewer/index.html?id=ade9682451cd49b0ba988abc38dbecb9)  
+
 
 
 
