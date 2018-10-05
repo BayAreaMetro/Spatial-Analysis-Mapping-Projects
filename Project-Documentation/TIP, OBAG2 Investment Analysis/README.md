@@ -50,7 +50,33 @@ For example:
 The final deliverable will be a table including summaries of TIP & OBAG projects by PDA and by County. To determine the PDA designation, the project is deemed in/out of a PDAs based solely on if the project touches the PDA (GIS operation intersect/identity). For instance, if a TIP/OBAG project touches more than one PDA (a road corridor project cross multiple PDA geographies) then the project will be associated with as many PDAs as the project 'touches'; thus, the proportionality of the line segment must be considered in order to determine its proportion in the PDA. Careful geometric calculations must be made prior to performing any spatial analyses so the total length/area (area in terms of the 1/2- & 1-mile buffers on the projects) of a project can be split proportionally to determine the PDA's respective grant size amount, TIP amount, and total cost.   
 
 ## Methodology
-Gather all data layers into GIS [see data sources](#data-sources)
+Gather all data layers [see data sources](#data-sources) into GIS  
+Project all layers to NAD 83 Zone 10N
+Delete all columns from all data layers expect the following:  
+
+    Transportation Improvement Program (TIP) project point and line data  
+        Object ID
+        Shape
+        TIP ID
+        Project Name
+        Total Cost
+        TIP cost 2019
+        Calculate geometry as Length in miles (not point; only lines)
+
+    One Bay Area Grant 2 (OBAG2) project point and line data  
+        Object ID
+        Shape
+        TIP ID
+        Project Name
+        Total Cost
+        TIP cost 2019
+        Calculate geometry as Length in miles  (not point; only lines)
+
+    Priority Development Areas (PDA)  
+        
+
+    Regional Counties of the Bay Area
+
 
 
 
