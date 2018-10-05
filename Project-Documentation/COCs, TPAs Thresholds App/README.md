@@ -10,7 +10,6 @@ The Geography Working Group of CASA is requesting mapping support from MTC to id
 
 - [Asana Project](https://app.asana.com/0/inbox/797943099119524/840113458715896/840113458715905) 
 - [Box](https://mtcdrive.box.com/s/mqgzpdqlfrofzdzkcmfx25b5pd6wx28p)
-- []
 
 ### Contents 
 
