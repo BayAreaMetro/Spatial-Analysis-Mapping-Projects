@@ -101,7 +101,9 @@ Identity TIP project points and lines with Bay Area Counties  (relationships unc
 Export to tabular format all resulting identity data layers  
 (NOTE: For now, keep TIP & OBAG points and lines datasets seperated; should have four individual tables)  
 Calculate proportions (resulting identity line shape length (mi)/Total length of line project (mi)) of TIP & OBAG line projects within each county  
-  
+Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multipling the portion by the TIP/OBAG cost
+Confirm same number and order of column existing in TIP/OBAG point and line tables then marry point and lines to result in only two tables  
+Sort the two tables by County then by ...
 
 
 ## Expected Outcomes
