@@ -39,32 +39,21 @@ For example:
 - [Results](#results)
 
 ## Data Sources
-(Transportation Improvement Program (TIP) project point data)  
-(Transportation Improvement Program (TIP) project line data)  
-(One Bay Area Grant 2 (OBAG2) project point data)   
-(One Bay Area Grant 2 (OBAG2) project line data)     
-(Priority Development Areas (PDA))  
-Regional Counties of the Bay Area)
-
-
-
-- [AGOL Feature Service]
-- [AGOL Map Layer]
-
-
- 
-- [AGOL Feature Service]
-- [AGOL Map Layer]
-
-
-
-- [AGOL Feature Service]
-- [AGOL Map Layer]
-
+[Transportation Improvement Program (TIP) project point data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/TIP_2019_PDA_Investment_Analysis_Points_WGS84/FeatureServer)  
+[Transportation Improvement Program (TIP) project line data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/TIP_2019_PDA_Investment_Analysis_Lines_WGS84/FeatureServer)  
+[One Bay Area Grant 2 (OBAG2) project point data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/OBAG_PDA_Investment_Analysis_Points_WGS84/FeatureServer)  
+[One Bay Area Grant 2 (OBAG2) project line data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/OBAG_PDA_Investment_Analysis_Lines_WGS84/FeatureServer)  
+[Priority Development Areas (PDA)](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/priority_development_areas_current/FeatureServer)  
+[Regional Counties of the Bay Area](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/county_region/FeatureServer)  
 
 ## Analysis Parameters
+The final deliverable will be a table including summaries of TIP & OBAG projects by PDA and County. To determine the PDA designation, the project is deemed in/out of a PDAs based soley on if the project touches the PDA (GIS operation intersect/indentity). For instance, if a TIP/OBAG project touches more than one PDA (a road corridor project cross muliple PDA geographies) then project will be associated with as many PDAs as the project 'touches'; thus the proportionality of the line segment must be taken into account in order to determine of the total cost amount for the project how much each PDA is expected to see invested. Careful geometric calculations must be made prior to performing any spatial analyses so the total length/area (area in terms of the 1/2 & 1 mile buffers on the projects) of a project can be split proportionally to deterine the PDA respective grant size amount, TIP amount, and total cost.    
 
 ## Methodology
+Gather all data layers into GIS [see data sources](#data-sources)
+
+
+
 Identity TIP project points, lines, polgons in PDAs  
 Calculate proportion of TIP projects within each PDA  
 Identity resulting TIP/PDA identity in Bay Area counties  
