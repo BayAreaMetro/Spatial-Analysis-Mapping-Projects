@@ -84,19 +84,24 @@ Delete all columns from all data layers expect the following:
         Calculate geometry as area in sqmi and round to 3 significant digits
 
 Select by location the OBAG point projects which intersect the PDAs  
-Flag the resulting projects  
+    Flag the resulting projects  
 Select by location the OBAG line projects which intersect the PDAs  
-Flag the resulting projects  
+    Flag the resulting projects  
 Select by location the TIP point projects which intersect the PDAs  
-Flag the resulting projects  
+    Flag the resulting projects  
 Select by location the TIP line projects which intersect the PDAs  
-Flag the resulting projects  
+    Flag the resulting projects  
 
-
-Identity TIP project points, lines, polgons in PDAs  
-Calculate proportion of TIP projects within each PDA  
-Identity resulting TIP/PDA identity in Bay Area counties  
-Calculate proportion of TIP projects within each county  
+Identity OBAG project points and lines with Bay Area Counties (relationships unchecked)  
+    Delete resulting columns like 'FID%'    
+    Calculate geometry (for lines only) as length in miles and round to 3 signficant digits  
+Identity TIP project points and lines with Bay Area Counties  (relationships unchecked)  
+    Delete resulting columns like 'FID%'  
+    Calculate geometry (for lines only) as length in miles and round to 3 signficant digits   
+Export to tabular format all resulting identity data layers  
+(NOTE: For now, keep TIP & OBAG points and lines datasets seperated; should have four individual tables)  
+Calculate proportions (resulting identity line shape length (mi)/Total length of line project (mi)) of TIP & OBAG line projects within each county  
+  
 
 
 ## Expected Outcomes
