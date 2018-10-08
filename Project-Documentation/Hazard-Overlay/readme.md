@@ -57,10 +57,11 @@ Tabular Analysis:
 
 ## Expected Outcomes
 
-Mapping application  
+Mapping application  (add links)
 
-Table of Bay Area Parcels with 5 Hazard inclusion/exclusion flags   
+Table of Bay Area Parcels with 5 Hazard inclusion/exclusion flags   (add links)
 
 ## Results
-
+add screen shot with link to application
+add screen shot of table with link to authoritative dataset
 
