@@ -62,6 +62,7 @@ Tabular Analysis:
 Table of Bay Area Parcels with 5 Hazard inclusion/exclusion flags   (add links)
 
 ## Results
-![Hazard Mapping Application Screenshot](https://mtcdrive.box.com/s/an2j59h9zj763j7k9tp2gjkuwv3nypgv) 
+![Hazard Mapping Application Screenshot](https://mtcdrive.box.com/s/an2j59h9zj763j7k9tp2gjkuwv3nypgv.jpg)  
+
 add screen shot of table with link to authoritative dataset
 
