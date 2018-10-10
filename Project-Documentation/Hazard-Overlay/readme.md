@@ -57,11 +57,11 @@ Tabular Analysis:
 
 ## Expected Outcomes
 
-Mapping application  (add links)
+[Hazard Mapping Application](http://hazard-env.p7guw9p8ma.us-west-2.elasticbeanstalk.com/)  
 
 Table of Bay Area Parcels with 5 Hazard inclusion/exclusion flags   (add links)
 
 ## Results
-add screen shot with link to application  
+add screen shot with link to application   
 add screen shot of table with link to authoritative dataset
 
