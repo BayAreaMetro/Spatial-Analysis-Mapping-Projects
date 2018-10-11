@@ -26,17 +26,17 @@ Directionality must be correctly reflected in polyline vertices sequence (becaus
 ## Methodology applied to solve problem  
 
 Overlapping Congestion Segments  
-Inventory the unique congested segments records  
-Flag the overlapping segments (which look like duplicate records) where multiple TMC segments represent a single congestion segment  
-Merge/Group the like TMC segments so only one record represents one congestion segment  
+1. Inventory the unique congested segments records  
+2. Flag the overlapping segments (which look like duplicate records) where multiple TMC segments represent a single congestion segment  
+3. Merge/Group the like TMC segments so only one record represents one congestion segment  
 153 congestion segments  
 
 Flipped Congestion Segments  
-Inventory the segments that reflect incorrect when a CSS offset property is applied via CARTO  
-Isolate the incorrectly reflected segments  
-Edit -> Vertices  
-Reverse Direction  
-Save AND Save Edits once all segments have been flipped  
+1. Inventory the segments that reflect incorrect when a CSS offset property is applied via CARTO  
+2. Isolate the incorrectly reflected segments  
+3. Edit -> Vertices  
+4. Reverse Direction  
+5. Save AND Save Edits once all segments have been flipped  
 
 ## Expected Outcomes
 
