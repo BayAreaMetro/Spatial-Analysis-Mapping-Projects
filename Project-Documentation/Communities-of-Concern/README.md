@@ -11,7 +11,7 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
 	- [MTC Communities of Concern Framework](#mtc-communities-of-concern-framework)
-	- [Summary of MTC COC Disadvantage Factors & Disadvantage Facto Definitions](#summary-of-mtc-coc-disadvantage-factors--disadvantage-factor-definitnions)
+	- [Summary of MTC COC Disadvantage Factors & Disadvantage Facto Definitions](#summary-of-mtc-coc-disadvantage-factors--disadvantage-factor-definitions)
 	- [Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations](#calculate-mtc-coc-disadvantage-factor-population-from-acs-variable-populations)
 - [Methdology](#methodology)
 - [Expected Outcomes](#expected-outcomes)
@@ -49,7 +49,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 Definition-census tracts that have a cocentration of BOTH minority AND low-income households, OR that have a concentration of 3 or more of the remaining 6 factors (#3 to #8) but only IF they also have a concentration of low-income households.
 
-### Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitnions
+### Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitions
 
 [ACS Table Variables and MTC COC Disadvantage Factors Lookup](Data/ACS_Table_Variables_COC_Factors.csv)
 
@@ -103,3 +103,5 @@ To explore the methodology, take a look at the [COC Methodology](COCs_2018.Rmd)
 
 ![2018 Communities of Concern Print Map](https://mtcdrive.box.com/shared/static/t6eyif267lxaz5zegdremx1x3xc2d1gx.png)
 
+## Related Works
+[BARC Disadvantaged and Vulnerable Communities](https://mtcdrive.box.com/s/kgljawtrqdwvpv01n47kenmdnq9gvpt6)
