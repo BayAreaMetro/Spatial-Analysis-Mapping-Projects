@@ -1,7 +1,11 @@
 # Documentation
 Geospatial procedure and tabular analysis of TIP & OBAG2 INSIDE PDAs/TPAs investments vs. OUTSIDE PDAs/TPAs investments.
 
-Percentage of OBAG2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)
+### Define the Problem Statement  
+
+Where are the majority of One Bay Area Grant cycle 2 (OBAG2) Funds being invested?
+Percentage of OBAG2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)  
+Where are the majority of Transportation Improvment Program (TIP) Funds being invested?  
 Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs
 Funds invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
 
