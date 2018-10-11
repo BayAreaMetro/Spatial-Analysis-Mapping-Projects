@@ -1,5 +1,3 @@
-**Draft Status: (Draft)**
-
 ## Define the Problem Statement
 The purpose of this project is to build an application that allows users to search for an address, and receive feedback on whether that address is impacted by certain geological hazards.
 
@@ -56,13 +54,10 @@ Tabular Analysis:
 
 
 ## Expected Outcomes
-
-[Hazard Mapping Application](http://hazard-env.p7guw9p8ma.us-west-2.elasticbeanstalk.com/)  
-
-Table of Bay Area Parcels with 5 Hazard inclusion/exclusion flags   (add links)
+Mapping application which determines the inclusion/exclusion of 5 particular natural hazard areas in the 9-county Bay Area region based on the location of a user's defined area of interest.
+A Parcel Hazard census of the 9-county Bay Area region as formatted like a 'look-up table'
 
 ## Results
-![Hazard Mapping Application Screenshot](https://mtcdrive.box.com/s/an2j59h9zj763j7k9tp2gjkuwv3nypgv.jpg)  
+[Hazard Mapping Application](http://hazard-env.p7guw9p8ma.us-west-2.elasticbeanstalk.com/)  
 
-add screen shot of table with link to authoritative dataset
 
