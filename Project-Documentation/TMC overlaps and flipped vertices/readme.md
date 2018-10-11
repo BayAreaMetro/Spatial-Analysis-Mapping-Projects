@@ -19,13 +19,28 @@ Below are two screenshots, one with the line and no offset, and one with the lin
 [Screenshot 2](https://mtcdrive.box.com/s/defei7gzzej9l5rorkzj70uucxd0l16j)  
 
 ## Analysis Parameters  
+The GEOJSON file was created by a script grabbing the TMC congestion information form both INRIX and TOMTOM data, thus retaining the integrity of that data is important.  
+There should only be one record per project(/rank of congested segments)  
+Directionality must be correctly reflected in polyline vertices sequence (because a CSS offset property is used in CARTO for Vital Signs reporting)  
 
-Only one record per project  
-Directionality must be correctly reflected in polyline vertices sequence (bc a CSS offset property is used in CARTO for Vital Signs reporting)
+## Methodology applied to solve problem  
 
-## Methodology applied to solve problem
+Overlapping Congestion Segments  
+Inventory the unique congested segments records  
+Flag the overlapping segments (which look like duplicate records) where multiple TMC segments represent a single congestion segment  
+Merge/Group the like TMC segments so only one record represents one congestion segment  
+153 congestion segments  
+
+Flipped Congestion Segments  
+Inventory the segments that reflect incorrect when a CSS offset property is applied via CARTO  
+Isolate the incorrectly reflected segments  
+Edit -> Vertices  
+Reverse Direction  
+Save AND Save Edits once all segments have been flipped  
 
 ## Expected Outcomes
 
-## Results
+A GEOJSON formatted dataset of only 153 congestion segments (records) with appropriate directional-based vertices.  
 
+## Results
+[2016 Time Spent in Highway Congestion](http://www.vitalsigns.mtc.ca.gov/time-spent-congestion#chart-1)
