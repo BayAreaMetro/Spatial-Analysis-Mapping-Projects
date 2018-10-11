@@ -56,7 +56,7 @@ Identify the overlap of census tracts that are within a ¼ mile and a ½ mile ra
     • Display Panel Settings:  
     • Census tracts, Percent minorities, Percent low-income  
 
-*NOTE*: In order to operationalize the original vision to include a dynamic, user-defined buffer based on resulting geographies of user-defined thresholds, geoprocessing packages/services need to be leveraged. ArcGIS Server hosts geoprocessing tools which can be implemented through AGOL. The procedures for implementing this vision are being evaluated currently only because GIS @ MTC phasing out ArcGIS Server-related hosting. More information regarding this ArcGIS Server capability available upon request
+*NOTE*: In order to operationalize the original vision to include a dynamic, user-defined buffer based on resulting geographies of user-defined thresholds, geoprocessing packages/services need to be leveraged. ArcGIS Server host geoprocessing tools which can be implemented through AGOL. The procedures for implementing this vision are being evaluated currently only because GIS @ MTC phasing out ArcGIS Server-related hosting. More information regarding this ArcGIS Server capability available upon request
 
 ## Expected Outcomes  
 
