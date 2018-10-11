@@ -22,7 +22,8 @@ Funds invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actual
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
 
-## Data Sources
+## Data Sources  
+
 [Transportation Improvement Program (TIP) project point data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/TIP_2019_PDA_Investment_Analysis_Points_WGS84/FeatureServer)  
 [Transportation Improvement Program (TIP) project line data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/TIP_2019_PDA_Investment_Analysis_Lines_WGS84/FeatureServer)  
 [One Bay Area Grant 2 (OBAG2) project point data](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/OBAG_PDA_Investment_Analysis_Points_WGS84/FeatureServer)  
@@ -30,10 +31,12 @@ Funds invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actual
 [Priority Development Areas (PDA)](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/priority_development_areas_current/FeatureServer)  
 [Regional Counties of the Bay Area](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/county_region/FeatureServer)  
 
-## Analysis Parameters
+## Analysis Parameters  
+
 The final deliverable will be a table including summaries of TIP & OBAG projects by PDA and by County. To determine the PDA designation, the project is deemed in/out of a PDAs based solely on if the project touches the PDA (GIS operation intersect/identity). For instance, if a TIP/OBAG project touches more than one PDA (a road corridor project cross multiple PDA geographies) then the project will be associated with as many PDAs as the project 'touches'; thus, the proportionality of the line segment must be considered in order to determine its proportion in the PDA. Careful geometric calculations must be made prior to performing any spatial analyses so the total length/area (area in terms of the 1/2- & 1-mile buffers on the projects) of a project can be split proportionally to determine the PDA's respective grant size amount, TIP amount, and total cost.   
 
-## Methodology
+## Methodology  
+
 Gather all data layers [see data sources](#data-sources) into GIS  
 Project all layers to NAD 83 Zone 10N  
 Delete all columns from all data layers expect the following:  
@@ -114,7 +117,8 @@ Percent error calculated then refined regional total for original funding amount
 
 ### Data Summaries   
 
-## Results
+## Results  
+
 Sample Output:
 
 | PDAs only - No Buffer	| OBAG $ 100% w/in, partially w/in, or adjacent to a PDA | OBAG $ outside of PDA |	Total        |
@@ -131,7 +135,8 @@ Sample Output:
 | Regional total        | 8,259,123,478	 	                                     | 1,708,879,005         | 9,968,002,483 |
 
 
-### Final Tabular Data Summaries
+### Final Tabular Data Summaries  
+
 [Percentage of OBAG2 funds in PDAs / outside of PDAs](https://mtcdrive.box.com/s/jwooy7ay6wqlot79n5d9fm0ew0etm6j2)  
 [Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs](https://mtcdrive.box.com/s/nj110buzt6b85nrtdz66nd2niwgfq9v8)
 
