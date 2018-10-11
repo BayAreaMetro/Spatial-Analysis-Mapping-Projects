@@ -37,9 +37,9 @@ The final deliverable will be a table including summaries of TIP & OBAG projects
 
 ## Methodology  
 
-Gather all data layers [see data sources](#data-sources) into GIS  
-Project all layers to NAD 83 Zone 10N  
-Delete all columns from all data layers expect the following:  
+1. Gather all data layers [see data sources](#data-sources) into GIS  
+2. Project all layers to NAD 83 Zone 10N  
+3. Delete all columns from all data layers expect the following:  
 
     Transportation Improvement Program (TIP) project point and line data  
         Object ID
@@ -70,29 +70,29 @@ Delete all columns from all data layers expect the following:
         Name
         Calculate geometry as area in sqmi and round to 3 significant digits
 
-Select by location the OBAG point projects which intersect the PDAs  
+4. Select by location the OBAG point projects which intersect the PDAs  
     Flag the resulting projects  
-Select by location the OBAG line projects which intersect the PDAs  
+5. Select by location the OBAG line projects which intersect the PDAs  
     Flag the resulting projects  
-Select by location the TIP point projects which intersect the PDAs  
+6. Select by location the TIP point projects which intersect the PDAs  
     Flag the resulting projects  
-Select by location the TIP line projects which intersect the PDAs  
+7. Select by location the TIP line projects which intersect the PDAs  
     Flag the resulting projects  
 
-Identity OBAG project points and lines with Bay Area Counties (relationships unchecked)  
+8. Identity OBAG project points and lines with Bay Area Counties (relationships unchecked)  
     Delete resulting columns like 'FID%'    
     Calculate geometry (for lines only) as length in miles and round to 3 significant digits  
-Identity TIP project points and lines with Bay Area Counties (relationships unchecked)  
+9. Identity TIP project points and lines with Bay Area Counties (relationships unchecked)  
     Delete resulting columns like 'FID%'  
     Calculate geometry (for lines only) as length in miles and round to 3 significant digits   
-Export to tabular format all resulting identity data layers  
+10. Export to tabular format all resulting identity data layers  
 (NOTE: For now, keep TIP & OBAG points and lines datasets separated; should have four individual tables)  
-Calculate proportions (resulting identity line shape length (mi)/Total length of line project (mi)) of TIP & OBAG line projects within each county  
-Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multiplying the portion by the TIP/OBAG cost  
-Confirm same number and order of columns existing in TIP/OBAG point and line tables then marry point and lines to result in only two tables  
-Sort the two tables by County then by (In/Out flags)  
-Excel-based subtotal function applied to both counties then in/out  
-Percent error calculated then refined regional total for original funding amount equivalencies  
+11. Calculate proportions (resulting identity line shape length (mi)/Total length of line project (mi)) of TIP & OBAG line projects within each county  
+12. Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multiplying the portion by the TIP/OBAG cost  
+13. Confirm same number and order of columns existing in TIP/OBAG point and line tables then marry point and lines to result in only two tables  
+14. Sort the two tables by County then by (In/Out flags)  
+15. Excel-based subtotal function applied to both counties then in/out  
+16. Percent error calculated then refined regional total for original funding amount equivalencies  
 
 ## Expected Outcomes
 
@@ -114,8 +114,6 @@ Percent error calculated then refined regional total for original funding amount
 | Contra Costa	 	 	|	 	 	                                                 |                       |        | 
 | Etc.	 	 	        |	 	 	                                                 |                       |        |  
 
-
-### Data Summaries   
 
 ## Results  
 
