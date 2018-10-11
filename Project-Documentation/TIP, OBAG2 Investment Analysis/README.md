@@ -74,18 +74,18 @@ Select by location the TIP line projects which intersect the PDAs
 
 Identity OBAG project points and lines with Bay Area Counties (relationships unchecked)  
     Delete resulting columns like 'FID%'    
-    Calculate geometry (for lines only) as length in miles and round to 3 signficant digits  
-Identity TIP project points and lines with Bay Area Counties  (relationships unchecked)  
+    Calculate geometry (for lines only) as length in miles and round to 3 significant digits  
+Identity TIP project points and lines with Bay Area Counties (relationships unchecked)  
     Delete resulting columns like 'FID%'  
-    Calculate geometry (for lines only) as length in miles and round to 3 signficant digits   
+    Calculate geometry (for lines only) as length in miles and round to 3 significant digits   
 Export to tabular format all resulting identity data layers  
-(NOTE: For now, keep TIP & OBAG points and lines datasets seperated; should have four individual tables)  
+(NOTE: For now, keep TIP & OBAG points and lines datasets separated; should have four individual tables)  
 Calculate proportions (resulting identity line shape length (mi)/Total length of line project (mi)) of TIP & OBAG line projects within each county  
-Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multipling the portion by the TIP/OBAG cost  
+Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multiplying the portion by the TIP/OBAG cost  
 Confirm same number and order of columns existing in TIP/OBAG point and line tables then marry point and lines to result in only two tables  
 Sort the two tables by County then by (In/Out flags)  
-
-
+Excel-based subtotal function applied to both counties then in/out  
+Percent error calculated then refined regional total for original funding amount equivalencies  
 
 ## Expected Outcomes
 
