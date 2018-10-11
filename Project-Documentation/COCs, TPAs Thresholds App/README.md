@@ -37,14 +37,14 @@ Identify the overlap of census tracts that are within a ¼ mile and a ½ mile ra
 ## Methodology  
 
 • Create new AGOL Web map containing the Feature layers [Communities of Concern* (2018) with American Community Survey Data (2012-2016)](https://mtc.maps.arcgis.com/home/item.html?id=1501fe1552414d569ca747e0e23628ff) and [Transit Priority Areas (2017)](https://mtc.maps.arcgis.com/home/item.html?id=d97b4f72543a40b2b85d59ac085e01a0) and save as a web map to be used in a ArcGIS Web AppBuilder.  
-• Create new mapping application with Dashboard theme and oragnaization shared style.  
+• Create new mapping application with Dashboard theme and organization shared style.  
 • Choose the web map containing the COCs and TPAs.  
-• Add widgets. Main capabilities include: Filter (include create custom filter option), Analysis, and Info summary. Secondary funcationality include: Attribute table, Full screen, Header, Home, My location, Scalebar, Address search, Zoom slider, Legend, and Layer list.  
+• Add widgets. Main capabilities include: Filter (include create custom filter option), Analysis, and Info summary. Secondary functionality include: Attribute table, Full screen, Header, Home, My location, Scalebar, Address search, Zoom slider, Legend, and Layer list.  
 
-• Configure Filter capbilities to include 8 expressions:  
+• Configure Filter capabilities to include 8 expressions:  
     • Minorities percentage ask for values  
     • Low-income percentage ask for values  
-    • Limitied English Proficentcy percentage ask for values  
+    • Limited English Proficiency percentage ask for values  
     • Zero-vehicle households percentage ask for values  
     • Over 75 percentage ask for values  
     • Single-parent family percentage ask for values  
@@ -52,14 +52,11 @@ Identify the overlap of census tracts that are within a ¼ mile and a ½ mile ra
     • Disability percentage ask for values  
 *See [MTC Communities of Concern](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Communities-of-Concern) for more info. [MTC Resolution No. 4217-Equity Framework for Plan Bay Area 2040](https://mtc.legistar.com/LegislationDetail.aspx?ID=2555452&GUID=575A6D3F-B8B8-44CF-9F2D-ABEF8B3C9F06&Options=ID%7CText%7C&Search=%22communities+of+concern%22)  
 
-
-• Configure Analysis capbilities to include:  
-    • Buffer  
-    • Summarize within  
-
-• Configure Info summary capbilities to include:  
+• Configure Info summary capabilities to include:  
     • Display Panel Settings:  
     • Census tracts, Percent minorities, Percent low-income  
+
+*NOTE*: In order to operationalize the original vision to include a dynamic, user-defined buffer based on resulting geographies of user-defined thresholds, geoprocessing packages/services needs to be leveraged. ArcGIS Server hosts this geoprocessing tools which can be implemented through AGOL. The procedures for implementing this vision are being evaluated currently only because GIS @ MTC phasing out ArcGIS Server-related hosting. More information regarding this ArcGIS Server capability available upon request
 
 ## Expected Outcomes  
 
