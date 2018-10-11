@@ -29,7 +29,7 @@ Overlapping Congestion Segments
 1. Inventory the unique congested segments records  
 2. Flag the overlapping segments (which look like duplicate records) where multiple TMC segments represent a single congestion segment  
 3. Merge/Group the like TMC segments so only one record represents one congestion segment  
-153 congestion segments  
+QC: 153 congestion segments  
 
 Flipped Congestion Segments  
 1. Inventory the segments that reflect incorrect when a CSS offset property is applied via CARTO  
