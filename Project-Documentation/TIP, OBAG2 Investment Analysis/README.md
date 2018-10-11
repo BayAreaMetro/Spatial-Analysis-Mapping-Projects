@@ -5,26 +5,6 @@ Percentage of OBAG2 funds in PDAs / outside of PDAs (using a distance buffer tha
 Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs
 Funds invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
 
-For example:  
-
-| PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
-|-----------------------|------------------------------------------------------------|-----------------------|--------|
-| Alameda               |	 	 	                                                 |                       |        |
-| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |
-
-| ½ Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
-|-----------------------|------------------------------------------------------------|-----------------------|--------|
-| Alameda               |	 	 	                                                 |                       |        |
-| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |
-
-| 1 Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
-|-----------------------|------------------------------------------------------------|-----------------------|--------|
-| Alameda               |	 	 	                                                 |                       |        |
-| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |  
-
 ### Project Management 
 
 - [Asana Project](https://app.asana.com/0/inbox/797943099119524/835368168562377/835368168562378) 
@@ -109,18 +89,46 @@ Sort the two tables by County then by (In/Out flags)
 
 ## Expected Outcomes
 
-### Maps  
+| PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+|-----------------------|------------------------------------------------------------|-----------------------|--------|
+| Alameda               |	 	 	                                                 |                       |        |
+| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
+| Etc.	 	 	        |	 	 	                                                 |                       |        |
+
+| ½ Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+|-----------------------|------------------------------------------------------------|-----------------------|--------|
+| Alameda               |	 	 	                                                 |                       |        |
+| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
+| Etc.	 	 	        |	 	 	                                                 |                       |        |
+
+| 1 Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
+|-----------------------|------------------------------------------------------------|-----------------------|--------|
+| Alameda               |	 	 	                                                 |                       |        |
+| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
+| Etc.	 	 	        |	 	 	                                                 |                       |        |  
+
 
 ### Data Summaries   
 
 ## Results
+Sample Output:
+
+| PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total        |
+|-----------------------|------------------------------------------------------------|-----------------------|---------------|
+| Alameda               | 1,936,948,516	 	 	                                     | 555,059,850           | 2,492,008,365 |
+| Contra Costa	 	 	| 906,955,386	 	 	                                     | 255,451,368           | 1,162,406,753 | 
+| Marin	 	 	        | 47,079,418	 	 	                                     | 67,145,927            | 114,225,345   |
+| Napa                  | 9,771,649 	 	                                         | 42,723,437            | 52,495,086    |
+| San Francisco	 	 	| 1,104,663,376 	 	                                     | 327,447,740           | 1,432,111,116 | 
+| San Mateo	 	        | 1,039,493,456	 	                                         | 152,854,199           | 1,192,347,655 |
+| Santa Clara           | 3,082,045,726 	 	                                     | 175,705,371           | 3,257,751,096 |
+| Solano    	 	 	| 16,227,700 	 	                                         | 120,791,034           | 137,018,734   | 
+| Sonoma 	 	        | 115,938,253	 	                                         | 11,700,080            | 127,638,332   |
+| Regional total        | 8,259,123,478	 	                                         | 1,708,879,005         | 9,968,002,483 |
+
 
 ### Final Tabular Data Summaries
+[Percentage of OBAG2 funds in PDAs / outside of PDAs](https://mtcdrive.box.com/s/jwooy7ay6wqlot79n5d9fm0ew0etm6j2)
+[Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs](https://mtcdrive.box.com/s/nj110buzt6b85nrtdz66nd2niwgfq9v8)
 
-### Intermediate Data 
-
-### Final Data 
-
-
-### Maps 
 
