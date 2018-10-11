@@ -1,4 +1,4 @@
-# Draft Documentation
+# Documentation
 Geospatial procedure and tabular analysis of TIP & OBAG2 INSIDE PDAs/TPAs investments vs. OUTSIDE PDAs/TPAs investments.
 
 Percentage of OBAG2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)
