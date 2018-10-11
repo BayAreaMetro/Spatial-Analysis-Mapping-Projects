@@ -14,7 +14,7 @@ Below are two screenshots, one with the line and no offset, and one with the lin
 
 [MTC Carto tool](https://mtc.carto.com/tables/t7_merge_17/public/map)    
 [Congested Segments* GEOJSON](https://mtcdrive.box.com/s/bwurv8cxu740szbbhs0cmj0y0y6s42np)  
-[*Based on previous request "Congested Segments 2017](https://github.com/BayAreaMetro/Data-Analysis-Projects/tree/master/congested_segments/2017)  
+[*Based on previous request "Congested Segments 2017"](https://github.com/BayAreaMetro/Data-Analysis-Projects/tree/master/congested_segments/2017)  
 [Screenshot 1](https://mtcdrive.box.com/s/hil3u7yis1kdu4aek3xpgxdu071kw0ze)  
 [Screenshot 2](https://mtcdrive.box.com/s/defei7gzzej9l5rorkzj70uucxd0l16j)  
 
