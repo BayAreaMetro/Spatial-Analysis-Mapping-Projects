@@ -1,9 +1,9 @@
 # Draft Documentation
-Geospatial procedure and tabular analysis of OBAG and TIP investments in PDAs/TPAs vs. investments outside of those areas.
+Geospatial procedure and tabular analysis of TIP & OBAG2 INSIDE PDAs/TPAs investments vs. OUTSIDE PDAs/TPAs investments.
 
-% OBAG 2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)
-% TIP funds in PDAS (includes OBAG) / outside of PDAs
-$ invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
+Percentage of OBAG2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)
+Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs
+Funds invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
 
 For example:  
 
@@ -101,9 +101,10 @@ Identity TIP project points and lines with Bay Area Counties  (relationships unc
 Export to tabular format all resulting identity data layers  
 (NOTE: For now, keep TIP & OBAG points and lines datasets seperated; should have four individual tables)  
 Calculate proportions (resulting identity line shape length (mi)/Total length of line project (mi)) of TIP & OBAG line projects within each county  
-Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multipling the portion by the TIP/OBAG cost
-Confirm same number and order of column existing in TIP/OBAG point and line tables then marry point and lines to result in only two tables  
-Sort the two tables by County then by ...
+Calculate the proportional TIP/OBAG (MAP_grant_size) cost by multipling the portion by the TIP/OBAG cost  
+Confirm same number and order of columns existing in TIP/OBAG point and line tables then marry point and lines to result in only two tables  
+Sort the two tables by County then by (In/Out flags)  
+
 
 
 ## Expected Outcomes
