@@ -14,8 +14,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)
 
-#### [COCs TPAs Thresholds App](COCs-TPAs-Thresholds-App)  
-#### [COCs TPAs Thresholds App](COCs-TPAs-Thresholds-App)  
+#### [COC TPA Thresholds App](COC-TPA-Thresholds-App)  
 
 #### [Communities of Concern](Communities-of-Concern)  
 
@@ -41,7 +40,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects)
 
-#### [TIP, OBAG2 Investment Analysis](TIP,-OBAG2-Investment-Analysis)
+#### [TIP OBAG2 Investment Analysis](TIP-OBAG2-Investment-Analysis)
 
 #### [TMC overlaps and flipped vertices](TMC-overlaps-and-flipped-vertices)
 
