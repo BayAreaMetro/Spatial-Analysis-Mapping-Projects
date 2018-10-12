@@ -1,6 +1,6 @@
 # Documentation  
 
-The Geography Working Group of CASA is requesting mapping support from MTC to identify areas of concern or “sensitive communities” in the 9-county Bay Area that could be exempted from certain CASA Compact policies.  
+The Geography Working Group of [CASA](https://mtc.ca.gov/our-work/plans-projects/casa-committee-house-bay-area) is requesting mapping support from MTC to identify areas of concern or “sensitive communities” in the 9-county Bay Area that could be exempted from certain CASA Compact policies.  
 
 ### Define the Problem Statement  
 
