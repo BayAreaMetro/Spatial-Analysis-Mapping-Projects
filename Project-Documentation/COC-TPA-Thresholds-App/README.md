@@ -4,12 +4,9 @@ The Geography Working Group of CASA is requesting mapping support from MTC to id
 
 ### Define the Problem Statement  
 
-How do we methodically capture/visualize/map the most vunerable Communities of Concern (COCs) in order to save them from exhaustive affordable housing development-related regulations?
+How do we methodically capture/visualize/map the most vunerable of the Communities of Concern (COCs) in order to lift them above affordable housing development-related regulations?
 
-Mapping support will entail mapping and conducting spatial analyses of geographically defined data layers based on input from the Geography Working Group until the Group decides on a finalized map. To that end our initial request, which we hope can be fulfilled by 10/05/18, is the following:
-•	Create a “slider” tool that identifies census tracts in the 9 county Bay Area based on whether or not they meet changeable thresholds for minority population and poverty (currently set at 30% of the population at 200% of the federal poverty level and 70% minority). The “slider” tool would help identify census tracts based on whether or not they meet different identified thresholds (i.e. 20% at 200% of poverty level and 60% minority). 
-•	Identify census tracts that are within a ¼ mile and ½ mile from established “sensitive census tracts (30% of the population at 200% of federal poverty level and 70% minority). 
-•	Identify the overlap of census tracts that are within a ¼ mile and a ½ mile radius from established sensitive census tracts (not the full census tract, but just the overlap with the radius).   
+Mapping support will entail mapping and conducting spatial analyses of geographically defined data layers based on input from the Geography Working Group until the Group decides on a finalized map.
   
 ### Project Management 
 
