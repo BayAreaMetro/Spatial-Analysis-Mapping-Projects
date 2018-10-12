@@ -58,7 +58,7 @@ GIS Analysis:
 Tabular Analysis:  
 9. Resulting dissolve table used for Summary Statistics procedure based on in/out hazards for SUM of total area calculations  
 10. 3 Tables were then created for Fault zones, liquefaction (susceptibility and study areas), and landslide (susceptibility and study areas).  
-11. 3 Feature classes determined based on True denotations (dissolved on ‘True’) then associated with the 3 tables.  
+11. 3 Feature classes determined based on True denotations (dissolved on ‘True’) then associate with the 3 tables.  
 12. Projected feature classes were then unprojected to WGS84 for display processes for the Parcel Hazard application.  
 
 
