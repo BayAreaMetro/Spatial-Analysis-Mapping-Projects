@@ -3,9 +3,12 @@ Geospatial procedure and tabular analysis of TIP & OBAG2 INSIDE PDAs/TPAs invest
 
 ### Define the Problem Statement  
 
-Where are the majority of One Bay Area Grant cycle 2 (OBAG2) Funds being invested?
+Where are One Bay Area Grant cycle 2 (OBAG2) Funds being invested?  
+
 Percentage of OBAG2 funds in PDAs / outside of PDAs (using a distance buffer that we determine, rather than relying on the CMA’s judgment for whether or not a project supported a PDA)  
-Where are the majority of Transportation Improvment Program (TIP) Funds being invested?  
+
+Where are Transportation Improvement Program (TIP) Funds being invested?  
+
 Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs
 Funds invested (OBAG and/or TIP) in each PDA (so we can see what PDAs are actually being heavily invested in, vs those that are not).
 
@@ -96,41 +99,41 @@ The final deliverable will be a table including summaries of TIP & OBAG projects
 
 ## Expected Outcomes
 
-| PDAs only - No Buffer	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
-|-----------------------|------------------------------------------------------------|-----------------------|--------|
-| Alameda               |	 	 	                                                 |                       |        |
-| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |
+| PDAs only - No Buffer	| OBAG $ in a PDA | OBAG $ outside of PDA |	Total         |
+|-----------------------|-----------------|-----------------------|---------------|
+| Alameda               |                 |                       |               |
+| Contra Costa	 	 	| 	              |                       |               |   
+| Etc.	 	 	        |                 |                       |               |
 
-| ½ Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
-|-----------------------|------------------------------------------------------------|-----------------------|--------|
-| Alameda               |	 	 	                                                 |                       |        |
-| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |
+| ½ Mile analysis       | OBAG $ in a PDA | OBAG $ outside of PDA |	Total         |
+|-----------------------|-----------------|-----------------------|---------------|
+| Alameda               |                 |                       |               |
+| Contra Costa	 	 	| 	              |                       |               |   
+| Etc.	 	 	        |                 |                       |               |
 
-| 1 Mile analysis   	| OBAG $ 100% within, partially within, or adjacent to a PDA | OBAG $ outside of PDA |	Total |
-|-----------------------|------------------------------------------------------------|-----------------------|--------|
-| Alameda               |	 	 	                                                 |                       |        |
-| Contra Costa	 	 	|	 	 	                                                 |                       |        | 
-| Etc.	 	 	        |	 	 	                                                 |                       |        |  
+| 1 Mile analysis       | OBAG $ in a PDA | OBAG $ outside of PDA |	Total         |
+|-----------------------|-----------------|-----------------------|---------------|
+| Alameda               |                 |                       |               |
+| Contra Costa	 	 	| 	              |                       |               |  
+| Etc.	 	 	        |                 |                       |               |
 
 
 ## Results  
 
 Sample Output:
 
-| PDAs only - No Buffer	| OBAG $ 100% w/in, partially w/in, or adjacent to a PDA | OBAG $ outside of PDA |	Total        |
-|-----------------------|--------------------------------------------------------|-----------------------|---------------|
-| Alameda               | 1,936,948,516	 	 	                                 | 555,059,850           | 2,492,008,365 |
-| Contra Costa	 	 	| 906,955,386	 	 	                                 | 255,451,368           | 1,162,406,753 | 
-| Marin	 	 	        | 47,079,418	 	 	                                 | 67,145,927            | 114,225,345   |
-| Napa                  | 9,771,649 	 	                                     | 42,723,437            | 52,495,086    |
-| San Francisco	 	 	| 1,104,663,376 	 	                                 | 327,447,740           | 1,432,111,116 | 
-| San Mateo	 	        | 1,039,493,456	 	                                     | 152,854,199           | 1,192,347,655 |
-| Santa Clara           | 3,082,045,726 	 	                                 | 175,705,371           | 3,257,751,096 |
-| Solano    	 	 	| 16,227,700 	 	                                     | 120,791,034           | 137,018,734   | 
-| Sonoma 	 	        | 115,938,253	 	                                     | 11,700,080            | 127,638,332   |
-| Regional total        | 8,259,123,478	 	                                     | 1,708,879,005         | 9,968,002,483 |
+| PDAs only - No Buffer	| OBAG $ in a PDA | OBAG $ outside of PDA |	Total         |
+|-----------------------|-----------------|-----------------------|---------------|
+| Alameda               | 1,936,948,516	  | 555,059,850           | 2,492,008,365 |
+| Contra Costa	 	 	| 906,955,386	  | 255,451,368           | 1,162,406,753 | 
+| Marin	 	 	        | 47,079,418	  | 67,145,927            | 114,225,345   |
+| Napa                  | 9,771,649 	  | 42,723,437            | 52,495,086    |
+| San Francisco	 	 	| 1,104,663,376   | 327,447,740           | 1,432,111,116 | 
+| San Mateo	 	        | 1,039,493,456	  | 152,854,199           | 1,192,347,655 |
+| Santa Clara           | 3,082,045,726   | 175,705,371           | 3,257,751,096 |
+| Solano    	 	 	| 16,227,700 	  | 120,791,034           | 137,018,734   | 
+| Sonoma 	 	        | 115,938,253	  | 11,700,080            | 127,638,332   |
+| Regional total        | 8,259,123,478	  | 1,708,879,005         | 9,968,002,483 |
 
 
 ### Final Tabular Data Summaries  
