@@ -56,10 +56,10 @@ GIS Analysis:
 8. Run dissolve function on Parcel_Id and sum the shape area for each associated hazard (5 fields in attribute table) for each record in order to determine shape area in/out of specific hazards in individual parcels
 
 Tabular Analysis:  
-9. Resulting dissolve table used for Summary Statistics procedure based on in/out hazards for SUM of total area calculations  
-10. 3 Tables were then created for Fault zones, liquefaction (susceptibility and study areas), and landslide (susceptibility and study areas).  
-11. 3 Feature classes determined based on True denotations (dissolved on ‘True’) then associate with the 3 tables.  
-12. Projected feature classes were then unprojected to WGS84 for display processes for the Parcel Hazard application.  
+    9. Resulting dissolve table used for Summary Statistics procedure based on in/out hazards for SUM of total area calculations  
+    10. 3 Tables were then created for Fault zones, liquefaction (susceptibility and study areas), and landslide (susceptibility and study areas).  
+    11. 3 Feature classes determined based on True denotations (dissolved on ‘True’) then associate with the 3 tables.  
+    12. Projected feature classes were then unprojected to WGS84 for display processes for the Parcel Hazard application.  
 
 
 ## Expected Outcomes  
