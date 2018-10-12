@@ -70,5 +70,6 @@ A Parcel Hazard census of the 9-county Bay Area region as formatted like a 'look
 ## Results  
 
 [Hazard Mapping Application](http://hazard-env.p7guw9p8ma.us-west-2.elasticbeanstalk.com/)  
+Authoritative Parcel Hazard Look-up Table
 
 
