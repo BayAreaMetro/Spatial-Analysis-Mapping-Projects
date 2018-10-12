@@ -6,7 +6,7 @@ The purpose of this project is to build an application that allows users to sear
 
 Is your housing susceptible to a natural hazards catastrophe?   
 
-The goal is to determine if an address in the 9-county Bay Area region is positively impacted by a geological hazard if all or part of the parcel intersects that hazard.  
+The goal is to determine if an address in the 9-county Bay Area region is positively impacted by a geological hazard. 
 
 ### Project Management  
 
