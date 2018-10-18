@@ -23,8 +23,8 @@ MIT Election Data + Science Lab
 - [County Presidential Elections Returns 2000-2016 (CSV)](Data/countypres_2000-2016.csv) 
 
 U.S. Census Bureau
-- [Citizen Voting Age Population by Race and Ethnicity 2016](https://www.census.gov/programs-surveys/decennial-census/about/voting-rights/cvap.2016.html)
-- [Citizen Voting Age Population by Race and Ethnicity 2016 (CSV)](Data/CVAP_County_ACS_2010_2014_ACS_2016popest.csv)
+- [Citizen Voting Age Population by Race and Ethnicity ACS 2012 - 2016](https://www.census.gov/programs-surveys/decennial-census/about/voting-rights/cvap.2018.html)
+- [Citizen Voting Age Population by Race and Ethnicity ACS 2012-2016 (CSV)](Data/CVAP_County_ACS_2012_2016.csv)
 
 ### Analysis Parameters
 
