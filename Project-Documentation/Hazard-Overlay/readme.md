@@ -43,7 +43,6 @@ GIS Analysis:
     [Landslide Susceptibility Zones](https://mtcdrive.app.box.com/s/6qa52hq69ifk15hk3bi1xjyey22bombl)  
 2. Project all layers to consistent coordinate system
 3. Query all five hazard layers for only relevant geographies
-    Ie. Landslide Susceptibility GRIDCODE>=7 (all areas with high landslide susceptibility or greater)
 4. Export queried hazard layers features to project geodatabase
 5. Union new hazard layers to create single data layer feature class  
     a. cgs_liquefaction_study_areas (where zn_type=lq)  
