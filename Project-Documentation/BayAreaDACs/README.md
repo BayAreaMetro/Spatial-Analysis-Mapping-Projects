@@ -1,15 +1,15 @@
 # Documentation
-Geospatial procedure and tabular analysis of Cal EnviroScreen 3.0 Total Population in the Bay Area.
+Geospatial procedure and tabular analysis of Cal EnviroScreen 3.0 Total Population in the Bay Area.  
 
 ### Define the Problem Statement  
 
-Where are the Bay Area Disadvantaged Communities (DACs) and what is the associated population in those communities? 
+Where are the Bay Area Disadvantaged Communities (DACs) and what is the associated population in those communities?  
 
-According to the [CalEnviroScreen 3.0 mapping tool](https://oehha.maps.arcgis.com/apps/webappviewer/index.html?id=4560cfbce7c745c299b2d0cbb07044f5)by way of the [Office of Environmental Health Hazard Assessment (OEHHA)](https://oehha.ca.gov/), roughly 460,00 Bay Area resident are at risk to pollutants, poor environmental conditions and less than diresable economic conditions.
+According to the [CalEnviroScreen 3.0 mapping tool](https://oehha.maps.arcgis.com/apps/webappviewer/index.html?id=4560cfbce7c745c299b2d0cbb07044f5)by way of the [Office of Environmental Health Hazard Assessment (OEHHA)](https://oehha.ca.gov/), roughly 460,00 Bay Area resident are at risk to pollutants, poor environmental conditions and less than diresable economic conditions.  
 
-[CalEnviroScreen 3.0](https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30) ranks census tracts in California based on potential exposures to pollutants, adverse environmental conditions, socioeconomic factors and prevalence of certain health conditions. Data used in the CalEnviroScreen model come from national and state sources.
+[CalEnviroScreen 3.0](https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30) ranks census tracts in California based on potential exposures to pollutants, adverse environmental conditions, socioeconomic factors and prevalence of certain health conditions. Data used in the CalEnviroScreen model come from national and state sources.  
 
-[Disadvantaged communities in California](https://oehha.ca.gov/calenviroscreen/sb535) are specifically targeted for investment of proceeds from the State’s cap-and-trade program. These investments are aimed at improving public health, quality of life and economic opportunity in California’s most burdened communities at the same time reducing pollution that causes climate change. 
+[Disadvantaged communities in California](https://oehha.ca.gov/calenviroscreen/sb535) are specifically targeted for investment of proceeds from the State’s cap-and-trade program. These investments are aimed at improving public health, quality of life and economic opportunity in California’s most burdened communities at the same time reducing pollution that causes climate change.  
 
 ### Project Management 
 
@@ -28,14 +28,13 @@ According to the [CalEnviroScreen 3.0 mapping tool](https://oehha.maps.arcgis.co
 
 [CalEnviroScreen 3.0 Data 'CES3FINAL_AGOL'](https://mtc.maps.arcgis.com/home/item.html?id=98b9a819a670470c96babc63d6857959)  
  
-
 ## Analysis Parameters  
   
 
 ## Methodology  
 
-1. Open [CalEnviroScreen 3.0 Data 'CES3FINAL_AGOL'](https://mtc.maps.arcgis.com/home/item.html?id=98b9a819a670470c96babc63d6857959) in ArcPro.
-2.  Apply query to feature service layer:
+1. Open [CalEnviroScreen 3.0 Data 'CES3FINAL_AGOL'](https://mtc.maps.arcgis.com/home/item.html?id=98b9a819a670470c96babc63d6857959) in ArcPro.  
+2.  Apply query to feature service layer:  
     CES2018Update_changingcolumns_2 = '75-80%' Or CES2018Update_changingcolumns_2 = '80-85%' Or CES2018Update_changingcolumns_2 = '85-90%' Or CES2018Update_changingcolumns_2 = '90-95%' Or CES2018Update_changingcolumns_2 = '95-100% (highest scores)'
 3. Export as new feature service layer
 4. Summarize by county
