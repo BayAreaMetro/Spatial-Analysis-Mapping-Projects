@@ -34,32 +34,37 @@ According to the [CalEnviroScreen 3.0 mapping tool](https://oehha.maps.arcgis.co
 
 ## Methodology  
 
-1. 
+1. Open [CalEnviroScreen 3.0 Data 'CES3FINAL_AGOL'](https://mtc.maps.arcgis.com/home/item.html?id=98b9a819a670470c96babc63d6857959) in ArcPro.
+2.  Apply query to feature service layer:
+    CES2018Update_changingcolumns_2 = '75-80%' Or CES2018Update_changingcolumns_2 = '80-85%' Or CES2018Update_changingcolumns_2 = '85-90%' Or CES2018Update_changingcolumns_2 = '90-95%' Or CES2018Update_changingcolumns_2 = '95-100% (highest scores)'
+3. Export as new feature service layer
+4. Summarize by county
 
 ## Expected Outcomes
+
+An interactive AGOL web map showcasing only Bay Area Disadvantaged Communities based on the [CalEnviroScreen 3.0](https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30) data contcreated by the [Office of Environmental Health Hazard Assessment (OEHHA)](https://oehha.ca.gov/).  
 
 
 ## Results  
 
-Sample Output:
+Percentile Range ('CES_3_0Pctl_Range2018') greater than 75%
 
-| PDAs only - No Buffer	| OBAG $ in a PDA | OBAG $ outside of PDA |	Total         |
-|-----------------------|-----------------|-----------------------|---------------|
-| Alameda               | 1,936,948,516	  | 555,059,850           | 2,492,008,365 |
-| Contra Costa	 	 	| 906,955,386	  | 255,451,368           | 1,162,406,753 | 
-| Marin	 	 	        | 47,079,418	  | 67,145,927            | 114,225,345   |
-| Napa                  | 9,771,649 	  | 42,723,437            | 52,495,086    |
-| San Francisco	 	 	| 1,104,663,376   | 327,447,740           | 1,432,111,116 | 
-| San Mateo	 	        | 1,039,493,456	  | 152,854,199           | 1,192,347,655 |
-| Santa Clara           | 3,082,045,726   | 175,705,371           | 3,257,751,096 |
-| Solano    	 	 	| 16,227,700 	  | 120,791,034           | 137,018,734   | 
-| Sonoma 	 	        | 115,938,253	  | 11,700,080            | 127,638,332   |
-| Regional total        | 8,259,123,478	  | 1,708,879,005         | 9,968,002,483 |
+| Bay Area Counties  	| 2010 Total Population | 
+|-----------------------|-----------------------|
+| Alameda               | 148,268           	| 
+| Contra Costa	 	 	| 140,335	            | 
+| Marin	 	 	        | 0	                    | 
+| Napa                  | 0 	                | 
+| San Francisco	 	 	| 43,189                |  
+| San Mateo	 	        | 34,954	            | 
+| Santa Clara           | 71,936                | 
+| Solano    	 	 	| 17,287 	            | 
+| Sonoma 	 	        | 7,522	                | 
+| Regional total        | 463,491               | 
 
 
 ### Final Tabular Data Summaries  
 
-[Percentage of OBAG2 funds in PDAs / outside of PDAs](https://mtcdrive.box.com/s/jwooy7ay6wqlot79n5d9fm0ew0etm6j2)  
-[Percentage of TIP funds in PDAS (includes OBAG) / outside of PDAs](https://mtcdrive.box.com/s/nj110buzt6b85nrtdz66nd2niwgfq9v8)
+[Bay Area DACs](https://mtc.maps.arcgis.com/home/webmap/viewer.html?webmap=fb249db7b20644f7b94ecd8a0d8c2207&extent=-124.0323,37.1176,-120.6567,38.5514)  
 
 
