@@ -44,7 +44,7 @@ According to the [CalEnviroScreen 3.0 mapping tool](https://oehha.maps.arcgis.co
 An interactive AGOL web map showcasing only Bay Area Disadvantaged Communities based on the [CalEnviroScreen 3.0](https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30) data contcreated by the [Office of Environmental Health Hazard Assessment (OEHHA)](https://oehha.ca.gov/).  
 
 
-## Results  
+## Final Tabular Data Results  
 
 Percentile Range ('CES_3_0Pctl_Range2018') greater than 75%
 
@@ -62,7 +62,7 @@ Percentile Range ('CES_3_0Pctl_Range2018') greater than 75%
 | Regional total        | 463,491               | 
 
 
-### Final Tabular Data Summaries  
+### Web Map  
 
 [Bay Area DACs](https://mtc.maps.arcgis.com/home/webmap/viewer.html?webmap=fb249db7b20644f7b94ecd8a0d8c2207&extent=-124.0323,37.1176,-120.6567,38.5514)  
 
