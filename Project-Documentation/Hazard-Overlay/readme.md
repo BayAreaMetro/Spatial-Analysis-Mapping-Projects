@@ -48,7 +48,7 @@ GIS Analysis:
     a. cgs_liquefaction_study_areas (where zn_type=lq)  
     b. cgs_landslide_study_areas (where zn_type=ls)  
     c. usgs_liquefaction_susceptibility (where liq in (VH,H,M))  
-    d. alquist_priolo_zones  
+    d. alquist_priolo_zones (in/out)
     e. cgs_landslide susceptibilty (where GRIDCODE>=7)  
 6. Run identity operation on [Parcels 2010](https://mtcdrive.app.box.com/s/ny0olvpw64x6ftxwhbi34m2phm6hqzce) features and single layer hazard feature class; output to project geodatabase  
 7. Field Calculate new binary attribute denoting whether a parcel is either in/out of a specific hazard layer
@@ -69,6 +69,6 @@ A Parcel Hazard census of the 9-county Bay Area region as formatted like a 'look
 ## Results  
 
 [Hazard Mapping Application](http://hazard-env.p7guw9p8ma.us-west-2.elasticbeanstalk.com/)  
-Authoritative Parcel Hazard Look-up Table
+[Authoritative Parcel Hazard Look-up Table](https://mtc.maps.arcgis.com/home/item.html?id=0584361f051849639950307b449795db)
 
 
