@@ -1,30 +1,44 @@
 **Draft Status: Draft**
 
-## Define the Problem Statement
+## CASA Equity Analysis
 
-A problem statement is a brief description of the issues that need to be addressed by a problem solving team. It is used to center and focus the team at the onset of any spatial analysis efforts. It should keep the team on track during the effort, and will be used to validate that the effort delivered an outcome that solves the problem statement. In some ways the problem statement is more than just the ask. It should provide the context that the work assignment fits within, and identify any key stakeholders or major initiatives that relate to the solution.
+Identify the geographic impacts of the [CASA Compact](https://mtc.ca.gov/sites/default/files/CASA_Compact.pdf) as adopted by the CASA Technical Committee on December 3, modified before appproval by the CASA Steering Committee on December 12, and authorized for Commission Chair signiature by the MTC on December 19, 2018.
 
-### Project Management (RECOMMENDED)
+### Project Management
 
-Add links to:
-- Activity, Project, or Task on Asana 
-- Box directory where any related work products are stored (if applicable) 
-- ArcGIS Online Working Group (if applicable) 
-- Any other location where important related work products are stored/saved  
+- [Asana Project](https://app.asana.com/0/356840529458476/913179078257017/f)
+- [Box](https://mtcdrive.box.com/s/32q1ukuaifx0n7fowwowmsm97gohdtf7)
+- [ArcGIS Online](https://mtc.maps.arcgis.com/home/group.html?id=5e22cf0f5f0b44a9ae622f60e52cde2f#overview)
+
+### Contents 
+
+- [Data Sources](#data-sources)
+- [Analysis Parameters](#analysis-parameters)
+- [Methodology](#methodology)
+- [Expected Outcomes](#expected-outcomes)
+- [Results](#results)
 
 ## Data Sources
 
-List the potential data sources that you think are required to solve the problem. If you are unsure, you can discuss these with the Unit Manager prior to submitting your request for support.
+- [MTC Communities of Concern]
+- [BCDC Communities of Concern]  
+
+Both sources are in turn derived from: 
+
+- [U.S. Census - American Community Survey 2012-2016](https://www.census.gov/programs-surveys/acs/)
+- [U.S. Census - TIGER/Line Shapefiles 2016](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 
 ## Analysis Parameters
 
 Analysis parameters are definable, measurable, and can contain a constant or variable characteristic, dimension, property, or value, that is selected from a set of data (or population) because it is considered essential to understanding how to solve a problem. List the parameters that you think are required to solve this problem. Leave this blank if you are unsure of how to determine the analysis parameters for your project. The analyst assigned to the project will document this information.
 
-## Methodology applied to solve problem
+## Methodology
 
-The analyst assigned to the project will document this information. The analyst will review the methodology (if applicable) with the project team to ensure that it meets the requirements and expectations of the solution or problem.
+The analysis was performed in R and leverages the censusapi library which is documented here: [CensusAPI](https://hrecht.github.io/censusapi/index.html)
 
-## Expected Outcomes (if any)?
+To explore the methodology, take a look at the [CASA Methodology](CASA_acs_vars_lowincomeTenure.Rmd)
+
+## Expected Outcomes
 
 Provide your expectations (if any) for the results of this work. Your expectations will form the basis for deciding if the work is complete, or if we need to revisit the problem statement and/or refine the methodology used to solve the problem.
 
