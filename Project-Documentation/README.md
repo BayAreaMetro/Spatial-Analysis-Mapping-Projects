@@ -26,8 +26,6 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [OBAG 2.0 Project Mapping](OBAG-2-Project-Mapping)  
 
-#### [Outreach Gameboard](Outreach-Gameboard)
-
 #### [PDA Employment Businesses](PDA-Employment-Businesses) 
 
 #### [Regional Goods Movement](Regional-Goods-Movement)
