@@ -1,19 +1,16 @@
 # Documentation
-Geospatial procedure and tabular analysis of Cal EnviroScreen 3.0 Total Population in the Bay Area.  
+Geospatial procedure and tabular analysis of Cal EnviroScreen 3.0 Total Population in 
 
 ### Define the Problem Statement  
 
-Where are the Bay Area Disadvantaged Communities (DACs) and what is the associated population in those communities?  
+How do we inform our 9-county regional land use model of the local land use plans?
 
-According to the [CalEnviroScreen 3.0 mapping tool](https://oehha.maps.arcgis.com/apps/webappviewer/index.html?id=4560cfbce7c745c299b2d0cbb07044f5)by way of the [Office of Environmental Health Hazard Assessment (OEHHA)](https://oehha.ca.gov/), roughly 460,00 Bay Area resident are at risk to pollutants, poor environmental conditions and less than diresable economic conditions.  
+This land use model feeds into the travel demand model thereby determining levels of transportation infrastructure investment. In order to capture Bay Area land use, MTC has developed a process for accounting for the small-scale decision-making at the jurisdictional level. Thanks to the BASIS (Bay Area Spatial Information System) effort we have been able to collect all 101 Bay Area jurisdiction's current planning documents and spatial datasets. For this particular effort, zoning, general plans, and specific plans were leveraged to determine the current land use for all 2.14 million parcels in the Bay Area region. Not only were we able to determine current land use, we constructed a decision tree to help land use modelers predict land development for various long-range planning scenarios.
 
-[CalEnviroScreen 3.0](https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30) ranks census tracts in California based on potential exposures to pollutants, adverse environmental conditions, socioeconomic factors and prevalence of certain health conditions. Data used in the CalEnviroScreen model come from national and state sources.  
-
-[Disadvantaged communities in California](https://oehha.ca.gov/calenviroscreen/sb535) are specifically targeted for investment of proceeds from the State’s cap-and-trade program. These investments are aimed at improving public health, quality of life and economic opportunity in California’s most burdened communities at the same time reducing pollution that causes climate change.  
 
 ### Project Management 
 
-- [Asana Project](https://app.asana.com/0/797943099119526/908896324686840) 
+- [Asana Project](https://app.asana.com/0/797943099119526/901683629619975) 
 - [Box](https://mtcdrive.box.com/s/x72b3z6uobofeo6k493m2j3xg0ewt7zb)
 
 ### Contents 
