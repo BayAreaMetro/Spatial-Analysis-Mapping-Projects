@@ -35,6 +35,9 @@ Identify the geographic impacts of the [CASA Compact](https://mtc.ca.gov/sites/d
 - [U.S. Census - TIGER/Line Shapefiles 2016](https://www.census.gov/geo/maps-data/data/tiger-line.html)
 - [MTC Communities of Concern (2018)](https://mtc.maps.arcgis.com/home/item.html?id=1501fe1552414d569ca747e0e23628ff)
 - [BCDC Disadvantaged Communities](https://www.dropbox.com/s/jppt4wl0y8pkwva/ART_Community_Vulnerability_2018.gdb.zip?dl=0)
+- [ABAG Housing Policy Database](http://housing.abag.ca.gov/policysearch)
+- [UC Berkeley UDP Displacement Typologies](http://www.urbandisplacement.org/map/sf)
+- [TCAC/HCD Opportunity Areas](https://www.treasurer.ca.gov/ctcac/opportunity.asp)
 
 ## Analysis Parameters
 
@@ -52,7 +55,7 @@ Rent is defined by American Community Survey variable B25064-001E, which refers 
 
 ### Low Income Renters
 
-The Equity Analysis looks at the spatial distribution of low income renters at least 30% and 50% of their income on rent and low income *minority* renters paying at least 30% and 50% of their income on rent. Data on low income renters comes from the American Community Survey's Public Use Microdata Sample (PUMS) data. The table below provides the written and variable definitions for the terms in this section. To get variable definitions, please refer to the [2012-2016 ACS 5-year PUMS Data Dictionary](https://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2012-2016.txt?#)
+The Equity Analysis looks at the spatial distribution of low income renters at least 30% and 50% of their income on rent and low income *minority* renters paying at least 30% and 50% of their income on rent. Data on low income renters comes from the American Community Survey's Public Use Microdata Sample (PUMS) data. The table below provides the written and variable definitions for the terms in this section. To get variable definitions, please refer to the [2012-2016 ACS 5-year PUMS Data Dictionary](https://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2012-2016.txt?#).
 
 | Term                            | Written definition                                                                                                                                                               | Variable definition                                                                                                                                                   |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -138,10 +141,10 @@ Feature classes and web layers of:
 - Displacement Risk Areas
 
 Summary tables of:
--Single-family and multi-family parcel data
--Multi-family and mixed-use parcel data
--Low income renters
--Low income minority renters
+- Single-family and multi-family parcel data
+- Multi-family and mixed-use parcel data
+- Low income renters
+- Low income minority renters
 
 Print maps of:
 - Sensitive Communities
@@ -159,8 +162,10 @@ All print maps other than that of Sensitive Communitities have the outlines of S
 ## Results
 
 [Racial Equity Analysis for the CASA Compact](https://mtc.ca.gov/sites/default/files/Racial_Equity_Analysis_for_the_CASA_Compact.pdf)
+
 [High resolution print maps](https://mtcdrive.app.box.com/folder/58579305297)
-[Tabluations](https://mtcdrive.app.box.com/folder/58978155385)
+
+[Tabluations](CASA\Data\Tablulations)
 
 ## Related Works
 
