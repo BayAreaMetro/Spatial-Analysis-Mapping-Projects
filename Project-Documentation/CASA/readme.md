@@ -140,7 +140,7 @@ Feature classes and web layers of:
 - Jurisdictions with tenant protections
 - Displacement Risk Areas
 
-Summary tables of:
+Summary tables for:
 - Single-family and multi-family parcel data
 - Multi-family and mixed-use parcel data
 - Low income renters
@@ -165,7 +165,7 @@ All print maps other than that of Sensitive Communitities have the outlines of S
 
 [High resolution print maps](https://mtcdrive.app.box.com/folder/58579305297)
 
-[Tabluations](/Data/Tablulations)
+[Tabluations](CASA\Data\Tablulations)
 
 ## Related Works
 
