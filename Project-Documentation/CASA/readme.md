@@ -165,7 +165,7 @@ All print maps other than that of Sensitive Communitities have the outlines of S
 
 [High resolution print maps](https://mtcdrive.app.box.com/folder/58579305297)
 
-[Tabluations](CASA/Data/Tablulations)
+[Tabluations](/Data/Tablulations)
 
 ## Related Works
 
