@@ -55,7 +55,7 @@ Rent is defined by American Community Survey variable B25064-001E, which refers 
 
 ### Low Income Renters
 
-The Equity Analysis looks at the spatial distribution of low income renters at least 30% and 50% of their income on rent and low income *minority* renters paying at least 30% and 50% of their income on rent. Data on low income renters comes from the American Community Survey's Public Use Microdata Sample (PUMS) data. The table below provides the written and variable definitions for the terms in this section. To get variable definitions, please refer to the [2012-2016 ACS 5-year PUMS Data Dictionary](https://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2012-2016.txt?#).
+The Equity Analysis looks at the spatial distribution of low income renters paying at least 30% and 50% of their income on rent and low income *minority* renters paying at least 30% and 50% of their income on rent. Data on low income renters comes from the American Community Survey's Public Use Microdata Sample (PUMS) data. The table below provides the written and variable definitions for the terms in this section. To get variable definitions, please refer to the [2012-2016 ACS 5-year PUMS Data Dictionary](https://www2.census.gov/programs-surveys/acs/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2012-2016.txt?#).
 
 | Term                            | Written definition                                                                                                                                                               | Variable definition                                                                                                                                                   |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -67,7 +67,7 @@ The Equity Analysis looks at the spatial distribution of low income renters at l
 
 ### Jurisdictions with Tenant Protections
 
-Jurisdiction housing policies come from the [Association of Bay Area Governments' Housing Policy Database](http://housing.abag.ca.gov/policysearch). Please note that the data in the Equity Analysis has caveats due to discrepancies between the user-friendly interface and the underlying dataset in addition to the dataset becoming partially out of date:
+Jurisdiction housing policies come from the [Association of Bay Area Governments' Housing Policy Database](http://housing.abag.ca.gov/policysearch). Please note that the data in the Equity Analysis has caveats due to discrepancies between the user-friendly interface and the underlying dataset in addition to the dataset becoming partially out of date. These issues have since been resolved on the ABAG website, but they have not been addressed in the public version of the equity analysis:
 
 1. Mountain View CDP is listed as having both rent stabilization and just cause policies, but CDPs have no authority to enact such policies. The City of Mountain View has both, but the interface says the City of Mountain View has neither. The dataset correctly states the city has both.
 2. Richmond has both rent stabilization and just cause policies, but the interface says it has neither. The database correctly states the city has both.
@@ -105,11 +105,11 @@ High-displacement risk areas are defined as American Community Survey 2009-2013 
 
 ### Sensitive Communities
 
-To create the Sensitive Communities shapefile, the [MTC Communities of Concern shapefile](http://opendata.mtc.ca.gov/datasets/mtc-communities-of-concern-2018-with-american-community-survey-data-2012-2016) is intersected with the BCDC Disadvantaged Communities shapefile. This process yielded duplicate
+To create the Sensitive Communities shapefile, the [MTC Communities of Concern shapefile](http://opendata.mtc.ca.gov/datasets/mtc-communities-of-concern-2018-with-american-community-survey-data-2012-2016) is intersected with the BCDC Disadvantaged Communities. 
 
 ### Parcels Zoned for Housing
 
-Parcels meeting the definitions mentioned in the Analysis Parameters section were selected from the regionwide parcel shapefile. A shapefile with the outline of high-opportunity areas - areas classified as high or highest resource by the California Tax Credit Allocation Committee (to explore the methodology, see the [Opportunity Mapping Methodology document](https://www.treasurer.ca.gov/ctcac/opportunity/final-opportunity-mapping-methodology.pdf) - was overlaid on top of the new parcel shapefile. To calculate the share of parcels within Opportunity Areas, Senstitive Communities, Transit Access Areas, High Displacement Areas, Project Affordability Areas, and various combinations of the these areas; parcels were converted into centroids. If a centroid fell within an analysis area, the corresponding parcel would be counted as being in the area.
+Parcels meeting the definitions mentioned in the Analysis Parameters section were selected from the regionwide parcel shapefile. A shapefile with the outline of high-opportunity areas - areas classified as high or highest resource by the California Tax Credit Allocation Committee (to explore the methodology, see the [Opportunity Mapping Methodology document](https://www.treasurer.ca.gov/ctcac/opportunity/final-opportunity-mapping-methodology.pdf)) - was overlaid on top of the new parcel shapefile. To calculate the share of parcels within Opportunity Areas, Senstitive Communities, Transit Access Areas, High Displacement Areas, Project Affordability Areas, and various combinations of the these areas; parcels were converted into centroids. If a centroid fell within an analysis area, the corresponding parcel would be counted as being in the area.
 
 ### Rent Increases, 2011 to 2016
 
@@ -165,7 +165,7 @@ All print maps other than that of Sensitive Communitities have the outlines of S
 
 [High resolution print maps](https://mtcdrive.app.box.com/folder/58579305297)
 
-[Tabluations](CASA\Data\Tablulations)
+[Tabluations](CASA/Data/Tablulations)
 
 ## Related Works
 
