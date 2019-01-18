@@ -165,7 +165,7 @@ All print maps other than that of Sensitive Communitities have the outlines of S
 
 [High resolution print maps](https://mtcdrive.app.box.com/folder/58579305297)
 
-[Tabluations](CASA\Data\Tablulations)
+[Tabluations](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/casa-docs/Project-Documentation/CASA/Data/Tablulations)
 
 ## Related Works
 
