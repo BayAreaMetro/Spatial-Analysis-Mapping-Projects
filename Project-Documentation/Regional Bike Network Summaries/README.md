@@ -52,7 +52,7 @@ Update the built and not built summaries for all 9 Bay Area Counties according t
 Inform the Regional CMAs, Plan Bay Area and Bicycle and Pedstrian Commitees of updates to teh Regional Bicycle Newtork.  .  
 
 ## Results  
-![San Francisco Bay Trail](jnadsp83.github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Regional Bike Newtork Summaries/img/SF Bay Trail.pdf)
+![San Francisco Bay Trail](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/2009RegionalBikeNetwork.pdf)
 
 Summary
 
