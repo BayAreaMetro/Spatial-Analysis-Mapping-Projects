@@ -4,11 +4,11 @@ Bicycle and Pedestrian Program and Active Tranpsortaion Planning (https://mtc.ca
 
 ### Define the Problem Statement  
 
-In 2009, how many miles are in the Regional Bike Network?
-How much of the Regional Bike Network has been built since 2009?
-How many miles are in the San Francisco Bay Trail Network?
-How many miles are in both the SF Bay Trail and Regional Bike Network?
-In 2019, how many miles are in the Regional Bike Network?
+In 2009, how many miles are in the Regional Bike Network?  
+How much of the Regional Bike Network has been built since 2009?  
+How many miles are in the San Francisco Bay Trail Network?  
+How many miles are in both the SF Bay Trail and Regional Bike Network?  
+In 2019, how many miles are in the Regional Bike Network?  
 
 Congestion Management Agency (CMA)
 
@@ -52,21 +52,16 @@ Update the built and not built summaries for all 9 Bay Area Counties according t
 Inform the Regional CMAs, Plan Bay Area and Bicycle and Pedstrian Commitees of updates to teh Regional Bicycle Newtork.  .  
 
 ## Results  
-![San Francisco Bay Trail](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/2009RegionalBikeNetwork.pdf)
-
-Summary
+![San Francisco Bay Trail](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/SFBayTrail.pdf)  
 
 |Dataset                           | Built Mileage      | Unbuilt Mileage      | Mileage |
 |--------------------------------- |------------------- |--------------------- |------------- |
 |Regional Bike Network (RBN)       |1,013               |1,156   |2,169   |
 |San Francisco Bay Trail in RBN    |353                 |213     |566     |
-|Percentage of SF Bay Trail in RBN |35%   |18%     |26%     |
+|Percentage of SF Bay Trail in RBN |35%   |18%     |26%     |  
+Source: [San Francisco Bay Trail](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/bay_trail/FeatureServer)  
 
-
-
-
-Bicycle Network 
-2009 Summary
+![2009 Regional Bike Network (Regional Bike Plan)](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/2009RegionalBikeNetwork.pdf)  
 
 |County        |Total Built Mileage |Total Unbuilt Mileage |Total Mileage |Percent Built |
 |--------------|------------------- |--------------------- |------------- |------------- |
@@ -79,9 +74,10 @@ Bicycle Network
 |Santa Clara   |241 |182   |423   |57% |
 |Solano        |71  |110   |180   |39% |
 |Sonoma        |59  |214   |273   |22% |
-|Total         |988 |1,124 |2,111 |47% |
+|Total         |988 |1,124 |2,111 |47% |  
+Source: [2009 Regional Bike Network (Regional Bike Plan)](https://mtc.maps.arcgis.com/home/item.html?id=0329d440fe65420a9650215a9cae459a)  
 
-2019 Summary
+![2018 Regional Bike Network (Regional Bike Plan)](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/2018RegionalBikeNetwork_v3.pdf)  
 
 |County        |Total Built Mileage |Total Unbuilt Mileage |Total Mileage |Percent Built |
 |--------------|------------------- |--------------------- |------------- |------------- |
@@ -94,6 +90,5 @@ Bicycle Network
 |Santa Clara   |331   |93    |424   |78% |
 |Solano        |126   |57    |183   |69% |
 |Sonoma        |82    |191   |273   |30% |
-|Total         |1,445 |1,124 |2,170 |67% |
-
-
+|Total         |1,445 |1,124 |2,170 |67% |  
+Source: [2018 Updated Regional Bike Network](https://mtc.maps.arcgis.com/home/item.html?id=0329d440fe65420a9650215a9cae459a)  
