@@ -7,8 +7,7 @@ Active Tranportation Planners in the [Bicycle and Pedestrian Planning Department
 In 2009, how many miles are in the Regional Bike Network?  
 How much of the Regional Bike Network has been built since 2009?  
 How many miles are in the San Francisco Bay Trail Network?  
-How many miles are in both the SF Bay Trail and Regional Bike Network?  
-In 2018, how many miles are in the Regional Bike Network?  
+How many miles of the SF Bay Trail are in the Regional Bike Network?  
 
 Mapping support will summarize the provided bike network datasets obtained from CMAs in late 2018.
 
@@ -54,6 +53,7 @@ Update the built and not built summaries for all 9 Bay Area Counties according t
 11. Merge outputdatasets from steps 9 and 10.  
 12. Spatial join the merge output fro step 11 to 2009 Regional Bike Plan dataset.  
 13. Create attribute 'new2018status' then flag final results accordingly:  
+
 |Query                                          | Flag                             |  
 |---------------------------------------------- |--------------------------------- |  
 |status in ('Built', 'Existing')                |new2018status = 'Existed in 2009' |  
@@ -72,6 +72,7 @@ Inform the Regional CMAs, Plan Bay Area and Bicycle and Pedstrian Commitees of u
 |Regional Bike Network (RBN)       |1,013               |1,156   |2,169   |
 |San Francisco Bay Trail in RBN    |353                 |213     |566     |
 |Percentage of SF Bay Trail in RBN |35%   |18%     |26%     |  
+
 Source: [San Francisco Bay Trail](https://mtc.maps.arcgis.com/home/item.html?id=7555b7dd7da546db8196241292e58144)  
 
 ![2009 Regional Bike Network (Regional Bike Plan)](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/2009RegionalBikeNetwork.pdf)  
@@ -88,6 +89,7 @@ Source: [San Francisco Bay Trail](https://mtc.maps.arcgis.com/home/item.html?id=
 |Solano        |71  |110   |180   |39% |
 |Sonoma        |59  |214   |273   |22% |
 |Total         |988 |1,124 |2,111 |47% |  
+
 Source: [2009 Regional Bike Network (Regional Bike Plan)](https://mtc.maps.arcgis.com/home/item.html?id=0329d440fe65420a9650215a9cae459a)  
 
 ![2018 Regional Bike Network (Regional Bike Plan)](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Regional%20Bike%20Network%20Summaries/img/2018RegionalBikeNetwork_v3.pdf)  
@@ -104,4 +106,5 @@ Source: [2009 Regional Bike Network (Regional Bike Plan)](https://mtc.maps.arcgi
 |Solano        |126   |57    |183   |69% |
 |Sonoma        |82    |191   |273   |30% |
 |Total         |1,445 |1,124 |2,170 |67% |  
+
 Source: [2018 Updated Regional Bike Network](https://mtc.maps.arcgis.com/home/item.html?id=0329d440fe65420a9650215a9cae459a)  
