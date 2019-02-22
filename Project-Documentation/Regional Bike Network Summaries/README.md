@@ -1,6 +1,6 @@
 # Documentation  
 
-Bicycle and Pedestrian Program and Active Tranpsortaion Planning (https://mtc.ca.gov/our-work/plans-projects/casa-committee-house-bay-area) is requesting mapping support from MTC to identify areas of concern or “sensitive communities” in the 9-county Bay Area that could be exempted from certain CASA Compact policies.  
+[Bicycle and Pedestrian Planning](https://mtc.ca.gov/our-work/plans-projects/bicycle-pedestrian-planning) is requesting mapping support from MTC to identify bicycle facilities built since 2009 in the 9-county Bay Area based on data provided by local Congestion Management Agencies (CMAs).  
 
 ### Define the Problem Statement  
 
@@ -9,8 +9,6 @@ How much of the Regional Bike Network has been built since 2009?
 How many miles are in the San Francisco Bay Trail Network?  
 How many miles are in both the SF Bay Trail and Regional Bike Network?  
 In 2019, how many miles are in the Regional Bike Network?  
-
-Congestion Management Agency (CMA)
 
 Mapping support will summarize the provided bike network datasets obtained from CMAs in late 2018.
 
