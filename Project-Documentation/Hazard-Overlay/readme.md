@@ -43,14 +43,13 @@ GIS Analysis:
     [Landslide Susceptibility Zones](https://mtcdrive.app.box.com/s/6qa52hq69ifk15hk3bi1xjyey22bombl)  
 2. Project all layers to consistent coordinate system
 3. Query all five hazard layers for only relevant geographies
-    Ie. Landslide Susceptibility GRIDCODE>=7 (all areas with high landslide susceptibility or greater)
 4. Export queried hazard layers features to project geodatabase
 5. Union new hazard layers to create single data layer feature class  
-    a. cgs_liquefaction_study_areas  
-    b. cgs_landslide_study_areas  
-    c. usgs_liquefaction_susceptibility  
-    d. alquist_priolo_zones  
-    e. cgs_landslide susceptibilty 
+    a. cgs_liquefaction_study_areas (where zn_type=lq)  
+    b. cgs_landslide_study_areas (where zn_type=ls)  
+    c. usgs_liquefaction_susceptibility (where liq in (VH,H,M))  
+    d. alquist_priolo_zones (in/out)
+    e. cgs_landslide susceptibilty (where GRIDCODE>=7)  
 6. Run identity operation on [Parcels 2010](https://mtcdrive.app.box.com/s/ny0olvpw64x6ftxwhbi34m2phm6hqzce) features and single layer hazard feature class; output to project geodatabase  
 7. Field Calculate new binary attribute denoting whether a parcel is either in/out of a specific hazard layer
 8. Run dissolve function on Parcel_Id and sum the shape area for each associated hazard (5 fields in attribute table) for each record in order to determine shape area in/out of specific hazards in individual parcels
@@ -70,6 +69,6 @@ A Parcel Hazard census of the 9-county Bay Area region as formatted like a 'look
 ## Results  
 
 [Hazard Mapping Application](http://hazard-env.p7guw9p8ma.us-west-2.elasticbeanstalk.com/)  
-Authoritative Parcel Hazard Look-up Table
+[Authoritative Parcel Hazard Look-up Table](https://mtc.maps.arcgis.com/home/item.html?id=0584361f051849639950307b449795db)
 
 
