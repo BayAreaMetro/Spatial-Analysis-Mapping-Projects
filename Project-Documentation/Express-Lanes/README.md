@@ -1,6 +1,6 @@
 # Documentation  
 
-Updating the [BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/) as new lanes come to fruition is exciting!  
+Updating the previous [prior BAIFA Bay Area Express Lanes Online Map](http://bael.mtcanalytics.org/map/) [latest BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/) as new lanes come to fruition is exciting!  
 
 ### Define the Problem Statement  
 
