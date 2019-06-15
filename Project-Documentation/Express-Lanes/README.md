@@ -4,9 +4,39 @@ Updating the previous [BAIFA Bay Area Express Lanes Online Map](http://bael.mtca
 
 add prior dataset table:
 ![BAIFA Bay Area Express Lanes Online Map](pics/one.png)
+prior Express Lanes Network:
+
+|Dataset                           | Open               | Under Construction      | Under Review/Design | Under Review/Design |
+|--------------------------------- |------------------- |--------------------- |------------- |------------- |
+|Alameda       |1,013              |1,156   |2,169   |    |
+|Contra Costa    |353                 |213     |566     |     |
+|Marin |35%   |18%     |26%     |         |
+|Napa |35%   |18%     |26%     |      |
+|San Francisco       |1,013              |1,156   |2,169   |    |
+|San Mateo   |353                 |213     |566     |     |
+|Solano |35%   |18%     |26%     |         |
+|Sonoma |35%   |18%     |26%     |      |
+|Santa Clara       |1,013              |1,156   |2,169   |    |
+
+Source: [above data placeholder](Data/nada3) 
 
 add updated dataset table:
 ![BAIFA Bay Area Express Lanes Online Map](pics/two.png)
+update Express Lanes Network:
+
+|Dataset                           | Open               | Under Construction      | Under Review/Design | Under Review/Design |
+|--------------------------------- |------------------- |--------------------- |------------- |------------- |
+|Alameda       |1,013              |1,156   |2,169   |    |
+|Contra Costa    |353                 |213     |566     |     |
+|Marin |35%   |18%     |26%     |         |
+|Napa |35%   |18%     |26%     |      |
+|San Francisco       |1,013              |1,156   |2,169   |    |
+|San Mateo   |353                 |213     |566     |     |
+|Solano |35%   |18%     |26%     |         |
+|Sonoma |35%   |18%     |26%     |      |
+|Santa Clara       |1,013              |1,156   |2,169   |    |
+
+Source: [above data placeholder](Data/nada3) 
 
 ### Define the Problem Statement  
 
