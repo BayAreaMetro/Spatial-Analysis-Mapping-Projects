@@ -3,8 +3,10 @@
 Updating the previous [BAIFA Bay Area Express Lanes Online Map](http://bael.mtcanalytics.org/map/) to the latest [BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/). New express lanes come online, new lanes are being planned, and some lanes being designed and/or constructed.
 
 add prior dataset table:
+![BAIFA Bay Area Express Lanes Online Map](pics/one.png)
 
 add updated dataset table:
+![BAIFA Bay Area Express Lanes Online Map](pics/two.png)
 
 ### Define the Problem Statement  
 
@@ -41,3 +43,10 @@ Update the BAIFA/Express Lanes Bay Area Online Map for all 9 Bay Area Counties a
 ## Results   
 
 Inform the Bay Area of the latest Express Lane projects and developments via [BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/).
+
+
+draft coc 
+- [2018 Communities of Concern - ACS 2016](Data/COCs_ACS2016_tbl.csv)
+- [2018 Communities of Concern - ACS 2016 Geography (Urban Tracts) Web Layer](http://opendata.mtc.ca.gov/datasets/mtc-communities-of-concern-2018-with-american-community-survey-data-2012-2016)
+
+![2018 Communities of Concern Print Map](https://mtcdrive.box.com/shared/static/t6eyif267lxaz5zegdremx1x3xc2d1gx.png)
