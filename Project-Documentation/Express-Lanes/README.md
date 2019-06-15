@@ -1,10 +1,14 @@
 # Documentation  
 
-Updating the previous [prior BAIFA Bay Area Express Lanes Online Map](http://bael.mtcanalytics.org/map/) [latest BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/) as new lanes come to fruition is exciting!  
+Updating the previous [BAIFA Bay Area Express Lanes Online Map](http://bael.mtcanalytics.org/map/) to the latest [BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/). New express lanes come online, new lanes are being planned, and some lanes being designed and/or constructed.
+
+add prior dataset table:
+
+add updated dataset table:
 
 ### Define the Problem Statement  
 
-How do we inform the public of the Bay Area HOV/Carpool/Express Lanes? An online map!
+How do we inform the public planning process of the Bay Area HOV/Carpool/Express Lanes? An online map! With data tables, charts and methods documented on github.
   
 ### Project Management 
 
@@ -21,6 +25,9 @@ How do we inform the public of the Bay Area HOV/Carpool/Express Lanes? An online
 
 ## Data Sources  
 
+Prior:
+
+Update:
 [Bay Area Express Lanes](https://data.bayareametro.gov/dataset/Bay-Area-Express-Lanes-2019-/t7di-4itt)
     
 ## Analysis Parameters  
