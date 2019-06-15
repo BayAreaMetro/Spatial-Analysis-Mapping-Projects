@@ -3,6 +3,10 @@
 ![Santa Clara County -PDA & Frequent Transit](pics/one.png)
 ![Santa Clara County -COCs](pics/two.png)
 ![Central Santa Clara County -PDA & Frequent Transit](pics/three.png)
+![North Santa Clara County -PDA & Frequent Transit](pics/four.png)
+![South Santa Clara County -COCs](pics/five.png)
+![Southernmost Central Santa Clara County -PDA & Frequent Transit](pics/six.png)
+![West Valley Santa Clara County -PDA & Frequent Transit](pics/seven.png)
 
 
 ### Define the Problem Statement  
