@@ -28,6 +28,8 @@ How do we inform the public planning process of the Bay Area HOV/Carpool/Express
 ## Data Sources  
 
 Prior:
+- [data](Data/nada)
+- [data2](Data/nada2)
 
 Update:
 [Bay Area Express Lanes](https://data.bayareametro.gov/dataset/Bay-Area-Express-Lanes-2019-/t7di-4itt)
@@ -44,8 +46,4 @@ Update the BAIFA/Express Lanes Bay Area Online Map for all 9 Bay Area Counties a
 
 Inform the Bay Area of the latest Express Lane projects and developments via [BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/).
 
-
-draft coc 
-- [2018 Communities of Concern - ACS 2016](Data/COCs_ACS2016_tbl.csv)
-- [2018 Communities of Concern - ACS 2016 Geography (Urban Tracts) Web Layer](http://opendata.mtc.ca.gov/datasets/mtc-communities-of-concern-2018-with-american-community-survey-data-2012-2016)
 
