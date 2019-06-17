@@ -2,41 +2,30 @@
 
 Updating the previous [BAIFA Bay Area Express Lanes Online Map](http://bael.mtcanalytics.org/map/) to the latest [BAIFA Bay Area Express Lanes Online Map](http://bael-dev-bucket.s3-website-us-west-2.amazonaws.com/). New express lanes come online, new lanes are being planned, and some lanes being designed and/or constructed.
 
-add prior dataset table:
+Prior dataset map:
 ![BAIFA Bay Area Express Lanes Online Map](pics/one.png)
-prior Express Lanes Network:
+Prior dataset table summary:
 
-|Dataset                           | Open               | Under Construction      | Under Review/Design | Under Review/Design |
-|--------------------------------- |------------------- |--------------------- |------------- |------------- |
-|Alameda       |1,013              |1,156   |2,169   |    |
-|Contra Costa    |353                 |213     |566     |     |
-|Marin |35%   |18%     |26%     |         |
-|Napa |35%   |18%     |26%     |      |
-|San Francisco       |1,013              |1,156   |2,169   |    |
-|San Mateo   |353                 |213     |566     |     |
-|Solano |35%   |18%     |26%     |         |
-|Sonoma |35%   |18%     |26%     |      |
-|Santa Clara       |1,013              |1,156   |2,169   |    |
+|Dataset                           | Lane Miles               | 
+|--------------------------------- |------------------- |
+|Open       |57.9              | 
+|Under Construction    |97.7                | 
+|Under Review/Design  |113.0  | 
+|Future |243.3  |  
+|Total       |511.9              
 
-Source: [above data placeholder](Data/nada3) 
 
-add updated dataset table:
+Updated dataset map:
 ![BAIFA Bay Area Express Lanes Online Map](pics/two.png)
-update Express Lanes Network:
+Updated dataset table summary:
 
-|Dataset                           | Open               | Under Construction      | Under Review/Design | Under Review/Design |
-|--------------------------------- |------------------- |--------------------- |------------- |------------- |
-|Alameda       |1,013              |1,156   |2,169   |    |
-|Contra Costa    |353                 |213     |566     |     |
-|Marin |35%   |18%     |26%     |         |
-|Napa |35%   |18%     |26%     |      |
-|San Francisco       |1,013              |1,156   |2,169   |    |
-|San Mateo   |353                 |213     |566     |     |
-|Solano |35%   |18%     |26%     |         |
-|Sonoma |35%   |18%     |26%     |      |
-|Santa Clara       |1,013              |1,156   |2,169   |    |
-
-Source: [above data placeholder](Data/nada3) 
+|Dataset                           | Prior Lane Miles   | Post Update Lane Miles  |  Percent Change  | 
+|--------------------------------- |------------------- |------------------- |------------------- |
+|Open       |57.9             | 81             | +39.90%             | 
+|Under Construction    |97.7              |  178.2              | +82.40%             | 
+|Under Review/Design  |113.0 |  132.1              | +16.90%              | 
+|Future |243.3  |   240.3             | -1.23%            | 
+|Total       |511.9  | 631.6             | +23.38%             | 
 
 ### Define the Problem Statement  
 
@@ -56,10 +45,6 @@ How do we inform the public planning process of the Bay Area HOV/Carpool/Express
 - [Results](#results)
 
 ## Data Sources  
-
-Prior:
-- [data](Data/nada)
-- [data2](Data/nada2)
 
 Update:
 [Bay Area Express Lanes](https://data.bayareametro.gov/dataset/Bay-Area-Express-Lanes-2019-/t7di-4itt)
