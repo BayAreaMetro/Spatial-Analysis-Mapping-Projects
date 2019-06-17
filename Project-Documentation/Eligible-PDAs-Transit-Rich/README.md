@@ -11,7 +11,7 @@
 
 ### Define the Problem Statement  
 
-Areas within a 1/2 mile from a high frequency transit stop are where land use development are prioritized. If the area around transit stops changes, how do we account for those modifications? What is the definition of 'frequent transit'? In terms of this request and PDA determination, 'frequent transit' refers to a station/stop severed by tranist '15 minutes or less' on weekdays.
+Areas within a 1/2 mile from a high frequency transit stop are where land use development are prioritized. If the area around transit stops changes, how do we account for those modifications? What is the definition of 'frequent transit'? In terms of this request and PDA determination, 'frequent transit' refers to a station/stop severed by transit '15 minutes or less' on weekdays.
 
 ### Project Management 
 
