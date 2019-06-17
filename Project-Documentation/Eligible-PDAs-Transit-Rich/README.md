@@ -11,6 +11,7 @@
 
 ### Define the Problem Statement  
 
+Areas within a 1/2 mile from a high frequency transit stop are where land use development are prioritized. If the area around transit stops changes, how do we account for those modifications? What is the definition of 'frequent transit'? In terms of this request and PDA determination, 'frequent transit' refers to a station/stop severed by tranist '15 minutes or less' on weekdays.
 
 ### Project Management 
 
@@ -26,11 +27,15 @@
 - [Results](#results)
 
 ## Data Sources  
-underdevelopment 
-
+GTFS
+VTA Next Network
+Current/Existing Priority Development Areas (PDAs)
     
 ## Analysis Parameters  
-underdevelopment 
+1. Eligible PDA _15min = Buffer the 15 minute headway bus stops
+2. Erase existing PDA from Eligible PDA _15min
+3. Eligible PDA _30min = Buffer the bus stops with headway greater than 15mins and less than 30mins
+4. Erase Eligible PDA _15min from Eligible PDA _30min 
  
 
 ## Methodology  
