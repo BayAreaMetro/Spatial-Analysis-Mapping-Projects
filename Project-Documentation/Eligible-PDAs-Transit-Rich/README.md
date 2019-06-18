@@ -4,7 +4,7 @@
 ![Existing PDA](https://mtcdrive.box.com/shared/static/mkt7fgz1kyfv1gaszrwmj295hkcbly0m.png)
 
 ##### Eligible PDA based on Passenger Rail and 15 minute or less bus frequency
-![Eligible PDA - 15 minute transit headway](https://mtcdrive.box.com/shared/static/700dwh1o2pynva6puik3pevca9hggp3u.png)
+![Eligible PDA - 15 minute transit headway](https://mtcdrive.box.com/s/700dwh1o2pynva6puik3pevca9hggp3u.png)
 
 ##### Eligible PDA based bus frequency greater than 15 minute but less than 30 mins
 ![Eligible PDA - 30 minute transit headway](https://mtcdrive.box.com/shared/static/9mqjus62l3gnl4wb4pzqz2y8ktktidgr.png)
