@@ -1,7 +1,7 @@
 # Documentation  
 
 ##### Existing PDA
-![Existing PDA](https://mtcdrive.box.com/shared/static/mkt7fgz1kyfv1gaszrwmj295hkcbly0m.png)
+![Existing PDA](https://mtcdrive.box.com/shared/static/mkt7fgz1kyfv1gaszrwmj295hkcbly0m)
 
 ##### Eligible PDA based on Passenger Rail and 15 minute or less bus frequency
 ![Eligible PDA - 15 minute transit headway](https://mtcdrive.box.com/shared/static/700dwh1o2pynva6puik3pevca9hggp3u.png)
@@ -42,11 +42,11 @@ Areas within a 1/2 mile from a high frequency transit stop are where land use de
 - [Results](#results)
 
 ## Data Sources  
-GTFS
-VTA Next Network
-Current/Existing Priority Development Areas (PDAs)
-Current/Existing Transit Priority  Areas (TPAs)
-Current/Existing Priority Conservation Areas (TPAs)
+GTFS  
+VTA Next Network  
+Current/Existing Priority Development Areas (PDAs)  
+Current/Existing Transit Priority  Areas (TPAs)  
+Current/Existing Priority Conservation Areas (TPAs)  
     
 ## Analysis Parameters  
  underdevelopment 
