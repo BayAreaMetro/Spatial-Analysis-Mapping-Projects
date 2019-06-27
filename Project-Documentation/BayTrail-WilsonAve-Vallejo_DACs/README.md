@@ -47,8 +47,7 @@ The California Natural Resources Agency will be accepting proposals for the Gree
  
 ## Analysis Parameters  
 1. Disadvantaged Community - means a community with an annual median household income less than 80 percent of the statewide average  
-2. Severely Disadvantaged Community - means a community with a median household income less than 60 percent of the statewide average  
-Source: ![Parksforcalifornia.org/methods](pics/one.png)  
+2. Severely Disadvantaged Community - means a community with a median household income less than 60 percent of the statewide average   
 
 ## Methodology  
 
