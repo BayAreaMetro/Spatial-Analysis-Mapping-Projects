@@ -10,6 +10,7 @@ Approx how many of those residents are living in (3), (4) disadvantaged communit
 | 1 Total Population               | 2 Total Population    	        | 
 | 3 Population in DACs*            | 4 Population in DACs	        | 
 | 5 Population in S_DACs**         | 6 Population in S_DACs	        | 
+
 *DACs: Disadvantaged communities  
 **S_DACs: Severely disadvantaged communities  
 
@@ -67,6 +68,7 @@ An tabluar summary with an interactive AGOL web map for deeper insights and grou
 | 1 Total Population: 9,836         | 2 Total Population: 14,002  	      | 
 | 3 Population in DACs*: 8,745      | 4 Population in DACs: 8,745         | 
 | 5 Population in S_DACs**: 2,845   | 6 Population in S_DACs: 2,845       |   
+
 *DACs: Disadvantaged communities  
 **S_DACs: Severely disadvantaged communities   
 
