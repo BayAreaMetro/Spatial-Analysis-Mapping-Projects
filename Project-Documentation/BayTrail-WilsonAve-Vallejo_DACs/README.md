@@ -3,13 +3,13 @@
 
 ### Define the Problem Statement  
 How many Vallejo residents live within a (1) half-mile and within a (2) one-mile radius of this location on Wilson Avenue
-Approx how many of those residents are living in (3), (4) disadvantaged communities within half-mile, one-mile (less than 80% of the State's median household income) and (4), (5) severely disadvantaged communities within half-mile, one-mile (less than 60% of the State's median household income)
+Approx how many of those residents are living in (3), (4) disadvantaged communities within half-mile, one-mile (less than 80% of the State's median household income) and (5), (6) severely disadvantaged communities within half-mile, one-mile (less than 60% of the State's median household income)
 
 | Block groups within Half-mile    | Block groups within One-mile   | 
 |----------------------------------|--------------------------------|
-| 1 Total Population               | 2 Total Population    	        | 
-| 3 Population in DACs*            | 4 Population in DACs	        | 
-| 5 Population in S_DACs**         | 6 Population in S_DACs	        | 
+| (1) Total Population               | (2) Total Population    	        | 
+| (3) Population in DACs*            | (4) Population in DACs	        | 
+| (5) Population in S_DACs**         | (6) Population in S_DACs	        | 
 
 *DACs: Disadvantaged communities  
 **S_DACs: Severely disadvantaged communities  
@@ -54,7 +54,8 @@ Source: ![Parksforcalifornia.org/methods](pics/one.png)
 
 1. Buffer 2,400ft Wilson Ave segment of Bay Trail by half-mile, one-mile 
 2. Select by Location the [Census Block Groups Total Population](https://mtcdrive.box.com/s/pfsf6e0wf5rr5rxl345c0v63pwuwvrsv) with in half-mile, one-mile then flag accordingly 
-3. 
+3. Select by Location the [Disadvantaged Communities Block Group Population](https://mtcdrive.box.com/s/79zdmf3lh3v8pzjoq4u0l84hap1doul5) with in half-mile, one-mile then flag accordingly
+4. [Tabular summary](https://mtcdrive.box.com/s/6b3bi4p0k1nomip7jll0tyxjb2n5pcem)
 
 ## Expected Outcomes
 
@@ -65,9 +66,9 @@ An tabluar summary with an interactive AGOL web map for deeper insights and grou
 
 | Block groups within Half-mile     | Block groups within One-mile        | 
 |-----------------------------------|-------------------------------------|
-| 1 Total Population: 9,836         | 2 Total Population: 14,002  	      | 
-| 3 Population in DACs*: 8,745      | 4 Population in DACs: 8,745         | 
-| 5 Population in S_DACs**: 2,845   | 6 Population in S_DACs: 2,845       |   
+| (1) Total Population: 9,836         | (2) Total Population: 14,002  	      | 
+| (3) Population in DACs*: 8,745      | (4) Population in DACs: 8,745         | 
+| (5) Population in S_DACs**: 2,845   | (6) Population in S_DACs: 2,845       |   
 
 *DACs: Disadvantaged communities  
 **S_DACs: Severely disadvantaged communities   
