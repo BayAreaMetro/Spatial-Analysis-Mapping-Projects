@@ -34,7 +34,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [OBAG 2.0 Project Mapping](OBAG-2-Project-Mapping)  
 
-#### [Parcels (2019)](Parcels)
+#### [Parcels (2019)](Parcel)
 
 #### [PDA Employment Businesses](PDA-Employment-Businesses) 
 
