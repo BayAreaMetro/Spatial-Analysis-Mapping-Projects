@@ -9,7 +9,7 @@ Using recently collected zoning data for jurisdictions in the San Francsico Bay 
 
 
 ## Analysis Parameters
-Using residenital zoning capacity (expressed as dwelling units per acre), estimate the number of residneital units that can be built based upon the max number of units that can be built on a parcel given the dwelling units per/acre densities reported by jurisdiction's zoning ordinances for locations within a half-mile of the nearest rail station.  
+Using residenital zoning capacity (expressed as dwelling units per acre), estimate the number of residential units that can be built based upon the max number of units that can be built on a parcel given the dwelling units per/acre densities reported by jurisdiction's zoning ordinances for locations within a half-mile of the nearest rail station.  
 
 Also prepare estimate of housing units by year from 2010 to 2019.  This estimate will also contain estiamtes for the following demographic characteristics for housing:  
 
