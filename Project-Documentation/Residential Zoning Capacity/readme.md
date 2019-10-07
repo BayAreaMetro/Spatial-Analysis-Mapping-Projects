@@ -1,0 +1,26 @@
+**Draft Status: (Draft)**
+
+## Define the Problem Statement
+Using recently collected zoning data for jurisdictions in the San Francsico Bay Area Region, determine residential housing unit capacity within a half mile of existing rail stations across the region.
+
+## Data Sources
+[Jurisdiction Zoning](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/policy-mdm/land-use.md#zoning)
+[Passenger Rail Stations](https://mtc.maps.arcgis.com/home/item.html?id=efd75b7bb3c04dbda06c6e7cd73e9336)
+
+## Analysis Parameters
+Using residenital zoning capacity (expressed as dwelling units per acre), estimate the number of residneital units that can be built based upon the max number of units that can be built on a parcel given the dwelling units per/acre densities reported by jurisdictionbs zoning ordinances for locations within a half-mile of the nearest rail station.  
+
+Create breakout by select transit providers (BART, Caltrain, MUNI, VTA).
+
+## Methodology applied to solve problem  
+Create a BPM Diagram that illustrates the data processing steps used to generate the results.
+
+## Expected Outcomes (if any)?
+The outcome of this analysis should represent total residential capacities within a walkable distance around existing rail stations in the bay area.  
+
+**Note:** As of this posting (October 7, 2019), the residential zoning data is still being confirmed by local jurisdictions.  There are numberous locations across this dataset that have missing or incomplete zoning capacity information.  We are working towards completing this collection and will rerun this analysis once we have a confirmed regional zoning dataset for the 9 county Bay Area region.
+
+## Results  
+The results have been uploaded to ArcGIS Online and can be viewed using the following links:  
+[Interactive Web Map](https://arcg.is/00Lua5)  
+[Excel Workbook]() -- Not Yet Added
