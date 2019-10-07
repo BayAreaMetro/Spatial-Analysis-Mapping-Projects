@@ -25,9 +25,12 @@ Also prepare estimate of housing units by year from 2010 to 2019.  This estimate
 2010 Vacant Housing Units.   
 2010 Vacant Housing Units: Percent.   
 
-Create breakout by select transit providers (BART, Caltrain, MUNI, VTA).
+Create breakout by select transit providers (BART, Caltrain, MUNI, VTA).  
 
 ## Methodology applied to solve problem  
+To determine residential capacity, each jurisdictions residential zoning data was used to calculate the number of allowable units by multiplying the metric **Dwelling Units/Acre X Total Acres** for each given parcel.
+
+### Processing Steps
 Create a BPM Diagram that illustrates the data processing steps used to generate the results. --Not Yet Done
 
 ## Expected Outcomes (if any)?
@@ -38,4 +41,4 @@ The outcome of this analysis should represent total residential capacities withi
 ## Results  
 The results have been uploaded to ArcGIS Online and can be viewed using the following links:  
 [Interactive Web Map](https://arcg.is/00Lua5)  
-[Excel Workbook]() -- Not Yet Added
+[Excel Workbook](https://mtcdrive.box.com/s/2a6c4hwdl5eowq7hgkmysbyku8pf5jx2)
