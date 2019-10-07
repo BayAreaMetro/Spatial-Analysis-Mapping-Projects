@@ -4,8 +4,9 @@
 Using recently collected zoning data for jurisdictions in the San Francsico Bay Area Region, determine residential housing unit capacity within a half mile of existing rail stations across the region.
 
 ## Data Sources
-[Jurisdiction Zoning](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/policy-mdm/land-use.md#zoning)
-[Passenger Rail Stations](https://mtc.maps.arcgis.com/home/item.html?id=efd75b7bb3c04dbda06c6e7cd73e9336)
+[Jurisdiction Zoning](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/policy-mdm/land-use.md#zoning)   
+[Passenger Rail Stations](https://mtc.maps.arcgis.com/home/item.html?id=efd75b7bb3c04dbda06c6e7cd73e9336)  
+
 
 ## Analysis Parameters
 Using residenital zoning capacity (expressed as dwelling units per acre), estimate the number of residneital units that can be built based upon the max number of units that can be built on a parcel given the dwelling units per/acre densities reported by jurisdiction's zoning ordinances for locations within a half-mile of the nearest rail station.  
