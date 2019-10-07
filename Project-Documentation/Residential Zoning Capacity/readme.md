@@ -12,18 +12,18 @@ Using residenital zoning capacity (expressed as dwelling units per acre), estima
 
 Also prepare estimate of housing units by year from 2010 to 2019.  This estimate will also contain estiamtes for the following demographic characteristics for housing:  
 
-2019 Owner Occupied HUs. 
-2019 Owner Occupied HUs: Percent. 
-2019 Renter Occupied HUs. 
-2019 Renter Occupied HUs: Percent. 
-2010 Owner-occupied HUs. 
-2010 Owner-occupied HUs: Percent. 
-2010 Renter-occupied HUs. 
-2010 Renter-occupied HUs: Percent. 
-2019 Vacant Housing Units. 
-2019 Vacant Housing Units: Percent. 
-2010 Vacant Housing Units. 
-2010 Vacant Housing Units: Percent. 
+2019 Owner Occupied HUs.   
+2019 Owner Occupied HUs: Percent.   
+2019 Renter Occupied HUs.   
+2019 Renter Occupied HUs: Percent.   
+2010 Owner-occupied HUs.   
+2010 Owner-occupied HUs: Percent.   
+2010 Renter-occupied HUs.   
+2010 Renter-occupied HUs: Percent.   
+2019 Vacant Housing Units.   
+2019 Vacant Housing Units: Percent.   
+2010 Vacant Housing Units.   
+2010 Vacant Housing Units: Percent.   
 
 Create breakout by select transit providers (BART, Caltrain, MUNI, VTA).
 
