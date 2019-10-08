@@ -14,7 +14,7 @@ Using recently collected zoning data for jurisdictions in the San Francsico Bay 
 Source: Local Jurisdiction Planning Documents, Assessor's Parcel Characteristics for zoning  
 
 **Figure 1. Data Processing Steps**
-![Data Processing Model](images/gp-zn-data-modeling.png)
+![Data Processing Model](https://github.com/BayAreaMetro/DataServices/raw/master/Project-Documentation/mdm/policy-mdm/images/gp-zn-data-modeling.png)
 
 ## Analysis Parameters
 Using residenital zoning capacity (expressed as dwelling units per acre), estimate the number of residential units that can be built based upon the max number of units that can be built on a parcel given the dwelling units per/acre densities reported by jurisdiction's zoning ordinances for locations within a half-mile of the nearest rail station.  
