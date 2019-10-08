@@ -7,12 +7,10 @@ Using recently collected zoning data for jurisdictions in the San Francsico Bay 
 [Jurisdiction Zoning](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/policy-mdm/land-use.md#zoning)   
 [Passenger Rail Stations](https://mtc.maps.arcgis.com/home/item.html?id=efd75b7bb3c04dbda06c6e7cd73e9336)  
 
-
-### Zoning
-[Jurisdiction Zoning Documentation](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/policy-mdm/land-use.md#zoning)
-[Regional Zoning Codes](https://data.bayareametro.gov/Land-Use/Regional-Zoning-Codes-2018/qdrp-c5ra)  
-[Regional Zoning](https://data.bayareametro.gov/Land-Use/Zoning-2018/q2p6-hbrp)  
-[Regional Zoning Map](https://data.bayareametro.gov/Land-Use/Map-of-Zoning-2018-/rw5f-hgez)  
+### Zoning Background Information
+- [Regional Zoning Codes](https://data.bayareametro.gov/Land-Use/Regional-Zoning-Codes-2018/qdrp-c5ra)  (Viewable by MTC Only) 
+- [Regional Zoning](https://data.bayareametro.gov/Land-Use/Zoning-2018/q2p6-hbrp)  (Viewable by MTC Only) 
+- [Regional Zoning Map](https://data.bayareametro.gov/Land-Use/Map-of-Zoning-2018-/rw5f-hgez) (Viewable by MTC Only) 
 Source: Local Jurisdiction Planning Documents, Assessor's Parcel Characteristics for zoning  
 
 **Figure 1. Data Processing Steps**
@@ -23,23 +21,23 @@ Using residenital zoning capacity (expressed as dwelling units per acre), estima
 
 Also prepare estimate of housing units by year from 2010 to 2019.  This estimate will also contain estiamtes for the following demographic characteristics for housing:  
 
-2019 Owner Occupied HUs   
-2019 Owner Occupied HUs: Percent   
-2019 Renter Occupied HUs   
-2019 Renter Occupied HUs: Percent   
-2010 Owner-occupied HUs   
-2010 Owner-occupied HUs: Percent   
-2010 Renter-occupied HUs   
-2010 Renter-occupied HUs: Percent   
-2019 Vacant Housing Units   
-2019 Vacant Housing Units: Percent   
-2010 Vacant Housing Units   
-2010 Vacant Housing Units: Percent   
+- 2019 Owner Occupied HUs   
+- 2019 Owner Occupied HUs: Percent   
+- 2019 Renter Occupied HUs   
+- 2019 Renter Occupied HUs: Percent   
+- 2010 Owner-occupied HUs   
+- 2010 Owner-occupied HUs: Percent   
+- 2010 Renter-occupied HUs   
+- 2010 Renter-occupied HUs: Percent   
+- 2019 Vacant Housing Units   
+- 2019 Vacant Housing Units: Percent   
+- 2010 Vacant Housing Units   
+- 2010 Vacant Housing Units: Percent   
 
 Create breakout by select transit providers (BART, Caltrain, MUNI, VTA).  
 
 ## Methodology applied to solve problem  
-To determine residential capacity, each jurisdictions residential zoning data was used to calculate the number of allowable units by multiplying the metric **Dwelling Units/Acre X Total Acres** for each given parcel.
+To determine residential capacity, each jurisdictions residential zoning data was used to calculate the number of allowable units by multiplying the metric **Dwelling Units/Acre X Total Acres** for each given parcel.  
 
 ### Processing Steps
 Create a BPM Diagram that illustrates the data processing steps used to generate the results. --Not Yet Done
