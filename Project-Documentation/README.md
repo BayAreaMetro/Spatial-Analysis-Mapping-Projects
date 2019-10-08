@@ -56,4 +56,6 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [motm](motm)
 
+#### [Residential Zoning Capacity](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Residential%20Zoning%20Capacity)
+
 > Be sure to update the Table of Contents in this readme.md when adding projects to the repository
