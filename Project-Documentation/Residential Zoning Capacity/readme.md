@@ -10,7 +10,7 @@ Using recently collected zoning data for jurisdictions in the San Francsico Bay 
 ### Zoning Background Information
 - [Regional Zoning Codes](https://data.bayareametro.gov/Land-Use/Regional-Zoning-Codes-2018/qdrp-c5ra)  (Viewable by MTC Only) 
 - [Regional Zoning](https://data.bayareametro.gov/Land-Use/Zoning-2018/q2p6-hbrp)  (Viewable by MTC Only) 
-- [Regional Zoning Map](https://data.bayareametro.gov/Land-Use/Map-of-Zoning-2018-/rw5f-hgez) (Viewable by MTC Only) 
+- [Regional Zoning Map](https://data.bayareametro.gov/Land-Use/Map-of-Zoning-2018-/rw5f-hgez) (Viewable by MTC Only)   
 Source: Local Jurisdiction Planning Documents, Assessor's Parcel Characteristics for zoning  
 
 **Figure 1. Data Processing Steps**
