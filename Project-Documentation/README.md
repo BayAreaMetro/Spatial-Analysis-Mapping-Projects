@@ -14,17 +14,27 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 #### [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)
 
+#### [Bay Trail Wilson Ave Vallejo DACs](Bay-Trail-Wilson-Ave-Vallejo-DACs)
+
+#### [CASA](CASA)
+
 #### [COC TPA Thresholds App](COC-TPA-Thresholds-App)  
 
 #### [Communities of Concern](Communities-of-Concern)  
 
-#### [Data Requests](Data-Requests) 
+#### [Data Requests](Data-Requests)  
+
+#### [Eligible-PDAs-Transit-Rich](Eligible-PDAs-Transit-Rich) 
+
+#### [Express-Lanes](Express-Lanes) 
 
 #### [Hazard-Overlay](Hazard-Overlay)
 
 #### [North Bay Wildfire Mapping](North-Bay-Wildfire-Mapping)
 
 #### [OBAG 2.0 Project Mapping](OBAG-2-Project-Mapping)  
+
+#### [Parcels (2019)](Parcel)
 
 #### [PDA Employment Businesses](PDA-Employment-Businesses) 
 
@@ -45,5 +55,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 #### [Vision Zero](Vision-Zero)
 
 #### [motm](motm)
+
+#### [Residential Zoning Capacity](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Residential%20Zoning%20Capacity)
 
 > Be sure to update the Table of Contents in this readme.md when adding projects to the repository
