@@ -110,8 +110,8 @@ def eligible_flag(percentage):
 arcpy.management.CalculateField(join_output_table, "Eligibility", expression, "PYTHON3", code_block)
 
 # Write report to csv
-output_folder = r'C:\Users\mtcgis\Box\GIS (shapefiles)\PPA_Analysis'
-output_csv = r'Draft_Regional_PPA_2019_Eligibility_Analysis.csv'
+output_folder = r'C:\Users\mtcgis\Box\GIS (shapefiles)\PDA_Analysis'
+output_csv = r'Draft_Regional_PDA_2019_Eligibility_Analysis.csv'
 
 arcpy.TableToTable_conversion(join_output_table, output_folder, output_csv)
 
