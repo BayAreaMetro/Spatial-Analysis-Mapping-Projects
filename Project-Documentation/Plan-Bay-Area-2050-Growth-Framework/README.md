@@ -53,6 +53,21 @@ PDAs, PPAs and PCAs were created following the adopted Plan Bay Area 2050 Growth
 
 ### PDA Eligible Area Development Methodology
 
+### Growth Framework Area Feature Development
+
+As part of the 2019 Priority Area Call for Letters of Interest, jurisdictions throughout the Bay Area submitted letters of interest for new or modified PDAs, PPAs, and PCAs. Jurisdictions submitted shapefiles, and in some cases, PDFs or image files, with the new or modified areas they had selected for evaluation against the Regional Growth Framework. 
+
+Each shapefile received from jurisdictions was projected from the projection it was in to [EPSG:26910](https://spatialreference.org/ref/epsg/nad83-utm-zone-10n/) and added to an ESRI File Geodatabase. It should be noted that features were spatially modified in some cases based on feedback from jurisdictions. PDAs and PPAs features submitted by jurisdictions with right-of-ways clipped or erased out or jurisdictions that submitted parcel-based areas were modified by MTC/ABAG staff so the full extent of the project area, including right of way areas, were analyized. 
+
+***Priority Development Areas***
+
+- [PDA Merge Script](Scripts/PDA-Merge-Script.py)
+- [PDA Eligibility Analysis Script](Scripts/PDA-Eligibility-Analysis.py)
+
+***Priority Production Areas***
+
+***Priority Conservation Areas***
+
 ## Expected Outcomes
 
 ## Results
