@@ -21,11 +21,6 @@ def add_fields(feature_classes, field_mappings):
 	for fc in feature_classes:
 		field_mappings.addTable(fc)
 
-# Create function to multiple fields using a dictionary
-def rename_fields(fc, namesDict, clearAlias):
-	for fieldName in namesDict:
-		arcpy.management.AlterField(fc, fieldName, namesDict[fieldName], clear_field_alias = clearAlias)
-
 # Add all feature classes in project gdb to list
 feature_classes = arcpy.ListFeatureClasses()
 
@@ -33,11 +28,9 @@ feature_classes = arcpy.ListFeatureClasses()
 field_mappings = arcpy.FieldMappings()
 
 # Add all fields from all feature classes
-
 add_fields(feature_classes,field_mappings)
 
 # Remove all output fields from the field mappings, except fields of interest
-
 output_fields = ['Jurisdiction','County','PDA_Name', 'PDA_Changes_2019']
 
 issolate_fields(output_fields, field_mappings)

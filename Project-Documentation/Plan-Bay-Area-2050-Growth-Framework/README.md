@@ -13,7 +13,10 @@ The purpose of this page is to document working related to creating and analyzin
 - [Analysis Parameters](#analysis-parameters)
 	- [Regional Growth Framework Update](#regional-growth-framework-update)
 - [Methdology](#methodology)
-	- [PDA Eligible Area Development](#pda-eligible-area-development-methodology)
+	- [PDA Eligibility Areas](#pda-eligibility-areas)
+	- [Priority Development Areas](#priority-development-areas)
+	- [Priority Production Areas](#priority-production-areas)
+	- [Priority Conservation Areas](#priority-conservation-areas)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
 
@@ -51,27 +54,26 @@ PDAs, PPAs and PCAs were created following the adopted Plan Bay Area 2050 Growth
 
 ## Methodology
 
-### PDA Eligible Area Development Methodology
-
-### Growth Framework Area Feature Development
-
 As part of the 2019 Priority Area Call for Letters of Interest, jurisdictions throughout the Bay Area submitted letters of interest for new or modified PDAs, PPAs, and PCAs. Jurisdictions submitted shapefiles, and in some cases, PDFs or image files, with the new or modified areas they had selected for evaluation against the Regional Growth Framework. 
 
 Each shapefile received from jurisdictions was projected from the projection it was in to [EPSG:26910](https://spatialreference.org/ref/epsg/nad83-utm-zone-10n/) and added to an ESRI File Geodatabase. It should be noted that features were spatially modified in some cases based on feedback from jurisdictions. PDAs and PPAs features submitted by jurisdictions with right-of-ways clipped or erased out or jurisdictions that submitted parcel-based areas were modified by MTC/ABAG staff so the full extent of the project area, including right of way areas, were analyized. 
 
 ***Note: To run scripts, file paths should be updated and all file geodatabases referenced should be copied locally. Scripts should be run within the ArcGIS Pro Python Analysis Window. The ArcGIS Pro project along with project File Geodatabases can be found in the [project folder on Box](https://mtcdrive.box.com/s/37oi8htx8ljxmdxxrqh4qvl3d035r0j5) under Growth Framework Analysis.***
 
-***Priority Development Areas***
+### PDA Eligibility Areas
+
+
+### Priority Development Areas
 
 - [PDA Merge Script](Scripts/PDA_Merge_Script.py)
 - [PDA Eligibility Analysis Script](Scripts/PDA_Eligibility_Analysis.py)
 
-***Priority Production Areas***
+### Priority Production Areas
 
 - [PPA Merge Script](Scripts/PPA_Merge_Script.py)
 - [PPA UC Berkeley Industrial Lands Analysis](Scripts/PPA_Analysis.py)
 
-***Priority Conservation Areas***
+### Priority Conservation Areas
 
 ## Expected Outcomes
 
