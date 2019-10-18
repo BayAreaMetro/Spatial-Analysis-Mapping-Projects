@@ -12,50 +12,30 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 ## Project Table of Contents
 
-#### [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)
-
-#### [Bay Trail Wilson Ave Vallejo DACs](Bay-Trail-Wilson-Ave-Vallejo-DACs)
-
-#### [CASA](CASA)
-
-#### [COC TPA Thresholds App](COC-TPA-Thresholds-App)  
-
-#### [Communities of Concern](Communities-of-Concern)  
-
-#### [Data Requests](Data-Requests)  
-
-#### [Eligible-PDAs-Transit-Rich](Eligible-PDAs-Transit-Rich) 
-
-#### [Express-Lanes](Express-Lanes) 
-
-#### [Hazard-Overlay](Hazard-Overlay)
-
-#### [North Bay Wildfire Mapping](North-Bay-Wildfire-Mapping)
-
-#### [OBAG 2.0 Project Mapping](OBAG-2-Project-Mapping)  
-
-#### [Parcels (2019)](Parcel)
-
-#### [PDA Employment Businesses](PDA-Employment-Businesses) 
-
-#### [Regional Goods Movement](Regional-Goods-Movement)
-
-#### [RTIP 2018](RTIP-2018)
-
-#### [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining)
-
-#### [Single Family Neighborhood Analysis](Single-Family-Neighborhoods_PDA_TPA_Walkable)
-
-#### [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects)
-
-#### [TIP OBAG2 Investment Analysis](TIP-OBAG2-Investment-Analysis)
-
-#### [TMC overlaps and flipped vertices](TMC-overlaps-and-flipped-vertices)
-
-#### [Vision Zero](Vision-Zero)
-
-#### [motm](motm)
-
-#### [Residential Zoning Capacity](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Residential%20Zoning%20Capacity)
-
 > Be sure to update the Table of Contents in this readme.md when adding projects to the repository
+
+| **Project**                                                                              | **Description**                                                                                                                                                                                            |
+|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit)                     | Analysis to evaluate potential high-frequency transit  connections for cyclists commuting on active sections of the Bay Trail.                                                                             |
+| [Bay Trail Wilson Ave Vallejo DACs](BayTrail-Wilson-Ave-Vallejo-DACs)                    | Analysis of Disadvantaged Communities within a half-mile and one-mile of a new Bay Trail facility in Vallejo.                                                                                              |
+| [CASA](CASA)                                                                             | Analysis to identify the geographic impacts of the CASA compact.                                                                                                                                           |
+| [COC TPA Thresholds App](COC-TPA-Thresholds-App)                                         | Documentation for work requested by the CASA Geography Working Group which was formed to identify areas of concern or "sensitive communities" in the 9-County Bay Area.                                    |
+| [Communities of Concern](Communities-of-Concern)                                         | Analysis and mapping of Communities of Concern (CoCs)- the equity analysis framework for Plan Bay Area 2040.                                                                                               |
+| [Data Requests](Data-Requests)                                                           | Ad-hoc mapping or data requests.                                                                                                                                                                           |
+| [Eligible-PDAs-Transit-Rich](Eligible-PDAs-Transit-Rich)                                 | Documentation for mapping of Eligible PDAs created for the purposes of Santa Clara County Outreach Meetings where Priority Development Areas were discussed.                                               |
+| [Express-Lanes](Express-Lanes)                                                           | Documentation for mapping of latest BAIFA Bay Area Express Lanes Online Map.                                                                                                                               |
+| [Hazard-Overlay](Hazard-Overlay)                                                         | Documentation for mapping of geological hazards and development of mapping application allowing users to search for an address to determine whether or not the location is impacted by geological hazards. |
+| [North Bay Wildfire Mapping](North-Bay-Wildfire-Mapping)                                 | Analysis of areas affected by 2017 North Bay Wildfires.                                                                                                                                                    |
+| [OBAG 2.0 Project Mapping](OBAG-2-Project-Mapping)                                       | Documentation for mapping of One Bay Area Grant (OBAG) 2.0 projects prepared and developed for public dissemination.                                                                                       |
+| [Parcels (2019)](Parcel)                                                                 | Documentation related to the creation of San Francisco Bay Region Parcels which are the base unit of analysis for much of the analysis work performed by MTC's Regional Planning Program.                  |
+| [Play Bay Area 2050 Growth Framework](Plan-Bay-Area-2050-Growth-Framework)               | Analysis and mapping of Priority Development Areas, Priority Production Areas, and Priority Conservation Areas. PDAs, PPAs, and PCAs comprise Plan Bay Area 2050's Regional Growth Framework.              |
+| [Regional Goods Movement](Regional-Goods-Movement)                                       | Documentation for mapping and analysis of bicycle and pedestrian facilities built since 2009 in the Bay Area.                                                                                              |
+| [RTIP 2018](RTIP-2018)                                                                   | Documentation for mapping of 2018 Retional Transportation Improvement Program (RTIP) projects.                                                                                                             |
+| [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining)             | Analysis to develop a geographic feature overlay which represents geographies within the Bay Area which are excluded from recently pased SB-35 Affordable Housing Streamlining Bill.                       |
+| [Single Family Neighborhood Analysis](Single-Family-Neighborhoods_PDA_TPA_Walkable)      | Analysis of single-family neighborhoods within Priority Development Areas and Transit Priority Areas.                                                                                                      |
+| [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects) | Mapping and analysis of small UZA/Rural Area section 5310 projects.                                                                                                                                        |
+| [TIP OBAG2 Investment Analysis](TIP-OBAG2-Investment-Analysis)                           | Analysis of OBAG 2.0 projects within PDAs/TPAs and outside PDAs/TPAs.                                                                                                                                      |
+| [TMC overlaps and flipped vertices](TMC-overlaps-and-flipped-vertices)                   | Documentation of fixes for INRIX data used to support Vital Signs Congestion metrics.                                                                                                                      |
+| [Vision Zero](Vision-Zero)                                                               | Analysis and mapping of SWITRS/TIMS 'high injury' network for the Bay Area.                                                                                                                                |
+| [Map of the Month](motm)                                                                 | Documentation and analysis in support of the Executive Director's Map of the Month.                                                                                                                        |
+| [Residential Zoning Capacity](Residential-Zoning-Capacity)                               | Analysis to determine residential housing unit capacity within half-mile of existing rail stations in the Bay Area.                                                                                        |
