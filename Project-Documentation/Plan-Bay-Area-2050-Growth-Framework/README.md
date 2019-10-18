@@ -61,8 +61,8 @@ Each shapefile received from jurisdictions was projected from the projection it 
 
 ***Priority Development Areas***
 
-- [PDA Merge Script](Scripts/PDA-Merge-Script.py)
-- [PDA Eligibility Analysis Script](Scripts/PDA-Eligibility-Analysis.py)
+- [PDA Merge Script](Scripts/PDA Merge Script.py)
+- [PDA Eligibility Analysis Script](Scripts/PDA Eligibility Analysis.py)
 
 ***Priority Production Areas***
 
