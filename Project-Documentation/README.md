@@ -12,7 +12,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 ## Project Table of Contents
 
-> Be sure to update the Table of Contents in this readme.md when adding projects to the repository
+> Be sure to update the Table of Contents in this readme.md when adding projects to the repository. Projects should be in alphabetical order. To update markdown text easily, use this [Table Markdown Generator](https://www.tablesgenerator.com/markdown_tables) which converts from markdown to an easy-to-use table format. Add a row and description then select generate and replace the markdown code below with updated table. 
 
 | **Project**                                                                              | **Description**                                                                                                                                                                                            |
 |------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
