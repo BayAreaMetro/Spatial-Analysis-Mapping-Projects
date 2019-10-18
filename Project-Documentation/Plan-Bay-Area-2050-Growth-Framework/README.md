@@ -59,12 +59,17 @@ As part of the 2019 Priority Area Call for Letters of Interest, jurisdictions th
 
 Each shapefile received from jurisdictions was projected from the projection it was in to [EPSG:26910](https://spatialreference.org/ref/epsg/nad83-utm-zone-10n/) and added to an ESRI File Geodatabase. It should be noted that features were spatially modified in some cases based on feedback from jurisdictions. PDAs and PPAs features submitted by jurisdictions with right-of-ways clipped or erased out or jurisdictions that submitted parcel-based areas were modified by MTC/ABAG staff so the full extent of the project area, including right of way areas, were analyized. 
 
+***Note: To run scripts, file paths should be updated and all file geodatabases referenced should be copied locally. Scripts should be run within the ArcGIS Pro Python Analysis Window. The ArcGIS Pro project along with project File Geodatabases can be found in the [project folder on Box](https://mtcdrive.box.com/s/37oi8htx8ljxmdxxrqh4qvl3d035r0j5) under Growth Framework Analysis.***
+
 ***Priority Development Areas***
 
 - [PDA Merge Script](Scripts/PDA_Merge_Script.py)
 - [PDA Eligibility Analysis Script](Scripts/PDA_Eligibility_Analysis.py)
 
 ***Priority Production Areas***
+
+- [PPA Merge Script](Scripts/PPA_Merge_Script.py)
+- [PPA UC Berkeley Industrial Lands Analysis](Scripts/PPA_Analysis.py)
 
 ***Priority Conservation Areas***
 
