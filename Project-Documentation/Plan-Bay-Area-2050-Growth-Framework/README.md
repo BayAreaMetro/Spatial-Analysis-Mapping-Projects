@@ -10,6 +10,10 @@ The purpose of this page is to document working related to creating and analyzin
 
 ### Table of Contents
 - [Data Sources](#data-sources)
+	- [Priority Development Area Data](#priority-development-area-data)
+	- [Priority Production Area Data](#priority-production-area-data)
+	- [PDA Eligible Area Data Sources](#pda-eligibile-area-data-sources)
+	- [PPA Eligible Area Data Sources](#ppa-eligible-area-data-sources)
 - [Analysis Parameters](#analysis-parameters)
 	- [Regional Growth Framework Update](#regional-growth-framework-update)
 	- [PDA Eligible Area Criteria](#pda-eligible-area-criteria)
@@ -22,6 +26,12 @@ The purpose of this page is to document working related to creating and analyzin
 - [Results](#results)
 
 ## Data Sources
+
+### Priority Development Area Data
+
+- [Priority Development Areas (current)](http://opendata.mtc.ca.gov/datasets/priority-development-areas-current)
+
+### Priority Production Area Data
 
 ### PDA Eligible Area Data Sources
 ***MTC Data***
@@ -70,18 +80,19 @@ PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#p
 2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected. 
 
 **Connected Community/High Resource Area Feature**
-1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources)layer. 
+1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
 3. Clip to [CTCAC/HCD Resource Opportunity Areas](#pda-eligible-area-data-sources)
 4. Erase areas overlapping with Transit-Rich Areas.
 
 **Connected Community/Outside High Resource Area Feature**
-1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources)layer. 
+1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
 3. Erase areas overlapping with Transit-Rich and Connected Community/High Resource Areas. 
 
 ### Priority Development Areas
 
+Priority Development Areas were created by merging new and modified PDAs submitted by jurisdictions along with existing PDAs from Plan Bay Area 2050.  
 - [PDA Merge Script](Scripts/PDA_Merge_Script.py)
 - [PDA Eligibility Analysis Script](Scripts/PDA_Eligibility_Analysis.py)
 
