@@ -12,6 +12,7 @@ The purpose of this page is to document working related to creating and analyzin
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
 	- [Regional Growth Framework Update](#regional-growth-framework-update)
+	- [PDA Eligible Area Criteria](#pda-eligible-area-criteria)
 - [Methdology](#methodology)
 	- [PDA Eligibility Areas](#pda-eligibility-areas)
 	- [Priority Development Areas](#priority-development-areas)
@@ -32,9 +33,9 @@ The purpose of this page is to document working related to creating and analyzin
 - [CTCAC/HCD Resource Opportunity Areas (2019) Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=cfe23ff6e81d483f90c65fb0eba7db2e#overview)
 
 ### PPA Eligible Area Data Sources
-***University of California - Berkeley, ABAG, MTC Industrial Land Study***
-- [Link to Study]()
-- [Link to Data]()
+***University of California - Berkeley, ABAG, MTC Industrial Land Retention and Investment in the San Francisco Bay Area***
+- [PPA Eligible Area Data](https://mtc.maps.arcgis.com/home/item.html?id=66a151ee5e6e453e9c5a19b31198554e)
+- [Link to Study](https://mtcdrive.box.com/s/n005i0h3xyu301hdrepqjf8dz8qm73ih)
 
 ## Analysis Parameters 
 
@@ -44,7 +45,7 @@ PDAs, PPAs and PCAs were created following the adopted Plan Bay Area 2050 Growth
 
 - [2019 Regional Growth Framework Update](https://www.planbayarea.org/sites/default/files/pdfs_referenced/2019_Regional_Growth_Framework_Update_-_Whats_Changed.pdf)
 
-***Detailed Criteria for Development of PDA Eligibility Areas***
+### PDA Eligible Area Criteria
 
 | **Designation**                                  | **Criteria**                                                                                                                                                                     |
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -62,6 +63,22 @@ Each shapefile received from jurisdictions was projected from the projection it 
 
 ### PDA Eligibility Areas
 
+PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#pda-eligible-area-criteria).
+
+**Transit-Rich**
+1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. 
+2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected. 
+
+**Connected Community/High Resource Area Feature**
+1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources)layer. 
+2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
+3. Clip to [CTCAC/HCD Resource Opportunity Areas](#pda-eligible-area-data-sources)
+4. Erase areas overlapping with Transit-Rich Areas.
+
+**Connected Community/Outside High Resource Area Feature**
+1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources)layer. 
+2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
+3. Erase areas overlapping with Transit-Rich and Connected Community/High Resource Areas. 
 
 ### Priority Development Areas
 
