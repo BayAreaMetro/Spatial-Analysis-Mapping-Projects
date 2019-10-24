@@ -76,7 +76,6 @@ fc_to_fc_args = {'in_features': ppa_elig_join,
 arcpy.FeatureClassToFeatureClass_conversion(**fc_to_fc_args)
 
 # Summarize PPA intersect areas by PPA name to get total PPA area that intersect UC Berkeley IL Areas
-
 in_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PPA_2019_Eligibility_Analysis'
 out_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PPA_2019_Sum_Acres_Intersect_UCB'
 statistics_fields = [['Acres_intersect','SUM']]
@@ -90,7 +89,6 @@ summary_stats_args = {'in_table': in_table,
 arcpy.Statistics_analysis(**summary_stats_args)
 
 # Create weighted average field
-
 add_field_args = {'in_table': in_table,
 'field_name': 'Weighted_Avg',
 'field_type': 'DOUBLE',
@@ -105,7 +103,6 @@ add_field_args = {'in_table': in_table,
 arcpy.management.AddField(**add_field_args)
 
 # Join back to PPA Eligibility Analysis Table 
-
 in_layer = r'Draft_Regional_PPA_2019_Eligibility_Analysis'
 join_table = r'Draft_Regional_PPA_2019_Sum_Acres_Intersect_UCB'
 
@@ -119,7 +116,6 @@ join_args = {'in_layer_or_view': in_layer,
 arcpy.AddJoin_management(**join_args)
 
 # Calculate weighted average field
-
 expression = '!Draft_Regional_PPA_2019_Eligibility_Analysis.Total_Criteria! * (!Draft_Regional_PPA_2019_Eligibility_Analysis.Acres_Intersect!/!Draft_Regional_PPA_2019_Sum_Acres_Intersect_UCB.SUM_Acres_Intersect!)'
 field_name = 'Weighted_Avg'
 
@@ -132,7 +128,6 @@ calc_field_args = {'in_table': in_layer,
 arcpy.management.CalculateField(**calc_field_args)
 
 # Remove Join
-
 arcpy.RemoveJoin_management(in_layer, join_table)
 
 # Write report to csv
