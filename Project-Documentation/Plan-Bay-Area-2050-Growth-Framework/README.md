@@ -92,7 +92,7 @@ PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#p
 
 ### Priority Development Areas
 
-Priority Development Areas were created by merging new and modified PDAs submitted by jurisdictions along with existing PDAs from Plan Bay Area 2050. The script referenced below provides more granular detail about the steps taken to develop the merged layer.  
+Priority Development Areas were created by merging new and modified PDAs submitted by jurisdictions along with existing PDAs from Plan Bay Area 2040. The script referenced below provides more granular detail about the steps taken to develop the merged layer.  
 - [PDA Merge Script](Scripts/PDA_Merge_Script.py)
 
 Priority Development Area eligibility was determined following the [PDA Eligible Area Criteria](#pda-eligible-area-criteria). Additionally, PDAs met eligibility criteria if their area intersected the PDA Eligible Area by 50% or more. The script referenced below provides more granular detail about the analysis process. 
@@ -100,7 +100,10 @@ Priority Development Area eligibility was determined following the [PDA Eligible
 
 ### Priority Production Areas
 
+Priority Production Areas were created by merging PPAs submitted by jurisdictions. The script referenced below provides more granular detail about the steps taken to develop the merged layer. 
 - [PPA Merge Script](Scripts/PPA_Merge_Script.py)
+
+Priority Production Areas were summarized by [UC Berkeley Industrial Land Study Area](#ppa-eligible-area-data-sources) criteria and a weighted average calculated for PPAs within UC Berkeley Industrial Land Study areas. The Script referenced below provides more granular detail about the steps taken to perform the analysis. 
 - [PPA UC Berkeley Industrial Lands Analysis](Scripts/PPA_Analysis.py)
 
 ### Priority Conservation Areas
