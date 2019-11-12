@@ -25,10 +25,10 @@ def rename_fields(fc, namesDict, clearAlias):
 
 # Summarize PDAs within PDA Eligible Areas Feature Class
 pda_fc = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Regional_PDA_2019_Repaired'
-in_sum_features = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\PDA_Eligible_Areas'
+in_sum_features = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\PDA_Eligible_Areas_11_7_19'
 out_feature_class = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility'
 group_field = 'Designation'
-out_group_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility_Designation'
+out_group_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility_Designation_Summary_Table'
 
 summarize_within_args = {'in_polygons': pda_fc,
 'in_sum_features': in_sum_features,
@@ -46,34 +46,37 @@ arcpy.SummarizeWithin_analysis(**summarize_within_args)
 
 # Rename fields in join table created based on PDA Eligible Areas Designation field
 
-names_dict = {'SUM_area_ACRES':'Acres_Intersect','PercentArea':'Percent_Intersect'}
+names_dict = {'Join_ID':'Summary_ID','SUM_area_ACRES':'Acres_Intersect','PercentArea':'Percent_Intersect'}
 clear_alias = 'TRUE'
 
 rename_fields(out_group_table,names_dict,clear_alias)
 
 # Join to PDA summary feature class created as result of Sumarize Within step
-join_args = {'in_layer_or_view': out_feature_class,
+in_layer = 'Draft_Regional_PDA_2019_Eligibility'
+join_table = 'Draft_Regional_PDA_2019_Eligibility_Designation_Summary_Table'
+
+join_args = {'in_layer_or_view': in_layer,
 'in_field': 'Join_ID',
-'join_table': out_group_table,
-'join_field': 'Join_ID',
+'join_table': join_table,
+'join_field': 'Summary_ID',
 'join_type': 'KEEP_ALL'
 }
 
-pda_elig_join = arcpy.AddJoin_management(**join_args)
+arcpy.AddJoin_management(**join_args)
 
 # Copy joined table to file geodatabase
 join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
-join_output_table = r'Draft_Regional_PDA_Designation_2019'
+join_output_table = r'Draft_Regional_PDA_Eligibility_Summary_2019'
 elg_analysis_field_mapping = arcpy.FieldMappings()
-elg_analysis_final_fields = ['County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
+elg_analysis_final_fields = ['Join_ID','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
 
-elg_analysis_field_mapping.addTable(pda_elig_join)
+elg_analysis_field_mapping.addTable(in_layer)
 
 issolate_fields(elg_analysis_final_fields, elg_analysis_field_mapping)
 
 #arcpy.TableToTable_conversion(pda_elig_join, join_output_location, join_output_table, None, elg_analysis_field_mapping)
 
-fc_to_fc_args = {'in_features': pda_elig_join,
+fc_to_fc_args = {'in_features': in_layer,
 'out_path':join_output_location,
 'out_name':join_output_table,
 'where_clause': None,
@@ -82,32 +85,88 @@ fc_to_fc_args = {'in_features': pda_elig_join,
 
 arcpy.FeatureClassToFeatureClass_conversion(**fc_to_fc_args)
 
+# Remove Join
+arcpy.RemoveJoin_management(in_layer, join_table)
+
+#Create pivot table so designation percent intersect become columns
+in_table = 'Draft_Regional_PDA_Eligibility_Summary_2019'
+fields = ['Join_ID']
+pivot_field = 'Designation'
+value_field = 'Percent_Intersect'
+out_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_Eligibility_Pivot_2019'
+
+pivot_field_args = {'in_table': in_table,
+'fields': fields,
+'pivot_field': pivot_field,
+'value_field': value_field,
+'out_table': out_table}
+
+arcpy.PivotTable_management(**pivot_field_args)
+
 # Add field for eligibility flag
-add_field_args = {'in_table': join_output_table,
-'field_name': 'Eligibility',
+add_field_args = {'in_table': out_table,
+'field_name': 'Designation',
 'field_type': 'TEXT',
 'field_precision': None,
 'field_length': None,
 'field_length': 50,
-'field_alias': 'Eligibility',
+'field_alias': 'Designation',
 'field_is_nullable': 'NULLABLE',
 'field_is_required': 'NON_REQUIRED',
 'field_domain': None}
 
 arcpy.management.AddField(**add_field_args)
 
-# Calculate eligibility field to determine if PDAs meet criteria of 50% or more within eligibility area 
-expression = 'eligible_flag(!Percent_Intersect!)'
-code_block = """ 
-def eligible_flag(percentage):
-	if percentage is None:
-		return 'Does Not Meet Eligibility Criteria'
-	elif percentage >= 50:
-		return 'Meets Eligibility Criteria'
-	else:
-		return 'Does Not Meet Eligibility Criteria'"""
+#Rename Join_ID field to PDA_ID
+names_dict = {'Join_ID':'PDA_ID'}
+clear_alias = 'TRUE'
 
-arcpy.management.CalculateField(join_output_table, "Eligibility", expression, "PYTHON3", code_block)
+rename_fields(out_table,names_dict,clear_alias)
+
+# Calculate eligibility field to determine if PDAs meet criteria of 50% or more within eligibility area 
+expression = 'designation_criteria(!Connected_Community_Outside_High_Resource_Area!,!Connected_Community_Within_High_Resource_Area!,!Transit_Rich_Outside_High_Resource_Area!,!Transit_Rich_Within_High_Resource_Area!)'
+code_block = """ 
+def designation_criteria(conncomm_nonhra, conncomm_hra, trans_rich_nonhra, trans_rich_hra):
+    if int(0 if conncomm_nonhra is None else conncomm_nonhra) >= 50:
+        return 'Connected Community Outside HRA'
+    if int(0 if conncomm_hra is None else conncomm_hra) >= 50:
+        return 'Connected Community Within HRA'
+    if int(0 if trans_rich_nonhra is None else trans_rich_nonhra) >= 50:
+        return 'Transit-Rich'
+    if int(0 if trans_rich_hra is None else trans_rich_hra) >= 50:
+        return 'Transit-Rich'
+    if int(0 if trans_rich_nonhra is None else trans_rich_nonhra) + int(0 if trans_rich_hra is None else trans_rich_hra) >= 50:
+        return 'Transit-Rich'
+    if int(0 if conncomm_hra is None else conncomm_hra) + int(0 if trans_rich_hra is None else trans_rich_hra) >= 50:
+        return 'Connected Community Within HRA'
+    if int(0 if conncomm_nonhra is None else conncomm_nonhra) + int(0 if trans_rich_nonhra is None else trans_rich_nonhra) >= 50:
+        return 'Connected Community Outside HRA'"""
+
+arcpy.management.CalculateField(out_table, "Designation", expression, "PYTHON3", code_block)
+
+# Copy joined table to file geodatabase
+join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
+join_output_table = r'Draft_Regional_PDA_Designation_2019'
+designation_field_mapping = arcpy.FieldMappings()
+designation_final_fields = ['PDA_ID','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Connected_Community_Outside_High_Resource_Area','Connected_Community_Within_High_Resource_Area','Transit_Rich_Within_High_Resource_Area','Transit_Rich_Outside_High_Resource_Area']
+
+elg_analysis_field_mapping.addTable(in_layer)
+
+issolate_fields(designation_final_fields, designation_field_mapping)
+
+#arcpy.TableToTable_conversion(pda_elig_join, join_output_location, join_output_table, None, elg_analysis_field_mapping)
+
+fc_to_fc_args = {'in_features': in_layer,
+'out_path':join_output_location,
+'out_name':join_output_table,
+'where_clause': None,
+'field_mapping':elg_analysis_field_mapping
+}
+
+arcpy.FeatureClassToFeatureClass_conversion(**fc_to_fc_args)
+
+# Remove Join
+arcpy.RemoveJoin_management(in_layer, join_table)
 
 # Write report to csv
 output_folder = r'C:\Users\mtcgis\Box\GIS (shapefiles)\PDA_Analysis'
