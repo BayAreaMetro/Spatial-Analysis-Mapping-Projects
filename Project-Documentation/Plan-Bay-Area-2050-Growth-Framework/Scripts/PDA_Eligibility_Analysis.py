@@ -68,7 +68,7 @@ arcpy.AddJoin_management(**join_args)
 join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
 join_output_table = r'Draft_Regional_PDA_Eligibility_Summary_2019'
 elg_analysis_field_mapping = arcpy.FieldMappings()
-elg_analysis_final_fields = ['Join_ID','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
+elg_analysis_final_fields = ['Join_Key','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
 
 elg_analysis_field_mapping.addTable(in_layer)
 
@@ -144,13 +144,26 @@ def designation_criteria(conncomm_nonhra, conncomm_hra, trans_rich_nonhra, trans
 
 arcpy.management.CalculateField(out_table, "Designation", expression, "PYTHON3", code_block)
 
+# Join to PDA summary feature class created as result of Sumarize Within step
+in_layer = 'Draft_Regional_PDA_2019_Eligibility'
+join_table = 'Draft_Regional_PDA_Eligibility_Pivot_2019'
+
+join_args = {'in_layer_or_view': in_layer,
+'in_field': 'Join_ID',
+'join_table': join_table,
+'join_field': 'PDA_ID',
+'join_type': 'KEEP_ALL'
+}
+
+arcpy.AddJoin_management(**join_args)
+
 # Copy joined table to file geodatabase
 join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
 join_output_table = r'Draft_Regional_PDA_Designation_2019'
 designation_field_mapping = arcpy.FieldMappings()
-designation_final_fields = ['PDA_ID','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Connected_Community_Outside_High_Resource_Area','Connected_Community_Within_High_Resource_Area','Transit_Rich_Within_High_Resource_Area','Transit_Rich_Outside_High_Resource_Area']
+designation_final_fields = ['Join_Key','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Connected_Community_Outside_High_Resource_Area','Connected_Community_Within_High_Resource_Area','Transit_Rich_Within_High_Resource_Area','Transit_Rich_Outside_High_Resource_Area']
 
-elg_analysis_field_mapping.addTable(in_layer)
+designation_field_mapping.addTable(in_layer)
 
 issolate_fields(designation_final_fields, designation_field_mapping)
 
@@ -160,7 +173,7 @@ fc_to_fc_args = {'in_features': in_layer,
 'out_path':join_output_location,
 'out_name':join_output_table,
 'where_clause': None,
-'field_mapping':elg_analysis_field_mapping
+'field_mapping':designation_field_mapping
 }
 
 arcpy.FeatureClassToFeatureClass_conversion(**fc_to_fc_args)
@@ -168,9 +181,35 @@ arcpy.FeatureClassToFeatureClass_conversion(**fc_to_fc_args)
 # Remove Join
 arcpy.RemoveJoin_management(in_layer, join_table)
 
+# Add join to CTA Transit Improvement Table 
+join_table = 'PDA_Calculated_Designations'
+
+join_args = {'in_layer_or_view': join_output_table,
+'in_field': 'Join_Key',
+'join_table': join_table,
+'join_field': 'PDA_ID',
+'join_type': 'KEEP_ALL'
+}
+
+arcpy.AddJoin_management(**join_args)
+
+# Calculate Designation field based on whether or not the PDA has a CTA Transit Improvement
+expression = 'transit_designation(!Draft_Regional_PDA_Designation_2019.Designation!,!PDA_Calculated_Designations.Designation!,!PDA_Calculated_Designations.CTA_Transit_Improvement!)'
+code_block = """
+def transit_designation(designation, improv_designation, flag_field):
+    if flag_field == 'Y':
+        return improv_designation
+    else:
+        return designation"""
+
+arcpy.management.CalculateField(join_output_table, "Designation", expression, "PYTHON3", code_block)
+
+# Remove Join
+arcpy.RemoveJoin_management(join_output_table, join_table)
+
 # Write report to csv
 output_folder = r'C:\Users\mtcgis\Box\GIS (shapefiles)\PDA_Analysis'
-output_csv = r'Draft_Regional_PDA_2019_Eligibility_Analysis.csv'
+output_csv = r'Draft_Regional_PDA_2019_Designation_11_18_19.csv'
 
 arcpy.TableToTable_conversion(join_output_table, output_folder, output_csv)
 
