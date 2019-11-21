@@ -68,7 +68,7 @@ arcpy.AddJoin_management(**join_args)
 join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
 join_output_table = r'Draft_Regional_PDA_Eligibility_Summary_2019'
 elg_analysis_field_mapping = arcpy.FieldMappings()
-elg_analysis_final_fields = ['Join_Key','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
+elg_analysis_final_fields = ['Join_Key','Join_ID','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
 
 elg_analysis_field_mapping.addTable(in_layer)
 
@@ -209,7 +209,7 @@ arcpy.RemoveJoin_management(join_output_table, join_table)
 
 # Write report to csv
 output_folder = r'C:\Users\mtcgis\Box\GIS (shapefiles)\PDA_Analysis'
-output_csv = r'Draft_Regional_PDA_2019_Designation_11_18_19.csv'
+output_csv = r'Draft_Regional_PDA_2019_Designation_11_20_19.csv'
 
 arcpy.TableToTable_conversion(join_output_table, output_folder, output_csv)
 
