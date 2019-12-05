@@ -22,6 +22,7 @@ The purpose of this page is to document working related to creating and analyzin
 	- [Priority Development Areas](#priority-development-areas)
 	- [Priority Production Areas](#priority-production-areas)
 	- [Priority Conservation Areas](#priority-conservation-areas)
+- [Methodology Exceptions](#methodology-exceptions)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
 
@@ -108,6 +109,20 @@ Priority Production Areas were summarized by [UC Berkeley Industrial Land Study 
 
 ### Priority Conservation Areas
 
+## Methodology Exceptions
+
+The DataViz team followed the criteria defined above to designate PDAs as Transit-Rich, Connected Community within High Resource Area, or Connected Community outside High Resource Area. The model used to evaluate eligibility and designate PDAs can be explored in-depth by reviewing the [PDA Eligibility Analysis Script](Scripts/PDA_Eligibility_Analysis.py). To qualify, PDAs needed to be at least 50% within a Transit-Rich, Connected Community within High Resource Area, or Connected Community outside a High Resource Area. 
+
+Two jurisdictions PDAs did not qualify as Transit-Rich following our methodology. 
+
+**Downtown Gilroy PDA** 
+Following our model, the Downtown Gilroy Gilroy PDA was close to becoming designated a Transit-Rich PDA as it fell 49.87% within the Transit-Rich eligibility area. The model designated Downtown Gillroy as a Connected Commuity Outside a High Resource Area as it was 70.93% within the Connected Community outside a High Resource Area. This PDA was quite close to meeting the criteria for Transit-Rich and was therefore designated as a Transit-Rich PDA. 
+
+**Petaluma Corona PDA**
+Folliwng our model, the Corona PDA was 41.53% within a Transit-Rich eligiblity area. The model designated the Corona PDa as a Connected Community Outside a High Resource Area as it was 76.55% within the Connected Community outside a High Resource Area. Using the jurisdictions methodology of buffering around the station parcel vs. our methdology of bufering around the center point of the station, the Corona PDA was 55.23% within a Transit-Rich Area. The Corona PDA was therefore designated as a Transit-Rich PDA using the methdology put forward by the jurisdcition. The map showing the different methodologies employed can be viewed [here](https://mtcdrive.box.com/s/0tykn1cantz4gavm4b65koqynf1u4pym). 
+
 ## Expected Outcomes
 
 ## Results
+
+
