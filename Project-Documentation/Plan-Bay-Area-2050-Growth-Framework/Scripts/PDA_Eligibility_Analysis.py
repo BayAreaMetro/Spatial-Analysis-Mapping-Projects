@@ -2,7 +2,7 @@ import arcpy
 import os
 
 #Define the workspace
-arcpy.env.workspace = r"\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\PDA_Analysis.gdb"
+arcpy.env.workspace = r"\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\PDA_Analysis.gdb"
 
 #Allow features and files to be overwritten 
 arcpy.env.overwriteOutput = True
@@ -24,11 +24,11 @@ def rename_fields(fc, namesDict, clearAlias):
 		arcpy.management.AlterField(fc, fieldName, namesDict[fieldName], clear_field_alias = clearAlias)
 
 # Summarize PDAs within PDA Eligible Areas Feature Class
-pda_fc = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Regional_PDA_2019_Repaired'
-in_sum_features = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\PDA_Eligible_Areas_11_7_19'
-out_feature_class = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility'
+pda_fc = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Regional_PDA_2019_Repaired'
+in_sum_features = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\PDA_Eligible_Areas_11_7_19'
+out_feature_class = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility'
 group_field = 'Designation'
-out_group_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility_Designation_Summary_Table'
+out_group_table = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_2019_Eligibility_Designation_Summary_Table'
 
 summarize_within_args = {'in_polygons': pda_fc,
 'in_sum_features': in_sum_features,
@@ -65,7 +65,7 @@ join_args = {'in_layer_or_view': in_layer,
 arcpy.AddJoin_management(**join_args)
 
 # Copy joined table to file geodatabase
-join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
+join_output_location = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
 join_output_table = r'Draft_Regional_PDA_Eligibility_Summary_2019'
 elg_analysis_field_mapping = arcpy.FieldMappings()
 elg_analysis_final_fields = ['Join_Key','Join_ID','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Acres_Intersect','Percent_Intersect']
@@ -93,7 +93,7 @@ in_table = 'Draft_Regional_PDA_Eligibility_Summary_2019'
 fields = ['Join_ID']
 pivot_field = 'Designation'
 value_field = 'Percent_Intersect'
-out_table = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_Eligibility_Pivot_2019'
+out_table = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb\Draft_Regional_PDA_Eligibility_Pivot_2019'
 
 pivot_field_args = {'in_table': in_table,
 'fields': fields,
@@ -158,7 +158,7 @@ join_args = {'in_layer_or_view': in_layer,
 arcpy.AddJoin_management(**join_args)
 
 # Copy joined table to file geodatabase
-join_output_location = r'\\Mac\Home\Documents\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
+join_output_location = r'\\Mac\Home\Documents\Section\Planning\Growth_Framework_Analysis\Growth_Framework_Analysis_Areas.gdb'
 join_output_table = r'Draft_Regional_PDA_Designation_2019'
 designation_field_mapping = arcpy.FieldMappings()
 designation_final_fields = ['Join_Key','County','Jurisdiction','PDA_Name', 'PDA_Changes_2019','Designation','Connected_Community_Outside_High_Resource_Area','Connected_Community_Within_High_Resource_Area','Transit_Rich_Within_High_Resource_Area','Transit_Rich_Outside_High_Resource_Area']
@@ -208,8 +208,8 @@ arcpy.management.CalculateField(join_output_table, "Designation", expression, "P
 arcpy.RemoveJoin_management(join_output_table, join_table)
 
 # Write report to csv
-output_folder = r'C:\Users\mtcgis\Box\GIS (shapefiles)\PDA_Analysis'
-output_csv = r'Draft_Regional_PDA_2019_Designation_11_20_19.csv'
+output_folder = r'Z:\Box\GIS (shapefiles)\PDA_Analysis'
+output_csv = r'Draft_Regional_PDA_2019_Designation_01_03_20.csv'
 
 arcpy.TableToTable_conversion(join_output_table, output_folder, output_csv)
 
