@@ -5,10 +5,10 @@
 
 ## Table of contents
 
-- [Publishing Draft or Intermediate Content to Internal or External Audiences](#publishing-draft-or-intermediate-content-to-internal-or-external-audiences)
+- [**(For All Users)** Publishing Draft or Intermediate Content to Internal or External Audiences](#publishing-draft-or-intermediate-content-to-internal-or-external-audiences)
   - [Draft Web layers](#draft-web-maps)
   - [Draft Web Maps](#draft-web-maps)
-- [Publishing Curated Content to an External Audience](#publishing-curated-content-to-an-external-audience)
+- [**(For ArcGIS Online Administators)** Publishing Curated Content to an External Audience](#publishing-curated-content-to-an-external-audience)
   - [Web Layers](#web-layers)
   - [Web Maps](#web-maps)
   - [PDF Maps](#pdf-maps)
