@@ -5,8 +5,8 @@
 
 ## Table of contents
 - [Publishing Content to ArcGIS Online](#publishing-content-to-arcgis-online)
-    - [Draft Web layers](#draft-web-maps)
-    - [Draft Web Maps](#draft-web-maps)
+    - [Web layers](#draft-web-maps)
+    - [Web Maps](#draft-web-maps)
 
 ## Publishing Content to ArcGIS Online
 
