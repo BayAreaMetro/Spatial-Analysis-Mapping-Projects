@@ -2,9 +2,9 @@
 
 # Spatial Analysis & Mapping
 
-This page is intended to be a resource to the Data Visualization team when beginning a spatial analysis or mapping project. This sub-repository contains standard operating proceedures (SOPs), best-practices, guidelines, and technical resources that should guide and inform our work. 
+This page is intended as a resource when beginning a spatial analysis or mapping project. This sub-repository contains standard operating proceedures (SOPs), best-practices, guidelines, and technical resources that should guide and inform your work. 
 
-The table of contents below is an attempt to represent and classify spatial analysis and mapping projects into meaningful and useful categories. This page should be considered the 'jumping off' point to get started with an analysis or mapping project.  
+For questions or to ask for help with getting started, contact someone from the Data and Visulization Team by email  dataviz@bayareametro.gov
 
 ## Table of Contents
 
