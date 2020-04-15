@@ -17,7 +17,7 @@
 
 ## Best Practices for All Users
 
-### Publishing Draft or Intermediate Content to Internal or External Audiences
+### Publishing Content to Internal or External Audiences
 
 #### Draft Web Layers
 
