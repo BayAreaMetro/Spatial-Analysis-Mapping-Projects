@@ -10,8 +10,8 @@ For questions or to ask for help with getting started, contact someone from the 
 
 **Data and Content Management**
 
-  - [Publishing and Sharing Content to AGOL **(For All Users)**](Publishing-Sharing-AGOL.md)
-  - [Publishing and Sharing Content to ArcGIS Online **(For Administrative Users)**]()
+  - [Publishing and Sharing Content to ArcGIS Online **(For All Users)**](Publishing-Sharing-AGOL.md)
+  - [Publishing and Sharing Content to ArcGIS Online **(For Administrative Users)**](Admin-Publishing-Sharing-AGOL.md)
 
 **Mapping and Cartography**
 
