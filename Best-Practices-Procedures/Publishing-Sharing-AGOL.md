@@ -4,18 +4,12 @@
 # Publishing and Sharing Content to ArcGIS Online for All Users
 
 ## Table of contents
-- [Best Practices for All Users](#-best-practices-for-all-users)
-  - [Publishing Draft or Intermediate Content to Internal or External Audiences](#publishing-draft-or-intermediate-content-to-internal-or-external-audiences)
+- [Publishing Content to ArcGIS Online](#publishing-content-to-arcgis-online)
     - [Draft Web layers](#draft-web-maps)
     - [Draft Web Maps](#draft-web-maps)
-- [Best Practices for ArcGIS Online Administrators](#best-practices-for-Arcgis-online-administrators)
-  - [Publishing Curated Content to an External Audience](#publishing-curated-content-to-an-external-audience)
-    - [Web Layers](#web-layers)
-    - [Web Maps](#web-maps)
-    - [PDF Maps](#pdf-maps)
-  - [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
+- [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
 
-## Publishing Content to Internal or External Audiences
+## Publishing Content to ArcGIS Online
 
 ### Draft Web Layers
 
