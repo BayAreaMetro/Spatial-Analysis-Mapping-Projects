@@ -4,15 +4,16 @@
 # Publishing and Sharing Content to ArcGIS Online
 
 ## Table of contents
-- [Best Practices for All Users](
+- [Best Practices for All Users](#-best-practices-for-all-users)
   - [Publishing Draft or Intermediate Content to Internal or External Audiences](#publishing-draft-or-intermediate-content-to-internal-or-external-audiences)
     - [Draft Web layers](#draft-web-maps)
     - [Draft Web Maps](#draft-web-maps)
-- [**(For ArcGIS Online Administators)** Publishing Curated Content to an External Audience](#publishing-curated-content-to-an-external-audience)
-  - [Web Layers](#web-layers)
-  - [Web Maps](#web-maps)
-  - [PDF Maps](#pdf-maps)
-- [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
+- [Best Practices for ArcGIS Online Administrators](#best-practices-for-Arcgis-online-administrators)
+  - [Publishing Curated Content to an External Audience](#publishing-curated-content-to-an-external-audience)
+    - [Web Layers](#web-layers)
+    - [Web Maps](#web-maps)
+    - [PDF Maps](#pdf-maps)
+  - [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
 
 ## Best Practices for All Users
 
@@ -34,6 +35,8 @@
 2. Select sharing options:  
     - To share with **only** a select group of stakeholders, share content to a [working group](Creating-Groups.md#create-working-groups) only. Don't share with **organization** or **public**. If an appropriate working group does not exist, create one following guidelines for [creating working groups](Creating-Groups.md#create-working-groups) 
     - To share with a wider audience, or a stakeholder not part of the MTC AGOL Organization, share content to **organization**, **public**, or both if necessary. 
+
+## Best Practices for ArcGIS Online Administrators
 
 ### Publishing Curated Content to an External Audience
 
