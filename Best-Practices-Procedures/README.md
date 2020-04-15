@@ -10,7 +10,8 @@ The table of contents below is an attempt to represent and classify spatial anal
 
 **Data and Content Management**
 
-  - [Publishing and Sharing Content to AGOL](Publishing-Sharing-AGOL.md)
+  - [Publishing and Sharing Content to AGOL **(For All Users)**](Publishing-Sharing-AGOL.md)
+  - [Publishing and Sharing Content to ArcGIS Online **(For Administrative Users)**]()
 
 **Mapping and Cartography**
 
