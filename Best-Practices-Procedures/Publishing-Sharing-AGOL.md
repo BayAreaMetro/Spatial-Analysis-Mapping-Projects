@@ -7,7 +7,6 @@
 - [Publishing Content to ArcGIS Online](#publishing-content-to-arcgis-online)
     - [Draft Web layers](#draft-web-maps)
     - [Draft Web Maps](#draft-web-maps)
-- [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
 
 ## Publishing Content to ArcGIS Online
 
