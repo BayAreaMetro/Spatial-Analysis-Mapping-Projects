@@ -1,4 +1,13 @@
+<a href="url"><img src="http://gis.mtc.ca.gov/mtcimages/mtcgisLogo.png" align="top" height="64" width="64" ></a>
+
 # Best Practices for ArcGIS Online Administrators
+
+## Table of contents
+- [Publishing Curated Content to an External Audience](#publishing-curated-content-to-an-external-audience)
+   - [Web Layers](#web-layers)
+   - [Web Maps](#web-maps)
+   - [PDF Maps](#pdf-maps)
+- [Publishing Content to MTC's Open Data Portal](opendata/openDataSite.md)
 
 ## Publishing Curated Content to an External Audience
 
