@@ -31,6 +31,7 @@ ArcGIS Pro provides numerous options for sharing your work with others. Using Ar
 
 [Overwrite Existing AGOL Web Layer with ArcGIS Pro](http://pro.arcgis.com/en/pro-app/help/sharing/overview/overwrite-a-web-layer.htm
 )
+  - Save a copy of existing metadata before overwriting an existing AGOL web layer as AGOL deletes some information. Once existing web layer has been overwritten; open web layer Overview, click Metadata button, click Overwrite link (next to Save button), check 'Populate metadata with item details,' browse to saved copy of web layer metadata, and then make edits relevent to updated web layer.
 
 ### Share Content through AGOL Portal
 
