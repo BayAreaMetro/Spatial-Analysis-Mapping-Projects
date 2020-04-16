@@ -15,12 +15,12 @@ The purpose of this page is to define types of documentation and documentation r
  - Description: Additional information that supports summary. 
      - Link to project documentation (if any).
      - ~~Project or program content was created to support.~~
-     - ~~Content owner - the person responsible for the project or program the content supports.~~
+     - Content owner - the person responsible for the data. ~~project or program the content supports.~~
      - Source Files (if available): Link to source files used to generate content. This will generally apply only to static content such as images or pdfs. 
      - Content source (if available): Link to the webpage, portal, or download site if content is owned by an organization other than MTC/ABAG. 
  - Credits (Attribution): Acknowledge the source of the content and include the year content was created (if known). (ex. Federal Highway Administration - Freight Analysis Framework, 2012) 
  - Tags: Related keywords to support content discovery See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
-     - **If content is considered draft include "draft" as a tag** 
+     - **If content is considered draft include "draft" as a tag**
  
 ## Detailed Documentation
  
@@ -40,8 +40,9 @@ The purpose of this page is to define types of documentation and documentation r
  - GIS Content Curator name
  - Organization name (Metropolitan Transportatin Commission or Association of Bay Area Governments; do not use acronym)
  - GIS Content Curator phone number
+ - GIS Content Curator e-mail address
  - Online resource
-     - DataViz website (_insert URL, as text, here_)
+     - DataViz website ( _insert URL, as text, here_ )
  - Hours and Instructions
      - Hours of Service (ex. 9:00 AM - 5:00 PM (PST) Monday through Friday)
  
@@ -63,21 +64,21 @@ The purpose of this page is to define types of documentation and documentation r
      - Tags- See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
  - Extent
      - Geographic (will auto populate)
- - Contact (Should be one added for content owner and one added for content publisher)
-     - Contact Name
-         - Individual Name
-         - Organization Name
-         - Role (Owner / Publisher)
-     - Contact Information 
-         - Email 
-         - Address
-         - Phone
-         - Online Resource (Link to pertainent website / link to DataViz website)
-         - Hours & Instructions
-    - Maintenance 
-        - Update Frequency
-    - Constraints
-        - General Constraints 
+ - ~~Contact (Should be one added for content owner and one added for content publisher)~~
+     - ~~Contact Name~~
+         - ~~Individual Name~~
+         - ~~Organization Name~~
+         - ~~Role (Owner / Publisher)~~
+     - ~~Contact Information~~
+         - ~~Email~~
+         - ~~Address~~
+         - ~~Phone~~
+         - ~~Online Resource (Link to pertinent website / link to DataViz website)~~
+         - ~~Hours & Instructions~~
+ - Maintenance 
+     - Update Frequency
+ - Constraints
+     - General Constraints 
  
  **Resource**
  
