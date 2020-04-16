@@ -7,19 +7,19 @@ The purpose of this page is to define types of documentation and documentation r
 ## Basic Documentation 
 
  - Title: State what it is.  Often times, this will simply be the name of the layer, or association of layers.
-     - **Draft Content**
-         - Include "draft" in the title: "My Web Map (draft)"
-     - **Final Content**
-         - Remove "draft" from title and include the year the content was created: "My Web Map (2018)"
  - Summary: A one-line description of the content
+     - **Draft Content**
+         - Include "draft" in all capital letters at beginning of summary: DRAFT or [DRAFT]
+     - **Final Content**
+         - Remove "draft" from the summary and include a year statement for when the content was created at end of summary: examples - "_Content_Title_ was created in 2018" or "_Content_Title_ was created in April 2018"
  - Description: Additional information that supports summary. 
-     - Link to project documentation (if any). 
-     - Project or program content was created to support.  
-     - Content owner - the person responsible for the project or program the content supports. 
+     - Link to project documentation (if any).
+     - ~~Project or program content was created to support.~~
+     - ~~Content owner - the person responsible for the project or program the content supports.~~
      - Source Files (if available): Link to source files used to generate content. This will generally apply only to static content such as images or pdfs. 
      - Content source (if available): Link to the webpage, portal, or download site if content is owned by an organization other than MTC/ABAG. 
- - Credits (Attribution): Acknowledge the source of the content and include the year content was created (if known) preceeded by a semicolon. (ex. 2015 American Community Survey (ACS); 2012 Federal Highway Administration - Freight Analysis Framework) 
-  Tags: Related keywords to support content discovery See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
+ - Credits (Attribution): Acknowledge the source of the content and include the year content was created (if known). (ex. Federal Highway Administration - Freight Analysis Framework, 2012) 
+ - Tags: Related keywords to support content discovery See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
      - **If content is considered draft include "draft" as a tag** 
  
 ## Detailed Documentation
@@ -31,17 +31,19 @@ The purpose of this page is to define types of documentation and documentation r
  ***Titles and Dates***
  
  - Creation Date
- - Publication Date
- - Revision Date 
+ - Publication Date _(Required)_
+ - Revision Date _(If Applicable)_
  
  ***Contact***
  
- - MTC Address
+ - MTC address
+ - GIS Content Curator name
+ - Organization name (Metropolitan Transportatin Commission or Association of Bay Area Governments; do not use acronym)
  - GIS Content Curator phone number
  - Online resource
-     - DataViz website 
+     - DataViz website (_insert URL, as text, here_)
  - Hours and Instructions
-     - Hours of Service 
+     - Hours of Service (ex. 9:00 AM - 5:00 PM (PST) Monday through Friday)
  
  **Citation**
  
@@ -52,9 +54,11 @@ The purpose of this page is to define types of documentation and documentation r
              - If link to github unavailable: 
                  - Source: Where the data was accessed and who is responsible for it
                  - Purpose: Why was the data created? 
-                 - Methodology: how was this content created?
+                 - Methodology: how was the data created?
          - Summary: A one-line description of the content
-         - Acknowledge the source of the content. (ex. 2015 American Community Survey (ACS); 2012 Federal Highway Administration - Freight Analysis Framework)  
+         - Acknowledge the source of the content. (ex. Federal Highway Administration - Freight Analysis Framework, 2012)
+      - Status
+         - Is development complete, for archival reference, continually updated, etcetera
  - Keywords
      - Tags- See: [Content Tagging Strategy](https://mtcdrive.app.box.com/file/198480762097)
  - Extent
@@ -71,7 +75,7 @@ The purpose of this page is to define types of documentation and documentation r
          - Online Resource (Link to pertainent website / link to DataViz website)
          - Hours & Instructions
     - Maintenance 
-        - Frequency
+        - Update Frequency
     - Constraints
         - General Constraints 
  
