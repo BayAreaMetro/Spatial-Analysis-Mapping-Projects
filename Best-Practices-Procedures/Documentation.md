@@ -15,7 +15,14 @@ The purpose of this page is to define types of documentation and documentation r
  - Description: Additional information that supports summary. 
      - Link to project documentation (if any).
      - ~~Project or program content was created to support.~~
-     - Content owner - the person responsible for the data. ~~project or program the content supports.~~
+     - Content owner (the person responsible for the data) ~~project or program the content supports.~~ - Enter contact information on Contact tab under Resource in metadata form:
+        - Contact name
+        - Organization name
+        - Position name
+        - Role
+        - E-mail
+        - Address
+        - Phone number
      - Source Files (if available): Link to source files used to generate content. This will generally apply only to static content such as images or pdfs. 
      - Content source (if available): Link to the webpage, portal, or download site if content is owned by an organization other than MTC/ABAG. 
  - Credits (Attribution): Acknowledge the source of the content and include the year content was created (if known). (ex. Federal Highway Administration - Freight Analysis Framework, 2012) 
