@@ -13,18 +13,25 @@ Groups allow AGOL users to manage a collection of maps, scenes, layers, analytic
 
 ### Create Working Groups
 
-Working Group – for sharing in-progress work with a specific group of collaborators (your work colleagues). These groups will be ad-hoc groups which will have owners other than the GIS Team or content curator. Audience for these groups will be limited to members of the group.
+Working Group – for sharing in-progress work with a specific group of collaborators (your work colleagues). These groups will be ad-hoc groups which will have owners other than the DataViz Team or content curator. Audience for these groups will be limited to members of the group.
 
 ### Create Broadcast Groups 
 
-**Broadcast groups are created and managed only by the DataViz team's content curator**
+**Broadcast groups are created and managed only by the DataViz team's content curators**
 
-Broadcast Group – for sharing finished content with an identified audience (everyone, your organization, or a specific collection of individuals) Broadcast groups will be organized by the following topic areas: 
+Broadcast Group – for sharing finished content with an identified audience (everyone, our organization, or a specific collection of individuals) Broadcast groups will be organized by the following topic areas: 
 
    | Content Topic Areas  |               |          |
    |----------------------|---------------|----------|
-   | Transportation       | Demographic   | Policy   |
+   | Administrative       | Demographic   | Policy   |
    | Transportation       | Environmental | Projects |
+   
+   | Enterprise Topic Areas |                               |
+   |------------------------|-------------------------------|
+   | Administrative         | Cadastral                     |
+   | Environmental          | Hydrography                   |
+   | Planning               | Structures and Infrastructure |
+   | Surface Overlay        | Transportation                |
 
 ### Group Naming Conventions
 
@@ -39,9 +46,10 @@ A good way to organize this is to use **two groups** and a naming convention for
 
 ### Group Summary Matrix 
 
-| Use Case                          | Purpose                                                                                                        | Group Owner     | Group Members                   | Permissions                                          | Sharing                                  |
-|-----------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------|---------------------------------|------------------------------------------------------|------------------------------------------|
-| Working Groups (Smaller Projects) | Sharing in-progress work with a specific group of collaborators                                                | Project Manager | Project Team (Invite Only)      | Group: Private                                       | Content: Group Only                      |
-| Working Groups (Larger Projects)  | Collaborating on projects with ad-hock project team                                                            | Project Manager | Project Team (Invite & Request) | Group: Organization                                  | Content: Group Only                      |
-| Broadcast Groups (Organization)   | Sharing finished content or proprietary dta for viewing, analysis and map-making purposes only                 | Content Manager | Contributors                    | Group: Private and contributions by group owner only | Content: Group and Organization          |
-| Broadcast Groups (Public)         | Sharing finished authratiative content which is not proprietary or readily accessible outside the organization | Content Manager | Contributors                    | Group: Organization/Public                           | Content: Organization, Public, and Group |
+| Use Case                          | Purpose                                                                                                         | Group Owner     | Group Members                   | Permissions                                          | Sharing                                  |
+|-----------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------|---------------------------------|------------------------------------------------------|------------------------------------------|
+| Working Groups (Smaller Projects) | Sharing in-progress work with a specific group of collaborators                                                 | Project Manager | Project Team (Invite Only)      | Group: Private                                       | Content: Group Only                      |
+| Working Groups (Larger Projects)  | Collaborating on projects with ad-hoc project team                                                              | Project Manager | Project Team (Invite & Request) | Group: Organization                                  | Content: Group Only                      |
+| Broadcast Groups (Limited)        | Sharing proprietary data for viewing, analysis, and map-making purposes only                                    | Content Manager | Data Users (Invite Only)        | Group: Private and contributions by group owner only | Content: Group                           |
+| Broadcast Groups (Organization)   | Sharing finished content or proprietary data for viewing, analysis and map-making purposes only                 | Content Manager | Contributors                    | Group: Private and contributions by group owner only | Content: Group and Organization          |
+| Broadcast Groups (Public)         | Sharing finished, authoritative content which is not proprietary or readily accessible outside the organization | Content Manager | Contributors                    | Group: Organization/Public                           | Content: Organization, Public, and Group |
