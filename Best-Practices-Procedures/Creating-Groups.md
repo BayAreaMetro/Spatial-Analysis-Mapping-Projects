@@ -40,7 +40,7 @@ It is important to clearly distinguish between working and broadcast groups for 
 A good way to organize this is to use **two groups** and a naming convention for your **working groups (in progress content)** and **broadcast groups (final content)**.  For example:
 
 - Broadcast group: "My Mapping Project"
-- Working group: "My Mapping Project (Draft)"
+- Working group: "My Mapping Project (Private - Working)"
 - Final web map: "My Web Map"
 - In-progress web map: "My Web Map (Draft)" 
 
