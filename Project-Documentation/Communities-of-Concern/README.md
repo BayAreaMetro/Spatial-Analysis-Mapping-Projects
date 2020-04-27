@@ -36,7 +36,7 @@ The 2018 update of MTC's Communities of Concern follows the Adopted Communities 
 
 **Communities of Concern Framework 2018 COC Update**
 
-| Disadvantage Factor                           | % Regional Popoulation | Standard Deviation | .5 Standard Deviation Concentration Threshold (High COC) | 1 Standard Deviation (Higher COC) | 1.5 Standard Deviation (Highest COC) |
+| Disadvantage Factor                           | % Regional Population | Standard Deviation | .5 Standard Deviation Concentration Threshold (High COC) | 1 Standard Deviation (Higher COC) | 1.5 Standard Deviation (Highest COC) |
 |-----------------------------------------------|------------------------|--------------------|------------------------------------|-----------------------------------|--------------------------------------|
 | Minority                                      | 58%                    | 24%                | 70%                                | 81%                               | 93%                                  |
 | Low Income (<200% Federal Poverty Level -FPL) | 6%                     | 4%                 | 8%                                 | 11%                               | 13%                                  |
