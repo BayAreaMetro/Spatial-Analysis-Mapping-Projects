@@ -26,14 +26,14 @@ pct_below200,DOUBLE,C17002_001E - C17002_008E/C17002_001E,Low Income population 
 pct_disab,DOUBLE,(C18108_001E - (C18108_005E + C18108_009E + C18108_013E))/C18108_001E,Disabled population as a share of total civilian noninstitutionalized population,
 pct_zvhhs,DOUBLE,B08201_002E/B08201_001E,Zero-vehicle households as a share of total households,
 pct_hus_rent50,DOUBLE,B25070_010E/B08201_001E,Severely rent-burdened household as a share of total renter-occupied housing units,
-over75_halfsd,LONG,,Seniors 75 and over make up over 10 percent of the total poulation in a given Census Tract,0 = False; 1 = True
-minority_halfsd,LONG,,Minorities make up over 70 percent of the total population in a given Census Tract,0 = False; 1 = True
-spfam_halfsd,LONG,,Single-parent families make up over 20 percent of the families in a given Census Tract,0 = False; 1 = True
-disab_halfsd,LONG,,Disabled people make up over 25 percent of the total civilian noninstitutionalized population in a given Census Tract,0 = False; 1 = True
-lep_halfsd,LONG,,People with limited English proficiency make up over 20 percent of the total population 5 years and over in a given Census Tract,0 = False; 1 = True
-below200_halfsd,LONG,,Low-income people make up over 30 percent of the total population for whom poverty status is determined in a given Census Tract,0 = False; 1 = True
-zvhh_halfsd,LONG,,Zero-vehicle households make up over 10 percent of the total households in a given Census Tract,0 = False; 1 = True
-hus_rent50_halfsd,LONG,,Severely rent-burdened households make up over 15 percent of total renter-occupied housing units in a given Census Tract,0 = False; 1 = True
+over75_halfsd,LONG,,Seniors 75 and over make up over regional mean plus .5 standard deviation of the total poulation in a given Census Tract,0 = False; 1 = True
+minority_halfsd,LONG,,Minorities make up over regional mean plus .5 standard deviation of the total population in a given Census Tract,0 = False; 1 = True
+spfam_halfsd,LONG,,Single-parent families make up over regional mean plus .5 standard deviation of the families in a given Census Tract,0 = False; 1 = True
+disab_halfsd,LONG,,Disabled people make up over regional mean plus .5 standard deviation of the total civilian noninstitutionalized population in a given Census Tract,0 = False; 1 = True
+lep_halfsd,LONG,,People with limited English proficiency make up over regional mean plus .5 standard deviation of the total population 5 years and over in a given Census Tract,0 = False; 1 = True
+below200_halfsd,LONG,,Low-income people make up over regional mean plus .5 standard deviation of the total population for whom poverty status is determined in a given Census Tract,0 = False; 1 = True
+zvhh_halfsd,LONG,,Zero-vehicle households make up over regional mean plus .5 standard deviation of the total households in a given Census Tract,0 = False; 1 = True
+hus_rent50_halfsd,LONG,,Severely rent-burdened households make up over regional mean plus .5 standard deviation of total renter-occupied housing units in a given Census Tract,0 = False; 1 = True
 coc_flag_pba2040,LONG,,The Census Tract meets MTC's Plan Bay Area 2040 Communities of Concern criteria ,0 = False; 1 = True
 coc_flag_pba2050,LONG,,The Census Tract meets MTC's Plan Bay Area 2050 Communities of Concern criteria ,1 = False; 1 = True
 coc_class,TEXT,,The CoC ranking as determined by standard deviation (sd) from regional mean.,".5 SD = High; 1 SD = Higher, 1.5 SD = Highest"
