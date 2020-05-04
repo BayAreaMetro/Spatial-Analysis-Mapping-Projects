@@ -209,7 +209,7 @@ arcpy.RemoveJoin_management(join_output_table, join_table)
 
 # Write report to csv
 output_folder = r'Z:\Box\GIS (shapefiles)\PDA_Analysis'
-output_csv = r'Draft_Regional_PDA_2019_Designation_01_03_20.csv'
+output_csv = r'Draft_Regional_PDA_2019_Designation_01_28_20.csv'
 
 arcpy.TableToTable_conversion(join_output_table, output_folder, output_csv)
 
