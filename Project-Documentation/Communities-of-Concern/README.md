@@ -1,4 +1,4 @@
-## MTC Communities of Concern - American Community Survey 2014-2016 Update
+## MTC Communities of Concern
 
 Identify census tracts within the Bay Area that are considered Communities of Concern as defined by [MTC Resolution No. 4217-Equity Framework for Plan Bay Area 2040](https://mtc.legistar.com/LegislationDetail.aspx?ID=2555452&GUID=575A6D3F-B8B8-44CF-9F2D-ABEF8B3C9F06&Options=ID|Text|&Search=%22communities+of+concern%22)
 
