@@ -100,8 +100,6 @@ To explore the processing methodology, take a look at the [COC Processing Method
 - [PBA 2050 Communities of Concern - ACS 2018](Data/COCs_ACS2018_tbl.csv)
 - [PBA 2050 Communities of Concern - ACS 2018 Web Layer]()
 
-<iframe src="https://mtcdrive.app.box.com/embed/s/zflef5zzj8f17wgkk5iq7chfofq0wjbu?sortColumn=date&view=list" width="800" height="550" frameborder="0" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
-
 ![PBA 2050 Communities of Concern Print Map](https://mtcdrive.box.com/shared/static/zflef5zzj8f17wgkk5iq7chfofq0wjbu.png)
 
 ![PBA 2040 and PBA 2050 CoC Change Map](https://mtcdrive.box.com/shared/static/fofkxao3yx1p7gb6ylzaqzmugxmihkgd.png)
