@@ -61,7 +61,7 @@ PDAs, PPAs and PCAs were created following the adopted Plan Bay Area 2050 Growth
 | **Designation**                                  | **Criteria**                                                                                                                                                                     |
 |--------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Transit-Rich                                     | Areas within 1/2 mile of:<br>- Passenger rail station<br>- Ferry terminal<br>- Bus service existing with peak headways of 15 minutes or less (included if in Plan Bay Area 2040) |
-| Connected Community - High Resource Area         | - No overlap with Transit-Rich Areas<br>- Within state-designated TCAC/HCD High or Highest Resource Area<br>- Within 1/2 mile of bus stop with speak headways of 16-30 minutes   |
+| Connected Community - High Resource Area         | - No overlap with Transit-Rich Areas<br>- Within state-designated TCAC/HCD High or Highest Resource Area<br>- Within 1/2 mile of bus stop with peak headways of 16-30 minutes   |
 | Connected Community - Outside High Resource Area | - No overlap with Transit-Rich Areas<br>- Outside state-designated TCAC/HCD High or Highest Resource Area<br>- Within 1/2 mile of bus stop with peak headways of 16-30 minutes   |
 
 ## Methodology
