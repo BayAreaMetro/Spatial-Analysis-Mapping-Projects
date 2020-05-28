@@ -25,7 +25,7 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 
 ## Analysis Parameters
 
-The 2020 update of MTC's Communities of Concern follows the Adopted Communities of Concern (COC) Framework for Plan Bay Area 2040, and is based on on 2012-2016 American Community Survey (ACS) 5-year tract level data. The MTC COC Framework is provided below as well as a summary table which provides the 8 COC disadvantage factors, definitions of disadvantage factors, census-tract concentration thresholds, relevant ACS table variables, and ACS variable definitions. 
+The 2020 update of MTC's Communities of Concern follows the Adopted Communities of Concern (COC) Framework for Plan Bay Area 2040, and is based on on 2014-2018 American Community Survey (ACS) 5-year tract level data. The MTC COC Framework is provided below as well as a summary table which provides the 8 COC disadvantage factors, definitions of disadvantage factors, census-tract concentration thresholds, relevant ACS table variables, and ACS variable definitions. 
 
 ### MTC Communities of Concern Framework
 
