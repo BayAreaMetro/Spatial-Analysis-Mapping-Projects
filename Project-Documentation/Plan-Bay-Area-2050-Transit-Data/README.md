@@ -4,7 +4,7 @@
 
 ### Define the Problem Statement
 
-Map new and existing transit stops as well as stops served by headways meeting certain criteria for peak periods. 
+Map new and existing transit stops as well as rail, ferry, and bus stops served by routes meeting certain headway criteria for peak periods. 
 
 ### Project Resources
 
