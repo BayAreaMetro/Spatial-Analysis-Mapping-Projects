@@ -23,7 +23,7 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 ### Existing Transit Stops (Define with a name that doesn't conflict with existing leg definitions or datasets)
 
 Transit stops that are served by:
-- Rail or Ferry Stop
+- Rail or Ferry
 - Stop servied by bus routes with peak headways of 15 mins or less. 
 	- AM Peak 6:00 A.M.–10:00 A.M.
 	- PM Peak 3:00 P.M.–7:00 P.M. 
