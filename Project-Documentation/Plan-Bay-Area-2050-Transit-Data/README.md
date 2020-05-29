@@ -29,13 +29,9 @@ Transit stops that are served by:
 	- PM Peak 3:00 P.M.–7:00 P.M. 
 
 
-
-
 ## Methodology applied to solve problem
 
 - [ESRI Public Transit Tools](https://github.com/Esri/public-transit-tools)
-
-
 
 ## Expected Outcomes (if any)?
 
