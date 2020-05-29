@@ -8,7 +8,7 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 
 ### Project Resources
 
-- [PBA 2050 Transit Data](https://app.asana.com/0/229355710745434/1177953172585985) 
+- [Asana Project - PBA 2050 Transit Data](https://app.asana.com/0/229355710745434/1177953172585985) 
 
 ## Data Sources
 
