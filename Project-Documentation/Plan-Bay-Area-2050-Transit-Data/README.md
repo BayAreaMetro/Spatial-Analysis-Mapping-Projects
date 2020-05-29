@@ -4,7 +4,7 @@
 
 ### Define the Problem Statement
 
-Create transit datasets to support work related to Plan Bay Area 2050. 
+Map new and existing transit stops as well as stops served by headways meeting certain criteria for peak periods. 
 
 ### Project Resources
 
@@ -16,6 +16,18 @@ Create transit datasets to support work related to Plan Bay Area 2050.
 
 
 ## Analysis Parameters
+
+### Planned or New Transit Stops
+
+### Existing Transit Stops (Define with a name that doesn't conflict with existing leg definitions or datasets)
+
+Transit stops that are served by:
+- Rail or Ferry Stop
+- Stop servied by bus routes with peak headways of 15 mins or less. 
+	- AM Peak 6:00 A.M.–10:00 A.M.
+	- PM Peak 3:00 P.M.–7:00 P.M. 
+
+
 
 
 ## Methodology applied to solve problem
