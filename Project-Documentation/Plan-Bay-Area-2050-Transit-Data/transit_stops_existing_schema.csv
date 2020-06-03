@@ -14,9 +14,3 @@ agency_id,Transit Agency ID,GTFS- agency.txt,Indicates the agency or operator of
 agency_nm,Transit Agency Name,GTFS- agency.txt,Name of the agency or operator of a transit system. ,,https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#agencytxt
 route_type,Route Type,GTFS- routes.txt,Indicates the type of transportation used on a route. Route type may be null if location is a transit station or transit center.,"0 - Tram, Streetcar, Light rail; 1 - Subway, Metro; 2 - Rail; 3 - Bus; 4 - Ferry; 5 - Cable tram; 6 - Aerial lift; 7 - Funicular; 11 - Trolleybus; 12 - Monorail; ",https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt
 route_ty_t,Route Type Text,GTFS- routes.txt,Text type of transportation used on a route. Route type may be null if location is a transit station or transit center.,,https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#routestxt
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,, ,
