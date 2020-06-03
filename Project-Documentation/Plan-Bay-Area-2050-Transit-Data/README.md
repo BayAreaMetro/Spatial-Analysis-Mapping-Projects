@@ -31,7 +31,7 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 
 ### Existing Transit Stops
 
-The existing transit stops dataset should include all transit stops for the Bay Area. The dataset will contain columns that indicate the route level of service provided at stops. The table below provides the columns providing level of service information as well as a description of the criteria used. 
+The existing transit stops dataset includes all transit stops for the Bay Area, including attributes that indicate level of service for routes served by them. The table below provides the columns that will contain level of service information as well as a description of the level of service criteria, such as headway threshold, time period, number of routes served, or route type. 
 
 | Field Name Long    | Description                                                                                                                                                                                                                                                                                                                           | Domain                                                      |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
