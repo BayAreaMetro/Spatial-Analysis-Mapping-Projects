@@ -21,7 +21,7 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 ## Analysis Parameters
 
 
-###GTFS Relational Diagram
+### GTFS Relational Diagram
 
 [General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
 
