@@ -20,6 +20,11 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 
 ## Analysis Parameters
 
+- [General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
+
+**GTFS Relational Diagram**
+- ![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
+
 ### Planned or New Transit Stops
 
 ### Existing Transit Stops (Define with a name that doesn't conflict with existing leg definitions or datasets)
