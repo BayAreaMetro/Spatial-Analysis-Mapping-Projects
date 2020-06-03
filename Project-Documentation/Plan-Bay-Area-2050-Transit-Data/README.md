@@ -28,27 +28,43 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 
 ### Planned or New Transit Stops
 
-### Existing Transit Stops (Define with a name that doesn't conflict with existing leg definitions or datasets)
+### Existing Transit Stops
 
-Transit stops that are served by:
-- Rail or Ferry
-- Stop servied by bus routes with peak headways of 30 mins or less. 
-	- AM Peak 6:00 A.M.–10:00 A.M.
-	- PM Peak 3:00 P.M.–7:00 P.M. 
+The existing transit stops dataset should include all transit stops for the Bay Area. The dataset will contain columns that indicate the route level of service provided at stops. The table below provides the columns providing level of service information as well as a description of the criteria used. 
 
+| Field Name Long    | Description                                                                                                                                                                                                                                                                                                                           | Domain                                                      |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| Average Headway AM | Average of all route headways for routes that visit the stop during the AM (6:00 - 10:00 AM) commute period                                                                                                                                                                                                                           |                                                             |
+| Average Headway PM | Average of all route headways for routes that visit the stop during the PM (3:00 - 7:00 PM) commute period                                                                                                                                                                                                                            |                                                             |
+| Headway 30 Minute  | Flag field for stops served by 1 or more transit routes with headways of 30 minutes or less during BOTH the AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) peak commute period                                                                                                                                                          | 0; 1                                                        |
+| Headway 15 Minute  | Flag field for stops served by 1 or more transit routes with headways of 15 minutes or less during BOTH the AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) peak commute perio                                                                                                                                                           | 0; 1                                                        |
+| Major Transit Stop | To qualify as a 'Major Transit Stop',as defined by As defined by California Public Resource Code Section 21064.3, a stop must be a rail or ferry stop, or the stop must be served by 2 or more transit routes with headways of 15 minutes or less during BOTH the AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) peak commute periods.  | 0; 1                                                        |
+| Headway Class      | To fall into a given headway class, stops had to meet the headway threshold for both AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) Peak Periods. Not available is used for stops served by routes where headway information may be unavailable for both am and pm commute periods, or the stop is the location of a transit station.   | 15 min or less; 16 to 30 min; 31 min or more; Not Available |   
 
-## Methodology applied to solve problem
+## Methodology
 
+### Existing Transit Stops Methodology
+
+To create the existing transit stops, ESRI Public Transit tools were leveraged as well pandas/pythontools. The tools and script created rely on regional General Transit Feed (GTFS) specification data provided by the [Bay Area 511 GTFS API](https://511.org/open-data/transit). 
+
+The process was scripted in a jupyter notebook running inside the ArcGIS Pro environment. You can review processing the script [here](gtfs_transit_stop_processing.ipynb). To run the script, you will need to download the ArcGIS Pro project which contains the ESRI toolboxes, jupyter nootebooks as well as the data you would need to repeat the process which can be accessed [here (MTC Acces Only)](https://mtcdrive.box.com/s/y3jxhreaufsndou3jhmka6m4s7xxgxba).   
+
+**Resource Links**
 - [ESRI Public Transit Tools](https://github.com/Esri/public-transit-tools)
 
-## Expected Outcomes (if any)?
+## Expected Outcomes
 
 - New and Planned Transit Stops
-	- [New and Planned Stops Metadata]()
+	- New and Planned Stops Metadata
 - Existing Transit Stops with Routes Meeting AM/PM Peak Headways
-	- [Existing Transit Stops Metadata](transit_stops_existing_schema.cvs)
+	- Existing Transit Stops Metadata
 
 ## Results
+
+- New and Planned Transit Stops Web Layer
+	- New and Planned Stops Metadata
+- Existing Transit Stops Web Layer
+	- Existing Transit Stops Metadata](transit_stops_existing_schema.cvs)
 
 ## Related Work
 
