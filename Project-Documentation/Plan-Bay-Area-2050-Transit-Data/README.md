@@ -44,7 +44,9 @@ Transit stops that are served by:
 ## Expected Outcomes (if any)?
 
 - New and Planned Transit Stops
+	- [New and Planned Stops Metadata]()
 - Existing Transit Stops with Routes Meeting AM/PM Peak Headways
+	- [Existing Transit Stops Metadata](transit_stops_existing_schema.cvs)
 
 ## Results
 
