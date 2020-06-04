@@ -44,6 +44,8 @@ The existing transit stops dataset includes all transit stops for the Bay Area, 
 
 ## Methodology
 
+### Planned or New Transit Stops Methodology
+
 ### Existing Transit Stops Methodology
 
 To create the existing transit stops, ESRI Public Transit tools were leveraged as well pandas/pythontools. The tools and script created rely on regional General Transit Feed (GTFS) specification data provided by the [Bay Area 511 GTFS API](https://511.org/open-data/transit). 
@@ -73,7 +75,3 @@ The process was scripted in a jupyter notebook running inside the ArcGIS Pro env
 - [Legislative Transit Data](https://github.com/BayAreaMetro/Data-Analysis-Projects/blob/master/legislative_transit_data.md)
 - [Transportation MDM](https://github.com/BayAreaMetro/DataServices/tree/master/Project-Documentation/mdm/transportation-mdm)
 - [511 GTFS Transportation Data](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/transportation-mdm/511_GTFS.md)
-
-## Tags
-
-Add tags to help others find your project, e.g. if you are documenting an analysis done to support Environmental Impact Reporting for Plan Bay Area 2050, add the tags **eir**, **plan bay area 2050**, **environment**.
