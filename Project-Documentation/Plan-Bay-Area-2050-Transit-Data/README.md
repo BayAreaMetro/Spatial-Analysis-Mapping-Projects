@@ -23,8 +23,6 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 
 ### GTFS Relational Diagram
 
-[General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
-
 ![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
 
 ### Planned or New Transit Stops
@@ -54,6 +52,7 @@ The process was scripted in a jupyter notebook running in an ArcGIS Pro environm
 
 **Resource Links**
 - [ESRI Public Transit Tools](https://github.com/Esri/public-transit-tools)
+- [General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
 
 ## Expected Outcomes
 
