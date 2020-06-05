@@ -23,8 +23,6 @@ Map new and existing transit stops as well as rail, ferry, and bus stops served 
 
 ### GTFS Relational Diagram
 
-[General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
-
 ![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
 
 ### Planned or New Transit Stops
@@ -44,14 +42,17 @@ The existing transit stops dataset includes all transit stops for the Bay Area, 
 
 ## Methodology
 
+### Planned or New Transit Stops Methodology
+
 ### Existing Transit Stops Methodology
 
-To create the existing transit stops, ESRI Public Transit tools were leveraged as well pandas/pythontools. The tools and script created rely on regional General Transit Feed (GTFS) specification data provided by the [Bay Area 511 GTFS API](https://511.org/open-data/transit). 
+To create the existing transit stops, ESRI Public Transit tools were leveraged as well as pandas/python tools. The tools and script rely on Regional General Transit Feed (GTFS) specification data provided by the [Bay Area 511 GTFS API](https://511.org/open-data/transit). 
 
-The process was scripted in a jupyter notebook running inside the ArcGIS Pro environment. You can review processing the script [here](gtfs_transit_stop_processing.ipynb). To run the script, you will need to download the ArcGIS Pro project which contains the ESRI toolboxes, jupyter nootebooks as well as the data you would need to repeat the process which can be accessed [here (MTC Acces Only)](https://mtcdrive.box.com/s/y3jxhreaufsndou3jhmka6m4s7xxgxba).   
+The process was scripted in a jupyter notebook running in an ArcGIS Pro environment. You can review the processing script [here](gtfs_transit_stop_processing.ipynb). To run the script, you will need to download the ArcGIS Pro project which contains the ESRI toolboxes, jupyter nootebooks as well as the data you would need to repeat the process which can be accessed [here (MTC Acces Only)](https://mtcdrive.box.com/s/y3jxhreaufsndou3jhmka6m4s7xxgxba).   
 
 **Resource Links**
 - [ESRI Public Transit Tools](https://github.com/Esri/public-transit-tools)
+- [General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
 
 ## Expected Outcomes
 
@@ -73,7 +74,3 @@ The process was scripted in a jupyter notebook running inside the ArcGIS Pro env
 - [Legislative Transit Data](https://github.com/BayAreaMetro/Data-Analysis-Projects/blob/master/legislative_transit_data.md)
 - [Transportation MDM](https://github.com/BayAreaMetro/DataServices/tree/master/Project-Documentation/mdm/transportation-mdm)
 - [511 GTFS Transportation Data](https://github.com/BayAreaMetro/DataServices/blob/master/Project-Documentation/mdm/transportation-mdm/511_GTFS.md)
-
-## Tags
-
-Add tags to help others find your project, e.g. if you are documenting an analysis done to support Environmental Impact Reporting for Plan Bay Area 2050, add the tags **eir**, **plan bay area 2050**, **environment**.
