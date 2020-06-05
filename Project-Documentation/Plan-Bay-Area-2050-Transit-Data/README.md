@@ -63,7 +63,7 @@ The process was scripted in a jupyter notebook running inside the ArcGIS Pro env
 ## Results
 
 - New and Planned Transit Stops Web Layer
-	- New and Planned Stops Metadata
+	- [New and Planned Stops Metadata](transit_stops_potential_schema.csv)
 - Existing Transit Stops Web Layer
 	- [Existing Transit Stops Metadata](transit_stops_existing_schema.csv)
 
