@@ -13,16 +13,16 @@ The Existing Transit Stops dataset will replace the existing [Major Transit Stop
 - [Box Directory](https://mtcdrive.box.com/s/ahdbq95qsuhpov42cmut147qp70sgj1g) 
 
 ### Table of Contents
--[Data Sources](#data-sources)
--[Analysis Parameters](#analysis-parameters)
-	-[Existing Transit Stops](#existing-transit-stops)
-	-[General Transit Feed Specification (GTFS)](#general-transit-feed-specification)
--[Methodology](#methodology)
-	-[Planned or New Transit Stops Methodology](#planned-or-new-transit-stops-methodology)
-	-[Existing Transit Stops Methodology](#existing-transit-stops-methodology)
--[Expected Outcomes](#expected-outcomes)
--[Results](#results)
--[Related Work](#related-work)
+- [Data Sources](#data-sources)
+- [Analysis Parameters](#analysis-parameters)
+	- [Existing Transit Stops](#existing-transit-stops)
+- [General Transit Feed Specification (GTFS)](#general-transit-feed-specification)
+- [Methodology](#methodology)
+	- [Planned or New Transit Stops Methodology](#planned-or-new-transit-stops-methodology)
+	- [Existing Transit Stops Methodology](#existing-transit-stops-methodology)
+- [Expected Outcomes](#expected-outcomes)
+- [Results](#results)
+- [Related Work](#related-work)
 
 ## Data Sources
 
