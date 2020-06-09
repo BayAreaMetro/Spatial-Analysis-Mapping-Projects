@@ -2,11 +2,10 @@
 
 # Plan Bay Area 2050 Transit Data Updates
 
-### Define the Problem Statement
 
 Map new, planned and existing rail, ferry, and bus stops. Bus stops should contain a field flagging stops that qualify as a 'Major Transit Stops', as well as a field classifying stops served by routes meeting certain headway criteria.
 
-This dataset will replace the existing [Major Transit Stop](https://mtc.maps.arcgis.com/home/item.html?id=561dc5b42fa9451b95faf615a3054260) dataset, and will represent all transit stops in the Bay Area as of January 2020. 
+The Existing Transit Stops dataset will replace the existing [Major Transit Stop](https://mtc.maps.arcgis.com/home/item.html?id=561dc5b42fa9451b95faf615a3054260) dataset, and will represent all transit stops in the Bay Area as of January 2020. 
 
 ### Project Resources
 
