@@ -44,6 +44,13 @@ The existing transit stops dataset includes all transit stops for the Bay Area, 
 
 ### Planned or New Transit Stops Methodology
 
+Planned transit stops refer to fully funded projects that have been approved for construction, while proposed transit stops refer to potential new transit stops that have not yet been fully funded or approved but are currently under study by MTC and ABAG for inclusion in Plan Bay Area 2050. Point features for planned or proposed stops were manually created based on qualitative descriptions of stop locations provided by project sponsors. Note that stop locations are approximate and subject to change as projects progress through environmental review and detailed planning work.
+
+- The ppa_id and ppa_name field values are from the Horizon Project Performance Assessment: List of Transportation Projects (Feb 2020) located at https://mtc.ca.gov/sites/default/files/ProjectPerformance_List.pdf
+- The transit type values in route_ty_t were changed from their original values to match the types used by GTFS
+- County values were derived by selecting stops that intersected TomTom 2017 county features and assigning the value using the ArcGIS Pro calculator
+- Jurisdiction values were derived through a spatial join with TomTom 2017 place features for incorporated jurisdictions in the San Francisco Bay Region using ArcGIS Pro. The unincorporated areas were added by selecting stops that intersected TomTom 2017 county features and using the ArcGIS Pro Calculator to assign a name
+
 ### Existing Transit Stops Methodology
 
 To create the existing transit stops, ESRI Public Transit tools were leveraged as well as pandas/python tools. The tools and script rely on Regional General Transit Feed (GTFS) specification data provided by the [Bay Area 511 GTFS API](https://511.org/open-data/transit). 
