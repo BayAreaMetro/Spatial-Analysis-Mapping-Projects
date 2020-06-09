@@ -21,16 +21,17 @@ The Existing Transit Stops dataset will replace the existing [Major Transit Stop
 
 ## Analysis Parameters
 
-
-### GTFS Relational Diagram
-
-![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
-
-### Planned or New Transit Stops
-
 ### Existing Transit Stops
 
 The existing transit stops dataset includes all transit stops for the Bay Area, including attributes that indicate level of service for routes served by them. The table below provides the columns that will contain level of service information as well as a description of the level of service criteria, such as headway threshold, time period, number of routes served, or route type. 
+
+General Transit Feed Specification (GTFS) static data was used to create the Existing Transit Stops dataset. The General Transit Feed Specification (GTFS), also known as GTFS static or static transit to differentiate it from the GTFS realtime extension, defines a common format for public transportation schedules and associated geographic information. GTFS "feeds" let public transit agencies publish their transit data and developers write applications that consume that data in an interoperable way.
+
+The specification is made up of a number of text files. The data model below defines the relationships between those files. For more information, please review the [GTFS Static Reference Guide](https://developers.google.com/transit/gtfs)
+
+#### GTFS Data Model
+
+![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
 
 
 | Field Name Long    | Description                                                                                                                                                                                                                                                                                                                           | Domain                                                        |
@@ -44,7 +45,7 @@ The existing transit stops dataset includes all transit stops for the Bay Area, 
 
 ### Planned or New Transit Stops Methodology
 
-Planned transit stops refer to fully funded projects that have been approved for construction, while proposed transit stops refer to potential new transit stops that have not yet been fully funded or approved but are currently under study by MTC and ABAG for inclusion in Plan Bay Area 2050. Point features for planned or proposed stops were manually created based on qualitative descriptions of stop locations provided by project sponsors. Note that stop locations are approximate and subject to change as projects progress through environmental review and detailed planning work.
+Planned transit stops refer to fully funded projects that have been approved for construction or are currently under construction, while proposed transit stops refer to potential new transit stops that have not yet been fully funded or approved but are currently under study by MTC and ABAG for inclusion in Plan Bay Area 2050. Point features for planned or proposed stops were manually created based on qualitative descriptions of stop locations provided by project sponsors. Note that stop locations are approximate and subject to change as projects progress through environmental review and detailed planning work.
 
 - The ppa_id and ppa_name field values are from the Horizon Project Performance Assessment: List of Transportation Projects (Feb 2020) located at https://mtc.ca.gov/sites/default/files/ProjectPerformance_List.pdf
 - The transit type values in route_ty_t were changed from their original values to match the types used by GTFS
