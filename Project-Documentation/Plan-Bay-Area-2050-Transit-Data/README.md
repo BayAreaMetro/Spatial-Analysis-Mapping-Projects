@@ -16,7 +16,7 @@ The Existing Transit Stops dataset will replace the existing [Major Transit Stop
 -[Data Sources](#data-sources)
 -[Analysis Parameters](#analysis-parameters)
 	-[Existing Transit Stops](#existing-transit-stops)
-		-[General Transit Feed Specification (GTFS)](#general-transit-feed-specification)
+	-[General Transit Feed Specification (GTFS)](#general-transit-feed-specification)
 -[Methodology](#methodology)
 	-[Planned or New Transit Stops Methodology](#planned-or-new-transit-stops-methodology)
 	-[Existing Transit Stops Methodology](#existing-transit-stops-methodology)
