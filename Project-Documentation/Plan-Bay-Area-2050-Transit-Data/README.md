@@ -12,6 +12,18 @@ The Existing Transit Stops dataset will replace the existing [Major Transit Stop
 - [Asana Project - PBA 2050 Transit Data](https://app.asana.com/0/229355710745434/1177953172585985)
 - [Box Directory](https://mtcdrive.box.com/s/ahdbq95qsuhpov42cmut147qp70sgj1g) 
 
+### Table of Contents
+-[Data Sources](#data-sources)
+-[Analysis Parameters](#analysis-parameters)
+	-[Existing Transit Stops](#existing-transit-stops)
+		-[General Transit Feed Specification (GTFS)](#general-transit-feed-specification)
+-[Methodology](#methodology)
+	-[Planned or New Transit Stops Methodology](#planned-or-new-transit-stops-methodology)
+	-[Existing Transit Stops Methodology](#existing-transit-stops-methodology)
+-[Expected Outcomes](#expected-outcomes)
+-[Results](#results)
+-[Related Work](#related-work)
+
 ## Data Sources
 
 - [511 Regional GTFS API January 2020](https://511.org/open-data/transit)
@@ -25,21 +37,20 @@ The Existing Transit Stops dataset will replace the existing [Major Transit Stop
 
 The existing transit stops dataset includes all transit stops for the Bay Area, including attributes that indicate level of service for routes served by them. The table below provides the columns that will contain level of service information as well as a description of the level of service criteria, such as headway threshold, time period, number of routes served, or route type. 
 
-General Transit Feed Specification (GTFS) static data was used to create the Existing Transit Stops dataset. The General Transit Feed Specification (GTFS), also known as GTFS static or static transit to differentiate it from the GTFS realtime extension, defines a common format for public transportation schedules and associated geographic information. GTFS "feeds" let public transit agencies publish their transit data and developers write applications that consume that data in an interoperable way.
-
-The specification is made up of a number of text files. The data model below defines the relationships between those files. For more information, please review the [GTFS Static Reference Guide](https://developers.google.com/transit/gtfs)
-
-#### GTFS Data Model
-
-![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
-
-
 | Field Name Long    | Description                                                                                                                                                                                                                                                                                                                           | Domain                                                        |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
 | Headway 30 Minute  | Flag field for stops served by 1 or more transit routes with headways of 30 minutes or less during BOTH the AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) peak commute period                                                                                                                                                          | 0; 1                                                          |
 | Headway 15 Minute  | Flag field for stops served by 1 or more transit routes with headways of 15 minutes or less during BOTH the AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) peak commute perio                                                                                                                                                           | 0; 1                                                          |
 | Major Transit Stop | To qualify as a 'Major Transit Stop',as defined by As defined by [California Public Resource Code Section 21064.3](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21064.3.&lawCode=PRC), a stop must be a rail or ferry stop, or the stop must be served by 2 or more transit routes with headways of 15 minutes or less during BOTH the AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) peak commute periods.  | 0; 1                                                          |
 | Headway Class      | To fall into a given headway class, stops had to meet the headway threshold for both AM (6:00 - 10:00 AM) and PM (3:00 - 7:00 PM) Peak Periods. Not available is used for stops served by routes where headway information may be unavailable for am or pm commute periods.                                                           | 15 mins or less; 16 to 30 min; 31 mins or more; Not Available |
+
+#### General Transit Feed Specification
+
+General Transit Feed Specification (GTFS) static data was used to create the Existing Transit Stops dataset. The General Transit Feed Specification (GTFS), also known as GTFS static or static transit to differentiate it from the GTFS realtime extension, defines a common format for public transportation schedules and associated geographic information. GTFS "feeds" let public transit agencies publish their transit data and developers write applications that consume that data in an interoperable way.
+
+The specification is made up of a number of text files. The data model below defines the relationships between those files. For more information, please review the [GTFS Static Reference Guide](https://developers.google.com/transit/gtfs)
+
+![gtfs_diagram](img/Relations-among-different-text-files-of-a-GTFS-feed.png)
 
 ## Methodology
 
@@ -60,7 +71,7 @@ The process was scripted in a jupyter notebook running in an ArcGIS Pro environm
 
 **Resource Links**
 - [ESRI Public Transit Tools](https://github.com/Esri/public-transit-tools)
-- [General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md#stopstxt)
+- [General Transit Feed Specification (GTFS) Reference](https://github.com/google/transit/blob/master/gtfs/spec/en/reference.md)
 
 ## Expected Outcomes
 
