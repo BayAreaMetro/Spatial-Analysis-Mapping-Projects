@@ -4,7 +4,9 @@
 
 ### Define the Problem Statement
 
-Map new, planned and existing rail, ferry, and bus stops. Bus stops should contain a field flagging stops that qualify as a 'Major Transit Stops', as well as a field classifying stops served by routes meeting certain headway criteria. 
+Map new, planned and existing rail, ferry, and bus stops. Bus stops should contain a field flagging stops that qualify as a 'Major Transit Stops', as well as a field classifying stops served by routes meeting certain headway criteria.
+
+This dataset will replace the existing [Major Transit Stop](https://mtc.maps.arcgis.com/home/item.html?id=561dc5b42fa9451b95faf615a3054260) dataset, and will represent all transit stops in the Bay Area as of January 2020. 
 
 ### Project Resources
 
@@ -30,6 +32,7 @@ Map new, planned and existing rail, ferry, and bus stops. Bus stops should conta
 ### Existing Transit Stops
 
 The existing transit stops dataset includes all transit stops for the Bay Area, including attributes that indicate level of service for routes served by them. The table below provides the columns that will contain level of service information as well as a description of the level of service criteria, such as headway threshold, time period, number of routes served, or route type. 
+
 
 | Field Name Long    | Description                                                                                                                                                                                                                                                                                                                           | Domain                                                        |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
