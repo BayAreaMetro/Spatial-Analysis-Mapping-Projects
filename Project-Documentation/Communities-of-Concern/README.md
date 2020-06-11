@@ -16,6 +16,7 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 - [Methdology](#methodology)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
+- [Related Works](#related-works)
 
 
 ## Data Sources
@@ -69,7 +70,7 @@ The table below provides the calculations that need to be performed to get Disad
 
 The link below provides the COC schema and domains, along with calculations and written descriptions of the calculations which may be helpful for analysis purposes. Below the link is a table for informational purposes. 
 
-[COC Schema With Field Descriptions, Population & Share Calculations](Data/COC_Schema.csv)
+[COC Schema With Field Descriptions, Population & Share Calculations](Data/COC_Schema_pba2050.csv)
 
 | Disadvantage Factor                            | Disadvantage Factor Population Based on ACS Variable Population                                                                                                                                                               | Disadvantage Factor Population as a Share of Universe (Population, Households, Families)                                                                                                                                                   |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +92,7 @@ To explore the processing methodology, take a look at the [COC Processing Method
 
 - Feature class that contains Census Tracts meeting MTC Communities of Concern criteria
 	- Feature class name: 
-	- [Feature Class Schema](Data/COC_Schema.csv) 
+	- [Feature Class Schema](Data/COC_Schema_pba2050.csv) 
 - Web layer that contains Census Tracts meeting MTC Communities of Concern criteria 
 - Print map of MTC Communities of Concern
 
@@ -105,4 +106,5 @@ To explore the processing methodology, take a look at the [COC Processing Method
 ![PBA 2040 and PBA 2050 CoC Change Map](https://mtcdrive.box.com/shared/static/fofkxao3yx1p7gb6ylzaqzmugxmihkgd.png)
 
 ## Related Works
-[BARC Disadvantaged and Vulnerable Communities](https://mtcdrive.box.com/s/kgljawtrqdwvpv01n47kenmdnq9gvpt6)
+- [Communities of Concern Update with American Community Survey 2012-2016 Data](README_COC_ACS2016.md)
+- [BARC Disadvantaged and Vulnerable Communities](https://mtcdrive.box.com/s/kgljawtrqdwvpv01n47kenmdnq9gvpt6)
