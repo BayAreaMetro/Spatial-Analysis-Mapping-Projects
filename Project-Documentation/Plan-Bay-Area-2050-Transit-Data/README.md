@@ -65,7 +65,7 @@ Planned transit stops refer to fully funded projects that have been approved for
 
 ### Existing Transit Stops Methodology
 
-To create the existing transit stops, ESRI Public Transit tools were leveraged as well as pandas/python tools. The tools and script rely on Regional General Transit Feed (GTFS) specification data provided by the [Bay Area 511 GTFS API](https://511.org/open-data/transit). 
+Existing transit stops represent all rail, bus, ferry, and light rail stops and were created from static General Transit Feed Specification data downloaded from the [Bay Area 511 GTFS API](https://511.org/open-data/transit). To create the existing transit stops, ESRI Public Transit tools were leveraged as well as open source python libraries such as Pandas. GTFS data was downloaded in early January 2020. Stops and associated headway information for transit routes served by stops are reflect the transit schedule information provided in the feed at the time of download and may not reflect current schedules. 
 
 The process was scripted in a jupyter notebook running in an ArcGIS Pro environment. You can review the processing script [here](gtfs_transit_stops_processing.ipynb). To run the script, you will need to download the ArcGIS Pro project which contains the ESRI toolboxes, jupyter nootebooks as well as the data you would need to repeat the process which can be accessed [here (MTC Acces Only)](https://mtcdrive.box.com/s/dr4bo6n1wois3dm4lutad8pivdj50uu3).   
 
