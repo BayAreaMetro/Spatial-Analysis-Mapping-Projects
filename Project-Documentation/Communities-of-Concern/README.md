@@ -37,7 +37,7 @@ The 2020 update of MTC's Communities of Concern follows the Adopted Communities 
 
 ### Communities of Concern Framework Plan Bay Area 2050 COC Update
 
-| Disadvantage Factor                                | Mean % <br>Regional Population | Standard <br>Deviation <br>(SD) | .5 SD <br>**PBA2050 Threshold**<br>(High COC) | 1 SD <br>(Higher COC) | 1.5 SD <br>(Highest COC) |
+| Disadvantage Factor                                | Mean % <br>Regional Population | Standard <br>Deviation <br>(SD) | .5 SD <br>_PBA2050 Threshold_<br>(High COC) | 1 SD <br>(Higher COC) | 1.5 SD <br>(Highest COC) |
 |----------------------------------------------------|--------------------------------|:-------------------------------:|:------------------------------------------------:|:---------------------:|:------------------------:|
 | **Minorities**                                     | 58%                            | 24%                             | 70%                                              | 82%                   | 94%                      |
 | **Low-Income (<200% Federal Poverty   Level-FPL)** | 21%                            | 14%                             | 28%                                              | 35%                   | 42%                      |
