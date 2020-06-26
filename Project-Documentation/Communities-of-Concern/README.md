@@ -11,6 +11,7 @@ Identify census tracts within the Bay Area that are considered Communities of Co
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
 	- [MTC Communities of Concern Framework](#mtc-communities-of-concern-framework)
+	- [Communities of Concern Framework Plan Bay Area 2050 COC Update](communities-of-concern-framework-plan-bay-area-2050-coc-update)
 	- [Summary of MTC COC Disadvantage Factors & Disadvantage Factor Definitions](#summary-of-mtc-coc-disadvantage-factors--disadvantage-factor-definitions)
 	- [Calculate MTC COC Disadvantage Factor Population from ACS Variable Populations](#calculate-mtc-coc-disadvantage-factor-population-from-acs-variable-populations)
 - [Methdology](#methodology)
@@ -34,9 +35,9 @@ The 2020 update of MTC's Communities of Concern follows the Adopted Communities 
 
 ![COC Framework](README_Images/COC_Framework_PBA2040.png)
 
-**Communities of Concern Framework Plan Bay Area 2050 COC Update**
+### Communities of Concern Framework Plan Bay Area 2050 COC Update
 
-| Disadvantage Factor                                | Mean % <br>Regional Population | Standard <br>Deviation <br>(SD) | .5 SD <br>Concentration Threshold <br>(High COC) | 1 SD <br>(Higher COC) | 1.5 SD <br>(Highest COC) |
+| Disadvantage Factor                                | Mean % <br>Regional Population | Standard <br>Deviation <br>(SD) | .5 SD <br>**PBA2050 Threshold** <br>(High COC) | 1 SD <br>(Higher COC) | 1.5 SD <br>(Highest COC) |
 |----------------------------------------------------|--------------------------------|:-------------------------------:|:------------------------------------------------:|:---------------------:|:------------------------:|
 | **Minorities**                                     | 58%                            | 24%                             | 70%                                              | 82%                   | 94%                      |
 | **Low-Income (<200% Federal Poverty   Level-FPL)** | 21%                            | 14%                             | 28%                                              | 35%                   | 42%                      |
