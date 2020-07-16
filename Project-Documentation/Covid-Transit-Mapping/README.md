@@ -19,6 +19,24 @@ Map regional transit service disruptions caused by the coronavirus pandemic and 
 
 ## Analysis Parameters
 
+### Transit Service Time of Day Classes
+
+| Time Period Class | Time Period                        |
+|-------------------|------------------------------------|
+| AM Peak           | 6:00am-10:00am                     |
+| Midday            | 10:00am-3:00pm                     |
+| PM Peak           | 3:00pm-7:00pm                      |
+| Late Night        | 7:00pm-6:00am (overnight/next day) |
+
+### Transit Service Headway Frequency Classes
+
+| Transit Service Average Headway Class   | Average Headways |
+|-----------------------------------------|------------------|
+| 10 Minutes or Less                      | 0-10             |
+| 11 to 20 Minutes                        | 11-20            |
+| 21 to 30 Minutes                        | 21-30            |
+| 31 Minutes or More                      | 31+              |
+
 
 ## Methodology applied to solve problem
 
@@ -28,6 +46,7 @@ Map regional transit service disruptions caused by the coronavirus pandemic and 
 - Map of Transit Service Changes by Route Between March 2020-May2020
 - Map of Transit Service Changes and MTC Communities of Concern 2018
 - Map of Transit Service Changes and Low-Income Communities using ACS 2012–2016 Data
+- Map(s) of Transit Frequencies by Time of Day
 
 ## Results
 
