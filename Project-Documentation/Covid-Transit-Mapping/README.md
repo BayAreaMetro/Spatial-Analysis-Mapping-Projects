@@ -1,39 +1,39 @@
--- Draft --
+# Transit Analysis and Mapping Support for Blue Ribbon Task Force
 
-# COVID-19 Blue Ribbon Transit Recovery Task Force Mapping
+## Analysis request:
 
-### Problem Statement
+(From [Box](https://mtcdrive.app.box.com/notes/684909665446))
 
-Map regional transit service disruptions caused by the coronavirus pandemic and analyze impacts to accessibility. Maps and analysis will be used to support the blue ribbon task force convened to guide the recovery of the Bay Area transit network in a post-pandemic future. 
+- Generate a network stop and route map showing 10 min service_class for all operators
+- Join headway data to route lines (JC)
+- Filter out shuttle routes and other service types that we do not want to use (Cable Car, Shuttles)
+- Automate the standard data deliverable for all Transit Service
 
-### Project Resources
+**Final deliverable**: map of route service in January and June 2020 (route lines drawn by thickness of the headway metric)
 
-- [Asana Project-Transit Mapping for Blue Ribbon Task Force (MTC Access Only)](https://app.asana.com/0/229355710745434/1175695582457984)
-- [Box Directory (MTC Access Only)](https://mtcdrive.box.com/s/1xsylbgcyad7i5pmpe6vqzt0vfnvue5h) 
+**Eventually**: DV will generate a Transit and Roadway Dashboard (Long Term Support of Transit Service Analysis)
 
-## Data Sources
+# Approach
 
-- [Communities of Concern 2018 - American Community Survey 2012–2016](https://mtc.maps.arcgis.com/home/item.html?id=1501fe1552414d569ca747e0e23628ff)
-- [Census Transportation Planning Package - 2012–2016,table A202212](https://ctpp.transportation.org/2012-2016-5-year-ctpp/)
-- [Council for Community and Economic Research & Labor Market Information Institute](https://www.lmiontheweb.org/more-than-half-of-u-s-workers-in-critical-occupations-in-the-fight-against-covid-19/)
+This script returns (for the specified month and headway calculation time frame):
 
-## Analysis Parameters
+By route:
+- number of trips
+- number of stops
+- headways: median, mean, and st.dev of route headways
+- service_class: 10-min mean headway bracket for route
+
+**Headway calculation months**:
+- January 2020
+- June 2020
+
+**Headway calculation time periods**:
+- AM peak = 6-10am
+- Midday = 10am-3pm
+- PM Peak = 3-7pm
+- Late Night/Early Morning = 7pm-6am
+- Full day (6am-6am)
+- All day (5am-8pm)
 
 
-## Methodology applied to solve problem
-
-
-## Expected Outcomes (if any)?
-
-- Map of Transit Service Changes by Route Between March 2020-May2020
-- Map of Transit Service Changes and MTC Communities of Concern 2018
-- Map of Transit Service Changes and Low-Income Communities using ACS 2012–2016 Data
-
-## Results
-
-- [Covid Transit Print Maps (MTC Access Only)](https://mtcdrive.box.com/s/op0wnv1qrauzd2qsvsnandius2t6ovlv)
-- [Covid Transit Interactive Web Application (MTC Access Only-Not Created Yet)]()
-
-## Tags
-
-Add tags to help others find your project, e.g. if you are documenting an analysis done to support Environmental Impact Reporting for Plan Bay Area 2050, add the tags **eir**, **plan bay area 2050**, **environment**.
+Output format is 6 time period files per month.
