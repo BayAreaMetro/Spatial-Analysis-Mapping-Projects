@@ -32,7 +32,8 @@ By route:
 - Midday = 10am-3pm
 - PM Peak = 3-7pm
 - Late Night/Early Morning = 7pm-6am
-- All day = 6am-6am
+- Full day (6am-6am)
+- All day (5am-8pm)
 
 
-Output format is 5 time period files per month.
+Output format is 6 time period files per month.
