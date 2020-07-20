@@ -14,12 +14,7 @@ By route:
 - January 2020
 - June 2020
 
-**Headway calculation time periods**:
-- AM peak = 6-10am
-- Midday = 10am-3pm
-- PM Peak = 3-7pm
-- Late Night/Early Morning = 7pm-6am
-- All day = 6am-6am
+For the **Headway calculation time periods** in config.py
 
 Run with
     python blue_ribbon_calcs.py
@@ -80,82 +75,95 @@ def drop_zombies(gtfs_feed_dict):
     
     print('Dropping zombies from feed...')
 
-    null_arrival_time = stop_times['arrival_time'].isnull()
-    null_departure_time = stop_times['departure_time'].isnull()
+    # null_arrival_time = stop_times['arrival_time'].isnull()
+    # null_departure_time = stop_times['departure_time'].isnull()
 
-    print('number of stop times with null arrival time: ',
-          len(stop_times[null_arrival_time]))
-    print('number of stop times with null departure time: ',
-          len(stop_times[null_departure_time]))
+    # print('number of stop times with null arrival time: ',
+    #       len(stop_times[null_arrival_time]))
+    # print('number of stop times with null departure time: ',
+    #       len(stop_times[null_departure_time]))
 
-    missing_stop_times = (stop_times[null_arrival_time
-        | null_departure_time])
-    print('number of stop times with either null arrival or departure times: ',
-          len(missing_stop_times))
+    # missing_stop_times = (stop_times[null_arrival_time
+    #     | null_departure_time])
+    # print('number of stop times with either null arrival or departure times: ',
+    #       len(missing_stop_times))
 
-    stop_times_good = (stop_times
-                       .drop(missing_stop_times.index,
-                             axis=0)
-                      )
-    print('number of stop times with both arrival and departure times: ',
-          len(stop_times_good))
+    # stop_times_good = (stop_times
+    #                    .drop(missing_stop_times.index,
+    #                          axis=0)
+    #                   )
+    # print('number of stop times with both arrival and departure times: ',
+    #       len(stop_times_good))
 
-    # Zombies 1: remove stop_ids with no stop times
-    print('Dropping Zombies 1: stop_ids with no stop times')
-    bad_stop_ids = (set(missing_stop_times['stop_id'].unique())
-                    .difference(set(stop_times_good['stop_id'].unique()))
-                   )
+    # # Zombies 1: remove stop_ids with no stop times
+    # print('Dropping Zombies 1: stop_ids with no stop times')
+    # bad_stop_ids = (set(missing_stop_times['stop_id'].unique())
+    #                 .difference(set(stop_times_good['stop_id'].unique()))
+    #                )
 
-    print('number of stop_ids with no arrival/departure times: ',
-          len(bad_stop_ids))
-    time_col_msg = 'number of stop_ids {} at least one arrival + departure times: '
-    print(time_col_msg.format('having'),
-        len(stop_times_good['stop_id'].unique())
-        )
-    print(time_col_msg.format('missing'),
-          len(missing_stop_times['stop_id'].unique()))
+    # print('number of stop_ids with no arrival/departure times: ',
+    #       len(bad_stop_ids))
+    # time_col_msg = 'number of stop_ids {} at least one arrival + departure times: '
+    # print(time_col_msg.format('having'),
+    #     len(stop_times_good['stop_id'].unique())
+    #     )
+    # print(time_col_msg.format('missing'),
+    #       len(missing_stop_times['stop_id'].unique()))
 
-    missing_stop_times = missing_stop_times[~(missing_stop_times['stop_id']
-      .isin(bad_stop_ids))]
-    print('''number of stop times after dropping Zombies 1
-     (stop_ids with no stop times)''', len(missing_stop_times))
+    # missing_stop_times = missing_stop_times[~(missing_stop_times['stop_id']
+    #   .isin(bad_stop_ids))]
+    # print('''number of stop times after dropping Zombies 1
+    #  (stop_ids with no stop times)''', len(missing_stop_times))
     
-    # Fix 1: Remove zombie stop_ids from stops
-    stops = stops[~stops['stop_id'].isin(bad_stop_ids)]
+    # # Fix 1: Remove zombie stop_ids from stops
+    # stops = stops[~stops['stop_id'].isin(bad_stop_ids)]
 
     # Zombies 2: remove trips with no stop times
     print('Dropping Zombies 2: trip_ids with no stop times')
-    
-    # trip_ids with no stop times in stop_times
-    bad_trip_ids = (set(missing_stop_times['trip_id'].unique())
-                    .difference(set(stop_times_good['trip_id'].unique()))
-                   )
-    # trip_ids with no stop times in trips
-    bad_trip_ids = (bad_trip_ids
-      .union(set(trips['trip_id'].unique())
-        .difference(set(stop_times_good['trip_id'].unique())))
-      )
+
+    no_stop_times = (stop_times
+                    .groupby('trip_id')
+                    .agg({'arrival_time': check_null_group,
+                          'departure_time': check_null_group})
+                    .reset_index())
+
+    no_arrival_times = no_stop_times['arrival_time'] == True
+    no_departure_times = no_stop_times['departure_time'] == True
+
+    bad_trip_ids = no_stop_times[no_arrival_times | no_departure_times]['trip_id'].unique()
     # Fix 2: Remove zombie trip_ids from trips
     trips = trips[~trips['trip_id'].isin(bad_trip_ids)]
     
-    print('number of trip_ids with no arrival/departure times: ',
-          len(bad_trip_ids))
-    print('number of trip_ids having at least one arrival + departure times: ',
-          len(stop_times_good['trip_id'].unique()))
-    print('number of trip_ids missing at least one arrival + departure times: ',
-          len(missing_stop_times['trip_id'].unique()))
+    # # trip_ids with no stop times in stop_times
+    # bad_trip_ids = (set(missing_stop_times['trip_id'].unique())
+    #                 .difference(set(stop_times_good['trip_id'].unique()))
+    #                )
+    # # trip_ids with no stop times in trips
+    # bad_trip_ids = (bad_trip_ids
+    #   .union(set(trips['trip_id'].unique())
+    #     .difference(set(stop_times_good['trip_id'].unique())))
+    #   )
+    # # Fix 2: Remove zombie trip_ids from trips
+    # trips = trips[~trips['trip_id'].isin(bad_trip_ids)]
+    
+    # print('number of trip_ids with no arrival/departure times: ',
+    #       len(bad_trip_ids))
+    # print('number of trip_ids having at least one arrival + departure times: ',
+    #       len(stop_times_good['trip_id'].unique()))
+    # print('number of trip_ids missing at least one arrival + departure times: ',
+    #       len(missing_stop_times['trip_id'].unique()))
 
     
-    missing_stop_times = missing_stop_times[~(missing_stop_times['trip_id']
-      .isin(bad_trip_ids))]
-    print('''number of stop times after dropping Zombies 2
-     (trip_ids with no stop times)''', len(missing_stop_times))
+    # missing_stop_times = missing_stop_times[~(missing_stop_times['trip_id']
+    #   .isin(bad_trip_ids))]
+    # print('''number of stop times after dropping Zombies 2
+    #  (trip_ids with no stop times)''', len(missing_stop_times))
 
     
-    # Fix 3: Remove zombie trip_ids/stop_ids from stop_times
-    stop_times = pd.concat([stop_times_good, missing_stop_times],
-                                 ignore_index=True,
-                                 sort=False)
+    # # Fix 3: Remove zombie trip_ids/stop_ids from stop_times
+    # stop_times = pd.concat([stop_times_good, missing_stop_times],
+    #                              ignore_index=True,
+    #                              sort=False)
     
     # Zombies 3: remove routes with no trips
     print('Dropping Zombies 3: route_ids with no trips')
@@ -192,6 +200,12 @@ def interpolate_stop_times(gtfs_feed_dict):
     print('Interpolating stop times...')
     stop_times = gtfs_feed_dict['stop_times']
 
+    sort_cols = ['trip_id', 'stop_sequence']
+    time_cols = ['arrival_time', 'departure_time']
+
+    for col in time_cols:
+        stop_times[col] = pd.to_timedelta(stop_times[col])
+
     null_arrival_time = stop_times['arrival_time'].isnull()
     null_departure_time = stop_times['departure_time'].isnull()
 
@@ -205,11 +219,11 @@ def interpolate_stop_times(gtfs_feed_dict):
       )
 
     bad_trips = (stop_times[stop_times['trip_id'].isin(bad_trip_ids)]
-                                  .sort_values(by=['trip_id', 'stop_sequence'])
+                                  .sort_values(by=sort_cols)
                                  .drop_duplicates()
                                  )
     # interpolate stop times for bad trips
-    for col in ['arrival_time', 'departure_time']:
+    for col in time_cols:
         bad_trips[col] = (bad_trips
                               .groupby('trip_id')
                               .apply(lambda x:
@@ -220,12 +234,12 @@ def interpolate_stop_times(gtfs_feed_dict):
     # to re-form stop_times
     fully_non_null_trips = stop_times[~stop_times['trip_id']
                                            .isin(bad_trips['trip_id'].unique())]
-    stop_times = pd.concat([bad_trips,
-                                 fully_non_null_trips],
-                                 ignore_index=True,
-                                 sort=False)
+    stop_times = pd.concat([bad_trips, fully_non_null_trips],
+                            ignore_index=True,
+                            sort=False
+                            )
 
-    stop_times = gtfs_feed_dict['stop_times']
+    gtfs_feed_dict['stop_times'] = stop_times
     print('Stop times have been interpolated.')
 
 
@@ -266,15 +280,22 @@ def parse_time_from_time_list(time_window):
 
 
 def filter_location_types(gtfs_feed_dict):
-    # remove stops with location_type == 1
-    stops = gtfs_feed_dict['stops']
-    gtfs_stop_ids = stops[stops['location_type'] != 1][['stop_id']].drop_duplicates()
+    """
+    SKIP
+    ----
+    
+    Skip for now-- this removes 29165 stop_times which results in
+    the exclusion of 12 routes in the final headways table
+    """
+    # # remove stops with location_type == 1
+    # stops = gtfs_feed_dict['stops']
+    # gtfs_stop_ids = stops[stops['location_type'] != 1][['stop_id']].drop_duplicates()
 
-    stop_times = gtfs_feed_dict['stop_times']
-    stop_times = stop_times.merge(gtfs_stop_ids)
+    # stop_times = gtfs_feed_dict['stop_times']
+    # stop_times = stop_times.merge(gtfs_stop_ids)
 
-    gtfs_feed_dict['stops'] = stops
-    gtfs_feed_dict['stop_times'] = stop_times
+    # gtfs_feed_dict['stops'] = stops
+    # gtfs_feed_dict['stop_times'] = stop_times
     
     
 def filter_stop_times_to_window(time_window, gtfs_feed_dict):
@@ -294,10 +315,10 @@ def filter_stop_times_to_window(time_window, gtfs_feed_dict):
 
 def add_route_pattern_id(gtfs_feed_dict):
     """
-    Given the trips dataframe, returns a modified table
-    with renamed direction_id column values and a unique
-    agency_route_id and agency_route_dir_id
-    for each agency route (for headway calculations)
+    Given the trips dataframe, returns a modified table with renamed
+    direction_id column values and a unique route_pattern_id of format
+    '{route_id}-{direction_id}' for each agency route direction (for
+    headway calculations)
     """
     trips = gtfs_feed_dict['trips']
 
@@ -324,12 +345,11 @@ def add_route_pattern_id(gtfs_feed_dict):
     gtfs_feed_dict['trips'] = trips
 
 
-def filter_route_type(gtfs_feed_dict, route_type=3):
+def filter_route_type(gtfs_feed_dict, route_types='All'):
     """
-    By default, filters buses (route_type=3) from routes.
-    You can optionally specify 'All', a single route_type, or a list
+    If route_type is not 'All', filters to the given list of route_types
 
-    Route type must be from these keys:
+    Route type must a list containing one or more of these keys:
 
     route_type_dict = {0:'Tram, Streetcar, Light Rail',
                        1: 'Subway, Metro',
@@ -343,9 +363,12 @@ def filter_route_type(gtfs_feed_dict, route_type=3):
                        12: 'Monorail'
                        }
     """
-    routes = gtfs_feed_dict['routes']
-    routes = routes[routes['route_type'] == route_type]
-    gtfs_feed_dict['routes'] = routes
+    if route_types != 'All':
+        print('removing all route types except {}'.format(route_types))
+        gtfs_feed_dict['routes'] = (gtfs_feed_dict['routes']
+          [gtfs_feed_dict['routes']['route_type']
+          .isin(route_types)]
+          )
 
 
 def clean_GTFS_feed(gtfs_feed_dict, time_window):
@@ -355,20 +378,20 @@ def clean_GTFS_feed(gtfs_feed_dict, time_window):
     # interpolate stop times
     interpolate_stop_times(gtfs_feed_dict)
 
-    # remove location type 1
-    filter_location_types(gtfs_feed_dict)
+    # # remove location type 1
+    # filter_location_types(gtfs_feed_dict)
 
     # filter stop_times to time_window
     filter_stop_times_to_window(time_window, gtfs_feed_dict)
 
-    # add Route Pattern Id fields to trips and stop_times
+    # add Route Pattern Id fields to trips
     add_route_pattern_id(gtfs_feed_dict)
 
     # filter routes to desired route type
-    filter_route_type(gtfs_feed_dict)
+    filter_route_type(gtfs_feed_dict, route_types='All')
 
 
-def get_route_stop_agg(gtfs_feed_dict, use_arrivals):
+def get_route_stop_agg(gtfs_feed_dict, use_arrivals, time_frame):
     """
     By route + stop:
 
@@ -396,7 +419,7 @@ def get_route_stop_agg(gtfs_feed_dict, use_arrivals):
     # Aggregate route-stop stats
 
     # set groupby columns: route info + stop info
-    gb_cols = routes_cols + sort_cols[:-1]
+    gb_cols = ['route_id'] + sort_cols[:-1]
 
     # define aggregations
     agg_d = {sort_time_col: ['min', 'max'],
@@ -411,6 +434,18 @@ def get_route_stop_agg(gtfs_feed_dict, use_arrivals):
                      .diff()
                      .dt.total_seconds() / 60.0
                     )
+
+    # # Question: is this useful to include,
+    # #     or are we interested in routes that serve a stop more than once?
+
+    # # Null headway implies the route only serves the stop once during the time window
+    # # Solution: set the headway to the duration of the time window
+    time_window = time_windows[time_frame]
+    start_time, end_time = parse_time_from_time_list(time_window)
+    time_frame_duration_mins = round((end_time - start_time).total_seconds()/60.0)
+    headways_table['headway'] = (headways_table['headway']
+                                 .fillna(time_frame_duration_mins)
+                                 )
 
     # generate route stop aggregation table
     route_stop_agg = (headways_table
@@ -437,17 +472,6 @@ def get_route_stop_agg(gtfs_feed_dict, use_arrivals):
     for col in sort_time_rename_d.values():
         route_stop_agg[col] = route_stop_agg[col].map(timedelta_to_hour_str)
 
-    # # Question: is this useful to include,
-    # #     or are we interested in routes that serve a stop more than once?
-
-    # # Null headway implies the route only serves the stop once during the time window
-    # # Solution: set the headway to the duration of the time window
-    # start_time, end_time = parse_time_from_time_list(time_window)
-    # time_frame_duration_mins = round((end_time - start_time).total_seconds()/60.0)
-    # headway_cols = [c for c in route_stop_agg if c.startswith('headway_')]
-    # route_stop_agg[headway_cols] = (route_stop_agg[headway_cols]
-    #                                 .fillna(time_frame_duration_mins)
-    #                                )
     return route_stop_agg
 
 
@@ -495,12 +519,14 @@ def blue_ribbon_tp_calcs(month, time_frame):
     output_dir = os.path.join('blue_ribbon_calcs', month)
 
     # create route stop aggregation (i.e. calculate headway stats)
-    route_stop_agg = get_route_stop_agg(gtfs_feed_dict, use_arrivals)
+    route_stop_agg = get_route_stop_agg(gtfs_feed_dict, use_arrivals, time_frame)
 
     route_stop_dir = os.path.join(output_dir, 'route_stop_aggs')
     makedirs_if_not_exists(route_stop_dir)
     output_fname = os.path.join(route_stop_dir, '{}_route_stop_agg.csv'.format(time_frame))
     route_stop_agg.to_csv(output_fname, index=False)
+
+    routes_gb_cols = ['route_id']
 
     # create final blue ribbon agg
     blue_ribbon_agg_d = {'num_trips': 'sum',
@@ -516,7 +542,7 @@ def blue_ribbon_tp_calcs(month, time_frame):
                 'stop_id': 'stop_count'}
 
     route_agg = (route_stop_agg
-                 .groupby(routes_cols, as_index=False)
+                 .groupby(routes_gb_cols, as_index=False)
                  .agg(blue_ribbon_agg_d)
                  .rename(columns=rename_d)
                  .round()
@@ -524,9 +550,6 @@ def blue_ribbon_tp_calcs(month, time_frame):
 
     route_agg = route_agg[~route_agg['mean_headways'].isnull()]
     route_agg['service_class'] = route_agg['mean_headways'].map(service_class)
-
-    agency_df = pd.read_csv(os.path.join(gtfs_dir, 'agency.csv'))
-    route_agg = agency_df[['agency_id', 'agency_name']].merge(route_agg)
 
     output_fname = os.path.join(output_dir, '{}_blue_ribbon_calcs.csv'.format(time_frame))
     route_agg.to_csv(output_fname, index=False)
