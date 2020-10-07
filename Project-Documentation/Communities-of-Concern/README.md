@@ -103,7 +103,7 @@ To explore the processing methodology, take a look at the [COC Processing Method
 - [PBA 2050 Communities of Concern - ACS 2018 Web Layer](https://opendata.mtc.ca.gov/datasets/communities-of-concern-plan-bay-area-2050)
 
 - [PBA 2050 Communities of Concern Print Map](https://mtcdrive.box.com/s/8jeo0hly4cnnb0fj6lvuzy5awvvdk5zo)
-- [PBA 2040 and PBA 2050 CoC Change Map](https://mtcdrive.box.com/s/ef4mdh3pxfi6rm3a2bjx3gpu7jnpll29)
+- [PBA 2040 and PBA 2050 CoC Change Map](https://mtcdrive.box.com/s/ef4mdh3pxfi6rm3a2bjx3gpu7jnpll29) 
 
 ## Related Works
 - [Communities of Concern Update with American Community Survey 2012-2016 Data](README_COC_ACS2016.md)
