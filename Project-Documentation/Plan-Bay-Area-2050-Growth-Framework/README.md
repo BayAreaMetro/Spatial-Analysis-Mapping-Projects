@@ -35,17 +35,17 @@ The purpose of this page is to document working related to creating and analyzin
 
 ### Priority Development Area Data
 
-- [Priority Development Areas (current)](http://opendata.mtc.ca.gov/datasets/priority-development-areas-current)
+- [Priority Development Areas (Plan Bay Area 2040)](https://opendata.mtc.ca.gov/datasets/priority-development-areas-plan-bay-area-2040)
 
 ### Priority Production Area Data
 
 ### Transit Rich Area Data
-- [Major Transit Stops](https://mtc.maps.arcgis.com/home/item.html?id=561dc5b42fa9451b95faf615a3054260) 
+- [Transit Stops - Existing (2020)(Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=3faf8401623b48ae8d70f7a71d7365c9) 
 
 ### High Resource Area Data
 ***California Tax Credit Allocation Committee (TCAC) & the Department of Housing and Community Development (HCD) Resource Opportunity Areas***
 - [California Tax Credit Allocation Committee Opportunity Maps Website](https://www.treasurer.ca.gov/ctcac/opportunity.asp)
-- [CTCAC/HCD Resource Opportunity Areas (2019) Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=cfe23ff6e81d483f90c65fb0eba7db2e#overview)
+- [CTCAC/HCD Resource Opportunity Areas (2019) Web Layer (Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=15c995dc46034e3ea3f44ecd08f19110)
 
 ### PDA Eligible Area Data Sources
 ***MTC Data***
