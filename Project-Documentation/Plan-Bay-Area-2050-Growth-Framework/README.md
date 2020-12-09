@@ -12,6 +12,8 @@ The purpose of this page is to document working related to creating and analyzin
 - [Data Sources](#data-sources)
 	- [Priority Development Area Data](#priority-development-area-data)
 	- [Priority Production Area Data](#priority-production-area-data)
+	- [Transit Rich Area Data](#transit-rich-area-data)
+	- [High Resource Area Data](#high-resource-area-data)
 	- [PDA Eligible Area Data Sources](#pda-eligibile-area-data-sources)
 	- [PPA Eligible Area Data Sources](#ppa-eligible-area-data-sources)
 - [Analysis Parameters](#analysis-parameters)
@@ -22,6 +24,9 @@ The purpose of this page is to document working related to creating and analyzin
 	- [Priority Development Areas](#priority-development-areas)
 	- [Priority Production Areas](#priority-production-areas)
 	- [Priority Conservation Areas](#priority-conservation-areas)
+	- [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined)
+	- [Transit Rich Areas](#transit-rich-areas)
+	- [High Resource Areas](#high-resource-areas)
 - [Methodology Exceptions](#methodology-exceptions)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
@@ -34,14 +39,17 @@ The purpose of this page is to document working related to creating and analyzin
 
 ### Priority Production Area Data
 
-### PDA Eligible Area Data Sources
-***MTC Data***
-- [Major Transit Stops](https://mtc.maps.arcgis.com/home/item.html?id=561dc5b42fa9451b95faf615a3054260)
-- [Bus Stop Headways During Peak Period in 2019](https://mtc.maps.arcgis.com/home/item.html?id=a47075cd3b864584b65811ad513cb28f)
+### Transit Rich Area Data
+- [Major Transit Stops](https://mtc.maps.arcgis.com/home/item.html?id=561dc5b42fa9451b95faf615a3054260) 
 
+### High Resource Area Data
 ***California Tax Credit Allocation Committee (TCAC) & the Department of Housing and Community Development (HCD) Resource Opportunity Areas***
 - [California Tax Credit Allocation Committee Opportunity Maps Website](https://www.treasurer.ca.gov/ctcac/opportunity.asp)
 - [CTCAC/HCD Resource Opportunity Areas (2019) Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=cfe23ff6e81d483f90c65fb0eba7db2e#overview)
+
+### PDA Eligible Area Data Sources
+***MTC Data***
+- [Bus Stop Headways During Peak Period in 2019](https://mtc.maps.arcgis.com/home/item.html?id=a47075cd3b864584b65811ad513cb28f)
 
 ### PPA Eligible Area Data Sources
 ***University of California - Berkeley, ABAG, MTC Industrial Land Retention and Investment in the San Francisco Bay Area***
@@ -54,7 +62,7 @@ The purpose of this page is to document working related to creating and analyzin
 
 PDAs, PPAs and PCAs were created following the adopted Plan Bay Area 2050 Growth Framework Update. A summary of key changes to the Regional Growth Framework as well as an overview of current and updated Regional Growth Framework designations can be found at the link below. 
 
-- [2019 Regional Growth Framework Update](https://www.planbayarea.org/sites/default/files/pdfs_referenced/2019_Regional_Growth_Framework_Update_-_Whats_Changed.pdf)
+- [2019 Regional Growth Framework Update](https://www.planbayarea.org/sites/default/files/pdfs_referenced/2019_Regional_Growth_Framework_Update_-_Whats_Changed_1.pdf)
 
 ### PDA Eligible Area Criteria
 
@@ -74,22 +82,21 @@ Each shapefile received from jurisdictions was projected from the projection it 
 
 ### PDA Eligibility Areas
 
-PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#pda-eligible-area-criteria).
+PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#pda-eligible-area-criteria). 
 
-**Transit-Rich**
-1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. 
-2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected. 
+**Transit-Rich** 
+[Transit Rich Areas](#transit-rich-areas-blueprint-input)
 
 **Connected Community/High Resource Area Feature**
 1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
-3. Clip to [CTCAC/HCD Resource Opportunity Areas](#pda-eligible-area-data-sources)
+3. Clip to [High Resource Areas](#high-resource-areas-blue-print-input)
 4. Erase areas overlapping with Transit-Rich Areas.
 
 **Connected Community/Outside High Resource Area Feature**
 1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
-3. Erase areas overlapping with Transit-Rich and Connected Community/High Resource Areas. 
+3. Erase areas overlapping with [Transit-Rich](#transit-rich-areas-blueprint-input) and Connected Community/High Resource Areas. 
 
 ### Priority Development Areas
 
@@ -108,6 +115,23 @@ Priority Production Areas were summarized by [UC Berkeley Industrial Land Study 
 - [PPA UC Berkeley Industrial Lands Analysis](Scripts/PPA_Analysis.py)
 
 ### Priority Conservation Areas
+
+### Final Blueprint Growth Geographies Combined 
+
+### Transit Rich Areas Blueprint Input
+
+Transit-Rich Areas were created primarily as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas)
+
+Transit-Rich Areas were created following the methodology listed below:
+1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. 
+2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected.
+
+
+### High Resource Areas Blueprint Input
+High-Resource Areas reas were created as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas)
+
+High-Resource Areas were created following the methodology listed below:
+1. Select High and Highest Resource Areas from [CTCAC/HCD Resource Opportunity Areas (2019)](#high-resource-area-data)
 
 ## Methodology Exceptions
 
