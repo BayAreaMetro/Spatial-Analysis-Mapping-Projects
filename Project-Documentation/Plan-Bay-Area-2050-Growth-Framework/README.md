@@ -85,6 +85,7 @@ Each shapefile received from jurisdictions was projected from the projection it 
 PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#pda-eligible-area-criteria). 
 
 **Transit-Rich** 
+
 [Transit Rich Areas Blueprint Input](#transit-rich-areas-blueprint-input)
 
 **Connected Community/High Resource Area Feature**
