@@ -85,7 +85,7 @@ Each shapefile received from jurisdictions was projected from the projection it 
 PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#pda-eligible-area-criteria). 
 
 **Transit-Rich** 
-[Transit Rich Areas](#transit-rich-areas-blueprint-input)
+[Transit Rich Areas Blueprint Input](#transit-rich-areas-blueprint-input)
 
 **Connected Community/High Resource Area Feature**
 1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
