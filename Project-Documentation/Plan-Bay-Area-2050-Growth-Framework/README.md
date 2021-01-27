@@ -133,6 +133,38 @@ High-Resource Areas were created following the methodology listed below:
 
 ### Final Blueprint Growth Geographies Combined 
 
+The above datasets and inputs were merged together following the detailed methodology below. The applicability of different Growth Geographies varies by local jurisdiction based upon the extent to which a jurisdiction has nominated Priority Development Areas (PDAs), as shown below: 
+
+In all Bay Area local jurisdictions: 
+
+**Priority Development Areas:**
+- Source - features are from Priority Development Areas (Plan Bay Area 2050).
+- Processing for growth geographies - features from source data were not modified further. Source data is the same as what is in the growth geographies data.
+
+**Priority Production Areas:**
+- Source - features are from Priority Production Areas (Plan Bay Area 2050).
+- Processing for growth geographies - features from source data were not modified further. Source data is the same as what is in the growth geographies data.
+
+Portions of **Transit Rich Areas** that are within ½ mile of a regional rail station with headways of 15 minutes or better during the AM (6 AM to 10 AM) and PM (3 PM to 7 PM) peak periods, including Bay Area Rapid Transit (BART) and CalTrain Baby Bullet station areas. 
+- Source - features were created by placing a half-mile buffer around regional passenger rail stations with peak headways of 15 minutes or less, based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
+- Processing for growth geographies - these input features were temporary data used to determine the designation, and were clipped to the “exclusion areas” shown below as well as Priority Development Areas and Priority Production Areas, so were not modified beyond their production.
+In Bay Area local jurisdictions that have nominated less than 50 percent of the PDA eligible areas as PDAs:
+
+**Transit-Rich Areas** that are not within a PDA, PPA, or within ½ mile of a regional rail station with 15 minute peak headways or less, as identified above. (This category includes both High-Resource Areas and places outside High-Resource Areas)
+- Source - features were created by placing a half-mile buffer around passenger rail stations, ferry terminals, and bus stops on routes with peak headways of 15 minutes or less during peak commute period that were selected from Major Transit Stops (2017) data, and by placing a half-mile buffer around passenger rail stations, ferry terminals, and bus rapid transit routes included in Plan Bay Area 2050.
+- Processing for growth geographies - These input features were temporary data used to determine the designation, and were clipped to the “exclusion areas” shown below as well as Priority Development Areas and Priority Production Areas, so were not modified beyond their production.
+
+**High-Resource Areas** within ¼ mile of a bus stop with 16- to 30-minute peak period headways:
+- Source - features were created by selecting the intersection of High and Highest Resource Areas from CTCAC/HCD Resource Opportunity Areas (2019) data and a quarter-mile buffer around bus stops with peak headways of 30 minutes or less, based upon a January 2020 extract of the Google Transit Feed Specification for all Bay Area transit providers, supplemented by published bus schedules where necessary.
+- Processing for growth geographies - these input features were temporary data used to determine the designation, and were clipped to all of the Growth Geographies highlighted above (PDAs, PPAs and Transit-Rich Areas), as well as the “exclusion areas” shown below, so were not modified beyond their production.
+
+Exclusion Areas: 
+The following areas are excluded from Growth Geographies. Also, these areas were not used in calculating the share of a jurisdiction’s PDA-eligible land locally nominated.
+- County-adopted wildland urban interface areas, where available
+- Areas of unmitigated sea level rise (i.e., areas at risk from sea level rise through year 2050 that lack mitigation strategies in Plan Bay Area 2050 Environment Element)
+- Areas outside locally-adopted urban growth boundaries
+- Parkland and other open spaces within urbanized areas identified in the California Protected Areas Database
+
 
 ## Methodology Exceptions
 
