@@ -135,7 +135,7 @@ High-Resource Areas were created following the methodology listed below:
 
 The above datasets and inputs were merged together following the detailed methodology below. The applicability of different Growth Geographies varies by local jurisdiction based upon the extent to which a jurisdiction has nominated Priority Development Areas (PDAs), as shown below: 
 
-In all Bay Area local jurisdictions: 
+**In all Bay Area local jurisdictions:**
 
 **Priority Development Areas:**
 - Source - features are from Priority Development Areas (Plan Bay Area 2050).
@@ -148,7 +148,8 @@ In all Bay Area local jurisdictions:
 Portions of **Transit Rich Areas** that are within ½ mile of a regional rail station with headways of 15 minutes or better during the AM (6 AM to 10 AM) and PM (3 PM to 7 PM) peak periods, including Bay Area Rapid Transit (BART) and CalTrain Baby Bullet station areas. 
 - Source - features were created by placing a half-mile buffer around regional passenger rail stations with peak headways of 15 minutes or less, based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
 - Processing for growth geographies - these input features were temporary data used to determine the designation, and were clipped to the “exclusion areas” shown below as well as Priority Development Areas and Priority Production Areas, so were not modified beyond their production.
-In Bay Area local jurisdictions that have nominated less than 50 percent of the PDA eligible areas as PDAs:
+
+**In Bay Area local jurisdictions that have nominated less than 50 percent of the PDA eligible areas as PDAs:**
 
 **Transit-Rich Areas** that are not within a PDA, PPA, or within ½ mile of a regional rail station with 15 minute peak headways or less, as identified above. (This category includes both High-Resource Areas and places outside High-Resource Areas)
 - Source - features were created by placing a half-mile buffer around passenger rail stations, ferry terminals, and bus stops on routes with peak headways of 15 minutes or less during peak commute period that were selected from Major Transit Stops (2017) data, and by placing a half-mile buffer around passenger rail stations, ferry terminals, and bus rapid transit routes included in Plan Bay Area 2050.
