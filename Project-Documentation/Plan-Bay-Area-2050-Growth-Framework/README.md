@@ -115,10 +115,6 @@ Priority Production Areas were created by merging PPAs submitted by jurisdiction
 Priority Production Areas were summarized by [UC Berkeley Industrial Land Study Area](#ppa-eligible-area-data-sources) criteria and a weighted average calculated for PPAs within UC Berkeley Industrial Land Study areas. The Script referenced below provides more granular detail about the steps taken to perform the analysis. 
 - [PPA UC Berkeley Industrial Lands Analysis](Scripts/PPA_Analysis.py)
 
-### Priority Conservation Areas
-
-### Final Blueprint Growth Geographies Combined 
-
 ### Transit Rich Areas Blueprint Input
 
 Transit-Rich Areas were created primarily as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas)
@@ -126,13 +122,17 @@ Transit-Rich Areas were created primarily as an input to the [Final Blueprint Gr
 Transit-Rich Areas were created following the methodology listed below:
 1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected.
-
+3. Clip to [High Resource Areas](#high-resource-areas-blue-print-input)
+4. Erase areas overlapping with Transit-Rich Areas.
 
 ### High Resource Areas Blueprint Input
 High-Resource Areas reas were created as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas)
 
 High-Resource Areas were created following the methodology listed below:
 1. Select High and Highest Resource Areas from [CTCAC/HCD Resource Opportunity Areas (2019)](#high-resource-area-data)
+
+### Final Blueprint Growth Geographies Combined 
+
 
 ## Methodology Exceptions
 
@@ -153,5 +153,7 @@ For more information about these excpetions, contact Mark Shorett via email at m
 ## Expected Outcomes
 
 ## Results
+
+[Plan Bay Area 2050 Growth Geographies](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=3922afc70d3a4475a98e6ae9973f2bfb#overview)
 
 
