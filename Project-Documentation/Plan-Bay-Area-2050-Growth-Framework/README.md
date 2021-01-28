@@ -34,24 +34,24 @@ The purpose of this page is to document working related to creating and analyzin
 ## Data Sources
 
 ### Priority Development Area Data
-
 - [Priority Development Areas (Plan Bay Area 2040)](https://opendata.mtc.ca.gov/datasets/priority-development-areas-plan-bay-area-2040)
 
 ### Priority Production Area Data
 
 ### Transit Rich Area Data
-- [Transit Stops - Existing (2020)(Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=3faf8401623b48ae8d70f7a71d7365c9) 
+- [Major Transit Stops (2017)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=3ba9e3b29aa8457688a389a2ef69f162)
+- [Transit Stops - Existing and Planned (2020)(Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=2c25d8c01ea64a768329673721c42a0b) 
 
 ### High Resource Area Data
 ***California Tax Credit Allocation Committee (TCAC) & the Department of Housing and Community Development (HCD) Resource Opportunity Areas***
 - [California Tax Credit Allocation Committee Opportunity Maps Website](https://www.treasurer.ca.gov/ctcac/opportunity.asp)
 - [CTCAC/HCD Resource Opportunity Areas (2019) Web Layer (Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=15c995dc46034e3ea3f44ecd08f19110)
 
-### PDA Eligible Area Data Sources
+### PDA Eligible Area Data
 ***MTC Data***
 - [Bus Stop Headways During Peak Period in 2019](https://mtc.maps.arcgis.com/home/item.html?id=a47075cd3b864584b65811ad513cb28f)
 
-### PPA Eligible Area Data Sources
+### PPA Eligible Area Data
 ***University of California - Berkeley, ABAG, MTC Industrial Land Retention and Investment in the San Francisco Bay Area***
 - [PPA Eligible Area Data](https://mtc.maps.arcgis.com/home/item.html?id=66a151ee5e6e453e9c5a19b31198554e)
 - [Link to Study](https://mtcdrive.box.com/s/n005i0h3xyu301hdrepqjf8dz8qm73ih)
@@ -91,13 +91,13 @@ PDA Eligibility areas were created following the [PDA Eligible Area Criteria](#p
 [Transit Rich Areas Blueprint Input](#transit-rich-areas-blueprint-input)
 
 **Connected Community/High Resource Area Feature**
-1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
+1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
 3. Clip to [High Resource Areas](#high-resource-areas-blue-print-input)
 4. Erase areas overlapping with Transit-Rich Areas.
 
 **Connected Community/Outside High Resource Area Feature**
-1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data-sources) layer. 
+1. Select bus stops with 16-30 minute headways from [Bus Stop Headways During Peak Period in 2019](#pda-eligible-area-data) layer. 
 2. Create 1/2 mile buffer on selected features, with Geodestic (shape preserving) option selected.
 3. Erase areas overlapping with [Transit-Rich](#transit-rich-areas-blueprint-input) and Connected Community/High Resource Areas. 
 
@@ -122,7 +122,7 @@ Priority Production Areas were summarized by [UC Berkeley Industrial Land Study 
 Transit-Rich Areas were created primarily as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas). 
 
 Transit-Rich Areas were created following the methodology listed below:
-1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. These stations/stops were based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
+1. Select passenger rail stations, ferry terminals from [Major Transit Stop](#transit-rich-area-data) layer. Select bus stops on routes with with peak headways of 15 minutes or less during peak period from [Transit Stops - Existing and Planned (2020)](#transit-rich-area-data). These stations/stops were based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
 2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected.
 3. Clip to [High Resource Areas](#high-resource-areas-blue-print-input)
 4. Erase areas overlapping with Transit-Rich Areas.
