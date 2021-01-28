@@ -14,7 +14,7 @@ The purpose of this page is to document working related to creating and analyzin
 	- [Priority Production Area Data](#priority-production-area-data)
 	- [Transit Rich Area Data](#transit-rich-area-data)
 	- [High Resource Area Data](#high-resource-area-data)
-	- [PDA Eligible Area Data Sources](#pda-eligibile-area-data)
+	- [PDA Eligible Area Data Sources](#pda-eligible-area-data)
 	- [PPA Eligible Area Data Sources](#ppa-eligible-area-data)
 - [Analysis Parameters](#analysis-parameters)
 	- [Regional Growth Framework Update](#regional-growth-framework-update)
