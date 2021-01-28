@@ -27,6 +27,8 @@ The purpose of this page is to document working related to creating and analyzin
 	- [Transit Rich Areas Blueprint Input](#transit-rich-areas-blueprint-input)
 	- [High Resource Areas Blueprint Input](#high-resource-areas-blueprint-input)
 	- [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined)
+		- [Methodology for All Bay Area Local Jurisdictions](#methodology-for-all-bay-area-local-jurisdictions)
+		- [Methodology for Bay Area Local Jurisdictions that Nominated Less than 50 Percent of the PDA Eligible Areas as PDAs](#methodology-for-bay-area-local-jurisdictions-that-nominated-less-than-50-percent-of-the-pda-eligible-areas-as-pdas)
 - [Results](#results)
 
 ## Data Sources
@@ -69,6 +71,8 @@ PDAs, PPAs and PCAs were created following the adopted Plan Bay Area 2050 Growth
 | Transit-Rich                                     | Areas within 1/2 mile of:<br>- Passenger rail station<br>- Ferry terminal<br>- Bus service existing with peak headways of 15 minutes or less (included if in Plan Bay Area 2040) |
 | Connected Community - High Resource Area         | - No overlap with Transit-Rich Areas<br>- Within state-designated TCAC/HCD High or Highest Resource Area<br>- Within 1/2 mile of bus stop with peak headways of 16-30 minutes   |
 | Connected Community - Outside High Resource Area | - No overlap with Transit-Rich Areas<br>- Outside state-designated TCAC/HCD High or Highest Resource Area<br>- Within 1/2 mile of bus stop with peak headways of 16-30 minutes   |
+
+### 
 
 ## Methodology
 
@@ -115,10 +119,10 @@ Priority Production Areas were summarized by [UC Berkeley Industrial Land Study 
 
 ### Transit Rich Areas Blueprint Input
 
-Transit-Rich Areas were created primarily as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas)
+Transit-Rich Areas were created primarily as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas). 
 
 Transit-Rich Areas were created following the methodology listed below:
-1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. 
+1. Select passenger rail stations, ferry terminals, and bus stops on routes with with peak headways of 15 minutes or less during peak period from [Major Transit Stop](#pda-eligible-area-data-sources) layer. These stations/stops were based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
 2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected.
 3. Clip to [High Resource Areas](#high-resource-areas-blue-print-input)
 4. Erase areas overlapping with Transit-Rich Areas.
@@ -128,33 +132,30 @@ High-Resource Areas reas were created as an input to the [Final Blueprint Growth
 
 High-Resource Areas were created following the methodology listed below:
 1. Select High and Highest Resource Areas from [CTCAC/HCD Resource Opportunity Areas (2019)](#high-resource-area-data)
+2. Intersect with areas 1/4 from bus stops with peak headways of 30 minutes or less, based upon a January 2020 extract of the Google Transit Feed Specification for all Bay Area transit providers, supplemented by published bus schedules where necessary.
 
 ### Final Blueprint Growth Geographies Combined 
 
-The above datasets and inputs were merged together following the detailed methodology below. The applicability of different Growth Geographies varies by local jurisdiction based upon the extent to which a jurisdiction has nominated Priority Development Areas (PDAs), as shown below: 
+The above datasets and inputs were processed and merged together following the detailed methodology below. The applicability of different Growth Geographies varies by local jurisdiction based upon the extent to which a jurisdiction has nominated Priority Development Areas (PDAs), as shown below: 
 
-**In all Bay Area local jurisdictions:**
+#### Methodology for All Bay Area Local Jurisdictions
 
-**Priority Development Areas:**
-- Source - features are from Priority Development Areas (Plan Bay Area 2050).
+[Priority Development Areas:](#priority-development-areas)
 - Processing for growth geographies - features from source data were not modified further. Source data is the same as what is in the growth geographies data.
 
-**Priority Production Areas:**
-- Source - features are from Priority Production Areas (Plan Bay Area 2050).
+[Priority Production Areas:](#priority-production-areas)
 - Processing for growth geographies - features from source data were not modified further. Source data is the same as what is in the growth geographies data.
 
-Portions of **Transit Rich Areas** that are within ½ mile of a regional rail station with headways of 15 minutes or better during the AM (6 AM to 10 AM) and PM (3 PM to 7 PM) peak periods, including Bay Area Rapid Transit (BART) and CalTrain Baby Bullet station areas. 
-- Source - features were created by placing a half-mile buffer around regional passenger rail stations with peak headways of 15 minutes or less, based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
+[Transit Rich Areas:](#transit-rich-areas-blueprint-input)
 - Processing for growth geographies - these input features were temporary data used to determine the designation, and were clipped to the “exclusion areas” shown below as well as Priority Development Areas and Priority Production Areas, so were not modified beyond their production.
 
-**In Bay Area local jurisdictions that have nominated less than 50 percent of the PDA eligible areas as PDAs:**
+#### Methodology for Bay Area Local Jurisdictions that Nominated Less than 50 Percent of the PDA Eligible Areas as PDAs
 
-**Transit-Rich Areas** that are not within a PDA, PPA, or within ½ mile of a regional rail station with 15 minute peak headways or less, as identified above. (This category includes both High-Resource Areas and places outside High-Resource Areas)
-- Source - features were created by placing a half-mile buffer around passenger rail stations, ferry terminals, and bus stops on routes with peak headways of 15 minutes or less during peak commute period that were selected from Major Transit Stops (2017) data, and by placing a half-mile buffer around passenger rail stations, ferry terminals, and bus rapid transit routes included in Plan Bay Area 2050.
+[Transit-Rich Areas](#transit-rich-areas-blueprint-input) that are not within a PDA, PPA, or within ½ mile of a regional rail station with 15 minute peak headways or less, as identified above. (This category includes both High-Resource Areas and places outside High-Resource Areas)
+
 - Processing for growth geographies - These input features were temporary data used to determine the designation, and were clipped to the “exclusion areas” shown below as well as Priority Development Areas and Priority Production Areas, so were not modified beyond their production.
 
-**High-Resource Areas** within ¼ mile of a bus stop with 16- to 30-minute peak period headways:
-- Source - features were created by selecting the intersection of High and Highest Resource Areas from CTCAC/HCD Resource Opportunity Areas (2019) data and a quarter-mile buffer around bus stops with peak headways of 30 minutes or less, based upon a January 2020 extract of the Google Transit Feed Specification for all Bay Area transit providers, supplemented by published bus schedules where necessary.
+[High-Resource Areas:](#high-resource-areas-blueprint-input)
 - Processing for growth geographies - these input features were temporary data used to determine the designation, and were clipped to all of the Growth Geographies highlighted above (PDAs, PPAs and Transit-Rich Areas), as well as the “exclusion areas” shown below, so were not modified beyond their production.
 
 Exclusion Areas: 
