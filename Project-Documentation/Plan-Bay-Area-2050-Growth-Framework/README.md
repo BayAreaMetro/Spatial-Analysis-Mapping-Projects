@@ -14,8 +14,8 @@ The purpose of this page is to document working related to creating and analyzin
 	- [Priority Production Area Data](#priority-production-area-data)
 	- [Transit Rich Area Data](#transit-rich-area-data)
 	- [High Resource Area Data](#high-resource-area-data)
-	- [PDA Eligible Area Data Sources](#pda-eligibile-area-data-sources)
-	- [PPA Eligible Area Data Sources](#ppa-eligible-area-data-sources)
+	- [PDA Eligible Area Data Sources](#pda-eligibile-area-data)
+	- [PPA Eligible Area Data Sources](#ppa-eligible-area-data)
 - [Analysis Parameters](#analysis-parameters)
 	- [Regional Growth Framework Update](#regional-growth-framework-update)
 	- [PDA Eligible Area Criteria](#pda-eligible-area-criteria)
@@ -39,7 +39,7 @@ The purpose of this page is to document working related to creating and analyzin
 ### Priority Production Area Data
 
 ### Transit Rich Area Data
-- [Major Transit Stops (2017)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=3ba9e3b29aa8457688a389a2ef69f162)
+- [Major Transit Stops (2017)(Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=3ba9e3b29aa8457688a389a2ef69f162)
 - [Transit Stops - Existing and Planned (2020)(Internal Access Only)](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=2c25d8c01ea64a768329673721c42a0b) 
 
 ### High Resource Area Data
