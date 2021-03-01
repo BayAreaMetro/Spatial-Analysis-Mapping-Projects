@@ -125,7 +125,7 @@ Transit-Rich Areas were created following the methodology listed below:
 1. Select passenger rail stations, ferry terminals from [Major Transit Stop](#transit-rich-area-data) layer. Select bus stops on routes with with peak headways of 15 minutes or less during peak period from [Transit Stops - Existing and Planned (2020)](#transit-rich-area-data). These stations/stops were based on posted schedules in January 2020 or service enhancements in Plan Bay Area 2050. (Note that regional passenger rail systems include ACE, BART, CalTrain, SMART, and Capitol Corridor, but only BART and CalTrain include stops meeting the headway standard).
 2. Create 1/2 mile buffer on selected features, with Geodesic (shape preserving) and dissolve options selected.
 3. Clip to [High Resource Areas](#high-resource-areas-blue-print-input)
-4. Erase areas overlapping with Transit-Rich Areas.
+4. clipped to the “exclusion areas” shown below as well as PDAs and PPAs
 
 ### High Resource Areas Blueprint Input
 High-Resource Areas reas were created as an input to the [Final Blueprint Growth Geographies Combined](#final-blueprint-growth-geographies-combined) dataset. These data were also used as inputs to create [PDA Eligibility Areas](#pda-eligibility-areas)
