@@ -49,9 +49,14 @@ Limited English proficiency population should be 5% or more of total population 
 
 Data analysis and wrangling for this project was performed in a [Python Jupyter Notebook](FastTrak-Start-Pilot-Programing.ipynb). 
 
+Maps and visualizations were created in [ArcGIS Pro](https://mtcdrive.box.com/s/jkyly5aic1xbx3ylto3wq2a2ptwxadeo).
+
 ## Expected Outcomes
 
-- Map of Top Non-English Language Population Tracts
-- Tabular dataset/ spreadsheet summarizing total population, low-income population, Limited English Proficiency Population, and share of Limited English Proficincy Population 
+- Map of Top Non-English Language Population Tracts along I-880 Corridor
+- Tabular dataset/ spreadsheet summarizing total population, low-income population, Limited English Proficiency Population, and share of Limited English Proficincy Population within I-880 Corridor
 
 ## Results
+
+- [Limited English Proficiency Language Spoken at Home Map](https://mtcdrive.box.com/s/y2lel3tk8df7h2hw6dmua2fe533gox07)
+- [Low Income Population Map](https://mtcdrive.box.com/s/3od1s6r5uxcrmdqi8ze1h64h87187oka)
