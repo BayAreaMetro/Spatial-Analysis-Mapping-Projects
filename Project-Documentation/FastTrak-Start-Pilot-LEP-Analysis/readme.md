@@ -60,3 +60,5 @@ Maps and visualizations were created in [ArcGIS Pro](https://mtcdrive.box.com/s/
 
 - [Limited English Proficiency Language Spoken at Home Map](https://mtcdrive.box.com/s/y2lel3tk8df7h2hw6dmua2fe533gox07)
 - [Low Income Population Map](https://mtcdrive.box.com/s/3od1s6r5uxcrmdqi8ze1h64h87187oka)
+- [Low Income Language Over 5 Tabular Data](https://mtcdrive.box.com/s/4wawptrj9262ucd1cphyrgotndglg5bx)
+- [Low Income Language Over 5 Tabular Data Definitions](https://mtcdrive.box.com/s/edj8325zfnjly1o3yg7x4zk995k72cyl)
