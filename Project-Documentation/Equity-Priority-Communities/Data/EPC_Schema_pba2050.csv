@@ -18,7 +18,7 @@ pop_disabi,Population Disabled,LONG,C18108_001E - (C18108_005E + C18108_009E + C
 pop_hus_re,Population Rent Burdened,LONG,B25070_010E,Severely rent-burdened household,
 pop_zvhhs,Population Zero Vehicle Household,LONG,B08201_002E,Zero-vehicle household,
 pct_over75,Percent Over 75,DOUBLE,(B01001_023E + B01001_024E + B01001_025E + B01001_047E + B01001_048E + B01001_049E)/B01001_001E,Seniors 75 years and over as a share of total population,
-pct_poc,Percent POC,DOUBLE,(B03002_001E - B03002_003E)/B03002_001E,People of Color population as a share of total population,
+pct_poc,Percent People of Color,DOUBLE,(B03002_001E - B03002_003E)/B03002_001E,People of Color population as a share of total population,
 pct_spfam,Percent Single Parent Family,DOUBLE,(B11004_010E + B11004_016E)/B11004_001E,Single-parent family as a share all families,
 pct_lep,Percent Limited English Proficiency,DOUBLE,(B16005_007E + B16005_008E + B16005_012E + B16005_013E + B16005_017E + B16005_018E + B16005_022E + B16005_023E + B16005_029E + B16005_030E + B16005_034E + B16005_035E + B16005_039E + B16005_040E + B16005_044E + B16005_045E)/B16005_001E,Limited English proficiency population as a share of total population 5 years and over,
 pct_below2,Percent Low Income,DOUBLE,C17002_001E - C17002_008E/C17002_001E,Low Income population as a share of total population for whom poverty status is determined,
