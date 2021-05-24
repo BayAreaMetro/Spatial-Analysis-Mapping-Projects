@@ -1,4 +1,4 @@
-,county_name,coc_flag_pba2035,coc_flag_pba2040,coc_flag_acs2016,coc_flag_pba2050,gain_loss_acs2016_pba2050,gain_loss_pba2040_pba2050,tracts_count
+,county_name,coc_flag_pba2035,coc_flag_pba2040,coc_flag_acs2016,epc_flag_pba2050,gain_loss_acs2016_pba2050,gain_loss_pba2040_pba2050,tracts_count
 0,Alameda County,121.0,120,115,101,-14,-19,361
 1,Contra Costa County,45.0,45,45,50,5,5,208
 2,Marin County,3.0,3,3,4,1,1,56
