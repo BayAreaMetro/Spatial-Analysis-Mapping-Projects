@@ -29,7 +29,7 @@ The 2020 update of MTC's Equity Priority Communities follows the Equity Priority
 
 ### Equity Priority Communities Framework Plan Bay Area 2050 
 
-| Disadvantage Factor                                | Mean of <br>Tract-Level Shares | Standard <br>Deviation <br>(SD) | .5 SD <br>_PBA2050 Threshold_<br>(High COC) | 1 SD <br>(Higher COC) | 1.5 SD <br>(Highest COC) |
+| Disadvantage Factor                                | Mean of <br>Tract-Level Shares | Standard <br>Deviation <br>(SD) | .5 SD <br>_PBA2050 Threshold_<br>(High EPC) | 1 SD <br>(Higher EPC) | 1.5 SD <br>(Highest EPC) |
 |----------------------------------------------------|--------------------------------|:-------------------------------:|:------------------------------------------------:|:---------------------:|:------------------------:|
 | **People of Color**                              | 58%                            | 24%                             | 70%                                              | 82%                   | 94%                      |
 | **Low-Income (<200% Federal Poverty Level-FPL)** | 21%                            | 14%                             | 28%                                              | 35%                   | 42%                      |
