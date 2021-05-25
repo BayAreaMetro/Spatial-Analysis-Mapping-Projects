@@ -14,7 +14,7 @@ The Joint MTC Planning Committee with the ABAG Administrative Committee approved
 	- [Equity Priority Communities Framework Plan Bay Area 2050](#equity-priority-communities-framework-plan-bay-area-2050)
 	- [Summary of MTC EPC Demographic Factors & Demographic Factor Definitions](#summary-of-mtc-epc-demographic-factors--demographic-factor-definitions)
 - [Methdology](#methodology)
-	- [Overview of Processing Tools and Code](processing-tools-code)
+	- [Overview of Processing Tools and Code](processing-tools-and-code)
 	- [Calculate MTC EPC Demographic Factor Population from ACS Variable Populations](#calculate-mtc-epc-demographic-factor-population-from-acs-variable-populations)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
