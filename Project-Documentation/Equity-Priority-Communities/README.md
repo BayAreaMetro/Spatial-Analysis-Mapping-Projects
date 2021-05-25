@@ -14,7 +14,7 @@ The Joint MTC Planning Committee with the ABAG Administrative Committee approved
 	- [Equity Priority Communities Framework Plan Bay Area 2050](#equity-priority-communities-framework-plan-bay-area-2050)
 	- [Summary of MTC EPC Demographic Factors & Demographic Factor Definitions](#summary-of-mtc-epc-demographic-factors--demographic-factor-definitions)
 - [Methdology](#methodology)
-	- [Overview of Processing Tools and Code](processing-tools-and-code)
+	- [Overview of Processing Tools and Code](#processing-tools-and-code)
 	- [Calculate MTC EPC Demographic Factor Population from ACS Variable Populations](#calculate-mtc-epc-demographic-factor-population-from-acs-variable-populations)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
@@ -70,7 +70,7 @@ To explore the technical processing methods, please review the [EPC Processing P
 
 ### Calculate MTC EPC Demographic Factor Population from ACS Variable Populations
 
-The table below provides the calculations that need to be performed to get demographic factor populations and demographic shares. To translate from variable to written description, please review the [ACS Table Variables and MTC EPC Demographic Factors Lookup](Data/ACS_Table_Variables_EPC_Factors.csv). ACS Variables are also defined on the American Community Survey (ACS) website. To get variable definitions as well as the layout of tables without the estimates or margins of error filled in, download [2018 ACS Detailed Table Shells](https://www2.census.gov/programs-surveys/acs/summary_file/2018/documentation/user_tools/ACS2018_Table_Shells.xlsx?#) as an Excel spreadsheet. 
+The table below provides the calculations that were performed to get demographic factor populations and demographic shares. To translate from variable to written description, please review the [ACS Table Variables and MTC EPC Demographic Factors Lookup](Data/ACS_Table_Variables_EPC_Factors.csv). ACS Variables are also defined on the American Community Survey (ACS) website. To get variable definitions as well as the layout of tables without the estimates or margins of error filled in, download [2018 ACS Detailed Table Shells](https://www2.census.gov/programs-surveys/acs/summary_file/2018/documentation/user_tools/ACS2018_Table_Shells.xlsx?#) as an Excel spreadsheet. 
 
 The link below provides the EPC schema and domains, along with calculations and written descriptions of the calculations which may be helpful for analysis purposes. Below the link is a table for informational purposes. 
 
