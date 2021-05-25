@@ -13,8 +13,9 @@ The Joint MTC Planning Committee with the ABAG Administrative Committee approved
 - [Analysis Parameters](#analysis-parameters)
 	- [Equity Priority Communities Framework Plan Bay Area 2050](#equity-priority-communities-framework-plan-bay-area-2050)
 	- [Summary of MTC EPC Demographic Factors & Demographic Factor Definitions](#summary-of-mtc-epc-demographic-factors--demographic-factor-definitions)
-	- [Calculate MTC EPC Demographic Factor Population from ACS Variable Populations](#calculate-mtc-epc-demographic-factor-population-from-acs-variable-populations)
 - [Methdology](#methodology)
+	- [Overview of Processing Tools and Code](processing-tools-code)
+	- [Calculate MTC EPC Demographic Factor Population from ACS Variable Populations](#calculate-mtc-epc-demographic-factor-population-from-acs-variable-populations)
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
 - [Related Works](#related-works)
@@ -58,6 +59,15 @@ Definition: Census Tracts that have a cocentration of BOTH people of color AND l
 | Single-Parent Family                           | Families with at least one child. To determine whether or not single-parent families exceed tract concentration thresholds, **the share of single parent families is calculated as a share of all families regardless of whether or not they have any children.**                                                                                                                                                                                                                                                                                                        | 18%                     |
 | Severely Rent-Burdened Household               | Renters paying > 50% of income in rent. To determine whether or not severely rent-burdened households exceed tract concentration thresholds, **the share of severely rent-burdened households is calculated as a share of all households regardless of occupancy status (renter or owner).**                                                                                                                                                                                                                                                                             | 14%                     |
 
+
+## Methodology
+
+### Processing Tools and Code
+
+The analysis was performed in python and leverages the American Community Survey (ACS) API which is documented here: [ACS API](https://www.census.gov/data/developers/data-sets/acs-5year.html) and the Census TIGER/Web API for spatial data which is documented here: [TIGER/Web REST API](https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html)
+
+To explore the technical processing methods, please review the [EPC Processing Python Notebook](Equity%20Priority%20Communities%202020%20(ACS%202014-2018).ipynb)
+
 ### Calculate MTC EPC Demographic Factor Population from ACS Variable Populations
 
 The table below provides the calculations that need to be performed to get demographic factor populations and demographic shares. To translate from variable to written description, please review the [ACS Table Variables and MTC EPC Demographic Factors Lookup](Data/ACS_Table_Variables_EPC_Factors.csv). ACS Variables are also defined on the American Community Survey (ACS) website. To get variable definitions as well as the layout of tables without the estimates or margins of error filled in, download [2018 ACS Detailed Table Shells](https://www2.census.gov/programs-surveys/acs/summary_file/2018/documentation/user_tools/ACS2018_Table_Shells.xlsx?#) as an Excel spreadsheet. 
@@ -76,11 +86,6 @@ The link below provides the EPC schema and domains, along with calculations and 
 | People with Disability                         | C18108_001E - (C18108_005E + C18108_009E + C18108_013E)                                                                                                                                                                       | (C18108_001E -(C18108_005E + C18108_009E + C18108_013E))/C18108_001E                                                                                                                                                                       |
 | Single-Parent Family                           | B11004_010E + B11004_016E                                                                                                                                                                                                     | (B11004_010E + B11004_016E)/B11004_001E                                                                                                                                                                                                    |
 | Severely Rent-Burdened Household               | B25070_010E                                                                                                                                                                                                                   | B25070_010E/B08201_001E                                                                                                                                                                                                                    |
-## Methodology
-
-The analysis was performed in python and leverages the American Community Survey (ACS) API which is documented here: [ACS API](https://www.census.gov/data/developers/data-sets/acs-5year.html) and the Census TIGER/Web API for spatial data which is documented here: [TIGER/Web REST API](https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html)
-
-To explore the processing methodology, take a look at the [EPC Processing Methodology](Equity%20Priority%20Communities%202020%20(ACS%202014-2018).ipynb)
 
 ## Expected Outcomes
 
