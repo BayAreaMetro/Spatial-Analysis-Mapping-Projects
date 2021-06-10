@@ -1,2 +1,2 @@
 Communities of Concern have been renamed Equity Priority Areas. Project documentation can now be found at 
-https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Equity-Priority-Communities/README.md
+https://bayareametro.github.io/Spatial-Analysis-Mapping-Projects/Project-Documentation/Equity-Priority-Communities
