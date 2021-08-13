@@ -8,6 +8,7 @@ Create a consolidated, Regional Bike Network dataset conflated to the Travel Mod
 
 Add links to:
 - [Asana Task](https://app.asana.com/0/229355710745434/1199875072414782)
+- [Box Data Development & Outputs Directory](https://mtcdrive.box.com/s/gy0u7jg4i1mwad9vqarzlkigg6qxbcvv)
 - [Box Data Collection Directory](https://mtcdrive.app.box.com/folder/140341300081?s=tnttek9iqztxw1ibaj7ltyot2e66yikd)
 - [Bike Ped Network Data Collection Inventory](https://mtcdrive.box.com/s/tfuj96k1tqqirg42c8qtlzty7gd8pi2u)
 
@@ -52,7 +53,7 @@ Processing Steps:
 1. Project each bike network dataset to NAD1983 UTM Z 10N, or EPSG 26910
 2. Review facilities that cross jurisdictional boundaries, edit line ends to connect to facilities in adjacent jurisdictions
 3. Map class attributes from jurisdiction class to a standardized classification using only numeric values. If class stored in a single column, separate class into existing or planned class columns based on a status column if present. Otherwise if an existing and planned / proposed class column already exists, add those values to the existing and planned class columns. ([See Regional Bikeway Network Schema](#regional-bikeway-network-schema))
-	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb)
+	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
 
 
 ## Results
