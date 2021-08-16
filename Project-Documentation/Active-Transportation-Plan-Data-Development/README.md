@@ -75,7 +75,7 @@ The consolidated, regional bike facilities dataset should include a class column
 
 ## Methodology
 
-The consolidated, Regional Bike Facilities dataset was created through a mix of manual updates to the facility geometries using ArcGIS Pro desktop editing tools, as well as a scripted processes in python jupyter notebooks. 
+The consolidated, Regional Bike Facilities dataset was created through a mix of manual updates to the facility geometries using ArcGIS Pro desktop editing tools, as well as a scripted processes in python jupyter notebooks. State, City, and Non-Profit Advocacy Bike Facility datasets also underwent processing to standardize the schema and values to match the expected columns and attribute values as indicated in the [Regional Bikeway Network Schema](#regional-bikeway-network-schema). Each of these datasets were then conflated with the Travel Model II Network, leveraging the [Shared Streets Python Library](https://github.com/sharedstreets/sharedstreets-python). The resulting dataset is an attribute join table modeled after the [Regional Bikeway Network Schema](#regional-bikeway-network-schema) above.
 
 Processing Steps:
 
@@ -83,6 +83,8 @@ Processing Steps:
 2. Review facilities that cross jurisdictional boundaries, edit line ends to connect to facilities in adjacent jurisdictions
 3. Map class attributes from jurisdiction class to a standardized classification using only numeric values. If class stored in a single column, separate class into existing or planned class columns based on a status column if present. Otherwise if an existing and planned / proposed class column already exists, add those values to the existing and planned class columns. ([See Regional Bikeway Network Schema](#regional-bikeway-network-schema))
 	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
+4. Conflate each bike facility dataset with Travel Model II Network
+	- [Bike Network Conflation Notebook (not yet added)]()
 
 
 ## Results
