@@ -28,21 +28,49 @@ Add links to:
 - [Regional Bikeway Network (Public)](https://opendata.mtc.ca.gov/datasets/regional-bikeway-network-2019/explore)
 - [State, County, City Bike and Pedestrian Networks](https://mtcdrive.app.box.com/folder/140341300081?s=tnttek9iqztxw1ibaj7ltyot2e66yikd)
 
+### Source Organizations
+| Source                                               | Type                  | Website                                                                           |
+|------------------------------------------------------|-----------------------|-----------------------------------------------------------------------------------|
+| City of Oakland Department of   Transportation       | City                  | https://www.oaklandca.gov/departments/transportation                              |
+| Alameda County Transportation Authority              | CMA                   | https://www.alamedactc.org/                                                       |
+| City/County Association of Governments   San Mateo   | CMA                   | https://ccag.ca.gov/                                                              |
+| Contra Costa Transportation Authority                | CMA                   | https://ccta.net/                                                                 |
+| Napa Valley Transportation Authority                 | CMA                   | https://www.nvta.ca.gov/                                                          |
+| San Francisco County Transportation   Authority      | CMA                   | https://www.sfcta.org/                                                            |
+| Solano Transportation Authority                      | CMA                   | https://sta.ca.gov/                                                               |
+| Sonoma County Transportation Authority               | CMA                   | https://scta.ca.gov/                                                              |
+| Transportation Authority of Marin                    | CMA                   | https://www.tam.ca.gov/                                                           |
+| Valley Transportation Authority                      | CMA                   | https://www.vta.org/                                                              |
+| Bay Area Trails Collaborative                        | Non-Profit / Advocacy | https://www.railstotrails.org/our-work/trailnation/bay-area-trails-collaborative/ |
+| California Department of Transportation   District 4 | State                 | https://dot.ca.gov/caltrans-near-me/district-4                                    |
+
 ## Analysis Parameters
 
 ### Regional Bikeway Network Schema
 
-**Insert Table here**
-
+| Column     | Column Alias            | Type    | Description                                                                   | Domain                                          |
+|------------|-------------------------|---------|-------------------------------------------------------------------------------|-------------------------------------------------|
+| shape_id   | TM2 Shape ID            | text    | Travel Model II Shape Join ID                                                 |                                                 |
+| source     | Source                  | text    | Organization that provided the bicycle faclities dataset                      | [See Source Organization](#source-organization) |
+| ex_class   | Existing Class          | numeric | CMA Existing Bicycle Facility Class Value                                     | 0;1;2;3;4;999                                   |
+| pln_class  | Planned Class           | numeric | CMA Planned/Proposed Bicycle Facility Class Value                             | 0;1;2;3;4;999                                   |
+| oak_ex_cl  | Oakland Existing Class  | numeric | City of Oakland Existing Bicycle Facility Class Value                         | 0;1;2;3;4;999                                   |
+| oak_pln_cl | Oakland Planned Class   | numeric | City of Oakland Planned/Proposed Bicycle Facility Class Value                 | 0;1;2;3;4;999                                   |
+| sj_ex_cl   | San Jose Existing Class | numeric | City of San Jose Existing Bicyle Facility Class Value                         | 0;1;2;3;4;999                                   |
+| sj_pln_cl  | San Jose Planned Class  | numeric | City of San Jose Planned/Proposed Bicycle Facility Class Value                | 0;1;2;3;4;999                                   |
+| batc_ex_cl | BATC Existing Class     | numeric | Bay Area Trails Collaborative Existing Bicycle Facility Class Value           | 0;1;2;3;4;999                                   |
+| batc_pl_cl | BATC Planned Class      | numeric | Bay Area Trails Collaborative Planned/Proposed Bicycle Facility Class   Value | 0;1;2;3;4;999                                   |
 The consolidated, regional bike facilities dataset should include a class column with facilities classified as follows: 
 
 **[Highway Design Manual Bicycle Transportation Design](https://web.archive.org/web/20170501101515id_/http://www.dot.ca.gov/hq/oppd/hdm/pdf/english/chp1000.pdf)**
 
-- Class I: Off-Street Shared-Use Path - A bikeway physically separated from motorized vehicular traffic by an open space or barrier. Pedestrians, skaters, wheelchair users, joggers, and other non-motorized users typically use shared-use paths.
-- Class II: Bike Lane - Portion of the roadway that has been designated by striping, signing and pavement markings for the preferential or exclusive use of bicycles. Some cities and counties also define wide shoulders as bike lanes. Always ride about 4 feet from parked cars to avoid the door zone.
-- Class III: On-Street Bike Route - Any road or street designated for bicycle travel. These routes are not for the exclusive use of cyclists. Often, routes include residential streets with low auto volumes and speeds.
-- Class IV: Separated Bike Lanes - Separated bike lanes, also known as cycle tracks or protected bike lanes, are a dedicated bikeway that combines the user experience
+- Class 0: Unpaved, or dirt bike facility. This classification only used for Contra Costa County.
+- Class 1: Off-Street Shared-Use Path - A bikeway physically separated from motorized vehicular traffic by an open space or barrier. Pedestrians, skaters, wheelchair users, joggers, and other non-motorized users typically use shared-use paths.
+- Class 2: Bike Lane - Portion of the roadway that has been designated by striping, signing and pavement markings for the preferential or exclusive use of bicycles. Some cities and counties also define wide shoulders as bike lanes. Always ride about 4 feet from parked cars to avoid the door zone.
+- Class 3: On-Street Bike Route - Any road or street designated for bicycle travel. These routes are not for the exclusive use of cyclists. Often, routes include residential streets with low auto volumes and speeds.
+- Class 4: Separated Bike Lanes - Separated bike lanes, also known as cycle tracks or protected bike lanes, are a dedicated bikeway that combines the user experience
  of a multi-use path but are located on a street. They are physically distinct from the sidewalk and separated from motor vehicle traffic by a physical object such as parking, a curb, or posts.
+- Class 999: The classification was unknown or not yet determined.
 
 ## Methodology
 
