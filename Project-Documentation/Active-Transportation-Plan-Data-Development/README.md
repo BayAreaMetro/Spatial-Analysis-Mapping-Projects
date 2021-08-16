@@ -51,15 +51,16 @@ Add links to:
 | Column     | Column Alias            | Type    | Description                                                                   | Domain                                          |
 |------------|-------------------------|---------|-------------------------------------------------------------------------------|-------------------------------------------------|
 | shape_id   | TM2 Shape ID            | text    | Travel Model II Shape Join ID                                                 |                                                 |
-| source     | Source                  | text    | Organization that provided the bicycle faclities dataset                      | [See Source Organization](#source-organization) |
-| ex_class   | Existing Class          | numeric | CMA Existing Bicycle Facility Class Value                                     | 0;1;2;3;4;999                                   |
-| pln_class  | Planned Class           | numeric | CMA Planned/Proposed Bicycle Facility Class Value                             | 0;1;2;3;4;999                                   |
+| cma_ex_cl  | CMA Existing Class      | numeric | CMA Existing Bicycle Facility Class Value                                     | 0;1;2;3;4;999                                   |
+| cma_pl_cl  | CMA Planned Class       | numeric | CMA Planned/Proposed Bicycle Facility Class Value                             | 0;1;2;3;4;999                                   |
 | oak_ex_cl  | Oakland Existing Class  | numeric | City of Oakland Existing Bicycle Facility Class Value                         | 0;1;2;3;4;999                                   |
-| oak_pln_cl | Oakland Planned Class   | numeric | City of Oakland Planned/Proposed Bicycle Facility Class Value                 | 0;1;2;3;4;999                                   |
+| oak_pn_cl  | Oakland Planned Class   | numeric | City of Oakland Planned/Proposed Bicycle Facility Class Value                 | 0;1;2;3;4;999                                   |
 | sj_ex_cl   | San Jose Existing Class | numeric | City of San Jose Existing Bicyle Facility Class Value                         | 0;1;2;3;4;999                                   |
-| sj_pln_cl  | San Jose Planned Class  | numeric | City of San Jose Planned/Proposed Bicycle Facility Class Value                | 0;1;2;3;4;999                                   |
+| sj_pl_cl   | San Jose Planned Class  | numeric | City of San Jose Planned/Proposed Bicycle Facility Class Value                | 0;1;2;3;4;999                                   |
 | batc_ex_cl | BATC Existing Class     | numeric | Bay Area Trails Collaborative Existing Bicycle Facility Class Value           | 0;1;2;3;4;999                                   |
-| batc_pl_cl | BATC Planned Class      | numeric | Bay Area Trails Collaborative Planned/Proposed Bicycle Facility Class   Value | 0;1;2;3;4;999                                   |
+| batc_pl_cl | BATC Planned Class      | numeric | Bay Area Trails Collaborative Planned/Proposed Bicycle Facility Class Value   | 0;1;2;3;4;999                                   |
+| calt_ex_cl | CalTrans Existing Class | numeric | California Department of Transportation D4 Existing Bicycle Facility Class Value           | 0;1;2;3;4;999                                   |
+| calt_pl_cl | CalTrans Planned Class  | numeric | California Department of Transportation D4 Planned/Proposed Bicycle Facility Class Value   | 0;1;2;3;4;999                                   |
 
 The consolidated, regional bike facilities dataset should include a class column with facilities classified as follows: 
 
