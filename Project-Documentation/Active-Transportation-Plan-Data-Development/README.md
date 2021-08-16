@@ -60,6 +60,7 @@ Add links to:
 | sj_pln_cl  | San Jose Planned Class  | numeric | City of San Jose Planned/Proposed Bicycle Facility Class Value                | 0;1;2;3;4;999                                   |
 | batc_ex_cl | BATC Existing Class     | numeric | Bay Area Trails Collaborative Existing Bicycle Facility Class Value           | 0;1;2;3;4;999                                   |
 | batc_pl_cl | BATC Planned Class      | numeric | Bay Area Trails Collaborative Planned/Proposed Bicycle Facility Class   Value | 0;1;2;3;4;999                                   |
+
 The consolidated, regional bike facilities dataset should include a class column with facilities classified as follows: 
 
 **[Highway Design Manual Bicycle Transportation Design](https://web.archive.org/web/20170501101515id_/http://www.dot.ca.gov/hq/oppd/hdm/pdf/english/chp1000.pdf)**
