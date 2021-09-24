@@ -31,36 +31,39 @@ Add links to:
 ### Source Organizations
 | Source                                               | Type                  | Website                                                                           |
 |------------------------------------------------------|-----------------------|-----------------------------------------------------------------------------------|
-| City of Oakland Department of   Transportation       | City                  | https://www.oaklandca.gov/departments/transportation                              |
+| City of Oakland Department of Transportation       | City                  | https://www.oaklandca.gov/departments/transportation                              |
 | Alameda County Transportation Authority              | CMA                   | https://www.alamedactc.org/                                                       |
-| City/County Association of Governments   San Mateo   | CMA                   | https://ccag.ca.gov/                                                              |
+| City/County Association of Governments San Mateo   | CMA                   | https://ccag.ca.gov/                                                              |
 | Contra Costa Transportation Authority                | CMA                   | https://ccta.net/                                                                 |
 | Napa Valley Transportation Authority                 | CMA                   | https://www.nvta.ca.gov/                                                          |
-| San Francisco County Transportation   Authority      | CMA                   | https://www.sfcta.org/                                                            |
+| San Francisco County Transportation Authority      | CMA                   | https://www.sfcta.org/                                                            |
 | Solano Transportation Authority                      | CMA                   | https://sta.ca.gov/                                                               |
 | Sonoma County Transportation Authority               | CMA                   | https://scta.ca.gov/                                                              |
 | Transportation Authority of Marin                    | CMA                   | https://www.tam.ca.gov/                                                           |
 | Valley Transportation Authority                      | CMA                   | https://www.vta.org/                                                              |
 | Bay Area Trails Collaborative                        | Non-Profit / Advocacy | https://www.railstotrails.org/our-work/trailnation/bay-area-trails-collaborative/ |
-| California Department of Transportation   District 4 | State                 | https://dot.ca.gov/caltrans-near-me/district-4                                    |
+| California Department of Transportation District 4 | State                 | https://dot.ca.gov/caltrans-near-me/district-4                                    |
 
 ## Analysis Parameters
 
 ### Regional Bikeway Network Schema
 
-| Column     | Column Alias            | Type    | Description                                                                   | Domain                                          |
-|------------|-------------------------|---------|-------------------------------------------------------------------------------|-------------------------------------------------|
-| shape_id   | TM2 Shape ID            | text    | Travel Model II Shape Join ID                                                 |                                                 |
-| cma_ex_cl  | CMA Existing Class      | numeric | CMA Existing Bicycle Facility Class Value                                     | 0;1;2;3;4;999                                   |
-| cma_pl_cl  | CMA Planned Class       | numeric | CMA Planned/Proposed Bicycle Facility Class Value                             | 0;1;2;3;4;999                                   |
-| oak_ex_cl  | Oakland Existing Class  | numeric | City of Oakland Existing Bicycle Facility Class Value                         | 0;1;2;3;4;999                                   |
-| oak_pn_cl  | Oakland Planned Class   | numeric | City of Oakland Planned/Proposed Bicycle Facility Class Value                 | 0;1;2;3;4;999                                   |
-| sj_ex_cl   | San Jose Existing Class | numeric | City of San Jose Existing Bicyle Facility Class Value                         | 0;1;2;3;4;999                                   |
-| sj_pl_cl   | San Jose Planned Class  | numeric | City of San Jose Planned/Proposed Bicycle Facility Class Value                | 0;1;2;3;4;999                                   |
-| batc_ex_cl | BATC Existing Class     | numeric | Bay Area Trails Collaborative Existing Bicycle Facility Class Value           | 0;1;2;3;4;999                                   |
-| batc_pl_cl | BATC Planned Class      | numeric | Bay Area Trails Collaborative Planned/Proposed Bicycle Facility Class Value   | 0;1;2;3;4;999                                   |
-| calt_ex_cl | CalTrans Existing Class | numeric | California Department of Transportation D4 Existing Bicycle Facility Class Value           | 0;1;2;3;4;999                                   |
-| calt_pl_cl | CalTrans Planned Class  | numeric | California Department of Transportation D4 Planned/Proposed Bicycle Facility Class Value   | 0;1;2;3;4;999                                   |
+| Column                     | Column Alias                       | Type    | Description                                                | Domain        |
+|----------------------------|------------------------------------|---------|------------------------------------------------------------|---------------|
+| shstReferenceId            | Shared Street Reference Id         | text    |                                                            |               |
+| shstGeometryId             | Shared Street Geometry Id          | text    |                                                            |               |
+| fromIntersectionId         | Shared Street From Intersection Id | text    |                                                            |               |
+| toIntersectionId           | Shared Street To Intersection Id   | text    |                                                            |               |
+| {data_source_abbrv}_ex_cl  | Existing Class                     | numeric | Existing bicycle facility class value                      | 0;1;2;3;4;999 |
+| {data_source_abbrv}_pl_cl  | Planned Class                      | numeric | Planned or proposed bicycle class value                    | 0;1;2;3;4;999 |
+| {data_source_abbrv}_source | Source                             | text    |                                                            |               |
+| mtc_facility_id            | MTC Facility ID                    | text    | Unique identifier assigned to each bicycle facility by MTC |               |
+
+Columns with a {data_source_abbrev} are prefixed with abbreviations of the data source. For example, the city of Oakland would have the following column names:
+
+- `oak_ex_cl`
+- `oak_pl_cl`
+- `oak_source`
 
 The consolidated, regional bike facilities dataset should include a class column with facilities classified as follows: 
 
@@ -76,7 +79,7 @@ The consolidated, regional bike facilities dataset should include a class column
 
 ## Methodology
 
-The consolidated, Regional Bike Facilities dataset was created through a mix of manual updates to the facility geometries using ArcGIS Pro desktop editing tools, as well as a scripted processes in python jupyter notebooks. State, City, and Non-Profit Advocacy Bike Facility datasets also underwent processing to standardize the schema and values to match the expected columns and attribute values as indicated in the [Regional Bikeway Network Schema](#regional-bikeway-network-schema). Each of these datasets were then conflated with the Travel Model II Network, leveraging the [Shared Streets Python Library](https://github.com/sharedstreets/sharedstreets-python). The resulting dataset is an attribute join table modeled after the [Regional Bikeway Network Schema](#regional-bikeway-network-schema) above.
+The consolidated, Regional Bike Facilities dataset was created through a mix of manual updates to the facility geometries using ArcGIS Pro desktop editing tools, as well as a scripted processes in python jupyter notebooks. State, City, and Non-Profit Advocacy Bike Facility datasets also underwent processing to standardize the schema and values to match the expected columns and attribute values as indicated in the [Regional Bikeway Network Schema](#regional-bikeway-network-schema). Each of these datasets were then conflated with the Travel Model II Network, leveraging the [Shared Streets Python Library](https://github.com/sharedstreets/sharedstreets-python). The results of this work are a series of datasets by source, modeled after the [Regional Bikeway Network Schema](#regional-bikeway-network-schema) above.
 
 Processing Steps:
 
