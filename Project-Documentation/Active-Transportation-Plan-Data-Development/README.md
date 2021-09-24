@@ -48,16 +48,16 @@ Add links to:
 
 ### Regional Bikeway Network Schema
 
-| Column                     | Column Alias                       | Type    | Description                                                | Domain        |
-|----------------------------|------------------------------------|---------|------------------------------------------------------------|---------------|
-| shstReferenceId            | Shared Street Reference Id         | text    |                                                            |               |
-| shstGeometryId             | Shared Street Geometry Id          | text    |                                                            |               |
-| fromIntersectionId         | Shared Street From Intersection Id | text    |                                                            |               |
-| toIntersectionId           | Shared Street To Intersection Id   | text    |                                                            |               |
-| {data_source_abbrv}_ex_cl  | Existing Class                     | numeric | Existing bicycle facility class value                      | 0;1;2;3;4;999 |
-| {data_source_abbrv}_pl_cl  | Planned Class                      | numeric | Planned or proposed bicycle class value                    | 0;1;2;3;4;999 |
-| {data_source_abbrv}_source | Source                             | text    |                                                            |               |
-| mtc_facility_id            | MTC Facility ID                    | text    | Unique identifier assigned to each bicycle facility by MTC |               |
+| Column                     | Column Alias                       | Type    | Description                                                                                                                                                                       | Domain        |
+|----------------------------|------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| shstReferenceId            | Shared Street Reference Id         | text    | SharedStreets References (SSR) are directional edges in a road network. Two-way streets have two SSRs, one for each direction of travel, while one-way streets only have one SSR. |               |
+| shstGeometryId             | Shared Street Geometry Id          | text    | SharedStreets Geometries are street centerline data derived from the basemap used to produce SharedStreets References. A single geometry is shared by each reference id.          |               |
+| fromIntersectionId         | Shared Street From Intersection Id | text    |                                                                                                                                                                                   |               |
+| toIntersectionId           | Shared Street To Intersection Id   | text    |                                                                                                                                                                                   |               |
+| {data_source_abbrv}_ex_cl  | Existing Class                     | numeric | Existing bicycle facility class value                                                                                                                                             | 0;1;2;3;4;999 |
+| {data_source_abbrv}_pl_cl  | Planned Class                      | numeric | Planned or proposed bicycle class value                                                                                                                                           | 0;1;2;3;4;999 |
+| {data_source_abbrv}_source | Source                             | text    | Indicates shst matching calculation applied to match a bike facility or its segment to a shst roadway segment                                                                     |               |
+| mtc_facility_id            | MTC Facility ID                    | text    | Unique identifier assigned to each bicycle facility by MTC                                                                                                                        |               |
 
 Columns with a {data_source_abbrev} are prefixed with abbreviations of the data source. For example, the city of Oakland would have the following column names:
 
@@ -87,10 +87,12 @@ Processing Steps:
 2. Review facilities that cross jurisdictional boundaries, edit line ends to connect to facilities in adjacent jurisdictions
 3. Map class attributes from jurisdiction class to a standardized classification using only numeric values. If class stored in a single column, separate class into existing or planned class columns based on a status column if present. Otherwise if an existing and planned / proposed class column already exists, add those values to the existing and planned class columns. ([See Regional Bikeway Network Schema](#regional-bikeway-network-schema))
 	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
-4. Conflate each bike facility dataset with Travel Model II Network, and perform post-processing cleanup on datasets. 
+4. Conflate each bike facility dataset with Travel Model II Network, and perform post-processing cleanup on datasets. For more information on Shared Streets Referencing, check out their documentation [here](https://github.com/sharedstreets/sharedstreets-ref-system)
 	- [Conflation Scripts](conflation_scripts)
 
 ## Results
+
+
 
 ## Related Work
 
