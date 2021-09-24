@@ -84,8 +84,8 @@ Processing Steps:
 2. Review facilities that cross jurisdictional boundaries, edit line ends to connect to facilities in adjacent jurisdictions
 3. Map class attributes from jurisdiction class to a standardized classification using only numeric values. If class stored in a single column, separate class into existing or planned class columns based on a status column if present. Otherwise if an existing and planned / proposed class column already exists, add those values to the existing and planned class columns. ([See Regional Bikeway Network Schema](#regional-bikeway-network-schema))
 	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
-4. Conflate each bike facility dataset with Travel Model II Network
-	- [Conflation Scrips](conflation_scripts)
+4. Conflate each bike facility dataset with Travel Model II Network, and perform post-processing cleanup on datasets. 
+	- [Conflation Scripts](conflation_scripts)
 
 ## Results
 
