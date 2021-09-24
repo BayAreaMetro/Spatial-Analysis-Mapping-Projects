@@ -55,3 +55,13 @@ Outputs:
 * `\matched\[source]_bike_network_epsg4326_ppsd_[1-14].out.matched.geojson`
 * `\unmatched\[source]_bike_network_epsg4326_exst_[1-14].out.unmatched.geojson`
 * `\unmatched\[source]_bike_network_epsg4326_ppsd_[1-14].out.unmatched.geojson`
+
+### [step4_post_process_match_results.ipynb](step4_post_process_match_results.ipynb)
+Conflates the existing and proposed match results by data source and compares the conflated data with the raw input geojson files to create a final, unmatched geojson file for each data source. 
+
+Inputs:
+* outputs of `step3_aggr_match_results.ipynb` and [Bike Networks FGDB to GeoJSON](../Bike_Networks_FGDB_to_GeoJSON.ipynb)
+
+Outputs: 
+* `\matched\[source]_bike_network_matched.json`
+* `\unmatched\[source]_bike_network_epsg4326_unmatched.geojson`
