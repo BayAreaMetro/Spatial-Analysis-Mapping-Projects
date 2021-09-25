@@ -92,7 +92,9 @@ Processing Steps:
 
 ## Results
 
+### Active Transportation ERD
 
+![Active_Transportation_ERD](images/Active_Transportation_ERD.png)
 
 ## Related Work
 
