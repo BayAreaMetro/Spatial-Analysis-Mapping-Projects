@@ -22,7 +22,7 @@ Add links to:
 - [Results](#results)
 	- [Bike Network Conflation Match Results](#bike-network-conflation-match-results)
 	- [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
-		- [Conflated Network Schema](#conflated-network-schema)
+		- [Conflated Bike Network Schema](#conflated-network-schema)
 		- [Travel Model Network Link Schema](#travel-model-network-link-schema)
 		- [Travel Model Network Shape Schema](#travel-model-network-shape-schema	)
 	- [Active Transportation ERD](#active-transportation-erd)
@@ -130,7 +130,7 @@ Within each of these directories, there are 3 sub folders:
 |unmatched                  |Contains GeoJSON files of unmatched results, which is a subset of data collected from each source containing original columns as well as columns added during steps 1-3 above|
 |travel_model_nw            |Contains Travel Model 2 network link attributes as a JSON file, and spatial data as a GeoJSON file. Matched output joins to these datasets [See Active Transportation ERD](#active-transportation-erd)  |
 
-#### Conflated Network Schema 
+#### Conflated Bike Network Schema 
 | Column                     | Column Alias                       | Type    | Description                                                                                                                                                                       | Domain        |
 |----------------------------|------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | shstReferenceId            | Shared Street Reference Id         | text    | SharedStreets References (SSR) are directional edges in a road network. Two-way streets have two SSRs, one for each direction of travel, while one-way streets only have one SSR. |               |
