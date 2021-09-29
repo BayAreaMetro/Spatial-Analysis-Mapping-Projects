@@ -92,6 +92,19 @@ Processing Steps:
 
 ## Results
 
+The bicycle network conflation results can be accessed via Box as follows:
+
+- [Final Network Datasets (MTC Internal Access Only)](https://mtcdrive.box.com/s/v0gncszuf3bol4t542bvyxp0m2n7rq34)
+- [Final Network Datasets (Consultant Access Only)](final_nw_datasets)
+
+Within each of these directories, there are 3 sub folders:
+
+|Sub Folder Name            |Description                                                   |
+|---------------------------|--------------------------------------------------------------|
+|matched                    |Contains JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
+|unmatched                  |Contains GeoJSON files of unmatched results, which is a subset of data collected from each source containing original columns as well as columns added during steps 1-3 above|
+|travel_model_nw            |Contains Travel Model 2 network link attributes as a JSON file, and spatial data as a GeoJSON file. Matched output joins to these datasets [See Active Transportation ERD](#active-transportation-erd)  |
+
 ### Bike Network Match Results
 | Bike Network Source                                | Total Network Links | Match Link Count | Unmatched Link Count | Match Percentage | Unmatched Percentage  |
 |----------------------------------------------------|---------------------|------------------|----------------------|------------------|-----------------------|
