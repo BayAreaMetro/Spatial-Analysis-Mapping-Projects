@@ -17,9 +17,15 @@ Add links to:
 
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
-	- [Regional Bikeway Network Classes](#regional-bikeway-network-classes)
+	- [Regional Bikeway Network Classes](#expected-regional-bikeway-network-schema)
 - [Methodology](#methodology)
 - [Results](#results)
+	- [Bike Network Match Results](#bike-network-match-results)
+	- [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
+		- [Conflated Network Schema](#conflated-network-schema)
+		- [Travel Model Network Link Schema](#travel-model-network-link-schema)
+		- [Travel Model Network Shape Schema](#travel-model-network-shape-schema)
+	- [Active Transportation ERD](#active-transportation-erd)
 - [Related Work](#related-work)
 
 ## Data Sources
@@ -46,7 +52,7 @@ Add links to:
 
 ## Analysis Parameters
 
-### Regional Bikeway Network Schema
+### Expected Regional Bikeway Network Schema
 
 | Column                     | Column Alias                       | Type    | Description                                                                                                                                                                       | Domain        |
 |----------------------------|------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
@@ -92,19 +98,6 @@ Processing Steps:
 
 ## Results
 
-The bicycle network conflation results can be accessed via Box as follows:
-
-- [Final Network Datasets (MTC Internal Access Only)](https://mtcdrive.box.com/s/v0gncszuf3bol4t542bvyxp0m2n7rq34)
-- [Final Network Datasets (Consultant Access Only)](final_nw_datasets)
-
-Within each of these directories, there are 3 sub folders:
-
-|Sub Folder Name            |Description                                                   |
-|---------------------------|--------------------------------------------------------------|
-|matched                    |Contains JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
-|unmatched                  |Contains GeoJSON files of unmatched results, which is a subset of data collected from each source containing original columns as well as columns added during steps 1-3 above|
-|travel_model_nw            |Contains Travel Model 2 network link attributes as a JSON file, and spatial data as a GeoJSON file. Matched output joins to these datasets [See Active Transportation ERD](#active-transportation-erd)  |
-
 ### Bike Network Match Results
 | Bike Network Source                                | Total Network Links | Match Link Count | Unmatched Link Count | Match Percentage | Unmatched Percentage  |
 |----------------------------------------------------|---------------------|------------------|----------------------|------------------|-----------------------|
@@ -121,6 +114,44 @@ Within each of these directories, there are 3 sub folders:
 | Sonoma County Transportation Authority             | 20004               | 19486            | 518                  | 97.41%           | 2.66%                 |
 | Transportation Authority of Marin                  | 8559                | 8364             | 195                  | 97.72%           | 2.33%                 |
 | Valley Transportation Authority                    | 36883               | 26943            | 9940                 | 73.05%           | 36.89%                |
+
+### Conflated Bike Network Datasets
+
+The bicycle network conflation results can be accessed via Box as follows:
+
+- [Final Network Datasets (MTC Internal Access Only)](https://mtcdrive.box.com/s/v0gncszuf3bol4t542bvyxp0m2n7rq34)
+- [Final Network Datasets (Consultant Access Only)](final_nw_datasets)
+
+Within each of these directories, there are 3 sub folders:
+
+|Sub Folder Name            |Description                                                   |
+|---------------------------|--------------------------------------------------------------|
+|matched                    |Contains JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
+|unmatched                  |Contains GeoJSON files of unmatched results, which is a subset of data collected from each source containing original columns as well as columns added during steps 1-3 above|
+|travel_model_nw            |Contains Travel Model 2 network link attributes as a JSON file, and spatial data as a GeoJSON file. Matched output joins to these datasets [See Active Transportation ERD](#active-transportation-erd)  |
+
+#### Conflated Network Schema 
+| Column                     | Column Alias                       | Type    | Description                                                                                                                                                                       | Domain        |
+|----------------------------|------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| shstReferenceId            | Shared Street Reference Id         | text    | SharedStreets References (SSR) are directional edges in a road network. Two-way streets have two SSRs, one for each direction of travel, while one-way streets only have one SSR. |               |
+| shstGeometryId             | Shared Street Geometry Id          | text    | SharedStreets Geometries are street centerline data derived from the basemap used to produce SharedStreets References. A single geometry is shared by each reference id.          |               |
+| fromIntersectionId         | Shared Street From Intersection Id | text    |                                                                                                                                                                                   |               |
+| toIntersectionId           | Shared Street To Intersection Id   | text    |                                                                                                                                                                                   |               |
+| {data_source_abbrv}_ex_cl  | Existing Class                     | numeric | Existing bicycle facility class value                                                                                                                                             | 0;1;2;3;4;999 |
+| {data_source_abbrv}_pl_cl  | Planned Class                      | numeric | Planned or proposed bicycle class value                                                                                                                                           | 0;1;2;3;4;999 |
+| {data_source_abbrv}_source | Source                             | text    | Indicates shst matching calculation applied to match a bike facility or its segment to a shst roadway segment                                                                     |               |
+| mtc_facility_id            | MTC Facility ID                    | text    | Unique identifier assigned to each bicycle facility by MTC                                                                                                                        |               |
+
+Columns with a {data_source_abbrev} are prefixed with abbreviations of the data source. For example, the city of Oakland would have the following column names:
+
+- `oak_ex_cl`
+- `oak_pl_cl`
+- `oak_source`
+
+#### Travel Model Network Link Schema
+
+
+#### Travel Model Network Shape Schema
 
 ### Active Transportation ERD
 
