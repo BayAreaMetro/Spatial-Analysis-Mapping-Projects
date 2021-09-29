@@ -87,13 +87,13 @@ Identify parcels that meet the following conditions listed in [SB9 Code Sections
 
 	A. The development would require the demolition of the following types of housing:
 
-		~
-		i. Housing that is subject to a recorded covenant, ordinance, or law that restricts rents to levels affordable to persons and families of moderate, low, or very low income.
+		
+	~i. Housing that is subject to a recorded covenant, ordinance, or law that restricts rents to levels affordable to persons and families of moderate, low, or very low income.~
 
-		ii. Housing that is subject to any form of rent or price control through a public entity’s valid exercise of its police power.
+	~ii. Housing that is subject to any form of rent or price control through a public entity’s valid exercise of its police power.~
 
-		iii. Housing that has been occupied by tenants within the past 10 years.
-		~
+	~iii. Housing that has been occupied by tenants within the past 10 years.~
+		
 	~B. The site was previously used for housing that was occupied by tenants that was demolished within 10 years before the development proponent submits an application under this section.~
 
 	C. The development would require the demolition of a historic structure that was placed on a national, state, or local historic register.
