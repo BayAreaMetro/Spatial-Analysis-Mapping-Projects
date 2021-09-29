@@ -20,11 +20,11 @@ Add links to:
 	- [Regional Bikeway Network Classes](#expected-regional-bikeway-network-schema)
 - [Methodology](#methodology)
 - [Results](#results)
-	- [Bike Network Match Results](#bike-network-match-results)
+	- [Bike Network Conflation Match Results](#bike-network-conflation-match-results)
 	- [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
 		- [Conflated Network Schema](#conflated-network-schema)
 		- [Travel Model Network Link Schema](#travel-model-network-link-schema)
-		- [Travel Model Network Shape Schema](#travel-model-network-shape-schema)
+		- [Travel Model Network Shape Schema](#travel-model-network-shape-schema	)
 	- [Active Transportation ERD](#active-transportation-erd)
 - [Related Work](#related-work)
 
@@ -98,7 +98,7 @@ Processing Steps:
 
 ## Results
 
-### Bike Network Match Results
+### Bike Network Conflation Match Results
 | Bike Network Source                                | Total Network Links | Match Link Count | Unmatched Link Count | Match Percentage | Unmatched Percentage  |
 |----------------------------------------------------|---------------------|------------------|----------------------|------------------|-----------------------|
 | Alameda County Transportation Authority            | 52061               | 45519            | 6542                 | 87.43%           | 14.37%                |
@@ -153,7 +153,7 @@ Columns with a {data_source_abbrev} are prefixed with abbreviations of the data 
 
 #### Travel Model Network Shape Schema
 
-### Active Transportation ERD
+#### Active Transportation ERD
 
 ![Active_Transportation_ERD](images/Active_Transportation_ERD.png)
 
