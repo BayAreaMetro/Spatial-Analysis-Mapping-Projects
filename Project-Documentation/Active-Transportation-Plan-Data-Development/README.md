@@ -128,8 +128,9 @@ Within each of these directories, there are 3 sub folders:
 
 |Sub Folder Name            |Description                                                   |
 |---------------------------|--------------------------------------------------------------|
-|matched                    |Contains JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
+|matched                    |Contains de-duplicated JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
 |unmatched                  |Contains GeoJSON files of unmatched results, which is a subset of data collected from each source containing original columns as well as columns added during steps 1-3 above|
+|raw_matched                |Contains sub-folder, nammed following the applied match rules [see conflation script docs](conflation_scripts). Each sub-folder contains raw GeoJSON files of bike network links that matched to travel model links. |
 |travel_model_nw            |Contains Travel Model 2 network link attributes as a JSON file, and spatial data as a GeoJSON file. Matched output joins to these datasets [See Active Transportation ERD](#active-transportation-erd)  |
 
 #### Conflated Bike Network Schema 
