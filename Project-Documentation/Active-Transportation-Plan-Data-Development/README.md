@@ -92,6 +92,23 @@ Processing Steps:
 
 ## Results
 
+### Bike Network Match Results
+| Bike Network Source                                | Total Network Links | Match Link Count | Unmatched Link Count | Match Percentage | Unmatched Percentage  |
+|----------------------------------------------------|---------------------|------------------|----------------------|------------------|-----------------------|
+| Alameda County Transportation Authority            | 52061               | 45519            | 6542                 | 87.43%           | 14.37%                |
+| Bay Area Trails Collaborative                      | 21148               | 20077            | 1071                 | 94.94%           | 5.33%                 |
+| California Department of Transportation District 4 | 4571                | 4557             | 14                   | 99.69%           | 0.31%                 |
+| City of Oakland Department of Transportation       | 11443               | 11375            | 68                   | 99.41%           | 0.60%                 |
+| City of San Jose                                   | 25571               | 25459            | 112                  | 99.56%           | 0.44%                 |
+| City/County Association of Governments San Mateo   | 25827               | 25121            | 706                  | 97.27%           | 2.81%                 |
+| Contra Costa Transportation Authority              | 25387               | 24969            | 418                  | 98.35%           | 1.67%                 |
+| Napa Valley Transportation Authority               | 6864                | 6730             | 134                  | 98.05%           | 1.99%                 |
+| San Francisco County Transportation Authority      | 10297               | 9243             | 1054                 | 89.76%           | 11.40%                |
+| Solano Transportation Authority                    | 13462               | 12180            | 1282                 | 90.48%           | 10.53%                |
+| Sonoma County Transportation Authority             | 20004               | 19486            | 518                  | 97.41%           | 2.66%                 |
+| Transportation Authority of Marin                  | 8559                | 8364             | 195                  | 97.72%           | 2.33%                 |
+| Valley Transportation Authority                    | 36883               | 26943            | 9940                 | 73.05%           | 36.89%                |
+
 ### Active Transportation ERD
 
 ![Active_Transportation_ERD](images/Active_Transportation_ERD.png)
