@@ -22,7 +22,7 @@ Add links to:
 - [Results](#results)
 	- [Bike Network Conflation Match Results](#bike-network-conflation-match-results)
 	- [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
-		- [Conflated Bike Network Schema](#conflated-network-schema)
+		- [Conflated Bike Network Schema](#conflated-bike-network-schema)
 		- [Travel Model Network Link Schema](#travel-model-network-link-schema)
 		- [Travel Model Network Shape Schema](#travel-model-network-shape-schema	)
 	- [Active Transportation ERD](#active-transportation-erd)
