@@ -32,6 +32,17 @@ Add links to:
 
 ## Data Sources
 
+
+
+
+## Analysis Parameters
+
+### Senate Bill 9 Housing Development; Approvals
+
+- [SB9 Bill Legislative Text](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB9)
+
+Identify parcels that meet the following conditions listed in [SB9 Code Sections](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65913.4.&lawCode=GOV): 
+
 2. The development and the site on which it is located satisfy all of the following:
 
 	A. It is a legal parcel or parcels located in a city if, and only if, the city boundaries include some portion of either an urbanized area or urban cluster, as designated by the United States Census Bureau, or, for unincorporated areas, a legal parcel or parcels wholly within the boundaries of an urbanized area or urban cluster, as designated by the United States Census Bureau.
@@ -39,6 +50,8 @@ Add links to:
 	B. At least 75 percent of the perimeter of the site adjoins parcels that are developed with urban uses. For the purposes of this section, parcels that are only separated by a street or highway shall be considered to be adjoined.
 
 	C. It is zoned for residential use or residential mixed-use development, or has a general plan designation that allows residential use or a mix of residential and nonresidential uses, and at least two-thirds of the square footage of the development is designated for residential use. Additional density, floor area, and units, and any other concession, incentive, or waiver of development standards granted pursuant to the Density Bonus Law in Section 65915 shall be included in the square footage calculation. The square footage of the development shall not include underground space, such as basements or underground parking garages.
+
+<!----> 
 
 6. The development is not located on a site that is any of the following:
 
@@ -68,28 +81,23 @@ Add links to:
 
 	K. Lands under conservation easement.
 
-## Analysis Parameters
+<!---->
 
-### Senate Bill 9 Housing Development; Approvals
+7. The development is not located on a site where any of the following apply:
 
-- [SB9 Bill Legislative Text](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB9)
-- [SB 9 Bill Exclusion Areas](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65913.4.&lawCode=GOV)
+	A. The development would require the demolition of the following types of housing:
 
-Identify parcels that meet the following conditions: 
+		i. Housing that is subject to a recorded covenant, ordinance, or law that restricts rents to levels affordable to persons and families of moderate, low, or very low income.
 
-(1) The parcel subject to the proposed housing development is located within a city, the boundaries of which include some portion of either an urbanized area or urban cluster, as designated by the United States Census Bureau, or, for unincorporated areas, a legal parcel wholly within the boundaries of an urbanized area or urban cluster, as designated by the United States Census Bureau.
- 
-In addition, the bill excludes that long list of areas that were also excluded in SB 35  - (sections B-K of this code section)https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65913.4.&lawCode=GOV
- 
-a) Prime farmland or farmland of statewide importance;
-b) Wetlands;
-c) Land within the very high fire hazard severity zone, unless the development complies with state mitigation requirements;
-d) A hazardous waste site;
-e) An earthquake fault zone;
-f) Land within the 100-year floodplain or a floodway;
-g) Land identified for conservation under a natural community conservation plan, or lands under conservation easement;
-h) Habitat for protected species; or
-i) A site located within a historic or landmark district, or a site that has a historic property or landmark under state or local law, as specified.
+		ii. Housing that is subject to any form of rent or price control through a public entity’s valid exercise of its police power.
+
+		iii. Housing that has been occupied by tenants within the past 10 years.
+
+	B. The site was previously used for housing that was occupied by tenants that was demolished within 10 years before the development proponent submits an application under this section.
+
+	C. The development would require the demolition of a historic structure that was placed on a national, state, or local historic register.
+
+	D. The property contains housing units that are occupied by tenants, and units at the property are, or were, subsequently offered for sale to the general public by the subdivider or subsequent owner of the property.
 
 ## Methodology
 
