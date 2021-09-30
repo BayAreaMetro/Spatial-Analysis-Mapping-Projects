@@ -22,7 +22,7 @@ Add links to:
 - [Results](#results)
     - [Bike Network Conflation Match Results](#bike-network-conflation-match-results)
     - [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
-        - [Conflated Bike Network Schema](#conflated-network-schema)
+        - [Conflated Bike Network Schema](#conflated-bike-network-schema)
         - [Travel Model Network Link Schema](#travel-model-network-link-schema)
         - [Travel Model Network Shape Schema](#travel-model-network-shape-schema    )
     - [Active Transportation ERD](#active-transportation-erd)
@@ -92,9 +92,11 @@ Processing Steps:
 1. Project each bike network dataset to NAD1983 UTM Z 10N, or EPSG 26910
 2. Review facilities that cross jurisdictional boundaries, edit line ends to connect to facilities in adjacent jurisdictions
 3. Map class attributes from jurisdiction class to a standardized classification using only numeric values. If class stored in a single column, separate class into existing or planned class columns based on a status column if present. Otherwise if an existing and planned / proposed class column already exists, add those values to the existing and planned class columns. ([See Regional Bikeway Network Schema](#regional-bikeway-network-schema))
-    - [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
-4. Conflate each bike facility dataset with Travel Model II Network, and perform post-processing cleanup on datasets. For more information on Shared Streets Referencing, check out their documentation [here](https://github.com/sharedstreets/sharedstreets-ref-system)
-    - [Conflation Scripts](conflation_scripts)
+	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
+4. Assign a unique identifier to each bike network dataset feature, and export as a geojson in preparation for conflation.
+	- [Bike Network to GeoJSON](Bike_Networks_FGDB_to_GeoJSON.ipynb)
+5. Conflate each bike facility dataset with Travel Model II Network, and perform post-processing cleanup on datasets. For more information on Shared Streets Referencing, check out their documentation [here](https://github.com/sharedstreets/sharedstreets-ref-system)
+	- [Conflation Scripts](conflation_scripts)
 
 ## Results
 
@@ -126,8 +128,9 @@ Within each of these directories, there are 3 sub folders:
 
 |Sub Folder Name            |Description                                                   |
 |---------------------------|--------------------------------------------------------------|
-|matched                    |Contains JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
+|matched                    |Contains de-duplicated JSON files of links that matched to travel model links. These files join to the Travel Model NW [See Active Transportation ERD](#active-transportation-erd)|
 |unmatched                  |Contains GeoJSON files of unmatched results, which is a subset of data collected from each source containing original columns as well as columns added during steps 1-3 above|
+|raw_matched                |Contains sub-folder, nammed following the applied match rules [see conflation script docs](conflation_scripts). Each sub-folder contains raw GeoJSON files of bike network links that matched to travel model links. |
 |travel_model_nw            |Contains Travel Model 2 network link attributes as a JSON file, and spatial data as a GeoJSON file. Matched output joins to these datasets [See Active Transportation ERD](#active-transportation-erd)  |
 
 #### Conflated Bike Network Schema 
