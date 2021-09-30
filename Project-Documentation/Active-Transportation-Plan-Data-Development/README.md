@@ -17,15 +17,15 @@ Add links to:
 
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
-	- [Regional Bikeway Network Classes](#expected-regional-bikeway-network-schema)
+    - [Regional Bikeway Network Classes](#expected-regional-bikeway-network-schema)
 - [Methodology](#methodology)
 - [Results](#results)
-	- [Bike Network Conflation Match Results](#bike-network-conflation-match-results)
-	- [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
-		- [Conflated Bike Network Schema](#conflated-network-schema)
-		- [Travel Model Network Link Schema](#travel-model-network-link-schema)
-		- [Travel Model Network Shape Schema](#travel-model-network-shape-schema	)
-	- [Active Transportation ERD](#active-transportation-erd)
+    - [Bike Network Conflation Match Results](#bike-network-conflation-match-results)
+    - [Conflated Bike Network Datasets](#conflated-bike-network-datasets)
+        - [Conflated Bike Network Schema](#conflated-network-schema)
+        - [Travel Model Network Link Schema](#travel-model-network-link-schema)
+        - [Travel Model Network Shape Schema](#travel-model-network-shape-schema    )
+    - [Active Transportation ERD](#active-transportation-erd)
 - [Related Work](#related-work)
 
 ## Data Sources
@@ -92,9 +92,9 @@ Processing Steps:
 1. Project each bike network dataset to NAD1983 UTM Z 10N, or EPSG 26910
 2. Review facilities that cross jurisdictional boundaries, edit line ends to connect to facilities in adjacent jurisdictions
 3. Map class attributes from jurisdiction class to a standardized classification using only numeric values. If class stored in a single column, separate class into existing or planned class columns based on a status column if present. Otherwise if an existing and planned / proposed class column already exists, add those values to the existing and planned class columns. ([See Regional Bikeway Network Schema](#regional-bikeway-network-schema))
-	- [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
+    - [Bike Network Data Cleanup Notebook](Bike_Network_Data_Cleanup.ipynb )
 4. Conflate each bike facility dataset with Travel Model II Network, and perform post-processing cleanup on datasets. For more information on Shared Streets Referencing, check out their documentation [here](https://github.com/sharedstreets/sharedstreets-ref-system)
-	- [Conflation Scripts](conflation_scripts)
+    - [Conflation Scripts](conflation_scripts)
 
 ## Results
 
@@ -149,9 +149,63 @@ Columns with a {data_source_abbrev} are prefixed with abbreviations of the data 
 - `oak_source`
 
 #### Travel Model Network Link Schema
-
+| Column             | Column Alias                       | Type    | Description            |
+|--------------------|------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| model_link_id      | Travel Model Link ID               | numeric | Unique ID used by the travel model |
+| id                 | Travel Model Link Shape ID         | text    | ID representing the geometry (not unique) |
+| shape_id           | Link shape ID                      | numeric | ID generaged during network creation |
+| shstGeometryId     | Shared Street Geometry Id          | text    | SharedStreets ID for the geometry (not unique, e.g., two-way roads can have the same geometry in each direction) |
+| shstReferenceId    | Shared Street Reference Id         | text    | SharedStreets References (SSR) are directional edges in a road network. Two-way streets have two SSRs, one for each direction of travel, while one-way streets only have one SSR. |
+| fromIntersectionId | Shared Street From Intersection ID | text    | SharedStreets "from" node ID |
+| toIntersectionId   | Shared Street To Intersection ID   | text    | SharedStreets "to" node ID |
+| A                  | From Node ID                       | numeric | Travel model “from” node ID |
+| B                  | To Node ID                         | numeric | Travel model “to” node ID |
+| access             | Roadway Access Type                | text    | OSM variable for roadway access (e.g., non-public roads) |
+| bike_access        | Bike Access                        | boolean | Is the link in the bike network? |
+| drive_access       | Drive Access                       | boolean | Travel model indicator if automobiles may traverse the link |
+| walk_access        | Walk Access                        | boolean | Travel model indicator if pedestrians may traverse the link |
+| transit_access     | Transit Access                     | boolean | Is the link in the transit network? |
+| lanes              | Lanes                              | numeric | Number of lanes |
+| maxspeed           | Max Speed                          | numeric | Speed limit |
+| name               | Name                               | text    | Name of the transportation asset (roadway only) |
+| oneWay             | One Way                            | boolean | If the roadway is uni-directionary |
+| ref                | Reference                          | text    | Roadway reference |
+| roadway            | Roadway                            | text    | Travel model roadway and connector types |
+| u                  | u                                  | numeric | OSM “from” node ID |
+| v                  | v                                  | numeric | OSM “to” node ID |
+| wayId              | Way ID                             | numeric | Corresponding OSM link ID |
+| county             | County                             | text    | The county where a link is located |
+| rail_traveltime    | Rail Travel Time                   | numeric | |
+| rail_only          | Rail Only                          | boolean | If the link is a rail link only |
+| locationReferences | Location References                | text    | SharedStreets-style location references |
+| ft_cal             |                                    | numeric | |
+| ft                 | Facility Type                      | numeric | Travel model facility type code |
+| useclass           | Use Class                          | numeric | Travle model roadway use class: 0 (everyone), 2 (HOV 2+), 3 (HOV 3+), 4 (no combination trucks) |
+| assignable_cal     |                                    | numeric | |
+| assignable         | Assignable                         | numeric | Is link used in assignment in travel model |
+| transit            | Transit                            | numeric | Is transit-only link |
+| tollbooth          | Toll Booth                         | numeric | Bridge and express lane toll codes |
+| bus_only           | Bus Only                           | boolean | Is bus-only link |
+| managed            | Managed                            | numeric | Is it a managed lane facility |
+| ML_lanes           |                                    |         | |
+| segment_id         | Segment ID                         | numeric | Managed facility id |
+| ML_tollbooth       |                                    | numeric | |
+| ML_useclass        |                                    |         | |
+| ML_access          |                                    |         | |
+| ML_egress          |                                    |         | |
+| ML_tollseg         |                                    | numeric | |
+| tollseg            | Toll Segment                       | numeric | Express lane toll codes |
 
 #### Travel Model Network Shape Schema
+| Column             | Column Alias                       | Type     | Description            |
+|--------------------|------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| id                 | Travel Model Link Shape ID         | text     | ID representing the geometry (not unique) |
+| shape_id           | Link shape ID                      | numeric  | ID generaged during network creation |
+| forwardReferenceId | Forward Reference ID               | text     | SharedStreetsReferenceId representing the direction along a shape |
+| backReferenceId    | Back Reference ID                  | text     | SharedStreetsReferenceId representing the opposite direction along a shape of a two-way link |
+| fromIntersectionId | Shared Street From Intersection ID | text     | SharedStreets "from" node ID |
+| toIntersectionId   | Shared Street To Intersection ID   | text     | SharedStreets "to" node ID |
+| geometry           | Geometry                           | geometry | Geometry of link shape |
 
 #### Active Transportation ERD
 
