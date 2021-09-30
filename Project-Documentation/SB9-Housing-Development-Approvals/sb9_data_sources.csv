@@ -1,5 +1,5 @@
 ﻿Dataset_Name,Dataset_Description,Bill_Sub_Section,Dataset_URL,Dataset_ID,Notes
-Census Bureau Urbanized Area or Urbanized Cluster,,2A,,,
+Census Bureau Urbanized Area or Urbanized Cluster,,2A,https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Urban/MapServer/1,,
 Regional Zoning 2021,,2C,,,
 Coastal Zone Boundary,,6A,https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=810c8ec169414c5c81491fb10fce9219,810c8ec169414c5c81491fb10fce9219,
 Farmland Mapping and Monitoring Program,,6B,https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=d57abc5f879f4ac8a2c02047b22bd6e2,d57abc5f879f4ac8a2c02047b22bd6e2,
