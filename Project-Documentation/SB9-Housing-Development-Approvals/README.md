@@ -47,7 +47,7 @@ Identify parcels that meet the following conditions listed in [SB9 Code Sections
 
 	A. It is a legal parcel or parcels located in a city if, and only if, the city boundaries include some portion of either an urbanized area or urban cluster, as designated by the United States Census Bureau, or, for unincorporated areas, a legal parcel or parcels wholly within the boundaries of an urbanized area or urban cluster, as designated by the United States Census Bureau.
 
-	B. At least 75 percent of the perimeter of the site adjoins parcels that are developed with urban uses. For the purposes of this section, parcels that are only separated by a street or highway shall be considered to be adjoined.
+	~B. At least 75 percent of the perimeter of the site adjoins parcels that are developed with urban uses. For the purposes of this section, parcels that are only separated by a street or highway shall be considered to be adjoined.~
 
 	C. It is zoned for residential use or residential mixed-use development, or has a general plan designation that allows residential use or a mix of residential and nonresidential uses, and at least two-thirds of the square footage of the development is designated for residential use. Additional density, floor area, and units, and any other concession, incentive, or waiver of development standards granted pursuant to the Density Bonus Law in Section 65915 shall be included in the square footage calculation. The square footage of the development shall not include underground space, such as basements or underground parking garages.
 
