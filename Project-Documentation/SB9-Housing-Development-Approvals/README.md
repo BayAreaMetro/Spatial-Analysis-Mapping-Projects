@@ -2,33 +2,19 @@
 
 # Senate Bill 9 Housing Development; Approvals
 
-Define the Problem Statement
-
-## Project Scope
-
-Identify the scope of the project, and link to additional projects where necessary.
-
-- **Data Collection**
-- **Data Preparation/ Modeling**
-- **Data Ingestion**
-- **Data Catalog/ Publishing/ Added to BASIS MDM**
+Create a parcel-level dataset identifying parcels that are subject to Senate Bill 9 (Atkins, 2021).
 
 ## Project Resources
 
-Add links to:
-- Activity, Project, or Task on Asana 
-- Box directory where any related work products are stored (if applicable) 
-- ArcGIS Online Working Group (if applicable) 
-- Any other location where important related work products are stored/saved 
+- [Asana Task](https://app.asana.com/0/229355710745434/1201130176219669)
+- [SB 9 Box Directory (MTC Internal Access Only)](https://mtcdrive.box.com/s/kaqmzxxx8nh1e6o6o2vxb9ztau7v782u)
 
 ### Table of Contents
 
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
 - [Methodology](#methodology)
-- [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
-- [Tags](#tags)
 
 ## Data Sources
 
@@ -118,9 +104,11 @@ Identify parcels that meet the following conditions listed in [SB9 Code Sections
 
 The SB9 Elligible Parcels dataset was developed in Python Jupyter Notebooks, using primarily the Pandas/Geopandas libraries. Below is a quick description of the methodology followed to create the final dataset. 
 
-1. Create an inventory of all datasets used to conduct the analysis
-
-## Expected Outcomes
+1. Create an inventory of all datasets used to conduct the analysis. The inventory is listed above. [See Data Sources](#data-sources)
+2. Pre-process datasets. Datasets underwent spatial processing to clip features to the boundaries of the 9-County Bay Area or were filtered. See processing_filtering column in the [Data Sources](#data-sources) table above for a quick review of operations. For a more detailed look at the processing, review the Jupyter Notebook. 
+	- [SB9 Data Preprocessing Notebook](SB9_Data_Preprocessing.ipynb)
+3. Run spatial overlay process. Centroids on the surface of parcel polygons were generated. These parcels were then spatially joined with excusion areas flagging whether or not they were within exlusion areas. For point-based exclusion site data, points were joined to polygons to flag whether an exclusion site was within a polygon. For a more detailed look at the overlay analysis, reviw the Jupyter Notebook.
+	- [SB9 Overlay Analysis Notebook](SB9_Overlay_Analysis.ipynb)
 
 ## Results
 
