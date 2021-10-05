@@ -112,6 +112,6 @@ The SB9 Elligible Parcels dataset was developed in Python Jupyter Notebooks, usi
 
 ## Results
 
-- [SB9 Elligible Parcels GeoJSON](https://mtcdrive.box.com/s/ebbysx1t80cp83alb4dlrztrrdva8lts)
+- [SB9 Eligible Parcels GeoJSON](https://mtcdrive.box.com/s/ebbysx1t80cp83alb4dlrztrrdva8lts)
 
 ## Tags
