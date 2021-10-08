@@ -111,48 +111,6 @@ The SB9 Elligible Parcels dataset was developed in Python Jupyter Notebooks, usi
 3. Run spatial overlay process. Centroids on the surface of parcel polygons were generated. These parcels were then spatially joined with excusion areas flagging whether or not they were within exlusion areas. For point-based exclusion site data, points were joined to polygons to flag whether an exclusion site was within a polygon. For a more detailed look at the overlay analysis, reviw the Jupyter Notebook.
 	- [SB9 Overlay Analysis Notebook](SB9_Overlay_Analysis.ipynb)
 
-### Analysis Limitations
-
-Zoning data were collected in 2021 and 2019 from all jurisdictions in the 9-County Bay Area where information was available on jurisdiction websites and publicly accessible data portals or APIs. Data were not avilable for 36 jurisdictions, which means that the count of total single family parcels and single family parcels subject to SB9 were likely under represented in our analysis. Below is a list of the jurisdiction where zoning data was not collected.
-
-| Zoning Data Not Collected  |
-|----------------------------|
-| Hillsborough               |
-| Yountville                 |
-| Burlingame                 |
-| Napa                       |
-| Morgan Hill                |
-| Colma                      |
-| Hercules                   |
-| Atherton                   |
-| Pinole                     |
-| Half Moon Bay              |
-| Brentwood                  |
-| Piedmont                   |
-| Monte Sereno               |
-| Emeryville                 |
-| Lafayette                  |
-| Calistoga                  |
-| Albany                     |
-| Portola Valley             |
-| Healdsburg                 |
-| Oakley                     |
-| Millbrae                   |
-| El Cerrito                 |
-| Pacifica                   |
-| Gilroy                     |
-| Woodside                   |
-| Martinez                   |
-| Orinda                     |
-| San Pablo                  |
-| Newark                     |
-| East Palo Alto             |
-| American Canyon            |
-| Clayton                    |
-| San Ramon                  |
-| Brisbane                   |
-| Union City                 |
-| St. Helena                 |
 
 ## Results
 
