@@ -113,7 +113,7 @@ The SB9 Elligible Parcels dataset was developed in Python Jupyter Notebooks, usi
 
 ### Analysis Limitations
 
-Zoning data were collected in 2021 and 2019 from all jurisdictions in the 9-County Bay Area where information was available on jurisdiction websites and publicly accessible data portals or APIs. Data on single-family zoning not available for 4 jurisdictions, which means that the count of total single family parcels and single family parcels subject to SB9 were likely under represented in our analysis. Below is a list of the jurisdiction where single family zoning data was unavailable. 
+Zoning data were collected in 2021 and 2019 from all jurisdictions in the 9-County Bay Area where information was available on jurisdiction websites and publicly accessible data portals or APIs. Zoning data was collected for all 109 Bay Area jurisdictions. However, data on single-family zoning was not available for 4 jurisdictions, which means that the count of total single family parcels and single family parcels subject to SB9 were likely under represented in our analysis. Below is a list of the jurisdiction where single family zoning data was unavailable. 
 
 
 | Zoning Data Not Collected  |
