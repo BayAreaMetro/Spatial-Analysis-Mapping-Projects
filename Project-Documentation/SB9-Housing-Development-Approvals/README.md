@@ -40,6 +40,8 @@ All datasets used for the analysis are listed below. A more complete list can be
 
 ### Senate Bill 9 Housing Development; Approvals
 
+This section includes excerpts from the SB9 legislative text for easy reference and also to outline the scope of the analysis conducted. Sections that are crossed out were not considered for this analysis. For these sections, good data were not available at a regional level to accuratly estimate the impact.  
+
 - [SB9 Bill Legislative Text](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220SB9)
 
 Identify parcels that meet the following conditions listed in [SB9 Code Sections](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=65913.4.&lawCode=GOV): 
