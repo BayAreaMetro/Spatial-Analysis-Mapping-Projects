@@ -128,6 +128,6 @@ Zoning data were collected in 2021 and 2019 from all jurisdictions in the 9-Coun
 ## Results
 
 - [SB9 Eligible Parcels GeoJSON](https://mtcdrive.box.com/s/ebbysx1t80cp83alb4dlrztrrdva8lts)
-- [San Francisco Bay Area Lands Subject to SB9 (Atkins, 2019) Dashboard](https://mtc.maps.arcgis.com/home/item.html?id=f722ce2e4e9949269f98bbad250c0be5#overview)
+- [San Francisco Bay Area Lands Subject to SB9 (Atkins, 2019) Dashboard](https://mtc.maps.arcgis.com/home/item.html?id=f722ce2e4e9949269f98bbad250c0be5)
 
 ## Tags
