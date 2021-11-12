@@ -2,6 +2,12 @@
 
 # Senate Bill 9 Housing Development; Approvals
 
+**Background**
+SB9 made the following changes to state law: 
+- It allows homeowners in most areas around the state to divide their property into two lots, thereby increasing opportunities for homeownership in their neighborhood; and 
+- It allows two homes to be built on each of those lots, with the effect of legalizing fourplexes in areas that previously only allowed one home.
+- SB 9 contains important protections against the displacement of existing tenants.
+
 Create a parcel-level dataset identifying parcels that are subject to Senate Bill 9 (Atkins, 2021).
 
 ## Project Resources
