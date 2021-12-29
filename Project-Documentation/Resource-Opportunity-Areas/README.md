@@ -13,7 +13,7 @@ Summary data is provided at tract level for urban areas and block group level fo
 
 ## Methodology
 
-[Create CTCAC HCD Resource Areas Dataset Notebook](Create%20CTCAC%20HCD%20Resource%20Areas%20Dataset.ipynb)
+[Create CTCAC HCD Resource Areas Dataset Notebook](https://nbviewer.org/github/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Resource-Opportunity-Areas/Create%20CTCAC%20HCD%20Resource%20Areas%20Dataset.ipynb)
 
 1. Pull block-group level data from Census TIGER API
 2. Create tract id and block group id from GEOID 
