@@ -48,7 +48,7 @@ VTA Reamwood: Applies to the entire TRA within ½ mile radius
     - Pull all input datasets, convert to geodataframe, and project to EPSG:26910
 2. Create TOC area
     - Filter existing and planned transit stops to only include fixed-guideway stations `('Rail', 'BRT', 'Tram, Streetcar, Light Rail', 'Cable Tram','Ferry')`
-    - Creates 1/2 buffer (804.672 meter) area around stops
+    - Create 1/2 buffer (804.672 meter) area around stops
     - Create unique stop identifier
     - Flag areas with PDAs 
     - Filter out TRAs that intersect with designated PDAs, creating remainder TRAs
