@@ -64,8 +64,8 @@ VTA Reamwood: Applies to the entire TRA within ½ mile radius
     - Calculate residential capacity based on source (DUA * acres)
     - Calculate commercial capacity based on source (FAR * sqft)
 6. Determine where there is missing data
-    - Determine where there is missing residential capacity. Regional zoning designations that allow residential uses: `('Specific or Special Plan Areas', 'Single Family Residential', 'Multi-Family Residential', 'Mixed Use Residential', 'Mixed Use Commercial')`
-    - Determine where there is missing commercial capacity. Regional zoning designations that allow commercial uses: `('Specific or Special Plan Areas', 'Mixed Use Residential','Commercial', 'Mixed Use Commercial')` 
+    - Determine where there is missing residential capacity. Regional zoning designations that allow **residential uses**: `('Specific or Special Plan Areas', 'Single Family Residential', 'Multi-Family Residential', 'Mixed Use Residential', 'Mixed Use Commercial')`
+    - Determine where there is missing commercial capacity. Regional zoning designations that allow **commercial uses**: `('Specific or Special Plan Areas', 'Mixed Use Residential','Commercial', 'Mixed Use Commercial')` 
 7. Export data for review
     - Export select columns as CSV and GeoJSON
 8. Create TOC land use summaries Tableau workbook
