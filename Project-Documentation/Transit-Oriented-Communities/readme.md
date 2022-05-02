@@ -2,7 +2,7 @@
 
 # Transit Oriented Communities
 
-We want to assess baseline zoning for residential (du/acre) and office (FAR) in locations within 1/2 mile of high-quality transit stops and stations, including within PDAs and TRAs.
+The Transit Oriented Communities (TOC) policy aims to increase residential and commercial densities in transit-rich areas, prioritizing affordable housing and commercial development in areas near regional transit hubs served by multiple transit providers. The goal of this analysis is to assess the baseline zoning for residential and office/commercial within Priority Development Areas (PDAs) and Transit Rich Areas (TRAs) within 1/2 mile of existing or planned fixed-guideway transit facilities. 
 
 ## Project Management 
 
@@ -11,9 +11,35 @@ We want to assess baseline zoning for residential (du/acre) and office (FAR) in 
 
 ## Table of Contents
 
-## Data Sources
-
 ## Analysis Parameters
+
+### Transit Oriented Communities Policy Area
+
+The proposed TOC policy will apply in the follow areas:
+
+- PDAs or TRAs within the half-mile station/stop/terminal area of existing or planned **fixed-guideway transit**. 
+- Fixed-guideway transit:
+    - Regional rail: BART, Caltrain
+    - Light Rail Transit: Muni Metro, VTA
+    - Bus Rapid Transit: AC Transit (1T) Tempo, Van Ness BRT
+    - Commuter rail: Capitol Corridor, ACE, SMART
+    - Ferry terminals (limited to certain requirements only)
+
+#### Where will the TOC Policy Apply?
+The entirety or portion of a designated PDA that is within the half-mile station, stop, or terminal area. The TRA if no PDA has been designated. 
+
+**North Berkeley BART**
+
+North Berkeley BART: Applies to the portion of PDA within ½ mile radius
+
+![](images/north_berkeley_bart.png)
+
+**VTA Reamwood**
+
+VTA Reamwood: Applies to the entire TRA within ½ mile radius
+
+![](images/vta_reamwood.png)
+
 
 ## Methodology
 
