@@ -42,7 +42,7 @@ VTA Reamwood: Applies to the entire TRA within ½ mile radius
 
 #### What areas will the TOC policy not apply?
 
-The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, Plan Bay Area 2050 projects that... 
+The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, the policy **only** applies to areas within 1/2 mile of existing or planned fixed guideway transit service (regional rail, light rail, commuter rail, ferry, and bus rapid transit). In the case of planned service, only projects that are deemed likely to be delivered within the near-term (roughly 5 years) should be considered. As such, stops or stations associated with the following projects were excluded from analysis. Additionally, given its limited capacity, stations served only by Tideline Ferry service were also excluded from analysis.
 
 | Project Name | Pba50_ID | agency_id | stop_id |
 |---|---|---|---|
@@ -73,6 +73,26 @@ The TOC policy will not apply around airport air tram stations, including statio
 | | |SI| SI:T3 |
 | | |SI| SI:WFR |
 | | |BA| OAKL |
+
+#### How will densities for new residential and commercial development be determined? 
+
+Residential and commercial minimum and maximum densities will be determined by level of transit service. 
+
+**Residential Densities**
+| Level of Transit Service | Required Min Density | Allowable Density |
+|---|---|---|
+| Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet  | 100 units/net acre | 150 units/net acre |
+| Tier 2: Stop/station served by 2 BART lines or Caltrain Baby Bullet | 75 units/net acre | 100 units/net acre |
+| Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 50 units/net acre | 75 units/net acre |
+| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal) | 25 units/net acre | 35 units/net acre |
+
+**Commercial Densities**
+| Level of Transit Service | Required Min Density | Allowable Density |
+|---|---|---|
+| Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet  | 4 Floor Area Ratio (FAR) | 8 FAR |
+| Tier 2: Stop/station served by 2 BART lines or Caltrain Baby Bullet | 3 FAR | 6 FAR |
+| Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 2 FAR | 4 FAR |
+| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal) | 1 FAR | 3 FAR |
 
 ## Methodology
 
