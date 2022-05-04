@@ -45,7 +45,7 @@ VTA Reamwood: Applies to the entire TRA within ½ mile radius
 The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, Plan Bay Area 2050 projects that... 
 
 | Project Name | Pba50_ID | agency_id | stop_id |
-|---|---|---|
+|---|---|---|---|
 | Hovercraft pilot (not included in shapefile so OK) |  |   |
 | Small-scale ferry | CC-021 |   |
 | Tideline ferry |  | TD |
