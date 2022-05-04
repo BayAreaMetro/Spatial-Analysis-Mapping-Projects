@@ -25,7 +25,7 @@ The proposed TOC policy will apply in the follow areas:
     - Commuter rail: Capitol Corridor, ACE, SMART
     - Ferry terminals (limited to certain requirements only)
 
-#### Where will the TOC Policy Apply?
+#### Where will the TOC policy apply?
 The entirety or portion of a designated PDA that is within the half-mile station, stop, or terminal area. The TRA if no PDA has been designated. 
 
 **North Berkeley BART**
@@ -39,6 +39,40 @@ North Berkeley BART: Applies to the portion of PDA within ½ mile radius
 VTA Reamwood: Applies to the entire TRA within ½ mile radius
 
 ![](images/vta_reamwood.png)
+
+#### What areas will the TOC policy not apply?
+
+The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, Plan Bay Area 2050 projects that... 
+
+| Project Name | Pba50_ID | agency_id | stop_id |
+|---|---|---|
+| Hovercraft pilot (not included in shapefile so OK) |  |   |
+| Small-scale ferry | CC-021 |   |
+| Tideline ferry |  | TD |
+| SF historic streetcar extension | SF-024 |   |
+| ReX blue | MU-060 |   |
+| ReX green | MU-061 |   |
+| ReX red | MU-062 |   |
+| 23rd St BRT | CC-015 |   |
+| Geneva-Harney BRT | SF-012 |   |
+| Geary Phase 1 (not tagged in shapefile as BRT so OK) |   |   |
+| Geary Phase 2 | SF-011 |   |
+| El Camino San Mateo | SM-011 |   |
+| El Camino Santa Clara (not tagged in shapefile as BRT so OK) |   |   |
+| Telegraph | MU-033 |   |
+| Appezzato Way | AL-016 |   |
+| BRT to Brentwood | CC-018 |   |
+| | |SI| SI:GA   |
+| | |SI| SI:GG |
+| | |SI| SI:HOT |
+| | |SI| SI:ITA |
+| | |SI| SI:ITG |
+| | |SI| SI:RCC |
+| | |SI| SI:T1 |
+| | |SI| SI:T2 |
+| | |SI| SI:T3 |
+| | |SI| SI:WFR |
+| | |BA| OAKL |
 
 ## Methodology
 
