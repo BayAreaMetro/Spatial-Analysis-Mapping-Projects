@@ -2,7 +2,7 @@
 
 # Transit Oriented Communities
 
-The Transit Oriented Communities (TOC) policy aims to increase residential and commercial densities in transit-rich areas, prioritizing affordable housing and commercial development in areas near regional transit hubs served by multiple transit providers. The goal of this analysis is to assess the baseline zoning for residential and office/commercial within Priority Development Areas (PDAs) and Transit Rich Areas (TRAs) within 1/2 mile of existing or planned fixed-guideway transit facilities. 
+The Transit Oriented Communities (TOC) policy aims to increase residential and commercial densities in eligible Transit-Rich Areas (TRAs), prioritizing affordable housing and commercial development in areas near regional transit hubs served by multiple transit providers. The goal of this analysis is to assess the baseline zoning for residential and office/commercial within Priority Development Areas (PDAs) and Transit Rich Areas (TRAs) within 1/2 mile of existing or planned fixed-guideway transit facilities. 
 
 ## Project Management 
 
@@ -26,7 +26,7 @@ The Transit Oriented Communities (TOC) policy aims to increase residential and c
 
 The proposed TOC policy will apply in the follow areas:
 
-- PDAs or TRAs within the half-mile station/stop/terminal area of existing or planned **fixed-guideway transit**. 
+- PDAs or select TRAs within the half-mile station/stop/terminal area of existing or planned **fixed-guideway transit**. 
 - Fixed-guideway transit:
     - Regional rail: BART, Caltrain
     - Light Rail Transit: Muni Metro, VTA
@@ -87,7 +87,7 @@ The TOC policy will not apply around airport air tram stations, including statio
 
 Residential and commercial minimum and maximum densities will be determined by level of transit service. 
 
-**Residential Densities**
+**DRAFT Residential Densities**
 | Level of Transit Service | Required Min Density | Allowable Density |
 |---|---|---|
 | Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet  | 100 units/net acre | 150 units/net acre |
@@ -95,7 +95,7 @@ Residential and commercial minimum and maximum densities will be determined by l
 | Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 50 units/net acre | 75 units/net acre |
 | Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal) | 25 units/net acre | 35 units/net acre |
 
-**Commercial Densities**
+**DRAFT Commercial Densities**
 | Level of Transit Service | Required Min Density | Allowable Density |
 |---|---|---|
 | Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet  | 4 Floor Area Ratio (FAR) | 8 FAR |
