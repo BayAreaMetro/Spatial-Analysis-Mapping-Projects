@@ -212,4 +212,4 @@ Outputs:
 5. Export data for review
     - Export select columns as CSV and GeoJSON
 6. Create TOC land use summaries Tableau workbook
-    - [Tableau Workbook (MTC Access Only)](https://mtcdrive.box.com/s/pse3mlwq3y194vkjlspgep9gjkqcfisy)~~
+    - [Tableau Workbook (MTC Access Only)](https://mtcdrive.box.com/s/pse3mlwq3y194vkjlspgep9gjkqcfisy)
