@@ -194,18 +194,18 @@ Outputs:
 - [TOC Residential and Commercial Capacities CSV (MTC Access Only)](https://mtcdrive.box.com/s/6tv583axa8jmgrzcsiuyio7phs09zbi9)
 - [TOC Residential and Commercial Capacities GeoJSON (MTC Access Only)](https://mtcdrive.box.com/s/htzptkiwws90qxnxjwyysgay4ap967wh)
 
-~~
+
 1. Perform point in polygon overlay
     - Calculate parcel geometry centroids 'on the surface' of the parcel
     - Spatially join parcel centroids w/ PDAs and remainder TRAs
     - Flag PDA and remainder TRA areas
     - Create area name column that indicates PDA name and remainder TRA stop area names
 2. Merge parcels w/ PDA TRA flags w/ plan land use attributes
-3. Calculate DUA and FAR density based on zoning or general plan designation
-    - Calculate parcel area (acres / square feet)
-    - Set source for residential and commercial capacities `('Zoning', 'General Plan', 'Missing Capacity')`
-    - Calculate residential capacity based on source (DUA * acres)
-    - Calculate commercial capacity based on source (FAR * sqft)
+~~3. Calculate DUA and FAR density based on zoning or general plan designation~~
+    ~~- Calculate parcel area (acres / square feet)~~
+    ~~- Set source for residential and commercial capacities `('Zoning', 'General Plan', 'Missing Capacity')`~~
+    ~~- Calculate residential capacity based on source (DUA * acres)~~
+    ~~- Calculate commercial capacity based on source (FAR * sqft)~~
 4. Determine where there is missing data
     - Determine where there is missing residential capacity. Regional zoning designations that allow **residential uses**: `('Specific or Special Plan Areas', 'Single Family Residential', 'Multi-Family Residential', 'Mixed Use Residential', 'Mixed Use Commercial')`
     - Determine where there is missing commercial capacity. Regional zoning designations that allow **commercial uses**: `('Specific or Special Plan Areas', 'Mixed Use Residential','Commercial', 'Mixed Use Commercial')` 
