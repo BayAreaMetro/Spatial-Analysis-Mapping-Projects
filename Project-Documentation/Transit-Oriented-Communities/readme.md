@@ -11,6 +11,15 @@ The Transit Oriented Communities (TOC) policy aims to increase residential and c
 
 ## Table of Contents
 
+- [Analysis Parameters](#analysis-parameters)
+    - [Transit Oriented Communities Policy Area](#transit-oriented-communities-policy-area)
+        - [Where will the TOC policy apply?](#where-will-the-toc-policy-apply)
+        - [Where will the TOC policy not apply?](#where-will-the-toc-policy-not-apply)
+        - [How will densities for new residential and commercial development be determined?](#how-will-densities-for-new-residential-and-commercial-development-be-determined)
+- [Methodology](#methodology)
+    - [Create Transit Oriented Communities Policy Area](#create-transit-oriented-communities-policy-area)
+    - [Transit Oriented Communities Parcel/Land Use Overlay (Not completed)](#transit-oriented-communities-parcelland-use-overlay)
+
 ## Analysis Parameters
 
 ### Transit Oriented Communities Policy Area
@@ -40,7 +49,7 @@ VTA Reamwood: Applies to the entire TRA within ½ mile radius
 
 ![](images/vta_reamwood.png)
 
-#### What areas will the TOC policy not apply?
+#### Where will the TOC policy not apply?
 
 The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, the policy **only** applies to areas within 1/2 mile of existing or planned fixed guideway transit service (regional rail, light rail, commuter rail, ferry, and bus rapid transit). In the case of planned service, only projects that are deemed likely to be delivered within the near-term (roughly 5 years) should be considered. As such, stops or stations associated with the following projects were excluded from analysis. Additionally, given its limited capacity, stations served only by Tideline Ferry service were also excluded from analysis.
 
@@ -95,6 +104,11 @@ Residential and commercial minimum and maximum densities will be determined by l
 | Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal) | 1 FAR | 3 FAR |
 
 ## Methodology
+
+### Create Transit Oriented Communities Policy Area
+
+
+### Transit Oriented Communities Parcel/Land Use Overlay
 
 [Transit Oriented Communities Analysis Notebook](Transit_Oriented_Communities_Analysis.ipynb)
 
