@@ -107,41 +107,79 @@ Residential and commercial minimum and maximum densities will be determined by l
 
 ### Create Transit Oriented Communities Policy Area
 
-
-### Transit Oriented Communities Parcel/Land Use Overlay
-
-[Transit Oriented Communities Analysis Notebook](Transit_Oriented_Communities_Analysis.ipynb)
-
-1. Pre-procesing
-    - Pull all input datasets, convert to geodataframe, and project to EPSG:26910
-2. Create TOC area
-    - Filter existing and planned transit stops to only include fixed-guideway stations `('Rail', 'BRT', 'Tram, Streetcar, Light Rail', 'Cable Tram','Ferry')`
-    - Create 1/2 buffer (804.672 meter) area around stops
-    - Create unique stop identifier
-    - Flag areas with PDAs 
-    - Filter out TRAs that intersect with designated PDAs, creating remainder TRAs
-3. Perform point in polygon overlay
-    - Calculate parcel geometry centroids 'on the surface' of the parcel
-    - Spatially join parcel centroids w/ PDAs and remainder TRAs
-    - Flag PDA and remainder TRA areas
-    - Create area name column that indicates PDA name and remainder TRA stop area names
-4. Merge parcels w/ PDA TRA flags w/ plan land use attributes
-5. Calculate DUA and FAR density based on zoning or general plan designation
-    - Calculate parcel area (acres / square feet)
-    - Set source for residential and commercial capacities `('Zoning', 'General Plan', 'Missing Capacity')`
-    - Calculate residential capacity based on source (DUA * acres)
-    - Calculate commercial capacity based on source (FAR * sqft)
-6. Determine where there is missing data
-    - Determine where there is missing residential capacity. Regional zoning designations that allow **residential uses**: `('Specific or Special Plan Areas', 'Single Family Residential', 'Multi-Family Residential', 'Mixed Use Residential', 'Mixed Use Commercial')`
-    - Determine where there is missing commercial capacity. Regional zoning designations that allow **commercial uses**: `('Specific or Special Plan Areas', 'Mixed Use Residential','Commercial', 'Mixed Use Commercial')` 
-7. Export data for review
-    - Export select columns as CSV and GeoJSON
-8. Create TOC land use summaries Tableau workbook
-    - [Tableau Workbook (MTC Access Only)](https://mtcdrive.box.com/s/pse3mlwq3y194vkjlspgep9gjkqcfisy)
+Notebook: [Create Transit Oriented Communities Policy Area](Create_Transit_Oriented_Communities_Policy_Area.ipynb)
 
 Inputs:
 - [PBA2050 Priority Development Areas](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=85043289ac774a928e4628aa904a317c#overview)
 - [Transit Stops - Existing and Planned](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=a4e761b25425464e978829db4c3563dc)
+
+Outputs:
+- [Station Areas (MTC Access Only)](https://mtcdrive.box.com/s/53q5607zn9rb5bnd1eepjlmcebhqebjd)
+- [Stations Level of Service (MTC Access Only)](https://mtcdrive.box.com/s/gpk8vqzq2aa1w6r9g4sfqtocbifihorn)
+- [Stations Level of Service De-duplicated (MTC Access Only)](https://mtcdrive.box.com/s/3ux5fsq5osu2wyrrnw0q9n7clgb492gc)
+- [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtcdrive.box.com/s/0ngbewx00g9m4uhwrgbx1cyr6m14jsth)
+
+1. Preprocessing
+    - Pull all input datasets and convert to geodataframe; project to `EPSG:26910`
+2. Create dataframe of fixed-guideway stops
+    - Fixed-guideway stops: `['Rail', 'BRT', 'Tram, Streetcar, Light Rail', 'Cable Tram','Ferry']`
+    - Remove other stops where policy does not apply
+    - Drop duplicate route/stop combinations
+        - A number of stops are served by routes with the same route id for both directions. These need to be dropped to accurately count the number of unique routes that pass through any given station in later steps. 
+3. Create stop station areas
+    - Find stops that are nearby:
+        - Tram, Streetcar, Light Rail, and BRT within 75 ft (22.86 meters) of other stops are considered same stop
+        - Rail, Ferry within 300 ft (91.44 meters) of other stops are considered same stop
+    - Dissolve stop areas to create station areas; this creates a multi-part geometry. 
+    - Explode multi-part station areas to single-part station areas
+    - Create station area id
+    - Assign station id to stops
+4. Drop duplicate routes from stations
+    - After stations were identified in the previous step, some stations had duplicate route ids. These need to be dropped to accurately count the number of unique routes that pass through any given station in later steps. 
+5. Count BART and Caltrain routes by station
+    - Add BART and Caltrain route ids to planned routes
+    - Group transit routes by station and agency
+    - Add count columns to station geodataframe w/ point geometry
+6. Flag levels of transit service and rank stations
+    - **Level of Transit Service**
+        - Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet
+        - Tier 2: Stop/station served by 2 BART lines or Caltrain Baby Bullet
+        - Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit
+        - Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal)
+    - **Station rank:** Rank rail routes from 1-4 with 1 being the highest rank. This will be used along with tier to sort and drop duplicate routes, preserving stations with highest Level of Service and Route Rank. 
+        - `Rail, Ferry`: 1
+        - `Tram, Streetcar, Light Rail`: 2
+        - `BRT`: 3
+        - `Cable Tram`: 4
+7. Create Transit-Rich Station Areas
+    - Create 1/2 mile buffer (804.672 meter) around stations (point geometry)
+8. Determine TOC Policy Applicability Area
+    - Applicable areas include:
+        - PDAs areas within 1/2 mile of fixed-guideway stations
+        - Areas outside of PDAs within 1/2 mile of fixed-guideway station
+    - Flag areas where pda area within toc area is greater than 50% of total pda area
+        - Within areas where this is true **all** pda areas apply
+    - Flag areas where sum of all pda areas within toc area is greater than 50% of total toc area
+        - Within areas where this is true **all** pda areas apply
+    - Flag areas where toc area greater than 50% 
+        - Within areas where this is true **all** toc area applies 
+    - Flag final pda or tpa area
+9. Remove designated pda areas from toc designated areas
+
+In many cases, an area designated as a toc may overlap with an area designated as a pda area. This results because, in many cases, it can be true that a pda may be 50% within a toc area, and a neighboring toc may overlay the same pda by more than 50%. In these cases, the intersecting area should be removed with priority given to pda areas.
+
+**TOC area overlaps designated PDA**
+![](images/toc_overlap_pda.png)
+
+**TOC overlap area removed**
+![](images/toc_overlap_removed.png)
+
+### Transit Oriented Communities Parcel/Land Use Overlay
+
+Notebook: [Transit Oriented Communities Parcel Overlay](Transit_Oriented_Communities_Parcel_Overlay.ipynb)
+
+Inputs:
+- [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtcdrive.box.com/s/0ngbewx00g9m4uhwrgbx1cyr6m14jsth)
 - **Redshift Tables via query**
     - basis_staging.parcel_base_tbl
     - basis_staging.zn_base_tbl
@@ -153,3 +191,22 @@ Outputs:
 - [TOC Land Use Summaries Tableau Dashboard (MTC Access Only)](https://10ay.online.tableau.com/t/metropolitantransportationcommission/views/TransitOrientedCommunitiesLandUseSummaries/ResidentialandCommercialCapacitybyJurisdiction?:showAppBanner=false&:origin=viz_share_link&:display_count=n&:showVizHome=n)
 - [TOC Residential and Commercial Capacities CSV (MTC Access Only)](https://mtcdrive.box.com/s/6tv583axa8jmgrzcsiuyio7phs09zbi9)
 - [TOC Residential and Commercial Capacities GeoJSON (MTC Access Only)](https://mtcdrive.box.com/s/htzptkiwws90qxnxjwyysgay4ap967wh)
+
+1. Perform point in polygon overlay
+    - Calculate parcel geometry centroids 'on the surface' of the parcel
+    - Spatially join parcel centroids w/ PDAs and remainder TRAs
+    - Flag PDA and remainder TRA areas
+    - Create area name column that indicates PDA name and remainder TRA stop area names
+2. Merge parcels w/ PDA TRA flags w/ plan land use attributes
+3. Calculate DUA and FAR density based on zoning or general plan designation
+    - Calculate parcel area (acres / square feet)
+    - Set source for residential and commercial capacities `('Zoning', 'General Plan', 'Missing Capacity')`
+    - Calculate residential capacity based on source (DUA * acres)
+    - Calculate commercial capacity based on source (FAR * sqft)
+4. Determine where there is missing data
+    - Determine where there is missing residential capacity. Regional zoning designations that allow **residential uses**: `('Specific or Special Plan Areas', 'Single Family Residential', 'Multi-Family Residential', 'Mixed Use Residential', 'Mixed Use Commercial')`
+    - Determine where there is missing commercial capacity. Regional zoning designations that allow **commercial uses**: `('Specific or Special Plan Areas', 'Mixed Use Residential','Commercial', 'Mixed Use Commercial')` 
+5. Export data for review
+    - Export select columns as CSV and GeoJSON
+6. Create TOC land use summaries Tableau workbook
+    - [Tableau Workbook (MTC Access Only)](https://mtcdrive.box.com/s/pse3mlwq3y194vkjlspgep9gjkqcfisy)
