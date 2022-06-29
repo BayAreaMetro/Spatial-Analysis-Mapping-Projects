@@ -2,7 +2,7 @@
 
 # Transit Oriented Communities
 
-The Transit Oriented Communities (TOC) policy aims to increase residential and commercial densities in eligible Transit-Rich Areas (TRAs), prioritizing affordable housing and commercial development in areas near regional transit hubs served by multiple transit providers. The goal of this analysis is to assess the baseline zoning for residential and office/commercial within Priority Development Areas (PDAs) and Transit Rich Areas (TRAs) within 1/2 mile of existing or planned fixed-guideway transit facilities. 
+The Transit Oriented Communities (TOC) policy aims to increase residential and commercial densities in eligible Transit-Rich Areas (TRAs), prioritizing affordable housing and commercial development in areas near regional transit hubs served by multiple transit providers. The primary goal of this project is identify areas where the TOC policy applies. The secondary goal is to assess the baseline zoning for residential and office/commercial within Priority Development Areas (PDAs) and Transit Rich Areas (TRAs) within 1/2 mile of existing or planned fixed-guideway transit facilities. 
 
 ## Project Management 
 
@@ -118,6 +118,7 @@ Outputs:
 - [Stations Level of Service (MTC Access Only)](https://mtcdrive.box.com/s/gpk8vqzq2aa1w6r9g4sfqtocbifihorn)
 - [Stations Level of Service De-duplicated (MTC Access Only)](https://mtcdrive.box.com/s/3ux5fsq5osu2wyrrnw0q9n7clgb492gc)
 - [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtcdrive.box.com/s/0ngbewx00g9m4uhwrgbx1cyr6m14jsth)
+- [Transit Oriented Communities Exploratory Map (TOC Team Access Only)](https://mtc.maps.arcgis.com/apps/mapviewer/index.html?webmap=e7e3e6df1d8c4b1da8341fa22b999047)
 
 1. Preprocessing
     - Pull all input datasets and convert to geodataframe; project to `EPSG:26910`
@@ -157,9 +158,9 @@ Outputs:
     - Applicable areas include:
         - PDAs areas within 1/2 mile of fixed-guideway stations
         - Areas outside of PDAs within 1/2 mile of fixed-guideway station
-    - Flag areas where pda area within toc area is greater than 50% of total pda area
+    - Flag areas where pda area within toc area is greater than 20% of total pda area
         - Within areas where this is true **all** pda areas apply
-    - Flag areas where sum of all pda areas within toc area is greater than 50% of total toc area
+    - Flag areas where sum of all pda areas within toc area is greater than 20% of total toc area
         - Within areas where this is true **all** pda areas apply
     - Flag areas where toc area greater than 50% 
         - Within areas where this is true **all** toc area applies 
