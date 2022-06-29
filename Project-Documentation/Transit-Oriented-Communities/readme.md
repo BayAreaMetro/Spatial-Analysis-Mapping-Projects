@@ -166,8 +166,9 @@ Outputs:
         - Within areas where this is true **all** toc area applies 
     - Flag final pda or tpa area
 9. Remove designated pda areas from toc designated areas
-    ~ In many cases, an area designated as a toc may overlap with an area designated as a pda area. This results because, in many cases, it can be true
-    that a pda may be 20% within a transit-rich area, and a neighboring transit-rich area may overlay the same pda by more than 50%. In these cases, the intersecting area should be removed with priority given to pda areas.
+    
+In many cases, an area designated as a toc may overlap with an area designated as a pda area. This results because, in many cases, it can be true
+that a pda may be 20% within a transit-rich area, and a neighboring transit-rich area may overlay the same pda by more than 50%. In these cases, the intersecting area should be removed with priority given to pda areas.
 
 **TOC area overlaps designated PDA**
 ![](images/toc_overlap_pda.png)
