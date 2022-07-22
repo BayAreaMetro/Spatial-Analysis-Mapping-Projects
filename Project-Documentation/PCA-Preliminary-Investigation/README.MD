@@ -21,9 +21,13 @@ The goal of this project is to arrive at qualitative questions and limited quant
 
 The following data was used to evaluate the PCA Polygons and their relationships with other regional geographies:
 
-Conservation Layers: 
+PCA Layers: 
 - [PBA 2050 PCA Points](https://mtc.maps.arcgis.com/home/item.html?id=c750ba059b4340b7a34bb5aa365790db)
 - [PCA Polygons - Obtained internally](https://mtcdrive.box.com/s/o2wip98bzlih24549mauskubmeir9zda)
+
+Officially Conserved Areas (OCA) Layers: 
+- [California Protected Areas Database (CPAD)](https://www.calands.org/cpad/)
+- [California Conservation Easements Database (CCED)](https://www.calands.org/cced/)
 
 Regional Land Use and Planning Geographies:
 - [PBA 2050 Growth Geographies](https://mtc.maps.arcgis.com/home/item.html?id=d74d81cfce2a4bc9851858f087b78f49)
