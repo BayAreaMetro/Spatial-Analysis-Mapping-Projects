@@ -47,7 +47,8 @@ Limited English proficiency population should be 5% or more of total population 
 
 ## Methodology
 
-Data analysis and wrangling for this project was performed in a [Python Jupyter Notebook](FastTrak-Start-Pilot-Programing.ipynb). 
+Data analysis and wrangling for this project was performed in a [Python Jupyter Notebook](FastTrak-Start-Pilot-Program.ipynb). 
+
 
 Maps and visualizations were created in [ArcGIS Pro](https://mtcdrive.box.com/s/jkyly5aic1xbx3ylto3wq2a2ptwxadeo).
 
