@@ -56,7 +56,7 @@ Bay Area Greenprint Data:
 
 ## Methodology applied to solve problem
 
-To view a detailed flowchart of the analysis performed to create each layer, see the [Box Directory](https://mtcdrive.box.com/s/xl9l21jq42esjrnnnzu73vspe0butrrf)  [Lucid Chart](https://mtcdrive.box.com/s/xl9l21jq42esjrnnnzu73vspe0butrrf](https://lucid.app/lucidchart/e97886a1-3c7b-4d66-a2f9-c497153bcefa/edit?viewport_loc=46%2C182%2C2488%2C1438%2C0_0&invitationId=inv_2c269fd8-0498-4e36-84f4-90e9e7acc1db#) 
+To view a detailed flowchart of the analysis performed to create each layer, see the [Lucid Chart](https://lucid.app/lucidchart/e97886a1-3c7b-4d66-a2f9-c497153bcefa/edit?viewport_loc=46%2C182%2C2488%2C1438%2C0_0&invitationId=inv_2c269fd8-0498-4e36-84f4-90e9e7acc1db#)
 
 The OCA, growth geographies, urban growth boundaries, and hazard layers were unioned or intersected with the PCA polygons to visualize overlapping areas. The unioned or intersected layers were exported to geodatabases and mapped with the original layers to view how PCAs intersect with these layers.
 The Greenprint multi-benefit rasters were converted to integer then to polygon and intersected with the PCA polygons to visualize overlapping areas.
