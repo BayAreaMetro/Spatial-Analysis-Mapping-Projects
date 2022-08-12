@@ -56,9 +56,16 @@ Bay Area Greenprint Data:
 
 ## Methodology applied to solve problem
 
+To view a detailed flowchart of the analysis performed to create each layer, see the Lucid Chart here: https://lucid.app/lucidchart/e97886a1-3c7b-4d66-a2f9-c497153bcefa/edit?viewport_loc=46%2C182%2C2488%2C1438%2C0_0&invitationId=inv_2c269fd8-0498-4e36-84f4-90e9e7acc1db#
+
 The OCA, growth geographies, urban growth boundaries, and hazard layers were unioned or intersected with the PCA polygons to visualize overlapping areas. The unioned or intersected layers were exported to geodatabases and mapped with the original layers to view how PCAs intersect with these layers.
 The Greenprint multi-benefit rasters were converted to integer then to polygon and intersected with the PCA polygons to visualize overlapping areas.
+
+#### Union City Analysis
+Maps were also created for Union City to support a request from that jurisdiction. No additional analyses were performed for this request. Layers were simply cropped to the Union City jurisdiction boundary.
 
 ## Results
 
 The investigation revealed a number of findings that will inform the PCA 2.0 Refresh project. For a summary of findings see the PCA Preliminary Investigation Findings Presentation: https://mtcdrive.box.com/s/ocpu6t4n4k2uqvg5bnkztvdpf6n911de 
+
+To view the maps from Union City Analysis, see the Box Folder: https://mtcdrive.box.com/s/zc58rvncfuqoep7xkbfg2kxm7ks3rkj5
