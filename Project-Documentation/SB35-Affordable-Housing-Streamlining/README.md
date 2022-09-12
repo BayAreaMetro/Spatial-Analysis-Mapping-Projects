@@ -34,7 +34,7 @@ A site that is a legal parcel or parcels located in a city if, and only if, the 
 
 A coastal zone, as defined in Division 20 (commencing with Section 30000) of the Public Resources Code.
    
-[View Map Data](http://mtc.maps.arcgis.com/home/item.html?id=ff8001e7d2aa4dcbb56e0594fb6d7c9d)
+[View Map Data](Needs updated URL)
 
 ##### B) Protected Agricultural Lands (FMMP)
 
