@@ -16,7 +16,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 
 | **Project** | **Description** |
 |---|---|
-| [Adhoc Spatial Analysis](Adhoc-Spatial-Analysis) |This directory captures quick one-off projects that do not require detailed documentation |
+| [Adhoc Spatial Analysis](Adhoc-Spatial-Analysis) |This directory captures quick one-off projects that do not require detailed documentation. |
 | [Active Transportation Plan](Active-Transportation-Plan-Data-Development) | Standardization and conflation of bike network data collected from various jurisdictions to TM2 Network. Uses Arcpy, Pandas, Geopandas, and SharedStreets libraries. |
 | [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit) | Analysis to evaluate potential high-frequency transit  connections for cyclists commuting on active sections of the Bay Trail. |
 | [Bay Trail Wilson Ave Vallejo DACs](BayTrail-Wilson-Ave-Vallejo-DACs) | Analysis of Disadvantaged Communities within a half-mile and one-mile of a new Bay Trail facility in Vallejo. |
