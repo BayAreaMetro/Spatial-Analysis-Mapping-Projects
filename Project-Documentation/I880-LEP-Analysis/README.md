@@ -51,7 +51,7 @@ Low Income Population: Person living in a household with incomes less than 200% 
     
 Study Area includes Census Tracts within 7 miles of the I-880 Integrated Corridor Management (ICM) as shown in the image below.
 
-![corridor area]('Readme Images/I-880 ICM Central Segment Project Limits exhibit')
+![corridor area](Readme Images/I-880 ICM Central Segment Project Limits exhibit)
     
 ### Population Thresholds
 
