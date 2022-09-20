@@ -41,6 +41,8 @@ Identify the scope of the project, and link to additional projects where necessa
 - Universe: Population 5 years and over
 - TableID: C17002!
 
+## Analysis Parameters
+
 ### Definitions 
 
 Limited English Proficiency: Limited English Proficiency for the purposes of this analysis means any person age 5 years and over that speaks a language other than English at home and also speaks English 'less than very well' as defined by the Census Bureau.
@@ -56,8 +58,6 @@ Study Area includes Census Tracts within 7 miles of the I-880 Integrated Corrido
 ### Population Thresholds
 
 Limited English proficiency population should be 5% or more of total population for a given tract. This threshold was set by the MTC Plan for Special Language Services to Limited English Proficient (LEP) Populations. 
-
-## Analysis Parameters
 
 ## Methodology
 
