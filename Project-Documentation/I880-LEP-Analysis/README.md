@@ -31,15 +31,21 @@ Identify the scope of the project, and link to additional projects where necessa
 
 **LANGUAGE SPOKEN AT HOME FOR THE POPULATION 5 YEARS AND OVER**
 - Survey/Program: American Community Survey
-- Product: 2019: ACS 5-Year Estimates Detailed Tables
+- Product: 2020: ACS 5-Year Estimates Detailed Tables
 - Universe: Population 5 years and over
-- TableID: C16001
+- Table ID: C16001
 
-**Ratio of Income to Poverty Level in the Past 12 Months**
+**RATIO OF INCOME TO POVERTY LEVEL IN THE PAST 12 MONTHS**
 - Survey/Program: American Community Survey
-- Product: 2019: ACS 5-Year Estimates Detailed Tables
+- Product: 2020: ACS 5-Year Estimates Detailed Tables
 - Universe: Population 5 years and over
-- TableID: C17002!
+- Table ID: C17002!
+
+**HISPANIC OR LATINO, AND NOT HISPANIC OR LATINO BY RACE**
+- Survey/Program: Decennial Census
+- Product: 2020: Decennial Census
+- Universe: Total Population
+- Table ID: P2
 
 ## Analysis Parameters
 
