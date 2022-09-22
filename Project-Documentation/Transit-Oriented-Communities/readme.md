@@ -24,30 +24,17 @@ The Transit Oriented Communities (TOC) policy aims to increase residential and c
 
 ### Transit Oriented Communities Policy Area
 
+#### Where will the TOC policy apply?
+
 The proposed TOC policy will apply in the follow areas:
 
-- PDAs or select TRAs within the half-mile station/stop/terminal area of existing or planned **fixed-guideway transit**. 
+- within the half-mile station/stop/terminal area of existing or planned **fixed-guideway transit**. 
 - Fixed-guideway transit:
     - Regional rail: BART, Caltrain
     - Light Rail Transit: Muni Metro, VTA
     - Bus Rapid Transit: AC Transit (1T) Tempo, Van Ness BRT
     - Commuter rail: Capitol Corridor, ACE, SMART
     - Ferry terminals (limited to certain requirements only)
-
-#### Where will the TOC policy apply?
-The entirety or portion of a designated PDA that is within the half-mile station, stop, or terminal area. The TRA if no PDA has been designated. 
-
-**North Berkeley BART**
-
-North Berkeley BART: Applies to the portion of PDA within ½ mile radius
-
-![](images/north_berkeley_bart.png)
-
-**VTA Reamwood**
-
-VTA Reamwood: Applies to the entire TRA within ½ mile radius
-
-![](images/vta_reamwood.png)
 
 #### Where will the TOC policy not apply?
 
@@ -90,18 +77,13 @@ Residential and commercial minimum and maximum densities will be determined by l
 **DRAFT Residential Densities**
 | Level of Transit Service | Required Min Density | Allowable Density |
 |---|---|---|
-| Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet  | 100 units/net acre | 150 units/net acre |
-| Tier 2: Stop/station served by 2 BART lines or Caltrain Baby Bullet | 75 units/net acre | 100 units/net acre |
-| Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 50 units/net acre | 75 units/net acre |
-| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal) | 25 units/net acre | 35 units/net acre |
+| Tier 1: Rail stations serving regional centers\*  | 100 units/net acre | 150 units/net acre |
+| Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | 75 units/net acre | 100 units/net acre |
+| Tier 3\*\*: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 50 units/net acre | 75 units/net acre |
+| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) stations Caltrain Stations south of Tamien or ferry terminal | 25 units/net acre | 35 units/net acre |
 
-**DRAFT Commercial Densities**
-| Level of Transit Service | Required Min Density | Allowable Density |
-|---|---|---|
-| Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet  | 4 Floor Area Ratio (FAR) | 8 FAR |
-| Tier 2: Stop/station served by 2 BART lines or Caltrain Baby Bullet | 3 FAR | 6 FAR |
-| Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 2 FAR | 4 FAR |
-| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal) | 1 FAR | 3 FAR |
+- \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
+- \*\* Tier 3 cities with a population of 30,000 or less my comply with Tier 4 density requirements. 
 
 ## Methodology
 
@@ -110,14 +92,12 @@ Residential and commercial minimum and maximum densities will be determined by l
 Notebook: [Create Transit Oriented Communities Policy Area](Create_Transit_Oriented_Communities_Policy_Area.ipynb)
 
 Inputs:
-- [PBA2050 Priority Development Areas](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=85043289ac774a928e4628aa904a317c#overview)
-- [Transit Stops - Existing and Planned](https://arcgis.ad.mtc.ca.gov/portal/home/item.html?id=a4e761b25425464e978829db4c3563dc)
+- [Transit Stops - Existing and Planned](https://opendata.mtc.ca.gov/datasets/transit-stops-existing-and-planned-2021/explore?location=37.890065%2C-122.301400%2C9.67)
+- [San Francisco Bay Regional Water (Area)](https://opendata.mtc.ca.gov/datasets/san-francisco-bay-region-water-area/explore?location=37.833940%2C-122.344500%2C10.24)
+- [San Francisco Bay Region Jurisdictions (Incorporated Places and Unincorporated Lands)](https://opendata.mtc.ca.gov/datasets/MTC::san-francisco-bay-region-jurisdictions-incorporated-places-and-unincorporated-county-lands/explore?location=37.833940%2C-122.344500%2C10.24)
 
 Outputs:
-- [Station Areas (MTC Access Only)](https://mtcdrive.box.com/s/53q5607zn9rb5bnd1eepjlmcebhqebjd)
-- [Stations Level of Service (MTC Access Only)](https://mtcdrive.box.com/s/gpk8vqzq2aa1w6r9g4sfqtocbifihorn)
-- [Stations Level of Service De-duplicated (MTC Access Only)](https://mtcdrive.box.com/s/3ux5fsq5osu2wyrrnw0q9n7clgb492gc)
-- [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtcdrive.box.com/s/0ngbewx00g9m4uhwrgbx1cyr6m14jsth)
+- [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtc.maps.arcgis.com/home/item.html?id=dd6f0b0a0d174cb2a4b61f0652e7ce31#overview)
 - [Transit Oriented Communities Exploratory Map (TOC Team Access Only)](https://mtc.maps.arcgis.com/apps/mapviewer/index.html?webmap=e7e3e6df1d8c4b1da8341fa22b999047)
 
 1. Preprocessing
