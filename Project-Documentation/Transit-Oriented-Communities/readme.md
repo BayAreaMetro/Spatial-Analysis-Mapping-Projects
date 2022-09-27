@@ -74,7 +74,7 @@ The TOC policy will not apply around airport air tram stations, including statio
 
 Residential and commercial minimum and maximum densities will be determined by level of transit service. 
 
-**DRAFT Residential Densities**
+**Levels of Service & Residential Densities**
 | Level of Transit Service | Required Min Density | Allowable Density |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | 100 units/net acre | 150 units/net acre |
@@ -109,8 +109,8 @@ Outputs:
         - A number of stops are served by routes with the same route id for both directions. These need to be dropped to accurately count the number of unique routes that pass through any given station in later steps. 
 3. Create stop station areas
     - Find stops that are nearby:
-        - Tram, Streetcar, Light Rail, and BRT within 75 ft (22.86 meters) of other stops are considered same stop
-        - Rail, Ferry within 300 ft (91.44 meters) of other stops are considered same stop
+        - Cable Tram and BRT within 75 ft (22.86 meters) of other stops are considered same stop
+        - Tram, Streetcar, Light Rail; Rail; Ferry within 300 ft (91.44 meters) of other stops are considered same stop
     - Dissolve stop areas to create station areas; this creates a multi-part geometry. 
     - Explode multi-part station areas to single-part station areas
     - Create station area id
@@ -122,11 +122,7 @@ Outputs:
     - Group transit routes by station and agency
     - Add count columns to station geodataframe w/ point geometry
 6. Flag levels of transit service and rank stations
-    - **Level of Transit Service**
-        - Tier 1: Rail station served by 3 BART lines or a BART line and Caltrain Baby Bullet
-        - Tier 2: Stop/station served by 2 BART lines or Caltrain Baby Bullet
-        - Tier 3: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit
-        - Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) or ferry terminal (only if PDA at ferry terminal)
+    - **[Level of Transit Service](#how-will-densities-for-new-residential-and-commercial-development-be-determined)**
     - **Station rank:** Rank rail routes from 1-4 with 1 being the highest rank. This will be used along with tier to sort and drop duplicate routes, preserving stations with highest Level of Service and Route Rank. 
         - `Rail, Ferry`: 1
         - `Tram, Streetcar, Light Rail`: 2
@@ -134,27 +130,9 @@ Outputs:
         - `Cable Tram`: 4
 7. Create Transit-Rich Station Areas
     - Create 1/2 mile buffer (804.672 meter) around stations (point geometry)
-8. Determine TOC Policy Applicability Area
-    - Applicable areas include:
-        - PDAs areas within 1/2 mile of fixed-guideway stations
-        - Areas outside of PDAs within 1/2 mile of fixed-guideway station
-    - Flag areas where pda area within toc area is greater than 20% of total pda area
-        - Within areas where this is true **all** pda areas apply
-    - Flag areas where sum of all pda areas within toc area is greater than 20% of total toc area
-        - Within areas where this is true **all** pda areas apply
-    - Flag areas where toc area greater than 50% 
-        - Within areas where this is true **all** toc area applies 
-    - Flag final pda or tpa area
-9. Remove designated pda areas from toc designated areas
+8. 
     
-In many cases, an area designated as a toc may overlap with an area designated as a pda area. This results because, in many cases, it can be true
-that a pda may be 20% within a transit-rich area, and a neighboring transit-rich area may overlay the same pda by more than 50%. In these cases, the intersecting area should be removed with priority given to pda areas.
 
-**TOC area overlaps designated PDA**
-![](images/toc_overlap_pda.png)
-
-**TOC overlap area removed**
-![](images/toc_overlap_removed.png)
 
 ### Transit Oriented Communities Parcel/Land Use Overlay
 The work documented below was exploratory work that was carried out but ultimately was not used. This work may be picked back up at a later date and the documentation here will serve as a scaffolding to restart work at a future date.
