@@ -107,7 +107,7 @@ Outputs:
     - Remove other stops where policy does not apply
     - Drop duplicate route/stop combinations
         - A number of stops are served by routes with the same route id for both directions. These need to be dropped to accurately count the number of unique routes that pass through any given station in later steps. 
-3. Create stop station areas
+3. Create station areas
     - Find stops that are nearby:
         - Cable Tram and BRT within 75 ft (22.86 meters) of other stops are considered same stop
         - Tram, Streetcar, Light Rail; Rail; Ferry within 300 ft (91.44 meters) of other stops are considered same stop
@@ -128,48 +128,13 @@ Outputs:
         - `Tram, Streetcar, Light Rail`: 2
         - `BRT`: 3
         - `Cable Tram`: 4
-7. Create Transit-Rich Station Areas
-    - Create 1/2 mile buffer (804.672 meter) around stations (point geometry)
-8. 
-    
-
-
-### Transit Oriented Communities Parcel/Land Use Overlay
-The work documented below was exploratory work that was carried out but ultimately was not used. This work may be picked back up at a later date and the documentation here will serve as a scaffolding to restart work at a future date.
-
-Notebook: [Transit Oriented Communities Parcel Overlay](Transit_Oriented_Communities_Parcel_Overlay.ipynb)
-
-Inputs:
-- [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtcdrive.box.com/s/0ngbewx00g9m4uhwrgbx1cyr6m14jsth)
-- [Parcel Atlas Parcel Geo-Lookup v2 (MTC Access Only)](https://data.bayareametro.gov/resource/5y7p-4hs4)
-- **Redshift Tables via query**
-    - basis_staging.parcel_base_tbl
-    - basis_staging.zn_base_tbl
-    - basis_staging.zn_base_lot_properties
-    - basis_staging.gp_base_tbl
-    - basis_staging.gp_base_density
-
-Outputs:
-- [TOC Land Use Summaries Tableau Dashboard (MTC Access Only)](https://10ay.online.tableau.com/t/metropolitantransportationcommission/views/TransitOrientedCommunitiesLandUseSummaries/ResidentialandCommercialCapacitybyJurisdiction?:showAppBanner=false&:origin=viz_share_link&:display_count=n&:showVizHome=n)
-- [TOC Residential and Commercial Capacities CSV (MTC Access Only)](https://mtcdrive.box.com/s/6tv583axa8jmgrzcsiuyio7phs09zbi9)
-- [TOC Residential and Commercial Capacities GeoJSON (MTC Access Only)](https://mtcdrive.box.com/s/htzptkiwws90qxnxjwyysgay4ap967wh)
-
-
-1. Perform point in polygon overlay
-    - Calculate parcel geometry centroids 'on the surface' of the parcel
-    - Spatially join parcel centroids w/ PDAs and remainder TRAs
-    - Flag PDA and remainder TRA areas
-    - Create area name column that indicates PDA name and remainder TRA stop area names
-2. Merge parcels w/ PDA TRA flags w/ plan land use attributes
-3. ~~Calculate DUA and FAR density based on zoning or general plan designation~~
-    - ~~Calculate parcel area (acres / square feet)~~
-    - ~~Set source for residential and commercial capacities `('Zoning', 'General Plan', 'Missing Capacity')`~~
-    - ~~Calculate residential capacity based on source (DUA * acres)~~
-    - ~~Calculate commercial capacity based on source (FAR * sqft)~~
-4. Determine where there is missing data
-    - Determine where there is missing residential capacity. Regional zoning designations that allow **residential uses**: `('Specific or Special Plan Areas', 'Single Family Residential', 'Multi-Family Residential', 'Mixed Use Residential', 'Mixed Use Commercial')`
-    - Determine where there is missing commercial capacity. Regional zoning designations that allow **commercial uses**: `('Specific or Special Plan Areas', 'Mixed Use Residential','Commercial', 'Mixed Use Commercial')` 
-5. Export data for review
-    - Export select columns as CSV and GeoJSON
-6. Create TOC land use summaries Tableau workbook
-    - [Tableau Workbook (MTC Access Only)](https://mtcdrive.box.com/s/pse3mlwq3y194vkjlspgep9gjkqcfisy)
+7. Create Transit Oriented Community Areas
+    - Create 1/2 mile buffer (804.672 meter) around stops/stations (point geometry)
+    - Erase [San Francisco Bay Regional Water (Area)](https://opendata.mtc.ca.gov/datasets/san-francisco-bay-region-water-area/explore?location=37.833940%2C-122.344500%2C10.24)
+8. Add City and County to TOC Areas
+    - Run identity overlay operation to assign county and jurisdiction to TOC from [San Francisco Bay Region Jurisdictions (Incorporated Places and Unincorporated Lands)](https://opendata.mtc.ca.gov/datasets/MTC::san-francisco-bay-region-jurisdictions-incorporated-places-and-unincorporated-county-lands/explore?location=37.833940%2C-122.344500%2C10.24)
+9. Dissolve layers & remove overlaps
+    - Dissolve or consolidate features by county, jurisdiction, service tier, and status
+    - Remove overlaps between existing and planned areas. Existing TOC areas take priority over planned areas; where there are overlaps between the two keep existing areas and remove planned areas. 
+    - Remove overlaps between service tier. Higher tiers take priority over lower tiers. Where there are overlaps, keep higher tier area and remove lower tier area. 
+10. Publish Layers to ArcGIS Online
