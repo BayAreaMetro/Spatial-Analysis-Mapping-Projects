@@ -31,9 +31,7 @@ Low-Income Census Tracts in the I-880 corridor. Additionally, provide tabular da
 
 ### Definitions 
 
-Limited English Proficiency: Limited English Proficiency for the purposes of this analysis means any 
-person age 5 years and over that speaks a language other than English at home and also speaks 
-English 'less than very well' as defined by the Census Bureau.
+Limited English Proficiency: Limited English Proficiency for the purposes of this analysis means any person age 5 years and over that speaks a language other than English at home and also speaks English 'less than very well' as defined by the Census Bureau.
 
 Low Income Population: Person living in a household with incomes less than 200% of the federal poverty level established by the Census Bureau.
     
