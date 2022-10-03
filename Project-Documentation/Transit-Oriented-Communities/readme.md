@@ -15,10 +15,10 @@ The Transit Oriented Communities (TOC) policy aims to increase residential and c
     - [Transit Oriented Communities Policy Area](#transit-oriented-communities-policy-area)
         - [Where will the TOC policy apply?](#where-will-the-toc-policy-apply)
         - [Where will the TOC policy not apply?](#where-will-the-toc-policy-not-apply)
-        - [How will densities for new residential and commercial development be determined?](#how-will-densities-for-new-residential-and-commercial-development-be-determined)
+        - [Residential and Commercial Densities](#residential-and-commercial-densities)
+        - [Parking Management Requirements](#parking-management-requirements)
 - [Methodology](#methodology)
     - [Create Transit Oriented Communities Policy Area](#create-transit-oriented-communities-policy-area)
-    - [Transit Oriented Communities Parcel/Land Use Overlay (Not completed)](#transit-oriented-communities-parcelland-use-overlay)
 
 ## Analysis Parameters
 
@@ -70,19 +70,45 @@ The TOC policy will not apply around airport air tram stations, including statio
 | | |SI| SI:WFR |
 | | |BA| OAKL |
 
-#### How will densities for new residential and commercial development be determined? 
+#### Residential and Commercial Densities 
 
 Residential and commercial minimum and maximum densities will be determined by level of transit service. 
 
 **Levels of Service & Residential Densities**
-| Level of Transit Service | Required Min Density | Allowable Density |
+| Level of Transit Service | Minimum Density | Allowable Maximum Density |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | 100 units/net acre | 150 units/net acre |
 | Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | 75 units/net acre | 100 units/net acre |
 | Tier 3\*\*: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 50 units/net acre | 75 units/net acre |
 | Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) stations Caltrain Stations south of Tamien or ferry terminal | 25 units/net acre | 35 units/net acre |
 
-- \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
+- \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center, Transbay); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
+- \*\* Tier 3 cities with a population of 30,000 or less my comply with Tier 4 density requirements. 
+
+**Levels of Service & Commercial Densities**
+| Level of Transit Service | Minimum Density | Allowable Maximum Density |
+|---|---|---|
+| Tier 1: Rail stations serving regional centers\*  | 4 Floor Area Ratio (FAR) or higher | 8 FAR or higher |
+| Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | 3 FAR or higher | 6 FAR or higher |
+| Tier 3\*\*: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | 2 FAR or higher | 4 FAR or higher |
+| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) stations Caltrain Stations south of Tamien or ferry terminal | 1 FAR or higher | 3 FAR or higher |
+
+- \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center, Transbay); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
+- \*\* Tier 3 cities with a population of 30,000 or less my comply with Tier 4 density requirements. 
+
+#### Parking Management Requirements
+
+**Levels of Service & Parking Requirements**
+| Level of Transit Service | New Residential Development | New Commercial Development |
+|---|---|---|
+| Tier 1: Rail stations serving regional centers\*  | No minimum parking requirement allowed. Parking maximum of 0.375 spaces per unit or lower.
+ | No minimum parking requirement allowed. Parking maximum equivalent to 0.25 spaces per 1,000 square feet or lower. |
+| Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | No minimum parking requirement allowed. Parking maximum of 0.5 spaces per unit or lower.
+| No minimum parking requirement allowed. Parking maximum of 1.6 per 1,000 square feet or lower. |
+| Tier 3\*\*: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | No minimum parking requirement allowed. Parking maximum of 1.0 spaces per unit or lower. | No minimum parking requirement allowed. Parking maximum of 2.5 spaces per 1,000 square feet or lower. |
+| Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) stations Caltrain Stations south of Tamien or ferry terminal | Parking maximum of 1.5 spaces per unit or lower. | Parking maximum of 4.0 spaces per 1,000 square feet or lower. |
+
+- \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center, Transbay); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
 - \*\* Tier 3 cities with a population of 30,000 or less my comply with Tier 4 density requirements. 
 
 ## Methodology
