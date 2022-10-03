@@ -100,7 +100,7 @@ Outputs:
 - [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtc.maps.arcgis.com/home/item.html?id=dd6f0b0a0d174cb2a4b61f0652e7ce31#overview)
 - [Transit Oriented Communities Exploratory Map (TOC Team Access Only)](https://mtc.maps.arcgis.com/apps/mapviewer/index.html?webmap=e7e3e6df1d8c4b1da8341fa22b999047)
 
-![Process_Diagram](https://lucid.app/publicSegments/view/d9e7f0c0-0283-445b-b891-a1efdcbc2523)
+![Process_Diagram](https://lucid.app/publicSegments/view/9a038073-7783-42ca-80a6-140f5627b5cf/image.png)
 
 1. Preprocessing
     - Pull all input datasets and convert to geodataframe; project to `EPSG:26910`
