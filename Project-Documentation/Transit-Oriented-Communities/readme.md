@@ -100,6 +100,8 @@ Outputs:
 - [Transit Oriented Communities Policy Area (MTC Access Only)](https://mtc.maps.arcgis.com/home/item.html?id=dd6f0b0a0d174cb2a4b61f0652e7ce31#overview)
 - [Transit Oriented Communities Exploratory Map (TOC Team Access Only)](https://mtc.maps.arcgis.com/apps/mapviewer/index.html?webmap=e7e3e6df1d8c4b1da8341fa22b999047)
 
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/3c5960d8-4649-4326-a95a-39a8c7ed16a7" id="br1WvgkUrkj3"></iframe></div>
+
 1. Preprocessing
     - Pull all input datasets and convert to geodataframe; project to `EPSG:26910`
 2. Create dataframe of fixed-guideway stops
@@ -121,8 +123,8 @@ Outputs:
     - Add BART and Caltrain route ids to planned routes
     - Group transit routes by station and agency
     - Add count columns to station geodataframe w/ point geometry
-6. Flag levels of transit service and rank stations
-    - **[Level of Transit Service](#how-will-densities-for-new-residential-and-commercial-development-be-determined)**
+6. Flag service tiers
+    - **[Service Tiers](#how-will-densities-for-new-residential-and-commercial-development-be-determined)**
     - **Station rank:** Rank rail routes from 1-4 with 1 being the highest rank. This will be used along with tier to sort and drop duplicate routes, preserving stations with highest Level of Service and Route Rank. 
         - `Rail, Ferry`: 1
         - `Tram, Streetcar, Light Rail`: 2
