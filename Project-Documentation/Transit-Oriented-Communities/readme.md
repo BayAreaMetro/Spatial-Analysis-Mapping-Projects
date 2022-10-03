@@ -101,10 +101,8 @@ Residential and commercial minimum and maximum densities will be determined by l
 
 | Level of Transit Service | New Residential Development | New Commercial Development |
 |---|---|---|
-| Tier 1: Rail stations serving regional centers\*  | No minimum parking requirement allowed. Parking maximum of 0.375 spaces per unit or lower.
- | No minimum parking requirement allowed. Parking maximum equivalent to 0.25 spaces per 1,000 square feet or lower. |
-| Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | No minimum parking requirement allowed. Parking maximum of 0.5 spaces per unit or lower.
-| No minimum parking requirement allowed. Parking maximum of 1.6 per 1,000 square feet or lower. |
+| Tier 1: Rail stations serving regional centers\* | No minimum parking requirement allowed. Parking maximum of 0.375 spaces per unit or lower.|No minimum parking requirement allowed. Parking maximum equivalent to 0.25 spaces per 1,000 square feet or lower. |
+| Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | No minimum parking requirement allowed. Parking maximum of 0.5 spaces per unit or lower.| No minimum parking requirement allowed. Parking maximum of 1.6 per 1,000 square feet or lower. |
 | Tier 3\*\*: Stop/station served by 1 BART line, Caltrain, light rail transit, or bus rapid transit | No minimum parking requirement allowed. Parking maximum of 1.0 spaces per unit or lower. | No minimum parking requirement allowed. Parking maximum of 2.5 spaces per 1,000 square feet or lower. |
 | Tier 4: Commuter rail (SMART, ACE, Capitol Corridor) stations Caltrain Stations south of Tamien or ferry terminal | Parking maximum of 1.5 spaces per unit or lower. | Parking maximum of 4.0 spaces per 1,000 square feet or lower. |
 
