@@ -15,7 +15,8 @@ The Transit Oriented Communities (TOC) policy aims to increase residential and c
     - [Transit Oriented Communities Policy Area](#transit-oriented-communities-policy-area)
         - [Where will the TOC policy apply?](#where-will-the-toc-policy-apply)
         - [Where will the TOC policy not apply?](#where-will-the-toc-policy-not-apply)
-        - [Residential and Commercial Densities](#residential-and-commercial-densities)
+        - [Residential Densities](#residential-densities)
+        - [Commercial Densities](#commercial-densities)
         - [Parking Management Requirements](#parking-management-requirements)
 - [Methodology](#methodology)
     - [Create Transit Oriented Communities Policy Area](#create-transit-oriented-communities-policy-area)
@@ -70,11 +71,10 @@ The TOC policy will not apply around airport air tram stations, including statio
 | | |SI| SI:WFR |
 | | |BA| OAKL |
 
-#### Residential and Commercial Densities 
+#### Residential Densities 
 
 Residential and commercial minimum and maximum densities will be determined by level of transit service. 
 
-**Levels of Service & Residential Densities**
 | Level of Transit Service | Minimum Density | Allowable Maximum Density |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | 100 units/net acre | 150 units/net acre |
@@ -85,7 +85,8 @@ Residential and commercial minimum and maximum densities will be determined by l
 - \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center, Transbay); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
 - \*\* Tier 3 cities with a population of 30,000 or less my comply with Tier 4 density requirements. 
 
-**Levels of Service & Commercial Densities**
+#### Commercial Densities
+
 | Level of Transit Service | Minimum Density | Allowable Maximum Density |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | 4 Floor Area Ratio (FAR) or higher | 8 FAR or higher |
@@ -98,7 +99,6 @@ Residential and commercial minimum and maximum densities will be determined by l
 
 #### Parking Management Requirements
 
-**Levels of Service & Parking Requirements**
 | Level of Transit Service | New Residential Development | New Commercial Development |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | No minimum parking requirement allowed. Parking maximum of 0.375 spaces per unit or lower.
