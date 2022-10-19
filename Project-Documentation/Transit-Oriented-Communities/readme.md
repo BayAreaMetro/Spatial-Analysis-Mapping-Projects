@@ -2,7 +2,7 @@
 
 # Transit Oriented Communities
 
-The Transit Oriented Communities (TOC) policy aims to increase residential and commercial densities in eligible Transit-Rich Areas (TRAs), prioritizing affordable housing and commercial development in areas near regional transit hubs served by multiple transit providers. The primary goal of this project is identify areas where the TOC policy applies. The secondary goal is to assess the baseline zoning for residential and office/commercial within Priority Development Areas (PDAs) and Transit Rich Areas (TRAs) within 1/2 mile of existing or planned fixed-guideway transit facilities. 
+The Transit-Oriented Communities (TOC) Policy (MTC Res. No. 4530) applies to locations within one half-mile of existing and planned stops and stations served by rail, light-rail, bus rapid transit, or ferries. The TOC Policy specifies requirements for 1) average minimum residential and commercial office densities for new development (applicable only to parcels that are NOT currently occupied by dwelling units); 2) affordable housing production, preservation and protection, and stabilizing businesses to prevent displacement; 3) parking management; and 4) transit station access. TOC Policy areas are categorized by the level of transit service, or Transit Service Tier. More information about the TOC Policy, including the full text of Res. No. 4530, can be found [here:](https://mtc.ca.gov/planning/land-use/transit-oriented-communities-toc-policy).  
 
 ## Project Management 
 
@@ -73,9 +73,9 @@ The TOC policy will not apply around airport air tram stations, including statio
 
 #### Residential Densities 
 
-Residential and commercial minimum and maximum densities will be determined by level of transit service. 
+Residential and commercial minimum and maximum densities will be determined by level of transit service. Density requirements apply to new development only.
 
-| Level of Transit Service | Minimum Density | Allowable Maximum Density |
+| Transit Service Tier | Minimum Density | Allowable Maximum Density |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | 100 units/net acre | 150 units/net acre |
 | Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | 75 units/net acre | 100 units/net acre |
@@ -87,7 +87,7 @@ Residential and commercial minimum and maximum densities will be determined by l
 
 #### Commercial Densities
 
-| Level of Transit Service | Minimum Density | Allowable Maximum Density |
+| Transit Service Tier | Minimum Density | Allowable Maximum Density |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\*  | 4 Floor Area Ratio (FAR) or higher | 8 FAR or higher |
 | Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | 3 FAR or higher | 6 FAR or higher |
@@ -99,7 +99,7 @@ Residential and commercial minimum and maximum densities will be determined by l
 
 #### Parking Management Requirements
 
-| Level of Transit Service | New Residential Development | New Commercial Development |
+| Transit Service Tier | New Residential Development | New Commercial Development |
 |---|---|---|
 | Tier 1: Rail stations serving regional centers\* | No minimum parking requirement allowed. Parking maximum of 0.375 spaces per unit or lower.|No minimum parking requirement allowed. Parking maximum equivalent to 0.25 spaces per 1,000 square feet or lower. |
 | Tier 2: Stop/station served by 2 or more BART lines or BART and Caltrain | No minimum parking requirement allowed. Parking maximum of 0.5 spaces per unit or lower.| No minimum parking requirement allowed. Parking maximum of 1.6 per 1,000 square feet or lower. |
