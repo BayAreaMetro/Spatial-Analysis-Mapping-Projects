@@ -1,6 +1,6 @@
 **Draft Status: Draft**
 
-# Transit Oriented Communities
+# Transit-Oriented Communities Policy
 
 The Transit-Oriented Communities (TOC) Policy (MTC Res. No. 4530) applies to locations within one half-mile of existing and planned stops and stations served by rail, light-rail, bus rapid transit, or ferries. The TOC Policy specifies requirements for 1) average minimum residential and commercial office densities for new development (applicable only to parcels that are NOT currently occupied by dwelling units); 2) affordable housing production, preservation and protection, and stabilizing businesses to prevent displacement; 3) parking management; and 4) transit station access. TOC Policy areas are categorized by the level of transit service, or Transit Service Tier. More information about the TOC Policy, including the full text of Res. No. 4530, can be found [here:](https://mtc.ca.gov/planning/land-use/transit-oriented-communities-toc-policy).  
 
@@ -27,19 +27,19 @@ The Transit-Oriented Communities (TOC) Policy (MTC Res. No. 4530) applies to loc
 
 #### Where will the TOC policy apply?
 
-The proposed TOC policy will apply in the follow areas:
+The TOC policy will apply in the follow areas:
 
 - within the half-mile station/stop/terminal area of existing or planned **fixed-guideway transit**. 
 - Fixed-guideway transit:
-    - Regional rail: BART, Caltrain
-    - Light Rail Transit: Muni Metro, VTA
-    - Bus Rapid Transit: AC Transit (1T) Tempo, Van Ness BRT
-    - Commuter rail: Capitol Corridor, ACE, SMART
-    - Ferry terminals (limited to certain requirements only)
+    - Regional rail
+    - Light Rail Transit
+    - Bus Rapid Transit
+    - Commuter rail
+    - Ferry terminals
 
 #### Where will the TOC policy not apply?
 
-The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, the policy **only** applies to areas within 1/2 mile of existing or planned fixed guideway transit service (regional rail, light rail, commuter rail, ferry, and bus rapid transit). In the case of planned service, only projects that are deemed likely to be delivered within the near-term (roughly 5 years) should be considered. As such, stops or stations associated with the following projects were excluded from analysis. Additionally, given its limited capacity, stations served only by Tideline Ferry service were also excluded from analysis.
+The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, the policy **only** applies to areas within 1/2 mile of existing or planned fixed guideway transit service (regional rail, light rail, commuter rail, ferry, and bus rapid transit). In the case of planned fixed-guideway service, compliance with the TOC Policy is required prior to the endorsement or allocation of regional discretionary capital funding. As such, stops or stations associated with the following longer term projects were excluded from analysis. Additionally, given its limited capacity, stations served only by Tideline Ferry service were also excluded from analysis. The ReX express project was also excluded from the analysis as the project does not qualify as a BRT. 
 
 | Project Name | Pba50_ID | agency_id | stop_id |
 |---|---|---|---|
