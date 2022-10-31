@@ -56,9 +56,9 @@ The limited English Proficiency Analysis was performed in a [Python Jupyter Note
 **Input:** LANGUAGE SPOKEN AT HOME FOR THE POPULATION 5 YEARS AND OVER
 
 **Output:** 
-    - [Study area tract data tabular](https://mtcdrive.box.com/s/ijnvn00sosnqojylm0n183kcmyyk48va) 
-    - [Study area tract data geojson](https://mtcdrive.box.com/s/dirga1v2ipp41vedvlao80sywdx7ts31)
-    - [Study area summary tabular](https://mtcdrive.box.com/s/9rhg236y8n07ufrpktc6y79uzttym8e6) 
+- [Study area tract data tabular](https://mtcdrive.box.com/s/ijnvn00sosnqojylm0n183kcmyyk48va) 
+- [Study area tract data geojson](https://mtcdrive.box.com/s/dirga1v2ipp41vedvlao80sywdx7ts31)
+- [Study area summary tabular](https://mtcdrive.box.com/s/9rhg236y8n07ufrpktc6y79uzttym8e6) 
 
 ### Population by Race and Origin Analysis
 The population by Race and Origin analysis was performed in a [Python Jupyter Notebook here](I880%20Express%20Lanes%20START%20Race%20and%20Origin.ipynb)
@@ -66,8 +66,8 @@ The population by Race and Origin analysis was performed in a [Python Jupyter No
 **Input:** HISPANIC OR LATINO, AND NOT HISPANIC OR LATINO BY RACE
 
 **Output:**
-    - [Study area summary tabular](https://mtcdrive.box.com/s/wzkg8blpptj365ulreribl4ryu7zrili)
-    - [Study area summary chart](https://mtcdrive.box.com/s/bg83irmksg8ueg8lmxbrfenyfflfp846)
+- [Study area summary tabular](https://mtcdrive.box.com/s/wzkg8blpptj365ulreribl4ryu7zrili)
+- [Study area summary chart](https://mtcdrive.box.com/s/bg83irmksg8ueg8lmxbrfenyfflfp846)
 
 ### Poverty Status by Race and Origin Analysis
 The poverty analysis was performed in a [Python Jupyter Notebook here](I880%20Express%20Lanes%20START%20Race%20and%20Poverty%20Analysis.ipynb)
@@ -75,9 +75,9 @@ The poverty analysis was performed in a [Python Jupyter Notebook here](I880%20Ex
 **Input:** POVERTY STATUS IN THE PAST 12 MONTHS
 
 **Output:**
-    - [Study area tract data tabular](https://mtcdrive.box.com/s/8avgqzc0xiz19teg8ephrf14kchnaqg4)
-    - [Study area tract data geojson](https://mtcdrive.box.com/s/waryuvu53vjyp5llm4se9np0ri4xbiow)
-    - [Study area summary tabular](https://mtcdrive.box.com/s/u3gv3mqjblv3l7tdwnbn3skwno1uituk)
+- [Study area tract data tabular](https://mtcdrive.box.com/s/8avgqzc0xiz19teg8ephrf14kchnaqg4)
+- [Study area tract data geojson](https://mtcdrive.box.com/s/waryuvu53vjyp5llm4se9np0ri4xbiow)
+- [Study area summary tabular](https://mtcdrive.box.com/s/u3gv3mqjblv3l7tdwnbn3skwno1uituk)
 
 Maps and visualizations were created in [ArcGIS Pro](https://mtcdrive.box.com/s/jkyly5aic1xbx3ylto3wq2a2ptwxadeo).
 
