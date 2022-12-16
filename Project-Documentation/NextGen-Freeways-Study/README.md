@@ -1,14 +1,13 @@
-**Draft Status: (Draft/Final)**
+**Draft Status: Draft**
 
-# Title and Define the Problem Statement
+# Next Generation Bay Area Freeways Study Mapping
 
-A problem statement is a brief description of the issues that need to be addressed by a problem solving team. It is used to center and focus the team at the onset of any spatial analysis efforts. It should keep the team on track during the effort, and will be used to validate that the effort delivered an outcome that solves the problem statement. In some ways the problem statement is more than just the ask. It should provide the context that the work assignment fits within, and identify any key stakeholders or major initiatives that relate to the solution.
+Communicate outcomes of freeway pricing strategies on key freeway corridors, as well as parallel arterials and parallel transit. Examples of outcomes are VMT, travel times, trips and transit ridership.
 
-## Project Management (RECOMMENDED)
+## Project Management 
 
-Add links to:
-- Activity, Project, or Task on Asana 
-- Box directory where any related work products are stored (if applicable) 
+- [Task on Asana] (https://app.asana.com/0/0/1203203841439812/f) 
+- [Box directory] (https://mtcdrive.box.com/s/yacusju3vqosabak6t7d71p4vll6q2yi) 
 - ArcGIS Online Working Group (if applicable) 
 - Any other location where important related work products are stored/saved 
 
