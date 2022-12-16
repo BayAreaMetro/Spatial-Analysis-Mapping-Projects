@@ -6,8 +6,8 @@ Communicate outcomes of freeway pricing strategies on key freeway corridors, as 
 
 ## Project Management 
 
-- [Task on Asana] (https://app.asana.com/0/0/1203203841439812/f) 
-- [Box directory] (https://mtcdrive.box.com/s/yacusju3vqosabak6t7d71p4vll6q2yi) 
+- [Task on Asana](https://app.asana.com/0/0/1203203841439812/f) 
+- [Box directory](https://mtcdrive.box.com/s/yacusju3vqosabak6t7d71p4vll6q2yi) 
 - ArcGIS Online Working Group (if applicable) 
 - Any other location where important related work products are stored/saved 
 
