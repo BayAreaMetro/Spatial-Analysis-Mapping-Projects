@@ -1,0 +1,7 @@
+FROM_,TO,OUT,MAPPING
+0,115,1,ValueToValue
+115,339,2,ValueToValue
+339,563,3,ValueToValue
+563,787,4,ValueToValue
+787,1011,5,ValueToValue
+1011,2635,6,ValueToValue
