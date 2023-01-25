@@ -85,7 +85,7 @@ Residential and commercial minimum and maximum densities will be determined by l
 - \* Applies to the following stations: Downtown San Francisco (Embarcadero, Montgomery, Powell, Civic Center, Transbay); Oakland (19th, 12th, Lake Merritt); San Jose (Diridon)
 - \*\* Tier 3 cities with a population of 30,000 or less my comply with Tier 4 density requirements. 
 
-#### Commercial Densities
+#### Commercial Office Densities (Based upon Commercial office uses)
 
 | Transit Service Tier | Minimum Density | Allowable Maximum Density |
 |---|---|---|
