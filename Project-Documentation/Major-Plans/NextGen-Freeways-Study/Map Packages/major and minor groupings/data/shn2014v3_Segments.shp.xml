@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+   <Esri>
+      <CreaDate>20150831</CreaDate>
+      <CreaTime>11340400</CreaTime>
+      <ArcGISFormat>1.0</ArcGISFormat>
+      <SyncOnce>FALSE</SyncOnce>
+      <DataProperties>
+         <lineage>
+            <Process Date="20150831" Name="" Time="113404" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\CreateFeatureclass" export="">CreateFeatureclass "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb" StateHighways POLYLINE # DISABLED DISABLED "GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119521E-09;0.001;0.001;IsHighPrecision" # 0 0 0</Process>
+            <Process Date="20150831" Name="" Time="113404" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" Route SHORT # # # # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113404" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" RteSuffix TEXT # # 1 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113405" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" RouteS TEXT # # 4 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113405" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" RouteID TEXT # # 16 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113405" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" County TEXT # # 3 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113405" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" District SHORT # # # # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113405" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" PMPrefix TEXT # # 1 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113405" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" bPM FLOAT # # # # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113406" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" ePM FLOAT # # # # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113406" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" PMSuffix TEXT # # 1 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113406" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" bOdometer FLOAT # # # # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113406" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" eOdometer FLOAT # # # # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113407" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" AlignCode TEXT # # 20 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113407" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\AddField" export="">AddField "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\\StateHighways" RouteType TEXT # # 10 # NULLABLE NON_REQUIRED #</Process>
+            <Process Date="20150831" Name="" Time="113612" ToolSource="c:\program files (x86)\arcgis\desktop10.2\ArcToolbox\Toolboxes\Data Management Tools.tbx\Append" export="">Append 'HwyEventTable Events' "C:\DRIVE D\GIS\PostmileAndHighways\Results.gdb\StateHighways" NO_TEST "Shape_Length "Shape_Length" false true true 8 Double 0 0 ,First,#;Route "Route" true true false 2 Short 0 0 ,First,#,HwyEventTable Events,Route,-1,-1;RteSuffix "RteSuffix" true true false 1 Text 0 0 ,First,#,HwyEventTable Events,RteSuffix,-1,-1;RouteS "RouteS" true true false 4 Text 0 0 ,First,#,HwyEventTable Events,RouteS,-1,-1;RouteID "RouteID" true true false 16 Text 0 0 ,First,#,HwyEventTable Events,RouteID,-1,-1;County "County" true true false 3 Text 0 0 ,First,#,HwyEventTable Events,County,-1,-1;District "District" true true false 2 Short 0 0 ,First,#,HwyEventTable Events,District,-1,-1;PMPrefix "PMPrefix" true true false 1 Text 0 0 ,First,#,HwyEventTable Events,PmPrefix,-1,-1;bPM "bPM" true true false 4 Float 0 0 ,First,#,HwyEventTable Events,bPM,-1,-1;ePM "ePM" true true false 4 Float 0 0 ,First,#,HwyEventTable Events,ePM,-1,-1;PMSuffix "PMSuffix" true true false 1 Text 0 0 ,First,#,HwyEventTable Events,PmSuffix,-1,-1;bOdometer "bOdometer" true true false 4 Float 0 0 ,First,#,HwyEventTable Events,bOdometer,-1,-1;eOdometer "eOdometer" true true false 4 Float 0 0 ,First,#,HwyEventTable Events,eOdometer,-1,-1;AlignCode "AlignCode" true true false 20 Text 0 0 ,First,#,HwyEventTable Events,AlignCode,-1,-1;RouteType "RouteType" true true false 10 Text 0 0 ,First,#,HwyEventTable Events,RouteType,-1,-1" #</Process>
+         </lineage>
+         <itemProps>
+            <itemName Sync="TRUE">shn2014v3_Segments</itemName>
+            <nativeExtBox>
+               <westBL Sync="TRUE">-124.264859</westBL>
+               <eastBL Sync="TRUE">-114.298233</eastBL>
+               <southBL Sync="TRUE">32.544302</southBL>
+               <northBL Sync="TRUE">42.005472</northBL>
+               <exTypeCode Sync="TRUE">1</exTypeCode>
+            </nativeExtBox>
+            <itemLocation>
+               <linkage Sync="TRUE">file://\\SUL-GISLAB\gis_shared\GIS_Lab\DATA\California_Transportation\Transportation\shn2014v3_Segments\shn2014v3_Segments.shp</linkage>
+               <protocol Sync="TRUE">Local Area Network</protocol>
+            </itemLocation>
+            <imsContentType Sync="TRUE" export="False">002</imsContentType>
+            <itemSize Sync="TRUE">12.992</itemSize>
+         </itemProps>
+         <coordRef>
+            <type Sync="TRUE">Geographic</type>
+            <geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn>
+            <csUnits Sync="TRUE">Angular Unit: Degree (0.017453)</csUnits>
+            <peXml Sync="TRUE">&lt;GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.3'&gt;&lt;WKT&gt;GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433],AUTHORITY[&amp;quot;EPSG&amp;quot;,4269]]&lt;/WKT&gt;&lt;XOrigin&gt;-400&lt;/XOrigin&gt;&lt;YOrigin&gt;-400&lt;/YOrigin&gt;&lt;XYScale&gt;11258999068426.238&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;8.9831528411952133e-009&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;LeftLongitude&gt;-180&lt;/LeftLongitude&gt;&lt;WKID&gt;4269&lt;/WKID&gt;&lt;LatestWKID&gt;4269&lt;/LatestWKID&gt;&lt;/GeographicCoordinateSystem&gt;</peXml>
+         </coordRef>
+      </DataProperties>
+      <SyncDate>20160420</SyncDate>
+      <SyncTime>13034400</SyncTime>
+      <ModDate>20160420</ModDate>
+      <ModTime>13040100</ModTime>
+      <scaleRange>
+         <minScale>150000000</minScale>
+         <maxScale>5000</maxScale>
+      </scaleRange>
+      <ArcGISProfile>ISO19139</ArcGISProfile>
+   </Esri>
+   <mdLang>
+      <languageCode value="eng"/>
+      <countryCode Sync="TRUE" value="USA"/>
+   </mdLang>
+   <mdChar>
+      <CharSetCd value="004"/>
+   </mdChar>
+   <mdHrLv>
+      <ScopeCd value="005"/>
+   </mdHrLv>
+   <mdStanName>ArcGIS Metadata</mdStanName>
+   <mdStanVer>1.0</mdStanVer>
+   <distInfo>
+      <distributor>
+         <distorCont>
+            <rpOrgName>Stanford Geospatial Center</rpOrgName>
+            <role>
+               <RoleCd value="005"/>
+            </role>
+            <displayName>Stanford Geospatial Center</displayName>
+            <rpCntInfo>
+               <cntAddress addressType="both">
+                  <delPoint>Branner Earth Sciences Library</delPoint>
+                  <city>Stanford</city>
+                  <adminArea>California</adminArea>
+                  <postCode>94305</postCode>
+                  <eMailAdd>brannerlibrary@stanford.edu</eMailAdd>
+                  <country>US</country>
+                  <delPoint>Mitchell Bldg. 2nd floor</delPoint>
+                  <delPoint>397 Panama Mall</delPoint>
+               </cntAddress>
+               <cntPhone>
+                  <voiceNum tddtty="">650-723-2746</voiceNum>
+               </cntPhone>
+            </rpCntInfo>
+            <displayName>Stanford Geospatial Center</displayName>
+            <displayName>Stanford Geospatial Center</displayName>
+         </distorCont>
+      </distributor>
+      <distTranOps>
+         <onLineSrc>
+            <linkage>http://purl.stanford.edu/xc453kn9742</linkage>
+            <protocol>http</protocol>
+            <orName>shn2014v3_Segments.shp</orName>
+            <orFunct>
+               <OnFunctCd value="001"/>
+            </orFunct>
+         </onLineSrc>
+         <transSize Sync="TRUE">12.992</transSize>
+      </distTranOps>
+      <distFormat>
+         <formatName Sync="TRUE">Shapefile</formatName>
+      </distFormat>
+   </distInfo>
+   <dataIdInfo>
+      <idCitation>
+         <presForm>
+            <fgdcGeoform>vector digital data</fgdcGeoform>
+            <PresFormCd Sync="TRUE" value="005"/>
+         </presForm>
+         <resTitle Sync="FALSE">State Highways (Segments), California, 2015</resTitle>
+         <date>
+            <createDate>2015-08-31T00:00:00</createDate>
+            <pubDate>2015-11-18T00:00:00</pubDate>
+         </date>
+         <collTitle>California Department of Transportation Maps and GIS Data</collTitle>
+         <citId>
+            <identCode>http://purl.stanford.edu/xc453kn9742</identCode>
+         </citId>
+         <citRespParty>
+            <rpOrgName>California. Department of Transportation</rpOrgName>
+            <rpCntInfo>
+               <cntAddress addressType="">
+                  <city>Sacramento</city>
+                  <country>US</country>
+               </cntAddress>
+            </rpCntInfo>
+            <displayName>California. Department of Transportation</displayName>
+            <role>
+               <RoleCd value="006"/>
+            </role>
+         </citRespParty>
+         <citRespParty>
+            <rpOrgName>California. Department of Transportation</rpOrgName>
+            <rpCntInfo>
+               <cntAddress addressType="">
+                  <city>Sacramento</city>
+                  <country>US</country>
+               </cntAddress>
+            </rpCntInfo>
+            <displayName>California. Department of Transportation</displayName>
+            <role>
+               <RoleCd value="010"/>
+            </role>
+         </citRespParty>
+      </idCitation>
+      <idAbs>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;This line shapefile represents highway segments in California. Each object in this layer represents a highway segment where the county, route, postmile prefix, and postmile suffix are the same. Each segment is coded with the district, county, route, postmile prefix (if any), begin postmile, end postmile, and postmile suffix (if any). One additional field - AlignCode - indicates if the state highway segment is on a Right alignment, Left alignment, Right side of an independent alignment, or Left side of an independent alignment. Where TSN (Transportation System Network - the source database) considers most state highways to have just a centerline, the underlying LRS (Linear Referencing System) linework that these segments are based upon has a line for each direction. In some cases the right and left lines are identical (where there is no median). In other cases the right and left are separated (where there is a median, or dual carriageways), but TSN treats the segment as a single centerline. In the last case the underlying linework has dual carriageways, and TSN treats the segment as a split alignment (where there are independent right and left alignments). In some cases (especially for small-scale mapping), it may be appropriate to display linework for just one alignment (e.g. Right alignment), and only for the other side where TSN indicates independent right and left alignments. In other cases (e.g. large-scale mapping), it may be appropriate to display postmiles for both alignments, regardless of how TSN treats the segment. This is an example of a query string that displays linework only for the right alignment where TSN indicates just a centerline, and on both right and left alignments where TSN indicates independent alignments: "AlignCode" &amp;lt;&amp;gt; 'Left'. The bOdometer and eOdometer fields represent the actual distance in miles from the start of the highway to the begin and end of each highway section. This is in contrast to the begin and end postmile values, which no longer represent these values as each highway is realigned (and made longer or shorter) over time. ). This layer is part of a collection of GIS data created by the California Department of Transportation (Caltrans).&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs>
+      <idPurp>This dataset is intended for researchers, students, and policy makers for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</idPurp>
+      <idStatus>
+         <ProgCd value="001"/>
+      </idStatus>
+      <resMaint>
+         <maintFreq>
+            <MaintFreqCd value="009"/>
+         </maintFreq>
+      </resMaint>
+      <dataLang>
+         <languageCode value="eng"/>
+         <countryCode Sync="TRUE" value="USA"/>
+      </dataLang>
+      <dataChar>
+         <CharSetCd value="004"/>
+      </dataChar>
+      <envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.3.1.4959</envirDesc>
+      <spatRpType>
+         <SpatRepTypCd Sync="TRUE" value="001"/>
+      </spatRpType>
+      <dataExt>
+         <geoEle>
+            <GeoBndBox esriExtentType="search">
+               <exTypeCode Sync="TRUE">1</exTypeCode>
+               <westBL Sync="TRUE">-124.264859</westBL>
+               <eastBL Sync="TRUE">-114.298233</eastBL>
+               <northBL Sync="TRUE">42.005472</northBL>
+               <southBL Sync="TRUE">32.544302</southBL>
+            </GeoBndBox>
+         </geoEle>
+      </dataExt>
+      <idCredit>California Department of Transportation. (2015). State Highways (Segments), California, 2015. California Department of Transportation. Available at http://purl.stanford.edu/xc453kn9742.</idCredit>
+      <resConst>
+         <Consts>
+            <useLimit>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;The data are made available to the public solely for informational purposes. Information provided in the Caltrans GIS Data Library is accurate to the best of our knowledge and is subject to change on a regular basis, without notice. While Caltrans makes every effort to provide useful and accurate information, we do not warrant the information to be authoritative, complete, factual, or timely. Information is provided on an "as is" and an "as available" basis. The Department of Transportation is not liable to any party for any cost or damages, including any direct, indirect, special, incidental, or consequential damages, arising out of or in connection with the access or use of, or the inability to access or use, the Site or any of the Materials or Services described herein.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</useLimit>
+         </Consts>
+      </resConst>
+      <themeKeys>
+         <thesaName>
+            <resTitle>lcsh</resTitle>
+            <date>
+               <reviseDate>2011-04-26T00:00:00</reviseDate>
+            </date>
+            <citId>
+               <identCode>http://id.loc.gov/authorities/subjects.html</identCode>
+            </citId>
+         </thesaName>
+         <keyword>Roads</keyword>
+         <keyword>Milestones</keyword>
+      </themeKeys>
+      <placeKeys>
+         <thesaName>
+            <resTitle>geonames</resTitle>
+            <date>
+               <reviseDate>2012-11-01T00:00:00</reviseDate>
+            </date>
+            <resEd>3.1</resEd>
+            <citId>
+               <identCode>http://www.geonames.org/ontology#</identCode>
+            </citId>
+         </thesaName>
+         <keyword>California</keyword>
+      </placeKeys>
+      <dataExt>
+         <exDesc>publication date</exDesc>
+         <tempEle>
+            <TempExtent>
+               <exTemp>
+                  <TM_Instant>
+                     <tmPosition>2015-11-18T00:00:00</tmPosition>
+                  </TM_Instant>
+               </exTemp>
+            </TempExtent>
+         </tempEle>
+      </dataExt>
+      <idPoC>
+         <rpIndName>LRS GIS data contact </rpIndName>
+         <rpOrgName>California Department of Transportation, ODST</rpOrgName>
+         <rpCntInfo>
+            <cntAddress addressType="both">
+               <delPoint>1120 N Street, MS #38</delPoint>
+               <city>Sacramento</city>
+               <adminArea>CA</adminArea>
+               <postCode>95814</postCode>
+               <eMailAdd>LRS.Feedback@dot.ca.gov</eMailAdd>
+            </cntAddress>
+         </rpCntInfo>
+         <displayName>LRS GIS data contact </displayName>
+         <displayName>LRS GIS data contact </displayName>
+         <role>
+            <RoleCd value="006"/>
+         </role>
+      </idPoC>
+      <idPoC>
+         <rpOrgName>California Department of Transportation District 5</rpOrgName>
+         <role>
+            <RoleCd value="006"/>
+         </role>
+         <rpIndName>Andy Richardson</rpIndName>
+         <rpPosName>District 5 GIS Coordinator</rpPosName>
+         <rpCntInfo>
+            <cntAddress addressType="">
+               <eMailAdd>Andy.Richardson@dot.ca.gov</eMailAdd>
+            </cntAddress>
+            <cntPhone>
+               <voiceNum tddtty="">(805) 549-3571</voiceNum>
+            </cntPhone>
+         </rpCntInfo>
+         <displayName>Andy Richardson</displayName>
+      </idPoC>
+      <aggrInfo>
+         <assocType>
+            <AscTypeCd value="002"/>
+         </assocType>
+         <initType>
+            <InitTypCd value="002"/>
+         </initType>
+         <aggrDSName>
+            <resTitle>California Department of Transportation Maps and GIS Data</resTitle>
+            <citId>
+               <identCode>collPURL</identCode>
+            </citId>
+         </aggrDSName>
+      </aggrInfo>
+      <tpCat>
+         <TopicCatCd value="018"/>
+      </tpCat>
+   </dataIdInfo>
+   <mdMaint>
+      <maintFreq>
+         <MaintFreqCd value="009"/>
+      </maintFreq>
+   </mdMaint>
+   <dqInfo>
+      <dqScope>
+         <scpLvl>
+            <ScopeCd value="005"/>
+         </scpLvl>
+      </dqScope>
+      <dataLineage>
+         <statement>State Highway Network dataset (shn2014), based on Office of GIS Linear Referencing System layer (TIGER linework).</statement>
+      </dataLineage>
+   </dqInfo>
+   <eainfo>
+      <detailed Name="shn2014v3_Segments">
+         <enttyp>
+            <enttypl Sync="TRUE">shn2014v3_Segments</enttypl>
+            <enttypt Sync="TRUE">Feature Class</enttypt>
+            <enttypc Sync="TRUE">5092</enttypc>
+            <enttypd>State Highways segments are coded with the district, county, route, alignment, and postmile</enttypd>
+            <enttypds>Caltrans</enttypds>
+         </enttyp>
+         <attr>
+            <attrlabl Sync="TRUE">FID</attrlabl>
+            <attalias Sync="TRUE">FID</attalias>
+            <attrtype Sync="TRUE">OID</attrtype>
+            <attwidth Sync="TRUE">4</attwidth>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdef Sync="TRUE">Internal feature number.</attrdef>
+            <attrdefs Sync="TRUE">Esri</attrdefs>
+            <attrdomv>
+               <udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">Shape</attrlabl>
+            <attalias Sync="TRUE">Shape</attalias>
+            <attrtype Sync="TRUE">Geometry</attrtype>
+            <attwidth Sync="TRUE">0</attwidth>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdef Sync="TRUE">Feature geometry.</attrdef>
+            <attrdefs Sync="TRUE">ESRI</attrdefs>
+            <attrdomv>
+               <udom Sync="TRUE">Coordinates defining the features.</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">Shape_Leng</attrlabl>
+            <attalias Sync="TRUE">Shape_Leng</attalias>
+            <attrtype Sync="TRUE">Double</attrtype>
+            <attwidth Sync="TRUE">19</attwidth>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">Route</attrlabl>
+            <attalias Sync="TRUE">Route</attalias>
+            <attrtype Sync="TRUE">SmallInteger</attrtype>
+            <attwidth Sync="TRUE">5</attwidth>
+            <attrdef>State Highway Route number.</attrdef>
+            <atprecis Sync="TRUE">5</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>The highway numbers</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">RouteS</attrlabl>
+            <attalias Sync="TRUE">RouteS</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">4</attwidth>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdef>Concatenation of the Route and RteSuffix fields.
+</attrdef>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>Unique values</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">RouteID</attrlabl>
+            <attalias Sync="TRUE">RouteID</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">16</attwidth>
+            <attrdef>Unique identifier of underlying Linear Referencing layer.  RouteID along with Measure fields can allow these points to be re-dynamically segment points.</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>Unique IDs</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">County</attrlabl>
+            <attalias Sync="TRUE">County</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">3</attwidth>
+            <attrdef>County (standard 3-character abbreviation).</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Caltrans</attrdefs>
+            <attrdomv>
+               <codesetd>
+                  <codesetn>County code</codesetn>
+                  <codesets>Caltrans</codesets>
+               </codesetd>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">District</attrlabl>
+            <attalias Sync="TRUE">District</attalias>
+            <attrtype Sync="TRUE">SmallInteger</attrtype>
+            <attwidth Sync="TRUE">5</attwidth>
+            <attrdef>Caltrans district (1-12).</attrdef>
+            <atprecis Sync="TRUE">5</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Caltrans</attrdefs>
+            <attrdomv>
+               <codesetd>
+                  <codesetn>District Number</codesetn>
+                  <codesets>Caltrans</codesets>
+               </codesetd>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">RteSuffix</attrlabl>
+            <attalias Sync="TRUE">RteSuffix</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">1</attwidth>
+            <attrdef>A single-digit alpha code attached to the route as a suffix to identify special situations where there are parallel roads with the same route number operating simultaneously. </attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <edom>
+                  <edomv>S</edomv>
+                  <edomvd>Supplemental</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>U</edomv>
+                  <edomvd>Unrelinquished</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">PmPrefix</attrlabl>
+            <attalias Sync="TRUE">PMPrefix</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">1</attwidth>
+            <attrdomv>
+               <edom>
+                  <edomv>C</edomv>
+                  <edomvd>Commercial lanes</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>D</edomv>
+                  <edomvd>Duplicate postmile at meandering county line</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>G</edomv>
+                  <edomvd>Reposting of duplicate postmile at end of a route</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>H</edomv>
+                  <edomvd>Realignment of D mileage</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>L</edomv>
+                  <edomvd>Overlapping postmile</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>M</edomv>
+                  <edomvd>Realignment of R mileage</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>N</edomv>
+                  <edomvd>Realignment of M mileage</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>R</edomv>
+                  <edomvd>First realignment</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>S</edomv>
+                  <edomvd>Spur</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>T</edomv>
+                  <edomvd>Temporary connection</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+            </attrdomv>
+            <attrdef>Postmile prefix. A single-digit alpha code attached to the postmile as a prefix to indicate changes in the highway alignment.</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">bPM</attrlabl>
+            <attalias Sync="TRUE">bPM</attalias>
+            <attrtype Sync="TRUE">Single</attrtype>
+            <attwidth Sync="TRUE">13</attwidth>
+            <attrdef>Begin postmile (of segment).</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>Transportation System Network (TSN)</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">ePM</attrlabl>
+            <attalias Sync="TRUE">ePM</attalias>
+            <attrtype Sync="TRUE">Single</attrtype>
+            <attwidth Sync="TRUE">13</attwidth>
+            <attrdef>End postmile (of segment).</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>Unique values</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">PmSuffix</attrlabl>
+            <attalias Sync="TRUE">PMSuffix</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">1</attwidth>
+            <attrdef>Postmile suffix.</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdomv>
+               <edom>
+                  <edomv>L</edomv>
+                  <edomvd>Left alignment</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+            </attrdomv>
+            <attrdomv>
+               <edom>
+                  <edomv>R</edomv>
+                  <edomvd>Right alignment</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+            </attrdomv>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">bOdometer</attrlabl>
+            <attalias Sync="TRUE">bOdometer</attalias>
+            <attrtype Sync="TRUE">Single</attrtype>
+            <attwidth Sync="TRUE">13</attwidth>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdef>Actual distance in miles (calculated from the running summation of postmiles) from the beginning of the route of the beginning of the highway segment.</attrdef>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>Unique values</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">eOdometer</attrlabl>
+            <attalias Sync="TRUE">eOdometer</attalias>
+            <attrtype Sync="TRUE">Single</attrtype>
+            <attwidth Sync="TRUE">13</attwidth>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdef>Actual distance in miles (calculated from the running summation of postmiles)from the beginning of the route of the ending of the highway segment.</attrdef>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+            <attrdomv>
+               <udom>Unique values</udom>
+            </attrdomv>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">AlignCode</attrlabl>
+            <attalias Sync="TRUE">AlignCode</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">20</attwidth>
+            <attrdomv>
+               <edom>
+                  <edomv>Right</edomv>
+                  <edomvd>Falls on a right alignment (may be identical to left alignment)</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>Left</edomv>
+                  <edomvd>Falls on a left alignment (may be identical to a right alignment).</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>Right Split Align</edomv>
+                  <edomvd>Falls on a right independent alignment.</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>Left Split Align</edomv>
+                  <edomvd>Falls on a left independent alignment.</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+            </attrdomv>
+            <attrdef>Alignment code</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+         </attr>
+         <attr>
+            <attrlabl Sync="TRUE">RouteType</attrlabl>
+            <attalias Sync="TRUE">RouteType</attalias>
+            <attrtype Sync="TRUE">String</attrtype>
+            <attwidth Sync="TRUE">10</attwidth>
+            <attrdomv>
+               <edom>
+                  <edomv>State</edomv>
+                  <edomvd>State highway</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>US</edomv>
+                  <edomvd>US Highway</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+               <edom>
+                  <edomv>Interstate</edomv>
+                  <edomvd>Interstate Highway</edomvd>
+                  <edomvds>Transportation System Network (TSN)</edomvds>
+               </edom>
+            </attrdomv>
+            <attrdef>Route Type - State, US, Interstate</attrdef>
+            <atprecis Sync="TRUE">0</atprecis>
+            <attscale Sync="TRUE">0</attscale>
+            <attrdefs>Transportation System Network (TSN)</attrdefs>
+         </attr>
+      </detailed>
+   </eainfo>
+   <mdHrLvName Sync="TRUE">dataset</mdHrLvName>
+   <refSysInfo>
+      <RefSystem>
+         <refSysID>
+            <identCode Sync="TRUE" code="4269"/>
+            <idCodeSpace Sync="TRUE">EPSG</idCodeSpace>
+            <idVersion Sync="TRUE">8.6.2</idVersion>
+         </refSysID>
+      </RefSystem>
+   </refSysInfo>
+   <spatRepInfo>
+      <VectSpatRep>
+         <geometObjs Name="shn2014v3_Segments">
+            <geoObjTyp>
+               <GeoObjTypCd value="002" Sync="TRUE"/>
+            </geoObjTyp>
+            <geoObjCnt Sync="TRUE">5092</geoObjCnt>
+         </geometObjs>
+         <topLvl>
+            <TopoLevCd value="001" Sync="TRUE"/>
+         </topLvl>
+      </VectSpatRep>
+   </spatRepInfo>
+   <spdoinfo>
+      <ptvctinf>
+         <esriterm Name="shn2014v3_Segments">
+            <efeatyp Sync="TRUE">Simple</efeatyp>
+            <efeageom code="3" Sync="TRUE"/>
+            <esritopo Sync="TRUE">FALSE</esritopo>
+            <efeacnt Sync="TRUE">5092</efeacnt>
+            <spindex Sync="TRUE">TRUE</spindex>
+            <linrefer Sync="TRUE">FALSE</linrefer>
+         </esriterm>
+      </ptvctinf>
+   </spdoinfo>
+   <mdDateSt Sync="TRUE">20160420</mdDateSt>
+   <mdContact>
+      <rpOrgName>Stanford Geospatial Center</rpOrgName>
+      <rpCntInfo>
+         <cntAddress addressType="both">
+            <delPoint>Mitchell Bldg. 2nd floor</delPoint>
+            <city>Stanford</city>
+            <adminArea>California</adminArea>
+            <postCode>94305</postCode>
+            <eMailAdd>brannerlibrary@stanford.edu</eMailAdd>
+            <country>US</country>
+            <delPoint>397 Panama Mall</delPoint>
+         </cntAddress>
+         <cntPhone>
+            <voiceNum tddtty="">650-723-2746</voiceNum>
+         </cntPhone>
+      </rpCntInfo>
+      <displayName>Stanford Geospatial Center</displayName>
+      <role>
+         <RoleCd value="007"/>
+      </role>
+   </mdContact>
+   <mdParentID>http://purl.stanford.edu/sb381ch4421.mods</mdParentID>
+   <dataSetURI>http://purl.stanford.edu/xc453kn9742</dataSetURI>
+   <Binary>
+      <Thumbnail>
+         <Data EsriPropertyType="PictureX">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACgAPADASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9O6KK
+K8Q9AKKKKACiiigAHeij2orOHV9wCvOfj94WHjT4Z6joz+FJPGMN1tjk0+3Fi86A5Amijvv9Gd42
+2uFlIHykjLAA+jVi+MvEg8I+Gb7VfskuoSwKBBZQECS5mZgkUSk8BndlUZ4y1aWuNO2p8veH/C/x
+Q+COl/Enxbp/glfEPi+WwEvmeTZPFeSeZH5QtmhP264S3habfBcNucwxRwEFy1VdL8H+Mviv8Ffh
+BeweBl0rxXa6GI7HxH51owsE8loVkk8wi5t1ngMc6JblnWQrHONqNu+gLf8AZ40Lxgo1H4o2lp8Q
+tXm+c2OsR/aNIsT2S1spMxArlgJ2QzsGYF9pCKX37POieE7c33wttbT4eazADJHZ6PH9m0i9f+5d
+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
+/9k=</Data>
+      </Thumbnail>
+   </Binary>
+   <mdContact>
+      <rpIndName>Caltrans GIS data librarian</rpIndName>
+      <rpOrgName>Caltrans, Division of DRISI, Office of GIS</rpOrgName>
+      <rpPosName>Caltrans GIS data librarian</rpPosName>
+      <rpCntInfo>
+         <cntAddress addressType="postal">
+            <delPoint>P.O. Box 942874, MS #38</delPoint>
+            <city>Sacramento</city>
+            <adminArea>CA</adminArea>
+            <postCode>94274-0001</postCode>
+            <eMailAdd>caltrans.gislib@dot.ca.gov</eMailAdd>
+         </cntAddress>
+         <cntInstr>Send data requests and comments by email.</cntInstr>
+      </rpCntInfo>
+      <displayName>Caltrans GIS data librarian</displayName>
+      <displayName>Caltrans GIS data librarian</displayName>
+      <role>
+         <RoleCd value="010"/>
+      </role>
+   </mdContact>
+   <contInfo>
+      <FetCatDesc>
+         <compCode>False</compCode>
+         <catLang>
+            <languageCode value="eng"/>
+         </catLang>
+         <incWithDS>True</incWithDS>
+         <catCitation>
+            <resTitle>Feature catalog for State Highways (Segments), California, 2015</resTitle>
+            <citId>
+               <identCode>f3d0a5ae-65fd-4bf8-ae7f-6f89621820d7</identCode>
+            </citId>
+         </catCitation>
+      </FetCatDesc>
+   </contInfo>
+   <mdFileID>edu.stanford.purl:xc453kn9742</mdFileID>
+</metadata>

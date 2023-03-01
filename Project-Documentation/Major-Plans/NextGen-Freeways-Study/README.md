@@ -8,8 +8,7 @@ Communicate outcomes of freeway pricing strategies on key freeway corridors, as 
 
 - [Task on Asana](https://app.asana.com/0/0/1203203841439812/f) 
 - [Box directory](https://mtcdrive.box.com/s/yacusju3vqosabak6t7d71p4vll6q2yi) 
-- ArcGIS Online Working Group (if applicable) 
-- Any other location where important related work products are stored/saved 
+- [ArcGIS Online Working Group](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/4c97692b473136ae13bf663468fb22debbb41f54/Project-Documentation/Major-Plans/NextGen-Freeways-Study) 
 
 ## Table of Contents (if needed) 
 

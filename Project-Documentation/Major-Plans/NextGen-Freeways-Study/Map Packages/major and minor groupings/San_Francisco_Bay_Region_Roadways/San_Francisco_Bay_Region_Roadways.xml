@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <pubdate>20211203</pubdate>
+                <title>San Francisco Bay Region Roadways</title>
+                <geoform>vector digital data</geoform>
+                <othercit>Creation date is date the data was produced by the United States Census Bureau, Geography Division, Spatial Data Collection and Products Branch.
+
+Published date is the date data was posted by the Metropolitan Transportation Commission to its open data portal.</othercit>
+                <onlink>https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_road/FeatureServer</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Roadways (streets and highways) for the San Francisco Bay Region. Feature set was assembled using all roads county-based 2021 TIGER/Line shapefiles by the Metropolitan Transportation Commission.The All Roads shapefiles includes all features within the Census Bureau's Master Address File/Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB) Super Class &amp;quot;Road/Path Features&amp;quot; distinguished where the MAF/TIGER Feature Classification Code for the feature in MTDB that begins with &amp;quot;S&amp;quot;.  This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, stairways, and winter trails.The feature set contains multiple overlapping road segments where a segment is associated with more than one road feature. For example, if a road segment is associated with US Route 36 and State Highway 7 and 28th Street, the route will contain three spatially coincident segments, each with a different name. The roadway feature set contains the set of unique road segments for each county, along with other linear features.Primary roads are generally divided limited-access highways within the Federal interstate highway system or under state management. Interchanges and ramps distinguish these roads, and some are toll highways.Secondary roads are main arteries, usually in the U.S. highway, state highway, or county highway system. These roads have one or more lanes of traffic in each direction, may or may not be divided, and usually have at-grade intersections with many other roads and driveways. They often have both a local name and a route number.</abstract>
+            <purpose>Linear features represent roadways for the San Francisco Bay Region. Feature set was assembled from county shapefiles by the Metropolitan Transportation Commission.</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>None planned</update>
+        </status>
+        <keywords>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>transportation</themekey>
+            </theme>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>transportation</themekey>
+                <themekey>roadway</themekey>
+                <themekey>interstate</themekey>
+                <themekey>highway</themekey>
+                <themekey>primary road</themekey>
+                <themekey>secondary road</themekey>
+                <themekey>local road</themekey>
+                <themekey>street</themekey>
+                <themekey>trail</themekey>
+                <themekey>ramp</themekey>
+                <themekey>alley</themekey>
+                <themekey>united states census bureau</themekey>
+            </theme>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>The TIGER/Line Shapefile products are not copyrighted however TIGER/Line and Census TIGER are registered trademarks of the U.S. Census Bureau.  These products are free to use in a product or publication, however acknowledgement must be given to the U.S. Census Bureau as the source.These products are free to use in a product or publication, however acknowledgement must be given to the U.S. Census Bureau as the source.The boundaries in the TIGER/Line Shapefiles are for statistical data collection and tabulation purposes only, their depiction and designation for statistical purposes does not constitute a determination of jurisdictional authority or rights of ownership or entitlement and they are not legal land descriptions. Coordinates in the TIGER/Line shapefiles have six implied decimal places, but the positional accuracy of these coordinates is not as great as the six decimal places suggest.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</cntorg>
+                    <cntper>Spatial Data Collection and Products Branch</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>4600 Silver Hill Road, Stop 7400</address>
+                    <city>Washington</city>
+                    <state>District of Columbia</state>
+                    <postal>20233-7400</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(301) 763-1128</cntvoice>
+                <cntfax>(301) 763-4710</cntfax>
+                <cntemail>geo.geography@census.gov</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <datacred>United States Census Bureau and Metropolitan Transportation Commission, 2021</datacred>
+    </idinfo>
+    <spdoinfo>
+        <direct>Vector</direct>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>region_road</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>statefp</attrlabl>
+                <attrdef>Current state Federal Information Processing Series code. The only value for this field is 06 (California).</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>countyfp</attrlabl>
+                <attrdef>Current county Federal Information Processing Series code.</attrdef>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>001</edomv>
+                                                						
+                        
+                        <edomvd>Alameda County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>013</edomv>
+                                                						
+                        
+                        <edomvd>Contra Costa County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>041</edomv>
+                                                						
+                        
+                        <edomvd>Marin County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>055</edomv>
+                                                						
+                        
+                        <edomvd>Napa County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>075</edomv>
+                                                						
+                        
+                        <edomvd>San Francisco, City and County of</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>081</edomv>
+                                                						
+                        
+                        <edomvd>San Mateo County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>085</edomv>
+                                                						
+                        
+                        <edomvd>Santa Clara County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>095</edomv>
+                                                						
+                        
+                        <edomvd>Solano County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>097</edomv>
+                                                						
+                        
+                        <edomvd>Sonoma County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>linearid</attrlabl>
+                <attrdef>Linear feature (road segment) identifier.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>fullname</attrlabl>
+                <attrdef>Concatenation of expanded text for prefix qualifier, prefix direction, prefix type, base name, suffix type, suffix direction, and suffix qualifier (as available) with a space between each expanded text field; display name.</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>rttyp</attrlabl>
+                <attrdef>Route type code.</attrdef>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>C</edomv>
+                                                						
+                        
+                        <edomvd>County</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>I</edomv>
+                                                						
+                        
+                        <edomvd>Interstate</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>M</edomv>
+                                                						
+                        
+                        <edomvd>Common name</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>O</edomv>
+                                                						
+                        
+                        <edomvd>Other</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S</edomv>
+                                                						
+                        
+                        <edomvd>State recognized</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>U</edomv>
+                                                						
+                        
+                        <edomvd>United States</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>mtfcc</attrlabl>
+                <attrdef>MAF/TIGER feature class code</attrdef>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1100</edomv>
+                                                						
+                        
+                        <edomvd>Primary Road - Primary roads are limited-access highways that connect to other roads only at interchanges and not at at-grade intersections. This category includes Interstate highways, as well as all other highways with limited access (some of which are toll roads). Limited-access highways with only one lane in each direction, as well as those that are undivided, are also included under S1100.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1200</edomv>
+                                                						
+                        
+                        <edomvd>Secondary Road - Secondary roads are main arteries that are not limited access, usually in the U.S. highway, state highway, or county highway systems. These roads have one or more lanes of traffic in each direction, may or may not be divided, and usually have at-grade intersections with many other roads and driveways. They often have both a local name and a route number.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1400</edomv>
+                                                						
+                        
+                        <edomvd>Local Neighborhood Road, Rural Road, City Street - Generally a paved non-arterial street, road, or byway that usually has a single lane of traffic in each direction. Roads in this feature class may be privately or publicly maintained. Scenic park roads would be included in this feature class, as would (depending on the region of the country) some unpaved roads.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1500</edomv>
+                                                						
+                        
+                        <edomvd>Vehicular Trail (4WD) - An unpaved dirt trail where a four-wheel drive vehicle is required. These vehicular trails are found almost exclusively in very rural areas. Minor, unpaved roads usable by ordinary cars and trucks belong in the S1400 category.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1630</edomv>
+                                                						
+                        
+                        <edomvd>Ramp - A road that allows controlled access from adjacent roads onto a limited access highway, often in the form of a cloverleaf interchange.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1640</edomv>
+                                                						
+                        
+                        <edomvd>Service Drive usually along a limited access highway - A road, usually paralleling a limited access highway, that provides access to structures and/or service facilities along the highway. These roads can be named and may intersect with other roads.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1710</edomv>
+                                                						
+                        
+                        <edomvd>Walkway/Pedestrian Trail - A path that is used for walking, being either too narrow for or legally restricted from vehicular traffic.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1720</edomv>
+                                                						
+                        
+                        <edomvd>Stairway - A pedestrian passageway from one level to another by a series of steps.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1730</edomv>
+                                                						
+                        
+                        <edomvd>Alley - A service road that does not generally have associated addressed structures and is usually unnamed. It is located at the rear of buildings and properties and is used for deliveries.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1740</edomv>
+                                                						
+                        
+                        <edomvd>Private Road for service vehicles (logging, oil fields, ranches, etc.) - A road within private property that is privately maintained for service, extractive, or other purposes. These roads are often unnamed.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1750</edomv>
+                                                						
+                        
+                        <edomvd>Internal United States Census Bureau use</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1780</edomv>
+                                                						
+                        
+                        <edomvd>Parking Lot Road - The main travel route for vehicles through a paved parking area. This may include unnamed roads through apartment/condominium/office complexes where pull-in parking spaces line the road.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>S1820</edomv>
+                                                						
+                        
+                        <edomvd>Bike Path or Trail - A path that is used for manual or small, motorized bicycles, being either too narrow for or legally restricted from vehicular traffic.</edomvd>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <metainfo>
+        <metd>20211203</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</cntorg>
+                    <cntper>Spatial Data Collection and Products Branch</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>4600 Silver Hill Road, Stop 7400</address>
+                    <city>Washington</city>
+                    <state>District of Columbia</state>
+                    <postal>20233-7400</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>(301) 763-1128</cntvoice>
+                <cntfax>(301) 763-4710</cntfax>
+                <cntemail>geo.geography@census.gov</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin/>
+        <pubdate>20151118</pubdate>
+        <title>State Highways (Segments), California, 2015</title>
+        <geoform>vector digital data</geoform>
+        <pubinfo>
+          <pubplace/>
+          <publish>California. Department of Transportation</publish>
+        </pubinfo>
+        <onlink>http://purl.stanford.edu/xc453kn9742</onlink>
+        <lworkcit>
+          <citeinfo>
+            <title>California Department of Transportation Maps and GIS Data</title>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This line shapefile represents highway segments in California. Each object in this layer represents a highway segment where the county, route, postmile prefix, and postmile suffix are the same. Each segment is coded with the district, county, route, postmile prefix (if any), begin postmile, end postmile, and postmile suffix (if any). One additional field - AlignCode - indicates if the state highway segment is on a Right alignment, Left alignment, Right side of an independent alignment, or Left side of an independent alignment. Where TSN (Transportation System Network - the source database) considers most state highways to have just a centerline, the underlying LRS (Linear Referencing System) linework that these segments are based upon has a line for each direction. In some cases the right and left lines are identical (where there is no median). In other cases the right and left are separated (where there is a median, or dual carriageways), but TSN treats the segment as a single centerline. In the last case the underlying linework has dual carriageways, and TSN treats the segment as a split alignment (where there are independent right and left alignments). In some cases (especially for small-scale mapping), it may be appropriate to display linework for just one alignment (e.g. Right alignment), and only for the other side where TSN indicates independent right and left alignments. In other cases (e.g. large-scale mapping), it may be appropriate to display postmiles for both alignments, regardless of how TSN treats the segment. This is an example of a query string that displays linework only for the right alignment where TSN indicates just a centerline, and on both right and left alignments where TSN indicates independent alignments: "AlignCode" &amp;lt;&amp;gt; 'Left'. The bOdometer and eOdometer fields represent the actual distance in miles from the start of the highway to the begin and end of each highway section. This is in contrast to the begin and end postmile values, which no longer represent these values as each highway is realigned (and made longer or shorter) over time. ). This layer is part of a collection of GIS data created by the California Department of Transportation (Caltrans).</abstract>
+      <purpose>This dataset is intended for researchers, students, and policy makers for reference and mapping purposes, and may be used for basic applications such as viewing, querying, and map output production, or to provide a basemap to support graphical overlays and analysis with other spatial data.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20151118</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-124.264859</westbc>
+        <eastbc>-114.298233</eastbc>
+        <northbc>42.005472</northbc>
+        <southbc>32.544302</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>lcsh</themekt>
+        <themekey>Roads</themekey>
+        <themekey>Milestones</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>transportation</themekey>
+      </theme>
+      <place>
+        <placekt>geonames</placekt>
+        <placekey>California</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The data are made available to the public solely for informational purposes. Information provided in the Caltrans GIS Data Library is accurate to the best of our knowledge and is subject to change on a regular basis, without notice. While Caltrans makes every effort to provide useful and accurate information, we do not warrant the information to be authoritative, complete, factual, or timely. Information is provided on an "as is" and an "as available" basis. The Department of Transportation is not liable to any party for any cost or damages, including any direct, indirect, special, incidental, or consequential damages, arising out of or in connection with the access or use of, or the inability to access or use, the Site or any of the Materials or Services described herein.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>California Department of Transportation, ODST</cntorg>
+          <cntper>LRS GIS data contact </cntper>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>1120 N Street, MS #38</address>
+          <city>Sacramento</city>
+          <state>CA</state>
+          <postal>95814</postal>
+        </cntaddr>
+        <cntemail>LRS.Feedback@dot.ca.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>California Department of Transportation District 5</cntorg>
+          <cntper>Andy Richardson</cntper>
+        </cntorgp>
+        <cntpos>District 5 GIS Coordinator</cntpos>
+        <cntvoice>(805) 549-3571</cntvoice>
+        <cntemail>Andy.Richardson@dot.ca.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>California Department of Transportation. (2015). State Highways (Segments), California, 2015. California Department of Transportation. Available at http://purl.stanford.edu/xc453kn9742.</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.3.1.4959</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>String</sdtstype>
+        <ptvctcnt>5092</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>shn2014v3_Segments</enttypl>
+        <enttypd>State Highways segments are coded with the district, county, route, alignment, and postmile</enttypd>
+        <enttypds>Caltrans</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Route</attrlabl>
+        <attrdef>State Highway Route number.</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>The highway numbers</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RouteS</attrlabl>
+        <attrdef>Concatenation of the Route and RteSuffix fields.
+</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>Unique values</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RouteID</attrlabl>
+        <attrdef>Unique identifier of underlying Linear Referencing layer.  RouteID along with Measure fields can allow these points to be re-dynamically segment points.</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>Unique IDs</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>County</attrlabl>
+        <attrdef>County (standard 3-character abbreviation).</attrdef>
+        <attrdefs>Caltrans</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>County code</codesetn>
+            <codesets>Caltrans</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>District</attrlabl>
+        <attrdef>Caltrans district (1-12).</attrdef>
+        <attrdefs>Caltrans</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>District Number</codesetn>
+            <codesets>Caltrans</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RteSuffix</attrlabl>
+        <attrdef>A single-digit alpha code attached to the route as a suffix to identify special situations where there are parallel roads with the same route number operating simultaneously. </attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>S</edomv>
+            <edomvd>Supplemental</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>U</edomv>
+            <edomvd>Unrelinquished</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PmPrefix</attrlabl>
+        <attrdef>Postmile prefix. A single-digit alpha code attached to the postmile as a prefix to indicate changes in the highway alignment.</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>C</edomv>
+            <edomvd>Commercial lanes</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>D</edomv>
+            <edomvd>Duplicate postmile at meandering county line</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>G</edomv>
+            <edomvd>Reposting of duplicate postmile at end of a route</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>H</edomv>
+            <edomvd>Realignment of D mileage</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>L</edomv>
+            <edomvd>Overlapping postmile</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>M</edomv>
+            <edomvd>Realignment of R mileage</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>N</edomv>
+            <edomvd>Realignment of M mileage</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>R</edomv>
+            <edomvd>First realignment</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>S</edomv>
+            <edomvd>Spur</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>T</edomv>
+            <edomvd>Temporary connection</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>bPM</attrlabl>
+        <attrdef>Begin postmile (of segment).</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>Transportation System Network (TSN)</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ePM</attrlabl>
+        <attrdef>End postmile (of segment).</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>Unique values</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PmSuffix</attrlabl>
+        <attrdef>Postmile suffix.</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>L</edomv>
+            <edomvd>Left alignment</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>R</edomv>
+            <edomvd>Right alignment</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>bOdometer</attrlabl>
+        <attrdef>Actual distance in miles (calculated from the running summation of postmiles) from the beginning of the route of the beginning of the highway segment.</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>Unique values</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>eOdometer</attrlabl>
+        <attrdef>Actual distance in miles (calculated from the running summation of postmiles)from the beginning of the route of the ending of the highway segment.</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <udom>Unique values</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AlignCode</attrlabl>
+        <attrdef>Alignment code</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Right</edomv>
+            <edomvd>Falls on a right alignment (may be identical to left alignment)</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Left</edomv>
+            <edomvd>Falls on a left alignment (may be identical to a right alignment).</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Right Split Align</edomv>
+            <edomvd>Falls on a right independent alignment.</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Left Split Align</edomv>
+            <edomvd>Falls on a left independent alignment.</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RouteType</attrlabl>
+        <attrdef>Route Type - State, US, Interstate</attrdef>
+        <attrdefs>Transportation System Network (TSN)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>State</edomv>
+            <edomvd>State highway</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>US</edomv>
+            <edomvd>US Highway</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+          <edom>
+            <edomv>Interstate</edomv>
+            <edomvd>Interstate Highway</edomvd>
+            <edomvds>Transportation System Network (TSN)</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Stanford Geospatial Center</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Branner Earth Sciences Library</address>
+          <address>Mitchell Bldg. 2nd floor</address>
+          <address>397 Panama Mall</address>
+          <city>Stanford</city>
+          <state>California</state>
+          <postal>94305</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>650-723-2746</cntvoice>
+        <cntemail>brannerlibrary@stanford.edu</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20160420</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>Stanford Geospatial Center</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Mitchell Bldg. 2nd floor</address>
+          <address>397 Panama Mall</address>
+          <city>Stanford</city>
+          <state>California</state>
+          <postal>94305</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>650-723-2746</cntvoice>
+        <cntemail>brannerlibrary@stanford.edu</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>
