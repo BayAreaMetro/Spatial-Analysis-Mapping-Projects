@@ -18,7 +18,7 @@ Add links to:
 - Notebook: [Pull LEP Data (Github)](pull_lep_data_acs.ipynb)
 - ArcGIS Pro Project: [Zip File (Box)](https://mtcdrive.box.com/s/6simjjunzpceeh5osibm179x8lie5yo6)
 
-> Input:
+Input:
 > - Source: `U.S. Census Bureau, American Community Survey`
 > - Product: `2021: ACS 5-Year Estimates Detailed Tables`
 > - Sourced From: `API`
@@ -27,7 +27,7 @@ Add links to:
 > - Census Geography: `Tract`
 > - Universe: `Population 5 years and over`
 > 
-> Output: 
+Output: 
 > - [Data (Box)](https://mtcdrive.box.com/s/t18hixjmevjpncfs3fqspdxpfg8pmun8)
 > - [PDF Maps (Box)](https://mtcdrive.box.com/s/7znbkr7ivrt8mcjfrfv0flxq82t7u7as)
 
