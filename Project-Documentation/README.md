@@ -1,10 +1,10 @@
 # Spatial-Analysis-Mapping-Projects
-This repo provides detailed documentation of work performed by the Data and Visualization team at MTC.  Projects are organizaed into folder, each containing detailed documentation for the steps and procedures implemented in support of each project.
+This repo provides detailed documentation of work performed by the Data and Visualization team at MTC.  Projects are organized into folder, each containing detailed documentation for the steps and procedures implemented in support of each project.
 
 ## Getting Started 
 To get started with a spatial analysis or mapping project follow the steps outlined below. 
 
-1. Create a project folder under this folder, providing an appropriate project name using [title case](http://titlecase.com/) formatting seperated by a hyphen '-' 
+1. Create a project folder under this folder, providing an appropriate project name using [title case](http://titlecase.com/) formatting separated by a hyphen '-' 
 2. Review our [how-to guide](https://github.com/BayAreaMetro/dv-project-templates) 
 3. Copy and paste markdown text from how-to guide into a new README.md file within your project folder or copy one of the following analysis markdown templates and rename it README.md
    - [ANALYSIS-DETAILED](https://github.com/BayAreaMetro/dv-project-templates/blob/master/ANALYSIS-DETAILED.md) 
@@ -38,8 +38,8 @@ To get started with a spatial analysis or mapping project follow the steps outli
 | [Plan Bay Area 2050 Transit Data](Plan-Bay-Area-2050-Transit-Data) | Analysis and mapping of existing and planned transit stops as well as mapping of transit stops served by routes meeting certain headway criteria. |
 | [Regional Goods Movement](Regional-Goods-Movement) | Documentation for mapping and analysis of bicycle and pedestrian facilities built since 2009 in the Bay Area. |
 | [Resource Opportunity Areas (2020)](Resource-Opportunity-Areas) | Documentation for the creation of CTCAC HCD Resource Opportunity Areas 2020. |
-| [RTIP 2018](RTIP-2018) | Documentation for mapping of 2018 Retional Transportation Improvement Program (RTIP) projects. |
-| [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining) | Analysis to develop a geographic feature overlay which represents geographies within the Bay Area which are excluded from recently pased SB-35 Affordable Housing Streamlining Bill. |
+| [RTIP 2018](RTIP-2018) | Documentation for mapping of 2018 Regional Transportation Improvement Program (RTIP) projects. |
+| [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining) | Analysis to develop a geographic feature overlay which represents geographies within the Bay Area which are excluded from recently passed SB-35 Affordable Housing Streamlining Bill. |
 | [SB9 Housing Development; Approvals (Atkins, 2021)](SB9-Housing-Development-Approvals) | Analysis to identify parcels subject to California Senate Bill 9 in the San Francisco Bay Area (Atkins, 2021). |
 | [Single Family Neighborhood Analysis](Single-Family-Neighborhoods-PDA-TPA-Walkable) | Analysis of single-family neighborhoods within Priority Development Areas and Transit Priority Areas. |
 | [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects) | Mapping and analysis of small UZA/Rural Area section 5310 projects. |
