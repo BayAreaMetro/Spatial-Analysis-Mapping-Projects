@@ -41,35 +41,40 @@ The TOC policy will apply in the follow areas:
 
 The TOC policy will not apply around airport air tram stations, including stations at San Francisco International Airport and at Oakland International Airport. Additionally, the policy **only** applies to areas within 1/2 mile of existing or planned fixed guideway transit service (regional rail, light rail, commuter rail, ferry, and bus rapid transit). In the case of planned fixed-guideway service, compliance with the TOC Policy is required prior to the endorsement or allocation of regional discretionary capital funding. As such, stops or stations associated with the following longer term projects were excluded from analysis. Additionally, given its limited capacity, stations served only by Tideline Ferry service were also excluded from analysis. The ReX express project was also excluded from the analysis as the project does not qualify as a BRT. 
 
-| Project Name | Pba50_ID | agency_id | stop_id |
-|---|---|---|---|
-| Hovercraft pilot (not included in shapefile so OK) |  |   |
-| Small-scale ferry | CC-021 |   |
-| Tideline ferry |  | TD |
-| SF historic streetcar extension | SF-024 |   |
-| ReX blue | MU-060 |   |
-| ReX green | MU-061 |   |
-| ReX red | MU-062 |   |
-| 23rd St BRT | CC-015 |   |
-| Geneva-Harney BRT | SF-012 |   |
-| Geary Phase 1 (not tagged in shapefile as BRT so OK) |   |   |
-| Geary Phase 2 | SF-011 |   |
-| El Camino San Mateo | SM-011 |   |
-| El Camino Santa Clara (not tagged in shapefile as BRT so OK) |   |   |
-| Telegraph | MU-033 |   |
-| Appezzato Way | AL-016 |   |
-| BRT to Brentwood | CC-018 |   |
-| | |SI| SI:GA   |
-| | |SI| SI:GG |
-| | |SI| SI:HOT |
-| | |SI| SI:ITA |
-| | |SI| SI:ITG |
-| | |SI| SI:RCC |
-| | |SI| SI:T1 |
-| | |SI| SI:T2 |
-| | |SI| SI:T3 |
-| | |SI| SI:WFR |
-| | |BA| OAKL |
+| Project Name / Stop Name                        | agency_id | stop_id    | exclusion_reason                             |
+|-------------------------------------------------|-----------|------------|----------------------------------------------|
+| Alameda Point BRT                               | AC        | AL-016     |                                              |
+| East Bay BRT                                    | AC        | AL-070     |                                              |
+| El Camino BRT                                   | ST        | SM-011     |                                              |
+| 23rd Street BRT                                 | WC        | CC-015     |                                              |
+| Hercules Train Station                          | Amtrak    | CC-028     |                                              |
+| Oakley Amtrak Platform                          | Amtrak    | CC-030     |                                              |
+| San Rafael Transit Center Relocation            | SO        | MR-017     |                                              |
+| Telegraph Avenue BRT                            | AC        | MU-033     |                                              |
+| Regional Express (ReX) Bus Network - Blue Line  | TBD       | MU-060     |                                              |
+| Regional Express (ReX) Bus Network - Green Line | TBD       | MU-061     |                                              |
+| Regional Express (ReX) Bus Network - Red Line   | TBD       | MU-062     |                                              |
+| Gearey BRT Phase 2                              | SF        | SF-011     |                                              |
+| Geneva-Harney BRT                               | SF        | SF-012     |                                              |
+| Historic Street Car Extension                   | SF        | SF-024     |                                              |
+| Van Ness BRT                                    | SF        | SF-042     | Project built/existing and available in GTFS |
+| San Francisco International Airport             | SI        | SI:GA      |                                              |
+| San Francisco International Airport             | SI        | SI:GG      |                                              |
+| San Francisco International Airport             | SI        | SI:HOT     |                                              |
+| San Francisco International Airport             | SI        | SI:ITA     |                                              |
+| San Francisco International Airport             | SI        | SI:ITG     |                                              |
+| San Francisco International Airport             | SI        | SI:RCC     |                                              |
+| San Francisco International Airport             | SI        | SI:T1      |                                              |
+| San Francisco International Airport             | SI        | SI:T2      |                                              |
+| San Francisco International Airport             | SI        | SI:T3      |                                              |
+| San Francisco International Airport             | SI        | SI:WFR     |                                              |
+| San Francisco Internation Airport               | BA        | SFIA       |                                              |
+| Oakland International Airport Station           | BA        | OAKL       |                                              |
+| Davis                                           | AM        | AM:DAV     | Stop Outside Bay Area                        |
+| Sacramento                                      | AM        | AM:SAC     | Stop Outside Bay Area                        |
+| Stockton Station                                | CE        | CE:3400001 | Stop Outside Bay Area                        |
+| Lathrop/Manteca Station                         | CE        | CE:3400002 | Stop Outside Bay Area                        |
+| Tracy Station                                   | CE        | CE:3400003 | Stop Outside Bay Area                        |
 
 #### Residential Densities 
 
