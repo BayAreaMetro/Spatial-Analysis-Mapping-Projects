@@ -1,0 +1,9 @@
+factors,mean,std,plus_half_sd,plus_one_sd,plus_one_half_sd
+Seniors 75 Years and Over,0.07,0.05,0.1,0.12,0.15
+Minorities,0.6,0.23,0.72,0.83,0.94
+Limited English Proficiency,0.07,0.08,0.11,0.15,0.19
+Single Parent Families,0.12,0.09,0.16,0.21,0.26
+Low-Income (<200% Federal Poverty Level-FPL),0.19,0.13,0.26,0.32,0.38
+People with Disability,0.1,0.05,0.12,0.15,0.18
+Zero-Vehicle Household,0.09,0.14,0.16,0.23,0.3
+Rent-Burdened,0.1,0.08,0.14,0.18,0.22
