@@ -9,18 +9,18 @@ Documentation Status: **DRAFT**
 - [Methodology](#methodology)
 
 # Purpose
-The purpose of this repository is to document the Bus AID Hotspot Analysis project.
+The purpose of this repository is to document the geospatial analyses being conducted as part of the Bus Accelerated Infrastructure Delivery (BusAID) program.  
 
 # Description
-The Bus AID Hotspot Analysis is being carried out collaboratively between the DataViz and Regional Network Management (RNM) teams. The RNM team leading the Bus Accelerated Infrastructure Delivery (BusAID) program, is working to inventory transit operator-identified "hotspot" locations throughout the Bay Area with transit speed and reliability issues, score these hotspot locations, and fund quick-build projects at the highest scoring locations. To score projects, the team is using criteria related to transit ridership, potential delay reduction, equity considerations, and presence of Priority Development Areas (PDAs). 
+BusAID geospatial analyses are being carried out collaboratively between the DataViz and Regional Network Management (RNM) teams. The RNM team, leading the BusAID program, is working to inventory transit operator-identified "hotspot" locations throughout the Bay Area with transit speed and reliability issues, score these hotspot locations, and fund quick-build projects at the highest scoring locations. To score projects, the team is using criteria related to transit ridership, potential delay reduction, equity considerations, and presence of Priority Development Areas (PDAs). 
 
 The goal of this project is to develop an automated, repeatable geospatial analysis process related to the equity and PDA criteria mentioned above. 
 
 # Parameters
 
-1. Provide number of Equity Priority Area (EPC) Census Tracts served by all transit routes passing through hotspot locations as a share of total census tracts served by all transit routes passing through hotspot locations.
-2. Provide number of transit routes passing through hotspot locations that serve PDA(s) as a share of total transit routes passing through hotspot locations.
-3. Provide demographic data for census tracts served by transit routes passing through hotspot locations. 
+1. For each hotspot, provide the number of Equity Priority Area (EPC) census tracts served by all transit routes passing through the hotspot as a share of total census tracts served by all transit routes passing through the hotspot. Break out EPC census tracts served into “high”, “higher”, and “highest” EPC classifications. 
+2. For each hotspot, provide the number of transit routes that serve PDA(s) as a share of total transit routes passing through the hotspot.
+3. For each hotspot, provide demographic data for all census tracts served by all transit routes passing through the hotspot. 
 
 # Project Resources
 
