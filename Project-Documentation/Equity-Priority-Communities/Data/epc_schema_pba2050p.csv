@@ -1,16 +1,14 @@
 Field Name,Alias,Data Type,ACS Calculations,ACS Definition or EPC Definition ,Domain
 tract_geoid,Geographic ID,TEXT,,Geographic Identifier,
 county_fip,County FIPS,DOUBLE,,Federal Information Processing Standard,
-tot_pop,Total Population,LONG,B03002_001E,Universe: Total Population,
+tot_pop_poc,Total Population Hispanic or Latino Origin by Race,LONG,B03002_001E,Universe: Total Population,
+tot_pop_se,Total Population Sex by Age,LONG,B01001_001E,Universe: Total Population,
 tot_pop_po,Total Low Income Population,LONG,C17002_001E,Universe: Total population for whom poverty status is determined,
 tot_pop_ci,Total Civilian Noninstitutionalized Population,LONG,C18108_001E,Universe: Total civilian noninstitutionalized population,
-tot_pop_mi,Total Population Hispanic or Latino Origin by Race,LONG,B03002_001E,Universe: Total Population,
 tot_pop_ov,Total Population Over 5 Nativity by Language Spoken at Home by Ability to Speak English,LONG,B16005_001E,Universe: Total population 5 years and over,
-tot_pop_se,Total Population Sex by Age,LONG,B01001_001E,Universe: Total Population,
 tot_hh,Total Households,LONG,B08201_001E,Universe: Total households,
 tot_fam,Total Families,LONG,B11004_001E,Universe: Families,
-tot_pop_ov,Total Population Over 5,LONG,B16005_001E,Universe: Total population 5 years and over,
-pop_minori,Population People of Color,LONG,B03002_001E - B03002_003E,People of Color population,
+pop_poc,Population People of Color,LONG,B03002_001E - B03002_003E,People of Color population,
 pop_over75,Population Over 75,LONG,B01001_023E + B01001_024E + B01001_025E + B01001_047E + B01001_048E + B01001_049E,Seniors 75 years and over,
 pop_spfam,Population Single Parent Family,LONG,B11004_010E + B11004_016E,Single-parent family,
 pop_lep,Population Limited English Proficiency,LONG,B16005_007E + B16005_008E + B16005_012E + B16005_013E + B16005_017E + B16005_018E + B16005_022E + B16005_023E + B16005_029E + B16005_030E + B16005_034E + B16005_035E + B16005_039E + B16005_040E + B16005_044E + B16005_045E,Limited English proficiency ,
@@ -18,22 +16,22 @@ pop_below2,Population Low Income,LONG,C17002_001E - C17002_008E,Low Income (< 20
 pop_disabi,Population Disabled,LONG,C18108_001E - (C18108_005E + C18108_009E + C18108_013E),People with disability,
 pop_hus_re,Population Rent Burdened,LONG,B25070_010E,Severely rent-burdened household,
 pop_zvhhs,Population Zero Vehicle Household,LONG,B08201_002E,Zero-vehicle household,
-pct_over75,Percent Over 75,DOUBLE,(B01001_023E + B01001_024E + B01001_025E + B01001_047E + B01001_048E + B01001_049E)/B01001_001E,Seniors 75 years and over as a share of total population,
 pct_poc,Percent People of Color,DOUBLE,(B03002_001E - B03002_003E)/B03002_001E,People of Color population as a share of total population,
+pct_over75,Percent Over 75,DOUBLE,(B01001_023E + B01001_024E + B01001_025E + B01001_047E + B01001_048E + B01001_049E)/B01001_001E,Seniors 75 years and over as a share of total population,
 pct_spfam,Percent Single Parent Family,DOUBLE,(B11004_010E + B11004_016E)/B11004_001E,Single-parent family as a share all families,
 pct_lep,Percent Limited English Proficiency,DOUBLE,(B16005_007E + B16005_008E + B16005_012E + B16005_013E + B16005_017E + B16005_018E + B16005_022E + B16005_023E + B16005_029E + B16005_030E + B16005_034E + B16005_035E + B16005_039E + B16005_040E + B16005_044E + B16005_045E)/B16005_001E,Limited English proficiency population as a share of total population 5 years and over,
 pct_below2,Percent Low Income,DOUBLE,C17002_001E - C17002_008E/C17002_001E,Low Income population as a share of total population for whom poverty status is determined,
 pct_disab,Percent Disabled,DOUBLE,(C18108_001E - (C18108_005E + C18108_009E + C18108_013E))/C18108_001E,Disabled population as a share of total civilian noninstitutionalized population,
-pct_zvhhs,Percent Zero Vehicle Household,DOUBLE,B08201_002E/B08201_001E,Zero-vehicle households as a share of total households,
 pct_hus_re,Percent Rent Burdened,DOUBLE,B25070_010E/B08201_001E,Severely rent-burdened household as a share of total renter-occupied housing units,
-over75_1_2,Over 75 Regional Mean Plus Half SD,LONG,,Seniors 75 and over make up over regional mean plus .5 standard deviation of the total poulation in a given Census Tract,0 = False; 1 = True
+pct_zvhhs,Percent Zero Vehicle Household,DOUBLE,B08201_002E/B08201_001E,Zero-vehicle households as a share of total households,
 poc_1_2,People of Color Mean Plus Half SD,LONG,,People of Color make up over regional mean plus .5 standard deviation of the total population in a given Census Tract,0 = False; 1 = True
+over75_1_2,Over 75 Regional Mean Plus Half SD,LONG,,Seniors 75 and over make up over regional mean plus .5 standard deviation of the total poulation in a given Census Tract,0 = False; 1 = True
 spfam_1_2,Single Parent Family Mean Plus Half SD,LONG,,Single-parent families make up over regional mean plus .5 standard deviation of the families in a given Census Tract,0 = False; 1 = True
-disab_1_2,Disabled Mean Plus Half SD,LONG,,Disabled people make up over regional mean plus .5 standard deviation of the total civilian noninstitutionalized population in a given Census Tract,0 = False; 1 = True
 lep_1_2,Limited English Proficiency Mean Plus Half SD,LONG,,People with limited English proficiency make up over regional mean plus .5 standard deviation of the total population 5 years and over in a given Census Tract,0 = False; 1 = True
 below2_1_2,Low Income Mean Plus Half SD,LONG,,Low-income people make up over regional mean plus .5 standard deviation of the total population for whom poverty status is determined in a given Census Tract,0 = False; 1 = True
-zvhh_1_2,Zero Vehicle Household Mean Plus Half SD,LONG,,Zero-vehicle households make up over regional mean plus .5 standard deviation of the total households in a given Census Tract,0 = False; 1 = True
+disab_1_2,Disabled Mean Plus Half SD,LONG,,Disabled people make up over regional mean plus .5 standard deviation of the total civilian noninstitutionalized population in a given Census Tract,0 = False; 1 = True
 hus_re_1_2,Rent Burdened Mean Plus Half SD,LONG,,Severely rent-burdened households make up over regional mean plus .5 standard deviation of total renter-occupied housing units in a given Census Tract,0 = False; 1 = True
+zvhh_1_2,Zero Vehicle Household Mean Plus Half SD,LONG,,Zero-vehicle households make up over regional mean plus .5 standard deviation of the total households in a given Census Tract,0 = False; 1 = True
 epc_2035,Equity Priority Community PBA 2035,LONG,,The Census Tract meets MTC's Plan Bay Area 2035 Equity Priority Community criteria ,1 = False; 1 = True
 epc_2040,Equity Priority Community  PBA 2040,LONG,,The Census Tract meets MTC's Plan Bay Area 2040 Equity Priority Community criteria ,0 = False; 1 = True
 epc_2050,Equity Priority Community PBA 2050,LONG,,The Census Tract meets MTC's Plan Bay Area 2050 Equity Priority Community criteria ,1 = False; 1 = True
