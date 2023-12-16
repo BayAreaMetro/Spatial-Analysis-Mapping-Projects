@@ -26,9 +26,24 @@ The goal of this project is to develop an automated, repeatable geospatial analy
 
 | Purpose | Resource | Description | Location | Link (if any) | Access | Notes |
 |--------|-----------|-------------|----------|---------------|--------|-------|
-| Input | Source Data | Hotspot geospatial data (KMZ points/lines) | Box | [BusAID Hotspot Inventory_v2 (October).kmz ](https://mtcdrive.box.com/s/8sfwj4rcpc1uplg588tp3hxznc83j9m1) | Internal Only  | |
-| Input | Source Data | Hotspot tabluar data (Excel spreadsheet) | Box | [BusAID Hotspot Master List_112823.xlsx](https://mtcdrive.box.com/s/tyl4c2yinhtgp42kzfdqohcg5kzy1kwh) | Internal Only | |
+| Input | Source Data | Hotspot geospatial data (KMZ points/lines) | Box | [Spatial Data](https://mtcdrive.box.com/s/sg1xnjo4vo9m6khs9cmum70r6yhndgbh) | Internal Only  | |
+| Input | Source Data | Hotspot tabular data (Excel spreadsheet) | Box | [BusAID Hotspot Master List_112823.xlsx](https://mtcdrive.box.com/s/tyl4c2yinhtgp42kzfdqohcg5kzy1kwh) | Internal Only | |
 | Input | Source Data | Individual operator hotspot data (Excel spreadsheets) | Box | [Individual Operator Spreadsheets](https://mtcdrive.box.com/s/a60zuajafmaisllxhi7unwbbnlh48qql) | Internal Only | |
+| Input | Source Data | Equity Priority Communities - Plan Bay Area 2050 (EPCs) | ArcGIS Online | [EPCs](https://mtc.maps.arcgis.com/home/item.html?id=28a03a46fe9c4df0a29746d6f8c633c8) | Public | |
+| Input | Source Data | Priority Development Areas - Plan Bay Area 2050 (PDAs) | ArcGIS Online | [PDAs](https://mtc.maps.arcgis.com/home/item.html?id=4df9cb38d77346a289252ced4ffa0ca0) | Public | |
+| Input | Source Data | 511 GTFS Data - November 2023 | Online | [511 GTFS Data](https://511.org/open-data/transit) | Public | Data pulled from the historic feed for November 2023 |
 | Data Catalog | Published Datasets | ArcGIS Online working roup for managing working and draft content | ArcGIS Online | [Bus AID (Private - Working)](https://mtc.maps.arcgis.com/home/group.html?id=0ebbbd31731f41558becf30d5a210752#overview) | Project Collaborators | |
 
 # Methodology
+
+   1. Read input datasets
+   2. Pre-process GTFS transit route data
+      1. Filter to only include bus and Tram, Streetcar, Light Rail transit modes
+      2. Join GTFS agency, route, trip, and shape data into a single dataset
+   3. Pre-process hotspot tabular data
+      1. Remove whitespace from transit routes column
+      2. Split comma separated values into a list of transit routes
+      3. Add transit agency ids that match GTFS data
+      4. Explode transit routes into individual rows (one row per transit route)
+      5. Manually correct transit route ids that do not match GTFS data
+   4. Merge GTFS transit route data with hotspot tabular data
