@@ -22,6 +22,10 @@ The goal of this project is to develop an automated, repeatable geospatial analy
 2. For each hotspot, provide the number of transit routes that serve PDA(s) as a share of total transit routes passing through the hotspot.
 3. For each hotspot, provide demographic data for all census tracts served by all transit routes passing through the hotspot. 
 
+Remove the following hotspots from the analysis:
+- Remove hotspots #108, 109, 110 (WestCAT-identified hotspots) and any routes that only pass through these hotspots. These are being addressed via a DPD Forwards project.
+- Remove hotspots #82, 84, 85 (SFMTA-identified hotspots) and any routes that only pass through these hotspots. SFMTA has decided to withdraw these from consideration for the BusAID program.
+
 # Project Resources
 
 | Purpose | Resource | Description | Location | Link (if any) | Access | Notes |
