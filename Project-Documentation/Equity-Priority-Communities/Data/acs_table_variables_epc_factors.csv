@@ -1,6 +1,6 @@
 ACS_Table_Variable,ACS_Table_Definition,ACS_Table_Variable_Definitnion,Related_EPC_Disadvantage_Factor
-B03002_001E,Hispanic or Latino Origin By Race,Universe: Total population,Minority
-B03002_003E,Hispanic or Latino Origin By Race,Not Hispanic or Latino: White Alone,Minority
+B03002_001E,Hispanic or Latino Origin By Race,Universe: Total population,Person of Color
+B03002_003E,Hispanic or Latino Origin By Race,Not Hispanic or Latino: White Alone,Person of Color
 B01001_001E,Sex by Age,Universe: Total population,Seniors 75 Years and Over
 B01001_023E,Sex by Age,Male: 75 to 79 years,Seniors 75 Years and Over
 B01001_024E,Sex by Age,Male: 80 to 84 years,Seniors 75 Years and Over
