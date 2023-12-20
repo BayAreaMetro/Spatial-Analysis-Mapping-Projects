@@ -20,7 +20,15 @@ The goal of this project is to develop an automated, repeatable geospatial analy
 
 1. For each hotspot, provide the number of Equity Priority Area (EPC) census tracts served by all transit routes passing through the hotspot as a share of total census tracts served by all transit routes passing through the hotspot. Break out EPC census tracts served into “high”, “higher”, and “highest” EPC classifications. 
 2. For each hotspot, provide the number of transit routes that serve PDA(s) as a share of total transit routes passing through the hotspot.
-3. For each hotspot, provide demographic data for all census tracts served by all transit routes passing through the hotspot. 
+3. For each hotspot, summarize the following [Equity Priority Community (EPC)](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Equity-Priority-Communities#summary-of-mtc-epc-demographic-factors--demographic-factor-definitions) population demographic factors for all census tracts served by transit routes passing through hotspots:
+   1. People of Color
+   2. Low Income (< 200% Federal Poverty Level -FPL)
+   3. Limited English Proficiency
+   4. Zero-Vehicle Household
+   5. Seniors 75 Years and Over
+   6. People with Disability	
+   7. Single Parent Families	
+   8. Rent-Burdened
 
 Remove the following hotspots from the analysis:
 - Remove hotspots #108, 109, 110 (WestCAT-identified hotspots) and any routes that only pass through these hotspots. These are being addressed via a DPD Forwards project.
@@ -51,3 +59,4 @@ Remove the following hotspots from the analysis:
       4. Explode transit routes into individual rows (one row per transit route)
       5. Manually correct transit route ids that do not match GTFS data
    4. Merge GTFS transit route data with hotspot tabular data
+   5. 
