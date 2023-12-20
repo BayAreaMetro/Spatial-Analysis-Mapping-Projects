@@ -29,6 +29,9 @@ The goal of this project is to develop an automated, repeatable geospatial analy
    6. People with Disability	
    7. Single Parent Families	
    8. Rent-Burdened
+Additionally, summarize the following:
+   1. Total population
+   2. Total households
 
 Remove the following hotspots from the analysis:
 - Remove hotspots #108, 109, 110 (WestCAT-identified hotspots) and any routes that only pass through these hotspots. These are being addressed via a DPD Forwards project.
