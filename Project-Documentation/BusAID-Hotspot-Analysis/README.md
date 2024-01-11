@@ -29,7 +29,8 @@ The goal of this project is to develop an automated, repeatable geospatial analy
    6. People with Disability	
    7. Single Parent Families	
    8. Rent-Burdened
-Additionally, summarize the following:
+   
+   Additionally, summarize the following:
    1. Total population
    2. Total households
 
