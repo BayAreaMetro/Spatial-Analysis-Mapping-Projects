@@ -21,6 +21,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 | [Air District Language Access Plan Maps](Air-District-Language-Access-Plan) |Maps in support of the Air District's Language Access Plan that highlight Limited-English Proficient populations through the Bay Area region. |
 | [Bay Trail Safe Routes To Transit](Bay-Trail-Safe-Routes-To-Transit) | Analysis to evaluate potential high-frequency transit  connections for cyclists commuting on active sections of the Bay Trail. |
 | [Bay Trail Wilson Ave Vallejo DACs](BayTrail-Wilson-Ave-Vallejo-DACs) | Analysis of Disadvantaged Communities within a half-mile and one-mile of a new Bay Trail facility in Vallejo. |
+| [BusAID Hotspot Analysis]("BusAID-Hotspot-Analysis") | Geospatial analysis supporting the Bus Accelerated Infrastructure Delivery (BusAID) program. Provides summaries of tracts served by hotspot transit routes, hotspot transit routes serving PDAs, and demographic summaries based on Equity Priority Community (EPC) demographics by hotspot. |
 | [CASA](CASA) | Analysis to identify the geographic impacts of the CASA compact. |
 | [COC TPA Thresholds App](COC-TPA-Thresholds-App) | Documentation for work requested by the CASA Geography Working Group which was formed to identify areas of concern or "sensitive communities" in the 9-County Bay Area. |
 | [Equity Priority Communities](Equity-Priority-Communities) | Analysis and mapping of Equity Priority Communities (EPCs)- the equity analysis framework for Plan Bay Area 2050. |
