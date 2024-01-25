@@ -1,18 +1,18 @@
-tract_geoid,epc_2050,epc_2050p_2021,epc_2050p_2022,epc_change_2018_2022,epc_change_2021_2022,epc_determination_change_2018_2022,epc_determination_change_2021_2022,research_area
-06001422000,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds,West Berkeley
-06013303207,,1.0,1.0,EPCs in neither,EPCs in both,Neither set of factors exceed thresholds,Both sets of factors exceed thresholds,Antioch/Brentwood
-06013372000,1.0,1.0,0.0,Former EPC,Former EPC,Following factors no longer exceed thresholds: Low-Income,Following factors no longer exceed thresholds: Low-Income,North Richmond
-06041104102,0.0,0.0,1.0,New EPC,New EPC,"Following factors now exceed thresholds: Single Parent Family, Limited English Proficiency",Following factors now exceed thresholds: Limited English Proficiency,Novato
-06041129000,1.0,1.0,0.0,Former EPC,Former EPC,Following factors no longer exceed thresholds: People of Color,Following factors no longer exceed thresholds: Disability,Marin City
-06055201005,0.0,0.0,1.0,New EPC,New EPC,Following factors now exceed thresholds: Low-Income,Following factors now exceed thresholds: Low-Income,American Canyon
-06055202000,1.0,0.0,0.0,Former EPC,EPCs in neither,"Following factors no longer exceed thresholds: Low-Income, Single Parent Family, Limited English Proficiency, Disability",Neither set of factors exceed thresholds,Calistoga
-06075017700,0.0,0.0,1.0,New EPC,New EPC,"Following factors now exceed thresholds: Low-Income, Single Parent Family, Rent Burdened","Following factors now exceed thresholds: Low-Income, Rent Burdened",East Mission
-06075033203,0.0,1.0,1.0,New EPC,EPCs in both,Following factors now exceed thresholds: Single Parent Family,Both sets of factors exceed thresholds,Parkmerced
-06075061000,0.0,1.0,1.0,New EPC,EPCs in both,Following factors now exceed thresholds: Low-Income,Both sets of factors exceed thresholds,Candlestick Point
-06075980600,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds,Hunters Point
-06081602300,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds,South SF
-06081611700,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds,Menlo Park
-06085505202,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds,Santa Clara
-06085513000,0.0,0.0,1.0,New EPC,New EPC,Following factors now exceed thresholds: Single Parent Family,Following factors now exceed thresholds: Single Parent Family,Stanford
-06095252702,0.0,0.0,1.0,New EPC,New EPC,"Following factors now exceed thresholds: Low-Income, People of Color",Following factors now exceed thresholds: People of Color,Suisun
-06095253402,1.0,0.0,0.0,Former EPC,EPCs in neither,"Following factors no longer exceed thresholds: Low-Income, Seniors 75 Years and Over, Limited English Proficiency, Disability",Neither set of factors exceed thresholds,Dixon
+tract_geoid,research_area,epc_2050,epc_2050p_2021,epc_2050p_2022,epc_change_2018_2022,epc_change_2021_2022,epc_determination_change_2018_2022,epc_determination_change_2021_2022
+06001422000,West Berkeley,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds
+06013303207,Antioch/Brentwood,,1.0,1.0,EPCs in neither,EPCs in both,Neither set of factors exceed thresholds,Both sets of factors exceed thresholds
+06013372000,North Richmond,1.0,1.0,0.0,Former EPC,Former EPC,Following factors no longer exceed thresholds: Low-Income,Following factors no longer exceed thresholds: Low-Income
+06041104102,Novato,0.0,0.0,1.0,New EPC,New EPC,"Following factors now exceed thresholds: Single Parent Family, Limited English Proficiency",Following factors now exceed thresholds: Limited English Proficiency
+06041129000,Marin City,1.0,1.0,0.0,Former EPC,Former EPC,Following factors no longer exceed thresholds: People of Color,Following factors no longer exceed thresholds: Disability
+06055201005,American Canyon,0.0,0.0,1.0,New EPC,New EPC,Following factors now exceed thresholds: Low-Income,Following factors now exceed thresholds: Low-Income
+06055202000,Calistoga,1.0,0.0,0.0,Former EPC,EPCs in neither,"Following factors no longer exceed thresholds: Low-Income, Single Parent Family, Limited English Proficiency, Disability",Neither set of factors exceed thresholds
+06075017700,East Mission,0.0,0.0,1.0,New EPC,New EPC,"Following factors now exceed thresholds: Low-Income, Single Parent Family, Rent Burdened","Following factors now exceed thresholds: Low-Income, Rent Burdened"
+06075033203,Parkmerced,0.0,1.0,1.0,New EPC,EPCs in both,Following factors now exceed thresholds: Single Parent Family,Both sets of factors exceed thresholds
+06075061000,Candlestick Point,0.0,1.0,1.0,New EPC,EPCs in both,Following factors now exceed thresholds: Low-Income,Both sets of factors exceed thresholds
+06075980600,Hunters Point,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds
+06081602300,South SF,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds
+06081611700,Menlo Park,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds
+06085505202,Santa Clara,1.0,0.0,0.0,Former EPC,EPCs in neither,Following factors no longer exceed thresholds: Low-Income,Neither set of factors exceed thresholds
+06085513000,Stanford,0.0,0.0,1.0,New EPC,New EPC,Following factors now exceed thresholds: Single Parent Family,Following factors now exceed thresholds: Single Parent Family
+06095252702,Suisun,0.0,0.0,1.0,New EPC,New EPC,"Following factors now exceed thresholds: Low-Income, People of Color",Following factors now exceed thresholds: People of Color
+06095253402,Dixon,1.0,0.0,0.0,Former EPC,EPCs in neither,"Following factors no longer exceed thresholds: Low-Income, Seniors 75 Years and Over, Limited English Proficiency, Disability",Neither set of factors exceed thresholds
