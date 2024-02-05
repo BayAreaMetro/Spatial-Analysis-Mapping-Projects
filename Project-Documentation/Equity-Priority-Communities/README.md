@@ -90,6 +90,57 @@ The link below provides the EPC schema and domains, along with calculations and 
 | People with Disability                         | C18108_001E - (C18108_005E + C18108_009E + C18108_013E)                                                                                                                                                                       | (C18108_001E -(C18108_005E + C18108_009E + C18108_013E))/C18108_001E                                                                                                                                                                       |
 | Single-Parent Family                           | B11004_010E + B11004_016E                                                                                                                                                                                                     | (B11004_010E + B11004_016E)/B11004_001E                                                                                                                                                                                                    |
 | Severely Rent-Burdened Household               | B25070_010E                                                                                                                                                                                                                   | B25070_010E/B08201_001E                                                                                                                                                                                                                    |
+## Processing Notes
+
+### 2020 Decennial Census Boundary Changes
+Several important changes to Census geographies occurred between 2010 and 2020, which impact the current update to Equity Priority Communities. Many statistical areas, like census tracts and block groups, are updated once per decade to reflect shifts in population and development patterns reported through the decennial Census. Census Bureau guidelines recommend that Census tracts be merged with adjacent tracts when the population is below 1,200 or housing units are below 480. Guidelines recommend splits when tract population is above 8,000 or housing units exceed 3,200. The American Community Survey (ACS) publishes estimates using vintages, representing the latest available geographic boundaries. For the ACS 5-year estimates, the vintage is the last year of the multi-year period.2 For Plan Bay Area 2050, the adopted EPCs are based on ACS 2014-2018 which used 2018 vintage boundaries last changed in 2010. The latest update uses ACS 2018-2022, which uses 2022 vintage boundaries, which were last updated in 2020.  
+
+All counties saw an increase in the number of tracts between Plan Bay Area 2050 and the current update to Plan Bay Area 2050+ EPCs, which the exception of Napa which remained unchanged as shown in Table 1. Census boundaries can be split or merged, or in some cases, boundaries can be modified to enlarge or shrink existing tracts posing challenges for comparisons. Previous updates have contextualized change in terms of absolute values; however, this memorandum will contextualize change in terms of shares due to changes in tract boundaries. 
+
+**Table 1: Change in Number of Tracts by County**
+
+|       county        |      # Tracts PBA 2050 (ACS 2014-2018)  |      # Tracts PBA 2050+ (ACS 2018-2022)   |      Net Change  |
+|---------------------|-----------------------------------------|-------------------------------------------|------------------|
+|      Alameda        |     361                                 |     379                                   |     18           |
+|      Contra Costa   |     208                                 |     242                                   |     34           |
+|      Marin          |     56                                  |     63                                    |     7            |
+|      Napa           |     40                                  |     40                                    |     0            |
+|      San Francisco  |     197                                 |     244                                   |     47           |
+|      San Mateo      |     158                                 |     174                                   |     16           |
+|      Santa Clara    |     372                                 |     408                                   |     36           |
+|      Solano         |     96                                  |     100                                   |     4            |
+|      Sonoma         |     100                                 |     122                                   |     22           |
+|      Total          |     1588                                |     1772                                  |     184          |
+
+Sources:
+- [U.S. Census Bureau, 2018 November 19, 2020 Census Participant Statistical Areas Program (PSAP) Quick Reference: Census Tracts](https://www2.census.gov/geo/pdfs/partnerships/psap/G-650.pdf)
+- [U.S Census Bureau, Geography and the American Community Survey: What Data Users Need to Know. Census.gov](https://www.census.gov/programs-surveys/acs/library/handbooks/geography.html)
+
+### Impact of COVID-19 Pandemic on American Community Survey (ACS) Data Collection
+In 2020-2021, the American Community Survey (ACS) faced significant hurdles in data collection due to the COVID-19 pandemic, resulting in only two-thirds of the typical responses being gathered. In 2020, the ACS changed their survey collection protocol, suspending mail operations starting mid-March through June 2020. Limited mail operations were resumed in July 2020. The full 5-piece mail strategy was resumed in April 2021, impacting both 2020 and 2021 collection. During this modified protocol, the internet option was available only to a subset of the full sample due to reduced mailings during April-June 2020.3   
+
+Consequently, the 2020 segment of the 2016-2020 5-year estimates experienced a notable increase in margins of error, rising by approximately 15-20% relative to previous years. This spike underscores the importance of considering margins of error, particularly in comparisons involving smaller geographic areas or populations, where accuracy is paramount. Moreover, comparing the 2016-2020 ACS 5-year estimates presents additional challenges. Changes in weighting methodologies were introduced to mitigate nonresponse bias issues specific to the 2020 dataset, but the dynamic nature of population changes and the ACS's ability to capture them pose ongoing challenges. Multiyear estimates tend to smooth out abrupt shifts, potentially obscuring meaningful fluctuations, while the absence of 2020 Census results further complicates population controls within the ACS framework. These complexities emphasize the necessity of a nuanced approach and cautious interpretation when utilizing and comparing the 2016-2020 ACS 5-year estimates in analytical contexts.4  
+
+ACS 2016-2020 estimates were not the only ones impacted by COVID-19 data collection issues. According to the user notes the Census Bureau continues to publish data despite it not meeting their quality standards, meaning that margins of error are higher than is typical. Users are cautioned about using estimates with high margins or error and the Census anticipates that these errors will persist in future 5-year products containing 2020 data including ACS 2018-2022.
+
+Sources:
+- [U.S. Census Bureau, 2021 November 5, American Community Survey Impact from the COVID-19 Pandemic](https://www2.census.gov/about/partners/cac/nac/meetings/2021-11/presentation-american-community-survey-experience-2020-data.pdf)
+- [U.S. Census Bureau, Experimental Data and the Impact of ACS Collection Challenges on CTPP and other Data Products](https://transportation.org/ctpp/wp-content/uploads/sites/83/2023/08/Raglin_Experimental-Data.pdf)
+- [U.S. Census Bureau, Increased Margins of Error in the 5-Year Estimates Containing Data Collected in 2020. Census.gov](https://www.census.gov/programs-surveys/acs/technical-documentation/user-notes/2022-04.html)
+
+### Understanding American Community Survey Estimates
+MTC relies heavily on the American Community Survey to understand regional social, housing, economic and demographic change. Every four years Equity Priority Communities data are updated using ACS data which informs planning, investment, and community engagement decision making. Given the importance of these data to our region, it is essential that decision makers have a clear understanding of the product and how it should be used. 
+
+Unlike the Census, ACS estimates are “period estimates” meaning they represent data for a specific period of time rather than for a specific date. The ACS collects surveys over the course of a year for 1-year estimates and over 5-years for 5-year estimates. It is often assumed that the methodology applied to develop 5-year estimates involves taking 1-year estimates, adding them up, and dividing by 5. However, data collected over the period are pooled together, weighted, and processed taking advantage of the larger sample size.  
+
+The ACS releases updated 5-year estimates each year, or what is known as a “rolling 5-year period”. Data from the oldest year gets dropped and data for the newest year included, in other words 40% of the data changes. It is common for users interested in comparing how data have changed from one period to the next, however that is a statistically inaccurate approach. For example, users trying to understand the impact of the COVID-19 pandemic might try to compare data from overlapping 5-year periods such as between 2015-2019 and 2016-2020. Instead of comparing the difference between 2019 and 2020, users are measuring the difference between the nonoverlapping portions 2015 and 2020. Because of this, the Census Bureau strongly recommends against comparing estimates in overlapping 5-year periods since much of the data in each estimate are the same.  Figure 1 below provides examples of ACS 5-Year period estimates that would be accurate to compare.  
+
+**Figure 1: Example Highlighting Nonoverlapping ACS 5-Year Estimates**
+
+![ACS 5-Year Period Estimates](Image/non_overlaping_acs_example.png)
+
+Sources:
+- [U.S. Census Bureau, Period Estimates in the American Community Survey. Census.gov](https://www.census.gov/newsroom/blogs/random-samplings/2022/03/period-estimates-american-community-survey.html)
 
 ## Expected Outcomes
 
