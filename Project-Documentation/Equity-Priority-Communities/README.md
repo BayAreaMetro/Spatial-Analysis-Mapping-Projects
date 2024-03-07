@@ -150,8 +150,8 @@ Sources:
 ## Expected Outcomes
 
 - Feature class that contains Census Tracts meeting MTC Equity Priority Communities criteria
-	- Feature class name: 
-	- [Feature Class Schema](Data/EPC_Schema_pba2050.csv) 
+	- Feature class name: Equity Priority Communities - Plan Bay Area 2050 Plus (ACS 2022)
+	- [Feature Class Schema](Data/epc_schema_pba2050p.csv)
 - Web layer that contains Census Tracts meeting MTC Equity Priority Communities criteria 
 - Print map of MTC Equity Priority Communities
 
