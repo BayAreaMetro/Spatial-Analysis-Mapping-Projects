@@ -40,7 +40,7 @@ The 2024 update of MTC's Equity Priority Communities follows the Equity Priority
 
 ### Equity Priority Communities Framework Plan Bay Area 2050+
 
-| Demographic Factor                               | Mean of  Tract-Level Shares | Standard  Deviation  (SD) | .5 SD  _PBA2050+ Threshold_ (High EPC) | 1 SD  (Higher EPC) | 1.5 SD  (Highest EPC) |
+| Demographic Factor                               | Mean of Tract-Level Shares  | Standard Deviation (SD)   | .5 SD PBA2050+ Threshold (High EPC)    | 1 SD (Higher EPC)  | 1.5 SD (Highest EPC)  |
 |--------------------------------------------------|-----------------------------|---------------------------|----------------------------------------|--------------------|-----------------------|
 | **People of Color**                              | 61%                         | 23%                       | 72%                                    | 84%                | 96%                   |
 | **Low-Income (<200% Federal Poverty Level-FPL)** | 18%                         | 13%                       | 24%                                    | 31%                | 38%                   |
@@ -158,10 +158,10 @@ Sources:
 ## Results
 
 - [PBA 2050+ Equity Priority Communities - ACS 2022](Data/epc_acs2022.csv)
-- [PBA 2050+ Equity Priority Communities - ACS 2022 Web Layer (Not Published Yet)]()
-- [PBA 2050+ Equity Priority Communities Print Map (Internal)](https://mtcdrive.box.com/s/k5brposx9cv4vwimu4g06240i1p7ak7k)
-- [PBA 2050 and PBA 2050+ Equity Priority Communities Comparison Map (Internal)](https://mtcdrive.box.com/s/r052gafjftdazgtujhh9y4bci20wj6ku)
-- [PBA 2050 and PBA 2050+ Equity Priority Communities Comparison Interactive Web Map (Internal)](https://experience.arcgis.com/experience/44ea7e82901e4132bc577328cec515ef/)
+- [PBA 2050+ Equity Priority Communities - ACS 2022 Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=1ae2ccc15b4a4fe9a6d0cd84ae47f2a5)
+- [PBA 2050+ Equity Priority Communities Print Map](https://mtcdrive.box.com/s/k5brposx9cv4vwimu4g06240i1p7ak7k)
+- [PBA 2050 and PBA 2050+ Equity Priority Communities Comparison Maps](https://mtcdrive.box.com/s/ho68r7yun5kogcphe171wfdoxeujsqgq)
+- [PBA 2050 and PBA 2050+ Equity Priority Communities Comparison Interactive Web Map](https://experience.arcgis.com/experience/44ea7e82901e4132bc577328cec515ef)
 - [Equity Priority Communities Comparison Tool Tableau (Internal)](https://10ay.online.tableau.com/#/site/metropolitantransportationcommission/workbooks/1400140/views)
 
 
