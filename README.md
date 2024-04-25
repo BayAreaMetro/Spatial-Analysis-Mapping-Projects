@@ -2,7 +2,6 @@
 
 # Spatial Analysis & Mapping 
 
-## Table of Contents 
+### [Project Documentation](Project-Documentation)
 
-- [Project Documentation](Project-Documentation)
-- [Best Practices and Procedures](Best-Practices-Procedures)
+Note: Best Practices and Procedures have been migrated to [Best Practices + Procedures](https://github.com/BayAreaMetro/dataviz-project-resources/tree/main/Best%20Practices%20%2B%20Procedures) in **dataviz-project-resources**
