@@ -15,6 +15,7 @@ Project-Documentation/Covid-Transit-Mapping/agolpassword.txt
 Project-Documentation/Communities-of-Concern/.ipynb_checkpoints/Investigate Discrepancy between SPFAM ACS2014 and ACS2018 Data -checkpoint.ipynb
 Project-Documentation/FastTrak-Start-Pilot-LEP-Analysis/.ipynb_checkpoints/FastTrak-Start-Pilot-Program-checkpoint.ipynb
 *.geojson
+*.json
 *.shx
 *.prj
 *.dbf
