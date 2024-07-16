@@ -1,0 +1,6 @@
+geopandas==0.14.2
+mappymatch==0.4.4
+networkx==3.2.1
+osmnx==1.9.3
+pandas==2.2.2
+Shapely==2.0.5
