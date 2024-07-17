@@ -1,4 +1,3 @@
-import os
 import sys
 import warnings
 import getpass
@@ -7,6 +6,7 @@ import osmnx as ox
 import networkx as nx
 import pandas as pd
 import geopandas as gpd
+from config import location_path, trip_path, gpkg_path
 
 user = getpass.getuser().lower()
 
@@ -209,10 +209,10 @@ def concatenate_matched_gdfs(matched_traces, match_type="matched_gdf"):
     for trace_dict in matched_traces:
         # check if the match type is in the trace dictionary
         if match_type not in list(trace_dict.keys()):
-            print(f"Match type {match_type} not found in trace dictionary. Skipping.")
+            # print(f"Match type {match_type} not found in trace dictionary. Skipping.")
             continue
         else:
-            print(f"Match type {match_type} found in trace dictionary.")
+            # print(f"Match type {match_type} found in trace dictionary.")
             matched_gdfs.append(trace_dict[match_type])
     matched_gdf = pd.concat(matched_gdfs)
 
@@ -247,35 +247,19 @@ def write_matched_gdfs(match_result, file_path):
     matched_gdf.to_file(file_path, layer="matched_gdf", driver="GPKG")
     matched_path_gdf.to_file(file_path, layer="matched_path_gdf", driver="GPKG")
 
-if __name__ == "__main__":
 
-    ## Define file name
-    location_tbl = "location.csv"
-    trip_tbl = "trip.csv"
+def read_and_merge_data(location_path, trip_path):
+    """Read location and trip data and merge them on trip_id
 
-    ## Define Box System Root Directory
-    box_dir = os.path.join("/Users", user, "Library", "CloudStorage", "Box-Box")
+    Args:
+        location_path (String): Path to the location csv file.
+        trip_path (String): Path to the trip csv file.
 
-    ## Define BAUS directory on Box for .csv output files
-    file_dir = os.path.join(
-        box_dir,
-        "Modeling and Surveys",
-        "Surveys",
-        "Travel Diary Survey",
-        "Biennial Travel Diary Survey",
-        "Data",
-        "2023",
-        "Full Unweighted 2023 Dataset",
-    )
-
-    location_path = os.path.join(file_dir, location_tbl)
-    trip_path = os.path.join(file_dir, trip_tbl)
-
-    # read location and trip
+    Returns:
+        DataFrame: Merged DataFrame with location and trip data.
+    """
     location_df = pd.read_csv(location_path)
     trip_df = pd.read_csv(trip_path)
-
-    # merge trips with locations
     trip_locations = pd.merge(
         location_df,
         trip_df[
@@ -292,35 +276,82 @@ if __name__ == "__main__":
         ],
         on="trip_id",
     )
+    return trip_locations
 
-    trip_locations.head()
 
-    # filter trips_locations to only include trips with mode 8 in mode_1 or mode_2 or mode_3 or mode_4 columns with origins and destinations in region
+def filter_trips(trip_locations):
+    """Filter trips to include only the following modes:
+    5. Taxi
+    6. TNC
+    8. Car
+    9. Carshare
+    11. Shuttle/vanpool
+
+    Args:
+        trip_locations (DataFrame): DataFrame with location and trip data.
+
+    Returns:
+        DataFrame: Filtered DataFrame with trips that meet the criteria.
+    """
     car_trips = trip_locations[
-        ((trip_locations["mode_type"].isin([5, 6, 8, 9, 11]))) & (trip_locations["o_in_region"] == 1)
+        ((trip_locations["mode_type"].isin([5, 6, 8, 9, 11])))
+        & (trip_locations["o_in_region"] == 1)
         | (trip_locations["d_in_region"] == 1)
     ]
+    return car_trips
 
-    unique_trips = car_trips["trip_id"].unique()
 
-    print("Unique trip count " + str(unique_trips.shape[0]))
+def main(
+    location_path,
+    trip_path,
+    gpkg_path,
+    geofence_buffer=1000,
+    network_type=NetworkType.DRIVE,
+):
+    """Main function to process trip data and write matched traces to a geopackage.
 
-    test_list = unique_trips[:1000]
-    car_trips_test = car_trips[car_trips["trip_id"].isin(test_list)]
-    batch_traces_test = create_batch_traces(car_trips_test, trip_id_column="trip_id", xy=True)
-    # batch_traces = create_batch_traces(car_trips, trip_id_column="trip_id", xy=True)
+    Args:
+        location_path (str): Path to the location csv file.
+        trip_path (str): Path to the trip csv file.
+        gpkg_path (str): Path to the output geopackage file.
+        geofence_buffer (int, optional): Buffer distance around trip traces. Defaults to 1000 meters.
+        network_type (Enumerator, optional): Enumerator for Network Types supported by osmnx. Defaults to NetworkType.DRIVE.
+    Returns:
+        None
+    """
+    # read and merge location and trip data
+    print("Reading and merging data...")
+    trip_locations = read_and_merge_data(location_path, trip_path)
 
-    # ## Match using the LCSS matching algorithm
+    # filter trips
+    print("Filtering trips...")
+    # get unique trip ids
+    car_trips = filter_trips(trip_locations)
+    unique_ids = car_trips["trip_id"].unique()
+    print(f"Number of unique trip ids: {len(unique_ids)}")
 
+    # create a batch of traces
+    print("Creating batch traces...")
+
+    # test with a subset of trip ids
+    unique_ids = unique_ids[:1000]
+    car_trips = car_trips[car_trips["trip_id"].isin(unique_ids)]
+    batch_traces = create_batch_traces(car_trips, "trip_id")
 
     now = datetime.now()
-    match_result_test = batch_process_traces_parallel(
-            batch_traces_test, geofence_buffer=1000, network_type=NetworkType.DRIVE
-        )
+    # process traces in parallel
+    print("Processing traces in parallel...")
+    matched_traces = batch_process_traces_parallel(
+        traces=batch_traces, geofence_buffer=geofence_buffer, network_type=network_type
+    )
     later = datetime.now()
     print(f"Multiprocessing took: {later - now}")
 
     # write the matched gdfs to a geopackage
-    out_file_path = f"/Users/{user}/Library/CloudStorage/Box-Box/DataViz Projects/Spatial Analysis and Mapping/TDS Conflation/Data"
-    gpkg_path = os.path.join(out_file_path, "tds_conflation_results.gpkg")
-    write_matched_gdfs(match_result, gpkg_path)
+    print("Writing matched gdfs to geopackage...")
+    write_matched_gdfs(matched_traces, gpkg_path)
+
+    print("Processing complete.")
+
+if __name__ == "__main__":
+    main(location_path=location_path, trip_path=trip_path, gpkg_path=gpkg_path)
