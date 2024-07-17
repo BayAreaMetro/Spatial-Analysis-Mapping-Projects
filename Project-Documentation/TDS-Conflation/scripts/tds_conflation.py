@@ -301,7 +301,6 @@ def filter_trips(trip_locations):
     ]
     return car_trips
 
-
 def main(
     location_path,
     trip_path,
@@ -320,6 +319,7 @@ def main(
     Returns:
         None
     """
+
     # read and merge location and trip data
     print("Reading and merging data...")
     trip_locations = read_and_merge_data(location_path, trip_path)
@@ -359,7 +359,6 @@ def main(
     print("Cache directory deleted.")
 
     print("Processing complete.")
-
 
 if __name__ == "__main__":
     main(location_path=location_path, trip_path=trip_path, gpkg_path=gpkg_path)
