@@ -44,6 +44,7 @@ To get started with a spatial analysis or mapping project follow the steps outli
 | [SB9 Housing Development; Approvals (Atkins, 2021)](SB9-Housing-Development-Approvals) | Analysis to identify parcels subject to California Senate Bill 9 in the San Francisco Bay Area (Atkins, 2021). |
 | [Single Family Neighborhood Analysis](Single-Family-Neighborhoods-PDA-TPA-Walkable) | Analysis of single-family neighborhoods within Priority Development Areas and Transit Priority Areas. |
 | [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects) | Mapping and analysis of small UZA/Rural Area section 5310 projects. |
+| [TDS Conflation](TDS-Conflation) | Documentation for the conflation of Travel Diary Survey trip data using the OpenStreetMap network. |
 | [TIP OBAG2 Investment Analysis](TIP-OBAG2-Investment-Analysis) | Analysis of OBAG 2.0 projects within PDAs/TPAs and outside PDAs/TPAs. |
 | [TMC overlaps and flipped vertices](TMC-overlaps-and-flipped-vertices) | Documentation of fixes for INRIX data used to support Vital Signs Congestion metrics. |
 | [Transit Oriented Communities](Transit-Oriented-Communities) | Documentation of the process for identifying Transit Oriented Community (TOC) Policy eligibility areas and to assess baseline residential and commercial zoning within TOC eligible areas. |
