@@ -11,6 +11,9 @@
 
 import os
 import sys
+import warnings
+import osmnx as ox
+import networkx as nx
 import pandas as pd
 import geopandas as gpd
 import getpass
@@ -25,10 +28,7 @@ from mappymatch.constructs.trace import Trace
 from mappymatch.constructs.geofence import Geofence
 from mappymatch.matchers.lcss.lcss import LCSSMatcher
 from mappymatch.maps.nx.nx_map import NxMap, NetworkType
-
-# ## Define functions
-
-# create a batch process function to create a list of traces
+from shapely.geometry import LineString
 
 
 def create_batch_traces(df, trip_id_column, xy=True):
@@ -52,8 +52,6 @@ def create_batch_traces(df, trip_id_column, xy=True):
             ...
         ]
     """
-    from shapely.geometry import LineString
-
     unique_ids = df[trip_id_column].unique()
     batch_traces = []
     for i in unique_ids:
@@ -84,25 +82,21 @@ def create_batch_traces(df, trip_id_column, xy=True):
     return batch_traces
 
 
-# create a function that takes a list of traces and batch processes them using the LCSS matcher
-
-
-def batch_process_traces(traces, geofence_buffer=1000, network_type=NetworkType.DRIVE):
-    """Batch process traces using the LCSS matcher.
+def process_trace(trace_dict, geofence_buffer, network_type):
+    """Process a single trace using the LCSS matcher.
 
     The function creates a geofence around each trace and creates a networkx graph from the geofence.
-    Returns a list of matched traces.
+    Returns a matched trace dictionary.
 
     Args:
-        traces (List): list of dictionaries with trip_id and trace.
+        trace_dict (dict): dictionary with trip_id and trace.
         geofence_buffer (int, optional): Buffer in meters. Defaults to 100.
         network_type (Enumerator, optional): Enumerator for Network Types supported by osmnx. Defaults to NetworkType.DRIVE.
 
     Returns:
-        List: List of dictionaries with trip_id, trace, matched_result, matched_gdf, and matched_path_gdf.
-        Structure of the list:
-        [
-            {
+        dict: dictionary with trip_id, trace, matched_result, matched_gdf, and matched_path_gdf.
+        Structure of the dictionary:
+        {
             "trip_id": trip_id,
             "trace": trace,
             "unmatched_trips": None or trip_id,
@@ -111,102 +105,10 @@ def batch_process_traces(traces, geofence_buffer=1000, network_type=NetworkType.
             "matched_result": match_result,
             "matched_gdf": matched_gdf,
             "matched_path_gdf": matched_path_gdf,
-            },
-        ...
-        ]
+        }
+
     """
-    import osmnx as ox
-    import networkx as nx
-    import warnings
 
-    processed_trip_count = 0
-    matched_traces = []
-    for trace_dict in traces:
-        try:
-            # create a geofence around the trace
-            geofence = Geofence.from_trace(trace_dict["trace"], padding=geofence_buffer)
-
-            # create a networkx map from the geofence
-            nx_map = NxMap.from_geofence(geofence, network_type=network_type)
-
-            # match the trace to the map
-            matcher = LCSSMatcher(nx_map)
-            match_result = matcher.match_trace(trace_dict["trace"])
-
-            # add full match result to the trace dictionary
-            trace_dict["matched_result"] = match_result
-            matched_traces.append(trace_dict)
-        except Exception as e:
-            warnings.warn(
-                f"The trace with trip_id {trace_dict['trip_id']} encountered an exception: {e}. Adding trip to the unmatched list."
-            )
-            trace_dict["unmatched_trips"] = trace_dict["trip_id"]
-            matched_traces.append(trace_dict)
-            continue
-
-        # check if any road ids within a list of matches are null
-        road_id_check = True
-        for match in match_result.matches:
-            if match.road is None:
-                road_id_check = False
-                break
-
-        if road_id_check == False:
-            warnings.warn(
-                f"The trace with trip_id {trace_dict['trip_id']} has null road_ids meaning there was no match to the network. Adding to the unmatched list."
-            )
-            trace_dict["unmatched_trips"] = trace_dict["trip_id"]
-        else:
-            # create a geodataframe from the matches and add the trip_id; add the match result and matched df to the trace dictionary
-
-            # print(trace_dict["trip_id"]) # debugging
-            matched_df = match_result.matches_to_dataframe()
-            matched_df["trip_id"] = trace_dict["trip_id"]
-            matched_df["road_id"] = matched_df["road_id"]
-            matched_gdf = gpd.GeoDataFrame(matched_df, geometry="geom", crs="EPSG:3857")
-
-            # create a geodataframe from the matched path and add the trip_id; add the match result and matched df to the trace dictionary
-            matched_path_df = match_result.path_to_dataframe()
-            matched_path_df["trip_id"] = trace_dict["trip_id"]
-            matched_path_df["road_id"] = matched_path_df["road_id"]
-            matched_path_gdf = gpd.GeoDataFrame(matched_path_df, geometry="geom", crs="EPSG:3857")
-
-            # add network attributes to the matched gdf and matched path gdf
-            attrs = ["ref", "name", "maxspeed", "highway", "bridge", "tunnel"]
-            for attr in attrs:
-                # get attributes from the raw graph
-                attr_dict = nx.get_edge_attributes(nx_map.g, attr)
-                # add attributes to the matched gdf
-                matched_gdf[attr] = matched_gdf["road_id"].map(attr_dict)
-                # add attributes to the matched path gdf
-                matched_path_gdf[attr] = matched_path_gdf["road_id"].map(attr_dict)
-
-            # Set unmatched_trips to None and add matched_gdf and matched_path_gdf to the trace dictionary
-            trace_dict["unmatched_trips"] = None
-            trace_dict["matched_gdf"] = matched_gdf
-            trace_dict["matched_path_gdf"] = matched_path_gdf
-        # processed_trip_count += 1
-        # print(f"Processed {processed_trip_count} trips.")
-
-    return matched_traces
-
-
-def process_trace(trace_dict, geofence_buffer, network_type):
-    """_summary_
-
-    Args:
-        trace_dict (_type_): _description_
-        geofence_buffer (_type_): _description_
-        network_type (_type_): _description_
-    """
-    # create a function that takes a single trace and processes it using the LCSS matcher
-
-    import osmnx as ox
-    import networkx as nx
-    import warnings
-
-    # processed_trip_count = 0
-    # matched_traces = []
     try:
         # create a geofence around the trace
         geofence = Geofence.from_trace(trace_dict["trace"], padding=geofence_buffer)
@@ -265,20 +167,34 @@ def process_trace(trace_dict, geofence_buffer, network_type):
 
 
 def batch_process_traces_parallel(traces, geofence_buffer=1000, network_type=NetworkType.DRIVE):
-    """_summary_
+    """Batch process traces using the LCSS matcher in parallel using multiprocessing.
 
     Args:
-        traces (_type_): _description_
-        geofence_buffer (int, optional): _description_. Defaults to 1000.
-        network_type (_type_, optional): _description_. Defaults to NetworkType.DRIVE.
+        traces (List): list of dictionaries with trip_id and trace.
+        geofence_buffer (int, optional): Buffer in meters. Defaults to 1000 meters.
+        network_type (Enumerator, optional): Enumerator for Network Types supported by osmnx. Defaults to NetworkType.DRIVE.
 
     Returns:
-        _type_: _description_
+        List: List of dictionaries with trip_id, trace, matched_result, matched_gdf, and matched_path_gdf.
+        Structure of the list:
+        [
+            {
+            "trip_id": trip_id,
+            "trace": trace,
+            "unmatched_trips": None or trip_id,
+            "trace_gdf": trace_gdf,
+            "trace_line_gdf": trace_line_gdf,
+            "matched_result": match_result,
+            "matched_gdf": matched_gdf,
+            "matched_path_gdf": matched_path_gdf,
+            },
+        ...
+        ]
     """
     import concurrent.futures
 
     matched_traces = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
+    with concurrent.futures.ProcessPoolExecutor() as executor:
         # Prepare future tasks
         futures = [
             executor.submit(process_trace, trace, geofence_buffer, network_type) for trace in traces
@@ -286,9 +202,6 @@ def batch_process_traces_parallel(traces, geofence_buffer=1000, network_type=Net
         for future in concurrent.futures.as_completed(futures):
             matched_traces.append(future.result())
     return matched_traces
-
-
-# create a function that takes a list of dictionaries with matched trace geodataframes, concatenates them, and returns a single geodataframe
 
 
 def concatenate_matched_gdfs(matched_traces, match_type="matched_gdf"):
@@ -322,9 +235,6 @@ def concatenate_matched_gdfs(matched_traces, match_type="matched_gdf"):
     return matched_gdf
 
 
-# define a function to concatenate matched gdfs and write each match type to geopackage
-
-
 def write_matched_gdfs(match_result, file_path):
     """Write traces matched with the LCSS matcher to a geopackage.
 
@@ -348,91 +258,83 @@ def write_matched_gdfs(match_result, file_path):
     matched_path_gdf.to_file(file_path, layer="matched_path_gdf", driver="GPKG")
 
 
-# ## Prepare the data
+if __name__ == "__main__":
 
-## Define file name
-location_tbl = "location.csv"
-trip_tbl = "trip.csv"
+    # ## Prepare the data
 
-## Define Box System Root Directory
-box_dir = os.path.join("/Users", user, "Library", "CloudStorage", "Box-Box")
+    ## Define file name
+    location_tbl = "location.csv"
+    trip_tbl = "trip.csv"
 
-## Define BAUS directory on Box for .csv output files
-file_dir = os.path.join(
-    box_dir,
-    "Modeling and Surveys",
-    "Surveys",
-    "Travel Diary Survey",
-    "Biennial Travel Diary Survey",
-    "Data",
-    "2023",
-    "Full Unweighted 2023 Dataset",
-)
+    ## Define Box System Root Directory
+    box_dir = os.path.join("/Users", user, "Library", "CloudStorage", "Box-Box")
 
-location_path = os.path.join(file_dir, location_tbl)
-trip_path = os.path.join(file_dir, trip_tbl)
+    ## Define BAUS directory on Box for .csv output files
+    file_dir = os.path.join(
+        box_dir,
+        "Modeling and Surveys",
+        "Surveys",
+        "Travel Diary Survey",
+        "Biennial Travel Diary Survey",
+        "Data",
+        "2023",
+        "Full Unweighted 2023 Dataset",
+    )
 
-# read location and trip
-location_df = pd.read_csv(location_path)
-trip_df = pd.read_csv(trip_path)
+    location_path = os.path.join(file_dir, location_tbl)
+    trip_path = os.path.join(file_dir, trip_tbl)
 
-# merge trips with locations
-trip_locations = pd.merge(
-    location_df,
-    trip_df[
-        [
-            "trip_id",
-            "o_in_region",
-            "d_in_region",
-            "mode_type",
-            "mode_1",
-            "mode_2",
-            "mode_3",
-            "mode_4",
-        ]
-    ],
-    on="trip_id",
-)
+    # read location and trip
+    location_df = pd.read_csv(location_path)
+    trip_df = pd.read_csv(trip_path)
 
-trip_locations.head()
+    # merge trips with locations
+    trip_locations = pd.merge(
+        location_df,
+        trip_df[
+            [
+                "trip_id",
+                "o_in_region",
+                "d_in_region",
+                "mode_type",
+                "mode_1",
+                "mode_2",
+                "mode_3",
+                "mode_4",
+            ]
+        ],
+        on="trip_id",
+    )
 
-# filter trips_locations to only include trips with mode 8 in mode_1 or mode_2 or mode_3 or mode_4 columns with origins and destinations in region
-car_trips = trip_locations[
-    ((trip_locations["mode_type"].isin([5, 6, 8, 9, 11]))) & (trip_locations["o_in_region"] == 1)
-    | (trip_locations["d_in_region"] == 1)
-]
+    trip_locations.head()
 
-unique_trips = car_trips["trip_id"].unique()
+    # filter trips_locations to only include trips with mode 8 in mode_1 or mode_2 or mode_3 or mode_4 columns with origins and destinations in region
+    car_trips = trip_locations[
+        ((trip_locations["mode_type"].isin([5, 6, 8, 9, 11])))
+        & (trip_locations["o_in_region"] == 1)
+        | (trip_locations["d_in_region"] == 1)
+    ]
 
-print("Unique trip count " + str(unique_trips.shape[0]))
+    unique_trips = car_trips["trip_id"].unique()
 
-# # create batch traces from the test list
-# test_list = [
-#     2304076901001, #highway
-#     2333407402028, #highway
-#     2304076901002, #highway
-#     2347455701047, #highway
-#     # 2333407402031, #might be too long
-#     2333407402037,
-#     2333413601001, # issue with the trace - missing geometry
-# ]
-# select top 1000 trips from unique trip list
-test_list = unique_trips[:20]
-car_trips_test = car_trips[car_trips["trip_id"].isin(test_list)]
-batch_traces_test = create_batch_traces(car_trips_test, trip_id_column="trip_id", xy=True)
-# batch_traces = create_batch_traces(car_trips, trip_id_column="trip_id", xy=True)
+    print("Unique trip count " + str(unique_trips.shape[0]))
 
-# ## Match using the LCSS matching algorithm
+    test_list = unique_trips[:20]
+    car_trips_test = car_trips[car_trips["trip_id"].isin(test_list)]
+    batch_traces_test = create_batch_traces(car_trips_test, trip_id_column="trip_id", xy=True)
+    # batch_traces = create_batch_traces(car_trips, trip_id_column="trip_id", xy=True)
 
-match_result_test = batch_process_traces_parallel(
-    batch_traces_test, geofence_buffer=1000, network_type=NetworkType.DRIVE
-)
+    # ## Match using the LCSS matching algorithm
+    from datetime import datetime
 
-match_result = batch_process_traces(
-    traces=batch_traces_test, geofence_buffer=1000, network_type=NetworkType.DRIVE
-)
+    now = datetime.now()
+    match_result_test = batch_process_traces_parallel(
+        batch_traces_test, geofence_buffer=1000, network_type=NetworkType.DRIVE
+    )
+    later = datetime.now()
+    print(f"Multiprocessing took: {later - now}")
 
-# write the matched gdfs to a geopackage
-out_file_path = f"/Users/{user}/Library/CloudStorage/Box-Box/DataViz Projects/Spatial Analysis and Mapping/TDS Conflation/Data"
-gpkg_path = os.path.join(out_file_path, "tds_conflation_results.gpkg")
-write_matched_gdfs(match_result, gpkg_path)
+    # # write the matched gdfs to a geopackage
+    # out_file_path = f"/Users/{user}/Library/CloudStorage/Box-Box/DataViz Projects/Spatial Analysis and Mapping/TDS Conflation/Data"
+    # gpkg_path = os.path.join(out_file_path, "tds_conflation_results.gpkg")
+    # write_matched_gdfs(match_result, gpkg_path)
