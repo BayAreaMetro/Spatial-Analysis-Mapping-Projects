@@ -1,20 +1,20 @@
 -- Draft --
-# Travel Diary Survey Conflation
+# Travel Diary Survey Conflation <!-- omit in toc -->
 
 ### Table of Contents
 
-- [Travel Diary Survey Conflation](#travel-diary-survey-conflation)
-    - [Table of Contents](#table-of-contents)
-  - [Define the Problem Statement](#define-the-problem-statement)
-  - [Project Scope](#project-scope)
-  - [Project Resources](#project-resources)
-  - [Data Sources](#data-sources)
-  - [Analysis Parameters](#analysis-parameters)
-  - [Methodology](#methodology)
-    - [How to run this code](#how-to-run-this-code)
-  - [Expected Outcomes](#expected-outcomes)
-  - [Results](#results)
-  - [Tags](#tags)
+- [Define the Problem Statement](#define-the-problem-statement)
+- [Project Scope](#project-scope)
+- [Project Resources](#project-resources)
+- [Data Sources](#data-sources)
+  - [trips schema](#trips-schema)
+  - [locations schema](#locations-schema)
+- [Analysis Parameters](#analysis-parameters)
+- [Methodology](#methodology)
+  - [How to run this code](#how-to-run-this-code)
+- [Expected Outcomes](#expected-outcomes)
+- [Results](#results)
+- [Tags](#tags)
 
 ## Define the Problem Statement
 
@@ -43,14 +43,41 @@ Associate travel diary survey smartphone trip traces with Bay Area roadway facil
 
 ## Data Sources
 
-List the potential data sources that you think are required to solve the problem. If you are unsure, you can discuss these with the Unit Manager prior to submitting your request for support.
+- [trips.csv (internal access only)](https://mtcdrive.box.com/s/5zo8d8ytesqaqya23os543wkdf29ksfr)
+- [locations.csv (internal access only)](https://mtcdrive.box.com/s/j7wrtou0mrlvfio5owj4iia7hfye524c)
+
+
+### trips schema
+
+| Field Name   | Description                                           | Domain                                                                                   |
+|--------------|-------------------------------------------------------|------------------------------------------------------------------------------------------|
+| trip_id      | Unique identifier for the trip                        |                                                                                          |
+| o_in_region  | Trip originates in region                             | 0: No<br>1: Yes                                                                          |
+| d_in_region  | Trip destination in region                            | 0: No<br>1: Yes                                                                          |
+| mode_type    | Primary mode used to complete trip                    | 1: Walk<br>2: Bike<br>3: Bikeshare<br>4: Scootershare<br>5: Taxi<br>6: TNC<br>7: Other<br>8: Car<br>9: Careshare<br>10: School bus<br>11: Shuttle/Vanpool<br>12: Ferry<br>13: Transit<br>14: Long Distance Passenger<br>995: Missing Response |
+| mode_1       | First mode of travel used to complete trip if multiple modes used | Too many to list                                                                         |
+| mode_2       | Second mode of travel used to complete trip if multiple modes used | Too many to list                                                                         |
+| mode_3       | Third mode of travel used to complete trip if multiple modes used  | Too many to list                                                                         |
+| mode_4       | Fourth mode of travel used to complete trip if multiple modes used | Too many to list                                                                         |
+
+### locations schema
+| Field Name   | Description                                           | Domain                                                                                   |
+|--------------|-------------------------------------------------------|------------------------------------------------------------------------------------------|
+| trip_id      | Unique identifier for the trip                        |                                                                                          |
+| collect_time | | |
+| accuracy | | |
+| bearing | | |
+| speed | | |
+| lat | Latitude | |
+| lon | Longitude | |
 
 ## Analysis Parameters
 
-Analysis parameters are elements from the data as well as additional definitions or features that will be used in your analysis. For example, in a geospatial intersection area analysis, these would be the geometries of the base layer and overlay, and could optionally include a buffer distance or overlay category. Generally, think of analysis parameters as the most important aspects of the data that you are using to answer the questions driving your analysis. If your analysis parameters include definitions, be sure to describe these in your documentation or link to their documentation. For example, if Transit Priority Areas (TPAs) are one of your analysis parameters, give a short description of a TPA and link to the authoritative public resource on TPAs. These repositories have some example Analysis Parameters:
+For this project, the following parameters will be used:
 
-- [Communities of Concern](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Communities-of-Concern)
-- [CASA](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/CASA)
+- **Network**: OpenStreetMap
+- **Network type**: Drive
+- **Trips**: Mode Type = Taxi, TNC, Car, Careshare, Shuttle/Vanpool & Origin/Destination in Region
 
 ## Methodology
 
@@ -58,10 +85,9 @@ Analysis parameters are elements from the data as well as additional definitions
 
 1. Install the required package dependencies using the [requirements.txt](requirements/requirements.txt) file.
 2. Clone the [mappymatch github repository](https://github.com/BayAreaMetro/mappymatch), which has been forked and modified from the original repository.
-3. Update the MAPPYMATCH_PATH within [tds_conflation.py](tds_conflation.py#L13) to point to the location of the cloned repository.
-4. Run the [tds_conflation.py](tds_conflation.py) script by executing `python tds_conflation.py` in the terminal.
-
-The analyst assigned to the project will document this information. The analyst will review the methodology (if applicable) with the project team to ensure that it meets the requirements and expectations of the solution or problem.
+3. Update the MAPPYMATCH_PATH within [tds_conflation.py](scripts/tds_conflation.py#L13) to point to the location of the cloned repository.
+4. Run the [tds_conflation.py](scripts/tds_conflation.py) script by executing `python tds_conflation.py` in the terminal.
+   1. If file paths change or need to be updated, update in [config.py](scripts/config.py).
 
 ## Expected Outcomes
 
