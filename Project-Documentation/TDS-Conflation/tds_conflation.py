@@ -1,11 +1,12 @@
 import os
 import sys
 import warnings
+import getpass
+from datetime import datetime
 import osmnx as ox
 import networkx as nx
 import pandas as pd
 import geopandas as gpd
-import getpass
 
 user = getpass.getuser().lower()
 
@@ -247,4 +248,79 @@ def write_matched_gdfs(match_result, file_path):
     matched_path_gdf.to_file(file_path, layer="matched_path_gdf", driver="GPKG")
 
 if __name__ == "__main__":
-    batch_process_traces_parallel()
+
+    ## Define file name
+    location_tbl = "location.csv"
+    trip_tbl = "trip.csv"
+
+    ## Define Box System Root Directory
+    box_dir = os.path.join("/Users", user, "Library", "CloudStorage", "Box-Box")
+
+    ## Define BAUS directory on Box for .csv output files
+    file_dir = os.path.join(
+        box_dir,
+        "Modeling and Surveys",
+        "Surveys",
+        "Travel Diary Survey",
+        "Biennial Travel Diary Survey",
+        "Data",
+        "2023",
+        "Full Unweighted 2023 Dataset",
+    )
+
+    location_path = os.path.join(file_dir, location_tbl)
+    trip_path = os.path.join(file_dir, trip_tbl)
+
+    # read location and trip
+    location_df = pd.read_csv(location_path)
+    trip_df = pd.read_csv(trip_path)
+
+    # merge trips with locations
+    trip_locations = pd.merge(
+        location_df,
+        trip_df[
+            [
+                "trip_id",
+                "o_in_region",
+                "d_in_region",
+                "mode_type",
+                "mode_1",
+                "mode_2",
+                "mode_3",
+                "mode_4",
+            ]
+        ],
+        on="trip_id",
+    )
+
+    trip_locations.head()
+
+    # filter trips_locations to only include trips with mode 8 in mode_1 or mode_2 or mode_3 or mode_4 columns with origins and destinations in region
+    car_trips = trip_locations[
+        ((trip_locations["mode_type"].isin([5, 6, 8, 9, 11]))) & (trip_locations["o_in_region"] == 1)
+        | (trip_locations["d_in_region"] == 1)
+    ]
+
+    unique_trips = car_trips["trip_id"].unique()
+
+    print("Unique trip count " + str(unique_trips.shape[0]))
+
+    test_list = unique_trips[:1000]
+    car_trips_test = car_trips[car_trips["trip_id"].isin(test_list)]
+    batch_traces_test = create_batch_traces(car_trips_test, trip_id_column="trip_id", xy=True)
+    # batch_traces = create_batch_traces(car_trips, trip_id_column="trip_id", xy=True)
+
+    # ## Match using the LCSS matching algorithm
+
+
+    now = datetime.now()
+    match_result_test = batch_process_traces_parallel(
+            batch_traces_test, geofence_buffer=1000, network_type=NetworkType.DRIVE
+        )
+    later = datetime.now()
+    print(f"Multiprocessing took: {later - now}")
+
+    # write the matched gdfs to a geopackage
+    out_file_path = f"/Users/{user}/Library/CloudStorage/Box-Box/DataViz Projects/Spatial Analysis and Mapping/TDS Conflation/Data"
+    gpkg_path = os.path.join(out_file_path, "tds_conflation_results.gpkg")
+    write_matched_gdfs(match_result, gpkg_path)
