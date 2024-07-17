@@ -1,0 +1,159 @@
+INFO:Checking for missing values in the American Community Survey (ACS) raw data data 
+
+INFO:Column 'B03002_001E' has no null values
+INFO:Column 'B03002_003E' has no null values
+INFO:Column 'B01001_001E' has no null values
+INFO:Column 'B01001_023E' has no null values
+INFO:Column 'B01001_024E' has no null values
+INFO:Column 'B01001_025E' has no null values
+INFO:Column 'B01001_047E' has no null values
+INFO:Column 'B01001_048E' has no null values
+INFO:Column 'B01001_049E' has no null values
+INFO:Column 'C17002_001E' has no null values
+INFO:Column 'C17002_008E' has no null values
+INFO:Column 'C18108_001E' has no null values
+INFO:Column 'C18108_005E' has no null values
+INFO:Column 'C18108_009E' has no null values
+INFO:Column 'C18108_013E' has no null values
+INFO:Column 'B08201_001E' has no null values
+INFO:Column 'B08201_002E' has no null values
+INFO:Column 'B11004_001E' has no null values
+INFO:Column 'B11004_010E' has no null values
+INFO:Column 'B11004_016E' has no null values
+INFO:Column 'B16005_001E' has no null values
+INFO:Column 'B16005_007E' has no null values
+INFO:Column 'B16005_008E' has no null values
+INFO:Column 'B16005_012E' has no null values
+INFO:Column 'B16005_013E' has no null values
+INFO:Column 'B16005_017E' has no null values
+INFO:Column 'B16005_018E' has no null values
+INFO:Column 'B16005_022E' has no null values
+INFO:Column 'B16005_023E' has no null values
+INFO:Column 'B16005_029E' has no null values
+INFO:Column 'B16005_030E' has no null values
+INFO:Column 'B16005_034E' has no null values
+INFO:Column 'B16005_035E' has no null values
+INFO:Column 'B16005_039E' has no null values
+INFO:Column 'B16005_040E' has no null values
+INFO:Column 'B16005_044E' has no null values
+INFO:Column 'B16005_045E' has no null values
+INFO:Column 'B25070_010E' has no null values
+INFO:Column 'fipco' has no null values
+INFO:Column 'tract_geoid' has no null values
+INFO:Missing values check completed for dataset: American Community Survey (ACS) raw data
+
+INFO:Checking data types for the American Community Survey (ACS) raw data data 
+
+INFO:Column 'B03002_001E' matches the expected data type: int64
+INFO:Column 'B03002_003E' matches the expected data type: int64
+INFO:Column 'B01001_001E' matches the expected data type: int64
+INFO:Column 'B01001_023E' matches the expected data type: int64
+INFO:Column 'B01001_024E' matches the expected data type: int64
+INFO:Column 'B01001_025E' matches the expected data type: int64
+INFO:Column 'B01001_047E' matches the expected data type: int64
+INFO:Column 'B01001_048E' matches the expected data type: int64
+INFO:Column 'B01001_049E' matches the expected data type: int64
+INFO:Column 'C17002_001E' matches the expected data type: int64
+INFO:Column 'C17002_008E' matches the expected data type: int64
+INFO:Column 'C18108_001E' matches the expected data type: int64
+INFO:Column 'C18108_005E' matches the expected data type: int64
+INFO:Column 'C18108_009E' matches the expected data type: int64
+INFO:Column 'C18108_013E' matches the expected data type: int64
+INFO:Column 'B08201_001E' matches the expected data type: int64
+INFO:Column 'B08201_002E' matches the expected data type: int64
+INFO:Column 'B11004_001E' matches the expected data type: int64
+INFO:Column 'B11004_010E' matches the expected data type: int64
+INFO:Column 'B11004_016E' matches the expected data type: int64
+INFO:Column 'B16005_001E' matches the expected data type: int64
+INFO:Column 'B16005_007E' matches the expected data type: int64
+INFO:Column 'B16005_008E' matches the expected data type: int64
+INFO:Column 'B16005_012E' matches the expected data type: int64
+INFO:Column 'B16005_013E' matches the expected data type: int64
+INFO:Column 'B16005_017E' matches the expected data type: int64
+INFO:Column 'B16005_018E' matches the expected data type: int64
+INFO:Column 'B16005_022E' matches the expected data type: int64
+INFO:Column 'B16005_023E' matches the expected data type: int64
+INFO:Column 'B16005_029E' matches the expected data type: int64
+INFO:Column 'B16005_030E' matches the expected data type: int64
+INFO:Column 'B16005_034E' matches the expected data type: int64
+INFO:Column 'B16005_035E' matches the expected data type: int64
+INFO:Column 'B16005_039E' matches the expected data type: int64
+INFO:Column 'B16005_040E' matches the expected data type: int64
+INFO:Column 'B16005_044E' matches the expected data type: int64
+INFO:Column 'B16005_045E' matches the expected data type: int64
+INFO:Column 'B25070_010E' matches the expected data type: int64
+INFO:Column 'fipco' matches the expected data type: object
+INFO:Column 'tract_geoid' matches the expected data type: object
+INFO:Data type check completed for dataset: American Community Survey (ACS) raw data
+
+INFO:Checking for missing values in the American Community Survey (ACS) geographic data data 
+
+INFO:Column 'geometry' has no null values
+INFO:Column 'tract_geoid' has no null values
+INFO:Missing values check completed for dataset: American Community Survey (ACS) geographic data
+
+INFO:Checking data types for the American Community Survey (ACS) geographic data data 
+
+INFO:Column 'tract_geoid' matches the expected data type: object
+INFO:Column 'geometry' matches the expected data type: geometry
+INFO:Data type check completed for dataset: American Community Survey (ACS) geographic data
+
+INFO:Checking for missing values in the American Community Survey (ACS) data calculated columns data 
+
+INFO:Column 'pop_poc' has no null values
+INFO:Column 'pop_over75' has no null values
+INFO:Column 'pop_spfam' has no null values
+INFO:Column 'pop_lep' has no null values
+INFO:Column 'pop_below2' has no null values
+INFO:Column 'pop_disabi' has no null values
+INFO:Missing values check completed for dataset: American Community Survey (ACS) data calculated columns
+
+INFO:Checking value ranges for the American Community Survey (ACS) data calculated columns data 
+
+INFO:All values in column 'pct_poc' are within the range 0-1.
+INFO:All values in column 'pct_over75' are within the range 0-1.
+INFO:All values in column 'pct_spfam' are within the range 0-1.
+INFO:All values in column 'pct_lep' are within the range 0-1.
+INFO:All values in column 'pct_below2' are within the range 0-1.
+INFO:All values in column 'pct_disab' are within the range 0-1.
+INFO:All values in column 'pct_zvhhs' are within the range 0-1.
+INFO:All values in column 'pct_hus_re' are within the range 0-1.
+INFO:Value range check completed for dataset: American Community Survey (ACS) data calculated columns
+
+INFO:Checking value matching for the American Community Survey (ACS) data calculated columns data 
+
+INFO:All values in column 'epc_class' match the acceptable list: ['Highest', 'Higher', 'High', 'NA'].
+INFO:Summary of EPC class counts 
+
+INFO:  epc_class  count
+0      High    295
+1    Higher    131
+2   Highest     48
+3        NA      0
+INFO:End of summary of EPC class counts 
+
+INFO:EPC factor regional statistics 
+
+INFO:                                        factors  mean   std  plus_quarter_sd  plus_one_sd  plus_one_half_sd
+0                     Seniors 75 Years and Over  0.07  0.06             0.08         0.13              0.16
+1                               People of Color  0.61  0.23             0.67         0.84              0.96
+2                   Limited English Proficiency  0.07  0.08             0.09         0.15              0.19
+3                        Single Parent Families  0.12  0.09             0.14         0.21              0.26
+4  Low-Income (<200% Federal Poverty Level-FPL)  0.18  0.13             0.21         0.31              0.38
+5                        People with Disability  0.10  0.05             0.11         0.15              0.18
+6                        Zero-Vehicle Household  0.10  0.13             0.13         0.23              0.30
+7                                 Rent-Burdened  0.10  0.08             0.12         0.18              0.22
+INFO:End of EPC factor regional statistics 
+
+INFO:Checking validity of one-to-one join between the left and right DataFrames resulting in American Community Survey (ACS) data 
+
+INFO:One-to-one join check passed: No duplicate keys found in the join columns.
+WARNING:The merged DataFrame's length (1765) does not match the original DataFrames' lengths (left: 1765, right: 1772). Some rows might not have matched.
+INFO:One-to-one join check completed for dataset: American Community Survey (ACS) data
+
+INFO:Checking validity of one-to-one join between the left and right DataFrames resulting in American Community Survey (ACS) data 
+
+INFO:One-to-one join check passed: No duplicate keys found in the join columns.
+WARNING:The merged DataFrame's length (1765) does not match the original DataFrames' lengths (left: 1765, right: 1772). Some rows might not have matched.
+INFO:One-to-one join check completed for dataset: American Community Survey (ACS) data
+
