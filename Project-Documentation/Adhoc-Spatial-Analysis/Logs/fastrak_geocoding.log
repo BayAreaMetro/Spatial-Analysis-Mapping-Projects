@@ -1,1 +1,21 @@
 
+2024-09-04 17:58:57,835 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
+2024-09-04 17:59:00,589 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
+2024-09-04 17:59:00,596 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
+2024-09-04 17:59:00,596 - fastrak_geocoding - INFO - Error during batch geocoding: 'FULL_ADDRESS'
+2024-09-04 17:59:27,050 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
+2024-09-04 17:59:29,548 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
+2024-09-04 17:59:30,111 - fastrak_geocoding - INFO - Creating required columns for geocoding
+2024-09-04 17:59:31,135 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
+2024-09-04 17:59:31,882 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
+2024-09-04 18:37:05,778 - fastrak_geocoding - INFO - Error during batch geocoding: list index out of range
+2024-09-05 07:21:06,330 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
+2024-09-05 07:21:09,224 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
+2024-09-05 07:21:09,232 - fastrak_geocoding - INFO - Creating required columns for geocoding
+2024-09-05 07:21:10,408 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
+2024-09-05 07:21:10,451 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
+2024-09-05 07:23:42,606 - fastrak_geocoding - INFO - Starting batch address geocoding on 10 records
+2024-09-05 07:23:43,379 - fastrak_geocoding - INFO - Finished batch address geocoding. 10 geocoded
+2024-09-05 07:24:13,780 - fastrak_geocoding - INFO - Starting batch address geocoding on 10 records
+2024-09-05 07:24:14,523 - fastrak_geocoding - INFO - Finished batch address geocoding. 10 geocoded
+2024-09-05 07:24:52,828 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
