@@ -77,3 +77,8 @@
 2024-09-06 16:13:41,278 - fastrak_geocoding - INFO - Creating required columns for geocoding
 2024-09-06 16:13:42,184 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
 2024-09-06 16:13:42,519 - fastrak_geocoding - INFO - Starting batch address geocoding on 784942 records
+2024-09-08 02:31:26,395 - fastrak_geocoding - INFO - Finished batch address geocoding. 784917 geocoded
+2024-09-08 02:31:26,396 - fastrak_geocoding - INFO - Bad addresses file found at bad_addresses.txt
+2024-09-08 02:31:26,396 - fastrak_geocoding - INFO - Found 25 bad addresses
+2024-09-08 07:58:17,997 - fastrak_geocoding - INFO - Writing geocoded data to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
+2024-09-08 07:58:29,375 - fastrak_geocoding - INFO - Wrote 784917 records to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
