@@ -1,31 +1,35 @@
-2024-09-09 11:26:37,503 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-09 11:26:39,908 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-09 11:26:39,908 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-09 11:26:40,826 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-09 11:26:41,005 - fastrak_geocoding - INFO - Dropping 239238 duplicated addresses
-2024-09-09 11:26:41,230 - fastrak_geocoding - INFO - Starting batch address geocoding on 784942 records
-2024-09-09 11:26:41,230 - fastrak_geocoding - INFO - Local geocoded data file exists at /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv. Reading local data file
-2024-09-09 11:26:41,230 - fastrak_geocoding - INFO - Reading geocoded data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
-2024-09-09 11:26:44,444 - fastrak_geocoding - INFO - Read 784917 records from geocoded data
-2024-09-09 11:26:44,469 - fastrak_geocoding - INFO - Read 784917 records from geocoded data
-2024-09-09 11:26:44,469 - fastrak_geocoding - INFO - Reading tract data from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_2020_censustract/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
-2024-09-09 11:26:46,773 - fastrak_geocoding - INFO - Read 1772 records from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_2020_censustract/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
-2024-09-09 11:26:46,773 - fastrak_geocoding - INFO - Reading EPC data from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
-2024-09-09 11:26:47,534 - fastrak_geocoding - INFO - Read 1765 records from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
-2024-09-09 11:26:47,535 - fastrak_geocoding - INFO - Spatially joining geocoded Fastrak data with tract data. Fastrack gdf len: 784917 Tract gdf len: 1772
-2024-09-09 11:26:58,586 - fastrak_geocoding - INFO - Joined 784917 records
-2024-09-09 11:26:58,587 - fastrak_geocoding - INFO - Joining the sjoin tract and Fastrak data to EPC data. Sjoin Fastrak data: 784917 EPC data: 1765
-2024-09-09 11:26:58,804 - fastrak_geocoding - INFO - Joined 784917 records
-2024-09-09 11:26:58,830 - fastrak_geocoding - INFO - Flagging matches. Only a match if geometry_location_type in: [ROOFTOP, 'RANGE_INTERPOLATED] and partial_match = False
-2024-09-09 11:26:58,891 - fastrak_geocoding - INFO - Flagged {1: 758267, 0: 26650} records as matches
-2024-09-09 11:26:58,891 - fastrak_geocoding - INFO - Flagging data within the region
-2024-09-09 11:26:58,902 - fastrak_geocoding - INFO - Flagged {1: 784169, 0: 748} records within the region
-2024-09-09 11:26:58,902 - fastrak_geocoding - INFO - Dropping unnecessary columns: ['geometry_location_type', 'types', 'partial_match', 'index_right', 'tract_geoid']
-2024-09-09 11:26:58,970 - fastrak_geocoding - INFO - Joining the original Fastrak data to the joined data. Joined data: 784917 Original Fastrak data: 1024180
-2024-09-09 11:27:00,181 - fastrak_geocoding - INFO - Joined 1024180 records
-2024-09-09 11:27:00,218 - fastrak_geocoding - INFO - Updating columns ['epc_2050p', 'match', 'in_region'] to not null
-2024-09-09 11:27:00,251 - fastrak_geocoding - INFO - Moving geometry column to the end
-2024-09-09 11:27:00,421 - fastrak_geocoding - INFO - Fastrak data geocoded results: {1: 994522, 0: 29658}
-2024-09-09 11:27:00,428 - fastrak_geocoding - INFO - Fastrak data in region results: {1: 1023363, 0: 817}
-2024-09-09 11:27:00,436 - fastrak_geocoding - INFO - Fastrak data EPC results: {0: 865837, 1: 158343}
-2024-09-09 11:27:00,436 - fastrak_geocoding - INFO - Writing final geocoded data to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded_final.geojson of length 1024180
+2024-09-09 12:31:40,988 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
+2024-09-09 12:31:43,932 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
+2024-09-09 12:31:43,932 - fastrak_geocoding - INFO - Creating required columns for geocoding
+2024-09-09 12:31:44,944 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
+2024-09-09 12:31:45,131 - fastrak_geocoding - INFO - Dropping 239238 duplicated addresses
+2024-09-09 12:31:45,358 - fastrak_geocoding - INFO - Starting batch address geocoding on 784942 records
+2024-09-09 12:31:45,358 - fastrak_geocoding - INFO - Local geocoded data file exists at /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv. Reading local data file
+2024-09-09 12:31:45,358 - fastrak_geocoding - INFO - Reading geocoded data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
+2024-09-09 12:31:48,647 - fastrak_geocoding - INFO - Read 784917 records from geocoded data
+2024-09-09 12:31:48,674 - fastrak_geocoding - INFO - Read 784917 records from geocoded data
+2024-09-09 12:31:48,674 - fastrak_geocoding - INFO - Reading tract data from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_2020_censustract/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 12:31:50,670 - fastrak_geocoding - INFO - Read 1772 records from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_2020_censustract/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 12:31:50,670 - fastrak_geocoding - INFO - Reading EPC data from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 12:31:51,219 - fastrak_geocoding - INFO - Read 1765 records from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 12:31:51,220 - fastrak_geocoding - INFO - Spatially joining geocoded Fastrak data with tract data. Fastrack gdf len: 784917 Tract gdf len: 1772
+2024-09-09 12:32:02,161 - fastrak_geocoding - INFO - Joined 784917 records
+2024-09-09 12:32:02,161 - fastrak_geocoding - INFO - Joining the sjoin tract and Fastrak data to EPC data. Sjoin Fastrak data: 784917 EPC data: 1765
+2024-09-09 12:32:02,482 - fastrak_geocoding - INFO - Joined 784917 records
+2024-09-09 12:32:02,509 - fastrak_geocoding - INFO - Flagging matches. Only a match if geometry_location_type in: [ROOFTOP, 'RANGE_INTERPOLATED] and partial_match = False
+2024-09-09 12:32:02,584 - fastrak_geocoding - INFO - Flagged {1: 758267, 0: 26650} records as matches
+2024-09-09 12:32:02,584 - fastrak_geocoding - INFO - Flagging data within the region
+2024-09-09 12:32:02,593 - fastrak_geocoding - INFO - Flagged {1: 784169, 0: 748} records within the region
+2024-09-09 12:32:02,596 - fastrak_geocoding - INFO - Dropping records that are not matches and not in region. Drop count: 450
+2024-09-09 12:32:02,708 - fastrak_geocoding - INFO - Dropping unnecessary columns: ['geometry_location_type', 'types', 'partial_match', 'index_right', 'tract_geoid']
+2024-09-09 12:32:02,807 - fastrak_geocoding - INFO - Joining the original Fastrak data to the joined data. Joined data: 784467 Original Fastrak data: 1024180
+2024-09-09 12:32:04,281 - fastrak_geocoding - INFO - Joined 1024180 records
+2024-09-09 12:32:04,320 - fastrak_geocoding - INFO - Updating columns ['epc_2050p', 'match', 'in_region'] to not null
+2024-09-09 12:32:04,371 - fastrak_geocoding - INFO - Moving geometry column to the end
+2024-09-09 12:32:04,545 - fastrak_geocoding - INFO - Fastrak data geocoded results: {1: 994522, 0: 29658}
+2024-09-09 12:32:04,553 - fastrak_geocoding - INFO - Fastrak data in region results: {1: 1023363, 0: 817}
+2024-09-09 12:32:04,559 - fastrak_geocoding - INFO - Fastrak data EPC results: {0: 865837, 1: 158343}
+2024-09-09 12:32:04,559 - fastrak_geocoding - INFO - Writing final geocoded data to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded_final.geojson of length 1024180
+2024-09-09 12:32:46,632 - fastrak_geocoding - INFO - Wrote 1024180 records to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded_final.geojson
+2024-09-09 12:32:46,633 - fastrak_geocoding - INFO - Writing final geocoded data to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded_final.csv of length 1024180
+2024-09-09 12:33:10,427 - fastrak_geocoding - INFO - Wrote 1024180 records to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded_final.csv
