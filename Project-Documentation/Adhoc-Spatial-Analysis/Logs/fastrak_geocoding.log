@@ -1,84 +1,31 @@
-
-2024-09-04 17:58:57,835 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-04 17:59:00,589 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-04 17:59:00,596 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
-2024-09-04 17:59:00,596 - fastrak_geocoding - INFO - Error during batch geocoding: 'FULL_ADDRESS'
-2024-09-04 17:59:27,050 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-04 17:59:29,548 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-04 17:59:30,111 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-04 17:59:31,135 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-04 17:59:31,882 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
-2024-09-04 18:37:05,778 - fastrak_geocoding - INFO - Error during batch geocoding: list index out of range
-2024-09-05 07:21:06,330 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-05 07:21:09,224 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-05 07:21:09,232 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-05 07:21:10,408 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-05 07:21:10,451 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
-2024-09-05 07:23:42,606 - fastrak_geocoding - INFO - Starting batch address geocoding on 10 records
-2024-09-05 07:23:43,379 - fastrak_geocoding - INFO - Finished batch address geocoding. 10 geocoded
-2024-09-05 07:24:13,780 - fastrak_geocoding - INFO - Starting batch address geocoding on 10 records
-2024-09-05 07:24:14,523 - fastrak_geocoding - INFO - Finished batch address geocoding. 10 geocoded
-2024-09-05 07:24:52,828 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
-2024-09-05 10:04:00,040 - fastrak_geocoding - INFO - Error during batch geocoding: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2024-09-05 12:00:22,482 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-05 12:00:25,710 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-05 12:00:25,717 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-05 12:00:26,901 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-05 12:00:26,947 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
-2024-09-06 15:29:35,994 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 15:29:38,677 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 15:29:38,684 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 15:29:39,688 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 15:29:47,224 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 15:30:01,464 - fastrak_geocoding - INFO - Finished batch address geocoding. 100 geocoded
-2024-09-06 15:50:51,469 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 15:50:54,349 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 15:50:54,356 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 15:50:55,334 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 15:50:55,375 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 15:50:55,553 - fastrak_geocoding - INFO - Error during batch geocoding: No module named 'tqdm'
-2024-09-06 15:51:17,852 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 15:51:20,649 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 15:51:20,656 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 15:51:21,568 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 15:51:21,609 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 15:51:35,389 - fastrak_geocoding - INFO - Error during batch geocoding: cannot concatenate object of type '<class 'list'>'; only Series and DataFrame objs are valid
-2024-09-06 15:58:23,180 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 15:58:26,105 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 15:58:26,112 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 15:58:27,059 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 15:58:27,099 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 15:58:30,331 - fastrak_geocoding - INFO - Error during batch geocoding: 'Future' object is not iterable
-2024-09-06 16:02:39,587 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 16:02:42,626 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 16:02:42,626 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 16:02:43,609 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 16:02:43,643 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 16:03:32,450 - fastrak_geocoding - INFO - Error during batch geocoding: No objects to concatenate
-2024-09-06 16:05:22,451 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 16:05:25,061 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 16:05:25,061 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 16:05:25,993 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 16:05:26,031 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 16:05:33,136 - fastrak_geocoding - INFO - Finished batch address geocoding. 100 geocoded
-2024-09-06 16:10:35,533 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 16:10:38,321 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 16:10:38,321 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 16:10:39,296 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 16:10:39,334 - fastrak_geocoding - INFO - Starting batch address geocoding on 100 records
-2024-09-06 16:10:53,116 - fastrak_geocoding - INFO - Finished batch address geocoding. 100 geocoded
-2024-09-06 16:11:13,454 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 16:11:16,082 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 16:11:16,082 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 16:11:16,993 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 16:11:17,028 - fastrak_geocoding - INFO - Starting batch address geocoding on 1024180 records
-2024-09-06 16:13:38,658 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
-2024-09-06 16:13:41,278 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
-2024-09-06 16:13:41,278 - fastrak_geocoding - INFO - Creating required columns for geocoding
-2024-09-06 16:13:42,184 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
-2024-09-06 16:13:42,519 - fastrak_geocoding - INFO - Starting batch address geocoding on 784942 records
-2024-09-08 02:31:26,395 - fastrak_geocoding - INFO - Finished batch address geocoding. 784917 geocoded
-2024-09-08 02:31:26,396 - fastrak_geocoding - INFO - Bad addresses file found at bad_addresses.txt
-2024-09-08 02:31:26,396 - fastrak_geocoding - INFO - Found 25 bad addresses
-2024-09-08 07:58:17,997 - fastrak_geocoding - INFO - Writing geocoded data to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
-2024-09-08 07:58:29,375 - fastrak_geocoding - INFO - Wrote 784917 records to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
+2024-09-09 11:00:20,289 - fastrak_geocoding - INFO - Reading Fastrak data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_cleaned.csv
+2024-09-09 11:00:22,675 - fastrak_geocoding - INFO - Read 1024180 records from Fastrak data
+2024-09-09 11:00:22,675 - fastrak_geocoding - INFO - Creating required columns for geocoding
+2024-09-09 11:00:23,500 - fastrak_geocoding - INFO - Created FULL_ADDRESS column
+2024-09-09 11:00:23,683 - fastrak_geocoding - INFO - Dropping 239238 duplicated addresses
+2024-09-09 11:00:23,905 - fastrak_geocoding - INFO - Starting batch address geocoding on 784942 records
+2024-09-09 11:00:23,905 - fastrak_geocoding - INFO - Local geocoded data file exists at /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv. Reading local data file
+2024-09-09 11:00:23,905 - fastrak_geocoding - INFO - Reading geocoded data from /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded.csv
+2024-09-09 11:00:26,587 - fastrak_geocoding - INFO - Read 784917 records from geocoded data
+2024-09-09 11:00:26,612 - fastrak_geocoding - INFO - Read 784917 records from geocoded data
+2024-09-09 11:00:26,612 - fastrak_geocoding - INFO - Reading tract data from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_2020_censustract/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 11:00:28,951 - fastrak_geocoding - INFO - Read 1772 records from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/region_2020_censustract/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 11:00:28,952 - fastrak_geocoding - INFO - Reading EPC data from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 11:00:29,595 - fastrak_geocoding - INFO - Read 1765 records from https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+2024-09-09 11:00:29,595 - fastrak_geocoding - INFO - Spatially joining geocoded Fastrak data with tract data. Fastrack gdf len: 784917 Tract gdf len: 1772
+2024-09-09 11:00:38,465 - fastrak_geocoding - INFO - Joined 784917 records
+2024-09-09 11:00:38,465 - fastrak_geocoding - INFO - Joining the sjoin tract and Fastrak data to EPC data. Sjoin Fastrak data: 784917 EPC data: 1765
+2024-09-09 11:00:38,700 - fastrak_geocoding - INFO - Joined 784917 records
+2024-09-09 11:00:38,724 - fastrak_geocoding - INFO - Flagging matches. Only a match if geometry_location_type in: [ROOFTOP, 'RANGE_INTERPOLATED] and partial_match = False
+2024-09-09 11:00:38,784 - fastrak_geocoding - INFO - Flagged {1: 758267, 0: 26650} records as matches
+2024-09-09 11:00:38,784 - fastrak_geocoding - INFO - Flagging data within the region
+2024-09-09 11:00:38,792 - fastrak_geocoding - INFO - Flagged {1: 784169, 0: 748} records within the region
+2024-09-09 11:00:38,792 - fastrak_geocoding - INFO - Dropping unnecessary columns: ['geometry_location_type', 'types', 'partial_match', 'index_right', 'tract_geoid']
+2024-09-09 11:00:38,861 - fastrak_geocoding - INFO - Joining the original Fastrak data to the joined data. Joined data: 784917 Original Fastrak data: 1024180
+2024-09-09 11:00:40,239 - fastrak_geocoding - INFO - Joined 1024180 records
+2024-09-09 11:00:40,277 - fastrak_geocoding - INFO - Updating columns ['epc_2050p', 'match', 'in_region'] to not null
+2024-09-09 11:00:40,322 - fastrak_geocoding - INFO - Moving geometry column to the end
+2024-09-09 11:00:40,483 - fastrak_geocoding - INFO - Fastrak data geocoded results: {1: 994522, 0: 29658}
+2024-09-09 11:00:40,490 - fastrak_geocoding - INFO - Fastrak data in region results: {1: 1023363, 0: 817}
+2024-09-09 11:00:40,497 - fastrak_geocoding - INFO - Fastrak data EPC results: {0: 865837, 1: 158343}
+2024-09-09 11:00:40,497 - fastrak_geocoding - INFO - Writing final geocoded data to /Users/jcroff/Library/CloudStorage/Box-Box/DataViz Projects/Data Services/FasTrak Data/Fastrak Accounts Cleaned/bay_area_fastrak_accounts_geocoded_final.geojson of length 1024180
