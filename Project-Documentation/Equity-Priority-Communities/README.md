@@ -55,7 +55,7 @@ Definition: Census Tracts that have a cocentration of BOTH people of color AND l
 
 ### Summary of MTC EPC Demographic Factors & Demographic Factor Definitions
 
-[ACS Table Variables and MTC EPC Demographic Factors Lookup](Data/ACS_Table_Variables_EPC_Factors.csv)
+[ACS Table Variables and MTC EPC Demographic Factors Lookup](Data/acs_table_variables_epc_factors.csv)
 
 | Demographic Factor | Demographic Factor Definition | Concentration Threshold |
 |---|---|---|
