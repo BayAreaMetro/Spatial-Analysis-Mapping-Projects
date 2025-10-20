@@ -1,7 +1,6 @@
 # I880 Express Lanes START Analysis
 
-Using American Community Survey 5-Year Estimates, map top Non-English Languages spoken in
-Low-Income Census Tracts in the I-880 corridor. Provide total population of people that speak English 'Less than Very Well' and the share a given population by languages spoken at home for every tract within the I-880 corridor. Additionally, provide data on Race and Origin as well as Poverty status by Race and Origin. 
+Using American Community Survey 5-Year Estimates, map top Non-English Languages spoken in Low-Income Census Tracts in the I-880 corridor. Provide total population of people that speak English 'Less than Very Well' and the share a given population by languages spoken at home for every tract within the I-880 corridor. Additionally, provide data on Race and Origin as well as Poverty status by Race and Origin. 
 
 
 ### Table of Contents
