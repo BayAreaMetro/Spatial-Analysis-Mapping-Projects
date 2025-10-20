@@ -2,7 +2,7 @@
 
 # I-880 Integrated Corridor Management LEP Analysis
 
-Using American Community Survey 5-Year Estimates, map top Non-English Languages spoken in the I-880 corridor, and identify Low-Income communities by tract. Additionally, provide tabular data including total tract population, and total low-income population. Provide total population of people that speak English 'Less than Very Well' and the share a given population by languages spoken at home for every tract within the I-880 corridor.
+Using American Community Survey 5-Year Estimates, map top Non-English Languages spoken in the I-880 corridor, and identify Low-Income communities by tract. Additionally, provide tabular data including total tract population, and total low-income population. Provide total population of people that speak English 'Less than Very Well' and the share of a given population by languages spoken at home for every tract within the I-880 corridor.
 
 ## Project Scope
 
