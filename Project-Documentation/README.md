@@ -39,9 +39,10 @@ To get started with a spatial analysis or mapping project follow the steps outli
 | [Plan Bay Area 2050 Transit Data](Plan-Bay-Area-2050-Transit-Data) | Analysis and mapping of existing and planned transit stops as well as mapping of transit stops served by routes meeting certain headway criteria. |
 | [Regional Goods Movement](Regional-Goods-Movement) | Documentation for mapping and analysis of bicycle and pedestrian facilities built since 2009 in the Bay Area. |
 | [Resource Opportunity Areas (2020)](Resource-Opportunity-Areas) | Documentation for the creation of CTCAC HCD Resource Opportunity Areas 2020. |
+| [SB9 Housing Development; Approvals (Atkins, 2021)](SB9-Housing-Development-Approvals) | Analysis to identify parcels subject to California Senate Bill 9 in the San Francisco Bay Area (Atkins, 2021). |
 | [RTIP 2018](RTIP-2018) | Documentation for mapping of 2018 Regional Transportation Improvement Program (RTIP) projects. |
 | [SB35 Affordable Housing Streamlining](SB35-Affordable-Housing-Streamlining) | Analysis to develop a geographic feature overlay which represents geographies within the Bay Area which are excluded from recently passed SB-35 Affordable Housing Streamlining Bill. |
-| [SB9 Housing Development; Approvals (Atkins, 2021)](SB9-Housing-Development-Approvals) | Analysis to identify parcels subject to California Senate Bill 9 in the San Francisco Bay Area (Atkins, 2021). |
+| [SB79 Transit Oriented Development & Upzoning (Wiener, 2025)](SB79-Transit-Oriented-Development-Upzoning) | Analysis to identify areas subject to California Senate Bill 79 in the San Francisco Bay Area (Wiener, 2025). |
 | [Single Family Neighborhood Analysis](Single-Family-Neighborhoods-PDA-TPA-Walkable) | Analysis of single-family neighborhoods within Priority Development Areas and Transit Priority Areas. |
 | [Small UZA Rural Area Section 5310 Projects](Small-UZA-Rural-Area-Section-5310-Projects) | Mapping and analysis of small UZA/Rural Area section 5310 projects. |
 | [TDS Conflation](TDS-Conflation) | Documentation for the conflation of Travel Diary Survey trip data using the OpenStreetMap network. |
