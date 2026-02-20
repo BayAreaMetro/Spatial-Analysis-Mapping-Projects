@@ -7,8 +7,7 @@
   - [Stations](#stations)
   - [Stops](#stops)
   - [Access Points](#access-points)
-- [Process Overview](#process-overview)
-  - [Load Data and Libraries](#load-data-and-libraries)
+- [Process Overview](#process-overview)  - [Manual Data Preparation](#manual-data-preparation)  - [Load Data and Libraries](#load-data-and-libraries)
   - [Prepare Data for Analysis](#prepare-data-for-analysis)
   - [Flag Transit-Oriented Development (TOD) Stops](#flag-transit-oriented-development-tod-stops)
   - [Associate Parent Stations with TOD Stops \& Access Points](#associate-parent-stations-with-tod-stops--access-points)
@@ -73,6 +72,10 @@ Pedestrian access locations for each transit station used as the basis for TOD z
 
 ## Process Overview
 
+### Manual Data Preparation
+1. Manually create stations for stops that will be flagged as TOD applicable, such as SFMTA light rail stops not co-located with a BART Station (e.g. Van Ness, Church, Forest Hill, Yerba Buena/Moscone, etc.), VTA light rail stops, and BRT stops.
+2. Manually create pedestrian access points for stops that will be flagged as TOD applicable following the same process as above (add guidance from HCD on what constitutes a pedestrian access point, e.g. crosswalks, sidewalks, etc.).
+
 ### Load Data and Libraries
 1. Set up environment and load necessary libraries (e.g., pandas, geopandas, gtfs_kit)
 2. Load GTFS data using gtfs_kit and convert to GeoDataFrame for spatial analysis
@@ -96,9 +99,7 @@ Pedestrian access locations for each transit station used as the basis for TOD z
 3. Create a final filtered GeoDataFrame of TOD applicable stops, including relevant attributes such as stop_id, stop_name, parent_station, agency_name, route_short_name, and geometry.
 
 ### Associate Parent Stations with TOD Stops & Access Points
-1. Manually create stations for stops that are flagged as TOD applicable, such as SFMTA light rail stops not co-located with a BART Station (e.g. Van Ness, Church, Forest Hill, Yerba Buena/Moscone, etc.), VTA light rail stops, and BRT stops.
-2. Manually create pedestrian access points for stops that are flagged as TOD applicable following the same process as above (add guidance from HCD on what constitutes a pedestrian access point, e.g. crosswalks, sidewalks, etc.).
-3. Associate stops and access points with parent stations. This may be performed by spatially joining stops and access points to stations using a near spatial join with a specified distance threshold (e.g. 200 feet) though manual review and adjustments will likely be necessary to ensure accurate associations, especially in dense urban areas where multiple stations and stops may be in close proximity.
+1. Associate stops and access points with parent stations. This may be performed by spatially joining stops and access points to stations using a near spatial join with a specified distance threshold (e.g. 200 feet) though manual review and adjustments will likely be necessary to ensure accurate associations, especially in dense urban areas where multiple stations and stops may be in close proximity.
 
 ### Create Transit-Oriented Development (TOD) Zones
 1. Generate 200 ft, .25 mile, and .5 mile Euclidean (straight-line) buffers around all pedestrian access points by tier
