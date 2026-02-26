@@ -7,7 +7,15 @@
   - [Stations](#stations)
   - [Stops](#stops)
   - [Access Points](#access-points)
-- [Process Overview](#process-overview)  - [Manual Data Preparation](#manual-data-preparation)  - [Load Data and Libraries](#load-data-and-libraries)
+- [Running the Pipeline](#running-the-pipeline)
+  - [Prerequisites](#prerequisites)
+  - [Step 1 – GTFS TOD Stop Classification](#step-1--gtfs-tod-stop-classification)
+  - [Step 2 – TOD Stop and Access Point Assignment](#step-2--tod-stop-and-access-point-assignment)
+  - [Step 3 – Station Assignment Reintegration](#step-3--station-assignment-reintegration)
+  - [Step 4 – TOD Zone Buffer Generation](#step-4--tod-zone-buffer-generation)
+- [Process Overview](#process-overview)
+  - [Manual Data Preparation](#manual-data-preparation)
+  - [Load Data and Libraries](#load-data-and-libraries)
   - [Prepare Data for Analysis](#prepare-data-for-analysis)
   - [Flag Transit-Oriented Development (TOD) Stops](#flag-transit-oriented-development-tod-stops)
   - [Associate Parent Stations with TOD Stops \& Access Points](#associate-parent-stations-with-tod-stops--access-points)
@@ -70,7 +78,94 @@ Pedestrian access locations for each transit station used as the basis for TOD z
 
 *Field specifications to be documented during development.*
 
+## Running the Pipeline
+
+The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebook is self-contained and reads/writes to a shared GeoPackage (`tod_database.gpkg`) defined in `config.py`. Steps 2 and 3 are separated by a **mandatory manual GIS review gate** — do not skip it.
+
+### Prerequisites
+
+- Python environment with `geopandas`, `pandas`, `gtfs_kit`, `shapely`, and `uuid` installed
+- Access to the MTC Box folder containing source data (see [Resources](#resources))
+- Paths in `config.py` updated to match your local data directory
+- QGIS (or equivalent) for the manual review step between Steps 2 and 3
+
+---
+
+### Step 1 – GTFS TOD Stop Classification
+
+**Notebook:** `1_gtfs_tod_stop_classification.ipynb`
+
+Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data, classifies each stop as TOD-eligible (Tier 1 or Tier 2), and writes the results to the shared GeoPackage.
+
+**Outputs written to GPKG:**
+- `tod_stops` — all GTFS stops with `tod_stop` flag and `transit_tier` classification
+- `stations` — GTFS location_type=1 parent station records
+
+> No manual review required between Steps 1 and 2.
+
+---
+
+### Step 2 – TOD Stop and Access Point Assignment
+
+**Notebook:** `2_tod_stop_and_access_assignment.ipynb`
+
+Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to its nearest parent station using a distance-threshold buffer (EPSG:26910). Outputs both finalized layers and review layers flagging spatial conflicts and orphaned records.
+
+**Access point sources (loaded and normalized in order):**
+- `BA` — BART (`BART_PedAccessPoints_GTFS_v1.zip`)
+- `CT` — Caltrain (`Caltrain_PedAccessPoints_GTFS_v3.zip`)
+- `AC` — AC Transit (`AC_Transit_PedAcessPoints_v3.gdb`)
+- `SC` — VTA (`VTA_PedAccessPoints_GTFS_v2.zip`)
+- `SF` — SFMTA (`SFMuni_PedAccessPoints_GTFS_v1.zip`)
+
+**Outputs written to GPKG:**
+- `tod_stops` — TOD stops with spatially assigned `station_id`
+- `tod_access_points` — merged access points with spatially assigned `station_id`
+- `tod_stops_review` — stops with spatial conflicts or missing assignments (for manual review)
+- `tod_access_review` — access points with spatial conflicts or missing assignments (for manual review)
+
+> **Manual GIS review required before running Step 3.**
+>
+> 1. Open `tod_stops_review` and `tod_access_review` in QGIS.
+> 2. Inspect records with `valid_station_assignment = 0` or conflicts.
+> 3. Correct `station_id` assignments as needed and set `valid_station_assignment = 1` for resolved records.
+> 4. **Save the corrected layers back to the GeoPackage as `tod_stops_review_v1` and `tod_access_review_v1`.**  
+>    Re-running Step 2 will overwrite `tod_stops_review` and `tod_access_review` but will never touch the `_v1` layers.
+
+---
+
+### Step 3 – Station Assignment Reintegration
+
+**Notebook:** `3_tod_station_assignment_reintegration.ipynb`
+
+Reads the manually reviewed `_v1` layers, merges corrections back into the main `tod_stops` and `tod_access_points` layers, and re-exports the final corrected versions to the GeoPackage.
+
+**Inputs read from GPKG:**
+- `tod_stops_review_v1` — manually corrected stops review layer
+- `tod_access_review_v1` — manually corrected access points review layer
+
+**Outputs written to GPKG:**
+- `tod_stops` — final stops with all corrections applied
+- `tod_access_points` — final access points with all corrections applied
+
+> No manual review required between Steps 3 and 4.
+
+---
+
+### Step 4 – TOD Zone Buffer Generation
+
+**Notebook:** `4_tod_zone_buffers.ipynb` *(planned)*
+
+Generates 200 ft, ¼ mile, and ½ mile Euclidean buffer zones around finalized access points, applies the policy matrix (tier precedence, jurisdictional population rules, geographic scope), and produces the final SB79 TOD Zone polygons.
+
+**Outputs written to GPKG:**
+- `tod_zones` — final SB79 TOD Zone polygons with tier and distance-band attributes
+
+---
+
 ## Process Overview
+
+> This section describes the conceptual methodology behind the pipeline. For step-by-step execution instructions, see [Running the Pipeline](#running-the-pipeline).
 
 ### Manual Data Preparation
 1. Manually create stations for stops that will be flagged as TOD applicable, such as SFMTA light rail stops not co-located with a BART Station (e.g. Van Ness, Church, Forest Hill, Yerba Buena/Moscone, etc.), VTA light rail stops, and BRT stops.
