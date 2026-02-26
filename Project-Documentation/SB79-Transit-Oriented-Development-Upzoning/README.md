@@ -80,14 +80,14 @@ Pedestrian access locations for each transit station used as the basis for TOD z
 
 ## Running the Pipeline
 
-The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebook is self-contained and reads/writes to a shared GeoPackage (`tod_database.gpkg`) defined in `config.py`. Steps 2 and 3 are separated by a **mandatory manual GIS review gate** — do not skip it.
+The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebook is self-contained and reads/writes to a shared GeoPackage (`tod_database.gpkg`) defined in `config.py`. There are **two mandatory manual GIS review gates** — one after Step 1 and one between Steps 2 and 3. Do not skip them.
 
 ### Prerequisites
 
 - Python environment with `geopandas`, `pandas`, `gtfs_kit`, `shapely`, and `uuid` installed
 - Access to the MTC Box folder containing source data (see [Resources](#resources))
 - Paths in `config.py` updated to match your local data directory
-- QGIS (or equivalent) for the manual review step between Steps 2 and 3
+- QGIS (or equivalent) for the manual review steps after Step 1 and between Steps 2 and 3
 
 ---
 
@@ -101,7 +101,12 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 - `tod_stops` — all GTFS stops with `tod_stop` flag and `transit_tier` classification
 - `stations` — GTFS location_type=1 parent station records
 
-> No manual review required between Steps 1 and 2.
+> ⚠️ **Manual GIS review required before running Step 2.**
+>
+> 1. Open the `stations` layer and review station locations for accuracy.
+> 2. Manually add stations for TOD-applicable stops that lack a parent station in GTFS (e.g. SFMTA light rail stops not co-located with a BART station, VTA light rail stops, BRT stops).
+> 3. Map pedestrian access points for any newly added or corrected stations.
+> 4. Save the updated stations and access points back to the shared data sources read by Step 2.
 
 ---
 
