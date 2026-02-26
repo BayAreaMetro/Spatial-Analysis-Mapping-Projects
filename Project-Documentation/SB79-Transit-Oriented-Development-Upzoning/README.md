@@ -101,7 +101,7 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 - `tod_stops` — all GTFS stops with `tod_stop` flag and `transit_tier` classification
 - `stations` — GTFS location_type=1 parent station records
 
-> ⚠️ **Manual GIS review required before running Step 2.**
+> **Manual GIS review required before running Step 2.**
 >
 > 1. Open the `stations` layer and review station locations for accuracy.
 > 2. Manually add stations for TOD-applicable stops that lack a parent station in GTFS (e.g. SFMTA light rail stops not co-located with a BART station, VTA light rail stops, BRT stops).
