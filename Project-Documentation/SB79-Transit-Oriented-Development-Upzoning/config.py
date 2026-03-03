@@ -122,6 +122,7 @@ GPKG_STATIONS_LAYER = "stations"
 GPKG_ACCESS_PTS_LAYER = "access_points"
 
 # Layer names written by Step 2
+GPKG_TOD_STATIONS_LAYER = "tod_stations"
 GPKG_TOD_STOPS_LAYER = "tod_stops"
 GPKG_TOD_ACCESS_PTS_LAYER = "tod_access_points"
 

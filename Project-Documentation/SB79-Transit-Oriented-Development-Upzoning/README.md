@@ -98,8 +98,9 @@ The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebo
 Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data, classifies each stop as TOD-eligible (Tier 1 or Tier 2), and writes the results to the shared GeoPackage.
 
 **Outputs written to GPKG:**
-- `tod_stops` — all GTFS stops with `tod_stop` flag and `transit_tier` classification
+- `stops` — all GTFS stops with `tod_stop` flag and `transit_tier` classification
 - `stations` — GTFS location_type=1 parent station records
+- `access_points` — pre-defined pedestrian access points loaded from per-agency source data
 
 > **Manual GIS review required before running Step 2.**
 >
@@ -114,7 +115,7 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 
 **Notebook:** `2_tod_stop_and_access_assignment.ipynb`
 
-Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to its nearest parent station using a distance-threshold buffer (EPSG:26910). Outputs both finalized layers and review layers flagging spatial conflicts and orphaned records.
+Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Outputs both finalized layers and review layers flagging spatial conflicts and orphaned records.
 
 **Access point sources (loaded and normalized in order):**
 - `BA` — BART (`BART_PedAccessPoints_GTFS_v1.zip`)
@@ -124,6 +125,7 @@ Loads per-agency pedestrian access point datasets, normalizes and merges them in
 - `SF` — SFMTA (`SFMuni_PedAccessPoints_GTFS_v1.zip`)
 
 **Outputs written to GPKG:**
+- `tod_stations` — reference station layer (read from GDB `stations_v1`, authoritative for spatial assignment)
 - `tod_stops` — TOD stops with spatially assigned `station_id`
 - `tod_access_points` — merged access points with spatially assigned `station_id`
 - `tod_stops_review` — stops with spatial conflicts or missing assignments (for manual review)
