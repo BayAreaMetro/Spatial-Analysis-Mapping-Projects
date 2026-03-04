@@ -27,7 +27,7 @@ Pipeline steps (run in order; ⚠️  manual GIS review required after Step 2 be
             assignments back to the main stop and access-point datasets, and
             re-exports corrected tod_stops and tod_access_points layers.
 
-  Step 4 — 4_tod_zone_buffers.ipynb  (planned)
+  Step 4 — 4_tod_zone_buffer_generation.ipynb
             Generates TOD buffer zones from reviewed, station-assigned access
             points and exports final zone polygons to the shared GeoPackage.
 """
@@ -63,13 +63,18 @@ HQTS_URL = (
 RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 
 # ---------------------------------------------------------------------------
-# Step 2 inputs — manually curated station / stop / access-point data
+# Step 2 inputs — manually curated station / stop / access-point data / overrides
 # ---------------------------------------------------------------------------
 
 # File geodatabase containing curated stops and stations
 TOD_DATABASE_GDB = DATA_DIR / "tod_database.gdb"
 GDB_STATIONS_LAYER = "stations_v1"
 GDB_STOPS_LAYER = "stops_v1"
+
+# Excel spreadsheet containing access point assignment overrides and station removals
+OVERRIDES_XLSX = DATA_DIR / "2026.3.4_TOD_data_review.xlsx"
+ACCESS_OVERRIDES_SHEET = "accesspoints"
+STATION_OVERRIDES_SHEET = "stations"
 
 # ---------------------------------------------------------------------------
 # Step 2 inputs — per-agency pedestrian access point source files
@@ -111,6 +116,26 @@ ACCESS_PTS_SOURCES = [
 ]
 
 # ---------------------------------------------------------------------------
+# Step 4 inputs — jurisdiction boundaries and ACS population data
+# ---------------------------------------------------------------------------
+
+# Bay Area jurisdiction boundaries (incorporated places + unincorporated county
+# lands).  ArcGIS REST FeatureService — region_jurisdiction (public).
+JURISDICTION_BOUNDARIES_URL = (
+    "https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/"
+    "region_jurisdiction/FeatureServer/0/query"
+    "?outFields=*&where=1%3D1&f=geojson"
+)
+
+# ACS 5-year estimates (2019–2023), Table B01003 — Total Population
+# Used to apply the SB79 jurisdictional population threshold (35,000 residents).
+# Pulled via mtcpy.census.pull_acs_data at the Census "place" geography level.
+ACS_YEAR = 2023           # endpoint year of the 5-year estimate window
+ACS_TYPE = "acs5"         # 5-year ACS product
+ACS_TABLE_ID = "B01003"   # Total Population
+ACS_GEOGRAPHY_LEVEL = "place"  # incorporated places (cities/CDPs)
+
+# ---------------------------------------------------------------------------
 # Shared output — GeoPackage written to by all pipeline steps
 # ---------------------------------------------------------------------------
 
@@ -136,3 +161,6 @@ GPKG_TOD_ACCESS_REVIEW_LAYER = "tod_access_review"
 # corrected layers under these names before running Step 3.
 GPKG_TOD_STOPS_REVIEWED_LAYER = "tod_stops_review_v1"
 GPKG_TOD_ACCESS_REVIEWED_LAYER = "tod_access_review_v1"
+
+# Layer name written by Step 4
+GPKG_TOD_ZONES_LAYER = "tod_zones"
