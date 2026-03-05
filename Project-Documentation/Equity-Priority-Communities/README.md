@@ -1,9 +1,9 @@
-**Documentation Status: DRAFT**
+**Documentation Status: FINAL**
 
 ## MTC Plan Bay Area 2050+ Equity Priority Communities <!-- omit in toc -->
 
-Identify census tracts within the Bay Area that are considered a Equity Priority Communities (EPCs) (formerly referred to as Communities of Concern (CoC)) as defined by [MTC Resolution No. 4217-Equity Framework for Plan Bay Area 2040](https://mtc.legistar.com/LegislationDetail.aspx?ID=2555452&GUID=575A6D3F-B8B8-44CF-9F2D-ABEF8B3C9F06&Options=ID|Text|&Search=%22communities+of+concern%22)
-The Joint MTC Planning Committee with the ABAG Administrative Committee approved renaming “Communities of Concern (CoCs)” as “Equity Priority Communities (EPCs)” for use across our work products and programs on May 14, 2021 (refer to materials [here](http://mtc.legistar.com/gateway.aspx?M=F&ID=c275daaf-8f8e-4b82-a44f-d4ff9b053e4c.pdf)). 
+Identify census tracts within the Bay Area that are considered Equity Priority Communities (EPCs) (formerly referred to as Communities of Concern (CoC)) as defined by [MTC Resolution No. 4217-Equity Framework for Plan Bay Area 2040](https://mtc.legistar.com/LegislationDetail.aspx?ID=2555452&GUID=575A6D3F-B8B8-44CF-9F2D-ABEF8B3C9F06&Options=ID|Text|&Search=%22communities+of+concern%22)
+The Joint MTC Planning Committee with the ABAG Administrative Committee approved renaming "Communities of Concern (CoCs)" as "Equity Priority Communities (EPCs)" for use across our work products and programs on May 14, 2021 (refer to materials [here](http://mtc.legistar.com/gateway.aspx?M=F&ID=c275daaf-8f8e-4b82-a44f-d4ff9b053e4c.pdf)). The Plan Bay Area 2050+ EPC map is a **consolidated product** that combines tracts qualifying under both the ACS 2014-2018 and ACS 2018-2022 vintages — a tract is included if it meets EPC criteria under either or both vintages. See the [Consolidated EPC Map](#consolidated-epc-map) section for details.
 
 ### Project Management 
 
@@ -14,6 +14,7 @@ The Joint MTC Planning Committee with the ABAG Administrative Committee approved
     	- Includes all data, analysis, and visualizations related to all regional Equity Priority Communities work products outside of Plan Bay Area 2050+
 
 ### Table of Contents
+- [Consolidated EPC Map](#consolidated-epc-map)
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
 	- [Equity Priority Communities Framework Plan Bay Area 2050+](#equity-priority-communities-framework-plan-bay-area-2050)
@@ -28,6 +29,25 @@ The Joint MTC Planning Committee with the ABAG Administrative Committee approved
 - [Expected Outcomes](#expected-outcomes)
 - [Results](#results)
 - [Related Works](#related-works)
+
+## Consolidated EPC Map
+
+The Plan Bay Area 2050+ Equity Priority Communities map is a consolidated product that includes census tracts meeting MTC's EPC criteria under the ACS 2014-2018 vintage, the ACS 2018-2022 vintage, or both. A tract is included in the consolidated map if it qualifies under either vintage.
+
+| Vintage | ACS Period | Census Tract Boundaries | Web Layer |
+|---|---|---|---|
+| ACS 2018-2022 | 2018–2022 | 2020 (2022 vintage) | [ACS 2018-2022 Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=1ae2ccc15b4a4fe9a6d0cd84ae47f2a5) |
+| ACS 2014-2018 | 2014–2018 | 2010 (2018 vintage) | [ACS 2014-2018 Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=31efca681f7f4774bb398ac7a794bf8d) |
+
+### Why Two Vintages?
+
+In April 2024, MTC released a draft update to Equity Priority Communities using ACS 2018-2022 data. The methodology remained unchanged from Plan Bay Area 2050, with thresholds recalculated using the latest available data. While the total number of EPCs in the nine-county Bay Area increased, the draft showed a modest decline in the share of Bay Area tracts qualifying as EPCs — driven primarily by a continued decline in low-income households and the impact of COVID-19 on ACS data quality (see [Impact of COVID-19 Pandemic on ACS Data Collection](#impact-of-covid-19-pandemic-on-american-community-survey-acs-data-collection)).
+
+Following the April 2024 release, MTC and ABAG staff conducted two rounds of stakeholder outreach. Feedback from stakeholders and county transportation agencies consistently noted that a loss of EPC status would have adverse effects on communities in terms of planning priorities and eligibility for funding programs.
+
+In response to this feedback, MTC and ABAG staff recommended — and the MTC/ABAG Planning Committee adopted in December 2024 — combining the Plan Bay Area 2050 EPCs (ACS 2014-2018) with the new 2024 EPCs (ACS 2018-2022) into a single consolidated Plan Bay Area 2050+ EPC map. This approach ensures that no tract "loses" EPC status from one plan cycle to the next, maintains the existing board-approved methodology, and allows Plan Bay Area 2050+ to continue meeting Title VI and Environmental Justice requirements.
+
+For full background, refer to the [December 13, 2024 MTC/ABAG Planning Committee Agenda Item 7a](https://mtc.ca.gov/sites/default/files/meetings/attachments/6161/7ai_24_1232_Summary_Sheet_Equity_Priority_Communites_Update_5.pdf).
 
 ## Data Sources
 
@@ -157,12 +177,19 @@ Sources:
 
 ## Results
 
-- [PBA 2050+ Equity Priority Communities - ACS 2022](Data/epc_acs2022.csv)
-- [PBA 2050+ Equity Priority Communities - ACS 2022 Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=1ae2ccc15b4a4fe9a6d0cd84ae47f2a5)
+**Consolidated Plan Bay Area 2050+ EPC Map**
+- [PBA 2050+ Equity Priority Communities Viewer](https://mtc.maps.arcgis.com/apps/instant/sidebar/index.html?appid=1eea286b6b184f0a9ebabb8dfcd14334)
 - [PBA 2050+ Equity Priority Communities Print Map](https://mtcdrive.box.com/s/k5brposx9cv4vwimu4g06240i1p7ak7k)
 - [PBA 2050 and PBA 2050+ Equity Priority Communities Comparison Maps](https://mtcdrive.box.com/s/ho68r7yun5kogcphe171wfdoxeujsqgq)
 - [PBA 2050 and PBA 2050+ Equity Priority Communities Comparison Interactive Web Map](https://experience.arcgis.com/experience/44ea7e82901e4132bc577328cec515ef)
 - [Equity Priority Communities Comparison Tool Tableau (Internal)](https://10ay.online.tableau.com/#/site/metropolitantransportationcommission/workbooks/1400140/views)
+
+**ACS 2018-2022**
+- [PBA 2050+ Equity Priority Communities - ACS 2018-2022](Data/epc_acs2022.csv)
+- [PBA 2050+ Equity Priority Communities - ACS 2018-2022 Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=1ae2ccc15b4a4fe9a6d0cd84ae47f2a5)
+
+**ACS 2014-2018**
+- [PBA 2050+ Equity Priority Communities - ACS 2014-2018 Web Layer](https://mtc.maps.arcgis.com/home/item.html?id=31efca681f7f4774bb398ac7a794bf8d)
 
 
 ## Related Works
