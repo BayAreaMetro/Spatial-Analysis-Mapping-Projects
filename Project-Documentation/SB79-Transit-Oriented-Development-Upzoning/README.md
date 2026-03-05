@@ -99,16 +99,26 @@ The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebo
 Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data, classifies each stop as TOD-eligible (Tier 1 or Tier 2), and writes the results to the shared GeoPackage.
 
 **Outputs written to GPKG:**
-- `stops` — all GTFS stops with `tod_stop` flag and `transit_tier` classification
+- `stops` — GTFS location_type=0 stop/platform records served by relevant routes, with `tod_stop` flag and `tod_tier` classification
 - `stations` — GTFS location_type=1 parent station records
-- `access_points` — pre-defined pedestrian access points loaded from per-agency source data
+- `access_points` — GTFS location_type=2 (entrance/exit) and location_type=3 (generic node) records
 
 > **Manual GIS review required before running Step 2.**
 >
-> 1. Open the `stations` layer and review station locations for accuracy.
-> 2. Manually add stations for TOD-applicable stops that lack a parent station in GTFS (e.g. SFMTA light rail stops not co-located with a BART station, VTA light rail stops, BRT stops).
-> 3. Map pedestrian access points for any newly added or corrected stations.
-> 4. Save the updated stations and access points back to the shared data sources read by Step 2.
+> The `stops` and `stations` layers from the GPKG serve as the starting point for manual curation. Curated output is saved to a File Geodatabase (`tod_database.gdb`, layers `stations_v1` and `stops_v1`), which Step 2 reads directly. Pedestrian access points are **not** carried through the FGDB — they are loaded directly from per-agency source files in Step 2.
+>
+> **Stations (`stations_v1`):**
+> 1. Load the `stations` layer from the GPKG into GIS.
+> 2. Copy it into `tod_database.gdb` as `stations_v1`.
+> 3. Manually add station records for TOD-applicable stops that lack a parent station in GTFS — for example, SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops.
+>
+> **Stops (`stops_v1`):**
+> 1. Load the `stops` layer from the GPKG into GIS.
+> 2. Copy it into `tod_database.gdb` as `stops_v1`.
+> 3. Review each stop flagged as `tod_stop = 1` by the automated process to confirm correctness.
+> 4. For any stops that should be TOD-applicable but were not caught by the automated logic, manually set `tod_stop = 1` and populate the `action` column with the reason for inclusion (e.g. `"manual — VTA BRT stop"`, `"manual — SFMTA light rail"`).
+>
+> Once both curated layers are saved to `tod_database.gdb`, proceed to Step 2.
 
 ---
 
