@@ -136,10 +136,15 @@ Loads per-agency pedestrian access point datasets, normalizes and merges them in
 > **Manual Excel review required before running Step 3.**
 >
 > 1. Open `SB79_tod_review.xlsx`.
-> 2. For any stop or access point that needs a corrected station assignment, set `assignment_status` = `manual_station_assignment` using the dropdown and enter the correct `station_id`.
->    - The `assignment_status` dropdown only allows: `conflict`, `no_match`, `manual_station_assignment`.
->    - Only rows with `assignment_status = manual_station_assignment` are applied as updates in Step 3.
-> 3. Save the workbook, then run Step 3.
+> 2. **Priority — resolve `conflict` and `no_match` records first.**
+>    - Filter each sheet to rows where `assignment_status` is `conflict` or `no_match`.
+>    - Open the corresponding `_dev` layer (`tod_stops_dev` or `tod_access_points_dev`) in QGIS/ArcGIS Pro alongside `tod_stations_dev` to visually identify the correct parent station.
+>    - Copy the correct `station_id` from `tod_stations_dev` into the `station_id` cell for that row.
+>    - Set `assignment_status` = `manual_station_assignment` using the dropdown.
+> 3. **Secondary — correct any mis-assigned records.**
+>    - If a row has `assignment_status = assigned` but the spatial assignment produced the wrong station (e.g., a stop was snapped to the nearest station rather than its true parent), update `station_id` to the correct value and set `assignment_status` = `manual_station_assignment`.
+>    - Leave correctly-assigned rows untouched — only rows with `assignment_status = manual_station_assignment` are applied as updates in Step 3.
+> 4. Save the workbook, then run Step 3.
 
 ---
 
