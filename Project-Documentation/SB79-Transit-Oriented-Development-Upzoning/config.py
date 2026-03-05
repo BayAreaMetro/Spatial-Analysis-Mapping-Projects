@@ -6,7 +6,7 @@ Update file paths and URLs here when inputs change; all pipeline notebooks
 reference this file so there is a single authoritative record of every
 data source used across the project.
 
-Pipeline steps (run in order; ⚠️  manual GIS review required after Step 2 before running Step 3):
+Pipeline steps (run in order; ⚠️  manual Excel review required after Step 2 before running Step 3):
 
   Step 1 — 1_gtfs_tod_stop_classification.ipynb
             Reads GTFS feed + Caltrans HQTS service, classifies TOD-applicable
@@ -17,15 +17,19 @@ Pipeline steps (run in order; ⚠️  manual GIS review required after Step 2 be
             Reads the curated stations and stops geodatabase layers, merges the
             per-agency pedestrian access-point source files (see constants below),
             spatially assigns stops and access points to parent stations via
-            progressive buffer analysis, and exports review layers to the shared
-            GeoPackage.
-            ⚠️  Requires manual GIS review of tod_stops_review_v1 and
-            tod_access_review_v1 before proceeding to Step 3.
+            progressive buffer analysis, and exports development layers
+            (tod_stations_dev, tod_stops_dev, tod_access_points_dev) to the
+            shared GeoPackage, and writes REVIEW_XLSX for manual review.
+            ⚠️  Requires manual review of REVIEW_XLSX before proceeding to
+            Step 3.  For any stop or access point that needs a manual station
+            assignment, set assignment_status = 'manual_station_assignment'
+            and enter the correct station_id.
 
   Step 3 — 3_tod_station_assignment_reintegration.ipynb
-            Reads the manually-reviewed conflict/orphan layers, applies valid
-            assignments back to the main stop and access-point datasets, and
-            re-exports corrected tod_stops and tod_access_points layers.
+            Reads REVIEW_XLSX, validates manually-assigned station_ids against
+            the TOD station universe, applies updates to the _dev datasets, and
+            exports final authoritative tod_stations, tod_stops, and
+            tod_access_points layers to the shared GeoPackage.
 
   Step 4 — 4_tod_zone_buffer_generation.ipynb
             Generates TOD buffer zones from reviewed, station-assigned access
@@ -71,9 +75,10 @@ TOD_DATABASE_GDB = DATA_DIR / "tod_database.gdb"
 GDB_STATIONS_LAYER = "stations_v1"
 GDB_STOPS_LAYER = "stops_v1"
 
-# Excel spreadsheet containing access point assignment overrides and station removals
-OVERRIDES_XLSX = DATA_DIR / "2026.3.4_TOD_data_review.xlsx"
-ACCESS_OVERRIDES_SHEET = "accesspoints"
+# Excel spreadsheet listing station_ids to exclude from spatial assignment.
+# Stations in this list are removed before buffer analysis so that stops and
+# access points cannot be assigned to non-TOD stations.
+STATIONS_OVERRIDES_XLSX = DATA_DIR / "2026_03_04_tod_stations_overrides.xlsx"
 STATION_OVERRIDES_SHEET = "stations"
 
 # ---------------------------------------------------------------------------
@@ -146,21 +151,22 @@ GPKG_STOPS_LAYER = "stops"
 GPKG_STATIONS_LAYER = "stations"
 GPKG_ACCESS_PTS_LAYER = "access_points"
 
-# Layer names written by Step 2
-GPKG_TOD_STATIONS_LAYER = "tod_stations"
-GPKG_TOD_STOPS_LAYER = "tod_stops"
-GPKG_TOD_ACCESS_PTS_LAYER = "tod_access_points"
+# Development layers written by Step 2 (in-progress, not authoritative)
+GPKG_TOD_STATIONS_DEV_LAYER = "tod_stations_dev"
+GPKG_TOD_STOPS_DEV_LAYER = "tod_stops_dev"
+GPKG_TOD_ACCESS_PTS_DEV_LAYER = "tod_access_points_dev"
 
-# Review layers exported by Step 2 (pre-manual-review)
-# These are overwritten each time Step 2 runs.
-GPKG_TOD_STOPS_REVIEW_LAYER = "tod_stops_review"
-GPKG_TOD_ACCESS_REVIEW_LAYER = "tod_access_review"
+# Review workbook written by Step 2 and read by Step 3
+# Reviewers set assignment_status = 'manual_station_assignment' and fill in
+# station_id for any stops or access points that need a manual correction.
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review.xlsx"
+REVIEW_STOPS_SHEET = "stops"
+REVIEW_ACCESS_PTS_SHEET = "access_points"
 
-# Review layers read by Step 3 (post-manual-review)
-# After reviewing tod_stops_review / tod_access_review in GIS, save the
-# corrected layers under these names before running Step 3.
-GPKG_TOD_STOPS_REVIEWED_LAYER = "tod_stops_review_v1"
-GPKG_TOD_ACCESS_REVIEWED_LAYER = "tod_access_review_v1"
+# Final authoritative layers written by Step 3
+GPKG_TOD_STATIONS_FINAL_LAYER = "tod_stations"
+GPKG_TOD_STOPS_FINAL_LAYER = "tod_stops"
+GPKG_TOD_ACCESS_PTS_FINAL_LAYER = "tod_access_points"
 
 # Layer name written by Step 4
 GPKG_TOD_ZONES_LAYER = "tod_zones"

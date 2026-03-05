@@ -84,10 +84,11 @@ The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebo
 
 ### Prerequisites
 
-- Python environment with `geopandas`, `pandas`, `gtfs_kit`, `shapely`, and `uuid` installed
+- Python environment with `geopandas`, `pandas`, `gtfs_kit`, `shapely`, `uuid`, and `openpyxl` installed
 - Access to the MTC Box folder containing source data (see [Resources](#resources))
 - Paths in `config.py` updated to match your local data directory
-- QGIS (or equivalent) for the manual review steps after Step 1 and between Steps 2 and 3
+- QGIS (or equivalent) for the manual GIS review gate after Step 1
+- Excel (or equivalent spreadsheet application) for the manual review gate between Steps 2 and 3
 
 ---
 
@@ -115,7 +116,7 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 
 **Notebook:** `2_tod_stop_and_access_assignment.ipynb`
 
-Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Outputs both finalized layers and review layers flagging spatial conflicts and orphaned records.
+Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Non-TOD stations are excluded before spatial assignment using the station overrides list (`2026_03_04_tod_stations_overrides.xlsx`). Outputs development layers to the shared GeoPackage and a review Excel workbook for manual resolution.
 
 **Access point sources (loaded and normalized in order):**
 - `BA` — BART (`BART_PedAccessPoints_GTFS_v1.zip`)
@@ -124,20 +125,21 @@ Loads per-agency pedestrian access point datasets, normalizes and merges them in
 - `SC` — VTA (`VTA_PedAccessPoints_GTFS_v2.zip`)
 - `SF` — SFMTA (`SFMuni_PedAccessPoints_GTFS_v1.zip`)
 
-**Outputs written to GPKG:**
-- `tod_stations` — reference station layer (read from GDB `stations_v1`, authoritative for spatial assignment)
-- `tod_stops` — TOD stops with spatially assigned `station_id`
-- `tod_access_points` — merged access points with spatially assigned `station_id`
-- `tod_stops_review` — stops with spatial conflicts or missing assignments (for manual review)
-- `tod_access_review` — access points with spatial conflicts or missing assignments (for manual review)
+**Outputs written to GPKG** *(development layers — not yet authoritative):*
+- `tod_stations_dev` — station layer used for spatial assignment (filtered to TOD stations)
+- `tod_stops_dev` — TOD stops with spatially assigned `station_id` and `assignment_status`
+- `tod_access_points_dev` — merged access points with spatially assigned `station_id` and `assignment_status`
 
-> **Manual GIS review required before running Step 3.**
+**Review workbook written to Box data folder:**
+- `SB79_tod_review.xlsx` — contains all stops and access points with `assignment_status` and `station_id`; reviewers use this file to resolve conflicts and no-match records before running Step 3
+
+> **Manual Excel review required before running Step 3.**
 >
-> 1. Open `tod_stops_review` and `tod_access_review` in QGIS.
-> 2. Inspect records with `valid_station_assignment = 0` or conflicts.
-> 3. Correct `station_id` assignments as needed and set `valid_station_assignment = 1` for resolved records.
-> 4. **Save the corrected layers back to the GeoPackage as `tod_stops_review_v1` and `tod_access_review_v1`.**  
->    Re-running Step 2 will overwrite `tod_stops_review` and `tod_access_review` but will never touch the `_v1` layers.
+> 1. Open `SB79_tod_review.xlsx`.
+> 2. For any stop or access point that needs a corrected station assignment, set `assignment_status` = `manual_station_assignment` using the dropdown and enter the correct `station_id`.
+>    - The `assignment_status` dropdown only allows: `conflict`, `no_match`, `manual_station_assignment`.
+>    - Only rows with `assignment_status = manual_station_assignment` are applied as updates in Step 3.
+> 3. Save the workbook, then run Step 3.
 
 ---
 
@@ -145,15 +147,16 @@ Loads per-agency pedestrian access point datasets, normalizes and merges them in
 
 **Notebook:** `3_tod_station_assignment_reintegration.ipynb`
 
-Reads the manually reviewed `_v1` layers, merges corrections back into the main `tod_stops` and `tod_access_points` layers, and re-exports the final corrected versions to the GeoPackage.
+Reads the manually-reviewed Excel workbook (`SB79_tod_review.xlsx`), validates any manually-assigned `station_id` values against the TOD station universe, applies corrections to the development datasets, and exports the final authoritative layers to the shared GeoPackage.
 
-**Inputs read from GPKG:**
-- `tod_stops_review_v1` — manually corrected stops review layer
-- `tod_access_review_v1` — manually corrected access points review layer
+**Inputs:**
+- `SB79_tod_review.xlsx` — reviewed workbook with `manual_station_assignment` rows filled in
+- `tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev` — development layers from Step 2 (read from GPKG)
 
-**Outputs written to GPKG:**
-- `tod_stops` — final stops with all corrections applied
-- `tod_access_points` — final access points with all corrections applied
+**Outputs written to GPKG** *(final authoritative layers):*
+- `tod_stations` — final station layer
+- `tod_stops` — final stops with all manual corrections applied
+- `tod_access_points` — final access points with all manual corrections applied
 
 > No manual review required between Steps 3 and 4.
 
