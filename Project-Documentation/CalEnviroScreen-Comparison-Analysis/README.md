@@ -32,11 +32,11 @@ Specifically, the analysis must answer three questions:
 
 | Dataset | Source | Description |
 |---|---|---|
-| CalEnviroScreen 4.0 Results | OEHHA | Excel file with cumulative impact scores and percentile rankings for all California census tracts, based on 2010 tract boundaries |
-| Draft CalEnviroScreen 5.0 Results | OEHHA | Excel file with updated scores and rankings based on 2020 tract boundaries |
+| CalEnviroScreen 4.0 Results | [CalEnviroScreen 4.0 Results](https://data.ca.gov/dataset/calenviroscreen-4-0-results1) | Excel file with cumulative impact scores and percentile rankings for all California census tracts, based on 2010 tract boundaries |
+| Draft CalEnviroScreen 5.0 Results | [Draft CalEnviroScreen 5.0 Results](https://data.ca.gov/dataset/draft-calenviroscreen-5-0) | Excel file with updated scores and rankings based on 2020 tract boundaries |
 | California Census Tract Boundaries — 2010 | [U.S. Census TIGER](https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_06_tract10.zip) | Official 2010 census tract geometries for California (8,057 tracts), used as the geographic denominator for CES 4.0 analysis |
 | California Census Tract Boundaries — 2020 | [U.S. Census TIGER](https://www2.census.gov/geo/tiger/TIGER2020/TRACT/tl_2020_06_tract.zip) | Official 2020 census tract geometries for California (9,129 tracts), used as the geographic denominator for CES 5.0 analysis |
-| 2010–2020 Census Tract Crosswalk | [NHGIS (IPUMS)](https://www.nhgis.org/) | Population-weighted crosswalk that maps every 2010 census tract to its corresponding 2020 tract(s), accounting for boundary changes over the decade |
+| 2010–2020 Census Tract Crosswalk | [NHGIS (IPUMS)](https://www.nhgis.org/geographic-crosswalks#to-census-tracts) | Population-weighted crosswalk that maps every 2010 census tract to its corresponding 2020 tract(s), accounting for boundary changes over the decade |
 | Equity Priority Communities — 2018 ACS | [MTC/ABAG ArcGIS Online](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/equity_priority_communities_2025_acs2018/FeatureServer/0) | EPC designations used in Plan Bay Area 2050, based on 2010 tract boundaries |
 | Equity Priority Communities — 2022 ACS | [MTC/ABAG ArcGIS Online](https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/draft_equity_priority_communities_pba2050plus_acs2022a/FeatureServer/0) | Draft EPC designations for Plan Bay Area 2050+, based on 2020 tract boundaries |
 
