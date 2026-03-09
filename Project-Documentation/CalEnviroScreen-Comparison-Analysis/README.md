@@ -65,55 +65,15 @@ CES 4.0 is based on **2010 census tract boundaries**, while CES 5.0 uses **2020 
 
 To make a like-for-like comparison, we use a **population-weighted crosswalk** published by NHGIS. This crosswalk provides modeled interpolation weights derived from 2020 Census block-level population counts. For each pair of overlapping 2010 and 2020 tracts, the weight represents the expected proportion of the 2010 tract's population attributable to each 2020 tract. We use these population weights — rather than simpler area-based weights — to carry the CES 4.0 DAC flag forward into 2020 geography, ensuring the methodology reflects where people actually live rather than how land area is distributed.
 
-There are four types of tract relationships in the crosswalk. Before carrying the DAC flag forward, each row in the crosswalk is classified into one of these four categories based on two counts: how many 2020 tracts each 2010 tract maps to (`tract_ct_2020`), and how many 2010 tracts contribute to each 2020 tract (`tract_ct_2010`). This classification is used to characterize the nature of geographic change and to support transparency in reporting.
+There are four types of tract relationships in the crosswalk, classified based on how many 2020 tracts each 2010 tract maps to, and how many 2010 tracts contribute to each 2020 tract.
 
----
+| Relationship | When it occurs | 2010 side | 2020 side | How DAC status is carried forward |
+|---|---|---|---|---|
+| **1-to-1** | Boundary unchanged — the most common case | 1 tract | 1 tract | Flag carries forward directly |
+| **Split** | One tract was subdivided — common in fast-growing areas where population growth warranted finer boundaries | 1 tract (DAC or not) | 2+ tracts | Each resulting 2020 tract inherits the DAC flag if ≥50% of its population came from the source tract |
+| **Merge** | Multiple tracts were consolidated — common where population is sparse or declining | 2+ tracts | 1 tract | The 2020 tract becomes a DAC if the combined population-weighted DAC share across all source tracts is ≥50% |
+| **Complex** | Simultaneous splits and merges — the least common case | 2+ tracts | 2+ tracts | Same population-weighting logic as merge; each 2020 tract receives a weighted share of DAC status from all contributing 2010 tracts |
 
-**1-to-1 — Boundary unchanged**
-
-The most common case. The 2010 and 2020 tracts cover exactly the same area. The DAC flag carries forward directly.
-
-```
-[2010 Tract A — DAC] ──► [2020 Tract A — DAC]
-```
-
----
-
-**Split — One tract became many**
-
-Common in fast-growing areas where population growth warranted finer-grained boundaries. A single 2010 tract is divided into two or more 2020 tracts. Because there is only one source tract, the DAC status of that source is unambiguous — the population weight simply indicates how much of the source population went to each resulting 2020 tract. Each resulting tract inherits the DAC flag if the majority (≥50%) of its population came from the DAC source tract.
-
-```
-                          ┌► [2020 Tract A1]  ← inherits DAC if pop share ≥ 50%
-[2010 Tract A — DAC] ────►│
-                          └► [2020 Tract A2]  ← inherits DAC if pop share ≥ 50%
-```
-
----
-
-**Merge — Many tracts became one**
-
-Common in areas with declining or sparse populations. Two or more 2010 tracts are consolidated into a single 2020 tract. The weighted contributions from all source tracts are summed — the 2020 tract becomes a DAC only if the combined population-weighted DAC share is 50% or more.
-
-```
-[2010 Tract A — DAC] ──►┐
-                         ├► [2020 Tract C]  ← DAC if weighted avg ≥ 50%
-[2010 Tract B]       ──►┘
-```
-
----
-
-**Complex — Simultaneous splits and merges**
-
-The least common case. Parts of multiple 2010 tracts are recombined into multiple 2020 tracts in a way that doesn't fit neatly into split or merge. The same population-weighting logic applies — each 2020 tract receives a weighted share of DAC status from all contributing 2010 tracts.
-
-```
-[2010 Tract A — DAC] ──►┐         ┌► [2020 Tract C]
-                         ├────────►│
-[2010 Tract B]       ──►┘         └► [2020 Tract D]
-```
-
----
 
 ### Summary Statistics
 
