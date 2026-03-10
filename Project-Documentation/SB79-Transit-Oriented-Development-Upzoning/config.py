@@ -19,11 +19,10 @@ Pipeline steps (run in order; ⚠️  manual Excel review required after Step 2 
             spatially assigns stops and access points to parent stations via
             progressive buffer analysis, and exports development layers
             (tod_stations_dev, tod_stops_dev, tod_access_points_dev) to the
-            shared GeoPackage, and writes REVIEW_XLSX for manual review.
-            ⚠️  Requires manual review of REVIEW_XLSX before proceeding to
-            Step 3.  For any stop or access point that needs a manual station
-            assignment, set assignment_status = 'manual_station_assignment'
-            and enter the correct station_id.
+            shared GeoPackage, and writes REVIEW_XLSX_OUTPUT for manual review.
+            ⚠️  After Step 2 completes: rename REVIEW_XLSX_OUTPUT by appending
+            _reviewed_YYYY_MM_DD, update REVIEW_XLSX in config.py to point to
+            the renamed file, resolve conflict/no_match rows, then run Step 3.
 
   Step 3 — 3_tod_station_assignment_reintegration.ipynb
             Reads REVIEW_XLSX, validates manually-assigned station_ids against
@@ -96,7 +95,7 @@ ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v1.zip"
 ACCESS_PTS_BA_LAYER = None  # layer name if GDB, else None
 
 # Caltrain (CT)
-ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v3.zip"
+ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v4_updated_fields.zip"
 ACCESS_PTS_CT_LAYER = None  # layer name if GDB, else None
 
 # AC Transit (AC)
@@ -156,10 +155,16 @@ GPKG_TOD_STATIONS_DEV_LAYER = "tod_stations_dev"
 GPKG_TOD_STOPS_DEV_LAYER = "tod_stops_dev"
 GPKG_TOD_ACCESS_PTS_DEV_LAYER = "tod_access_points_dev"
 
-# Review workbook written by Step 2 and read by Step 3
-# Reviewers set assignment_status = 'manual_station_assignment' and fill in
-# station_id for any stops or access points that need a manual correction.
-REVIEW_XLSX = DATA_DIR / "SB79_tod_review.xlsx"
+# Step 2 output — Step 2 always writes to this fixed filename.
+# After Step 2 completes, rename this file by appending _reviewed_YYYY_MM_DD
+# (e.g. SB79_tod_review_reviewed_2026_03_10.xlsx) so a future re-run of
+# Step 2 cannot overwrite your manual edits.
+REVIEW_XLSX_OUTPUT = DATA_DIR / "SB79_tod_review.xlsx"
+
+# UPDATE BEFORE RUNNING STEP 3:
+# Set this to the path of the renamed/reviewed workbook.
+# Example: DATA_DIR / "SB79_tod_review_reviewed_2026_03_10.xlsx"
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review_reviewed_2026_03_06.xlsx"  # replace YYYY_MM_DD
 REVIEW_STOPS_SHEET = "stops"
 REVIEW_ACCESS_PTS_SHEET = "access_points"
 

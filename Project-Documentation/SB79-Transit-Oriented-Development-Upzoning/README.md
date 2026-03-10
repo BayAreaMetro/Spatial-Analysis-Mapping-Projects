@@ -145,7 +145,7 @@ Loads per-agency pedestrian access point datasets, normalizes and merges them in
 
 > **Manual Excel review required before running Step 3.**
 >
-> 1. Open `SB79_tod_review.xlsx`.
+> 1. **Before editing — rename the file.** Rename `SB79_tod_review.xlsx` to `SB79_tod_review_reviewed_YYYY_MM_DD.xlsx` (replacing `YYYY_MM_DD` with today's date). This prevents a future re-run of Step 2 from overwriting your work. Then update `REVIEW_XLSX` in `config.py` to point to the renamed file path.
 > 2. **Priority — resolve `conflict` and `no_match` records first.**
 >    - Filter each sheet to rows where `assignment_status` is `conflict` or `no_match`.
 >    - Open the corresponding `_dev` layer (`tod_stops_dev` or `tod_access_points_dev`) in QGIS/ArcGIS Pro alongside `tod_stations_dev` to visually identify the correct parent station.
@@ -162,10 +162,10 @@ Loads per-agency pedestrian access point datasets, normalizes and merges them in
 
 **Notebook:** `3_tod_station_assignment_reintegration.ipynb`
 
-Reads the manually-reviewed Excel workbook (`SB79_tod_review.xlsx`), validates any manually-assigned `station_id` values against the TOD station universe, applies corrections to the development datasets, and exports the final authoritative layers to the shared GeoPackage.
+Reads the manually-reviewed Excel workbook (path set via `REVIEW_XLSX` in `config.py`), validates any manually-assigned `station_id` values against the TOD station universe, applies corrections to the development datasets, and exports the final authoritative layers to the shared GeoPackage.
 
 **Inputs:**
-- `SB79_tod_review.xlsx` — reviewed workbook with `manual_station_assignment` rows filled in
+- Reviewed workbook (path set via `REVIEW_XLSX` in `config.py`) — the renamed `SB79_tod_review_reviewed_YYYY_MM_DD.xlsx` file with `manual_station_assignment` rows filled in
 - `tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev` — development layers from Step 2 (read from GPKG)
 
 **Outputs written to GPKG** *(final authoritative layers):*
