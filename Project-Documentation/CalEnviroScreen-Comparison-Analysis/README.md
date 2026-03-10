@@ -85,12 +85,16 @@ Three sets of summary tables are produced, corresponding to the two tabs in the 
 
 ## Results
 
-Analysis outputs, including the comparison dataset and summary tables, are available in the project Box folder *(internal only)*:
+Analysis outputs are available in the project Box folder *(internal only)*:
 
 - [Box — Working Files](https://mtcdrive.box.com/s/mrgek94t7vskw6cqkws980w9vrot6arl)
 - [Analysis Notebook](ces_4_and_5_change_analysis.ipynb)
 
-The comparison dataset (`ces_comparison_database.gpkg`) is a GeoPackage containing one record per 2020 census tract with the following fields: CES 5.0 DAC flag, CES 4.0 DAC flag carried forward to 2020 geography, EPC 2050 flag carried forward, EPC 2050+ flag, county name, and Bay Area classification.
+| File | Description |
+|---|---|
+| [ces_comparison_database.gpkg](https://mtcdrive.box.com/s/z9eor1u66hk9mfcxulqnj4z4dmjb0xnl) | GeoPackage with one record per 2020 California census tract. Includes CES 5.0 DAC flag, CES 4.0 DAC flag carried forward to 2020 geography via population-weighted crosswalk, EPC 2050 (ACS 2018) flag carried forward, EPC 2050+ (ACS 2022) flag, county name, Bay Area classification, and four mutually-exclusive EPC/DAC overlap categories for each CES version. |
+| [comparison_summary_harmonized_2020.xlsx](https://mtcdrive.box.com/s/dg4nxnijet8pjpuknypj2w2wpg8itve0) | Excel workbook with four tabs, all on the harmonized 2020 tract denominator (9,129 tracts). **CES4** — CES 4.0 DAC counts carried forward to 2020 tracts. **CES5** — CES 5.0 DAC counts on native 2020 tracts. **EPC vs CES4** — Bay Area breakdown of EPC/DAC overlap for CES 4.0 (epc_and_ces4, epc_only, ces4_only, neither). **EPC vs CES5** — Same breakdown for CES 5.0. |
+| [ces_summary.xlsx](https://mtcdrive.box.com/s/8nz0zedgyo3972mz4mbqsr5a7vxtpbvd) | Excel workbook with simple DAC counts in each version's native tract geography. **CES4 (2010 tracts)** — DAC and non-DAC counts across all 8,057 California 2010 tracts. **CES5 (2020 tracts)** — DAC and non-DAC counts across all 9,129 California 2020 tracts. Both tabs are broken down by Bay Area county with Bay Area and statewide subtotals. |
 
 ## Tags
 
