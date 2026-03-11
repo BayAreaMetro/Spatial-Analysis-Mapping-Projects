@@ -8,6 +8,7 @@ This analysis compares Disadvantaged Community (DAC) designations between CalEnv
 - [Project Resources](#project-resources)
 - [Data Sources](#data-sources)
 - [Analysis Parameters](#analysis-parameters)
+- [CES 4.0 vs. CES 5.0 — Key Differences](#ces-40-vs-ces-50--key-differences)
 - [Methodology](#methodology)
 - [Results](#results)
 - [Tags](#tags)
@@ -50,6 +51,25 @@ A geographic designation used by MTC/ABAG to identify census tracts with a signi
 
 **Bay Area Counties**
 The nine-county San Francisco Bay Area: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano, and Sonoma.
+
+## CES 4.0 vs. CES 5.0 — Key Differences
+
+### What stayed the same conceptually
+
+Both CES 4.0 and CES 5.0 are statewide, tract-level screening tools intended to rank cumulative burden using a combination of environmental exposures, environmental effects, sensitive populations, and socioeconomic factors. In both versions, "DAC-like" geographies are commonly operationalized as tracts scoring in the top quartile of the overall score percentile — in our tables, that means a CES score percentile **≥ 75** for each version.
+
+### What changed materially in CES 5.0
+
+CES 5.0 is best understood as an update in three broad ways:
+
+**Data refresh and indicator updates**
+CES 5.0 refreshes the underlying datasets and, in some cases, replaces or re-specifies indicators to reflect newer methods and data availability. In practice this shifts which tracts land above the 75th-percentile cut, even when the overall framework is similar, because small indicator definition changes can move borderline tracts across the threshold.
+
+**Method refinements that can change rankings**
+Even when indicator categories remain familiar, CES 5.0 includes refinements to the scoring pipeline — such as re-benchmarking percentiles, updating how indicators are normalized, and improving handling of missingness. Those "plumbing" updates can change the distribution of scores and therefore the composition of the top-quartile tracts.
+
+**Geography and comparability caveat**
+CES 4.0 was published on a 2010 tract framework, while CES 5.0 is published on a 2020 tract framework. Any direct comparison therefore requires a crosswalk. In our analysis, CES 4.0 was crosswalked from 2010 → 2020 tracts using a population-weighted interpolation so it can be compared to EPCs and CES 5.0 on the same 2020 geography. This is the methodologically correct approach for an overlay, but it means measured CES 4.0 vs. CES 5.0 differences reflect both true score changes and boundary changes.
 
 ## Methodology
 
