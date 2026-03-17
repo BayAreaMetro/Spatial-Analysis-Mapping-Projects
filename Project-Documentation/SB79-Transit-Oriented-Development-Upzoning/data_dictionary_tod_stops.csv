@@ -1,0 +1,11 @@
+Field,Alias,Allow NULL,Allow 0,Data Type,Attribute Domain,Description,Source
+stop_id,Stop ID,No,N/A,Text,,Unique GTFS stop identifier.,Step 1 — 1_gtfs_tod_stop_classification.ipynb
+station_id,Station ID,No,N/A,Text,,Parent station ID. Assigned by spatial buffer analysis in Step 2 using progressively expanding buffers at 150 ft / 300 ft / 500 ft / 1000 ft. Manual corrections applied in Step 3 via the reviewed Excel workbook. All records are guaranteed to have a valid station_id before export.,Step 2 — 2_tod_stop_and_access_assignment.ipynb → Step 3 — 3_tod_station_assignment_reintegration.ipynb
+location_type,Location Type,No,Yes,Integer,GTFS location_type: 0 = Stop/Platform,"GTFS location type. All records in this layer are location_type = 0 (Stop or Platform). See https://gtfs.org/documentation/schedule/reference/#stopstxt for reference.",Step 1 — 1_gtfs_tod_stop_classification.ipynb
+stop_name,Stop Name,Yes,N/A,Text,,Stop name from GTFS or the curated stops_v1 GDB layer.,Step 1 — 1_gtfs_tod_stop_classification.ipynb
+agency_id,Agency ID,No,N/A,Text,"BA, CT, AC, SC, SF","Transit agency short code. BA = BART, CT = Caltrain, AC = AC Transit, SC = VTA, SF = SFMTA.",Step 1 — 1_gtfs_tod_stop_classification.ipynb
+agency_name,Agency Name,No,N/A,Text,,Full transit agency name.,Step 1 — 1_gtfs_tod_stop_classification.ipynb
+route_short_name,Route Short Name,Yes,N/A,Text,,GTFS route short name or number for the route(s) serving this stop.,Step 1 — 1_gtfs_tod_stop_classification.ipynb
+route_type,Route Type,No,Yes,Integer,"GTFS route_type codes. See https://gtfs.org/documentation/schedule/reference/#routestxt","GTFS route type. Key values used in this dataset: 0 = Tram/Streetcar/Light Rail, 1 = Subway/Metro, 2 = Rail.",Step 1 — 1_gtfs_tod_stop_classification.ipynb
+tod_tier,TOD Tier,No,N/A,Text,"Tier 1, Tier 2","SB79 tier designation. Tier 1: heavy rail or very high-frequency commuter rail (≥ 72 trains/day). Tier 2: light rail, high-frequency commuter rail (≥ 48 trains/day), or BRT.",Step 1 — 1_gtfs_tod_stop_classification.ipynb
+geometry,Geometry,No,N/A,Geometry (Point),,Stop point location in EPSG:4326.,Step 1 — 1_gtfs_tod_stop_classification.ipynb
