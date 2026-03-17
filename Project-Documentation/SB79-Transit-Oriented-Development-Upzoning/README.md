@@ -1,6 +1,7 @@
 # SB79 Transit Oriented Development Upzoning <!-- omit in toc -->
 
 - [About the Dataset](#about-the-dataset)
+- [Background and Policy Context](#background-and-policy-context)
 - [Resources](#resources)
 - [Expected Fields](#expected-fields)
   - [SB79 Transit-Oriented Development Zones](#sb79-transit-oriented-development-zones)
@@ -43,6 +44,39 @@ The resulting datasets will serve as the authoritative SB79 TOD geography for Al
 - **Data Preparation / Modeling** -- Identify TOD-eligible stops, classify tiers, construct pedestrian access points, and generate TOD bands.
 - **Data Ingestion** -- Prepare final geospatial layer for internal review and publication.
 - **Data Catalog / Publishing / MDM** -- Document methodology, inventory dataset in MDM Catalog, add to Enterprise Database, and publish to DAAS platforms (e.g. ArcGIS Online, Open Data, Socrata.)
+
+## Background and Policy Context
+
+SB 79, the *Abundant and Affordable Homes Near Transit Act*, was signed into law on October 10, 2025 and is codified in Government Code §§ 65912.155–65912.162. The law makes qualified housing development an allowed use on residential, mixed-use, and commercial sites near high-quality transit stops in counties with more than 15 passenger rail stations. In the Bay Area, eligible counties are Alameda, San Francisco, San Mateo, and Santa Clara.
+
+SB 79 establishes minimum standards for building height, density, and residential floor area ratio (FAR) that vary by distance from a transit stop and the classification of that stop. It also requires each metropolitan planning organization (MPO) to produce a tiered map of TOD stops and zones. That map carries a rebuttable presumption of validity for use by project applicants and local governments.
+
+### TOD stop tiers
+
+Each qualifying transit stop is assigned one of two tiers based on service type:
+
+- **Tier 1** — served by heavy rail transit or very high-frequency commuter rail (at least 72 trains/day across both directions). In the Bay Area: BART stations in Alameda, San Francisco, San Mateo, and Santa Clara Counties, and qualifying Caltrain stations (Tamien Station through the future Salesforce Transit Center, excluding stations with no daily service).
+- **Tier 2** — served by light rail transit, high-frequency commuter rail (at least 48 trains/day), or bus rapid transit. In the Bay Area: VTA light rail, SF Muni Metro and Streetcar, AC Transit Tempo, and select additional stops.
+
+### Pedestrian access points
+
+Buffer distances under SB 79 are measured as a straight line from the nearest edge of a parcel to a pedestrian access point for the TOD stop — not from a single station centroid. While "pedestrian access point" is not defined in the statute, guidance communicated by the bill author's office to HCD establishes the following hierarchy:
+
+- Where an entrance exists: the station entrance
+- Where no entrance exists: the platform edges
+- Where neither exists: a single point
+
+### Development standards
+
+SB 79 sets the following minimum development standards by tier and distance from a TOD stop. Local agencies may not apply lower height, density, or residential FAR limits than those listed below.
+
+| Distance from TOD stop | Tier 1 height | Tier 1 density | Tier 1 FAR | Tier 2 height | Tier 2 density | Tier 2 FAR |
+|---|---|---|---|---|---|---|
+| Adjacent (≤ 200 ft) | 95 ft | 160 du/ac | 4.5 | 85 ft | 140 du/ac | 4.0 |
+| ≤ ¼ mile | 75 ft | 120 du/ac | 3.5 | 65 ft | 100 du/ac | 3.0 |
+| ¼–½ mile (cities ≥ 35,000 residents) | 65 ft | 100 du/ac | 3.0 | 55 ft | 80 du/ac | 2.5 |
+
+*Source: [ABAG SB 79 Summary, November 2025](https://abag.ca.gov/sites/default/files/documents/2025-11/SB-79-Summary-11212025.pdf)*
 
 ## Resources 
 
@@ -245,7 +279,7 @@ This table summarizes where Transit-Oriented Development (TOD) Zones apply by Tr
 **Policy Constraints**
 
 1. **Tier Precedence Rule:**
-   - Where Tier 1 and Tier 2 zones intersect, Tier 1 supersedes Tier 2. Tier 2 geometry must be erased in overlapping areas.
+   - Where Tier 1 and Tier 2 zones intersect, Tier 1 supersedes Tier 2. Tier 2 geometry must be erased in overlapping areas. The one exception is where a Tier 2 200 ft zone overlaps with a Tier 1 quarter-mile or half-mile zone — in that case Tier 2 200 ft prevails, as it carries higher development standards than either Tier 1 distance band.
 2. **Geographic Scope:**
    - Applies only to cities located within:
      - Alameda County
@@ -258,11 +292,48 @@ This table summarizes where Transit-Oriented Development (TOD) Zones apply by Tr
      - 201–1320 feet (¼ mile ring excluding first 200 feet)
      - 1321–2640 feet (½ mile ring excluding first ¼ mile)
 
+### TOD Zone Geographic Prioritization
+
+Where buffers from different tiers and distance bands overlap after union, each geometry is assigned a single TOD zone classification representing the most permissive applicable development standard under SB 79. The prioritization cascades as follows:
+
+| Priority | Zone | Height limit | Density (du/ac) | Residential FAR |
+|---|---|---|---|---|
+| 1 | Tier 1 — 200 ft | 95 ft | 160 | 4.5 |
+| 2 | Tier 2 — 200 ft | 85 ft | 140 | 4.0 |
+| 3 | Tier 1 — Quarter mile | 75 ft | 120 | 3.5 |
+| 4 | Tier 2 — Quarter mile | 65 ft | 100 | 3.0 |
+| 5 | Tier 1 — Half mile* | 65 ft | 100 | 3.0 |
+| 6 | Tier 2 — Half mile* | 55 ft | 80 | 2.5 |
+
+*Half-mile band only applies within jurisdictions with population ≥ 35,000. Does not apply in unincorporated areas.
+
+This ordering reflects two rules operating in combination. First, Tier 1 takes precedence over Tier 2 at the same distance band. Second, Tier 2 200 ft is more permissive than Tier 1 quarter-mile or half-mile, so it prevails in those specific cross-tier overlaps. The result is that Priority 1 always yields the highest entitlements and Priority 6 the lowest — a geometry retains the classification of the highest-priority zone it falls within.
+
+The conditional logic implementing this in the buffer generation step is:
+
+```python
+if tier_1_200ft:
+    return "Tier 1 - 200 ft"
+elif tier_2_200ft:
+    return "Tier 2 - 200 ft"
+elif tier_1_qtr_mile:
+    return "Tier 1 - Quarter Mile"
+elif tier_2_qtr_mile:
+    return "Tier 2 - Quarter Mile"
+elif tier_1_half_mile:
+    return "Tier 1 - Half Mile"
+elif tier_2_half_mile:
+    return "Tier 2 - Half Mile"
+else:
+    return "No TOD Zone"
+```
+
+The jurisdiction intersection and removal of half-mile features in sub-35,000 and unincorporated areas is applied as a post-prioritization step, after the union and classification are complete. Polygons are split at jurisdiction boundaries so that each resulting feature falls entirely within a single jurisdiction and population threshold can be evaluated cleanly.
+
 ### Technical Considerations
 
-- GTFS data provides the authoritative source for transit stop locations and service patterns
-- Agency filtering focuses on relevant Bay Area operators: BART (BA), Caltrain (CT), AC Transit (AC), VTA (SC), and SFMTA (SF)
-- Parent-child relationships in GTFS hierarchy distinguish between stations (location_type=1) and individual stops/platforms (location_type=0)
-- Manual review required for complex station areas with multiple access points
+- GTFS data provides the authoritative source for transit stop locations and service patterns. Agency filtering focuses on relevant Bay Area operators: BART (BA), Caltrain (CT), AC Transit (AC), VTA (SC), and SFMTA (SF). Parent-child relationships in the GTFS hierarchy distinguish between stations (`location_type=1`) and individual stops/platforms (`location_type=0`).
+- Some stops and access points are not fully represented in GTFS and require manual mapping. This includes SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops. Manually mapped features are tracked via the `action` column in the curated stop and station layers.
+- Caltrans [High Quality Transit Areas (HQTA) Stops](https://gis.data.ca.gov/datasets/f6c30480f0e84be699383192c099a6a4_0) data is used to identify TOD-eligible bus stops. Specifically, stops with `hqta_type = major_stop_brt` are used to flag Tier 2 BRT stops based on frequency standards derived from GTFS schedule data. The HQTA dataset is updated monthly by Caltrans — the version acquired for this analysis is recorded in the [Resources](#resources) table. For methodology details see the [Caltrans HQTA documentation](https://docs.calitp.org/data-analyses/high_quality_transit_areas/).
 
 
