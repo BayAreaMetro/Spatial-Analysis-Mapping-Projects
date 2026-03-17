@@ -3,6 +3,8 @@
 - [About the Dataset](#about-the-dataset)
 - [Background and Policy Context](#background-and-policy-context)
 - [Resources](#resources)
+  - [Source Data](#source-data)
+  - [Pipeline Outputs](#pipeline-outputs)
 - [Expected Fields](#expected-fields)
   - [SB79 Transit-Oriented Development Zones](#sb79-transit-oriented-development-zones)
   - [Stations](#stations)
@@ -23,6 +25,7 @@
   - [Create Transit-Oriented Development (TOD) Zones](#create-transit-oriented-development-tod-zones)
 - [Development Notes](#development-notes)
   - [SB79 TOD Zones – Policy Applicability Matrix](#sb79-tod-zones--policy-applicability-matrix)
+  - [Geographic Prioritization Approach](#geographic-prioritization-approach)
   - [Technical Considerations](#technical-considerations)
 
 ## About the Dataset
@@ -78,7 +81,9 @@ SB 79 sets the following minimum development standards by tier and distance from
 
 *Source: [ABAG SB 79 Summary, November 2025](https://abag.ca.gov/sites/default/files/documents/2025-11/SB-79-Summary-11212025.pdf)*
 
-## Resources 
+## Resources
+
+### Source Data
 
 | Resource Type | Resource Name   | Description                                  | Source/Location      | Format       | Owner     | Version | Date Acquired/Created | Dependencies | Usage Notes                    |
 |---------------|-----------------|----------------------------------------------|----------------------|--------------|-----------------|---------|-----------------------|--------------|--------------------------------|
@@ -87,6 +92,19 @@ SB 79 sets the following minimum development standards by tier and distance from
 | API           | 511 GTFS Data     | Regional GTFS feeds for Bay Area transit agencies      | [Box Link](https://mtcdrive.box.com/s/qro5h0uvwwyovx1iuhvcjy55bjqbuana) | ZIP        | MTC  | Current      | 2026-02-18            | None         | Combined regional GTFS feed   |
 | Dataset          | High Quality Transit Stops   | Caltrans-defined major BRT stops and high-frequency transit     | [ArcGIS Online](https://mtc.maps.arcgis.com/home/item.html?id=981ce33db7714f74b126489ef733437b)      | Feature Service  | MTC   | Current     | 2026-02-18            | None     | Used to identify Tier 2 BRT stops |
 | Dataset          | Jurisdiction Boundaries   | Bay Area city and county boundaries with population data     | [ArcGIS Online](https://mtc.maps.arcgis.com/home/item.html?id=4b1242e5cb224a2c9043927d3344df5a)      | Feature Service  | MTC   | Current     | 2026-02-18            | None     | Population rules and geographic scope |
+
+### Pipeline Outputs
+
+The following authoritative layers are written to the shared GeoPackage ([`tod_database.gpkg`](https://mtcdrive.box.com/s/dc42a1ofq2mslwmkztdxk6pyvofoppee)). Intermediate development layers (`tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev`) are omitted.
+
+| Layer | Description | Produced By |
+|---|---|---|
+| `tod_stations` | Finalized TOD parent station locations. | Step 3 |
+| `tod_stops` | Finalized TOD stops with tier classification and station assignment. | Step 3 |
+| `tod_access_points` | Finalized pedestrian access points used as the origin for TOD zone buffer generation. | Step 3 |
+| `tod_zone_buffers` | Full-circle per-access-point buffers at all three distance bands (200 ft, ¼ mile, ½ mile), tagged with `tod_tier` and `buffer_band`. Retained as a diagnostic/QA layer and will be used in a public-facing web map to support transparency about how `tod_zones` were derived. | Step 4 |
+| `jurisdictions_with_pop_acs2019_2023` | Bay Area jurisdiction boundaries joined to ACS 2019–2023 5-year total population estimates. Used to apply the jurisdictional population threshold rule. | Step 4 |
+| `tod_zones` | **Authoritative** SB79 TOD zone polygons. Each polygon is assigned to exactly one of six non-overlapping `zone_label` classifications, representing the highest-priority applicable development standard under SB 79. | Step 4 |
 
 ## Expected Fields
 
@@ -119,7 +137,7 @@ The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebo
 ### Prerequisites
 
 - Python environment with `geopandas`, `pandas`, `gtfs_kit`, `shapely`, `uuid`, and `openpyxl` installed
-- Access to the MTC Box folder containing source data (see [Resources](#resources))
+- Access to the MTC Box folder containing source data (see [Source Data](#source-data))
 - Paths in `config.py` updated to match your local data directory
 - QGIS (or equivalent) for the manual GIS review gate after Step 1
 - Excel (or equivalent spreadsheet application) for the manual review gate between Steps 2 and 3
@@ -213,12 +231,25 @@ Reads the manually-reviewed Excel workbook (path set via `REVIEW_XLSX` in `confi
 
 ### Step 4 – TOD Zone Buffer Generation
 
-**Notebook:** `4_tod_zone_buffers.ipynb` *(planned)*
+**Notebook:** `4_tod_zone_buffer_generation.ipynb`
 
-Generates 200 ft, ¼ mile, and ½ mile Euclidean buffer zones around finalized access points, applies the policy matrix (tier precedence, jurisdictional population rules, geographic scope), and produces the final SB79 TOD Zone polygons.
+Loads the finalized `tod_access_points` layer from the shared GeoPackage and generates the SB79 TOD zone geography through four main stages:
+
+1. **Buffer generation** — creates full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each access point, tagged with `tod_tier` and `buffer_band`.
+2. **Jurisdictional population rule** — erases half-mile buffers within jurisdictions with total population < 35,000 and within all unincorporated county lands.
+3. **Geographic priority resolution** — applies a sequential erase to produce six non-overlapping zone layers labeled by `zone_label`. See [Geographic Prioritization Approach](#geographic-prioritization-approach) in Development Notes.
+4. **Finalization** *(planned)* — dissolves by `zone_label` and explodes to single-part polygons, producing a dataset with uniform geometry types throughout.
+
+**Inputs:**
+- `tod_access_points` — finalized pedestrian access points (from Step 3)
+- `tod_stations` — finalized TOD stations (from Step 3)
+- `tod_stops` — finalized TOD stops (from Step 3)
+- Bay Area jurisdiction boundaries with ACS 2019–2023 5-year population estimates (loaded from ArcGIS REST service)
 
 **Outputs written to GPKG:**
-- `tod_zones` — final SB79 TOD Zone polygons with tier and distance-band attributes
+- `tod_zone_buffers` — full-circle per-access-point buffers at all three distance bands; diagnostic/QA layer (see [Pipeline Outputs](#pipeline-outputs))
+- `jurisdictions_with_pop_acs2019_2023` — jurisdiction boundaries with ACS 2019–2023 population attributes
+- `tod_zones` — authoritative SB79 TOD zone polygons, post-priority resolution (see [Pipeline Outputs](#pipeline-outputs))
 
 ---
 
@@ -256,12 +287,11 @@ Generates 200 ft, ¼ mile, and ½ mile Euclidean buffer zones around finalized a
 1. Associate stops and access points with parent stations. This may be performed by spatially joining stops and access points to stations using a near spatial join with a specified distance threshold (e.g. 200 feet) though manual review and adjustments will likely be necessary to ensure accurate associations, especially in dense urban areas where multiple stations and stops may be in close proximity.
 
 ### Create Transit-Oriented Development (TOD) Zones
-1. Generate 200 ft, .25 mile, and .5 mile Euclidean (straight-line) buffers around all pedestrian access points by tier
-2. Intersect buffers with jurisdiction boundaries with associated population data to determine applicable zones based on the policy matrix
-3. Remove .5 mile buffers where jurisdiction population is ≤ 35,000 or in unincorporated areas
-4. Erase Tier 2 areas where overlapping with Tier 1 buffers to ensure Tier 1 precedence
-5. Dissolve by Tier and distance band to create final TOD Zone geometries
-6. Validate and review final TOD Zone geometries for accuracy and consistency with the defined criteria
+1. Generate full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each finalized pedestrian access point; tag each buffer with `tod_tier` and `buffer_band`.
+2. Apply the jurisdictional population rule: erase half-mile buffers within jurisdictions with total population < 35,000 and within all unincorporated county lands.
+3. Resolve geographic priority via sequential erase: split buffers into six groups by `(tod_tier, buffer_band)`, then for each group in priority order, erase the accumulated geometry of all higher-priority zones before assigning a `zone_label`. This produces six clean, non-overlapping zone layers. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for implementation details.
+4. *(Planned)* Finalize: dissolve by `zone_label`, then explode to single-part polygons to produce a dataset with uniform geometry types throughout.
+5. Export the buffer layer, jurisdiction boundaries with population, and resolved TOD zones to the shared GeoPackage.
 
 ## Development Notes
 
@@ -309,31 +339,23 @@ Where buffers from different tiers and distance bands overlap after union, each 
 
 This ordering reflects two rules operating in combination. First, Tier 1 takes precedence over Tier 2 at the same distance band. Second, Tier 2 200 ft is more permissive than Tier 1 quarter-mile or half-mile, so it prevails in those specific cross-tier overlaps. The result is that Priority 1 always yields the highest entitlements and Priority 6 the lowest — a geometry retains the classification of the highest-priority zone it falls within.
 
-The conditional logic implementing this in the buffer generation step is:
+See [Geographic Prioritization Approach](#geographic-prioritization-approach) for implementation details.
 
-```python
-if tier_1_200ft:
-    return "Tier 1 - 200 ft"
-elif tier_2_200ft:
-    return "Tier 2 - 200 ft"
-elif tier_1_qtr_mile:
-    return "Tier 1 - Quarter Mile"
-elif tier_2_qtr_mile:
-    return "Tier 2 - Quarter Mile"
-elif tier_1_half_mile:
-    return "Tier 1 - Half Mile"
-elif tier_2_half_mile:
-    return "Tier 2 - Half Mile"
-else:
-    return "No TOD Zone"
-```
+### Geographic Prioritization Approach
 
-The jurisdiction intersection and removal of half-mile features in sub-35,000 and unincorporated areas is applied as a post-prioritization step, after the union and classification are complete. Polygons are split at jurisdiction boundaries so that each resulting feature falls entirely within a single jurisdiction and population threshold can be evaluated cleanly.
+The priority order above is implemented via a **sequential erase** rather than a union-then-classify approach. A union-based approach would fragment geometry at every intersection boundary — producing thousands of small polygons across the entire study area, each requiring individual classification. The sequential erase avoids this entirely and produces clean, non-overlapping polygons directly.
+
+The approach works as follows: the six `(tod_tier, buffer_band)` groups are processed in priority order. The highest-priority group (Tier 1 – 200 ft) is kept unchanged and becomes the initial accumulated mask. For each subsequent group, a dissolved union of all previously processed groups is erased from the current group's geometry before it is assigned its `zone_label`. The accumulated mask grows with each iteration, so by the time the lowest-priority group (Tier 2 – Half Mile) is processed, the geometry of all five higher-priority zones has already been removed from it.
+
+After each erase step, zero-area floating-point artifacts are dropped and geometry validity is repaired before the result is appended to the accumulated mask. The six resulting layers are concatenated to form `tod_zones`.
 
 ### Technical Considerations
 
 - GTFS data provides the authoritative source for transit stop locations and service patterns. Agency filtering focuses on relevant Bay Area operators: BART (BA), Caltrain (CT), AC Transit (AC), VTA (SC), and SFMTA (SF). Parent-child relationships in the GTFS hierarchy distinguish between stations (`location_type=1`) and individual stops/platforms (`location_type=0`).
 - Some stops and access points are not fully represented in GTFS and require manual mapping. This includes SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops. Manually mapped features are tracked via the `action` column in the curated stop and station layers.
-- Caltrans [High Quality Transit Areas (HQTA) Stops](https://gis.data.ca.gov/datasets/f6c30480f0e84be699383192c099a6a4_0) data is used to identify TOD-eligible bus stops. Specifically, stops with `hqta_type = major_stop_brt` are used to flag Tier 2 BRT stops based on frequency standards derived from GTFS schedule data. The HQTA dataset is updated monthly by Caltrans — the version acquired for this analysis is recorded in the [Resources](#resources) table. For methodology details see the [Caltrans HQTA documentation](https://docs.calitp.org/data-analyses/high_quality_transit_areas/).
+- Caltrans [High Quality Transit Areas (HQTA) Stops](https://gis.data.ca.gov/datasets/f6c30480f0e84be699383192c099a6a4_0) data is used to identify TOD-eligible bus stops. Specifically, stops with `hqta_type = major_stop_brt` are used to flag Tier 2 BRT stops based on frequency standards derived from GTFS schedule data. The HQTA dataset is updated monthly by Caltrans — the version acquired for this analysis is recorded in the [Source Data](#source-data) table. For methodology details see the [Caltrans HQTA documentation](https://docs.calitp.org/data-analyses/high_quality_transit_areas/).
+- All spatial operations in Step 4 use EPSG:26910 (UTM Zone 10N) as the analysis CRS for accurate planar distance and area measurements. Reprojection to EPSG:4326 occurs only at final GeoPackage export.
+- After each erase operation in Step 4, polygon fragments smaller than 100 m² are discarded as floating-point artifacts. This threshold was validated against the actual area distribution of post-overlay fragments, which showed a hard gap between near-zero artifacts (all < 1 m²) and the smallest legitimate fragment (> 1,279,000 m²).
+- `tod_zone_buffers` is a diagnostic layer retained for QA and public transparency. The authoritative output for policy and regulatory use is `tod_zones`.
 
 
