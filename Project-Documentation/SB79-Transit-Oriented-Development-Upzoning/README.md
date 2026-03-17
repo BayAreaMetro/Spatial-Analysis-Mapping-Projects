@@ -108,27 +108,56 @@ The following authoritative layers are written to the shared GeoPackage ([`tod_d
 
 ## Expected Fields
 
-This process will generate four interrelated datasets:
+This process will generate four interrelated datasets. Field types are logical/platform-agnostic; platform-specific type mappings (GeoPackage, ArcGIS, PostgreSQL) are documented separately at publication time.
+
+> A data model diagram will be added here.
 
 ### SB79 Transit-Oriented Development Zones
-Final policy-compliant TOD zone polygons with tier classifications and distance bands.
+Final policy-compliant TOD zone polygons. One polygon per non-overlapping zone; each polygon is assigned the highest-priority applicable development standard under SB 79. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for how zones are derived.
 
-*Field specifications to be documented during development.*
+| Field | Data Type | Allow NULL | Domain | Description |
+|---|---|---|---|---|
+| `zone_id` | UUID | No | — | Unique zone identifier; UUID4 assigned after priority resolution |
+| `zone_label` | Text | No | `Tier 1 - 200ft`, `Tier 2 - 200ft`, `Tier 1 - Quarter Mile`, `Tier 2 - Quarter Mile`, `Tier 1 - Half Mile`, `Tier 2 - Half Mile` | Priority tier and distance band classification |
+| `geometry` | Geometry (Polygon) | No | — | Non-overlapping TOD zone polygon. Half-mile zones have sub-35,000 population jurisdictions and unincorporated areas erased. Slivers < 100 m² are removed |
 
-### Stations 
-Parent transit station locations (location_type = 1 in GTFS hierarchy).
+### Stations
+Parent transit station locations (GTFS `location_type = 1`).
 
-*Field specifications to be documented during development.*
+| Field | Data Type | Allow NULL | Domain | Description |
+|---|---|---|---|---|
+| `station_id` | Text | No | — | Unique station identifier sourced from the curated `stations_v1` GDB layer |
+| `station_name` | Text | No | — | Human-readable station name |
+| `location_type` | Integer | No | GTFS: `1` = Station | GTFS location type |
+| `manually_added` | Integer | No | `0` = sourced from GTFS; `1` = manually added | Indicates whether the station was manually added during the Step 1 GIS review rather than sourced natively from GTFS |
+| `geometry` | Geometry (Point) | No | — | Station location |
 
 ### Stops
-Individual transit stop/platform locations actively served by transit routes.
+Individual transit stop/platform locations actively served by transit routes and classified as TOD-eligible under SB 79.
 
-*Field specifications to be documented during development.*
+| Field | Data Type | Allow NULL | Domain | Description |
+|---|---|---|---|---|
+| `stop_id` | Text | No | — | Unique GTFS stop identifier |
+| `station_id` | Text | No | — | Parent station ID — assigned by spatial buffer analysis in Step 2, with manual corrections applied in Step 3 |
+| `location_type` | Integer | No | GTFS: `0` = Stop/Platform | GTFS location type |
+| `stop_name` | Text | Yes | — | Stop name from GTFS or curated GDB |
+| `agency_id` | Text | No | `BA`, `CT`, `AC`, `SC`, `SF` | Transit agency short code |
+| `agency_name` | Text | No | — | Full transit agency name |
+| `route_short_name` | Text | Yes | — | GTFS route short name or number |
+| `route_type` | Integer | No | See [GTFS routes.txt reference](https://gtfs.org/documentation/schedule/reference/#routestxt) | GTFS route type (e.g. `0` = tram/streetcar/light rail, `1` = subway/metro, `2` = rail) |
+| `tod_tier` | Text | No | `Tier 1`, `Tier 2` | SB79 tier designation |
+| `geometry` | Geometry (Point) | No | — | Stop location |
 
 ### Access Points
-Pedestrian access locations for each transit station used as the basis for TOD zone generation.
+Pedestrian access locations for each transit station used as the origin for TOD zone buffer generation.
 
-*Field specifications to be documented during development.*
+| Field | Data Type | Allow NULL | Domain | Description |
+|---|---|---|---|---|
+| `access_id` | Text | No | — | Unique access point identifier. Sourced from each agency's stop ID field; falls back to a stable coordinate-based ID (`geom:<lat>,<lon>`) for records with missing or colliding IDs |
+| `station_id` | Text | No | — | Parent station ID — joined from GTFS, then resolved spatially or manually via the Step 2–3 review workflow |
+| `access_point_name` | Text | Yes | — | Descriptive name of the pedestrian access point, sourced from each agency's stop name field |
+| `location_type` | Integer | No | GTFS: `2` = Entrance/Exit, `3` = Generic Node | GTFS location type; defaults to `2` if absent in the agency source file |
+| `geometry` | Geometry (Point) | No | — | Access point location used as the origin for TOD zone buffer generation |
 
 ## Running the Pipeline
 
