@@ -91,7 +91,7 @@ STATION_OVERRIDES_SHEET = "stations"
 ACCESS_PTS_DIR = DATA_DIR / "Access Points"
 
 # BART (BA)
-ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v1.zip"
+ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v2.zip"
 ACCESS_PTS_BA_LAYER = None  # layer name if GDB, else None
 
 # Caltrain (CT)
@@ -103,7 +103,7 @@ ACCESS_PTS_AC_PATH = ACCESS_PTS_DIR / "AC_Transit_PedAcessPoints_v3.gdb"
 ACCESS_PTS_AC_LAYER = "ACTransit_PedAccessPoints_GTFS_v3"
 
 # VTA / Santa Clara (SC)
-ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v2.zip"
+ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v4.zip"
 ACCESS_PTS_SC_LAYER = None  # layer name if GDB, else None
 
 # SFMTA / Muni (SF)
@@ -155,6 +155,10 @@ GPKG_TOD_STATIONS_DEV_LAYER = "tod_stations_dev"
 GPKG_TOD_STOPS_DEV_LAYER = "tod_stops_dev"
 GPKG_TOD_ACCESS_PTS_DEV_LAYER = "tod_access_points_dev"
 
+# Step 4 output — linkage gap review workbook written when stops or access points
+# are missing a corresponding match. Only created when gaps exist.
+LINKAGE_GAPS_XLSX = DATA_DIR / "tod_linkage_gaps_review_v1.xlsx"
+
 # Step 2 output — Step 2 always writes to this fixed filename.
 # After Step 2 completes, rename this file by appending _reviewed_YYYY_MM_DD
 # (e.g. SB79_tod_review_reviewed_2026_03_10.xlsx) so a future re-run of
@@ -173,5 +177,11 @@ GPKG_TOD_STATIONS_FINAL_LAYER = "tod_stations"
 GPKG_TOD_STOPS_FINAL_LAYER = "tod_stops"
 GPKG_TOD_ACCESS_PTS_FINAL_LAYER = "tod_access_points"
 
-# Layer name written by Step 4
+# Pre-resolution buffer layer written by Step 4 — one full-circle buffer per
+# access point per band; tier precedence, jurisdictional rules, and ring
+# differencing are applied downstream.
+GPKG_TOD_ZONE_BUFFERS_LAYER = "tod_zone_buffers"
+GPKG_JURISDICTIONS_WITH_POP_LAYER = "jurisdictions_with_pop_acs2019_2023"
+
+# Final resolved TOD zone layer (written by a future downstream step)
 GPKG_TOD_ZONES_LAYER = "tod_zones"
