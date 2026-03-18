@@ -360,13 +360,13 @@ Where buffers from different tiers and distance bands overlap after union, each 
 | 1 | Tier 1 — 200 ft | 95 ft | 160 | 4.5 |
 | 2 | Tier 2 — 200 ft | 85 ft | 140 | 4.0 |
 | 3 | Tier 1 — Quarter mile | 75 ft | 120 | 3.5 |
-| 4 | Tier 2 — Quarter mile | 65 ft | 100 | 3.0 |
-| 5 | Tier 1 — Half mile* | 65 ft | 100 | 3.0 |
+| 4 | Tier 1 — Half mile* | 65 ft | 100 | 3.0 |
+| 5 | Tier 2 — Quarter mile | 65 ft | 100 | 3.0 |
 | 6 | Tier 2 — Half mile* | 55 ft | 80 | 2.5 |
 
 *Half-mile band only applies within jurisdictions with population ≥ 35,000. Does not apply in unincorporated areas.
 
-This ordering reflects two rules operating in combination. First, Tier 1 takes precedence over Tier 2 at the same distance band. Second, Tier 2 200 ft is more permissive than Tier 1 quarter-mile or half-mile, so it prevails in those specific cross-tier overlaps. The result is that Priority 1 always yields the highest entitlements and Priority 6 the lowest — a geometry retains the classification of the highest-priority zone it falls within.
+This ordering reflects two rules. First, Tier 1 takes full precedence over Tier 2 at all distance bands — all Tier 1 zones are resolved before any Tier 2 zone beyond 200 ft. Second, both 200 ft zones are resolved first as a pair because Tier 2 200 ft development standards (85 ft, 140 du/ac) are more permissive than either Tier 1 quarter-mile (75 ft, 120 du/ac) or Tier 1 half-mile (65 ft, 100 du/ac), so Tier 2 200 ft takes priority 2 ahead of those bands. The result is that Priority 1 always yields the highest entitlements and Priority 6 the lowest — a geometry retains the classification of the highest-priority zone it falls within.
 
 See [Geographic Prioritization Approach](#geographic-prioritization-approach) for implementation details.
 
