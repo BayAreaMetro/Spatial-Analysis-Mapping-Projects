@@ -83,7 +83,7 @@ SB 79 sets the following minimum development standards by tier and distance from
 | ≤ ¼ mile | 75 ft | 120 du/ac | 3.5 | 65 ft | 100 du/ac | 3.0 |
 | ¼–½ mile (cities ≥ 35,000 residents) | 65 ft | 100 du/ac | 3.0 | 55 ft | 80 du/ac | 2.5 |
 
-*Source: [ABAG SB 79 Summary, November 2025](https://abag.ca.gov/sites/default/files/documents/2025-11/SB-79-Summary-11212025.pdf)*
+*Source: [MTC SB 79 MPO Mapping Requirements Summary (January 2026)](https://mtcdrive.box.com/s/5zpg6fv14cvmftuz02th6vcfr680ia4d) — MTC internal only*
 
 ## Resources
 
