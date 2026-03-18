@@ -2,6 +2,9 @@
 
 - [About the Dataset](#about-the-dataset)
 - [Background and Policy Context](#background-and-policy-context)
+  - [TOD stop tiers](#tod-stop-tiers)
+  - [Pedestrian access points](#pedestrian-access-points)
+  - [Development standards](#development-standards)
 - [Resources](#resources)
   - [Source Data](#source-data)
   - [Pipeline Outputs](#pipeline-outputs)
@@ -25,6 +28,7 @@
   - [Create Transit-Oriented Development (TOD) Zones](#create-transit-oriented-development-tod-zones)
 - [Development Notes](#development-notes)
   - [SB79 TOD Zones – Policy Applicability Matrix](#sb79-tod-zones--policy-applicability-matrix)
+  - [TOD Zone Geographic Prioritization](#tod-zone-geographic-prioritization)
   - [Geographic Prioritization Approach](#geographic-prioritization-approach)
   - [Technical Considerations](#technical-considerations)
 
