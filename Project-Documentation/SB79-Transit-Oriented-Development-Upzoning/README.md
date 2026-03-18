@@ -250,9 +250,9 @@ Reads the manually-reviewed Excel workbook (path set via `REVIEW_XLSX` in `confi
 - `tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev` — development layers from Step 2 (read from GPKG)
 
 **Outputs written to GPKG** *(final authoritative layers):*
-- `tod_stations` — final station layer
-- `tod_stops` — final stops with all manual corrections applied
-- `tod_access_points` — final access points with all manual corrections applied
+- `tod_stations` — final station layer (see [Pipeline Outputs](#pipeline-outputs))
+- `tod_stops` — final stops with all manual corrections applied (see [Pipeline Outputs](#pipeline-outputs))
+- `tod_access_points` — final access points with all manual corrections applied (see [Pipeline Outputs](#pipeline-outputs))
 
 > No manual review required between Steps 3 and 4.
 
