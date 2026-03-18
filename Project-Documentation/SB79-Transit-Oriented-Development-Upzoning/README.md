@@ -110,7 +110,9 @@ The following authoritative layers are written to the shared GeoPackage ([`tod_d
 
 This process will generate four interrelated datasets. Field types are logical/platform-agnostic; platform-specific type mappings (GeoPackage, ArcGIS, PostgreSQL) are documented separately at publication time.
 
-> A data model diagram will be added here.
+**Data Model**
+
+![image](img/SB79%20Data%20Model.png)
 
 ### SB79 Transit-Oriented Development Zones
 Final policy-compliant TOD zone polygons. One polygon per non-overlapping zone; each polygon is assigned the highest-priority applicable development standard under SB 79. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for how zones are derived.
