@@ -321,7 +321,7 @@ Loads the finalized `tod_access_points` layer from the shared GeoPackage and gen
 1. Generate full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each finalized pedestrian access point; tag each buffer with `tod_tier` and `buffer_band`.
 2. Apply the jurisdictional population rule: erase half-mile buffers within jurisdictions with total population < 35,000 and within all unincorporated county lands.
 3. Resolve geographic priority via sequential erase: split buffers into six groups by `(tod_tier, buffer_band)`, then for each group in priority order, erase the accumulated geometry of all higher-priority zones before assigning a `zone_label`. This produces six clean, non-overlapping zone layers. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for implementation details.
-4. *(Planned)* Finalize: dissolve by `zone_label`, then explode to single-part polygons to produce a dataset with uniform geometry types throughout.
+4. Finalize: dissolve by `zone_label` 
 5. Export the buffer layer, jurisdiction boundaries with population, and resolved TOD zones to the shared GeoPackage.
 
 ## Development Notes
