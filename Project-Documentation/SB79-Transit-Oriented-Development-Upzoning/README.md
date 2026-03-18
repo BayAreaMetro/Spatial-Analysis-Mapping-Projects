@@ -121,7 +121,7 @@ Final policy-compliant TOD zone polygons. One polygon per non-overlapping zone; 
 |---|---|---|---|---|
 | `zone_id` | UUID | No | — | Unique zone identifier; UUID4 assigned after priority resolution |
 | `zone_label` | Text | No | `Tier 1 - 200ft`, `Tier 2 - 200ft`, `Tier 1 - Quarter Mile`, `Tier 2 - Quarter Mile`, `Tier 1 - Half Mile`, `Tier 2 - Half Mile` | Priority tier and distance band classification |
-| `geometry` | Geometry (Polygon) | No | — | Non-overlapping TOD zone polygon. Half-mile zones have sub-35,000 population jurisdictions and unincorporated areas erased. Slivers < 100 m² are removed |
+| `geometry` | Geometry (Polygon) | No | — | Non-overlapping TOD zone polygon. All zones have unincorporated county lands erased. Half-mile zones additionally have sub-35,000 population incorporated city jurisdictions erased. Slivers < 100 m² are removed |
 
 ### Stations
 Parent transit station locations (GTFS `location_type = 1`).
@@ -267,7 +267,7 @@ Reads the manually-reviewed Excel workbook (path set via `REVIEW_XLSX` in `confi
 Loads the finalized `tod_access_points` layer from the shared GeoPackage and generates the SB79 TOD zone geography through four main stages:
 
 1. **Buffer generation** — creates full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each access point, tagged with `tod_tier` and `buffer_band`.
-2. **Jurisdictional population rule** — erases half-mile buffers within jurisdictions with total population < 35,000 and within all unincorporated county lands.
+2. **Jurisdictional population rule** — erases all buffers (200 ft, ¼ mile, ½ mile) within unincorporated county lands; additionally erases half-mile buffers within incorporated cities with total population < 35,000.
 3. **Geographic priority resolution** — applies a sequential erase to produce six non-overlapping zone layers labeled by `zone_label`. See [Geographic Prioritization Approach](#geographic-prioritization-approach) in Development Notes.
 4. **Finalization** *(planned)* — dissolves by `zone_label` and explodes to single-part polygons, producing a dataset with uniform geometry types throughout.
 
@@ -319,7 +319,7 @@ Loads the finalized `tod_access_points` layer from the shared GeoPackage and gen
 
 ### Create Transit-Oriented Development (TOD) Zones
 1. Generate full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each finalized pedestrian access point; tag each buffer with `tod_tier` and `buffer_band`.
-2. Apply the jurisdictional population rule: erase half-mile buffers within jurisdictions with total population < 35,000 and within all unincorporated county lands.
+2. Apply the jurisdictional population rule: erase all buffers (200 ft, ¼ mile, ½ mile) within unincorporated county lands; additionally erase half-mile buffers within incorporated cities with total population < 35,000.
 3. Resolve geographic priority via sequential erase: split buffers into six groups by `(tod_tier, buffer_band)`, then for each group in priority order, erase the accumulated geometry of all higher-priority zones before assigning a `zone_label`. This produces six clean, non-overlapping zone layers. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for implementation details.
 4. Finalize: dissolve by `zone_label` 
 5. Export the buffer layer, jurisdiction boundaries with population, and resolved TOD zones to the shared GeoPackage.
@@ -366,7 +366,7 @@ Where buffers from different tiers and distance bands overlap after union, each 
 | 5 | Tier 2 — Quarter mile | 65 ft | 100 | 3.0 |
 | 6 | Tier 2 — Half mile* | 55 ft | 80 | 2.5 |
 
-*Half-mile band only applies within jurisdictions with population ≥ 35,000. Does not apply in unincorporated areas.
+*Half-mile band only applies within incorporated cities with population ≥ 35,000. All bands (200 ft, quarter-mile, and half-mile) are erased from unincorporated county lands.
 
 This ordering reflects two rules. First, Tier 1 takes full precedence over Tier 2 at all distance bands — all Tier 1 zones are resolved before any Tier 2 zone beyond 200 ft. Second, both 200 ft zones are resolved first as a pair because Tier 2 200 ft development standards (85 ft, 140 du/ac) are more permissive than either Tier 1 quarter-mile (75 ft, 120 du/ac) or Tier 1 half-mile (65 ft, 100 du/ac), so Tier 2 200 ft takes priority 2 ahead of those bands. The result is that Priority 1 always yields the highest entitlements and Priority 6 the lowest — a geometry retains the classification of the highest-priority zone it falls within.
 
