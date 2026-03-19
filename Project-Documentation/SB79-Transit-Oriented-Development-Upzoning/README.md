@@ -216,11 +216,7 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Non-TOD stations are excluded before spatial assignment using the station overrides list (`2026_03_04_tod_stations_overrides.xlsx`). Outputs development layers to the shared GeoPackage and a review Excel workbook for manual resolution.
 
 **Access point sources (loaded and normalized in order):**
-- `BA` — BART (`BART_PedAccessPoints_GTFS_v1.zip`)
-- `CT` — Caltrain (`Caltrain_PedAccessPoints_GTFS_v3.zip`)
-- `AC` — AC Transit (`AC_Transit_PedAcessPoints_v3.gdb`)
-- `SC` — VTA (`VTA_PedAccessPoints_GTFS_v2.zip`)
-- `SF` — SFMTA (`SFMuni_PedAccessPoints_GTFS_v1.zip`)
+Defined in `ACCESS_PTS_SOURCES` in [`config.py`](config.py). Update file paths there when new agency source files are available.
 
 **Outputs written to GPKG** *(development layers — not yet authoritative):*
 - `tod_stations_dev` — station layer used for spatial assignment (filtered to TOD stations)

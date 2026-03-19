@@ -6,7 +6,7 @@ Update file paths and URLs here when inputs change; all pipeline notebooks
 reference this file so there is a single authoritative record of every
 data source used across the project.
 
-Pipeline steps (run in order; ⚠️  manual Excel review required after Step 2 before running Step 3):
+Pipeline steps (run in order; manual Excel review required after Step 2 before running Step 3):
 
   Step 1 — 1_gtfs_tod_stop_classification.ipynb
             Reads GTFS feed + Caltrans HQTS service, classifies TOD-applicable
@@ -20,7 +20,7 @@ Pipeline steps (run in order; ⚠️  manual Excel review required after Step 2 
             progressive buffer analysis, and exports development layers
             (tod_stations_dev, tod_stops_dev, tod_access_points_dev) to the
             shared GeoPackage, and writes REVIEW_XLSX_OUTPUT for manual review.
-            ⚠️  After Step 2 completes: rename REVIEW_XLSX_OUTPUT by appending
+            After Step 2 completes: rename REVIEW_XLSX_OUTPUT by appending
             _reviewed_YYYY_MM_DD, update REVIEW_XLSX in config.py to point to
             the renamed file, resolve conflict/no_match rows, then run Step 3.
 
@@ -91,7 +91,7 @@ STATION_OVERRIDES_SHEET = "stations"
 ACCESS_PTS_DIR = DATA_DIR / "Access Points"
 
 # BART (BA)
-ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v2.zip"
+ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v3.zip"
 ACCESS_PTS_BA_LAYER = None  # layer name if GDB, else None
 
 # Caltrain (CT)
@@ -103,7 +103,7 @@ ACCESS_PTS_AC_PATH = ACCESS_PTS_DIR / "AC_Transit_PedAcessPoints_v3.gdb"
 ACCESS_PTS_AC_LAYER = "ACTransit_PedAccessPoints_GTFS_v3"
 
 # VTA / Santa Clara (SC)
-ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v4.zip"
+ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v5.zip"
 ACCESS_PTS_SC_LAYER = None  # layer name if GDB, else None
 
 # SFMTA / Muni (SF)
