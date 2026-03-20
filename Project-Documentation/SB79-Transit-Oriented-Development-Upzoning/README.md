@@ -17,6 +17,7 @@
   - [Prerequisites](#prerequisites)
   - [Step 1 – GTFS TOD Stop Classification](#step-1--gtfs-tod-stop-classification)
   - [Step 2 – TOD Stop and Access Point Assignment](#step-2--tod-stop-and-access-point-assignment)
+  - [Step 2b – Review Reconciliation](#step-2b--review-reconciliation)
   - [Step 3 – Station Assignment Reintegration](#step-3--station-assignment-reintegration)
   - [Step 4 – TOD Zone Buffer Generation](#step-4--tod-zone-buffer-generation)
 - [Process Overview](#process-overview)
@@ -238,6 +239,33 @@ Defined in `ACCESS_PTS_SOURCES` in [`config.py`](config.py). Update file paths t
 >    - If a row has `assignment_status = assigned` but the spatial assignment produced the wrong station (e.g., a stop was snapped to the nearest station rather than its true parent), update `station_id` to the correct value and set `assignment_status` = `manual_station_assignment`.
 >    - Leave correctly-assigned rows untouched — only rows with `assignment_status = manual_station_assignment` are applied as updates in Step 3.
 > 4. Save the workbook, then run Step 3.
+
+---
+
+### Step 2b – Review Reconciliation
+
+**Notebook:** `2b_tod_review_reconciliation.ipynb`
+
+Run **only** when Step 2 has been re-run after new stops or access points were added, making the existing reviewed workbook stale. Reconciles the fresh `SB79_tod_review.xlsx` with the previously-reviewed workbook (`REVIEW_XLSX` in `config.py`) to carry forward valid `manual_station_assignment` decisions, then writes a new dated workbook as the starting point for the next manual review cycle.
+
+**Carry-over rules:**
+- Only rows with `assignment_status = manual_station_assignment` are carried from the stale workbook — `conflict` and `no_match` rows are discarded in favour of the fresh spatial assignment.
+- Carried-over `station_id` values that no longer exist in the current TOD station universe are downgraded to `conflict` and flagged for re-review.
+- Records dropped from the new ID universe (present in the stale workbook but absent from the fresh Step 2 output) are reported in the notebook output but not written to the reconciled workbook.
+
+**Inputs (set in `config.py`):**
+- `REVIEW_XLSX_OUTPUT` (`SB79_tod_review.xlsx`) — fresh Step 2 output; authoritative ID universe
+- `REVIEW_XLSX` (`SB79_tod_review_reviewed_YYYY_MM_DD.xlsx`) — stale reviewed workbook with prior manual overrides
+- `GPKG_TOD_STATIONS_DEV_LAYER` — used to validate carried-over `station_id` values
+
+**Output written to Box data folder:**
+- `SB79_tod_review_YYYY_MM_DD.xlsx` — reconciled workbook with today's date; ready for manual review
+
+> **After running this notebook:**
+>
+> 1. Update `REVIEW_XLSX` in `config.py` to point to the new dated output file.
+> 2. Open the file and resolve any remaining `conflict` or `no_match` rows (same process as after Step 2).
+> 3. Save the workbook, then run Step 3.
 
 ---
 
