@@ -95,7 +95,7 @@ ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v3.zip"
 ACCESS_PTS_BA_LAYER = None  # layer name if GDB, else None
 
 # Caltrain (CT)
-ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v4_updated_fields.zip"
+ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v5_updated_fields.zip"
 ACCESS_PTS_CT_LAYER = None  # layer name if GDB, else None
 
 # AC Transit (AC)
@@ -167,8 +167,8 @@ REVIEW_XLSX_OUTPUT = DATA_DIR / "SB79_tod_review.xlsx"
 
 # UPDATE BEFORE RUNNING STEP 3:
 # Set this to the path of the renamed/reviewed workbook.
-# Example: DATA_DIR / "SB79_tod_review_reviewed_2026_03_10.xlsx"
-REVIEW_XLSX = DATA_DIR / "SB79_tod_review_reviewed_2026_03_06.xlsx"  # replace YYYY_MM_DD
+# Example: DATA_DIR / "SB79_tod_review_2026_03_10.xlsx"
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_03_06.xlsx"  # replace YYYY_MM_DD
 REVIEW_STOPS_SHEET = "stops"
 REVIEW_ACCESS_PTS_SHEET = "access_points"
 
