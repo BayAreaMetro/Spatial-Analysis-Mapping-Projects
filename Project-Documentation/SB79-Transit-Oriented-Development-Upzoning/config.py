@@ -70,9 +70,9 @@ RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 # ---------------------------------------------------------------------------
 
 # File geodatabase containing curated stops and stations
-TOD_DATABASE_GDB = DATA_DIR / "tod_database.gdb"
-GDB_STATIONS_LAYER = "stations_v1"
-GDB_STOPS_LAYER = "stops_v1"
+TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_04_01.gdb"
+GDB_STATIONS_LAYER = "stations_v2"
+GDB_STOPS_LAYER = "stops_v2"
 
 # Excel spreadsheet listing station_ids to exclude from spatial assignment.
 # Stations in this list are removed before buffer analysis so that stops and
@@ -95,7 +95,7 @@ ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v3.zip"
 ACCESS_PTS_BA_LAYER = None  # layer name if GDB, else None
 
 # Caltrain (CT)
-ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v5_updated_fields.zip"
+ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v6_updated_fields.zip"
 ACCESS_PTS_CT_LAYER = None  # layer name if GDB, else None
 
 # AC Transit (AC)
@@ -107,8 +107,12 @@ ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v5.zip"
 ACCESS_PTS_SC_LAYER = None  # layer name if GDB, else None
 
 # SFMTA / Muni (SF)
-ACCESS_PTS_SF_PATH = ACCESS_PTS_DIR / "SFMuni_PedAccessPoints_GTFS_v1.zip"
+ACCESS_PTS_SF_PATH = ACCESS_PTS_DIR / "SFMuni_PedAccessPoints_GTFS_v2.zip"
 ACCESS_PTS_SF_LAYER = None  # layer name if GDB, else None
+
+# Valley Link (VL)
+ACCESS_PTS_VL_PATH = ACCESS_PTS_DIR / "ValleyLink_PedAccessPoints_v1.zip"
+ACCESS_PTS_VL_LAYER = None  # layer name if GDB, else None
 
 # Ordered list used by notebook 2 to iterate over sources
 ACCESS_PTS_SOURCES = [
@@ -117,6 +121,7 @@ ACCESS_PTS_SOURCES = [
     ("AC", ACCESS_PTS_AC_PATH, ACCESS_PTS_AC_LAYER),
     ("SC", ACCESS_PTS_SC_PATH, ACCESS_PTS_SC_LAYER),
     ("SF", ACCESS_PTS_SF_PATH, ACCESS_PTS_SF_LAYER),
+    ("VL", ACCESS_PTS_VL_PATH, ACCESS_PTS_VL_LAYER),
 ]
 
 # ---------------------------------------------------------------------------
@@ -131,12 +136,18 @@ JURISDICTION_BOUNDARIES_URL = (
     "?outFields=*&where=1%3D1&f=geojson"
 )
 
+WATER_BODIES_URL = (
+    "https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/"
+    "region_water_area/FeatureServer/0/query"
+    "?f=geojson&where=(wfcc%20IN%20('H2053'%2C%20'H2051'))&outFields=*"
+)
+
 # ACS 5-year estimates (2019–2023), Table B01003 — Total Population
 # Used to apply the SB79 jurisdictional population threshold (35,000 residents).
 # Pulled via mtcpy.census.pull_acs_data at the Census "place" geography level.
-ACS_YEAR = 2023           # endpoint year of the 5-year estimate window
-ACS_TYPE = "acs5"         # 5-year ACS product
-ACS_TABLE_ID = "B01003"   # Total Population
+ACS_YEAR = 2023  # endpoint year of the 5-year estimate window
+ACS_TYPE = "acs5"  # 5-year ACS product
+ACS_TABLE_ID = "B01003"  # Total Population
 ACS_GEOGRAPHY_LEVEL = "place"  # incorporated places (cities/CDPs)
 
 # ---------------------------------------------------------------------------
