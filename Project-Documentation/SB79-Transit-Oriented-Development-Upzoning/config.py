@@ -70,9 +70,9 @@ RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 # ---------------------------------------------------------------------------
 
 # File geodatabase containing curated stops and stations
-TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_04_01.gdb"
-GDB_STATIONS_LAYER = "stations_v2"
-GDB_STOPS_LAYER = "stops_v2"
+TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_04_07.gdb"
+GDB_STATIONS_LAYER = "stations_v3"
+GDB_STOPS_LAYER = "stops_v3"
 
 # Excel spreadsheet listing station_ids to exclude from spatial assignment.
 # Stations in this list are removed before buffer analysis so that stops and
@@ -107,7 +107,7 @@ ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v5.zip"
 ACCESS_PTS_SC_LAYER = None  # layer name if GDB, else None
 
 # SFMTA / Muni (SF)
-ACCESS_PTS_SF_PATH = ACCESS_PTS_DIR / "SFMuni_PedAccessPoints_GTFS_v2.zip"
+ACCESS_PTS_SF_PATH = ACCESS_PTS_DIR / "SFMuni_PedAccessPoints_GTFS_v3.zip"
 ACCESS_PTS_SF_LAYER = None  # layer name if GDB, else None
 
 # Valley Link (VL)
