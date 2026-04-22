@@ -14,12 +14,6 @@
   - [Stops](#stops)
   - [Access Points](#access-points)
 - [Running the Pipeline](#running-the-pipeline)
-  - [Prerequisites](#prerequisites)
-  - [Step 1 – GTFS TOD Stop Classification](#step-1--gtfs-tod-stop-classification)
-  - [Step 2 – TOD Stop and Access Point Assignment](#step-2--tod-stop-and-access-point-assignment)
-  - [Step 2b – Review Reconciliation](#step-2b--review-reconciliation)
-  - [Step 3 – Station Assignment Reintegration](#step-3--station-assignment-reintegration)
-  - [Step 4 – TOD Zone Buffer Generation](#step-4--tod-zone-buffer-generation)
 - [Process Overview](#process-overview)
   - [Manual Data Preparation](#manual-data-preparation)
   - [Load Data and Libraries](#load-data-and-libraries)
@@ -43,12 +37,12 @@ This project develops a reproducible geospatial methodology to:
 - Define pedestrian access points and stations associated with those stops
 - Generate distinct TOD zones based on Euclidean distance bands around access points
 - Apply jurisdictional population rules
-- Produce a policy-compliant TOD zone layer for the Bay Area
+- Produce a TOD zone layer for the Bay Area that complies with SB 79.
 
-The resulting datasets will serve as the authoritative SB79 TOD geography for Alameda, San Francisco, San Mateo, and Santa Clara counties.
+The resulting datasets will serve as the authoritative SB79 TOD geography for the nine-county San Francisco Bay Area. In the Bay Area, the law applies to Alameda, San Francisco, San Mateo, and Santa Clara counties.
 
 **Project Scope:**
-- **Data Collection** -- Gather GTFS feeds, Caltrans HQTS data, jurisdiction boundaries, and transit station datasets.
+- **Data Collection** -- Gather General Transit Feed Specification (GTFS) feeds, Caltrans High-Quality Transit Stops (HQTS) data, jurisdiction boundaries, and transit station datasets.
 - **Data Preparation / Modeling** -- Identify TOD-eligible stops, classify tiers, construct pedestrian access points, and generate TOD bands.
 - **Data Ingestion** -- Prepare final geospatial layer for internal review and publication.
 - **Data Catalog / Publishing / MDM** -- Document methodology, inventory dataset in MDM Catalog, add to Enterprise Database, and publish to DAAS platforms (e.g. ArcGIS Online, Open Data, Socrata.)
@@ -63,20 +57,28 @@ SB 79 establishes minimum standards for building height, density, and residentia
 
 Each qualifying transit stop is assigned one of two tiers based on service type:
 
-- **Tier 1** — served by heavy rail transit or very high-frequency commuter rail (at least 72 trains/day across both directions). In the Bay Area: BART stations in Alameda, San Francisco, San Mateo, and Santa Clara Counties, and qualifying Caltrain stations (Tamien Station through the future Salesforce Transit Center, excluding stations with no daily service).
-- **Tier 2** — served by light rail transit, high-frequency commuter rail (at least 48 trains/day), or bus rapid transit. In the Bay Area: VTA light rail, SF Muni Metro and Streetcar, AC Transit Tempo, and select additional stops.
+- **Tier 1** — served by heavy rail transit or very high-frequency commuter rail (at least 72 trains/day across both directions, or the sum of total commuter rail stops regardless of direction). In the Bay Area: BART stations in Alameda, San Francisco, San Mateo, and Santa Clara Counties, and qualifying Caltrain stations (Tamien Station through the future Salesforce Transit Center, excluding stations with no daily service).
+- **Tier 2** — served by light rail transit, high-frequency commuter rail (at least 48 trains/day across both directions, or the sum of total commuter rail stops regardless of direction), or bus rapid transit. In the Bay Area: VTA light rail, SF Muni Metro and Streetcar, AC Transit Tempo, and select additional bus stops that are adjacent to dedicated lanes and have AM and PM peak headways of 15 minutes or less.
 
 ### Pedestrian access points
 
-Buffer distances under SB 79 are measured as a straight line from the nearest edge of a parcel to a pedestrian access point for the TOD stop — not from a single station centroid. While "pedestrian access point" is not defined in the statute, guidance communicated by the bill author's office to HCD establishes the following hierarchy:
+Buffer distances under SB 79 are measured as a straight line from the nearest edge of a parcel to a pedestrian access point for the TOD stop — not from a single station centroid. While "pedestrian access point" is not defined in the statute, staff relied upon guidance in the HCD *SB 79 Advisory Clarifications on Definitions for Metropolitan Planning Organizations*, published March 23, 2026, and on previous communication from the bill author's office in response to a request or clarification by MPOs.
+
+Guidance from the HCD Advisory: "Any applicable station entrance, boarding platform access point, or location of a Transit-Oriented Development stop as defined and depicted on the applicable Metropolitan Planning Organization Senate Bill 79 map."
+
+(Source: SB 79 [Advisory Clarifications on Definitions for Metropolitan Planning Organizations](https://www.hcd.ca.gov/sites/default/files/docs/planning-and-community/sb-79-mpo-advisory.pdf), published March 23, 2025)
+
+Guidance communicated by the bill author's office:
 
 - Where an entrance exists: the station entrance
 - Where no entrance exists: the platform edges
 - Where neither exists: a single point
 
+(Source: letter transmitted electronically from Senator Scott Wiener's office to Southern California Association of Governments staff in response to MPO questions, December 23, 2025)
+
 ### Development standards
 
-SB 79 sets the following minimum development standards by tier and distance from a TOD stop. Local agencies may not apply lower height, density, or residential FAR limits than those listed below.
+SB 79 sets the following minimum development standards by tier and distance from a TOD stop. With the exception of TOD Alternative Plans approved by HCD prior to July 1, 2026 and eligible exemptions, local agencies may not apply lower height, density, or residential FAR limits to qualifying residential development projects than those listed below on parcels zoned for commercial, mixed use, or residential development.
 
 | Distance from TOD stop | Tier 1 height | Tier 1 density | Tier 1 FAR | Tier 2 height | Tier 2 density | Tier 2 FAR |
 |---|---|---|---|---|---|---|
@@ -84,9 +86,11 @@ SB 79 sets the following minimum development standards by tier and distance from
 | ≤ ¼ mile | 75 ft | 120 du/ac | 3.5 | 65 ft | 100 du/ac | 3.0 |
 | ¼–½ mile (cities ≥ 35,000 residents) | 65 ft | 100 du/ac | 3.0 | 55 ft | 80 du/ac | 2.5 |
 
-*Source: [MTC SB 79 MPO Mapping Requirements Summary (January 2026)](https://mtcdrive.box.com/s/5zpg6fv14cvmftuz02th6vcfr680ia4d) — MTC internal only*
+*Source: ABAG SB 79 Summary*
 
 ## Resources
+
+The sources below were used to generate SB 79 stations, stops, and access points and were augmented with data as part of manual review steps outlined in subsequent sections. While scripts produced intermediate scratch data, only the final authoritative layers are documented in the pipeline outputs section below.
 
 ### Source Data
 
@@ -100,7 +104,7 @@ SB 79 sets the following minimum development standards by tier and distance from
 
 ### Pipeline Outputs
 
-The following authoritative layers are written to the shared GeoPackage ([`tod_database.gpkg`](https://mtcdrive.box.com/s/dc42a1ofq2mslwmkztdxk6pyvofoppee)). Intermediate development layers (`tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev`) are omitted.
+The following authoritative layers are written to the centralized database ([`tod_database.gpkg`](https://mtcdrive.box.com/s/dc42a1ofq2mslwmkztdxk6pyvofoppee)). Intermediate development layers (`tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev`) are omitted.
 
 | Layer | Description | Produced By |
 |---|---|---|
@@ -120,7 +124,7 @@ This process will generate four interrelated datasets. Field types are logical/p
 ![image](img/SB79%20Data%20Model.png)
 
 ### SB79 Transit-Oriented Development Zones
-Final policy-compliant TOD zone polygons. One polygon per non-overlapping zone; each polygon is assigned the highest-priority applicable development standard under SB 79. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for how zones are derived.
+Final SB 79-consistent TOD zone polygons. One polygon per non-overlapping zone; each polygon is assigned the highest-priority applicable development standard under SB 79. See [Geographic Prioritization Approach](#geographic-prioritization-approach) for how zones are derived.
 
 | Field | Data Type | Allow NULL | Domain | Description |
 |---|---|---|---|---|
@@ -168,153 +172,15 @@ Pedestrian access locations for each transit station used as the origin for TOD 
 
 ## Running the Pipeline
 
-The pipeline is implemented as a sequence of four Jupyter notebooks. Each notebook is self-contained and reads/writes to a shared GeoPackage (`tod_database.gpkg`) defined in `config.py`. There are **two mandatory manual GIS review gates** — one after Step 1 and one between Steps 2 and 3. Do not skip them.
+Step-by-step execution instructions for the five-notebook pipeline are maintained in a separate document intended for internal technical use. This includes notebook descriptions, prerequisite setup, mandatory manual GIS review gates, and output specifications for each step.
 
-### Prerequisites
-
-- Python environment with `geopandas`, `pandas`, `gtfs_kit`, `shapely`, `uuid`, and `openpyxl` installed
-- Access to the MTC Box folder containing source data (see [Source Data](#source-data))
-- Paths in `config.py` updated to match your local data directory
-- QGIS (or equivalent) for the manual GIS review gate after Step 1
-- Excel (or equivalent spreadsheet application) for the manual review gate between Steps 2 and 3
-
----
-
-### Step 1 – GTFS TOD Stop Classification
-
-**Notebook:** `1_gtfs_tod_stop_classification.ipynb`
-
-Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data, classifies each stop as TOD-eligible (Tier 1 or Tier 2), and writes the results to the shared GeoPackage.
-
-**Outputs written to GPKG:**
-- `stops` — GTFS location_type=0 stop/platform records served by relevant routes, with `tod_stop` flag and `tod_tier` classification
-- `stations` — GTFS location_type=1 parent station records
-- `access_points` — GTFS location_type=2 (entrance/exit) and location_type=3 (generic node) records
-
-> **Manual GIS review required before running Step 2.**
->
-> The `stops` and `stations` layers from the GPKG serve as the starting point for manual curation. Curated output is saved to a File Geodatabase (`tod_database.gdb`, layers `stations_v1` and `stops_v1`), which Step 2 reads directly. Pedestrian access points are **not** carried through the FGDB — they are loaded directly from per-agency source files in Step 2.
->
-> **Stations (`stations_v1`):**
-> 1. Load the `stations` layer from the GPKG into GIS.
-> 2. Copy it into `tod_database.gdb` as `stations_v1`.
-> 3. Manually add station records for TOD-applicable stops that lack a parent station in GTFS — for example, SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops.
->
-> **Stops (`stops_v1`):**
-> 1. Load the `stops` layer from the GPKG into GIS.
-> 2. Copy it into `tod_database.gdb` as `stops_v1`.
-> 3. Review each stop flagged as `tod_stop = 1` by the automated process to confirm correctness.
-> 4. For any stops that should be TOD-applicable but were not caught by the automated logic, manually set `tod_stop = 1` and populate the `action` column with the reason for inclusion (e.g. `"manual — VTA BRT stop"`, `"manual — SFMTA light rail"`).
->
-> Once both curated layers are saved to `tod_database.gdb`, proceed to Step 2.
-
----
-
-### Step 2 – TOD Stop and Access Point Assignment
-
-**Notebook:** `2_tod_stop_and_access_assignment.ipynb`
-
-Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Non-TOD stations are excluded before spatial assignment using the station overrides list (`2026_03_04_tod_stations_overrides.xlsx`). Outputs development layers to the shared GeoPackage and a review Excel workbook for manual resolution.
-
-**Access point sources (loaded and normalized in order):**
-Defined in `ACCESS_PTS_SOURCES` in [`config.py`](config.py). Update file paths there when new agency source files are available.
-
-**Outputs written to GPKG** *(development layers — not yet authoritative):*
-- `tod_stations_dev` — station layer used for spatial assignment (filtered to TOD stations)
-- `tod_stops_dev` — TOD stops with spatially assigned `station_id` and `assignment_status`
-- `tod_access_points_dev` — merged access points with spatially assigned `station_id` and `assignment_status`
-
-**Review workbook written to Box data folder:**
-- `SB79_tod_review.xlsx` — contains all stops and access points with `assignment_status` and `station_id`; reviewers use this file to resolve conflicts and no-match records before running Step 3
-
-> **Manual Excel review required before running Step 3.**
->
-> 1. **Before editing — rename the file.** Rename `SB79_tod_review.xlsx` to `SB79_tod_review_reviewed_YYYY_MM_DD.xlsx` (replacing `YYYY_MM_DD` with today's date). This prevents a future re-run of Step 2 from overwriting your work. Then update `REVIEW_XLSX` in `config.py` to point to the renamed file path.
-> 2. **Priority — resolve `conflict` and `no_match` records first.**
->    - Filter each sheet to rows where `assignment_status` is `conflict` or `no_match`.
->    - Open the corresponding `_dev` layer (`tod_stops_dev` or `tod_access_points_dev`) in QGIS/ArcGIS Pro alongside `tod_stations_dev` to visually identify the correct parent station.
->    - Copy the correct `station_id` from `tod_stations_dev` into the `station_id` cell for that row.
->    - Set `assignment_status` = `manual_station_assignment` using the dropdown.
-> 3. **Secondary — correct any mis-assigned records.**
->    - If a row has `assignment_status = assigned` but the spatial assignment produced the wrong station (e.g., a stop was snapped to the nearest station rather than its true parent), update `station_id` to the correct value and set `assignment_status` = `manual_station_assignment`.
->    - Leave correctly-assigned rows untouched — only rows with `assignment_status = manual_station_assignment` are applied as updates in Step 3.
-> 4. Save the workbook, then run Step 3.
-
----
-
-### Step 2b – Review Reconciliation
-
-**Notebook:** `2b_tod_review_reconciliation.ipynb`
-
-Run **only** when Step 2 has been re-run after new stops or access points were added, making the existing reviewed workbook stale. Reconciles the fresh `SB79_tod_review.xlsx` with the previously-reviewed workbook (`REVIEW_XLSX` in `config.py`) to carry forward valid `manual_station_assignment` decisions, then writes a new dated workbook as the starting point for the next manual review cycle.
-
-**Carry-over rules:**
-- Only rows with `assignment_status = manual_station_assignment` are carried from the stale workbook — `conflict` and `no_match` rows are discarded in favour of the fresh spatial assignment.
-- Carried-over `station_id` values that no longer exist in the current TOD station universe are downgraded to `conflict` and flagged for re-review.
-- Records dropped from the new ID universe (present in the stale workbook but absent from the fresh Step 2 output) are reported in the notebook output but not written to the reconciled workbook.
-
-**Inputs (set in `config.py`):**
-- `REVIEW_XLSX_OUTPUT` (`SB79_tod_review.xlsx`) — fresh Step 2 output; authoritative ID universe
-- `REVIEW_XLSX` (`SB79_tod_review_reviewed_YYYY_MM_DD.xlsx`) — stale reviewed workbook with prior manual overrides
-- `GPKG_TOD_STATIONS_DEV_LAYER` — used to validate carried-over `station_id` values
-
-**Output written to Box data folder:**
-- `SB79_tod_review_YYYY_MM_DD.xlsx` — reconciled workbook with today's date; ready for manual review
-
-> **After running this notebook:**
->
-> 1. Update `REVIEW_XLSX` in `config.py` to point to the new dated output file.
-> 2. Open the file and resolve any remaining `conflict` or `no_match` rows (same process as after Step 2).
-> 3. Save the workbook, then run Step 3.
-
----
-
-### Step 3 – Station Assignment Reintegration
-
-**Notebook:** `3_tod_station_assignment_reintegration.ipynb`
-
-Reads the manually-reviewed Excel workbook (path set via `REVIEW_XLSX` in `config.py`), validates any manually-assigned `station_id` values against the TOD station universe, applies corrections to the development datasets, and exports the final authoritative layers to the shared GeoPackage.
-
-**Inputs:**
-- Reviewed workbook (path set via `REVIEW_XLSX` in `config.py`) — the renamed `SB79_tod_review_reviewed_YYYY_MM_DD.xlsx` file with `manual_station_assignment` rows filled in
-- `tod_stations_dev`, `tod_stops_dev`, `tod_access_points_dev` — development layers from Step 2 (read from GPKG)
-
-**Outputs written to GPKG** *(final authoritative layers):*
-- `tod_stations` — final station layer (see [Pipeline Outputs](#pipeline-outputs))
-- `tod_stops` — final stops with all manual corrections applied (see [Pipeline Outputs](#pipeline-outputs))
-- `tod_access_points` — final access points with all manual corrections applied (see [Pipeline Outputs](#pipeline-outputs))
-
-> No manual review required between Steps 3 and 4.
-
----
-
-### Step 4 – TOD Zone Buffer Generation
-
-**Notebook:** `4_tod_zone_buffer_generation.ipynb`
-
-Loads the finalized `tod_access_points` layer from the shared GeoPackage and generates the SB79 TOD zone geography through four main stages:
-
-1. **Buffer generation** — creates full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each access point, tagged with `tod_tier` and `buffer_band`.
-2. **Jurisdictional population rule** — erases all buffers (200 ft, ¼ mile, ½ mile) within unincorporated county lands; additionally erases half-mile buffers within incorporated cities with total population < 35,000.
-3. **Geographic priority resolution** — applies a sequential erase to produce six non-overlapping zone layers labeled by `zone_label`. See [Geographic Prioritization Approach](#geographic-prioritization-approach) in Development Notes.
-4. **Finalization** *(planned)* — dissolves by `zone_label` and explodes to single-part polygons, producing a dataset with uniform geometry types throughout.
-
-**Inputs:**
-- `tod_access_points` — finalized pedestrian access points (from Step 3)
-- `tod_stations` — finalized TOD stations (from Step 3)
-- `tod_stops` — finalized TOD stops (from Step 3)
-- Bay Area jurisdiction boundaries with ACS 2019–2023 5-year population estimates (loaded from ArcGIS REST service)
-
-**Outputs written to GPKG:**
-- `tod_zone_buffers` — full-circle per-access-point buffers at all three distance bands; diagnostic/QA layer (see [Pipeline Outputs](#pipeline-outputs))
-- `jurisdictions_with_pop_acs2019_2023` — jurisdiction boundaries with ACS 2019–2023 population attributes
-- `tod_zones` — authoritative SB79 TOD zone polygons, post-priority resolution (see [Pipeline Outputs](#pipeline-outputs))
+See [RUNNING_THE_PIPELINE.md](RUNNING_THE_PIPELINE.md) for full instructions.
 
 ---
 
 ## Process Overview
 
-> This section describes the conceptual methodology behind the pipeline. For step-by-step execution instructions, see [Running the Pipeline](#running-the-pipeline).
+> This section describes the conceptual methodology behind the pipeline. For step-by-step execution instructions, see [RUNNING_THE_PIPELINE.md](RUNNING_THE_PIPELINE.md).
 
 ### Manual Data Preparation
 1. Manually create stations for stops that will be flagged as TOD applicable, such as SFMTA light rail stops not co-located with a BART Station (e.g. Van Ness, Church, Forest Hill, Yerba Buena/Moscone, etc.), VTA light rail stops, and BRT stops.
@@ -368,9 +234,9 @@ This table summarizes where Transit-Oriented Development (TOD) Zones apply by Tr
 **Policy Constraints**
 
 1. **Tier Precedence Rule:**
-   - Where Tier 1 and Tier 2 zones intersect, Tier 1 supersedes Tier 2. Tier 2 geometry must be erased in overlapping areas. The one exception is where a Tier 2 200 ft zone overlaps with a Tier 1 quarter-mile or half-mile zone — in that case Tier 2 200 ft prevails, as it carries higher development standards than either Tier 1 distance band.
+   - Where Tier 1 and Tier 2 zones intersect, Tier 1 generally supersedes Tier 2. Tier 2 geometry must be erased in overlapping areas. The one exception is where a Tier 2 200 ft zone overlaps with a Tier 1 quarter-mile or half-mile zone — in that case Tier 2 200 ft prevails, as it carries higher development standards than either Tier 1 distance band.
 2. **Geographic Scope:**
-   - Applies only to cities located within:
+   - Applies only to incorporated cities and towns located within:
      - Alameda County
      - San Francisco County
      - San Mateo County
@@ -383,7 +249,7 @@ This table summarizes where Transit-Oriented Development (TOD) Zones apply by Tr
 
 ### TOD Zone Geographic Prioritization
 
-Where buffers from different tiers and distance bands overlap after union, each geometry is assigned a single TOD zone classification representing the most permissive applicable development standard under SB 79. The prioritization cascades as follows:
+Where buffers from different tiers and distance bands overlap after union, each geometry is assigned a single TOD zone classification representing the most permissive applicable development standard for qualified residential development projects under SB 79. The prioritization cascades as follows:
 
 | Priority | Zone | Height limit | Density (du/ac) | Residential FAR |
 |---|---|---|---|---|
@@ -411,7 +277,7 @@ After each erase step, zero-area floating-point artifacts are dropped and geomet
 ### Technical Considerations
 
 - GTFS data provides the authoritative source for transit stop locations and service patterns. Agency filtering focuses on relevant Bay Area operators: BART (BA), Caltrain (CT), AC Transit (AC), VTA (SC), and SFMTA (SF). Parent-child relationships in the GTFS hierarchy distinguish between stations (`location_type=1`) and individual stops/platforms (`location_type=0`).
-- Some stops and access points are not fully represented in GTFS and require manual mapping. This includes SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops. Manually mapped features are tracked via the `action` column in the curated stop and station layers.
+- Some stops and access points are not fully represented in GTFS and require manual mapping. This includes SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops. In addition, many BART and Caltrain stops do not have comprehensively mapped pedestrian access points. Manually mapped features are tracked via the `action` column in the curated stop and station layers.
 - Caltrans [High Quality Transit Areas (HQTA) Stops](https://gis.data.ca.gov/datasets/f6c30480f0e84be699383192c099a6a4_0) data is used to identify TOD-eligible bus stops. Specifically, stops with `hqta_type = major_stop_brt` are used to flag Tier 2 BRT stops based on frequency standards derived from GTFS schedule data. The HQTA dataset is updated monthly by Caltrans — the version acquired for this analysis is recorded in the [Source Data](#source-data) table. For methodology details see the [Caltrans HQTA documentation](https://docs.calitp.org/data-analyses/high_quality_transit_areas/).
 - All spatial operations in Step 4 use EPSG:26910 (UTM Zone 10N) as the analysis CRS for accurate planar distance and area measurements. Reprojection to EPSG:4326 occurs only at final GeoPackage export.
 - After each erase operation in Step 4, polygon fragments smaller than 100 m² are discarded as floating-point artifacts. This threshold was validated against the actual area distribution of post-overlay fragments, which showed a hard gap between near-zero artifacts (all < 1 m²) and the smallest legitimate fragment (> 1,279,000 m²).
