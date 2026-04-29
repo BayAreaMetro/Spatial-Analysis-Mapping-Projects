@@ -14,9 +14,10 @@ Pipeline steps (run in order; manual Excel review required after Step 2 before r
             stops, stations, and access_points to the shared GeoPackage.
 
   Step 2 — 2_tod_stop_and_access_assignment.ipynb
-            Reads the curated stations and stops geodatabase layers, merges the
-            per-agency pedestrian access-point source files (see constants below),
-            spatially assigns stops and access points to parent stations via
+            Reads the curated stations, stops, and pedestrian access points from
+            the project File Geodatabase (GDB_STATIONS_LAYER, GDB_STOPS_LAYER,
+            GDB_ACCESS_PTS_LAYER), spatially assigns stops and access points to
+            parent stations via
             progressive buffer analysis, and exports development layers
             (tod_stations_dev, tod_stops_dev, tod_access_points_dev) to the
             shared GeoPackage, and writes REVIEW_XLSX_OUTPUT for manual review.
@@ -71,58 +72,15 @@ RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 
 # File geodatabase containing curated stops and stations
 TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_04_07.gdb"
-GDB_STATIONS_LAYER = "stations_v3"
-GDB_STOPS_LAYER = "stops_v3"
+GDB_STATIONS_LAYER = "stations_v4"
+GDB_STOPS_LAYER = "stops_v4"
+GDB_ACCESS_PTS_LAYER = "access_points_v4"
 
 # Excel spreadsheet listing station_ids to exclude from spatial assignment.
 # Stations in this list are removed before buffer analysis so that stops and
 # access points cannot be assigned to non-TOD stations.
 STATIONS_OVERRIDES_XLSX = DATA_DIR / "2026_03_04_tod_stations_overrides.xlsx"
 STATION_OVERRIDES_SHEET = "stations"
-
-# ---------------------------------------------------------------------------
-# Step 2 inputs — per-agency pedestrian access point source files
-# ---------------------------------------------------------------------------
-# Each agency delivers access points in its own format (shapefile or GDB).
-# Notebook 2 merges these into a single GeoDataFrame before spatial assignment.
-# Set the path to the file/GDB for each agency; for GDB sources also set the
-# corresponding layer name.  Leave unused layer names as None.
-
-ACCESS_PTS_DIR = DATA_DIR / "Access Points"
-
-# BART (BA)
-ACCESS_PTS_BA_PATH = ACCESS_PTS_DIR / "BART_PedAccessPoints_GTFS_v3.zip"
-ACCESS_PTS_BA_LAYER = None  # layer name if GDB, else None
-
-# Caltrain (CT)
-ACCESS_PTS_CT_PATH = ACCESS_PTS_DIR / "Caltrain_PedAccessPoints_GTFS_v6_updated_fields.zip"
-ACCESS_PTS_CT_LAYER = None  # layer name if GDB, else None
-
-# AC Transit (AC)
-ACCESS_PTS_AC_PATH = ACCESS_PTS_DIR / "AC_Transit_PedAcessPoints_v3.gdb"
-ACCESS_PTS_AC_LAYER = "ACTransit_PedAccessPoints_GTFS_v3"
-
-# VTA / Santa Clara (SC)
-ACCESS_PTS_SC_PATH = ACCESS_PTS_DIR / "VTA_PedAccessPoints_GTFS_v5.zip"
-ACCESS_PTS_SC_LAYER = None  # layer name if GDB, else None
-
-# SFMTA / Muni (SF)
-ACCESS_PTS_SF_PATH = ACCESS_PTS_DIR / "SFMuni_PedAccessPoints_GTFS_v3.zip"
-ACCESS_PTS_SF_LAYER = None  # layer name if GDB, else None
-
-# Valley Link (VL)
-ACCESS_PTS_VL_PATH = ACCESS_PTS_DIR / "ValleyLink_PedAccessPoints_v1.zip"
-ACCESS_PTS_VL_LAYER = None  # layer name if GDB, else None
-
-# Ordered list used by notebook 2 to iterate over sources
-ACCESS_PTS_SOURCES = [
-    ("BA", ACCESS_PTS_BA_PATH, ACCESS_PTS_BA_LAYER),
-    ("CT", ACCESS_PTS_CT_PATH, ACCESS_PTS_CT_LAYER),
-    ("AC", ACCESS_PTS_AC_PATH, ACCESS_PTS_AC_LAYER),
-    ("SC", ACCESS_PTS_SC_PATH, ACCESS_PTS_SC_LAYER),
-    ("SF", ACCESS_PTS_SF_PATH, ACCESS_PTS_SF_LAYER),
-    ("VL", ACCESS_PTS_VL_PATH, ACCESS_PTS_VL_LAYER),
-]
 
 # ---------------------------------------------------------------------------
 # Step 4 inputs — jurisdiction boundaries and ACS population data
@@ -179,7 +137,7 @@ REVIEW_XLSX_OUTPUT = DATA_DIR / "SB79_tod_review.xlsx"
 # UPDATE BEFORE RUNNING STEP 3:
 # Set this to the path of the renamed/reviewed workbook.
 # Example: DATA_DIR / "SB79_tod_review_2026_03_10.xlsx"
-REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_03_20.xlsx"  # replace YYYY_MM_DD
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_04_23.xlsx"  # replace YYYY_MM_DD
 REVIEW_STOPS_SHEET = "stops"
 REVIEW_ACCESS_PTS_SHEET = "access_points"
 

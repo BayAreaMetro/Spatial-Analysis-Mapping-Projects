@@ -96,8 +96,9 @@ The sources below were used to generate SB 79 stations, stops, and access points
 
 | Resource Type | Resource Name   | Description                                  | Source/Location      | Format       | Owner     | Version | Date Acquired/Created | Dependencies | Usage Notes                    |
 |---------------|-----------------|----------------------------------------------|----------------------|--------------|-----------------|---------|-----------------------|--------------|--------------------------------|
-| Dataset       | Pedestrian Access Points   | Pre-defined pedestrian access points for transit agencies | [Box Link](https://mtcdrive.box.com/s/q33u23k3amzgyidcf25cp1lzz6fn8br9)   | ZIP/Shapefile          | MTC       | Current     | 2026-02-18            | None         | Agency-specific access point locations    |
+| Dataset       | Pedestrian Access Points   | Pre-defined pedestrian access points for transit agencies | [Box Link](https://mtcdrive.box.com/s/q33u23k3amzgyidcf25cp1lzz6fn8br9)   | ZIP/Shapefile          | MTC       | Current     | 2026-02-18            | None         | Upstream source for access points curated into `tod_database.gdb`; individual shapefiles are not a direct pipeline input    |
 | Dataset        | Transit Stations   | Transit station location data    | [Box Link](https://mtcdrive.box.com/s/jafqtaxw419tmw0r0m5z7j6g53l9b1p1)    | ZIP/Shapefile| MTC        | Current     | 2026-02-18            | None       | Station geometries and attributes |
+| Dataset        | TOD Database (GDB)   | Curated stations, stops, and pedestrian access points for the SB79 TOD pipeline    | [Box Link](https://mtcdrive.box.com/s/vb000w0mrdgvgvxpon15ygvx4o3c5d00)    | File Geodatabase | MTC        | Current     | Ongoing            | Pedestrian Access Points, Transit Stations, 511 GTFS Data       | Direct input to Steps 2 and 3; contains curated stations, stops, and access points layers read via `GDB_STATIONS_LAYER`, `GDB_STOPS_LAYER`, and `GDB_ACCESS_PTS_LAYER` in `config.py` |
 | API           | 511 GTFS Data     | Regional GTFS feeds for Bay Area transit agencies      | [Box Link](https://mtcdrive.box.com/s/qro5h0uvwwyovx1iuhvcjy55bjqbuana) | ZIP        | MTC  | Current      | 2026-02-18            | None         | Combined regional GTFS feed   |
 | Dataset          | High Quality Transit Stops   | Caltrans-defined major BRT stops and high-frequency transit     | [ArcGIS Online](https://mtc.maps.arcgis.com/home/item.html?id=981ce33db7714f74b126489ef733437b)      | Feature Service  | MTC   | Current     | 2026-02-18            | None     | Used to identify Tier 2 BRT stops |
 | Dataset          | Jurisdiction Boundaries   | Bay Area city and county boundaries with population data     | [ArcGIS Online](https://mtc.maps.arcgis.com/home/item.html?id=4b1242e5cb224a2c9043927d3344df5a)      | Feature Service  | MTC   | Current     | 2026-02-18            | None     | Population rules and geographic scope |
@@ -137,7 +138,7 @@ Parent transit station locations (GTFS `location_type = 1`).
 
 | Field | Data Type | Allow NULL | Domain | Description |
 |---|---|---|---|---|
-| `station_id` | Text | No | — | Unique station identifier sourced from the curated `stations_v1` GDB layer |
+| `station_id` | Text | No | — | Unique station identifier sourced from the curated GDB layer (`GDB_STATIONS_LAYER` in `config.py`) |
 | `station_name` | Text | No | — | Human-readable station name |
 | `location_type` | Integer | No | GTFS: `1` = Station | GTFS location type |
 | `manually_added` | Integer | No | `0` = sourced from GTFS; `1` = manually added | Indicates whether the station was manually added during the Step 1 GIS review rather than sourced natively from GTFS |
@@ -164,10 +165,10 @@ Pedestrian access locations for each transit station used as the origin for TOD 
 
 | Field | Data Type | Allow NULL | Domain | Description |
 |---|---|---|---|---|
-| `access_id` | Text | No | — | Unique access point identifier. Sourced from each agency's stop ID field; falls back to a stable coordinate-based ID (`geom:<lat>,<lon>`) for records with missing or colliding IDs |
+| `access_id` | Text | No | — | Unique access point identifier. Sourced from each agency's stop ID field; falls back to a stable coordinate-based ID (`geom:<lat>,<lon>`) for records with missing or colliding IDs. Assigned during GDB curation and read as-is by Step 2 |
 | `station_id` | Text | No | — | Parent station ID — joined from GTFS, then resolved spatially or manually via the Step 2–3 review workflow |
 | `access_point_name` | Text | Yes | — | Descriptive name of the pedestrian access point, sourced from each agency's stop name field |
-| `location_type` | Integer | No | GTFS: `2` = Entrance/Exit, `3` = Generic Node | GTFS location type; defaults to `2` if absent in the agency source file |
+| `location_type` | Integer | No | GTFS: `2` = Entrance/Exit, `3` = Generic Node | GTFS location type; defaults to `2` if absent in the curated GDB layer |
 | `geometry` | Geometry (Point) | No | — | Access point location used as the origin for TOD zone buffer generation |
 
 ## Running the Pipeline

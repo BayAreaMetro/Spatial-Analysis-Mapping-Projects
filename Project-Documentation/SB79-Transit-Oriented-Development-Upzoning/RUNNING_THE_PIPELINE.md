@@ -25,21 +25,27 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 
 > **Manual GIS review required before running Step 2.**
 >
-> The `stops` and `stations` layers from the GPKG serve as the starting point for manual curation. Curated output is saved to a File Geodatabase (`tod_database.gdb`, layers `stations` and `stops`), which Step 2 reads directly. Pedestrian access points are **not** carried through the FGDB — they are loaded directly from per-agency source files in Step 2.
+> The `stops`, `stations`, and `access_points` layers from the GPKG serve as the starting point for manual curation. Curated output is saved to a File Geodatabase (`tod_database.gdb`), which Step 2 reads directly via the layer names defined in `config.py`.
 >
-> **Stations (`stations`):**
+> **Stations:**
 > 1. Load the `stations` layer from the GPKG into GIS.
-> 2. Copy it into `tod_database.gdb` as `stations`.
+> 2. Copy it into `tod_database.gdb` as the layer defined by `GDB_STATIONS_LAYER` in `config.py`.
 > 3. Manually add station records for TOD-applicable stops that lack a parent station in GTFS — for example, SFMTA light rail stops not co-located with a BART station, VTA light rail stops, and BRT stops.
 >
-> **Stops (`stops`):**
+> **Stops:**
 > 1. Load the `stops` layer from the GPKG into GIS.
-> 2. Copy it into `tod_database.gdb` as `stops`.
+> 2. Copy it into `tod_database.gdb` as the layer defined by `GDB_STOPS_LAYER` in `config.py`.
 > 3. Review each stop flagged as `tod_stop = 1` by the automated process to confirm correctness.
 > 4. For any stops that should be TOD-applicable but were not caught by the automated logic, manually set `tod_stop = 1` and populate the `action` column with the reason for inclusion (e.g. `"manual — VTA BRT stop"`, `"manual — SFMTA light rail"`).
 > 5. Manually add stops that did not exist in the GTFS source data, such as planned stops identified in the Regional Transportation Improvement Plan (RTIP) and update required columns such as `tod_stop`, `stop_id`, `stop_name`, `agency_id`, `agency_name`, and `location_type`.
 >
-> Once both curated layers are saved to `tod_database.gdb`, proceed to Step 2.
+> **Access Points:**
+> 1. Load the `access_points` layer from the GPKG into GIS — this is the GTFS-derived baseline for the current feed.
+> 2. Compare against the existing layer defined by `GDB_ACCESS_PTS_LAYER` in `config.py`. Since manually-added access points from prior rounds may not appear in the current GTFS feed, carry forward any records from the existing GDB layer that are not represented in the new GPKG output.
+> 3. Add new access points identified in the GTFS output; remove any that are no longer applicable.
+> 4. Save the reconciled layer to `tod_database.gdb` under the layer name defined by `GDB_ACCESS_PTS_LAYER` in `config.py`.
+>
+> Once all three curated layers are saved to `tod_database.gdb`, proceed to Step 2.
 
 ---
 
@@ -47,10 +53,7 @@ Loads the regional GTFS feed and Caltrans High Quality Transit Stops (HQTS) data
 
 **Notebook:** `2_tod_stop_and_access_assignment.ipynb`
 
-Loads per-agency pedestrian access point datasets, normalizes and merges them into a single GeoDataFrame, joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Non-TOD stations are excluded before spatial assignment using the station overrides list (`YYYY_MM_DD_tod_stations_overrides.xlsx`). Outputs development layers to the shared GeoPackage and a review Excel workbook for manual resolution.
-
-**Access point sources (loaded and normalized in order):**
-Defined in `ACCESS_PTS_SOURCES` in [`config.py`](config.py). Update file paths there when new agency source files are available.
+Loads the curated stations, stops, and pedestrian access points from the project File Geodatabase (layers defined by `GDB_STATIONS_LAYER`, `GDB_STOPS_LAYER`, and `GDB_ACCESS_PTS_LAYER` in `config.py`), joins GTFS-authoritative `station_id` values, then spatially assigns each TOD stop and access point to a parent station by progressively expanding station buffers at **150 ft, 300 ft, 500 ft, and 1000 ft** (EPSG:26910). Points falling within exactly one station buffer are assigned; points intersecting multiple station buffers at the same distance are flagged as conflicts. Non-TOD stations are excluded before spatial assignment using the station overrides list (`YYYY_MM_DD_tod_stations_overrides.xlsx`). Outputs development layers to the shared GeoPackage and a review Excel workbook for manual resolution.
 
 **Outputs written to GPKG** *(development layers):*
 - `tod_stations_dev` — station layer used for spatial assignment (filtered to TOD stations)
