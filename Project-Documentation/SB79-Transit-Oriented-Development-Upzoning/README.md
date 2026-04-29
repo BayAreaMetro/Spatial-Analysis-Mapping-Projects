@@ -168,6 +168,7 @@ Pedestrian access locations for each transit station used as the origin for TOD 
 | `access_id` | Text | No | — | Unique access point identifier. Sourced from each agency's stop ID field; falls back to a stable coordinate-based ID (`geom:<lat>,<lon>`) for records with missing or colliding IDs. Assigned during GDB curation and read as-is by Step 2 |
 | `station_id` | Text | No | — | Parent station ID — joined from GTFS, then resolved spatially or manually via the Step 2–3 review workflow |
 | `access_point_name` | Text | Yes | — | Descriptive name of the pedestrian access point, sourced from each agency's stop name field |
+| `ranked_tod_tier` | Text | No | `Tier 1`, `Tier 2` | Highest-priority TOD tier for this access point, derived from the `tod_tier` values of all stops sharing the same parent station. Where stops of both tiers are present, Tier 1 takes precedence. Assigned in Step 3 |
 | `location_type` | Integer | No | GTFS: `2` = Entrance/Exit, `3` = Generic Node | GTFS location type; defaults to `2` if absent in the curated GDB layer |
 | `geometry` | Geometry (Point) | No | — | Access point location used as the origin for TOD zone buffer generation |
 
