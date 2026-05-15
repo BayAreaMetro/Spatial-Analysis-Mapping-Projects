@@ -71,15 +71,15 @@ RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 # ---------------------------------------------------------------------------
 
 # File geodatabase containing curated stops and stations
-TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_04_07.gdb"
-GDB_STATIONS_LAYER = "stations_v4"
-GDB_STOPS_LAYER = "stops_v4"
-GDB_ACCESS_PTS_LAYER = "access_points_v4"
+TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_05_14.gdb"
+GDB_STATIONS_LAYER = "stations_v5"
+GDB_STOPS_LAYER = "stops_v5"
+GDB_ACCESS_PTS_LAYER = "access_points_v5"
 
 # Excel spreadsheet listing station_ids to exclude from spatial assignment.
 # Stations in this list are removed before buffer analysis so that stops and
 # access points cannot be assigned to non-TOD stations.
-STATIONS_OVERRIDES_XLSX = DATA_DIR / "2026_03_04_tod_stations_overrides.xlsx"
+STATIONS_OVERRIDES_XLSX = DATA_DIR / "tod_stations_overrides_2026_03_04.xlsx"
 STATION_OVERRIDES_SHEET = "stations"
 
 # ---------------------------------------------------------------------------
@@ -137,7 +137,7 @@ REVIEW_XLSX_OUTPUT = DATA_DIR / "SB79_tod_review.xlsx"
 # UPDATE BEFORE RUNNING STEP 3:
 # Set this to the path of the renamed/reviewed workbook.
 # Example: DATA_DIR / "SB79_tod_review_2026_03_10.xlsx"
-REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_04_23.xlsx"  # replace YYYY_MM_DD
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_05_15.xlsx"  # replace YYYY_MM_DD
 REVIEW_STOPS_SHEET = "stops"
 REVIEW_ACCESS_PTS_SHEET = "access_points"
 

@@ -212,6 +212,7 @@ See [RUNNING_THE_PIPELINE.md](RUNNING_THE_PIPELINE.md) for full instructions.
 
 ### Associate Parent Stations with TOD Stops & Access Points
 1. Associate stops and access points with parent stations. This may be performed by spatially joining stops and access points to stations using a near spatial join with a specified distance threshold (e.g. 200 feet) though manual review and adjustments will likely be necessary to ensure accurate associations, especially in dense urban areas where multiple stations and stops may be in close proximity.
+2. Derive `ranked_tod_tier` for each access point by applying tier precedence (Tier 1 > Tier 2) across all stops sharing the same parent station. Where a station serves stops of both tiers, the access point receives `Tier 1`. This ranked value is joined onto every access point for that station and carried forward as the tier input for TOD zone buffer generation in Step 4.
 
 ### Create Transit-Oriented Development (TOD) Zones
 1. Generate full-circle Euclidean buffers at 200 ft, ¼ mile, and ½ mile around each finalized pedestrian access point; tag each buffer with `tod_tier` and `buffer_band`.
