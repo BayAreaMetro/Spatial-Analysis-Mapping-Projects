@@ -71,10 +71,10 @@ RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 # ---------------------------------------------------------------------------
 
 # File geodatabase containing curated stops and stations
-TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_05_14.gdb"
-GDB_STATIONS_LAYER = "stations_v5"
-GDB_STOPS_LAYER = "stops_v5"
-GDB_ACCESS_PTS_LAYER = "access_points_v5"
+TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_05_15.gdb"
+GDB_STATIONS_LAYER = "stations_v6"
+GDB_STOPS_LAYER = "stops_v6"
+GDB_ACCESS_PTS_LAYER = "access_points_v6"
 
 # Excel spreadsheet listing station_ids to exclude from spatial assignment.
 # Stations in this list are removed before buffer analysis so that stops and
@@ -88,11 +88,8 @@ STATION_OVERRIDES_SHEET = "stations"
 
 # Bay Area jurisdiction boundaries (incorporated places + unincorporated county
 # lands).  ArcGIS REST FeatureService — region_jurisdiction (public).
-JURISDICTION_BOUNDARIES_URL = (
-    "https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/"
-    "region_jurisdiction/FeatureServer/0/query"
-    "?outFields=*&where=1%3D1&f=geojson"
-)
+JURISDICTION_BOUNDARIES_GDB = DATA_DIR / "census_incorporated_place_boundaries.gdb"
+JURISDICTION_BOUNDARIES_LAYER = "census_region_incorporated_places_2025"
 
 WATER_BODIES_URL = (
     "https://services3.arcgis.com/i2dkYWmb4wHvYPda/arcgis/rest/services/"
@@ -137,7 +134,7 @@ REVIEW_XLSX_OUTPUT = DATA_DIR / "SB79_tod_review.xlsx"
 # UPDATE BEFORE RUNNING STEP 3:
 # Set this to the path of the renamed/reviewed workbook.
 # Example: DATA_DIR / "SB79_tod_review_2026_03_10.xlsx"
-REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_05_15.xlsx"  # replace YYYY_MM_DD
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_05_20.xlsx"  # replace YYYY_MM_DD
 REVIEW_STOPS_SHEET = "stops"
 REVIEW_ACCESS_PTS_SHEET = "access_points"
 
