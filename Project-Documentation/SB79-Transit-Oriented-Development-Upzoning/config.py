@@ -48,6 +48,9 @@ DATA_DIR = Path(
     "Spatial Analysis and Mapping/SB79 Transit Oriented Development/Data"
 )
 
+# Subfolder for final authoritative GeoJSON outputs (cross-platform, ESRI-importable)
+AUTH_DIR = DATA_DIR / "Authoritative Datasets"
+
 # ---------------------------------------------------------------------------
 # Step 1 inputs — GTFS + Caltrans HQTS
 # ---------------------------------------------------------------------------
@@ -71,10 +74,10 @@ RELEVANT_AGENCIES = ["BA", "CT", "AC", "SC", "SF"]
 # ---------------------------------------------------------------------------
 
 # File geodatabase containing curated stops and stations
-TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_05_15.gdb"
-GDB_STATIONS_LAYER = "stations_v6"
-GDB_STOPS_LAYER = "stops_v6"
-GDB_ACCESS_PTS_LAYER = "access_points_v6"
+TOD_DATABASE_GDB = DATA_DIR / "tod_database_2026_05_29.gdb"
+GDB_STATIONS_LAYER = "stations_v7"
+GDB_STOPS_LAYER = "stops_v7"
+GDB_ACCESS_PTS_LAYER = "access_points_v7"
 
 # Excel spreadsheet listing station_ids to exclude from spatial assignment.
 # Stations in this list are removed before buffer analysis so that stops and
@@ -134,20 +137,17 @@ REVIEW_XLSX_OUTPUT = DATA_DIR / "SB79_tod_review.xlsx"
 # UPDATE BEFORE RUNNING STEP 3:
 # Set this to the path of the renamed/reviewed workbook.
 # Example: DATA_DIR / "SB79_tod_review_2026_03_10.xlsx"
-REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_05_20.xlsx"  # replace YYYY_MM_DD
+REVIEW_XLSX = DATA_DIR / "SB79_tod_review_2026_05_29.xlsx"  # replace YYYY_MM_DD
 REVIEW_STOPS_SHEET = "stops"
 REVIEW_ACCESS_PTS_SHEET = "access_points"
 
-# Final authoritative layers written by Step 3
-GPKG_TOD_STATIONS_FINAL_LAYER = "tod_stations"
-GPKG_TOD_STOPS_FINAL_LAYER = "tod_stops"
-GPKG_TOD_ACCESS_PTS_FINAL_LAYER = "tod_access_points"
+# GeoJSON exports of final authoritative layers — written alongside the GeoPackage
+# for cross-platform compatibility and direct import into ESRI File Geodatabase.
+TOD_STATIONS_GEOJSON = AUTH_DIR / "tod_stations.geojson"
+TOD_STOPS_GEOJSON = AUTH_DIR / "tod_stops.geojson"
+TOD_ACCESS_PTS_GEOJSON = AUTH_DIR / "tod_access_points.geojson"
 
-# Pre-resolution buffer layer written by Step 4 — one full-circle buffer per
-# access point per band; tier precedence, jurisdictional rules, and ring
-# differencing are applied downstream.
-GPKG_TOD_ZONE_BUFFERS_LAYER = "tod_zone_buffers"
-GPKG_JURISDICTIONS_WITH_POP_LAYER = "jurisdictions_with_pop_acs2019_2023"
-
-# Final resolved TOD zone layer (written by a future downstream step)
-GPKG_TOD_ZONES_LAYER = "tod_zones"
+# GeoJSON export of resolved TOD zones — cross-platform format for import into
+# ESRI File Geodatabase. Import into ArcGIS Pro via Add Data, then run
+# Repair Geometry before exporting to a file geodatabase feature class.
+TOD_ZONES_GEOJSON = AUTH_DIR / "tod_zones.geojson"
