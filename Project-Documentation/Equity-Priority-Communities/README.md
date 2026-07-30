@@ -94,7 +94,7 @@ Definition: Census Tracts that have a cocentration of BOTH people of color AND l
 
 The analysis was performed in python and leverages the American Community Survey (ACS) API which is documented here: [ACS API](https://www.census.gov/data/developers/data-sets/acs-5year.html) and the Census TIGER/Web API for spatial data which is documented here: [TIGER/Web REST API](https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html)
 
-To explore the technical processing methods, please review the [EPC Processing Python Notebook](equity_prority_communities_build.ipynb)
+To explore the technical processing methods, please review the [EPC Processing Python Notebook]([equity_prority_communities_build.ipynb](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/blob/master/Project-Documentation/Equity-Priority-Communities/equity_priority_communities_build.ipynb))
 
 ### Calculate MTC EPC Demographic Factor Population from ACS Variable Populations
 
