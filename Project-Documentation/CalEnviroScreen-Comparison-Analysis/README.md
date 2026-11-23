@@ -15,7 +15,7 @@ This analysis compares Disadvantaged Community (DAC) designations between CalEnv
 
 ## Problem Statement
 
-California's Office of Environmental Health Hazard Assessment (OEHHA) develops CalEnviroScreen (CES), a tool that ranks census tracts across the state based on cumulative environmental and health burdens. Tracts scoring in the top quartile statewide are designated as Disadvantaged Communities (DACs), which carry significant implications for funding eligibility and policy prioritization.
+California's Office of Environmental Health Hazard Assessment (OEHHA) develops CalEnviroScreen (CES), a tool that ranks census tracts across the state based on cumulative environmental and health burdens. Under SB 535, CalEPA designates census tracts as Disadvantaged Communities (DACs) using CalEnviroScreen (CES) results, which carries significant implications for funding eligibility and policy prioritization. The top-quartile overall score is one of several designation criteria.
 
 OEHHA's Draft CalEnviroScreen 5.0 (CES 5.0) represents a significant change in the number and distribution of DACs in the Bay Area relative to CES 4.0. Bay Area commissioners and advocates have raised concerns that the draft methodology under-represents Bay Area tracts as DACs compared to prior versions and relative to the state as a whole. To support advocacy and public comment, MTC/ABAG staff have been asked to quantify and communicate these changes clearly.
 
@@ -44,7 +44,14 @@ Specifically, the analysis must answer three questions:
 ## Analysis Parameters
 
 **Disadvantaged Community (DAC)**
-A census tract designated by OEHHA as a DAC if its cumulative CalEnviroScreen score falls at or above the 75th percentile statewide — meaning it ranks among the top 25% most environmentally and health-burdened communities in California. This threshold is applied separately within each CES version.
+Under [SB 535](https://oehha.ca.gov/calenviroscreen/sb535), CalEPA designates a census tract as a DAC if it meets any of the following criteria in the [2026 designation](https://data.ca.gov/@california-office-of-environmental-health-hazard-assessment/sb-535-disadvantaged-communities-2026):
+
+1. It is among the highest 25% of CalEnviroScreen 5.0 overall scores.
+2. It is among the highest 5% of CalEnviroScreen 5.0 pollution burden scores.
+3. It overlaps at least 25% with a 2022 DAC-designated tract based on CalEnviroScreen 4.0.
+4. It is under the control of a federally recognized tribe.
+
+This analysis uses only criterion 1 (the overall score) as a proxy: a tract is flagged when its CES percentile is 75 or above, applied separately within each CES version. The flags in this analysis are therefore not the official SB 535 DAC totals.
 
 **Equity Priority Community (EPC)**
 A geographic designation used by MTC/ABAG to identify census tracts with a significant concentration of underserved populations. Formerly called "Communities of Concern," EPCs are defined using eight demographic variables — including people of color, low-income households, limited English proficiency, seniors 75+, zero-vehicle households, single-parent families, people with a disability, and rent-burdened households — each with specific threshold values. A tract qualifies as an EPC if it exceeds both the low-income and people of color thresholds, or if it exceeds the low-income threshold and three or more of the remaining six variables. MTC uses the EPC framework to direct funding and prioritize investments in transportation, housing, and community services. For more information, see the [MTC Equity Priority Communities page](https://mtc.ca.gov/planning/transportation/access-equity-mobility/equity-priority-communities) and the [EPC GitHub repository](https://github.com/BayAreaMetro/Spatial-Analysis-Mapping-Projects/tree/master/Project-Documentation/Equity-Priority-Communities). Two vintages are used in this analysis: the 2018-based EPCs from Plan Bay Area 2050, and the 2022-based draft EPCs for Plan Bay Area 2050+.
@@ -77,7 +84,7 @@ The analysis is implemented in the Python notebook [ces_4_and_5_change_analysis.
 
 ### Defining DAC Status
 
-For both CES 4.0 and CES 5.0, a tract is flagged as a DAC if its cumulative impact score percentile is **75 or above**. This is applied to the percentile columns provided in each OEHHA Excel file. The result is a simple yes/no flag for every census tract in the state.
+For both CES 4.0 and CES 5.0, a tract is flagged if its cumulative impact score percentile is **75 or above**. This is applied to the percentile columns provided in each OEHHA Excel file. The result is a simple yes/no flag for every census tract in the state. This flag reproduces only the top-25% overall-score criterion of SB 535; the pollution burden, 2022 DAC overlap, and tribal land criteria are not included.
 
 ### Geographic Harmonization
 
